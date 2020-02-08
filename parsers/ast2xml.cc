@@ -203,9 +203,9 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
   if( clang_isDeclaration( cursorKind ) ) {
     xmlNewProp(cur_ptr, BAD_CAST "isDecl", BAD_CAST "True");
 
-    if( clang_isCursorDefinition( cursor ) ) {
-      xmlNewProp(cur_ptr, BAD_CAST "isDef", BAD_CAST "True");
-    }
+    // if( clang_isCursorDefinition( cursor ) ) {
+    //   xmlNewProp(cur_ptr, BAD_CAST "isDef", BAD_CAST "True");
+    // }
 
     // add access specifier
     CX_CXXAccessSpecifier ac_spec = clang_getCXXAccessSpecifier(cursor);
