@@ -93,17 +93,26 @@ def patch_offset(cnode, dnode):
 		elif m[-2] == 'DW_OP_fbreg' and offset:
 			cnode.set('offset', hex(abs(int(m[-1], 10) + 16)))
 		return True
-	else:
-		return False
+	elif 'data_member_location' in dnode.attrib:
+		cnode.set('offset', dnode.attrib['data_member_location'])
+		return True
+	elif not ('external' in dnode.attrib and 'yes' in dnode.attrib['external']) and DEBUG:
+		print ('OFFSET NOT FOUND: ', cnode.attrib['spelling'], cnode.attrib['usr'], dnode.attrib['id'])
+	return False
 
 def patch_size(cnode, dnode):
-	if dnode.attrib['type'] in ddtype:
+	if 'byte_size' in dnode.attrib:
+		cnode.set('size', dnode.attrib['byte_size'])
+	elif dnode.attrib['type'] in ddtype:
 		cnode.set('size', ddtype[dnode.attrib['type']])
-		return True
-	else:
-		if DEBUG:
-			print ('SIZE NOT FOUND: ', cnode.attrib['spelling'], dnode.attrib['type'])
-		return False
+	elif DEBUG:
+		print ('SIZE NOT FOUND: ', cnode.attrib['spelling'], ' Type: ', dnode.attrib['type'])
+
+def patch_mangled(cnode, dnode):
+	if 'linkage_name' in dnode.attrib:
+		cnode.set('mangled_name', dnode.attrib['linkage_name'])
+	elif DEBUG:
+		print ('LINKAGE NAME NOT FOUND: ', cnode.attrib['spelling'], dnode.attrib['id'])
 
 def get_match(cloc):
 	if cloc in dtree_hashmap:
@@ -120,13 +129,16 @@ def UpdateCtree (cnode, level=0, ctxt=''):
 		if cloc is not None:
 			match = get_match(cloc)
 			if match is not None:
-				if DEBUG:
-					print ('FOUND ', cloc, cnode.attrib['spelling'], match.attrib['id'])
+				# if DEBUG:
+				# 	print ('FOUND ', cloc, cnode.attrib['spelling'], match.attrib['id'])
 				if cnode.tag in Variables:
 					r = patch_offset(cnode, match)
-					v = patch_size(cnode, match)
-					if r or v:
+					if r:
 						cnode.set('isDef', 'True')
+				if cnode.tag in (Variables | Types):
+					patch_size(cnode, match)
+				if cnode.tag in Functions:
+					patch_mangled(cnode, match)
 			elif DEBUG:
 				if 'spelling' in cnode.attrib:
 					print ('NOT FOUND ', cloc, cnode.tag, cnode.attrib['spelling'])
