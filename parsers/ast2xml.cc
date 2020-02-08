@@ -64,10 +64,26 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
       BAD_CAST std::to_string(line).c_str());
     xmlNewProp(cur_ptr, BAD_CAST "col",
       BAD_CAST std::to_string(column).c_str());
-    xmlNewProp(cur_ptr, BAD_CAST "off",
-      BAD_CAST std::to_string(offset).c_str());
+    // xmlNewProp(cur_ptr, BAD_CAST "off",
+    //   BAD_CAST std::to_string(offset).c_str());
   }
   nodeData.cur_loc = location;
+
+  // Add cursor extent.
+  {
+    CXSourceRange Range = clang_getCursorExtent(cursor);
+    CXSourceLocation Rstart = clang_getRangeStart(Range);
+    CXSourceLocation Rend = clang_getRangeEnd(Range);
+    unsigned line, column;
+    // range start
+    clang_getSpellingLocation(Rstart, nullptr, &line, &column, nullptr);
+    std::string st = "[" + std::to_string(line) + ":" + std::to_string(column) + "]";
+    xmlNewProp(cur_ptr, BAD_CAST "range.start", BAD_CAST st.c_str());
+    // range end
+    clang_getSpellingLocation(Rend, nullptr, &line, &column, nullptr);
+    std::string en = "[" + std::to_string(line) + ":" + std::to_string(column) + "]";
+    xmlNewProp(cur_ptr, BAD_CAST "range.end", BAD_CAST en.c_str());
+  }
 
   // Cursor type info
   {
@@ -127,42 +143,56 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
   { // Add lexical / semantic parents
     CXCursor lexicalParent = clang_getCursorLexicalParent(cursor);
     if( !clang_Cursor_isNull(lexicalParent) ) {
-      xmlNewProp(cur_ptr, BAD_CAST "lex_parent_id",
-        BAD_CAST std::to_string( clang_hashCursor(lexicalParent) ).c_str());
+      CXString usr = clang_getCursorUSR(lexicalParent);
+      const char * usr_cstr = clang_getCString(usr);
+      if( std::strlen(usr_cstr) > 0 )
+        xmlNewProp(cur_ptr, BAD_CAST "lex_parent_usr", BAD_CAST usr_cstr);
+      clang_disposeString( usr );
     }
+
     CXCursor semanticParent = clang_getCursorSemanticParent(cursor);
     if( (!clang_Cursor_isNull(semanticParent)) &&
         (!clang_equalCursors(semanticParent, lexicalParent)) ) {
-      xmlNewProp(cur_ptr, BAD_CAST "sem_parent_id",
-        BAD_CAST std::to_string( clang_hashCursor(semanticParent) ).c_str());
+      CXString usr = clang_getCursorUSR(semanticParent);
+      const char * usr_cstr = clang_getCString(usr);
+      if( std::strlen(usr_cstr) > 0 )
+        xmlNewProp(cur_ptr, BAD_CAST "sem_parent_usr", BAD_CAST usr_cstr);
+      clang_disposeString( usr );
     }
   }
 
-  if( clang_isExpression(cursorKind) ) {
-    xmlNewProp(cur_ptr, BAD_CAST "Expr", BAD_CAST "");
-  }
-  if( clang_isStatement(cursorKind) ) {
-    xmlNewProp(cur_ptr, BAD_CAST "Stmt", BAD_CAST "");
-  }
-  if( clang_isAttribute(cursorKind) ) {
-    xmlNewProp(cur_ptr, BAD_CAST "Attr", BAD_CAST "");
-  }
+  // if( clang_isExpression(cursorKind) ) {
+  //   xmlNewProp(cur_ptr, BAD_CAST "isExpr", BAD_CAST "True");
+  // }
+  // if( clang_isStatement(cursorKind) ) {
+  //   xmlNewProp(cur_ptr, BAD_CAST "isStmt", BAD_CAST "True");
+  // }
+  // if( clang_isAttribute(cursorKind) ) {
+  //   xmlNewProp(cur_ptr, BAD_CAST "isAttr", BAD_CAST "True");
+  // }
 
-  { // Get referenced cursor
+  { 
+    // Get referenced cursor
     CXCursor refc = clang_getCursorReferenced(cursor);
     if( (!clang_Cursor_isNull(refc)) &&
         (!clang_equalCursors(cursor, refc)) ) {
-      xmlNewProp(cur_ptr, BAD_CAST "ref_id",
-        BAD_CAST std::to_string( clang_hashCursor(refc) ).c_str());
+      CXString usr = clang_getCursorUSR(refc);
+      const char * usr_cstr = clang_getCString(usr);
+      if( std::strlen(usr_cstr) > 0 )
+        xmlNewProp(cur_ptr, BAD_CAST "ref_usr", BAD_CAST usr_cstr);
+      clang_disposeString( usr );
     }
-  }
-
-  { // Get definition cursor
-    CXCursor defc = clang_getCursorDefinition(cursor);
-    if( (!clang_Cursor_isNull(defc)) &&
-        (!clang_equalCursors(cursor, defc)) ) {
-      xmlNewProp(cur_ptr, BAD_CAST "def_id",
-        BAD_CAST std::to_string( clang_hashCursor(defc) ).c_str());
+   // Get definition cursor
+    else {
+      CXCursor defc = clang_getCursorDefinition(cursor);
+      if( (!clang_Cursor_isNull(defc)) &&
+          (!clang_equalCursors(cursor, defc)) ) {
+        CXString usr = clang_getCursorUSR(defc);
+      const char * usr_cstr = clang_getCString(usr);
+      if( std::strlen(usr_cstr) > 0 )
+        xmlNewProp(cur_ptr, BAD_CAST "def_usr", BAD_CAST usr_cstr);
+      clang_disposeString( usr );
+      }
     }
   }
 

@@ -139,13 +139,15 @@ def generate_static_info(path):
         # direct object file parsing
         try:
             # generate dwarfdump for corresponding object file
+            # print('>>> python dwarfdump -i ' + objectfile[f] + '> ' + stripop + '.dd')
             os.system('dwarfdump -i ' + objectfile[f] + '> ' + stripop + '.dd')
+            # print('>>> python parsers/dwarfdump_parser.py '+ stripop + '.dd ' + DWARF_EXTENSION)
             os.system('python parsers/dwarfdump_parser.py '+ stripop + '.dd ' + DWARF_EXTENSION)
             print ('Dwarfdump Generated')
             # combine dwarfdump and clang and get offset file
-            # print('>>> python parsers/combine.py ' + stripop + ' OFFSET ' + DWARF_OUTPUTEXT)
-            # os.system('python parsers/combine.py ' + stripop + ' OFFSET ' + DWARF_OUTPUTEXT)
-            # print ('Information combined')
+            print('>>> python parsers/ddx.py ' + stripop + ' OFFSET ' + DWARF_OUTPUTEXT)
+            os.system('python parsers/ddx.py ' + stripop + ' OFFSET ' + DWARF_OUTPUTEXT)
+            print ('Information combined')
         except Exception as e:
             print(e)
             continue
@@ -239,6 +241,6 @@ path = os.path.abspath(sys.argv[1])
 sppath = path.split('/')
 project_name = (sppath[-1] if sppath[-1] != '' else sppath[-2])
 outfolder = os.path.abspath('outputs/'+project_name)
-init(path)
-dependency_parser()
+# init(path)
+# dependency_parser()
 generate_static_info(path)

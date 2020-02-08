@@ -28,7 +28,8 @@ droot = dtree.getroot()
 ctree = ET.parse(clangxml_filename)
 croot = ctree.getroot()
 
-ddtype = dict()
+ddtype = dict()	# dictioary of type sizes
+ddref = dict() 	# dictionary of typedef's
 dtree_hashmap = defaultdict(list)
 
 # def collect_types(droot):
@@ -61,71 +62,89 @@ def TraverseDtree(dnode, level=0): # collect all pokemon in dtree
 		dtree_hashmap[dnode_hash(dnode)].append(dnode)
 	if 'byte_size' in dnode.attrib:
 		ddtype[dnode.attrib['id']] = dnode.attrib['byte_size']
-	# if dnode.tag == 'typedef':
-	# 	ddtype[dnode.attrib['id']] = ('typedef', dnode.attrib['type'])
+	if dnode.tag == 'typedef':
+		ddref[dnode.attrib['id']] = dnode.attrib['type']
 	for child in dnode:
 		TraverseDtree(child,level+1)
 
 def patchTypedefSize(v):
-	if isinstance(v, tuple):
-		ddtype[v[0]] = patchTypedefSize(ddtype[v[1]])
-	return ddtype[v[0]]
+	u = ddref[v]
+	if u not in ddtype:
+		patchTypedefSize(u)
+	ddtype[v] =  ddtype[u]
+	ddref[v] = -1
 
-def cnode_hash (cnode, ctxt):
-	if 'line' in cnode.attrib and 'col' in cnode.attrib:
-		return (ctxt, int(cnode.attrib['line']), int(cnode.attrib['col']))
-	return ''
+def patchDdref():
+	for k, v in ddref.items():
+		if v != -1:
+			patchTypedefSize(k)
 
-def patch_offset(cnode, dnode):
-	if 'location' in dnode.attrib:
-		m = dnode.attrib['location'].split()
-		if m[-2] == 'DW_OP_addr' and address:
-			cnode.set('address', hex(int(m[-1], 16)))
-		elif m[-2] == 'DW_OP_fbreg' and offset:
-			cnode.set('offset', hex(abs(int(m[-1], 10) + 16)))
-		return True
-	else:
-		return False
 
-def patch_size(cnode, dnode):
-	if dnode.attrib['type'] in ddtype:
-		cnode.set('size', ddtype[dnode.attrib['type']])
-		return True
-	else:
-		return False
+# def cnode_hash (cnode, ctxt):
+# 	if 'line' in cnode.attrib and 'col' in cnode.attrib:
+# 		return (ctxt, int(cnode.attrib['line']), int(cnode.attrib['col']))
+# 	return ''
 
-def get_match(cloc):
-	if cloc in dtree_hashmap:
-		match = dtree_hashmap[cloc]
-		if len(match) == 1:
-			return match[0]
-	return None
+# def patch_offset(cnode, dnode):
+# 	if 'location' in dnode.attrib:
+# 		m = dnode.attrib['location'].split()
+# 		if m[-2] == 'DW_OP_addr' and address:
+# 			cnode.set('address', hex(int(m[-1], 16)))
+# 		elif m[-2] == 'DW_OP_fbreg' and offset:
+# 			cnode.set('offset', hex(abs(int(m[-1], 10) + 16)))
+# 		return True
+# 	else:
+# 		return False
 
-def UpdateCtree (cnode, level=0, ctxt=''):
-	if 'file' in cnode.attrib:
-		ctxt = cnode.attrib['file']
-	if cnode.tag in All:
-		cloc = cnode_hash(cnode, ctxt)
-		if cloc != '':
-			match = get_match(cloc)
-			if match is not None:
-				print ('FOUND ', cloc, cnode.attrib['spelling'], match.attrib['id'])
-				if cnode.tag in Variables:
-					patch_offset(cnode, match)
-					patch_size(cnode, match)
-			elif DEBUG:
-				if 'spelling' in cnode.attrib:
-					print ('NOT FOUND ', cloc, cnode.tag, cnode.attrib['spelling'])
-	for child in cnode:
-		UpdateCtree(child,level+1,ctxt)
+# def patch_size(cnode, dnode):
+# 	if dnode.attrib['type'] in ddtype:
+# 		cnode.set('size', ddtype[dnode.attrib['type']])
+# 		return True
+# 	else:
+# 		return False
+
+# def get_match(cloc):
+# 	if cloc in dtree_hashmap:
+# 		match = dtree_hashmap[cloc]
+# 		if len(match) == 1:
+# 			return match[0]
+# 	return None
+
+# def UpdateCtree (cnode, level=0, ctxt=''):
+# 	if 'file' in cnode.attrib:
+# 		ctxt = cnode.attrib['file']
+# 	if cnode.tag in All:
+# 		cloc = cnode_hash(cnode, ctxt)
+# 		if cloc != '':
+# 			match = get_match(cloc)
+# 			if match is not None:
+# 				print ('FOUND ', cloc, cnode.attrib['spelling'], match.attrib['id'])
+# 				if cnode.tag in Variables:
+# 					patch_offset(cnode, match)
+# 					patch_size(cnode, match)
+# 			elif DEBUG:
+# 				if 'spelling' in cnode.attrib:
+# 					print ('NOT FOUND ', cloc, cnode.tag, cnode.attrib['spelling'])
+# 	for child in cnode:
+# 		UpdateCtree(child,level+1,ctxt)
 
 TraverseDtree(droot)
-# for k, v in ddtype.items():
+patchDdref()
 
-UpdateCtree(croot)
+for k, v in dtree_hashmap.items():
+	if len(v) > 1:
+		print ('\n\n', k)
+		for node in v:
+			print ('\n', node.tag)
+			for k, v in node.attrib.items():
+				print (k, ':', v)
+	# print ('\n\n\n')
 
-# write out updated xml
-xmlstr = minidom.parseString(ET.tostring(croot)).toprettyxml(indent='   ')
-with open(combined_filename, 'w') as f:
-	f.write(xmlstr)
+
+# UpdateCtree(croot)
+
+# # write out updated xml
+# xmlstr = minidom.parseString(ET.tostring(croot)).toprettyxml(indent='   ')
+# with open(combined_filename, 'w') as f:
+# 	f.write(xmlstr)
 
