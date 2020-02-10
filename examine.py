@@ -26,7 +26,7 @@ FINAL_FILE = 'final'
 STATIC_EXTENSION = '_static.xml'
 DYNAMIC_EXTENSION = '_dynamic.xml'
 
-CALLDYN = True
+CALLDYN = False
 CALLCOMM = False
 
 executable = os.path.abspath(sys.argv[1])
@@ -83,7 +83,7 @@ def combine_all_clang(depmap):
             combstrip = os.path.join(outfolder, relpath, curfstrip)
 
             # collect calls, signs and offset information
-            for num, EXT in enumerate([CALL_EXTENSION, SIGN_EXTENSION, OFFSET_EXTENSION]):        
+            for num, EXT in enumerate([CALL_EXTENSION, SIGN_EXTENSION, OFFSET_EXTENSION]):
                 if not headerWrite[num]:
                     headerWrite[num] = True
                     os.system('head -n 1 ' + combstrip + EXT + ' >> ' + CURFINALFILE + EXT)
@@ -94,7 +94,7 @@ def combine_all_clang(depmap):
             stree = ET.parse(combstrip + COMB_EXTENSION)
             sroot = stree.getroot()
             root.append(sroot)
-        
+
         print ('Combined static info for ' + exenamestrip)
 
         xmlstr = minidom.parseString(ET.tostring(root)).toprettyxml(indent='   ')
@@ -114,7 +114,7 @@ def combine_all_clang(depmap):
         print ('Generated addresses for ' + exenamestrip)
         # combine address patched xmls into one final static xml
         os.system('cat ' + exestrip + COMB_EXTENSION + ' >> ' + CURFINALFILE + STATIC_EXTENSION)
-        
+
 def generate_static_info():
     print('Starting Static!')
 
@@ -150,11 +150,11 @@ def generate_comments_info(project_name, vocab_file, problem_domain_file):
         os.mkdir('comments/temp')
     if not os.path.exists('comments/temp/'+project_name):
         os.mkdir('comments/temp/'+project_name)
-    os.system('python2 comments/GenerateCommentsXMLForAFolder.py /workspace/projects/ ' + project_name + 
-        ' /workspace/' + project_name + ' ' + vocab_file + ' ' + problem_domain_file+ ' ' + 
+    os.system('python2 comments/GenerateCommentsXMLForAFolder.py /workspace/projects/ ' + project_name +
+        ' /workspace/' + project_name + ' ' + vocab_file + ' ' + problem_domain_file+ ' ' +
         '/workspace/comments/temp/'+project_name)
-    os.system('python2 comments/MergeAllCommentsXML.py ' + '/workspace/comments/temp/' + project_name + 
-        ' /workspace/' + project_name + ' ' + '/workspace/projects/'+ project_name + 
+    os.system('python2 comments/MergeAllCommentsXML.py ' + '/workspace/comments/temp/' + project_name +
+        ' /workspace/' + project_name + ' ' + '/workspace/projects/'+ project_name +
         ' /workspace/comments.xml')
     print('Comments Done!')
     return 'comments.xml'
@@ -169,7 +169,7 @@ def start_website():
     # Start the user inerface to query
     os.system('cp static.xml website/static.xml')
     os.system('cp dynamic.xml website/dynamic.xml')
-    os.system('cp vcs.xml website/vcs.xml')    
+    os.system('cp vcs.xml website/vcs.xml')
     os.system('cp comments.xml website/comments.xml')
     os.system('cp dependencies.p website/dependencies.p')
     os.chdir('website')
@@ -185,7 +185,7 @@ def collect_results(project_name, executable):
     os.system('cp static.xml ' + colpath)
     os.system('cp static.funcargs ' + colpath)
     os.system('cp ' + project_name + '/statinfo/*.offset ' + colpath)
-    os.system('cp static.calls ' + colpath)  
+    os.system('cp static.calls ' + colpath)
     if CALLDYN:
         os.system('cp dynamic.xml ' + colpath)
         os.system('cp ' + exec_name + '.dump ' + colpath)
@@ -194,7 +194,7 @@ def collect_results(project_name, executable):
     if CALLDYN and CALLCOMM:
         os.system ('> final_universal.xml')
         os.system ('cat static.xml dynamic.xml comments.xml > final_universal.xml')
-        os.system('cp final_universal.xml ' + colpath) 
+        os.system('cp final_universal.xml ' + colpath)
     print ('Information collected in: ', colpath)
 
 generate_static_info()
