@@ -6,7 +6,7 @@
 
 #include <string>
 #include <cstring>
-
+#include "ctype.h"
 #include <map>
 
 #define DEBUG true
@@ -16,6 +16,18 @@ struct trav_data_t {
   xmlNodePtr xml_ptr; // XML node corresponding to current cursor.
 };
 
+std::string camelCase(std::string s){
+  int n = s.length(), res_ind = 0;
+  for(int i=0; i<n; i++){
+    if(s[i] == ' ') { s[i+1] = std::toupper(s[i+1]); continue; }
+    else {
+      if(s[i] == '+') s[i] = 'X';
+      s[res_ind++] = s[i];
+    }
+  }
+  return s.substr(0, res_ind);
+}
+
 std::map<std::string, xmlNodePtr> template_map; //keeps a map of templateDecl id to their parents
 
 CXChildVisitResult
@@ -24,8 +36,11 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
 
   CXCursorKind cursorKind = clang_getCursorKind(cursor);
   CXString kindName = clang_getCursorKindSpelling(cursorKind);
+  std::string xmlNodeName(clang_getCString(kindName));
+  
   xmlNodePtr cur_ptr = xmlNewChild(parentData->xml_ptr, nullptr,
-    BAD_CAST clang_getCString(kindName), nullptr);
+    BAD_CAST camelCase(clang_getCString(kindName)).c_str(), nullptr);
+  
   clang_disposeString( kindName );
 
   trav_data_t nodeData{clang_getNullLocation(), cur_ptr};
