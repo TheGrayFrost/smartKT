@@ -209,7 +209,7 @@ def helper(var, var_class, var_container = None):
 	s += var.attrib['type'] + '\t'
 	var_size = '0'
 	if 'size' in var.attrib :
-	var_size = var.attrib['size']
+		var_size = var.attrib['size']
 	s += var_size + '\t'
 	s += var.attrib['parent_id'] + '\t'
 
@@ -273,7 +273,7 @@ def generate_var(croot):
 			# FUNCTION OFFSET VARNAME ID TYPE SIZE PARENT_ID
 			f.write('# FILENAME\tFUNCTION\tOFFSET\tVARNAME\tVARID\tVARTYPE\tVARSIZE\tPARENTID\n')
 
-		LOCALVARCONTAINERS = cnodeUpdateTag
+			LOCALVARCONTAINERS = cnodeUpdateTag
 			VARNODETYPE = ['VAR_DECL', 'PARM_DECL']
 
 			for nodetype in LOCALVARCONTAINERS:
