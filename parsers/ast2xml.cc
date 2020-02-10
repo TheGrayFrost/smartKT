@@ -47,14 +47,16 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
   CXSourceLocation location = clang_getCursorLocation( cursor );
 
   // Add location info.
-  if( ! clang_equalLocations(parentData->cur_loc, location) ) {
+  // if( ! clang_equalLocations(parentData->cur_loc, location) ) {
+  {
     CXFile file, par_file;
     CXString fileName;
     unsigned line, column, offset;
     clang_getSpellingLocation(location, &file, &line, &column, &offset);
-    clang_getSpellingLocation(parentData->cur_loc,
-      &par_file, nullptr, nullptr, nullptr);
-    if( ! clang_File_isEqual(par_file, file) ) {
+    // clang_getSpellingLocation(parentData->cur_loc,
+    //   &par_file, nullptr, nullptr, nullptr);
+    // if( ! clang_File_isEqual(par_file, file) ) {
+    {
       fileName = clang_getFileName(file);
       xmlNewProp(cur_ptr, BAD_CAST "file",
         BAD_CAST clang_getCString(fileName));
@@ -98,8 +100,8 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
       if (typesize > 0)
         xmlNewProp(cur_ptr, BAD_CAST "size",
           BAD_CAST std::to_string(typesize).c_str());
-      /* 
-        @Vishesh(26 Jan '20): 
+      /*
+        @Vishesh(26 Jan '20):
           - only errors in children of function templates are okay, as typesizes can't be inferred
           - the errors may be in their template params, function args, results
       *#/
@@ -119,26 +121,7 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
     clang_disposeString( usr );
   }
 
-  // add mangled name for function calls
-  // {
-  //   if( cursorKind == CXCursor_CallExpr )
-  //   {
-  //     CXCursor refc = clang_getCursorReferenced(cursor);
-  //     if( !clang_Cursor_isNull(refc) ) {
-  //       CXString mangling = clang_Cursor_getMangling(refc);
-  //       const char * mn = clang_getCString(mangling);
-  //       if( std::strlen(mn) > 0 ) 
-  //       {
-  //         xmlNewProp(cur_ptr, BAD_CAST "mangling",
-  //         BAD_CAST mn);
-  //       }
-  //       else
-  //         std::cout << "ERROR\n\n";
-  //       clang_disposeString(mangling);
-  //     }
-  //   }
-  // }
-
+  // Mangled name has been shifted to Dwarfdump
 
   { // Add lexical / semantic parents
     CXCursor lexicalParent = clang_getCursorLexicalParent(cursor);
@@ -161,17 +144,8 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
     }
   }
 
-  // if( clang_isExpression(cursorKind) ) {
-  //   xmlNewProp(cur_ptr, BAD_CAST "isExpr", BAD_CAST "True");
-  // }
-  // if( clang_isStatement(cursorKind) ) {
-  //   xmlNewProp(cur_ptr, BAD_CAST "isStmt", BAD_CAST "True");
-  // }
-  // if( clang_isAttribute(cursorKind) ) {
-  //   xmlNewProp(cur_ptr, BAD_CAST "isAttr", BAD_CAST "True");
-  // }
 
-  { 
+  {
     // Get referenced cursor
     CXCursor refc = clang_getCursorReferenced(cursor);
     if( (!clang_Cursor_isNull(refc)) &&
@@ -203,9 +177,9 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
   if( clang_isDeclaration( cursorKind ) ) {
     xmlNewProp(cur_ptr, BAD_CAST "isDecl", BAD_CAST "True");
 
-    // if( clang_isCursorDefinition( cursor ) ) {
-    //   xmlNewProp(cur_ptr, BAD_CAST "isDef", BAD_CAST "True");
-    // }
+    if( clang_isCursorDefinition( cursor ) ) {
+      xmlNewProp(cur_ptr, BAD_CAST "isDef", BAD_CAST "True");
+    }
 
     // add access specifier
     CX_CXXAccessSpecifier ac_spec = clang_getCXXAccessSpecifier(cursor);
