@@ -2,7 +2,7 @@
 
 struct foo_str foo(struct foo_str x)    /* Function definition */
 {
-    x.x + 5;
+    x.x += 5;
     return x;
 }
 

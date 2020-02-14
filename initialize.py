@@ -23,6 +23,11 @@ DWARF_OUTPUTEXT = ' '.join([DWARF_EXTENSION, CLANG_EXTENSION, COMB_EXTENSION, OF
 
 INIT_FILE = 'init.sh'
 
+path = os.path.abspath(sys.argv[1])
+sppath = path.split('/')
+project_name = (sppath[-1] if sppath[-1] != '' else sppath[-2])
+outfolder = os.path.abspath('outputs/'+project_name)
+
 def init(path):
     # This function builds the project and in that process gets the make log file
     # Build the project
@@ -34,38 +39,30 @@ def init(path):
         s += 'rm -rf build\n'
         s += 'mkdir build\n'
         s += 'cd build\n'
-        s += 'cmake -DCMAKE_BUILD_TYPE=Debug ..\n'
-        s += 'make -j$(nproc) VERBOSE=1 > make_log.txt\n'
+        s += 'cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..\n'
+        s += 'make -j$(nproc)\n'
         s += 'mkdir -p ' + outfolder + '\n'
-        s += 'mv make_log.txt ' + outfolder + '/\n'
+        s += 'mv compile_commands.json ' + outfolder + '/\n'
         with open(initfile, 'a') as f:
             f.write(s)
 
     os.system('chmod +x ' + initfile)
     os.system(initfile)
 
-def dependency_parser():
-    # Parses the make log and presents the output in a format which can be accessed later
-    global outfolder
-    os.system('python parsers/project_parser.py ' + os.path.join(outfolder, 'make_log.txt'))
-    os.system('mv dependencies.p ' + outfolder)
-
 # This part is responsible for generating static outputs for code files.
 def generate_static_info(path):
+    global outfolder
 
-    # Read in the dependencies using pickle
-    (dependencies, sourcefile, objectfile) = pickle.load(open(os.path.join(outfolder, 'dependencies.p'), 'rb'))
-
+    # Build the AST parser
     os.system('cd parsers && make clean && make all')
 
-    # For all files that generate a direct object
-    for num, f in enumerate(objectfile):
-        # create the file + includes for clang
-        fdep = f
-        for d in dependencies[f]:
-            fdep += ' ' + d
+    # Get compile instructions
+    # THIS PART WILL CHANGE FOR OTHER BUILD TOOLS
+    with open(os.path.join(outfolder, 'compile_commands.json'), "r") as f:
+        instrs = eval(f.read())
 
-        fstrip = f[:f.rfind('.')]
+    for num, instr in enumerate(instrs):
+        f = instr['file']
         mainfname = f[f.rfind('/')+1:f.rfind('.')]
         relpath = f[len(path)+1:]
         outpath = os.path.join(outfolder, relpath)
@@ -76,16 +73,30 @@ def generate_static_info(path):
         if DEBUG:
             print(stripop, fdep)
 
-        print ('\n(%2d/%2d): Generating info for '%(num+1, len(objectfile)) + relpath)
+        print ('\n(%2d/%2d): Generating info for '%(num+1, len(instrs)) + relpath)
 
         try:
+            # Select clang/Clang++ based on whether it is C/C++
+            cmd = instr['command'].split(' ')
             clangv = 'clang++ -std=c++11'
             if f.split('.')[-1] == 'c':
                 clangv = 'clang'
-            os.system(clangv + ' -emit-ast ' + fdep)
-            for i, clangexe in enumerate(CLANGTOOLS):
-                os.system ('parsers/' + clangexe + ' ' + mainfname + '.ast > ' + stripop + CLANG_OUTPUTEXT[i])
 
+            # Get the objectfile
+            objectfile = cmd[cmd.index('-o')+1]
+            if not os.path.isabs(objectfile):
+                objectfile = os.path.join(instr['directory'], objectfile)
+
+            # Update the command to emit ast
+            cmd[0] = clangv + ' -emit-ast'
+            cmd[cmd.index('-o')+1] = mainfname + '.ast'
+            os.system(' '.join(cmd))
+
+            # Generate func, calls, ast
+            for clangexe, output_extension in zip(CLANGTOOLS, CLANG_OUTPUTEXT):
+                os.system ('parsers/' + clangexe + ' ' + mainfname + '.ast > ' + stripop + output_extension)
+
+            # Move the ast into outputs
             os.system ('mv ' + mainfname + '.ast ' + outpath)
 
             print ('Clang Generated')
@@ -97,7 +108,7 @@ def generate_static_info(path):
         # direct object file parsing
         try:
             # generate dwarfdump for corresponding object file
-            os.system('dwarfdump -i ' + objectfile[f] + '> ' + stripop + '.dd')
+            os.system('dwarfdump -i ' + objectfile + '> ' + stripop + '.dd')
             os.system('python parsers/dwarfdump_parser.py '+ stripop + '.dd ' + DWARF_EXTENSION)
             print ('Dwarfdump Generated')
 
@@ -108,11 +119,5 @@ def generate_static_info(path):
             print(e)
             continue
 
-
-path = os.path.abspath(sys.argv[1])
-sppath = path.split('/')
-project_name = (sppath[-1] if sppath[-1] != '' else sppath[-2])
-outfolder = os.path.abspath('outputs/'+project_name)
 init(path)
-dependency_parser()
 generate_static_info(path)
