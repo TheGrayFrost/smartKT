@@ -26,7 +26,7 @@ FINAL_FILE = 'final'
 STATIC_EXTENSION = '_static.xml'
 DYNAMIC_EXTENSION = '_dynamic.xml'
 
-CALLDYN = True
+CALLDYN = False
 CALLCOMM = False
 
 executable = os.path.abspath(sys.argv[1])
@@ -42,25 +42,22 @@ if len(sys.argv) > n:
 execstrip = executable[executable.rfind('/')+1:]
 origpath = executable[:executable.rfind('build/')-1]
 project_name = origpath[origpath.rfind('/')+1:]
-outfolder = os.path.abspath('outputs/'+project_name)
+outfolder = os.path.abspath(os.path.join('outputs', project_name))
 foutfolder = os.path.join(outfolder,'exe_'+execstrip)
 os.system('mkdir ' + foutfolder)
 
-(dependencies, sourcefile, objectfile) = pickle.load(open(os.path.join(outfolder, 'dependencies.p'), 'rb'))
-
-# get list of all cpp's forming this executable
-def get_rec_deps(path):
-    recdeps = []
-    for x in dependencies[path]:
-        if x[-2:] == '.o':
-            recdeps.append(sourcefile[x])
-        else:
-            recdeps.extend(get_rec_deps(x))
-    return recdeps
+# Extract the linking information & store in dependencies.p
+os.system('python3 parsers/project_parser.py ' + os.path.join(outfolder, 'make_log.txt') + ' ' + os.path.join(outfolder, 'dependencies.p'))
+dependencies = pickle.load(open(os.path.join(outfolder, 'dependencies.p')))
 
 # [TODO]
 # Instead of combining by exclusive parsing, we can simply echo out to file
 # See combine_all_domain.sh, for example
+def combine(croot, droot):
+    # croot = CLANG_ROOT, droot = DWARF_ROOT
+    # important for inter-clang linkage
+    pass
+
 def combine_all_clang(depmap):
     CURFINALFILE = os.path.join(foutfolder, FINAL_FILE)
 
@@ -83,7 +80,7 @@ def combine_all_clang(depmap):
             combstrip = os.path.join(outfolder, relpath, curfstrip)
 
             # collect calls, signs and offset information
-            for num, EXT in enumerate([CALL_EXTENSION, SIGN_EXTENSION, OFFSET_EXTENSION]):        
+            for num, EXT in enumerate([CALL_EXTENSION, SIGN_EXTENSION, OFFSET_EXTENSION]):
                 if not headerWrite[num]:
                     headerWrite[num] = True
                     os.system('head -n 1 ' + combstrip + EXT + ' >> ' + CURFINALFILE + EXT)
@@ -94,7 +91,7 @@ def combine_all_clang(depmap):
             stree = ET.parse(combstrip + COMB_EXTENSION)
             sroot = stree.getroot()
             root.append(sroot)
-        
+
         print ('Combined static info for ' + exenamestrip)
 
         xmlstr = minidom.parseString(ET.tostring(root)).toprettyxml(indent='   ')
@@ -114,23 +111,72 @@ def combine_all_clang(depmap):
         print ('Generated addresses for ' + exenamestrip)
         # combine address patched xmls into one final static xml
         os.system('cat ' + exestrip + COMB_EXTENSION + ' >> ' + CURFINALFILE + STATIC_EXTENSION)
-        
-def generate_static_info():
+
+def get_dwarf_parse(comp):
+    global foutfolder
+    compnamestrip = comp[comp.rfind('/')+1:]
+    compoutfolder = os.path.join(foutfolder, compnamestrip)
+    compstrip = os.path.join(compoutfolder, compnamestrip)
+    os.system('python3 parsers/dwxml.py '+comp+' -o '+compstrip+DWARF_EXTENSION)
+    return ET.parse(compstrip+DWARF_EXTENSION).getroot()
+
+def get_clang_info(root, comp):
     print('Starting Static!')
 
     # This function extract the dependencies of the binary under study, and
     # recursively finds out the list of source files responsible for this executable
-    # and gets the executable's DWARF information and concats them
-    ls = defaultdict(list)
-    for x in dependencies[executable]:
-        if x[-2:] == '.o':
-            ls[executable].append(sourcefile[x])
-        elif x[-2:] == '.a':
-            ls[executable].extend(get_rec_deps(x)) # .a's are also statically linked
-        elif x.find('.so') != -1:
-            ls[x] = get_rec_deps(x) # .so dynamic links treated separately
+    global dependencies
 
-    combine_all_clang(ls)
+    for x in dependencies[comp]:
+        if x[-2:] == '.a':
+            # .a's are also statically linked
+            archroot = Element('STATIC_LIBRARY')
+            archroot.set('archive_name', x)
+            generate_clang_info(archroot, x)
+            dwarfroot = get_dwarf_parse(x)
+            combine(archroot, dwarfroot)
+            root.append(archroot)
+        elif x.find('.so') != -1:
+            # For dynamic libs
+            dynroot = Element('DYNMAIC_LIBRARY')
+            dynroot.set('shared_object_name', x)
+            generate_clang_info(dynroot, x)
+            dwarfroot = get_dwarf_parse(x)
+            combine(dynroot, dwarfroot)
+            root.append(dynroot)
+        else:
+            # it is a source file
+            objroot = Element('OBJECT')
+            objroot.set('object_file', comp)
+            objroot.set('source_file', x)
+            relpath = x[len(origpath)+1:]
+            curfstrip = relpath[relpath.rfind('/')+1:relpath.rfind('.')]
+            combstrip = os.path.join(outfolder, relpath, curfstrip)
+            stree = ET.parse(combstrip + COMB_EXTENSION)
+            sroot = stree.getroot()
+            objroot.append(sroot)
+            root.append(objroot)
+
+def generate_static_info():
+    global executable
+    croot = Element('EXEC_STATIC')
+    croot.set('executable', executable)
+    generate_clang_info(croot, executable)
+    droot = get_dwarf_parse(executable)
+    combine(croot, droot)
+
+    exenamestrip = exe[exe.rfind('/')+1:]
+    exeoutfolder = os.path.join(foutfolder, exenamestrip)
+    exestrip = os.path.join(exeoutfolder, exenamestrip)
+    os.system('mkdir -p ' + exeoutfolder)
+
+    xmlstr = minidom.parseString(ET.tostring(root)).toprettyxml(indent='   ')
+    with open(exestrip+STATIC_EXTENSION, 'w') as f:
+        f.write(xmlstr)
+    print ('Written complete static clang for ' + exenamestrip)
+
+    os.system('python3 parsers/xml2ttl.py '+ exestrip+STATIC_EXTENSION)
+    print('Written complete TTL for ' + exestrip+STATIC_EXTENSION)
 
 def generate_dynamic_info(path, test=None):
     # Add dynamic_information to the combined static XML
@@ -150,11 +196,11 @@ def generate_comments_info(project_name, vocab_file, problem_domain_file):
         os.mkdir('comments/temp')
     if not os.path.exists('comments/temp/'+project_name):
         os.mkdir('comments/temp/'+project_name)
-    os.system('python2 comments/GenerateCommentsXMLForAFolder.py /workspace/projects/ ' + project_name + 
-        ' /workspace/' + project_name + ' ' + vocab_file + ' ' + problem_domain_file+ ' ' + 
+    os.system('python2 comments/GenerateCommentsXMLForAFolder.py /workspace/projects/ ' + project_name +
+        ' /workspace/' + project_name + ' ' + vocab_file + ' ' + problem_domain_file+ ' ' +
         '/workspace/comments/temp/'+project_name)
-    os.system('python2 comments/MergeAllCommentsXML.py ' + '/workspace/comments/temp/' + project_name + 
-        ' /workspace/' + project_name + ' ' + '/workspace/projects/'+ project_name + 
+    os.system('python2 comments/MergeAllCommentsXML.py ' + '/workspace/comments/temp/' + project_name +
+        ' /workspace/' + project_name + ' ' + '/workspace/projects/'+ project_name +
         ' /workspace/comments.xml')
     print('Comments Done!')
     return 'comments.xml'
@@ -169,7 +215,7 @@ def start_website():
     # Start the user inerface to query
     os.system('cp static.xml website/static.xml')
     os.system('cp dynamic.xml website/dynamic.xml')
-    os.system('cp vcs.xml website/vcs.xml')    
+    os.system('cp vcs.xml website/vcs.xml')
     os.system('cp comments.xml website/comments.xml')
     os.system('cp dependencies.p website/dependencies.p')
     os.chdir('website')
@@ -185,7 +231,7 @@ def collect_results(project_name, executable):
     os.system('cp static.xml ' + colpath)
     os.system('cp static.funcargs ' + colpath)
     os.system('cp ' + project_name + '/statinfo/*.offset ' + colpath)
-    os.system('cp static.calls ' + colpath)  
+    os.system('cp static.calls ' + colpath)
     if CALLDYN:
         os.system('cp dynamic.xml ' + colpath)
         os.system('cp ' + exec_name + '.dump ' + colpath)
@@ -194,7 +240,7 @@ def collect_results(project_name, executable):
     if CALLDYN and CALLCOMM:
         os.system ('> final_universal.xml')
         os.system ('cat static.xml dynamic.xml comments.xml > final_universal.xml')
-        os.system('cp final_universal.xml ' + colpath) 
+        os.system('cp final_universal.xml ' + colpath)
     print ('Information collected in: ', colpath)
 
 generate_static_info()

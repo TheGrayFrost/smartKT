@@ -6,7 +6,7 @@
 
 #include <string>
 #include <cstring>
-
+#include "ctype.h"
 #include <map>
 
 #define DEBUG true
@@ -16,6 +16,18 @@ struct trav_data_t {
   xmlNodePtr xml_ptr; // XML node corresponding to current cursor.
 };
 
+std::string camelCase(std::string s){
+  int n = s.length(), res_ind = 0;
+  for(int i=0; i<n; i++){
+    if(s[i] == ' ') { s[i+1] = std::toupper(s[i+1]); continue; }
+    else {
+      if(s[i] == '+') s[i] = 'X';
+      s[res_ind++] = s[i];
+    }
+  }
+  return s.substr(0, res_ind);
+}
+
 std::map<std::string, xmlNodePtr> template_map; //keeps a map of templateDecl id to their parents
 
 CXChildVisitResult
@@ -24,8 +36,11 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
 
   CXCursorKind cursorKind = clang_getCursorKind(cursor);
   CXString kindName = clang_getCursorKindSpelling(cursorKind);
+  std::string xmlNodeName(clang_getCString(kindName));
+  
   xmlNodePtr cur_ptr = xmlNewChild(parentData->xml_ptr, nullptr,
-    BAD_CAST clang_getCString(kindName), nullptr);
+    BAD_CAST camelCase(clang_getCString(kindName)).c_str(), nullptr);
+  
   clang_disposeString( kindName );
 
   trav_data_t nodeData{clang_getNullLocation(), cur_ptr};
@@ -47,14 +62,16 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
   CXSourceLocation location = clang_getCursorLocation( cursor );
 
   // Add location info.
-  if( ! clang_equalLocations(parentData->cur_loc, location) ) {
+  // if( ! clang_equalLocations(parentData->cur_loc, location) ) {
+  {
     CXFile file, par_file;
     CXString fileName;
     unsigned line, column, offset;
     clang_getSpellingLocation(location, &file, &line, &column, &offset);
-    clang_getSpellingLocation(parentData->cur_loc,
-      &par_file, nullptr, nullptr, nullptr);
-    if( ! clang_File_isEqual(par_file, file) ) {
+    // clang_getSpellingLocation(parentData->cur_loc,
+    //   &par_file, nullptr, nullptr, nullptr);
+    // if( ! clang_File_isEqual(par_file, file) ) {
+    {
       fileName = clang_getFileName(file);
       xmlNewProp(cur_ptr, BAD_CAST "file",
         BAD_CAST clang_getCString(fileName));
@@ -98,8 +115,8 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
       if (typesize > 0)
         xmlNewProp(cur_ptr, BAD_CAST "size",
           BAD_CAST std::to_string(typesize).c_str());
-      /* 
-        @Vishesh(26 Jan '20): 
+      /*
+        @Vishesh(26 Jan '20):
           - only errors in children of function templates are okay, as typesizes can't be inferred
           - the errors may be in their template params, function args, results
       *#/
@@ -119,26 +136,7 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
     clang_disposeString( usr );
   }
 
-  // add mangled name for function calls
-  // {
-  //   if( cursorKind == CXCursor_CallExpr )
-  //   {
-  //     CXCursor refc = clang_getCursorReferenced(cursor);
-  //     if( !clang_Cursor_isNull(refc) ) {
-  //       CXString mangling = clang_Cursor_getMangling(refc);
-  //       const char * mn = clang_getCString(mangling);
-  //       if( std::strlen(mn) > 0 ) 
-  //       {
-  //         xmlNewProp(cur_ptr, BAD_CAST "mangling",
-  //         BAD_CAST mn);
-  //       }
-  //       else
-  //         std::cout << "ERROR\n\n";
-  //       clang_disposeString(mangling);
-  //     }
-  //   }
-  // }
-
+  // Mangled name has been shifted to Dwarfdump
 
   { // Add lexical / semantic parents
     CXCursor lexicalParent = clang_getCursorLexicalParent(cursor);
@@ -161,17 +159,8 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
     }
   }
 
-  // if( clang_isExpression(cursorKind) ) {
-  //   xmlNewProp(cur_ptr, BAD_CAST "isExpr", BAD_CAST "True");
-  // }
-  // if( clang_isStatement(cursorKind) ) {
-  //   xmlNewProp(cur_ptr, BAD_CAST "isStmt", BAD_CAST "True");
-  // }
-  // if( clang_isAttribute(cursorKind) ) {
-  //   xmlNewProp(cur_ptr, BAD_CAST "isAttr", BAD_CAST "True");
-  // }
 
-  { 
+  {
     // Get referenced cursor
     CXCursor refc = clang_getCursorReferenced(cursor);
     if( (!clang_Cursor_isNull(refc)) &&
@@ -203,9 +192,9 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
   if( clang_isDeclaration( cursorKind ) ) {
     xmlNewProp(cur_ptr, BAD_CAST "isDecl", BAD_CAST "True");
 
-    // if( clang_isCursorDefinition( cursor ) ) {
-    //   xmlNewProp(cur_ptr, BAD_CAST "isDef", BAD_CAST "True");
-    // }
+    if( clang_isCursorDefinition( cursor ) ) {
+      xmlNewProp(cur_ptr, BAD_CAST "isDef", BAD_CAST "True");
+    }
 
     // add access specifier
     CX_CXXAccessSpecifier ac_spec = clang_getCXXAccessSpecifier(cursor);
