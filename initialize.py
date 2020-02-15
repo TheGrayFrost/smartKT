@@ -40,9 +40,10 @@ def init(path):
         s += 'mkdir build\n'
         s += 'cd build\n'
         s += 'cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..\n'
-        s += 'make -j$(nproc)\n'
+        s += 'make -j$(nproc) VERBOSE=1 > make_log.txt\n'
         s += 'mkdir -p ' + outfolder + '\n'
         s += 'mv compile_commands.json ' + outfolder + '/\n'
+        s += 'mv make_log.txt ' + outfolder + '/\n'
         with open(initfile, 'a') as f:
             f.write(s)
 
@@ -109,7 +110,7 @@ def generate_static_info(path):
         try:
             # generate dwarfdump for corresponding object file
             os.system('dwarfdump -i ' + objectfile + '> ' + stripop + '.dd')
-            os.system('python parsers/dwarfdump_parser.py '+ stripop + '.dd ' + DWARF_EXTENSION)
+            os.system('python parsers/dwxml.py '+ stripop + '.dd ' + '-o ' + stripop + DWARF_EXTENSION)
             print ('Dwarfdump Generated')
 
             # combine dwarfdump and clang and get offset file
