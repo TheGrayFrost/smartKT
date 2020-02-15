@@ -9,6 +9,7 @@ from xml.etree.ElementTree import Element, SubElement
 from xml.etree import ElementTree as ET
 from xml.dom import minidom
 
+
 idx = 0
 usr2id = {}
 
@@ -46,7 +47,6 @@ tag2comp = {
     'OBJECT': 'object',
     'EXEC_STATIC': 'executable'
 }
-
 
 def visitChild(xmlNode, xmlParent):
     global TTLstring
@@ -122,6 +122,8 @@ def visitComponent(xmlNode, parent):
         TTLstring += "obj:\"" + xmlNode.attrib['shared_object_name'] + "relation:source \"" + \
                 xmlNode.attrib['source_file'] +"\" .\n"
         for tu in xmlNode.getchildren():
+            tu.attrib['id'] = idx
+            idx += 1
             visitChild(child, tu)
     else:
         for child in xmlNode.getchildren():
