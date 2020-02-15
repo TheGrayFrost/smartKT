@@ -1,0 +1,7 @@
+/workspace/projects/smallproj/build/CMakeFiles/rebuild_cache.dir
+/workspace/projects/smallproj/build/CMakeFiles/edit_cache.dir
+/workspace/projects/smallproj/build/CMakeFiles/dp.dir
+/workspace/projects/smallproj/build/CMakeFiles/prog.dir
+/workspace/projects/smallproj/build/lib/CMakeFiles/edit_cache.dir
+/workspace/projects/smallproj/build/lib/CMakeFiles/rebuild_cache.dir
+/workspace/projects/smallproj/build/lib/CMakeFiles/lib.dir

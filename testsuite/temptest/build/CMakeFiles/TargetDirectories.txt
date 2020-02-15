@@ -1,0 +1,3 @@
+/data/user-home/srijoni/PIN_Tests/smartKT/projects/temptest/build/CMakeFiles/rebuild_cache.dir
+/data/user-home/srijoni/PIN_Tests/smartKT/projects/temptest/build/CMakeFiles/edit_cache.dir
+/data/user-home/srijoni/PIN_Tests/smartKT/projects/temptest/build/CMakeFiles/driver.out.dir

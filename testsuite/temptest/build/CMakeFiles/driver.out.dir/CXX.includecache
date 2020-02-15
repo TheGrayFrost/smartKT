@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../foo/foo.cc
+foo.hh
+../foo/foo.hh
+
+../foo/foo.hh
+
+/data/user-home/srijoni/PIN_Tests/smartKT/projects/temptest/driver.cc
+foo.cc
+/data/user-home/srijoni/PIN_Tests/smartKT/projects/temptest/foo.cc
+

@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/workspace/projects/smallproj/lib/foo.cpp
+foo.h
+/workspace/projects/smallproj/lib/foo.h
+
+/workspace/projects/smallproj/lib/foo.h
+
