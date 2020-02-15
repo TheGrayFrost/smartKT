@@ -1,0 +1,56 @@
+/usr/bin/cmake -H/workspace/projects/smallproj -B/workspace/projects/smallproj/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /workspace/projects/smallproj/build/CMakeFiles /workspace/projects/smallproj/build/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[1]: Entering directory '/workspace/projects/smallproj/build'
+make -f lib/CMakeFiles/lib.dir/build.make lib/CMakeFiles/lib.dir/depend
+make[2]: Entering directory '/workspace/projects/smallproj/build'
+cd /workspace/projects/smallproj/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /workspace/projects/smallproj /workspace/projects/smallproj/lib /workspace/projects/smallproj/build /workspace/projects/smallproj/build/lib /workspace/projects/smallproj/build/lib/CMakeFiles/lib.dir/DependInfo.cmake --color=
+Dependee "/workspace/projects/smallproj/build/lib/CMakeFiles/lib.dir/DependInfo.cmake" is newer than depender "/workspace/projects/smallproj/build/lib/CMakeFiles/lib.dir/depend.internal".
+Dependee "/workspace/projects/smallproj/build/lib/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/workspace/projects/smallproj/build/lib/CMakeFiles/lib.dir/depend.internal".
+Scanning dependencies of target lib
+make[2]: Leaving directory '/workspace/projects/smallproj/build'
+make -f lib/CMakeFiles/lib.dir/build.make lib/CMakeFiles/lib.dir/build
+make[2]: Entering directory '/workspace/projects/smallproj/build'
+[ 16%] Building CXX object lib/CMakeFiles/lib.dir/foo.cpp.o
+cd /workspace/projects/smallproj/build/lib && /usr/bin/c++    -I/workspace/projects/smallproj/lib  -g   -o CMakeFiles/lib.dir/foo.cpp.o -c /workspace/projects/smallproj/lib/foo.cpp
+[ 33%] Linking CXX static library liblib.a
+cd /workspace/projects/smallproj/build/lib && /usr/bin/cmake -P CMakeFiles/lib.dir/cmake_clean_target.cmake
+cd /workspace/projects/smallproj/build/lib && /usr/bin/cmake -E cmake_link_script CMakeFiles/lib.dir/link.txt --verbose=1
+/usr/bin/ar qc liblib.a  CMakeFiles/lib.dir/foo.cpp.o
+/usr/bin/ranlib liblib.a
+make[2]: Leaving directory '/workspace/projects/smallproj/build'
+[ 33%] Built target lib
+make -f CMakeFiles/dp.dir/build.make CMakeFiles/dp.dir/depend
+make[2]: Entering directory '/workspace/projects/smallproj/build'
+cd /workspace/projects/smallproj/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /workspace/projects/smallproj /workspace/projects/smallproj /workspace/projects/smallproj/build /workspace/projects/smallproj/build /workspace/projects/smallproj/build/CMakeFiles/dp.dir/DependInfo.cmake --color=
+Dependee "/workspace/projects/smallproj/build/CMakeFiles/dp.dir/DependInfo.cmake" is newer than depender "/workspace/projects/smallproj/build/CMakeFiles/dp.dir/depend.internal".
+Dependee "/workspace/projects/smallproj/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/workspace/projects/smallproj/build/CMakeFiles/dp.dir/depend.internal".
+Scanning dependencies of target dp
+make[2]: Leaving directory '/workspace/projects/smallproj/build'
+make -f CMakeFiles/dp.dir/build.make CMakeFiles/dp.dir/build
+make[2]: Entering directory '/workspace/projects/smallproj/build'
+[ 50%] Building CXX object CMakeFiles/dp.dir/src/builder_pattern_1.cpp.o
+/usr/bin/c++    -I/workspace/projects/smallproj/lib  -g   -o CMakeFiles/dp.dir/src/builder_pattern_1.cpp.o -c /workspace/projects/smallproj/src/builder_pattern_1.cpp
+[ 66%] Linking CXX executable dp
+/usr/bin/cmake -E cmake_link_script CMakeFiles/dp.dir/link.txt --verbose=1
+/usr/bin/c++   -g   CMakeFiles/dp.dir/src/builder_pattern_1.cpp.o  -o dp -rdynamic lib/liblib.a 
+make[2]: Leaving directory '/workspace/projects/smallproj/build'
+[ 66%] Built target dp
+make -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/depend
+make[2]: Entering directory '/workspace/projects/smallproj/build'
+cd /workspace/projects/smallproj/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /workspace/projects/smallproj /workspace/projects/smallproj /workspace/projects/smallproj/build /workspace/projects/smallproj/build /workspace/projects/smallproj/build/CMakeFiles/prog.dir/DependInfo.cmake --color=
+Dependee "/workspace/projects/smallproj/build/CMakeFiles/prog.dir/DependInfo.cmake" is newer than depender "/workspace/projects/smallproj/build/CMakeFiles/prog.dir/depend.internal".
+Dependee "/workspace/projects/smallproj/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/workspace/projects/smallproj/build/CMakeFiles/prog.dir/depend.internal".
+Scanning dependencies of target prog
+make[2]: Leaving directory '/workspace/projects/smallproj/build'
+make -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/build
+make[2]: Entering directory '/workspace/projects/smallproj/build'
+[ 83%] Building CXX object CMakeFiles/prog.dir/src/prog.cpp.o
+/usr/bin/c++    -I/workspace/projects/smallproj/lib  -g   -o CMakeFiles/prog.dir/src/prog.cpp.o -c /workspace/projects/smallproj/src/prog.cpp
+[100%] Linking CXX executable prog
+/usr/bin/cmake -E cmake_link_script CMakeFiles/prog.dir/link.txt --verbose=1
+/usr/bin/c++   -g   CMakeFiles/prog.dir/src/prog.cpp.o  -o prog -rdynamic lib/liblib.a 
+make[2]: Leaving directory '/workspace/projects/smallproj/build'
+[100%] Built target prog
+make[1]: Leaving directory '/workspace/projects/smallproj/build'
+/usr/bin/cmake -E cmake_progress_start /workspace/projects/smallproj/build/CMakeFiles 0

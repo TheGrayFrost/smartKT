@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/prog.dir/src/prog.cpp.o  -o prog -rdynamic lib/liblib.a 
