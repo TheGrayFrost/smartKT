@@ -9,10 +9,7 @@ from xml.etree.ElementTree import Element, SubElement
 from xml.etree import ElementTree as ET
 from xml.dom import minidom
 
-# combined_file = sys.argv[1]
-combined_file = "inherit.temp.xml"
-cctree = ET.parse(combined_file).getroot()
-
+idx = 0
 usr2id = {}
 
 TTLstring = """
@@ -22,8 +19,34 @@ TTLstring = """
 @prefix property:   <http://smartkt.org/property> .
 @prefix object: <http://smartkt.org/object> .
 @prefix usr: <http://smartkt.org/usr> .
-
+@prefix component: <http://smartkt.org/component> .
+@prefix slib: <http://smartkt.org/component> .
+@prefix dlib: <http://smartkt.org/component> .
+@prefix obj: <http://smartkt.org/component> .
+@prefix exe: <http://smartkt.org/component> .
 """
+
+tag2prefix = {
+    'STATIC_LIBRARY': 'slib',
+    'DYNMAIC_LIBRARY': 'dlib',
+    'OBJECT': 'obj',
+    'EXEC_STATIC': 'exe'
+}
+
+tag2attrib = {
+    'STATIC_LIBRARY': 'archive_name',
+    'DYNMAIC_LIBRARY': 'shared_object_name',
+    'OBJECT': 'object_file',
+    'EXEC_STATIC': 'executable'
+}
+
+tag2comp = {
+    'STATIC_LIBRARY': 'staticLibrary',
+    'DYNMAIC_LIBRARY': 'dynamicLibrary',
+    'OBJECT': 'object',
+    'EXEC_STATIC': 'executable'
+}
+
 
 def visitChild(xmlNode, xmlParent):
     global TTLstring
@@ -81,12 +104,32 @@ def visitChild(xmlNode, xmlParent):
     for child in xmlNode.getchildren():
         visitChild(child, xmlNode)
 
-idx = 0
-for tu in cctree.getchildren():
-    tu.attrib['id'] = idx
-    idx += 1
-    for child in tu.getchildren():
-        visitChild(child, tu)
+def visitComponent(xmlNode, parent):
+    global tag2prefix
+    # isA relation
+    TTLstring += tag2prefix[xmlNode.tag] + ":\""+xmlNode.attrib[tag2attrib[xmlNode.tag]] + \
+            "\" relation:isA component:"+ tag2comp[xmlNode.tag] +" .\n"
+    if parent is not None:
+        # partOf and composedOf relations
+        TTLstring += tag2prefix[xmlNode.tag] + ":\""+xmlNode.attrib[tag2attrib[xmlNode.tag]] + \
+                "\" relation:partOf " + tag2prefix[xmlParent.tag]+":\"" + \
+                xmlParent.attrib[tag2attrib[xmlParent.tag]] + "\" .\n"
+        TTLstring += tag2prefix[xmlParent.tag]+":\"" + xmlParent.attrib[tag2attrib[xmlParent.tag]] + \
+                "\" relation:composedOf "+ tag2prefix[xmlNode.tag] +":\"" + \
+                 xmlNode.attrib[tag2attrib[xmlNode.tag]] + "\" .\n"
+
+    if xmlNode.tag == "OBJECT":
+        TTLstring += "obj:\"" + xmlNode.attrib['shared_object_name'] + "relation:source \"" + \
+                xmlNode.attrib['source_file'] +"\" .\n"
+        for tu in xmlNode.getchildren():
+            visitChild(child, tu)
+    else:
+        for child in xmlNode.getchildren():
+            visitComponent(child, xmlNode)
+
+combined_file = sys.argv[1]
+ccroot = ET.parse(combined_file).getroot()
+visitComponent(ccroot, None)
 
 with open(sys.argv[1][:-4] + ".ttl", "w") as f:
     f.write(TTLstring)
