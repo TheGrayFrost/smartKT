@@ -124,9 +124,8 @@ for path, data in cxx_cmds: # these commands create some executable
         if not os.path.isabs(filename):
             filename = os.path.join(cwd, filename)
         filename = os.path.abspath(filename)
-        dependencies[executable] = filename
-        # collect include directories for the file, needed by clang for parsing
-
+        dependencies[executable] = set() # There is one file, but maintain a set
+        dependencies[executable].add(filename)
     else:
         # must be a linking instruction
         rdynamic_lib = []   # allows for multiple rdynamic links

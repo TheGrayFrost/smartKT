@@ -109,8 +109,7 @@ def generate_static_info(path):
         # direct object file parsing
         try:
             # generate dwarfdump for corresponding object file
-            os.system('dwarfdump -i ' + objectfile + '> ' + stripop + '.dd')
-            os.system('python parsers/dwxml.py '+ stripop + '.dd ' + '-o ' + stripop + DWARF_EXTENSION)
+            os.system('python3 parsers/dwxml.py '+ objectfile + ' -o ' + stripop + DWARF_EXTENSION)
             print ('Dwarfdump Generated')
 
             # combine dwarfdump and clang and get offset file
