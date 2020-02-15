@@ -46,7 +46,8 @@ outfolder = os.path.abspath('outputs/'+project_name)
 foutfolder = os.path.join(outfolder,'exe_'+execstrip)
 os.system('mkdir ' + foutfolder)
 
-(dependencies, sourcefile, objectfile) = pickle.load(open(os.path.join(outfolder, 'dependencies.p'), 'rb'))
+# Extract the linking information & store in dependencies.p
+os.system('python3 parsers/project_parser.py ' + os.path.join(outfolder, 'make_log.txt') + ' ' + os.path.join(outfolder, 'dependencies.p'))
 
 # get list of all cpp's forming this executable
 def get_rec_deps(path):
