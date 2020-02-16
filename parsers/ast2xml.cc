@@ -4,6 +4,7 @@
 #include <libxml/parser.h>
 #include <libxml/tree.h>
 
+#include <algorithm>
 #include <string>
 #include <cstring>
 #include "ctype.h"
@@ -25,6 +26,10 @@ std::string camelCase(std::string s){
       s[res_ind++] = s[i];
     }
   }
+  std::replace(s.begin(), s.end(), ' ', '_');
+  std::replace(s.begin(), s.end(), '(', '_');
+  std::replace(s.begin(), s.end(), ')', '_');
+  std::replace(s.begin(), s.end(), '+', 'X');
   return s.substr(0, res_ind);
 }
 

@@ -2,10 +2,13 @@
 import sys
 import os
 
-from elftools.elf.elffile import ELFFile
-from elftools.dwarf.descriptions import (
+sys.path[0:0] = [".", ".."]
+
+import pyelftools
+from pyelftools.elftools.elf.elffile import ELFFile
+from pyelftools.elftools.dwarf.descriptions import (
     describe_DWARF_expr, set_global_machine_arch)
-from elftools.dwarf.locationlists import (
+from pyelftools.elftools.dwarf.locationlists import (
     LocationEntry, LocationExpr, LocationParser)
 
 from xml.etree.ElementTree import (
