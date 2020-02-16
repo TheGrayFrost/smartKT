@@ -1,1 +1,0 @@
-/opt/rh/devtoolset-8/root/usr/bin/c++  -gdwarf-4  -L/usr/lib64/mysql -L/usr/lib64/ -rdynamic CMakeFiles/driver.out.dir/driver.cc.o  -o driver.out 

@@ -1,1 +1,0 @@
-clang++  --gcc-toolchain=/opt/rh/devtoolset-8/root/usr/ -gdwarf-4  -L/usr/lib64/mysql -L/usr/lib64/ -rdynamic CMakeFiles/test.dir/C.cc.o  -o test -Wl,-rpath,/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/build libfoo.so 

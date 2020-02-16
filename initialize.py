@@ -11,20 +11,26 @@ from xml.dom import minidom
 
 DEBUG = False
 
-FILE_EXTENSION = ['c', 'C', 'cc', 'cpp', 'cxx', 'c++']
+# input files and extensions
+C_EXTENSION = ['c', 'C']
+CXX_EXTENSION = ['cc', 'cpp', 'cxx', 'c++']
+FILE_EXTENSION = C_EXTENSION + CXX_EXTENSION
+INIT_FILE = 'init.sh'
+
+# tools
+CLANGTOOLS = ['ast2xml', 'calls', 'funcs']
+DWARFTOOL = 'dwxml.py'
+COMBINER = 'ddx.py'
+
+# output extensions
 CLANG_EXTENSION = '_clang.xml'
 DWARF_EXTENSION = '_dd.xml'
 COMB_EXTENSION = '_comb.xml'
 CALL_EXTENSION = '.calls'
 SIGN_EXTENSION = '.funcargs'
 OFFSET_EXTENSION = '.offset'
-CLANGTOOLS = ['ast2xml', 'calls', 'funcs']
 CLANG_OUTPUTEXT = [CLANG_EXTENSION, CALL_EXTENSION, SIGN_EXTENSION]
-DWARFTOOL = 'dwxml.py'
-COMBINER = 'ddx.py'
 COMB_OUTPUTEXT = ' '.join([DWARF_EXTENSION, CLANG_EXTENSION, COMB_EXTENSION, OFFSET_EXTENSION])
-
-INIT_FILE = 'init.sh'
 
 path = os.path.abspath(sys.argv[1])
 sppath = path.split('/')
@@ -47,6 +53,7 @@ def init(path):
         s += 'mkdir -p ' + outfolder + '\n'
         s += 'mv compile_commands.json ' + outfolder + '/\n'
         s += 'mv make_log.txt ' + outfolder + '/\n'
+        s += 'rm ' + initfile + '\n'
         with open(initfile, 'a') as f:
             f.write(s)
 
@@ -58,7 +65,7 @@ def generate_static_info(path):
     global outfolder
 
     # Build the AST parser
-    os.system('cd parsers && make clean && make all')
+    os.system('cd parsers && make all')
 
     # Get compile instructions
     # THIS PART WILL CHANGE FOR OTHER BUILD TOOLS
@@ -83,7 +90,7 @@ def generate_static_info(path):
             # Select clang/Clang++ based on whether it is C/C++
             cmd = instr['command'].split(' ')
             clangv = 'clang++ -std=c++11'
-            if f.split('.')[-1] == 'c':
+            if f.split('.')[-1] in C_EXTENSION:
                 clangv = 'clang'
 
             # Get the objectfile
@@ -112,7 +119,7 @@ def generate_static_info(path):
         # direct object file parsing
         try:
             # generate dwarfdump for corresponding object file
-            os.system('parsers/' + DWARFTOOL + ' ' + objectfile + ' -o ' + stripop + DWARF_EXTENSION)
+            os.system('parsers/' + DWARFTOOL + ' ' + objectfile + ' -q -o ' + stripop + DWARF_EXTENSION)
             print ('Dwarfdump Generated')
 
             # combine dwarfdump and clang and get offset file
