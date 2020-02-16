@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # To use:
 # python initialize.py <path to project>
 # The last name in the path is assumed the project name
@@ -9,19 +11,26 @@ from xml.dom import minidom
 
 DEBUG = False
 
-FILE_EXTENSION = ['c', 'C', 'cc', 'cpp', 'cxx', 'c++']
+# input files and extensions
+C_EXTENSION = ['c', 'C']
+CXX_EXTENSION = ['cc', 'cpp', 'cxx', 'c++']
+FILE_EXTENSION = C_EXTENSION + CXX_EXTENSION
+INIT_FILE = 'init.sh'
+
+# tools
+CLANGTOOLS = ['ast2xml', 'calls', 'funcs']
+DWARFTOOL = 'dwxml.py'
+COMBINER = 'ddx.py'
+
+# output extensions
 CLANG_EXTENSION = '_clang.xml'
 DWARF_EXTENSION = '_dd.xml'
 COMB_EXTENSION = '_comb.xml'
 CALL_EXTENSION = '.calls'
 SIGN_EXTENSION = '.funcargs'
 OFFSET_EXTENSION = '.offset'
-CLANGTOOLS = ['ast2xml', 'calls', 'funcs']
 CLANG_OUTPUTEXT = [CLANG_EXTENSION, CALL_EXTENSION, SIGN_EXTENSION]
-DWARFTOOL = ['ddx.py']
-DWARF_OUTPUTEXT = ' '.join([DWARF_EXTENSION, CLANG_EXTENSION, COMB_EXTENSION, OFFSET_EXTENSION])
-
-INIT_FILE = 'init.sh'
+COMB_OUTPUTEXT = ' '.join([DWARF_EXTENSION, CLANG_EXTENSION, COMB_EXTENSION, OFFSET_EXTENSION])
 
 path = os.path.abspath(sys.argv[1])
 sppath = path.split('/')
@@ -44,6 +53,7 @@ def init(path):
         s += 'mkdir -p ' + outfolder + '\n'
         s += 'mv compile_commands.json ' + outfolder + '/\n'
         s += 'mv make_log.txt ' + outfolder + '/\n'
+        s += 'rm ' + initfile + '\n'
         with open(initfile, 'a') as f:
             f.write(s)
 
@@ -55,7 +65,7 @@ def generate_static_info(path):
     global outfolder
 
     # Build the AST parser
-    os.system('cd parsers && make clean && make all')
+    os.system('cd parsers && make all')
 
     # Get compile instructions
     # THIS PART WILL CHANGE FOR OTHER BUILD TOOLS
@@ -80,7 +90,7 @@ def generate_static_info(path):
             # Select clang/Clang++ based on whether it is C/C++
             cmd = instr['command'].split(' ')
             clangv = 'clang++ -std=c++11'
-            if f.split('.')[-1] == 'c':
+            if f.split('.')[-1] in C_EXTENSION:
                 clangv = 'clang'
 
             # Get the objectfile
@@ -110,12 +120,11 @@ def generate_static_info(path):
         # direct object file parsing
         try:
             # generate dwarfdump for corresponding object file
-            os.system('python3 parsers/dwxml.py '+ objectfile + ' -o ' + stripop + DWARF_EXTENSION)
-            print ('Dwarfdump generated :', stripop + DWARF_EXTENSION)
+            os.system('parsers/' + DWARFTOOL + ' ' + objectfile + ' -q -o ' + stripop + DWARF_EXTENSION)
+            print ('Dwarfdump Generated')
 
             # combine dwarfdump and clang and get offset file
-            print('python3 parsers/ddx.py ' + stripop + ' OFFSET ' + DWARF_OUTPUTEXT)
-            os.system('python3 parsers/ddx.py ' + stripop + ' OFFSET ' + DWARF_OUTPUTEXT)
+            os.system('parsers/' + COMBINER + ' ' + stripop + ' OFFSET ' + COMB_OUTPUTEXT)
             print ('Information combined')
         except Exception as e:
             print(e)

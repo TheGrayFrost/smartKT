@@ -1,1 +1,0 @@
-clang++ -fPIC --gcc-toolchain=/opt/rh/devtoolset-8/root/usr/ -gdwarf-4 -L/usr/lib64/mysql -L/usr/lib64/ -shared -Wl,-soname,libfoo.so -o libfoo.so CMakeFiles/foo.dir/A.cc.o CMakeFiles/foo.dir/B.cc.o 
