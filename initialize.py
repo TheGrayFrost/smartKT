@@ -114,7 +114,8 @@ def generate_static_info(path):
             print ('Dwarfdump generated :', stripop + DWARF_EXTENSION)
 
             # combine dwarfdump and clang and get offset file
-            os.system('python parsers/ddx.py ' + stripop + ' OFFSET ' + DWARF_OUTPUTEXT)
+            print('python3 parsers/ddx.py ' + stripop + ' OFFSET ' + DWARF_OUTPUTEXT)
+            os.system('python3 parsers/ddx.py ' + stripop + ' OFFSET ' + DWARF_OUTPUTEXT)
             print ('Information combined')
         except Exception as e:
             print(e)

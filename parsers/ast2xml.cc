@@ -4,6 +4,7 @@
 #include <libxml/parser.h>
 #include <libxml/tree.h>
 
+#include <algorithm>
 #include <string>
 #include <cstring>
 #include "ctype.h"
