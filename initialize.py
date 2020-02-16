@@ -106,11 +106,12 @@ def generate_static_info(path):
             # Generate func, calls, ast
             for clangexe, output_extension in zip(CLANGTOOLS, CLANG_OUTPUTEXT):
                 os.system ('parsers/' + clangexe + ' ' + mainfname + '.ast > ' + stripop + output_extension)
+                print ('output :', stripop + output_extension)
 
             # Move the ast into outputs
             os.system ('mv ' + mainfname + '.ast ' + outpath)
 
-            print ('Clang Generated')
+            print ('Clang output generated')
 
         except Exception as e:
             print(e)
