@@ -16,19 +16,18 @@ struct trav_data_t {
   xmlNodePtr xml_ptr; // XML node corresponding to current cursor.
 };
 
-std::string camelCase(std::string s){
+std::string camelCaseSanitize(std::string s){
   int n = s.length(), res_ind = 0;
   for(int i=0; i<n; i++){
     if(s[i] == ' ') { s[i+1] = std::toupper(s[i+1]); continue; }
     else {
       if(s[i] == '+') s[i] = 'X';
+      else if (s[i] == '(' || s[i] == ')') s[i] = '_';
       s[res_ind++] = s[i];
     }
   }
   return s.substr(0, res_ind);
 }
-
-std::map<std::string, xmlNodePtr> template_map; //keeps a map of templateDecl id to their parents
 
 CXChildVisitResult
 visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
@@ -38,9 +37,8 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
   CXString kindName = clang_getCursorKindSpelling(cursorKind);
   std::string xmlNodeName(clang_getCString(kindName));
   
-  xmlNodePtr cur_ptr = xmlNewChild(parentData->xml_ptr, nullptr,
-    BAD_CAST camelCase(clang_getCString(kindName)).c_str(), nullptr);
-  
+  xmlNodePtr cur_ptr = xmlNewChild(parentData->xml_ptr, nullptr, 
+    BAD_CAST camelCaseSanitize(clang_getCString(kindName)).c_str(), nullptr);  
   clang_disposeString( kindName );
 
   trav_data_t nodeData{clang_getNullLocation(), cur_ptr};

@@ -7,7 +7,7 @@ from xml.etree import ElementTree as ET
 from xml.dom import minidom
 from collections import defaultdict
 
-DEBUG = True
+DEBUG = False
 
 offset = False  # whether to patch offsets
 address = False # whether to patch global addresses
