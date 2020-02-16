@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # To use:
 # python initialize.py <path to project>
 # The last name in the path is assumed the project name
@@ -18,8 +20,9 @@ SIGN_EXTENSION = '.funcargs'
 OFFSET_EXTENSION = '.offset'
 CLANGTOOLS = ['ast2xml', 'calls', 'funcs']
 CLANG_OUTPUTEXT = [CLANG_EXTENSION, CALL_EXTENSION, SIGN_EXTENSION]
-DWARFTOOL = ['ddx.py']
-DWARF_OUTPUTEXT = ' '.join([DWARF_EXTENSION, CLANG_EXTENSION, COMB_EXTENSION, OFFSET_EXTENSION])
+DWARFTOOL = 'dwxml.py'
+COMBINER = 'ddx.py'
+COMB_OUTPUTEXT = ' '.join([DWARF_EXTENSION, CLANG_EXTENSION, COMB_EXTENSION, OFFSET_EXTENSION])
 
 INIT_FILE = 'init.sh'
 
@@ -109,11 +112,11 @@ def generate_static_info(path):
         # direct object file parsing
         try:
             # generate dwarfdump for corresponding object file
-            os.system('python3 parsers/dwxml.py '+ objectfile + ' -o ' + stripop + DWARF_EXTENSION)
+            os.system('parsers/' + DWARFTOOL + ' ' + objectfile + ' -o ' + stripop + DWARF_EXTENSION)
             print ('Dwarfdump Generated')
 
             # combine dwarfdump and clang and get offset file
-            os.system('python parsers/ddx.py ' + stripop + ' OFFSET ' + DWARF_OUTPUTEXT)
+            os.system('parsers/' + COMBINER + ' ' + stripop + ' OFFSET ' + COMB_OUTPUTEXT)
             print ('Information combined')
         except Exception as e:
             print(e)
