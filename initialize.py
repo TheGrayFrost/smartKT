@@ -96,11 +96,12 @@ def generate_static_info(path):
             # Generate func, calls, ast
             for clangexe, output_extension in zip(CLANGTOOLS, CLANG_OUTPUTEXT):
                 os.system ('parsers/' + clangexe + ' ' + mainfname + '.ast > ' + stripop + output_extension)
+                print ('output :', stripop + output_extension)
 
             # Move the ast into outputs
             os.system ('mv ' + mainfname + '.ast ' + outpath)
 
-            print ('Clang Generated')
+            print ('Clang output generated')
 
         except Exception as e:
             print(e)
@@ -110,7 +111,7 @@ def generate_static_info(path):
         try:
             # generate dwarfdump for corresponding object file
             os.system('python3 parsers/dwxml.py '+ objectfile + ' -o ' + stripop + DWARF_EXTENSION)
-            print ('Dwarfdump Generated')
+            print ('Dwarfdump generated :', stripop + DWARF_EXTENSION)
 
             # combine dwarfdump and clang and get offset file
             os.system('python parsers/ddx.py ' + stripop + ' OFFSET ' + DWARF_OUTPUTEXT)
