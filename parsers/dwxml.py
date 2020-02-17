@@ -47,6 +47,7 @@ def process_file(filename, xml_root):
             for key, value in CU.header.items() :
                 cu_xml_root.set(key, str(value))
             cu_xml_root.set('path', str(top_DIE.get_full_path()))
+            cu_xml_root.set('cu_offset', str(CU.cu_offset))
 
             def add_source_file_info(xml_parent) :
                 """ Add source file name index from the debug_line section.
@@ -95,6 +96,8 @@ def process_file(filename, xml_root):
                             xml_attr = describe_DWARF_expr(
                                     loc.loc_expr, dwarfinfo.structs)
 
+                    if 'DW_FORM_ref' in attr_values.form:
+                        xml_attr += CU.cu_offset
                     if isinstance(xml_attr, bytes) :
                         xml_node.set(attr_name, xml_attr.decode('utf-8'))
                     else :

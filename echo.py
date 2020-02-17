@@ -1,15 +1,18 @@
+#!/usr/bin/env python3
+
 import pickle as pckl
 import re
 import sys
 
-(dep, src, obj) = pckl.load(open(sys.argv[1], 'rb'))
+dep = pckl.load(open(sys.argv[1], 'rb'))
+# , src, obj)
 
-print dep
-print '\n\n\n'
-print src
-print '\n\n\n'
-print obj
-print '\n\n\n'
+print (dep)
+print ('\n\n\n')
+# print (src)
+# print ('\n\n\n')
+# print (obj)
+# print ('\n\n\n')
 
 # mydep = dict()
 # for k, v in dep.items():

@@ -41,21 +41,19 @@ def init(path):
     # This function builds the project and in that process gets the make log file
     # Build the project
     initfile = os.path.join(path, INIT_FILE)
-    s = ''
-    if not os.path.isfile(initfile):
-        s += 'set -x\n'
-        s += 'cd ' + path + '\n'
-        s += 'rm -rf build\n'
-        s += 'mkdir build\n'
-        s += 'cd build\n'
-        s += 'cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..\n'
-        s += 'make -j$(nproc) VERBOSE=1 > make_log.txt\n'
-        s += 'mkdir -p ' + outfolder + '\n'
-        s += 'mv compile_commands.json ' + outfolder + '/\n'
-        s += 'mv make_log.txt ' + outfolder + '/\n'
-        s += 'rm ' + initfile + '\n'
-        with open(initfile, 'a') as f:
-            f.write(s)
+    s = 'set -x\n'
+    s += 'cd ' + path + '\n'
+    s += 'rm -rf build\n'
+    s += 'mkdir build\n'
+    s += 'cd build\n'
+    s += 'cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..\n'
+    s += 'make -j$(nproc) VERBOSE=1 > make_log.txt\n'
+    s += 'mkdir -p ' + outfolder + '\n'
+    s += 'mv compile_commands.json ' + outfolder + '/\n'
+    s += 'mv make_log.txt ' + outfolder + '/\n'
+    s += 'rm ' + initfile + '\n'
+    with open(initfile, 'w') as f:
+        f.write(s)
 
     os.system('chmod +x ' + initfile)
     os.system(initfile)
@@ -124,6 +122,7 @@ def generate_static_info(path):
             print ('Dwarfdump Generated')
 
             # combine dwarfdump and clang and get offset file
+            print('parsers/' + COMBINER + ' ' + stripop + ' OFFSET ' + COMB_OUTPUTEXT)
             os.system('parsers/' + COMBINER + ' ' + stripop + ' OFFSET ' + COMB_OUTPUTEXT)
             print ('Information combined')
         except Exception as e:
