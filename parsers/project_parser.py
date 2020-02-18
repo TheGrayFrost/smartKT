@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 '''
 This program finds the linking information (static and dynamic)
 and stores in dependencies.p (pickle format)
@@ -50,7 +51,6 @@ cxx_cmds = []
 cd_cmds = []
 static_link_cmds = []
 cur_path = sys.argv[2]
-# print (cur_path)
 
 for line_num, x in enumerate(data):
     # expects only one cd in any command - true for cmake generated and any other sensible make file
@@ -129,8 +129,8 @@ for path, data in cxx_cmds: # these commands create some executable
         if not os.path.isabs(filename):
             filename = os.path.join(cwd, filename)
         filename = os.path.abspath(filename)
-        dependencies[executable] = set() # There is one file, but maintain a set
-        dependencies[executable].add(filename)
+        dependencies[executable] = filename
+
     else:
         # must be a linking instruction
         rdynamic_lib = []   # allows for multiple rdynamic links
@@ -141,7 +141,7 @@ for path, data in cxx_cmds: # these commands create some executable
                 if x.find('-Wl') != -1:
                     linker_opts += x.split(',')[1:]
                 elif x[-2:] == '.o' or x[-2:] == '.a':
-                    if not os.path.abspath(x):
+                    if not os.path.isabs(x):
                         x = os.path.join(cwd, x)
                     dependencies[executable].add(os.path.abspath(x))
                 elif x.find('.so') != -1:
@@ -165,7 +165,7 @@ for path, data in cxx_cmds: # these commands create some executable
 for path, data in static_link_cmds:
     cwd = path
     d = data.strip().split()
-    # qc is specific to cmake... ar options order guarantees that archive is the third elements (2nd being the options)
+    # qc is specific to cmake... ar options order guarantees that archive is the third element (2nd being the options)
     # libfile = cwd+'/'+d[d.index('qc')+1]
     libfile = d[2]
     if not os.path.isabs(libfile):

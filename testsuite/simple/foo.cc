@@ -1,5 +1,6 @@
-#include "foo.hh"
+extern int z;
 
-int A::x = 9;
-
-int A::B::f() {return x+2;}
+int foo1()
+{
+	return z;
+}

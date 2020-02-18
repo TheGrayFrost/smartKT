@@ -16,4 +16,4 @@ add_executable (base base.cc)
 target_link_libraries (base C A)
 
 
-# add_executable (random random.cc main.cc)
+add_executable (random random.cc)

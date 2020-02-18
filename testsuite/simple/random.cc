@@ -1,35 +1,25 @@
+#include "random.hh"
+
 namespace Foo
 {
-	class A;
+	int u, v;
 	namespace Bar
 	{
-		int f(A u);
+		int f (A z);
+		static int f();
 	}
-}
-
-class Foo::A
-{
-	public:
-		int x;
-		A() {x = 0;}
-
-};
-
-namespace Foo
-{
-	int Bar::f(A v)
+	static int Bar::f()
 	{
-		return v.x;
+		static int p = 7;
+		{
+			int p = 9;
+		}
+		return p;
 	}
 }
 
-
-using namespace Foo;
-
-
-int main()
+int Foo::Bar::f(A v)
 {
-	A i;
-	int x, y = Bar::f(i);
-	return 0;
+	int a, b;
+	return v.x;
 }

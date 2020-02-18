@@ -17,6 +17,8 @@ from xml.etree import ElementTree as XMLElementTree
 from xml.dom import minidom as XMLMiniDOM
 
 
+refmap = dict() # to link specification to the originating nodes
+
 def process_file(filename, xml_root):
 
     with open(filename, 'rb') as f:
@@ -47,7 +49,7 @@ def process_file(filename, xml_root):
             for key, value in CU.header.items() :
                 cu_xml_root.set(key, str(value))
             cu_xml_root.set('path', str(top_DIE.get_full_path()))
-            cu_xml_root.set('cu_offset', str(CU.cu_offset))
+            cu_xml_root.set('offset', str(CU.cu_offset))
 
             def add_source_file_info(xml_parent) :
                 """ Add source file name index from the debug_line section.
@@ -103,12 +105,28 @@ def process_file(filename, xml_root):
                     else :
                         xml_node.set(attr_name, str(xml_attr))
 
+                # NOTE: There is the implicit belief that the specification comes after the
+                # referred DIE. If that turns out not to be the case later, which is quite unlikely,
+                # we will need to do this linking in two passes
+
+                # add node to map
+                if 'offset' in xml_node.attrib:
+                    refmap[xml_node.attrib['offset']] = xml_node
+
+                # after node construction, if it contains specification, add info onto refed node
+                if 'DW_AT_specification' in xml_node.attrib:
+                    refed_node = refmap[xml_node.attrib['DW_AT_specification']]
+                    for k, v in xml_node.attrib.items():
+                        if k not in refed_node.attrib and k != 'DW_AT_specification':
+                            refed_node.set(k, v)
+
                 for child_DIE in DIE.iter_children() :
                     add_die_info(child_DIE, xml_node)
 
             # Process DIEs recursively starting with top_DIE
             for child in top_DIE.iter_children() :
                 add_die_info(child, cu_xml_root)
+
 
 
 if __name__ == '__main__':

@@ -43,6 +43,7 @@ Makefile builds objects and binaries, is very standard, making the parsing
 straightforward. We are just looking for the occurance of the three commands
 mentioned above, and store relevant information in lists.
 '''
+
 cxx_cmds = []
 cd_cmds = []
 static_link_cmds = []

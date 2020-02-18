@@ -118,6 +118,7 @@ def generate_static_info(path):
         # direct object file parsing
         try:
             # generate dwarfdump for corresponding object file
+            print('parsers/' + DWARFTOOL + ' ' + objectfile + ' -q -o ' + stripop + DWARF_EXTENSION)
             os.system('parsers/' + DWARFTOOL + ' ' + objectfile + ' -q -o ' + stripop + DWARF_EXTENSION)
             print ('Dwarfdump Generated')
 

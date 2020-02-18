@@ -1,13 +1,10 @@
-#include <iostream>
-#include "foo.hh"
-
-using namespace A::B;
+int foo();
+int bar();
+extern int z;
 
 int main()
 {
-	int y = 9;
-	std::cout << A::x << "\n";
-	A::x = f();
-	std::cout << A::x << "\n";
+	static int x = z + foo();
+	int y = bar();
 	return 0;
 }

@@ -116,11 +116,11 @@ void printall()
 struct variable
 {
 	std::string name;	// variable name
-	long long int id;	// clang node id
+	std::string id;		// clang node id
 	ssize_t size;		// size (needed for structs, classes)
 	std::string fname;	// variable container
 	std::string type;	// variable type
-	long long int pid;	// variable semantic parent id
+	std::string pid;	// variable semantic parent id
 	std::string spattr;	// special attribute: storage class type
 
 	void print(std::ostream& outf = std::cout) 
@@ -273,8 +273,7 @@ VOID init(std::string locf)
 		std::ifstream argFile((folder+fargs).c_str());
 		// std::cout << folder << fargs << "\n\n";
 
-		std::string filename, funcname, vartype, ignore;
-		ADDRINT fnodeid;
+		std::string filename, funcname, vartype, ignore, fnodeid;
 		// bool add = true;
 		int nargs;
 
@@ -327,17 +326,17 @@ VOID init(std::string locf)
 
 	// 	}
 
-	// 	for (auto j: funcinfoMap)
-	// 	{
-	// 		outp << j.first << " Args: ";
-	// 		auto& arglist = j.second;
-	// 		int na = arglist.size();
-	// 		outp << na << " -> ";
-	// 		for (int i = 0; i < na; ++i)
-	// 			outp << arglist[i] << "... ";
-	// 		outp << "Returns: " << arglist.back() << "\n";
-	// 	}
-	// 	outp << "\n";
+		// for (auto j: funcinfoMap)
+		// {
+		// 	outp << j.first << " Args: ";
+		// 	auto& arglist = j.second;
+		// 	int na = arglist.size()-1;
+		// 	outp << na << " -> ";
+		// 	for (int i = 0; i < na; ++i)
+		// 		outp << arglist[i] << "... ";
+		// 	outp << "Returns: " << arglist.back() << "\n";
+		// }
+		// outp << "\n";
 
 		argFile.close();
 	}
@@ -422,7 +421,7 @@ VOID ImageLoad(IMG img, VOID *v)
 	if (addrFile.good())
 	{
 		std::getline (addrFile, ignore);
-		// callFile.get();		
+		// callFile.get();
 	}
 
 
@@ -438,9 +437,11 @@ VOID ImageLoad(IMG img, VOID *v)
 			addrFile >> var.fname;
 		else
 			var.fname = "";
-		globalMap[img_loff+address] = var;
+		if (var.name != "")
+			globalMap[img_loff+address] = var;
 	}
 	
+	// outp << img_name << "\n";
 	// for (auto j: globalMap)
 	// {
 	// 	outp << std::hex << j.first << std::dec << ": ";

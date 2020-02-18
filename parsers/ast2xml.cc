@@ -213,6 +213,35 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
       xmlNewProp(cur_ptr, BAD_CAST "access_specifier", BAD_CAST ac_spec_str);
     }
 
+    /*
+    // add storage class - discarded since stupid clang gives auto storage for globals as well
+    // will have to use combined criteria (auto storage + external linkage)
+
+    // also CX_SC_PrivateExtern should be a linkage thing... it is basically hidden visibility
+    // i.e. objects only visible within one shared object, and nowhere outside
+
+    CX_StorageClass storage_class = clang_Cursor_getStorageClass(cursor);
+    if( storage_class != CX_SC_Invalid ) {
+      const char * storage_class_str;
+      switch(storage_class) {
+        // automatic storage duration
+        case CX_SC_Auto:
+        case CX_SC_None : storage_class_str = "auto"; break;
+        // static storage
+        case CX_SC_PrivateExtern:
+        case CX_SC_Static  : storage_class_str = "static"; break;
+        // register storage
+        case CX_SC_Register  : storage_class_str = "register"; break;
+        // not really sure what this means
+        case CX_SC_Extern : storage_class_str = "extern"; break;
+        // not possible
+        default: storage_class_str = "none"; break;
+      };
+      xmlNewProp(cur_ptr, BAD_CAST "storage_class", BAD_CAST storage_class_str);
+    }
+    */
+
+
     // add linkage kind
     CXLinkageKind linkage_kind = clang_getCursorLinkage(cursor);
     if( linkage_kind != CXLinkage_Invalid ) {
@@ -222,7 +251,7 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
         case CXLinkage_NoLinkage : linkage_kind_str = "auto"; break;
         // static linkage
         case CXLinkage_Internal  : linkage_kind_str = "internal"; break;
-        // extern linkage for c++ anonymous namspaces
+        // extern linkage for c++ anonymous namespaces
         case CXLinkage_UniqueExternal  : linkage_kind_str = "anon"; break;
         // true external linkage
         case CXLinkage_External : linkage_kind_str = "external"; break;

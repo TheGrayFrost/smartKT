@@ -10,7 +10,8 @@ exe=${1##*/}							# extract executable and input filename
 cp $1 PIN/Work/$exe.out					# copy executable to pin folder
 rm -rf PIN/Work/statinfo/
 mkdir PIN/Work/statinfo/
-cp $2/* PIN/Work/statinfo/ || true		# copy the static results into pin
+# copy the static results into pin folder
+find $2 -maxdepth 1 -type f -exec cp -t PIN/Work/statinfo/ {} +
 
 if [ $# -eq 3 ]
 then
@@ -20,16 +21,16 @@ else
 	inp=""
 fi
 
-# cd PIN/Work								# move to pin folder
-# chmod +x $exe.out						# make .out runnable
-# make inp=$inp $exe.dump					# create the dump
-# python pass2.py $exe.dump				# add dump info to xml
-# mv $exe.dump $2
-# mv dynamic.xml $2/final_dynamic.xml
+cd PIN/Work							# move to pin folder
+chmod +x $exe.out						# make .out runnable
+make inp=$inp $exe.dump				# create the dump
+python pass2.py $exe.dump				# add dump info to xml
+mv $exe.dump $2
+mv dynamic.xml $2/final_dynamic.xml
 
-# rm $exe.out
-# rm $inp || true
-# rm -rf statinfo/
+rm $exe.out
+rm $inp || true
+rm -rf statinfo/
 
 # # make ./obj-intel64/memtracker.so		# build the pin so
 # # readelf -sW $exe.out | grep "OBJECT" > $exe.symtab	# collect its symtab

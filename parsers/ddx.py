@@ -77,9 +77,9 @@ def patch_offset(cnode, dnode):
 	if 'DW_AT_location' in dnode.attrib:
 		m = dnode.attrib['DW_AT_location'][1:-1].split()
 		if address and 'DW_OP_addr' in m[0]:
-			cnode.set('address', int(m[1]))
+			cnode.set('address', '0x'+m[1])
 		elif offset and 'DW_OP_fbreg' in m[0]:
-			cnode.set('offset', str(abs(int(m[1]) + 16)))
+			cnode.set('offset', hex(abs(int(m[1]) + 16)))
 		return True
 	elif 'DW_AT_data_member_location' in dnode.attrib:
 		cnode.set('offset', dnode.attrib['DW_AT_data_member_location'])
@@ -112,7 +112,7 @@ def get_match(cloc):
 	return None
 
 
-def UpdateCtree (cnode, filename=None, lineno = None,colno = None):
+def UpdateCtree (cnode, filename=None, lineno=None, colno=None):
 	if 'file' in cnode.attrib:
 		filename = os.path.abspath( cnode.attrib['file'] )
 	if 'line' in cnode.attrib :
@@ -162,7 +162,12 @@ def helper(var, var_class, var_container = None):
 	if 'size' in var.attrib :
 		var_size = var.attrib['size']
 	s += var_size + '\t'
-	s += var.attrib['lex_parent_usr'] + '\t'
+	if 'sem_parent_usr' in var.attrib:
+		s += var.attrib['sem_parent_usr'] + '\t'
+	elif 'lex_parent_usr' in var.attrib:
+		s += var.attrib['lex_parent_usr'] + '\t'
+	else:
+		s += 'None' + '\t'
 
 	if var_class != 'LOCAL':
 		s += var_class
