@@ -176,6 +176,6 @@ for path, data in static_link_cmds:
         if x[-2:] == '.o' or x[-2:] == '.a' : # added check for archives getting linked to bigger archives
             if not os.path.isabs(x):
                 x = os.path.join(cwd, x)
-            dependencies[libfile].append(os.path.abspath(x))
+            dependencies[libfile].add(os.path.abspath(x))
 
 pickle.dump(dependencies, open(sys.argv[3], 'wb'))

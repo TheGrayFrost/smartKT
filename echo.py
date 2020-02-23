@@ -7,8 +7,14 @@ import sys
 dep = pckl.load(open(sys.argv[1], 'rb'))
 # , src, obj)
 
-print (dep)
-print ('\n\n\n')
+for k, v in dep.items():
+	print (k)
+	if (isinstance(v, set)):
+		for u in v:
+			print ('\t'+u)
+	else:
+		print ('\t'+v)
+
 # print (src)
 # print ('\n\n\n')
 # print (obj)

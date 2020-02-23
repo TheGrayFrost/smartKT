@@ -36,11 +36,12 @@ public:
 class DerivedClass1: public ParentClass{
 public:
   void hello(){
-    this->c = ParentClass::b;
+    this->c += ParentClass::b;
+    (this->c)++;
   }
 
   void hello(int i){
-    this->c = i;
+    this->c = i = 9;
   }
 
   void hello(double z){
@@ -58,7 +59,7 @@ public:
 };
 
 /* MULTIPLE INHERITANCE */
-struct MI: public foo_str, private ParentClass{
+struct MI: ParentClass, public foo_str{
 public:
   int do_nothing(){
     return 5;
@@ -103,7 +104,7 @@ protected:
     }
 };
 
-class Snake : protected Animal, public Reptile {
+class Snake : protected Animal, Reptile, ParentClass {
 public:
   void crawl();
 };

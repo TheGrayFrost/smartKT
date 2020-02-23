@@ -19,6 +19,7 @@ INIT_FILE = 'init.sh'
 
 # tools
 CLANGTOOLS = ['ast2xml', 'calls', 'funcs']
+# CLANGTOOLS[0] = 'clang_parser.py'
 DWARFTOOL = 'dwxml.py'
 COMBINER = 'ddx.py'
 
@@ -118,12 +119,12 @@ def generate_static_info(path):
         # direct object file parsing
         try:
             # generate dwarfdump for corresponding object file
-            print('parsers/' + DWARFTOOL + ' ' + objectfile + ' -q -o ' + stripop + DWARF_EXTENSION)
+            # print('parsers/' + DWARFTOOL + ' ' + objectfile + ' -q -o ' + stripop + DWARF_EXTENSION)
             os.system('parsers/' + DWARFTOOL + ' ' + objectfile + ' -q -o ' + stripop + DWARF_EXTENSION)
             print ('Dwarfdump Generated')
 
             # combine dwarfdump and clang and get offset file
-            print('parsers/' + COMBINER + ' ' + stripop + ' OFFSET ' + COMB_OUTPUTEXT)
+            # print('parsers/' + COMBINER + ' ' + stripop + ' OFFSET ' + COMB_OUTPUTEXT)
             os.system('parsers/' + COMBINER + ' ' + stripop + ' OFFSET ' + COMB_OUTPUTEXT)
             print ('Information combined')
         except Exception as e:

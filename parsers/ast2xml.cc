@@ -12,6 +12,10 @@
 
 #define DEBUG true
 
+#define IDSIZE 11 // normal unsigned int has 10 digits.. we are padding with one extra zero
+
+CXTranslationUnit tu; // declared global for accessing the source when needed
+
 struct trav_data_t {
   CXSourceLocation cur_loc; // Location of current cursor.
   xmlNodePtr xml_ptr; // XML node corresponding to current cursor.
@@ -43,15 +47,15 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
   std::string xmlNodeName(clang_getCString(kindName));
   
   xmlNodePtr cur_ptr = xmlNewChild(parentData->xml_ptr, nullptr, 
-    BAD_CAST camelCaseSanitize(clang_getCString(kindName)).c_str(), nullptr);  
+    BAD_CAST camelCaseSanitize(xmlNodeName).c_str(), nullptr);  
   clang_disposeString( kindName );
 
   trav_data_t nodeData{clang_getNullLocation(), cur_ptr};
 
   // set cursor id
   std::string nodeid = std::to_string(clang_hashCursor(cursor));
-  xmlNewProp(cur_ptr, BAD_CAST "id",
-    BAD_CAST nodeid.c_str());
+  nodeid = std::string(IDSIZE - nodeid.length(), '0') + nodeid;
+  xmlNewProp(cur_ptr, BAD_CAST "id", BAD_CAST nodeid.c_str());
 
   // set cursor spelling
   {
@@ -89,11 +93,12 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
   }
   nodeData.cur_loc = location;
 
+  CXSourceRange Range = clang_getCursorExtent(cursor);
   // Add cursor extent.
   {
-    CXSourceRange Range = clang_getCursorExtent(cursor);
     CXSourceLocation Rstart = clang_getRangeStart(Range);
     CXSourceLocation Rend = clang_getRangeEnd(Range);
+
     unsigned line, column;
     // range start
     clang_getSpellingLocation(Rstart, nullptr, &line, &column, nullptr);
@@ -144,47 +149,131 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
   { // Add lexical / semantic parents
     CXCursor lexicalParent = clang_getCursorLexicalParent(cursor);
     if( !clang_Cursor_isNull(lexicalParent) ) {
-      CXString usr = clang_getCursorUSR(lexicalParent);
-      const char * usr_cstr = clang_getCString(usr);
-      if( std::strlen(usr_cstr) > 0 )
-        xmlNewProp(cur_ptr, BAD_CAST "lex_parent_usr", BAD_CAST usr_cstr);
-      clang_disposeString( usr );
+      std::string lexnodeid = std::to_string(clang_hashCursor(lexicalParent));
+      lexnodeid = std::string(IDSIZE - lexnodeid.length(), '0') + lexnodeid;
+      xmlNewProp(cur_ptr, BAD_CAST "lex_parent_id", BAD_CAST lexnodeid.c_str());
+      // CXString usr = clang_getCursorUSR(lexicalParent);
+      // const char * usr_cstr = clang_getCString(usr);
+      // if( std::strlen(usr_cstr) > 0 )
+      //   xmlNewProp(cur_ptr, BAD_CAST "lex_parent_usr", BAD_CAST usr_cstr);
+      // clang_disposeString( usr );
     }
 
     CXCursor semanticParent = clang_getCursorSemanticParent(cursor);
     if( (!clang_Cursor_isNull(semanticParent)) &&
         (!clang_equalCursors(semanticParent, lexicalParent)) ) {
-      CXString usr = clang_getCursorUSR(semanticParent);
-      const char * usr_cstr = clang_getCString(usr);
-      if( std::strlen(usr_cstr) > 0 )
-        xmlNewProp(cur_ptr, BAD_CAST "sem_parent_usr", BAD_CAST usr_cstr);
-      clang_disposeString( usr );
+      std::string semnodeid = std::to_string(clang_hashCursor(semanticParent));
+      semnodeid = std::string(IDSIZE - semnodeid.length(), '0') + semnodeid;
+      xmlNewProp(cur_ptr, BAD_CAST "sem_parent_id", BAD_CAST semnodeid.c_str());
+      // CXString usr = clang_getCursorUSR(semanticParent);
+      // const char * usr_cstr = clang_getCString(usr);
+      // if( std::strlen(usr_cstr) > 0 )
+      //   xmlNewProp(cur_ptr, BAD_CAST "sem_parent_usr", BAD_CAST usr_cstr);
+      // clang_disposeString( usr );
     }
   }
 
 
+  // Linkage, if found within the file
   {
-    // Get referenced cursor
-    CXCursor refc = clang_getCursorReferenced(cursor);
-    if( (!clang_Cursor_isNull(refc)) &&
-        (!clang_equalCursors(cursor, refc)) ) {
-      CXString usr = clang_getCursorUSR(refc);
-      const char * usr_cstr = clang_getCString(usr);
-      if( std::strlen(usr_cstr) > 0 )
-        xmlNewProp(cur_ptr, BAD_CAST "ref_usr", BAD_CAST usr_cstr);
-      clang_disposeString( usr );
+    // Get definition cursor
+    CXCursor defc = clang_getCursorDefinition(cursor);
+    if( (!clang_Cursor_isNull(defc)) &&
+        (!clang_equalCursors(cursor, defc)) ) {
+      std::string defnodeid = std::to_string(clang_hashCursor(defc));
+      defnodeid = std::string(IDSIZE - defnodeid.length(), '0') + defnodeid;
+      xmlNewProp(cur_ptr, BAD_CAST "def_id", BAD_CAST defnodeid.c_str());
+      // CXString usr = clang_getCursorUSR(defc);
+      // const char * usr_cstr = clang_getCString(usr);
+      // if( std::strlen(usr_cstr) > 0 )
+      //   xmlNewProp(cur_ptr, BAD_CAST "def_usr", BAD_CAST usr_cstr);
+      // clang_disposeString( usr );
     }
-   // Get definition cursor
+   
+    // Otherwise, get referenced cursor
     else {
-      CXCursor defc = clang_getCursorDefinition(cursor);
-      if( (!clang_Cursor_isNull(defc)) &&
-          (!clang_equalCursors(cursor, defc)) ) {
-        CXString usr = clang_getCursorUSR(defc);
-      const char * usr_cstr = clang_getCString(usr);
-      if( std::strlen(usr_cstr) > 0 )
-        xmlNewProp(cur_ptr, BAD_CAST "def_usr", BAD_CAST usr_cstr);
-      clang_disposeString( usr );
+      CXCursor refc = clang_getCursorReferenced(cursor);
+      if( (!clang_Cursor_isNull(refc)) &&
+          (!clang_equalCursors(cursor, refc)) ) {
+        std::string refnodeid = std::to_string(clang_hashCursor(refc));
+        refnodeid = std::string(IDSIZE - refnodeid.length(), '0') + refnodeid;
+        xmlNewProp(cur_ptr, BAD_CAST "ref_id", BAD_CAST refnodeid.c_str());
+        // CXString usr = clang_getCursorUSR(refc);
+        // const char * usr_cstr = clang_getCString(usr);
+        // if( std::strlen(usr_cstr) > 0 )
+        //   xmlNewProp(cur_ptr, BAD_CAST "ref_usr", BAD_CAST usr_cstr);
+        // clang_disposeString( usr );
+      
       }
+    }
+  }
+
+  // add inheritance information for classes
+  // Note: @Vishesh Had to do it in such a hacky way because libclang is somehow v v wrong
+  if (cursorKind == CXCursor_CXXBaseSpecifier) {
+    CXToken* Tokens;
+    unsigned NumTokens;
+    
+    clang_tokenize(tu, Range, &Tokens, &NumTokens);
+    CX_CXXAccessSpecifier itype = CX_CXXPrivate;
+    for (unsigned i = 0; i < NumTokens; ++i) {
+      CXString curtok = clang_getTokenSpelling(tu, Tokens[i]);
+      std::string tokspell(clang_getCString(curtok));
+      if (tokspell == "public") itype = CX_CXXPublic;
+      else if (tokspell == "protected")itype = CX_CXXProtected;
+      // default is private
+      clang_disposeString(curtok);
+    }
+    const char * ac_spec_str;
+    switch(itype) {
+      case CX_CXXPublic: ac_spec_str = "Public"; break;
+      case CX_CXXProtected: ac_spec_str = "Protected"; break;
+      case CX_CXXPrivate: ac_spec_str = "Private"; break;
+    };
+    clang_disposeTokens(tu, Tokens, NumTokens);
+
+    xmlNewProp(cur_ptr, BAD_CAST "inheritance_kind", BAD_CAST ac_spec_str);
+    
+    if (clang_isVirtualBase(cursor)) {
+      xmlNewProp(cur_ptr, BAD_CAST "isVirtualBase", BAD_CAST "True");
+    }
+    
+  }
+
+  // add whether binary operator is assignment
+  // Note: @Vishesh Had to do it in such a roundabout way because libclang doesn't expose
+  if (cursorKind == CXCursor_BinaryOperator) {
+    CXToken* Tokens;
+    unsigned NumTokens;
+
+    clang_tokenize(tu, Range, &Tokens, &NumTokens);
+    for (unsigned i = 0; i < NumTokens; ++i) {
+      CXTokenKind tkind = clang_getTokenKind(Tokens[i]);
+      
+      if (clang_hashCursor(cursor) == clang_hashCursor(
+                clang_getCursor(tu, clang_getTokenLocation(tu, Tokens[i])))) {
+        CXString curtok = clang_getTokenSpelling(tu, Tokens[i]);
+        if (std::string(clang_getCString(curtok)) == "=")
+          xmlNewProp(cur_ptr, BAD_CAST "isAssignment", BAD_CAST "True");
+        clang_disposeString(curtok);
+        break;
+      }
+    }
+    clang_disposeTokens(tu, Tokens, NumTokens);
+  }
+
+  
+  // add virtual information for CXX methods 
+  // Note: @Vishesh Do we need to consider virtual destructors as well??
+  if (cursorKind == CXCursor_CXXMethod){
+    if (clang_CXXMethod_isPureVirtual(cursor)) {
+    xmlNewProp(cur_ptr, BAD_CAST "isCXXPureVirtual", BAD_CAST "True");
+    }
+    else if (clang_CXXMethod_isVirtual(cursor)) {
+      xmlNewProp(cur_ptr, BAD_CAST "isCXXVirtual", BAD_CAST "True");
+    }
+    else if (clang_CXXMethod_isStatic(cursor)) {
+      xmlNewProp(cur_ptr, BAD_CAST "isCXXStatic", BAD_CAST "True");
     }
   }
 
@@ -198,6 +287,7 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
     if( clang_isCursorDefinition( cursor ) ) {
       xmlNewProp(cur_ptr, BAD_CAST "isDef", BAD_CAST "True");
     }
+
 
     // add access specifier
     CX_CXXAccessSpecifier ac_spec = clang_getCXXAccessSpecifier(cursor);
@@ -213,7 +303,7 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
       xmlNewProp(cur_ptr, BAD_CAST "access_specifier", BAD_CAST ac_spec_str);
     }
 
-    /*
+    
     // add storage class - discarded since stupid clang gives auto storage for globals as well
     // will have to use combined criteria (auto storage + external linkage)
 
@@ -225,8 +315,8 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
       const char * storage_class_str;
       switch(storage_class) {
         // automatic storage duration
-        case CX_SC_Auto:
-        case CX_SC_None : storage_class_str = "auto"; break;
+        case CX_SC_Auto: storage_class_str = "clang_auto"; break;
+        case CX_SC_None : storage_class_str = "default_auto"; break;
         // static storage
         case CX_SC_PrivateExtern:
         case CX_SC_Static  : storage_class_str = "static"; break;
@@ -239,7 +329,7 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
       };
       xmlNewProp(cur_ptr, BAD_CAST "storage_class", BAD_CAST storage_class_str);
     }
-    */
+    
 
 
     // add linkage kind
@@ -274,8 +364,8 @@ int main( int argc, char** argv ) {
     return -1;
   }
 
-  CXIndex index        = clang_createIndex( 0, 1 );
-  CXTranslationUnit tu = clang_createTranslationUnit( index, argv[1] );
+  CXIndex index = clang_createIndex( 0, 1 );
+  tu = clang_createTranslationUnit( index, argv[1] );
 
   if( !tu ) {
     fprintf(stderr, "Error while reading / parsing %s\n", argv[1]);

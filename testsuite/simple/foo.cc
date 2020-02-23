@@ -1,6 +1,9 @@
+#include <iostream>
+
 extern int z;
 
-int foo1()
+int foo()
 {
+	std::cout << "Inside foo's foo()\n";
 	return z;
 }
