@@ -92,7 +92,11 @@ def generate_static_info(path):
         if DEBUG:
             print(stripop, f)
 
-        print ('\n(%2d/%2d): Generating info for '%(num, len(instrs)) + relpath)
+        if not (relpath.split('.')[-1] in C_EXTENSION or relpath.split('.')[-1] in CXX_EXTENSION):
+            print('\n(%2d/%2d): Ommiting info (non C/C++) for '%(num+1, len(instrs)) + relpath)
+            continue
+
+        print ('\n(%2d/%2d): Generating info for '%(num+1, len(instrs)) + relpath)
 
         try:
             # Select clang/Clang++ based on whether it is C/C++
