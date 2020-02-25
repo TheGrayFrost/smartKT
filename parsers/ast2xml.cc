@@ -23,6 +23,8 @@ struct trav_data_t {
   xmlNodePtr xml_ptr; // XML node corresponding to current cursor.
 };
 
+
+// makes strings safe for xml consumption
 std::string camelCaseSanitize(std::string s){
   int n = s.length(), res_ind = 0;
   for(int i=0; i<n; i++){
@@ -40,6 +42,35 @@ std::string camelCaseSanitize(std::string s){
   return s.substr(0, res_ind);
 }
 
+// prints tokenwise information about a cursor
+std::string cursorInspect (CXCursor& Cursor) {
+  CXSourceRange Range = clang_getCursorExtent(cursor);
+  CXToken* Tokens;
+  unsigned NumTokens;
+  std::string clause;
+
+  clang_tokenize(tu, Range, &Tokens, &NumTokens);
+  for (unsigned i = 0; i < NumTokens; ++i) {
+    // get the token
+    CXTokenKind tkind = clang_getTokenKind(Tokens[i]);
+    CXString curtok = clang_getTokenSpelling(tu, Tokens[i]);
+    clause += std::string(clang_getCString(curtok)) + "@";
+    clang_disposeString(curtok);
+
+    // get corresponding cursor kind
+    CXCursor u = clang_getCursor(tu, clang_getTokenLocation(tu, Tokens[i]));
+    CXCursorKind tKind = clang_getCursorKind(u);
+    CXString tkindName = clang_getCursorKindSpelling(tKind);
+    clause += std::string(clang_getCString(tkindName)) + " ";
+    clang_disposeString(tkindName);
+  }
+  clang_disposeTokens(tu, Tokens, NumTokens);
+
+  return clause;
+}
+
+
+// Recursive visitor to DFS on AST and collect information into XML
 CXChildVisitResult
 visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
   auto parentData = (reinterpret_cast<trav_data_t*>(clientData));
@@ -82,16 +113,12 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
     // if( ! clang_File_isEqual(par_file, file) ) {
     {
       fileName = clang_getFileName(file);
-      xmlNewProp(cur_ptr, BAD_CAST "file",
-        BAD_CAST clang_getCString(fileName));
+      xmlNewProp(cur_ptr, BAD_CAST "file", BAD_CAST clang_getCString(fileName));
       clang_disposeString( fileName );
     }
-    xmlNewProp(cur_ptr, BAD_CAST "line",
-      BAD_CAST std::to_string(line).c_str());
-    xmlNewProp(cur_ptr, BAD_CAST "col",
-      BAD_CAST std::to_string(column).c_str());
-    // xmlNewProp(cur_ptr, BAD_CAST "off",
-    //   BAD_CAST std::to_string(offset).c_str());
+    xmlNewProp(cur_ptr, BAD_CAST "line", BAD_CAST std::to_string(line).c_str());
+    xmlNewProp(cur_ptr, BAD_CAST "col", BAD_CAST std::to_string(column).c_str());
+    // xmlNewProp(cur_ptr, BAD_CAST "off", BAD_CAST std::to_string(offset).c_str());
   }
   nodeData.cur_loc = location;
 
@@ -267,6 +294,7 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
   
   // add virtual information for CXX methods 
   // Note: @Vishesh Do we need to consider virtual destructors as well??
+  // Note: @Vishesh Do we need to consider static constructors as well??
   if (cursorKind == CXCursor_CXXMethod){
     if (clang_CXXMethod_isPureVirtual(cursor)) {
     xmlNewProp(cur_ptr, BAD_CAST "isCXXPureVirtual", BAD_CAST "True");
