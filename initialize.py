@@ -102,9 +102,10 @@ def generate_static_info(path):
             cmd[cmd.index('-o')+1] = mainfname + '.ast'
             os.system(' '.join(cmd))
 
-            # Generate func, calls, ast
+            # Generate func, calls, xml - file number prepended to all nodeids to make unique
             for clangexe, output_extension in zip(CLANGTOOLS, CLANG_OUTPUTEXT):
-                os.system ('parsers/' + clangexe + ' ' + mainfname + '.ast > ' + stripop + output_extension)
+                os.system (' '.join(['parsers/'+clangexe, str(num+1), 
+                    mainfname+'.ast', '>', stripop + output_extension]))
                 print ('output :', stripop + output_extension)
 
             # Move the ast into outputs

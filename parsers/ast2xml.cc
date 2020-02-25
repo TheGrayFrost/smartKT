@@ -7,12 +7,14 @@
 #include <algorithm>
 #include <string>
 #include <cstring>
+#include <cstdlib>
+
 #include "ctype.h"
-#include <map>
 
 #define DEBUG true
 
-#define IDSIZE 11 // normal unsigned int has 10 digits.. we are padding with one extra zero
+#define IDSIZE 11   // normal unsigned int has 10 digits.. we are padding with one extra zero
+std::string FILEID; // FILEID passed to ast2xml
 
 CXTranslationUnit tu; // declared global for accessing the source when needed
 
@@ -54,7 +56,7 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
 
   // set cursor id
   std::string nodeid = std::to_string(clang_hashCursor(cursor));
-  nodeid = std::string(IDSIZE - nodeid.length(), '0') + nodeid;
+  nodeid = FILEID + std::string(IDSIZE - nodeid.length(), '0') + nodeid;
   xmlNewProp(cur_ptr, BAD_CAST "id", BAD_CAST nodeid.c_str());
 
   // set cursor spelling
@@ -150,7 +152,7 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
     CXCursor lexicalParent = clang_getCursorLexicalParent(cursor);
     if( !clang_Cursor_isNull(lexicalParent) ) {
       std::string lexnodeid = std::to_string(clang_hashCursor(lexicalParent));
-      lexnodeid = std::string(IDSIZE - lexnodeid.length(), '0') + lexnodeid;
+      lexnodeid = FILEID + std::string(IDSIZE - lexnodeid.length(), '0') + lexnodeid;
       xmlNewProp(cur_ptr, BAD_CAST "lex_parent_id", BAD_CAST lexnodeid.c_str());
       // CXString usr = clang_getCursorUSR(lexicalParent);
       // const char * usr_cstr = clang_getCString(usr);
@@ -163,7 +165,7 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
     if( (!clang_Cursor_isNull(semanticParent)) &&
         (!clang_equalCursors(semanticParent, lexicalParent)) ) {
       std::string semnodeid = std::to_string(clang_hashCursor(semanticParent));
-      semnodeid = std::string(IDSIZE - semnodeid.length(), '0') + semnodeid;
+      semnodeid = FILEID + std::string(IDSIZE - semnodeid.length(), '0') + semnodeid;
       xmlNewProp(cur_ptr, BAD_CAST "sem_parent_id", BAD_CAST semnodeid.c_str());
       // CXString usr = clang_getCursorUSR(semanticParent);
       // const char * usr_cstr = clang_getCString(usr);
@@ -181,7 +183,7 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
     if( (!clang_Cursor_isNull(defc)) &&
         (!clang_equalCursors(cursor, defc)) ) {
       std::string defnodeid = std::to_string(clang_hashCursor(defc));
-      defnodeid = std::string(IDSIZE - defnodeid.length(), '0') + defnodeid;
+      defnodeid = FILEID + std::string(IDSIZE - defnodeid.length(), '0') + defnodeid;
       xmlNewProp(cur_ptr, BAD_CAST "def_id", BAD_CAST defnodeid.c_str());
       // CXString usr = clang_getCursorUSR(defc);
       // const char * usr_cstr = clang_getCString(usr);
@@ -196,7 +198,7 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
       if( (!clang_Cursor_isNull(refc)) &&
           (!clang_equalCursors(cursor, refc)) ) {
         std::string refnodeid = std::to_string(clang_hashCursor(refc));
-        refnodeid = std::string(IDSIZE - refnodeid.length(), '0') + refnodeid;
+        refnodeid = FILEID + std::string(IDSIZE - refnodeid.length(), '0') + refnodeid;
         xmlNewProp(cur_ptr, BAD_CAST "ref_id", BAD_CAST refnodeid.c_str());
         // CXString usr = clang_getCursorUSR(refc);
         // const char * usr_cstr = clang_getCString(usr);
@@ -359,13 +361,15 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
 
 int main( int argc, char** argv ) {
 
-  if( argc < 2 ) {
-    fprintf(stderr, "Usage : %s <ast_file>\n", argv[0]);
+  if( argc < 3 ) {
+    fprintf(stderr, "Usage : %s <file_num> <ast_file>\n", argv[0]);
     return -1;
   }
 
+  FILEID = std::string(argv[1]);
+
   CXIndex index = clang_createIndex( 0, 1 );
-  tu = clang_createTranslationUnit( index, argv[1] );
+  tu = clang_createTranslationUnit( index, argv[2] );
 
   if( !tu ) {
     fprintf(stderr, "Error while reading / parsing %s\n", argv[1]);

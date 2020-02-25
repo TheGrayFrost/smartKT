@@ -4,7 +4,7 @@
 # define FILEHEADER "# FILENAME\tLINENUM\tFUNCNAME\tCALLNODEID\tCALLEXPR\n"
 
 char const delim = '\t';
-CXTranslationUnit tu;
+CXTranslationUnit tu; // declared global for accessing the source when needed
 
 CXChildVisitResult get_call_expressions
 (CXCursor cursor, CXCursor parent, CXClientData) {
