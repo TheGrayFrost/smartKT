@@ -144,5 +144,7 @@ def generate_static_info(path):
             print(e)
             continue
 
+if not os.listdir(os.path.join("parsers", "pyelftools")):
+    os.system("cd parsers && git clone https://github.com/eliben/pyelftools.git")
 init(path)
 generate_static_info(path)
