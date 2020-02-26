@@ -7,18 +7,23 @@ from xml.dom import minidom
 
 filename = str(sys.argv[1])		# event trace dump file
 
+DEBUG = False
+
 def to_xml(line):
 	t = line.split()
 	i = 0
 	entry = Element(t[i])	# first word is event type
 	if t[0] == 'CALL':
+		# collect static calls
 		statbeg = t.index('[')
-		statend = t.index(']')
+		statend = len(t) - 1 - t[::-1].index(']') 
 		if statbeg != -1:
 			stat = ' '.join(t[statbeg:statend+1])
 		for inloop in range(statbeg,statend+1):
 			t.pop(statbeg)
 		t.insert(statbeg, stat)
+		if DEBUG:
+			print ('\n'.join(t))
 	i += 1
 	while i < len(t):
 		entry.attrib[t[i]] = t[i+1]	 # all other events come in key:value pairs
@@ -76,6 +81,8 @@ def process_para(para, ctxt):
 # read the event trace
 with open(filename, 'r') as inf, open('dynamic.xml', 'w') as opf:
 	opf.write('<DYNAMICROOT id="-1">\n')
+	if DEBUG:
+		print ('cool')
 	ctxt = None
 	para = []
 	for line in inf:
@@ -96,9 +103,9 @@ with open(filename, 'r') as inf, open('dynamic.xml', 'w') as opf:
 					opf.write(xmlstr+'\n')
 					para = []
 					ctxt = None
-				# try:
-					# print ('wow')
-					# print (ET.tostring(entry))
+				if DEBUG:
+					print ('wow')
+					print (ET.tostring(entry))
 				xmlstr = minidom.parseString(ET.tostring(entry)).toprettyxml(indent='   ')
 				# except Exception as e:
 				# 	print (ET.tostring(entry))
@@ -107,7 +114,8 @@ with open(filename, 'r') as inf, open('dynamic.xml', 'w') as opf:
 				opf.write(xmlstr+'\n')
 	if ctxt is not None:
 		para_entry = process_para(para, ctxt)
-		# print(ET.tostring(para_entry))
+		if DEBUG:
+			print(ET.tostring(para_entry))
 		xmlstr = minidom.parseString(ET.tostring(para_entry)).toprettyxml(indent='   ')
 		xmlstr = '\n'.join(['   '+l for l in xmlstr.split('\n')[1:-1]])
 		opf.write(xmlstr+'\n')

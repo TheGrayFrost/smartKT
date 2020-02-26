@@ -25,6 +25,8 @@ cd PIN/Work							# move to pin folder
 chmod +x $exe.out						# make .out runnable
 make inp=$inp $exe.dump				# create the dump
 python pass2.py $exe.dump				# add dump info to xml
+# cp $exe.dump $2
+# cp dynamic.xml $2/final_dynamic.xml
 mv $exe.dump $2
 mv dynamic.xml $2/final_dynamic.xml
 

@@ -4,6 +4,6 @@
 
 int main()
 {
-	int z = A(6));
+	int z = A(6)), y = 4;
 	return 0;
 }

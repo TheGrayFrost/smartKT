@@ -156,16 +156,16 @@ def helper(var, var_class, var_container = None):
 
 	var_name = (var.attrib['mangled_name'] if ('mangled_name' in var.attrib) else var.attrib['spelling'])
 	s += var_name + '\t'
-	s += var.attrib['usr'] + '\t'
+	s += var.attrib['id'] + '\t'
 	s += var.attrib['type'] + '\t'
 	var_size = '0'
 	if 'size' in var.attrib :
 		var_size = var.attrib['size']
 	s += var_size + '\t'
-	if 'sem_parent_usr' in var.attrib:
-		s += var.attrib['sem_parent_usr'] + '\t'
-	elif 'lex_parent_usr' in var.attrib:
-		s += var.attrib['lex_parent_usr'] + '\t'
+	if 'sem_parent_id' in var.attrib:
+		s += var.attrib['sem_parent_id'] + '\t'
+	elif 'lex_parent_id' in var.attrib:
+		s += var.attrib['lex_parent_id'] + '\t'
 	else:
 		s += 'None' + '\t'
 

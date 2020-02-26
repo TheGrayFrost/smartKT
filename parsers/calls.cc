@@ -2,9 +2,19 @@
 #include <iostream>
 
 # define FILEHEADER "# FILENAME\tLINENUM\tFUNCNAME\tCALLNODEID\tCALLEXPR\n"
+# define IDSIZE 11   // normal unsigned int has 10 digits.. we are padding with one extra zero
+std::string FILEID; // FILEID passed to ast2xml
 
 char const delim = '\t';
+
 CXTranslationUnit tu; // declared global for accessing the source when needed
+
+std::string makeUniqueID (unsigned id)
+{
+  std::string p = std::to_string(id);
+  p = FILEID + std::string(IDSIZE - p.length(), '0') + p;
+  return p;
+}
 
 CXChildVisitResult get_call_expressions
 (CXCursor cursor, CXCursor parent, CXClientData) {
@@ -27,10 +37,11 @@ CXChildVisitResult get_call_expressions
 
       /* Get source and linkage identifiers. */
       CXString mangling = clang_Cursor_getMangling(refc);
-      CXString usr = clang_getCursorUSR(refc);
+      // CXString usr = clang_getCursorUSR(refc);
 
       std::cout << delim << clang_getCString(mangling)
-                << delim << clang_getCString(usr);
+                << delim << makeUniqueID(clang_hashCursor(cursor));
+                // << delim << clang_getCString(usr);
 
       CXToken* Tokens;
       unsigned NumTokens;
@@ -54,7 +65,7 @@ CXChildVisitResult get_call_expressions
       std::cout << "\n";
 
       clang_disposeString(mangling);
-      clang_disposeString(usr);
+      // clang_disposeString(usr);
       clang_disposeTokens(tu, Tokens, NumTokens);
       clang_disposeString( fileName );
     }
@@ -67,16 +78,18 @@ CXChildVisitResult get_call_expressions
 
 int main(int argc, char* argv[]) {
 
-  if( argc < 2 ) {
-    fprintf(stderr, "usage: %s <ast_file>\n", argv[0]);
-    return 1;
+  if( argc < 3 ) {
+    fprintf(stderr, "Usage : %s <file_num> <ast_file>\n", argv[0]);
+    return -1;
   }
 
-  CXIndex index        = clang_createIndex(0, 1);
-  tu = clang_createTranslationUnit( index, argv[1] );
+  FILEID = std::string(argv[1]);
+
+  CXIndex index = clang_createIndex( 0, 1 );
+  tu = clang_createTranslationUnit( index, argv[2] );
 
   if( !tu ) {
-    fprintf(stderr, "Error reading %s\n", argv[1]);
+    fprintf(stderr, "Error while reading / parsing %s\n", argv[2]);
     return -1;
   }
 

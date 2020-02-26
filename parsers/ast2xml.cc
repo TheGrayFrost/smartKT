@@ -42,8 +42,15 @@ std::string camelCaseSanitize(std::string s){
   return s.substr(0, res_ind);
 }
 
+std::string makeUniqueID (unsigned id)
+{
+  std::string p = std::to_string(id);
+  p = FILEID + std::string(IDSIZE - p.length(), '0') + p;
+  return p;
+}
+
 // prints tokenwise information about a cursor
-std::string cursorInspect (CXCursor& Cursor) {
+std::string cursorInspect (CXCursor& cursor) {
   CXSourceRange Range = clang_getCursorExtent(cursor);
   CXToken* Tokens;
   unsigned NumTokens;
@@ -86,8 +93,7 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
   trav_data_t nodeData{clang_getNullLocation(), cur_ptr};
 
   // set cursor id
-  std::string nodeid = std::to_string(clang_hashCursor(cursor));
-  nodeid = FILEID + std::string(IDSIZE - nodeid.length(), '0') + nodeid;
+  std::string nodeid = makeUniqueID(clang_hashCursor(cursor));
   xmlNewProp(cur_ptr, BAD_CAST "id", BAD_CAST nodeid.c_str());
 
   // set cursor spelling
@@ -178,8 +184,7 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
   { // Add lexical / semantic parents
     CXCursor lexicalParent = clang_getCursorLexicalParent(cursor);
     if( !clang_Cursor_isNull(lexicalParent) ) {
-      std::string lexnodeid = std::to_string(clang_hashCursor(lexicalParent));
-      lexnodeid = FILEID + std::string(IDSIZE - lexnodeid.length(), '0') + lexnodeid;
+      std::string lexnodeid = makeUniqueID(clang_hashCursor(lexicalParent));
       xmlNewProp(cur_ptr, BAD_CAST "lex_parent_id", BAD_CAST lexnodeid.c_str());
       // CXString usr = clang_getCursorUSR(lexicalParent);
       // const char * usr_cstr = clang_getCString(usr);
@@ -191,8 +196,7 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
     CXCursor semanticParent = clang_getCursorSemanticParent(cursor);
     if( (!clang_Cursor_isNull(semanticParent)) &&
         (!clang_equalCursors(semanticParent, lexicalParent)) ) {
-      std::string semnodeid = std::to_string(clang_hashCursor(semanticParent));
-      semnodeid = FILEID + std::string(IDSIZE - semnodeid.length(), '0') + semnodeid;
+      std::string semnodeid = makeUniqueID(clang_hashCursor(semanticParent));
       xmlNewProp(cur_ptr, BAD_CAST "sem_parent_id", BAD_CAST semnodeid.c_str());
       // CXString usr = clang_getCursorUSR(semanticParent);
       // const char * usr_cstr = clang_getCString(usr);
@@ -209,8 +213,7 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
     CXCursor defc = clang_getCursorDefinition(cursor);
     if( (!clang_Cursor_isNull(defc)) &&
         (!clang_equalCursors(cursor, defc)) ) {
-      std::string defnodeid = std::to_string(clang_hashCursor(defc));
-      defnodeid = FILEID + std::string(IDSIZE - defnodeid.length(), '0') + defnodeid;
+      std::string defnodeid = makeUniqueID(clang_hashCursor(defc));
       xmlNewProp(cur_ptr, BAD_CAST "def_id", BAD_CAST defnodeid.c_str());
       // CXString usr = clang_getCursorUSR(defc);
       // const char * usr_cstr = clang_getCString(usr);
@@ -224,8 +227,7 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
       CXCursor refc = clang_getCursorReferenced(cursor);
       if( (!clang_Cursor_isNull(refc)) &&
           (!clang_equalCursors(cursor, refc)) ) {
-        std::string refnodeid = std::to_string(clang_hashCursor(refc));
-        refnodeid = FILEID + std::string(IDSIZE - refnodeid.length(), '0') + refnodeid;
+        std::string refnodeid = makeUniqueID(clang_hashCursor(refc));
         xmlNewProp(cur_ptr, BAD_CAST "ref_id", BAD_CAST refnodeid.c_str());
         // CXString usr = clang_getCursorUSR(refc);
         // const char * usr_cstr = clang_getCString(usr);
@@ -237,37 +239,37 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
     }
   }
 
-  // add inheritance information for classes
-  // Note: @Vishesh Had to do it in such a hacky way because libclang is somehow v v wrong
-  if (cursorKind == CXCursor_CXXBaseSpecifier) {
-    CXToken* Tokens;
-    unsigned NumTokens;
+  // // add inheritance information for classes
+  // // Note: @Vishesh Had to do it in such a hacky way because libclang is somehow v v wrong
+  // if (cursorKind == CXCursor_CXXBaseSpecifier) {
+  //   CXToken* Tokens;
+  //   unsigned NumTokens;
     
-    clang_tokenize(tu, Range, &Tokens, &NumTokens);
-    CX_CXXAccessSpecifier itype = CX_CXXPrivate;
-    for (unsigned i = 0; i < NumTokens; ++i) {
-      CXString curtok = clang_getTokenSpelling(tu, Tokens[i]);
-      std::string tokspell(clang_getCString(curtok));
-      if (tokspell == "public") itype = CX_CXXPublic;
-      else if (tokspell == "protected")itype = CX_CXXProtected;
-      // default is private
-      clang_disposeString(curtok);
-    }
-    const char * ac_spec_str;
-    switch(itype) {
-      case CX_CXXPublic: ac_spec_str = "Public"; break;
-      case CX_CXXProtected: ac_spec_str = "Protected"; break;
-      case CX_CXXPrivate: ac_spec_str = "Private"; break;
-    };
-    clang_disposeTokens(tu, Tokens, NumTokens);
+  //   clang_tokenize(tu, Range, &Tokens, &NumTokens);
+  //   CX_CXXAccessSpecifier itype = CX_CXXPrivate;
+  //   for (unsigned i = 0; i < NumTokens; ++i) {
+  //     CXString curtok = clang_getTokenSpelling(tu, Tokens[i]);
+  //     std::string tokspell(clang_getCString(curtok));
+  //     if (tokspell == "public") itype = CX_CXXPublic;
+  //     else if (tokspell == "protected")itype = CX_CXXProtected;
+  //     // default is private
+  //     clang_disposeString(curtok);
+  //   }
+  //   const char * ac_spec_str;
+  //   switch(itype) {
+  //     case CX_CXXPublic: ac_spec_str = "Public"; break;
+  //     case CX_CXXProtected: ac_spec_str = "Protected"; break;
+  //     case CX_CXXPrivate: ac_spec_str = "Private"; break;
+  //   };
+  //   clang_disposeTokens(tu, Tokens, NumTokens);
 
-    xmlNewProp(cur_ptr, BAD_CAST "inheritance_kind", BAD_CAST ac_spec_str);
+  //   xmlNewProp(cur_ptr, BAD_CAST "inheritance_kind", BAD_CAST ac_spec_str);
     
-    if (clang_isVirtualBase(cursor)) {
-      xmlNewProp(cur_ptr, BAD_CAST "isVirtualBase", BAD_CAST "True");
-    }
+  //   if (clang_isVirtualBase(cursor)) {
+  //     xmlNewProp(cur_ptr, BAD_CAST "isVirtualBase", BAD_CAST "True");
+  //   }
     
-  }
+  // }
 
   // add whether binary operator is assignment
   // Note: @Vishesh Had to do it in such a roundabout way because libclang doesn't expose
@@ -290,7 +292,98 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
     }
     clang_disposeTokens(tu, Tokens, NumTokens);
   }
+  else if (cursorKind == CXCursor_CompoundAssignOperator)
+    xmlNewProp(cur_ptr, BAD_CAST "isAssignment", BAD_CAST "True");
 
+  // features currently under test
+  if (DEBUG) {
+    {
+      // add storage class - discarded since stupid clang gives auto storage for globals as well
+      // will have to use combined criteria (auto storage + external linkage)
+
+      // also CX_SC_PrivateExtern should be a linkage thing... it is basically hidden visibility
+      // i.e. objects only visible within one shared object, and nowhere outside
+
+      CX_StorageClass storage_class = clang_Cursor_getStorageClass(cursor);
+      if( storage_class != CX_SC_Invalid ) {
+        const char * storage_class_str;
+        switch(storage_class) {
+          // automatic storage duration
+          case CX_SC_Auto: storage_class_str = "clang_auto"; break;
+          case CX_SC_None : storage_class_str = "default_auto"; break;
+          // static storage
+          case CX_SC_PrivateExtern: storage_class_str = "private_extern"; break;
+          case CX_SC_Static  : storage_class_str = "static"; break;
+          // register storage
+          case CX_SC_Register  : storage_class_str = "register"; break;
+          // not really sure what this means
+          case CX_SC_Extern : storage_class_str = "extern"; break;
+          // not possible
+          default: storage_class_str = "none"; break;
+        };
+        xmlNewProp(cur_ptr, BAD_CAST "storage_class", BAD_CAST storage_class_str);
+      }
+    }
+
+    {
+      // visibility
+      CXVisibilityKind visibility = clang_getCursorVisibility(cursor);
+      if( visibility != CXVisibility_Invalid  ) {
+        const char * visi_str;
+        switch(visibility) {
+          // automatic storage duration
+          case CXVisibility_Hidden: visi_str = "hidden"; break;
+          case CXVisibility_Protected : visi_str = "protected"; break;
+          case CXVisibility_Default : visi_str = "default"; break;
+          default: visi_str = "none"; break;
+        };
+        xmlNewProp(cur_ptr, BAD_CAST "visibility", BAD_CAST visi_str);
+      }
+    }
+
+    if( clang_isDeclaration( cursorKind ) ) {
+      CXString display = clang_getCursorDisplayName(cursor);
+      const char * display_name = clang_getCString(display);
+      if( std::strlen(display_name) > 0 )
+        xmlNewProp(cur_ptr, BAD_CAST "display_name", BAD_CAST display_name);
+      clang_disposeString(display);
+    }
+
+    // && !(clang_isCursorDefinition(cursor) && cursorKind != ))
+    // if(clang_isDeclaration(cursorKind)) {
+    //   CXPrintingPolicy policy = clang_getCursorPrintingPolicy(cursor);
+    //   clang_PrintingPolicy_setProperty(policy, CXPrintingPolicy_IncludeTagDefinition, false);
+    //   clang_PrintingPolicy_setProperty(policy, CXPrintingPolicy_FullyQualifiedName, true);
+    //   clang_PrintingPolicy_setProperty(policy, CXPrintingPolicy_SuppressInitializers, false);
+      
+    //   CXString pretty = clang_getCursorPrettyPrinted(cursor, policy);
+    //   const char * pretty_name = clang_getCString(pretty);
+    //   if( std::strlen(pretty_name) > 0 )
+    //     xmlNewProp(cur_ptr, BAD_CAST "pretty_name", BAD_CAST pretty_name);
+    //   clang_disposeString(pretty);
+    //   clang_PrintingPolicy_dispose(policy);
+    // }
+  }
+
+  // add access specifier - for inheritance and for class & struct vars
+  {
+    CX_CXXAccessSpecifier ac_spec = clang_getCXXAccessSpecifier(cursor);
+    const char * ac_spec_str;
+    switch(ac_spec) {
+      case CX_CXXPublic: ac_spec_str = "Public"; break;
+      case CX_CXXProtected: ac_spec_str = "Protected"; break;
+      case CX_CXXPrivate: ac_spec_str = "Private"; break;
+      default: ac_spec_str = nullptr;
+    };
+
+    const char * propKind;
+    if (cursorKind == CXCursor_CXXBaseSpecifier) propKind = "inheritance_kind";
+    else propKind = "access_specifier";
+
+    if( ac_spec_str != nullptr ) {
+      xmlNewProp(cur_ptr, BAD_CAST propKind, BAD_CAST ac_spec_str);
+    }
+  }
   
   // add virtual information for CXX methods 
   // Note: @Vishesh Do we need to consider virtual destructors as well??
@@ -316,51 +409,7 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
 
     if( clang_isCursorDefinition( cursor ) ) {
       xmlNewProp(cur_ptr, BAD_CAST "isDef", BAD_CAST "True");
-    }
-
-
-    // add access specifier
-    CX_CXXAccessSpecifier ac_spec = clang_getCXXAccessSpecifier(cursor);
-    const char * ac_spec_str;
-    switch(ac_spec) {
-      case CX_CXXPublic: ac_spec_str = "Public"; break;
-      case CX_CXXProtected: ac_spec_str = "Protected"; break;
-      case CX_CXXPrivate: ac_spec_str = "Private"; break;
-      default: ac_spec_str = nullptr;
-    };
-
-    if( ac_spec_str != nullptr ) {
-      xmlNewProp(cur_ptr, BAD_CAST "access_specifier", BAD_CAST ac_spec_str);
-    }
-
-    
-    // add storage class - discarded since stupid clang gives auto storage for globals as well
-    // will have to use combined criteria (auto storage + external linkage)
-
-    // also CX_SC_PrivateExtern should be a linkage thing... it is basically hidden visibility
-    // i.e. objects only visible within one shared object, and nowhere outside
-
-    CX_StorageClass storage_class = clang_Cursor_getStorageClass(cursor);
-    if( storage_class != CX_SC_Invalid ) {
-      const char * storage_class_str;
-      switch(storage_class) {
-        // automatic storage duration
-        case CX_SC_Auto: storage_class_str = "clang_auto"; break;
-        case CX_SC_None : storage_class_str = "default_auto"; break;
-        // static storage
-        case CX_SC_PrivateExtern:
-        case CX_SC_Static  : storage_class_str = "static"; break;
-        // register storage
-        case CX_SC_Register  : storage_class_str = "register"; break;
-        // not really sure what this means
-        case CX_SC_Extern : storage_class_str = "extern"; break;
-        // not possible
-        default: storage_class_str = "none"; break;
-      };
-      xmlNewProp(cur_ptr, BAD_CAST "storage_class", BAD_CAST storage_class_str);
-    }
-    
-
+    }    
 
     // add linkage kind
     CXLinkageKind linkage_kind = clang_getCursorLinkage(cursor);
@@ -400,7 +449,7 @@ int main( int argc, char** argv ) {
   tu = clang_createTranslationUnit( index, argv[2] );
 
   if( !tu ) {
-    fprintf(stderr, "Error while reading / parsing %s\n", argv[1]);
+    fprintf(stderr, "Error while reading / parsing %s\n", argv[2]);
     return -1;
   }
 

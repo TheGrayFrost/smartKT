@@ -1,6 +1,8 @@
 #include <cstdio>
 #include <pthread.h>
 #include <unistd.h>
+#include <string.h>
+#include <errno.h>
 
 // globals
 pthread_t tid[2];
