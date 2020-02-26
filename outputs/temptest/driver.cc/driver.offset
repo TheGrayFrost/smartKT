@@ -1,0 +1,15 @@
+# FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo3funEii	0x4	arg_x	102276798112	int	4	101794560132	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo3funEii	0x8	arg_y	102557404432	int	4	101794560132	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo3funEi	0x24	arg_x	100396844553	int	4	102427888943	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo3funEi	0x4	u	102801028809	int	4	102427888943	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo3funEi	0xc	r	100998029423	Foo::A	8	102427888943	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo3funEi	0x12	q	100549416654	Foo::B	6	102427888943	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo4tfunIffEEbT_T0_	0x4	x	101815388259	float	4	102847768392	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo4tfunIffEEbT_T0_	0x8	y	102268972211	float	4	102847768392	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	_Z3funi	0x14	arg_x	103082765383	int	4	104268339408	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	_Z3funi	0x8	r	101112178012	Foo::A	8	104268339408	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	_Z3funi	0xe	q	100633536619	Foo::B	6	104268339408	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	main	0x4	local_p	101880693474	int	4	100081595973	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	main	0x8	local_q	104261832716	int	4	100081595973	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	main	0x10	omg	102504674150	vli	8	100081595973	

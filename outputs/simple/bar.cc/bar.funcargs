@@ -1,0 +1,3 @@
+# FILENAME	FUNCNODEID	FUNCNAME	NARGS	ARGTYPE*	RETTYPE
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/bar.cc	c:@F@foo1#	_Z4foo1v	0	int
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/bar.cc	c:@F@bar#	_Z3barv	0	int

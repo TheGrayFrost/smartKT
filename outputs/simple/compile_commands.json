@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/build",
+  "command": "/opt/rh/devtoolset-8/root/usr/bin/c++    -std=c++17 -gdwarf-4   -o CMakeFiles/random.dir/random.cc.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.cc",
+  "file": "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.cc"
+},
+{
+  "directory": "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/build",
+  "command": "/opt/rh/devtoolset-8/root/usr/bin/c++    -std=c++17 -gdwarf-4   -o CMakeFiles/random.dir/main.cc.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc",
+  "file": "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc"
+}
+]

@@ -1,0 +1,7 @@
+# FILENAME	FUNCNODEID	FUNCNAME	NARGS	ARGTYPE*	RETTYPE
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.hh	103146079465	_ZN3Foo3Bar1fENS_1AE	1	Foo::A	int
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.hh	103657294677	_ZN3Foo1AC1Ev	0	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc	101834044552	_ZN3Foo3BarL1fEv	0	int
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.hh	202633849631	_ZN3Foo3Bar1fENS_1AE	1	Foo::A	int
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.hh	200044758898	_ZN3Foo1AC1Ev	0	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/main.cc	202684901785	main	0	int

@@ -1,0 +1,12 @@
+# FILENAME	LINENUM	FUNCNAME	CALLNODEID	CALLEXPR
+/usr/include/pthread.h	555		101286682170	__cancel_routine ( __cancel_arg )
+/usr/include/pthread.h	557	pthread_setcanceltype	100338144178	pthread_setcanceltype ( PTHREAD_CANCEL_DEFERRED , & __cancel_type )
+/usr/include/pthread.h	559	pthread_setcanceltype	103508743916	pthread_setcanceltype ( __cancel_type , 0 )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	20	pthread_mutex_init	101512882570	pthread_mutex_init ( & lock , NULL )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	21	printf	104058659657	printf ( "\n mutex init has failed\n" )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	27	pthread_create	102696247519	pthread_create ( & ( tid [ i ] ) , NULL , & trythis , NULL )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	29	printf	101683406352	printf ( "\nThread can't be created : [%s]" , strerror ( error ) )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	29	strerror	100877460806	strerror ( error )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	33	pthread_join	103013530413	pthread_join ( tid [ 0 ] , NULL )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	34	pthread_join	103895921745	pthread_join ( tid [ 1 ] , NULL )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	35	pthread_mutex_destroy	104290732759	pthread_mutex_destroy ( & lock )

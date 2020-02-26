@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TranslationUnit SYSTEM "smartkt.dtd">
+<TranslationUnit>
+  <Namespace id="102096366802" spelling="Foo" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.hh" line="4" col="11" range.start="[4:1]" range.end="[11:2]" usr="c:@N@Foo" lex_parent_id="104261897506" visibility="default" display_name="Foo" isDecl="True" isDef="True" linkage_kind="external">
+    <ClassDecl id="103052922263" spelling="A" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.hh" line="6" col="8" range.start="[6:2]" range.end="[6:9]" type="Foo::A" usr="c:@N@Foo@S@A" lex_parent_id="102096366802" def_id="100439905227" visibility="default" display_name="A" isDecl="True" linkage_kind="external"/>
+    <Namespace id="102986336193" spelling="Bar" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.hh" line="7" col="12" range.start="[7:2]" range.end="[10:3]" usr="c:@N@Foo@N@Bar" lex_parent_id="102096366802" visibility="default" display_name="Bar" isDecl="True" isDef="True" linkage_kind="external">
+      <FunctionDecl id="100976730049" spelling="f" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.hh" line="9" col="7" range.start="[9:3]" range.end="[9:13]" type="int (Foo::A)" usr="c:@N@Foo@N@Bar@F@f#$@N@Foo@S@A#" lex_parent_id="102986336193" def_id="103902820751" storage_class="default_auto" visibility="default" display_name="f(Foo::A)" isDecl="True" linkage_kind="external">
+        <ParmDecl id="101211826376" spelling="u" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.hh" line="9" col="11" range.start="[9:9]" range.end="[9:12]" type="Foo::A" usr="c:random.hh@87@N@Foo@N@Bar@F@f#$@N@Foo@S@A#@u" lex_parent_id="100976730049" storage_class="default_auto" visibility="default" display_name="u" isDecl="True" isDef="True" linkage_kind="auto">
+          <TypeRef id="103390611603" spelling="class Foo::A" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.hh" line="9" col="9" range.start="[9:9]" range.end="[9:10]" type="Foo::A" def_id="100439905227" isRef="True"/>
+        </ParmDecl>
+      </FunctionDecl>
+    </Namespace>
+  </Namespace>
+  <ClassDecl id="100439905227" spelling="A" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.hh" line="13" col="12" range.start="[13:1]" range.end="[19:2]" type="Foo::A" usr="c:@N@Foo@S@A" lex_parent_id="104261897506" sem_parent_id="102096366802" visibility="default" display_name="A" isDecl="True" isDef="True" linkage_kind="external">
+    <NamespaceRef id="102514567888" spelling="Foo" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.hh" line="13" col="7" range.start="[13:7]" range.end="[13:10]" def_id="102096366802" isRef="True"/>
+    <CXXAccessSpecifier id="103269019708" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.hh" line="15" col="2" range.start="[15:2]" range.end="[15:9]" usr="c:" lex_parent_id="100439905227" access_specifier="Public" isDecl="True" isDef="True"/>
+    <FieldDecl id="102341107952" spelling="x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.hh" line="16" col="7" range.start="[16:3]" range.end="[16:8]" type="int" usr="c:@N@Foo@S@A@FI@x" lex_parent_id="100439905227" visibility="default" display_name="x" access_specifier="Public" isDecl="True" isDef="True" linkage_kind="external"/>
+    <FieldDecl id="101418625993" spelling="y" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.hh" line="16" col="10" range.start="[16:3]" range.end="[16:11]" type="int" usr="c:@N@Foo@S@A@FI@y" lex_parent_id="100439905227" visibility="default" display_name="y" access_specifier="Public" isDecl="True" isDef="True" linkage_kind="external"/>
+    <CXXConstructor id="102299379957" spelling="A" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.hh" line="17" col="3" range.start="[17:3]" range.end="[17:15]" type="void ()" usr="c:@N@Foo@S@A@F@A#" lex_parent_id="100439905227" storage_class="default_auto" visibility="default" display_name="A()" access_specifier="Public" isDecl="True" isDef="True" linkage_kind="external">
+      <CompoundStmt id="101692929806" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.hh" line="17" col="7" range.start="[17:7]" range.end="[17:15]" sem_parent_id="102299379957" storage_class="default_auto">
+        <BinaryOperator id="103432419200" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.hh" line="17" col="8" range.start="[17:8]" range.end="[17:13]" type="int" isAssignment="True">
+          <MemberRefExpr id="101306439434" spelling="x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.hh" line="17" col="8" range.start="[17:8]" range.end="[17:9]" type="int" def_id="102341107952"/>
+          <IntegerLiteral id="101117328021" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.hh" line="17" col="12" range.start="[17:12]" range.end="[17:13]" type="int"/>
+        </BinaryOperator>
+      </CompoundStmt>
+    </CXXConstructor>
+  </ClassDecl>
+  <Namespace id="100837585758" spelling="Foo" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="3" col="11" range.start="[3:1]" range.end="[19:2]" usr="c:@N@Foo" lex_parent_id="104261897506" visibility="default" display_name="Foo" isDecl="True" isDef="True" linkage_kind="external">
+    <VarDecl id="103208038486" spelling="u" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="5" col="6" range.start="[5:2]" range.end="[5:7]" type="int" usr="c:@N@Foo@u" lex_parent_id="100837585758" storage_class="default_auto" visibility="default" display_name="u" isDecl="True" isDef="True" linkage_kind="external"/>
+    <VarDecl id="101096784049" spelling="v" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="5" col="9" range.start="[5:2]" range.end="[5:10]" type="int" usr="c:@N@Foo@v" lex_parent_id="100837585758" storage_class="default_auto" visibility="default" display_name="v" isDecl="True" isDef="True" linkage_kind="external"/>
+    <Namespace id="104269541661" spelling="Bar" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="6" col="12" range.start="[6:2]" range.end="[10:3]" usr="c:@N@Foo@N@Bar" lex_parent_id="100837585758" visibility="default" display_name="Bar" isDecl="True" isDef="True" linkage_kind="external">
+      <FunctionDecl id="102292000263" spelling="f" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="8" col="7" range.start="[8:3]" range.end="[8:14]" type="int (Foo::A)" usr="c:@N@Foo@N@Bar@F@f#$@N@Foo@S@A#" lex_parent_id="104269541661" def_id="103902820751" storage_class="default_auto" visibility="default" display_name="f(Foo::A)" isDecl="True" linkage_kind="external">
+        <ParmDecl id="102922939810" spelling="z" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="8" col="12" range.start="[8:10]" range.end="[8:13]" type="Foo::A" usr="c:random.cc@76@N@Foo@N@Bar@F@f#$@N@Foo@S@A#@z" lex_parent_id="102292000263" storage_class="default_auto" visibility="default" display_name="z" isDecl="True" isDef="True" linkage_kind="auto">
+          <TypeRef id="103390611603" spelling="class Foo::A" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="8" col="10" range.start="[8:10]" range.end="[8:11]" type="Foo::A" def_id="100439905227" isRef="True"/>
+        </ParmDecl>
+      </FunctionDecl>
+      <FunctionDecl id="100437133169" spelling="f" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="9" col="14" range.start="[9:3]" range.end="[9:17]" type="int ()" usr="c:random.cc@N@Foo@N@Bar@F@f#" lex_parent_id="104269541661" def_id="103215145526" storage_class="static" visibility="default" display_name="f()" isDecl="True" linkage_kind="internal"/>
+    </Namespace>
+    <FunctionDecl id="103215145526" spelling="f" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="11" col="18" range.start="[11:2]" range.end="[18:3]" type="int ()" usr="c:random.cc@N@Foo@N@Bar@F@f#" lex_parent_id="100837585758" sem_parent_id="104269541661" storage_class="static" visibility="default" display_name="f()" isDecl="True" isDef="True" linkage_kind="internal">
+      <NamespaceRef id="101948097174" spelling="Bar" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="11" col="13" range.start="[11:13]" range.end="[11:16]" def_id="104269541661" isRef="True"/>
+      <CompoundStmt id="101140415595" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="12" col="2" range.start="[12:2]" range.end="[18:3]" sem_parent_id="103215145526" storage_class="static">
+        <DeclStmt id="103372059480" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="13" col="3" range.start="[13:3]" range.end="[13:20]">
+          <VarDecl id="102432534553" spelling="p" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="13" col="14" range.start="[13:3]" range.end="[13:19]" type="int" usr="c:random.cc@129@N@Foo@N@Bar@F@f#@p" lex_parent_id="103215145526" storage_class="static" visibility="default" display_name="p" isDecl="True" isDef="True" linkage_kind="auto">
+            <IntegerLiteral id="103146552198" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="13" col="18" range.start="[13:18]" range.end="[13:19]" type="int" sem_parent_id="102432534553" storage_class="static"/>
+          </VarDecl>
+        </DeclStmt>
+        <CompoundStmt id="101901087309" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="14" col="3" range.start="[14:3]" range.end="[16:4]">
+          <DeclStmt id="100465755959" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="15" col="4" range.start="[15:4]" range.end="[15:14]">
+            <VarDecl id="101118076102" spelling="p" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="15" col="8" range.start="[15:4]" range.end="[15:13]" type="int" usr="c:random.cc@154@N@Foo@N@Bar@F@f#@p" lex_parent_id="103215145526" storage_class="default_auto" visibility="default" display_name="p" isDecl="True" isDef="True" linkage_kind="auto">
+              <IntegerLiteral id="103996193884" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="15" col="12" range.start="[15:12]" range.end="[15:13]" type="int" sem_parent_id="101118076102" storage_class="default_auto"/>
+            </VarDecl>
+          </DeclStmt>
+        </CompoundStmt>
+        <ReturnStmt id="103326304658" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="17" col="3" range.start="[17:3]" range.end="[17:11]">
+          <UnexposedExpr id="100083473035" spelling="p" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="17" col="10" range.start="[17:10]" range.end="[17:11]" type="int" def_id="102432534553">
+            <DeclRefExpr id="103806151717" spelling="p" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="17" col="10" range.start="[17:10]" range.end="[17:11]" type="int" def_id="102432534553"/>
+          </UnexposedExpr>
+        </ReturnStmt>
+      </CompoundStmt>
+    </FunctionDecl>
+  </Namespace>
+  <FunctionDecl id="103902820751" spelling="f" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="21" col="15" range.start="[21:1]" range.end="[25:2]" type="int (Foo::A)" usr="c:@N@Foo@N@Bar@F@f#$@N@Foo@S@A#" lex_parent_id="104261897506" sem_parent_id="104269541661" storage_class="default_auto" visibility="default" display_name="f(Foo::A)" isDecl="True" isDef="True" linkage_kind="external">
+    <NamespaceRef id="100405159465" spelling="Foo" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="21" col="5" range.start="[21:5]" range.end="[21:8]" def_id="100837585758" isRef="True"/>
+    <NamespaceRef id="101948097174" spelling="Bar" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="21" col="10" range.start="[21:10]" range.end="[21:13]" def_id="104269541661" isRef="True"/>
+    <ParmDecl id="100967717954" spelling="v" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="21" col="19" range.start="[21:17]" range.end="[21:20]" type="Foo::A" usr="c:random.cc@203@N@Foo@N@Bar@F@f#$@N@Foo@S@A#@v" lex_parent_id="103902820751" storage_class="default_auto" visibility="default" display_name="v" isDecl="True" isDef="True" linkage_kind="auto">
+      <TypeRef id="103390611603" spelling="class Foo::A" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="21" col="17" range.start="[21:17]" range.end="[21:18]" type="Foo::A" def_id="100439905227" isRef="True"/>
+    </ParmDecl>
+    <CompoundStmt id="103297926402" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="22" col="1" range.start="[22:1]" range.end="[25:2]" sem_parent_id="103902820751" storage_class="default_auto">
+      <DeclStmt id="101512422213" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="23" col="2" range.start="[23:2]" range.end="[23:27]">
+        <VarDecl id="103700362970" spelling="a" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="23" col="6" range.start="[23:2]" range.end="[23:7]" type="int" usr="c:random.cc@211@N@Foo@N@Bar@F@f#$@N@Foo@S@A#@a" lex_parent_id="103902820751" storage_class="default_auto" visibility="default" display_name="a" isDecl="True" isDef="True" linkage_kind="auto"/>
+        <VarDecl id="101137432283" spelling="b" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="23" col="9" range.start="[23:9]" range.end="[23:26]" type="int" usr="c:random.cc@211@N@Foo@N@Bar@F@f#$@N@Foo@S@A#@b" lex_parent_id="103902820751" storage_class="default_auto" visibility="default" display_name="b" isDecl="True" linkage_kind="auto">
+          <CallExpr id="101138029639" spelling="f" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="23" col="13" range.start="[23:13]" range.end="[23:26]" type="int" sem_parent_id="101137432283" def_id="103215145526" storage_class="default_auto">
+            <UnexposedExpr id="100061575410" spelling="f" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="23" col="23" range.start="[23:13]" range.end="[23:24]" type="int (*)()" def_id="103215145526">
+              <DeclRefExpr id="103824941225" spelling="f" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="23" col="23" range.start="[23:13]" range.end="[23:24]" type="int ()" def_id="103215145526">
+                <NamespaceRef id="100405159465" spelling="Foo" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="23" col="13" range.start="[23:13]" range.end="[23:16]" def_id="100837585758" isRef="True"/>
+                <NamespaceRef id="101948097174" spelling="Bar" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="23" col="18" range.start="[23:18]" range.end="[23:21]" def_id="104269541661" isRef="True"/>
+              </DeclRefExpr>
+            </UnexposedExpr>
+          </CallExpr>
+        </VarDecl>
+      </DeclStmt>
+      <ReturnStmt id="102767815691" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="24" col="2" range.start="[24:2]" range.end="[24:12]">
+        <UnexposedExpr id="101654398571" spelling="x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="24" col="11" range.start="[24:9]" range.end="[24:12]" type="int" def_id="102341107952">
+          <MemberRefExpr id="103823961001" spelling="x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="24" col="11" range.start="[24:9]" range.end="[24:12]" type="int" def_id="102341107952">
+            <DeclRefExpr id="101339079085" spelling="v" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" line="24" col="9" range.start="[24:9]" range.end="[24:10]" type="Foo::A" def_id="100967717954"/>
+          </MemberRefExpr>
+        </UnexposedExpr>
+      </ReturnStmt>
+    </CompoundStmt>
+  </FunctionDecl>
+</TranslationUnit>

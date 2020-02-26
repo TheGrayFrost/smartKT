@@ -1,0 +1,24 @@
+/usr/bin/cmake3 -S/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros -B/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake3 -E cmake_progress_start /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/build/CMakeFiles /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/build/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[1]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/build'
+make -f CMakeFiles/macro.dir/build.make CMakeFiles/macro.dir/depend
+make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/build'
+cd /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/build && /usr/bin/cmake3 -E cmake_depends "Unix Makefiles" /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/build/CMakeFiles/macro.dir/DependInfo.cmake --color=
+Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/build/CMakeFiles/macro.dir/DependInfo.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/build/CMakeFiles/macro.dir/depend.internal".
+Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/build/CMakeFiles/macro.dir/depend.internal".
+Scanning dependencies of target macro
+make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/build'
+make -f CMakeFiles/macro.dir/build.make CMakeFiles/macro.dir/build
+make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/build'
+[ 33%] Building C object CMakeFiles/macro.dir/base.c.o
+/opt/rh/devtoolset-8/root/usr/bin/cc   -gdwarf-4   -o CMakeFiles/macro.dir/base.c.o   -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/base.c
+[ 66%] Building C object CMakeFiles/macro.dir/foo.c.o
+/opt/rh/devtoolset-8/root/usr/bin/cc   -gdwarf-4   -o CMakeFiles/macro.dir/foo.c.o   -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/foo.c
+[100%] Linking C executable macro
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/macro.dir/link.txt --verbose=1
+/opt/rh/devtoolset-8/root/usr/bin/cc -gdwarf-4  -L/usr/lib64/mysql -L/usr/lib64/ -rdynamic CMakeFiles/macro.dir/base.c.o CMakeFiles/macro.dir/foo.c.o  -o macro 
+make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/build'
+[100%] Built target macro
+make[1]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/build'
+/usr/bin/cmake3 -E cmake_progress_start /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/build/CMakeFiles 0

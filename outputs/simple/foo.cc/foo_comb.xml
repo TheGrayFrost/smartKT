@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<TranslationUnit>
+   
+  
+   <VarDecl col="12" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/foo.cc" id="1704149494" isDecl="True" line="1" linkage_kind="external" range.end="[1:13]" range.start="[1:1]" size="4" spelling="z" storage_class="extern" type="int" usr="c:@z"/>
+   
+  
+   <FunctionDecl col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/foo.cc" id="4002909892" isDecl="True" isDef="True" line="3" linkage_kind="external" mangled_name="_Z4foo1v" range.end="[6:2]" range.start="[3:1]" spelling="foo1" storage_class="default_auto" type="int ()" usr="c:@F@foo1#">
+      
+    
+      <CompoundStmt col="1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/foo.cc" id="2814671831" line="4" range.end="[6:2]" range.start="[4:1]" sem_parent_usr="c:@F@foo1#">
+         
+      
+         <ReturnStmt col="2" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/foo.cc" id="2195430713" line="5" range.end="[5:10]" range.start="[5:2]">
+            
+        
+            <UnexposedExpr col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/foo.cc" id="4081474165" line="5" range.end="[5:10]" range.start="[5:9]" ref_usr="c:@z" spelling="z" type="int">
+               
+          
+               <DeclRefExpr col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/foo.cc" id="1684561313" line="5" range.end="[5:10]" range.start="[5:9]" ref_usr="c:@z" spelling="z" type="int"/>
+               
+        
+            </UnexposedExpr>
+            
+      
+         </ReturnStmt>
+         
+    
+      </CompoundStmt>
+      
+  
+   </FunctionDecl>
+   
+
+</TranslationUnit>

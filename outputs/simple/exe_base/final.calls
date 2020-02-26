@@ -1,0 +1,4 @@
+# FILENAME	LINENUM	FUNCNAME	CALLNODEID	CALLEXPR
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/bar.cc	9	_Z4foo1v	c:@F@foo1#	foo1 ( )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/base.cc	7	_Z3foov	c:@F@foo#	foo ( )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/base.cc	8	_Z3barv	c:@F@bar#	bar ( )

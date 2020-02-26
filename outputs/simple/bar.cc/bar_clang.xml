@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TranslationUnit SYSTEM "smartkt.dtd">
+<TranslationUnit>
+  <VarDecl id="86040624" spelling="y" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/bar.cc" line="1" col="12" range.start="[1:1]" range.end="[1:13]" type="int" usr="c:bar.cc@y" isDecl="True" isDef="True" storage_class="static" linkage_kind="internal"/>
+  <VarDecl id="2667931907" spelling="z" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/bar.cc" line="2" col="5" range.start="[2:1]" range.end="[2:10]" type="int" usr="c:@z" isDecl="True" isDef="True" storage_class="default_auto" linkage_kind="external">
+    <IntegerLiteral id="2796623103" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/bar.cc" line="2" col="9" range.start="[2:9]" range.end="[2:10]" type="int" sem_parent_usr="c:@z"/>
+  </VarDecl>
+  <FunctionDecl id="1921925874" spelling="foo1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/bar.cc" line="4" col="5" range.start="[4:1]" range.end="[4:11]" type="int ()" usr="c:@F@foo1#" isDecl="True" storage_class="default_auto" linkage_kind="external"/>
+  <FunctionDecl id="482224942" spelling="bar" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/bar.cc" line="6" col="5" range.start="[6:1]" range.end="[11:2]" type="int ()" usr="c:@F@bar#" isDecl="True" isDef="True" storage_class="default_auto" linkage_kind="external">
+    <CompoundStmt id="844487913" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/bar.cc" line="7" col="1" range.start="[7:1]" range.end="[11:2]" sem_parent_usr="c:@F@bar#">
+      <DeclStmt id="2414436337" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/bar.cc" line="8" col="2" range.start="[8:2]" range.end="[8:12]">
+        <VarDecl id="148751765" spelling="z" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/bar.cc" line="8" col="6" range.start="[8:2]" range.end="[8:11]" type="int" usr="c:bar.cc@52@F@bar#@z" lex_parent_usr="c:@F@bar#" isDecl="True" isDef="True" storage_class="default_auto" linkage_kind="auto">
+          <IntegerLiteral id="934927012" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/bar.cc" line="8" col="10" range.start="[8:10]" range.end="[8:11]" type="int" sem_parent_usr="c:bar.cc@52@F@bar#@z"/>
+        </VarDecl>
+      </DeclStmt>
+      <CompoundAssignOperator id="2593320338" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/bar.cc" line="9" col="2" range.start="[9:2]" range.end="[9:13]" type="int">
+        <DeclRefExpr id="2376283865" spelling="z" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/bar.cc" line="9" col="2" range.start="[9:2]" range.end="[9:3]" type="int" ref_usr="c:bar.cc@52@F@bar#@z"/>
+        <CallExpr id="2618055576" spelling="foo1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/bar.cc" line="9" col="7" range.start="[9:7]" range.end="[9:13]" type="int" ref_usr="c:@F@foo1#">
+          <UnexposedExpr id="3985865556" spelling="foo1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/bar.cc" line="9" col="7" range.start="[9:7]" range.end="[9:11]" type="int (*)()" ref_usr="c:@F@foo1#">
+            <DeclRefExpr id="2155896096" spelling="foo1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/bar.cc" line="9" col="7" range.start="[9:7]" range.end="[9:11]" type="int ()" ref_usr="c:@F@foo1#"/>
+          </UnexposedExpr>
+        </CallExpr>
+      </CompoundAssignOperator>
+      <ReturnStmt id="2710727515" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/bar.cc" line="10" col="2" range.start="[10:2]" range.end="[10:10]">
+        <UnexposedExpr id="504257746" spelling="z" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/bar.cc" line="10" col="9" range.start="[10:9]" range.end="[10:10]" type="int" ref_usr="c:bar.cc@52@F@bar#@z">
+          <DeclRefExpr id="3514558654" spelling="z" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/bar.cc" line="10" col="9" range.start="[10:9]" range.end="[10:10]" type="int" ref_usr="c:bar.cc@52@F@bar#@z"/>
+        </UnexposedExpr>
+      </ReturnStmt>
+    </CompoundStmt>
+  </FunctionDecl>
+</TranslationUnit>

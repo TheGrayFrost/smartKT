@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<DYNAMIC_LIBRARY binary="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/build/libC.so">
+   <TranslationUnit>
+      
+   
+  
+   
+      <VarDecl col="12" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/rand.cc" id="1852763705" isDecl="True" isDef="True" line="1" linkage_kind="internal" range.end="[1:17]" range.start="[1:1]" size="4" spelling="z" type="int" usr="c:rand.cc@z">
+         
+      
+    
+      
+         <IntegerLiteral col="16" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/rand.cc" id="4045488949" line="1" range.end="[1:17]" range.start="[1:16]" sem_parent_usr="c:rand.cc@z" type="int"/>
+         
+      
+  
+   
+      </VarDecl>
+      
+   
+  
+   
+      <FunctionDecl col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/rand.cc" id="3753411959" isDecl="True" isDef="True" line="3" linkage_kind="external" mangled_name="_Z3foov" range.end="[6:2]" range.start="[3:1]" spelling="foo" type="int ()" usr="c:@F@foo#">
+         
+      
+    
+      
+         <CompoundStmt col="1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/rand.cc" id="2177681436" line="4" range.end="[6:2]" range.start="[4:1]" sem_parent_usr="c:@F@foo#">
+            
+         
+      
+         
+            <ReturnStmt col="2" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/rand.cc" id="487559296" line="5" range.end="[5:10]" range.start="[5:2]">
+               
+            
+        
+            
+               <UnexposedExpr col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/rand.cc" id="1778770944" line="5" range.end="[5:10]" range.start="[5:9]" ref_usr="c:rand.cc@z" spelling="z" type="int">
+                  
+               
+          
+               
+                  <DeclRefExpr col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/rand.cc" id="2269636853" line="5" range.end="[5:10]" range.start="[5:9]" ref_usr="c:rand.cc@z" spelling="z" type="int"/>
+                  
+               
+        
+            
+               </UnexposedExpr>
+               
+            
+      
+         
+            </ReturnStmt>
+            
+         
+    
+      
+         </CompoundStmt>
+         
+      
+  
+   
+      </FunctionDecl>
+      
+   
+
+
+   </TranslationUnit>
+</DYNAMIC_LIBRARY>

@@ -1,0 +1,16 @@
+# FILENAME	LINENUM	FUNCNAME	CALLNODEID	CALLEXPR
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/foo.cpp	6	_ZN7foo_strC1EOS_	c:@S@foo_str@F@foo_str#&&$@S@foo_str#	x
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/foo.cpp	10	_ZN11ParentClassC1Ev	c:@S@ParentClass@F@ParentClass#	p
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/foo.cpp	15	_ZN6Animal7breatheEv	c:@S@Animal@F@breathe#	this -> breathe ( )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/inherit.cpp	10	_ZN7foo_strC1Ev	c:@S@foo_str@F@foo_str#	x
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/inherit.cpp	12	_ZN7foo_strC1Ev	c:@S@foo_str@F@foo_str#	y
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/inherit.cpp	13	_ZN7foo_straSEOS_	c:@S@foo_str@F@operator=#&&$@S@foo_str#	y = foo ( x )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/inherit.cpp	13	_Z3foo7foo_str	c:@F@foo#$@S@foo_str#	foo ( x )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/inherit.cpp	13	_ZN7foo_strC1ERKS_	c:@S@foo_str@F@foo_str#&1$@S@foo_str#	x
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/inherit.cpp	15	_ZN5SnakeC1Ev	c:@S@Snake@F@Snake#	snake
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/inherit.cpp	16	_ZN5Snake5crawlEv	c:@S@Snake@F@crawl#	snake . crawl ( )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/inherit.cpp	19	_ZN13DerivedClass1C1Ev	c:@S@DerivedClass1@F@DerivedClass1#	DerivedClass1 ( )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/inherit.cpp	20	_ZN11ParentClass5helloEv	c:@S@ParentClass@F@hello#	p -> hello ( )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/inherit.cpp	21	_ZN13DerivedClass1C1Ev	c:@S@DerivedClass1@F@DerivedClass1#	d
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/inherit.cpp	22	_ZN13DerivedClass15helloEi	c:@S@DerivedClass1@F@hello#I#	d . hello ( 1 )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/inherit.cpp	23	_ZN13DerivedClass15helloEd	c:@S@DerivedClass1@F@hello#d#	d . hello ( 1.2 )

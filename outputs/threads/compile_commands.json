@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build",
+  "command": "/opt/rh/devtoolset-8/root/usr/bin/c++    -std=c++17 -gdwarf-4   -o CMakeFiles/thread.dir/main.cpp.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp",
+  "file": "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp"
+},
+{
+  "directory": "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build",
+  "command": "/opt/rh/devtoolset-8/root/usr/bin/c++    -std=c++17 -gdwarf-4   -o CMakeFiles/thread.dir/try.cpp.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp",
+  "file": "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp"
+}
+]

@@ -1,0 +1,3 @@
+# FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/bar.cc	_Z3barv	0x4	z	c:bar.cc@52@F@bar#@z	int	4	c:@F@bar#	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/base.cc	main	0x14	y	c:base.cc@78@F@main#@y	int	4	c:@F@main#	

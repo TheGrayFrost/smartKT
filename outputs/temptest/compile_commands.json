@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build",
+  "command": "/opt/rh/devtoolset-8/root/usr/bin/c++   -I/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo  -gdwarf-4   -o CMakeFiles/driver.out.dir/driver.cc.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc",
+  "file": "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc"
+}
+]

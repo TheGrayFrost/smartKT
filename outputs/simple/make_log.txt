@@ -1,0 +1,24 @@
+/usr/bin/cmake3 -S/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple -B/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake3 -E cmake_progress_start /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/build/CMakeFiles /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/build/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[1]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/build'
+make -f CMakeFiles/random.dir/build.make CMakeFiles/random.dir/depend
+make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/build'
+cd /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/build && /usr/bin/cmake3 -E cmake_depends "Unix Makefiles" /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/build/CMakeFiles/random.dir/DependInfo.cmake --color=
+Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/build/CMakeFiles/random.dir/DependInfo.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/build/CMakeFiles/random.dir/depend.internal".
+Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/build/CMakeFiles/random.dir/depend.internal".
+Scanning dependencies of target random
+make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/build'
+make -f CMakeFiles/random.dir/build.make CMakeFiles/random.dir/build
+make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/build'
+[ 33%] Building CXX object CMakeFiles/random.dir/main.cc.o
+[ 66%] Building CXX object CMakeFiles/random.dir/random.cc.o
+/opt/rh/devtoolset-8/root/usr/bin/c++    -std=c++17 -gdwarf-4   -o CMakeFiles/random.dir/main.cc.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc
+/opt/rh/devtoolset-8/root/usr/bin/c++    -std=c++17 -gdwarf-4   -o CMakeFiles/random.dir/random.cc.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.cc
+[100%] Linking CXX executable random
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/random.dir/link.txt --verbose=1
+/opt/rh/devtoolset-8/root/usr/bin/c++  -std=c++17 -gdwarf-4  -L/usr/lib64/mysql -L/usr/lib64/ -rdynamic CMakeFiles/random.dir/random.cc.o CMakeFiles/random.dir/main.cc.o  -o random 
+make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/build'
+[100%] Built target random
+make[1]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/build'
+/usr/bin/cmake3 -E cmake_progress_start /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/build/CMakeFiles 0

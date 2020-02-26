@@ -1,0 +1,6 @@
+# FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/tem.h	_ZN5ArrayIfE6smfuncEv	0x4	x	c:tem.h@283@ST>1#T@Array@F@smfunc#@x	T	4	None	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/tem.h	_ZN5ArrayIfE6smfuncEv	0x8	i	c:tem.h@298@ST>1#T@Array@F@smfunc#@i	int	4	None	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/template.cpp	main	0x4	m	c:template.cpp@32@F@main#@m	int	4	None	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/template.cpp	main	0x10	ar	c:template.cpp@69@F@main#@ar	float [3]	4	None	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/template.cpp	main	0x20	arm	c:template.cpp@101@F@main#@arm	Array<float>	16	None	

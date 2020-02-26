@@ -1,0 +1,2 @@
+# FILENAME	LINENUM	FUNCNAME	CALLNODEID	CALLEXPR
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc	23	_ZN3Foo3BarL1fEv	103621493414	Foo :: Bar :: f ( )

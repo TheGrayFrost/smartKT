@@ -1,0 +1,6 @@
+# FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/mythread.h	_Z5task1i	0x14	x	c:mythread.h@138@F@task1#I#@x	int	4	None	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/mythread.h	_Z5task1i	0x4	i	c:mythread.h@152@F@task1#I#@i	int	4	None	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/threading.cpp	main	0x28	t1	c:threading.cpp@56@F@main#@t1	std::thread	8	None	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/threading.cpp	main	0x30	t2	c:threading.cpp@86@F@main#@t2	std::thread	8	None	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/threading.cpp	main	0x38	t3	c:threading.cpp@116@F@main#@t3	std::thread	8	None	

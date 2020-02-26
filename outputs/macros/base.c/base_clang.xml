@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TranslationUnit SYSTEM "smartkt.dtd">
+<TranslationUnit>
+  <FunctionDecl id="102144879361" spelling="f" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/foo.h" line="4" col="5" range.start="[4:1]" range.end="[4:11]" type="int (int)" usr="c:@F@f" lex_parent_id="100871759710" storage_class="default_auto" visibility="default" display_name="f(int)" isDecl="True" linkage_kind="external">
+    <ParmDecl id="101675837088" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/foo.h" line="4" col="10" range.start="[4:7]" range.end="[4:10]" type="int" lex_parent_id="102144879361" storage_class="default_auto" visibility="default" isDecl="True" isDef="True" linkage_kind="auto"/>
+  </FunctionDecl>
+  <FunctionDecl id="104162346658" spelling="main" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/base.c" line="5" col="5" range.start="[5:1]" range.end="[9:2]" type="int ()" usr="c:@F@main" lex_parent_id="100871759710" storage_class="default_auto" visibility="default" display_name="main()" isDecl="True" isDef="True" linkage_kind="external">
+    <CompoundStmt id="103554072825" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/base.c" line="6" col="1" range.start="[6:1]" range.end="[9:2]" sem_parent_id="104162346658" storage_class="default_auto">
+      <DeclStmt id="100615826399" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/base.c" line="7" col="2" range.start="[7:2]" range.end="[7:23]">
+        <VarDecl id="101144058331" spelling="z" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/base.c" line="7" col="6" range.start="[7:2]" range.end="[7:15]" type="int" usr="c:base.c@50@F@main@z" lex_parent_id="104162346658" storage_class="default_auto" visibility="default" display_name="z" isDecl="True" isDef="True" linkage_kind="auto">
+          <CallExpr id="101663736194" spelling="f" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/base.c" line="7" col="10" range.start="[7:10]" range.end="[7:15]" type="int" sem_parent_id="101144058331" ref_id="102144879361" storage_class="default_auto">
+            <UnexposedExpr id="101306963903" spelling="f" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/base.c" line="7" col="10" range.start="[7:10]" range.end="[7:14]" type="int (*)(int)" ref_id="102144879361">
+              <DeclRefExpr id="101633129233" spelling="f" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/base.c" line="7" col="10" range.start="[7:10]" range.end="[7:14]" type="int (int)" ref_id="102144879361"/>
+            </UnexposedExpr>
+            <IntegerLiteral id="103549471376" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/base.c" line="7" col="12" range.start="[7:12]" range.end="[7:13]" type="int"/>
+          </CallExpr>
+        </VarDecl>
+        <VarDecl id="104244614352" spelling="y" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/base.c" line="7" col="17" range.start="[7:17]" range.end="[7:22]" type="int" usr="c:base.c@50@F@main@y" lex_parent_id="104162346658" storage_class="default_auto" visibility="default" display_name="y" isDecl="True" linkage_kind="auto">
+          <IntegerLiteral id="102443226164" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/base.c" line="7" col="21" range.start="[7:21]" range.end="[7:22]" type="int" sem_parent_id="104244614352" storage_class="default_auto"/>
+        </VarDecl>
+      </DeclStmt>
+      <ReturnStmt id="104096544433" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/base.c" line="8" col="2" range.start="[8:2]" range.end="[8:10]">
+        <IntegerLiteral id="101657273369" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/base.c" line="8" col="9" range.start="[8:9]" range.end="[8:10]" type="int"/>
+      </ReturnStmt>
+    </CompoundStmt>
+  </FunctionDecl>
+</TranslationUnit>

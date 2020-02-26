@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<root>
+  <file name="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/build/random">
+    <DW_TAG_compile_unit address_size="8" debug_abbrev_offset="0" offset="0" path="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" unit_length="365" version="4">
+      <sources>
+        <entry file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc" id="1"/>
+        <entry file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.hh" id="2"/>
+      </sources>
+      <DW_TAG_namespace DW_AT_decl_column="11" DW_AT_decl_file="2" DW_AT_decl_line="4" DW_AT_name="Foo" DW_AT_sibling="186" offset="45">
+        <DW_TAG_class_type DW_AT_byte_size="8" DW_AT_decl_column="12" DW_AT_decl_file="2" DW_AT_decl_line="13" DW_AT_name="A" DW_AT_sibling="114" offset="57">
+          <DW_TAG_member DW_AT_accessibility="1" DW_AT_data_member_location="0" DW_AT_decl_column="7" DW_AT_decl_file="2" DW_AT_decl_line="16" DW_AT_name="x" DW_AT_type="186" offset="68"/>
+          <DW_TAG_member DW_AT_accessibility="1" DW_AT_data_member_location="4" DW_AT_decl_column="10" DW_AT_decl_file="2" DW_AT_decl_line="16" DW_AT_name="y" DW_AT_type="186" offset="80"/>
+          <DW_TAG_subprogram DW_AT_accessibility="1" DW_AT_decl_column="3" DW_AT_decl_file="2" DW_AT_decl_line="17" DW_AT_declaration="True" DW_AT_external="True" DW_AT_linkage_name="_ZN3Foo1AC4Ev" DW_AT_name="A" DW_AT_object_pointer="107" offset="92">
+            <DW_TAG_formal_parameter DW_AT_artificial="True" DW_AT_type="193" offset="107"/>
+          </DW_TAG_subprogram>
+        </DW_TAG_class_type>
+        <DW_TAG_variable DW_AT_decl_column="6" DW_AT_decl_file="1" DW_AT_decl_line="5" DW_AT_declaration="True" DW_AT_external="True" DW_AT_linkage_name="_ZN3Foo1uE" DW_AT_location="(DW_OP_addr: 601034)" DW_AT_name="u" DW_AT_type="186" offset="114"/>
+        <DW_TAG_variable DW_AT_decl_column="9" DW_AT_decl_file="1" DW_AT_decl_line="5" DW_AT_declaration="True" DW_AT_external="True" DW_AT_linkage_name="_ZN3Foo1vE" DW_AT_location="(DW_OP_addr: 601038)" DW_AT_name="v" DW_AT_type="186" offset="128"/>
+        <DW_TAG_namespace DW_AT_decl_column="12" DW_AT_decl_file="2" DW_AT_decl_line="7" DW_AT_name="Bar" offset="142">
+          <DW_TAG_subprogram DW_AT_GNU_all_tail_call_sites="True" DW_AT_decl_column="5" DW_AT_decl_file="1" DW_AT_decl_line="21" DW_AT_declaration="True" DW_AT_external="True" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_high_pc="25" DW_AT_linkage_name="_ZN3Foo3Bar1fENS_1AE" DW_AT_low_pc="4196389" DW_AT_name="f" DW_AT_sibling="174" DW_AT_type="186" offset="150">
+            <DW_TAG_formal_parameter DW_AT_type="57" offset="168"/>
+          </DW_TAG_subprogram>
+          <DW_TAG_subprogram DW_AT_GNU_all_call_sites="True" DW_AT_decl_column="13" DW_AT_decl_file="1" DW_AT_decl_line="11" DW_AT_declaration="True" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_high_pc="19" DW_AT_low_pc="4196370" DW_AT_name="f" DW_AT_type="186" offset="174"/>
+        </DW_TAG_namespace>
+      </DW_TAG_namespace>
+      <DW_TAG_base_type DW_AT_byte_size="4" DW_AT_encoding="5" DW_AT_name="int" offset="186"/>
+      <DW_TAG_pointer_type DW_AT_byte_size="8" DW_AT_type="57" offset="193"/>
+      <DW_TAG_variable DW_AT_location="(DW_OP_addr: 601034)" DW_AT_specification="114" offset="199"/>
+      <DW_TAG_variable DW_AT_location="(DW_OP_addr: 601038)" DW_AT_specification="128" offset="214"/>
+      <DW_TAG_subprogram DW_AT_GNU_all_tail_call_sites="True" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_high_pc="25" DW_AT_low_pc="4196389" DW_AT_sibling="293" DW_AT_specification="150" offset="229">
+        <DW_TAG_formal_parameter DW_AT_decl_column="19" DW_AT_decl_file="1" DW_AT_decl_line="21" DW_AT_location="(DW_OP_fbreg: -40)" DW_AT_name="v" DW_AT_type="57" offset="256"/>
+        <DW_TAG_variable DW_AT_decl_column="6" DW_AT_decl_file="1" DW_AT_decl_line="23" DW_AT_name="a" DW_AT_type="186" offset="269"/>
+        <DW_TAG_variable DW_AT_decl_column="9" DW_AT_decl_file="1" DW_AT_decl_line="23" DW_AT_location="(DW_OP_fbreg: -20)" DW_AT_name="b" DW_AT_type="186" offset="279"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram DW_AT_GNU_all_call_sites="True" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_high_pc="19" DW_AT_low_pc="4196370" DW_AT_specification="174" offset="293">
+        <DW_TAG_variable DW_AT_decl_column="14" DW_AT_decl_file="1" DW_AT_decl_line="13" DW_AT_location="(DW_OP_addr: 60102c)" DW_AT_name="p" DW_AT_type="186" offset="316"/>
+        <DW_TAG_lexical_block DW_AT_high_pc="7" DW_AT_low_pc="4196374" offset="336">
+          <DW_TAG_variable DW_AT_decl_column="8" DW_AT_decl_file="1" DW_AT_decl_line="15" DW_AT_location="(DW_OP_fbreg: -20)" DW_AT_name="p" DW_AT_type="186" offset="353"/>
+        </DW_TAG_lexical_block>
+      </DW_TAG_subprogram>
+    </DW_TAG_compile_unit>
+    <DW_TAG_compile_unit address_size="8" debug_abbrev_offset="305" offset="369" path="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/main.cc" unit_length="450" version="4">
+      <sources>
+        <entry file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.hh" id="1"/>
+        <entry file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/main.cc" id="2"/>
+      </sources>
+      <DW_TAG_namespace DW_AT_decl_column="11" DW_AT_decl_file="1" DW_AT_decl_line="4" DW_AT_name="Foo" DW_AT_sibling="516" offset="410">
+        <DW_TAG_class_type DW_AT_byte_size="8" DW_AT_decl_column="12" DW_AT_decl_file="1" DW_AT_decl_line="13" DW_AT_name="A" DW_AT_sibling="479" offset="422">
+          <DW_TAG_member DW_AT_accessibility="1" DW_AT_data_member_location="0" DW_AT_decl_column="7" DW_AT_decl_file="1" DW_AT_decl_line="16" DW_AT_name="x" DW_AT_type="516" offset="433"/>
+          <DW_TAG_member DW_AT_accessibility="1" DW_AT_data_member_location="4" DW_AT_decl_column="10" DW_AT_decl_file="1" DW_AT_decl_line="16" DW_AT_name="y" DW_AT_type="516" offset="445"/>
+          <DW_TAG_subprogram DW_AT_accessibility="1" DW_AT_decl_column="3" DW_AT_decl_file="1" DW_AT_decl_line="17" DW_AT_declaration="True" DW_AT_external="True" DW_AT_inline="2" DW_AT_linkage_name="_ZN3Foo1AC4Ev" DW_AT_name="A" DW_AT_object_pointer="472" DW_AT_sibling="782" offset="457">
+            <DW_TAG_formal_parameter DW_AT_artificial="True" DW_AT_type="523" offset="472"/>
+          </DW_TAG_subprogram>
+        </DW_TAG_class_type>
+        <DW_TAG_variable DW_AT_decl_column="13" DW_AT_decl_file="2" DW_AT_decl_line="5" DW_AT_declaration="True" DW_AT_external="True" DW_AT_linkage_name="_ZN3Foo1uE" DW_AT_name="u" DW_AT_type="516" offset="479"/>
+        <DW_TAG_variable DW_AT_decl_column="16" DW_AT_decl_file="2" DW_AT_decl_line="5" DW_AT_declaration="True" DW_AT_external="True" DW_AT_linkage_name="_ZN3Foo1vE" DW_AT_name="v" DW_AT_type="516" offset="493"/>
+        <DW_TAG_namespace DW_AT_decl_column="12" DW_AT_decl_file="1" DW_AT_decl_line="7" DW_AT_name="Bar" offset="507"/>
+      </DW_TAG_namespace>
+      <DW_TAG_base_type DW_AT_byte_size="4" DW_AT_encoding="5" DW_AT_name="int" offset="516"/>
+      <DW_TAG_pointer_type DW_AT_byte_size="8" DW_AT_type="422" offset="523"/>
+      <DW_TAG_const_type DW_AT_type="523" offset="529"/>
+      <DW_TAG_imported_module DW_AT_decl_column="17" DW_AT_decl_file="2" DW_AT_decl_line="8" DW_AT_import="410" offset="534"/>
+      <DW_TAG_imported_module DW_AT_decl_column="17" DW_AT_decl_file="2" DW_AT_decl_line="9" DW_AT_import="507" offset="542"/>
+      <DW_TAG_variable DW_AT_decl_column="5" DW_AT_decl_file="2" DW_AT_decl_line="11" DW_AT_external="True" DW_AT_location="(DW_OP_addr: 60103c)" DW_AT_name="r" DW_AT_type="516" offset="550"/>
+      <DW_TAG_variable DW_AT_decl_column="12" DW_AT_decl_file="2" DW_AT_decl_line="11" DW_AT_external="True" DW_AT_location="(DW_OP_addr: 601040)" DW_AT_name="z" DW_AT_type="516" offset="570"/>
+      <DW_TAG_subprogram DW_AT_GNU_all_tail_call_sites="True" DW_AT_artificial="True" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_high_pc="21" DW_AT_low_pc="4196547" DW_AT_name="_GLOBAL__sub_I_r" offset="590"/>
+      <DW_TAG_subprogram DW_AT_GNU_all_call_sites="True" DW_AT_artificial="True" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_high_pc="52" DW_AT_low_pc="4196495" DW_AT_name="__static_initialization_and_destruction_0" DW_AT_sibling="671" offset="613">
+        <DW_TAG_formal_parameter DW_AT_decl_column="1" DW_AT_decl_file="2" DW_AT_decl_line="18" DW_AT_location="(DW_OP_fbreg: -20)" DW_AT_name="__initialize_p" DW_AT_type="516" offset="640"/>
+        <DW_TAG_formal_parameter DW_AT_decl_column="1" DW_AT_decl_file="2" DW_AT_decl_line="18" DW_AT_location="(DW_OP_fbreg: -24)" DW_AT_name="__priority" DW_AT_type="516" offset="655"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram DW_AT_GNU_all_tail_call_sites="True" DW_AT_decl_column="5" DW_AT_decl_file="2" DW_AT_decl_line="13" DW_AT_external="True" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_high_pc="81" DW_AT_low_pc="4196414" DW_AT_name="main" DW_AT_sibling="758" DW_AT_type="516" offset="671">
+        <DW_TAG_variable DW_AT_decl_column="4" DW_AT_decl_file="2" DW_AT_decl_line="15" DW_AT_location="(DW_OP_fbreg: -32)" DW_AT_name="i" DW_AT_type="422" offset="705"/>
+        <DW_TAG_variable DW_AT_decl_column="7" DW_AT_decl_file="2" DW_AT_decl_line="15" DW_AT_location="(DW_OP_fbreg: -40)" DW_AT_name="j" DW_AT_type="422" offset="718"/>
+        <DW_TAG_variable DW_AT_decl_column="6" DW_AT_decl_file="2" DW_AT_decl_line="16" DW_AT_location="(DW_OP_fbreg: -20)" DW_AT_name="x" DW_AT_type="516" offset="731"/>
+        <DW_TAG_variable DW_AT_decl_column="20" DW_AT_decl_file="2" DW_AT_decl_line="16" DW_AT_location="(DW_OP_fbreg: -24)" DW_AT_name="y" DW_AT_type="516" offset="744"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram DW_AT_inline="2" DW_AT_object_pointer="772" DW_AT_sibling="782" DW_AT_specification="457" offset="758">
+        <DW_TAG_formal_parameter DW_AT_artificial="True" DW_AT_name="this" DW_AT_type="529" offset="772"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram DW_AT_GNU_all_call_sites="True" DW_AT_abstract_origin="758" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_high_pc="21" DW_AT_linkage_name="_ZN3Foo1AC2Ev" DW_AT_low_pc="4196568" DW_AT_object_pointer="813" offset="782">
+        <DW_TAG_formal_parameter DW_AT_abstract_origin="772" DW_AT_location="(DW_OP_fbreg: -24)" offset="813"/>
+      </DW_TAG_subprogram>
+    </DW_TAG_compile_unit>
+  </file>
+</root>
+

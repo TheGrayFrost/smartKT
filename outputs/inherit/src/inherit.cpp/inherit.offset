@@ -1,0 +1,8 @@
+# FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	main	0x24	x	103852182347	struct foo_str	12	103722671519	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	main	0x30	y	101538672580	struct foo_str	12	103722671519	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	main	0x70	snake	101825401505	Snake	64	103722671519	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	main	0x18	p	100214414160	ParentClass *	8	103722671519	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	main	0x90	d	101489883625	DerivedClass1	32	103722671519	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	_ZN13DerivedClass15helloEi	0xc	i	103940965424	int	4	104270000133	
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	_ZN13DerivedClass15helloEd	0x10	z	103562857416	double	8	100676904736	

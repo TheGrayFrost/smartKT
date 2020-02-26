@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<TranslationUnit>
+   
+  
+   <VarDecl col="12" def_id="03142184251" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/bar.h" id="03725451454" isDecl="True" isDef="True" lex_parent_id="03005878786" line="4" linkage_kind="external" range.end="[4:13]" range.start="[4:1]" size="4" spelling="x" storage_class="extern" type="int" usr="c:@x"/>
+   
+  
+   <Namespace col="11" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/bar.h" id="00368321333" isDecl="True" isDef="True" lex_parent_id="03005878786" line="6" linkage_kind="external" range.end="[11:2]" range.start="[6:1]" spelling="NS1" usr="c:@N@NS1">
+      
+    
+      <VarDecl col="14" def_id="00413379255" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/bar.h" id="01862466263" isDecl="True" isDef="True" lex_parent_id="00368321333" line="7" linkage_kind="external" range.end="[7:15]" range.start="[7:3]" size="4" spelling="y" storage_class="extern" type="int" usr="c:@N@NS1@y"/>
+      
+    
+      <Namespace col="13" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/bar.h" id="00482033058" isDecl="True" isDef="True" lex_parent_id="00368321333" line="8" linkage_kind="external" range.end="[10:4]" range.start="[8:3]" spelling="NS2" usr="c:@N@NS1@N@NS2">
+         
+      
+         <VarDecl col="16" def_id="03504256315" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/bar.h" id="01139792947" isDecl="True" isDef="True" lex_parent_id="00482033058" line="9" linkage_kind="external" range.end="[9:17]" range.start="[9:5]" size="4" spelling="d" storage_class="extern" type="int" usr="c:@N@NS1@N@NS2@d"/>
+         
+    
+      </Namespace>
+      
+  
+   </Namespace>
+   
+  
+   <UnexposedDecl col="2" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/bar.h" id="01816062526" isDecl="True" lex_parent_id="03005878786" line="11" range.end="[11:3]" range.start="[11:2]" usr="c:"/>
+   
+  
+   <VarDecl col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/bar.cpp" id="03142184251" isDecl="True" isDef="True" lex_parent_id="03005878786" line="3" linkage_kind="external" range.end="[3:10]" range.start="[3:1]" size="4" spelling="x" storage_class="default_auto" type="int" usr="c:@x">
+      
+    
+      <IntegerLiteral col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/bar.cpp" id="01737249434" line="3" range.end="[3:10]" range.start="[3:9]" sem_parent_id="03142184251" type="int"/>
+      
+  
+   </VarDecl>
+   
+  
+   <Namespace col="11" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/bar.cpp" id="02910350103" isDecl="True" isDef="True" lex_parent_id="03005878786" line="5" linkage_kind="external" range.end="[10:2]" range.start="[5:1]" spelling="NS1" usr="c:@N@NS1">
+      
+    
+      <VarDecl col="7" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/bar.cpp" id="00413379255" isDecl="True" isDef="True" lex_parent_id="02910350103" line="6" linkage_kind="external" range.end="[6:8]" range.start="[6:3]" size="4" spelling="y" storage_class="default_auto" type="int" usr="c:@N@NS1@y"/>
+      
+    
+      <Namespace col="13" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/bar.cpp" id="01343826510" isDecl="True" isDef="True" lex_parent_id="02910350103" line="7" linkage_kind="external" range.end="[9:4]" range.start="[7:3]" spelling="NS2" usr="c:@N@NS1@N@NS2">
+         
+      
+         <VarDecl col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/bar.cpp" id="03504256315" isDecl="True" isDef="True" lex_parent_id="01343826510" line="8" linkage_kind="external" range.end="[8:10]" range.start="[8:5]" size="4" spelling="d" storage_class="default_auto" type="int" usr="c:@N@NS1@N@NS2@d"/>
+         
+    
+      </Namespace>
+      
+  
+   </Namespace>
+   
+
+</TranslationUnit>
