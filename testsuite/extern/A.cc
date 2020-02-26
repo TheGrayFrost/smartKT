@@ -1,7 +1,9 @@
-#include <iostream>
+class A;
 
-typedef int myint;
+extern A * p;
 
-extern myint f(myint);
-
-myint x = f(9);
+A * f(A& x)
+{
+	p = &x;
+	return p;
+}

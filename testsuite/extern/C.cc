@@ -1,33 +1,27 @@
 #include <iostream>
 
-typedef int myint;
-extern myint x;
+static int x = 9;
 
-myint f()
+int f()
 {
 	std::cout << "In f():\n";
 	return x;
 }
 
-myint f(myint u)
-{
-	std::cout << "In f(myint):\n";
-	return u;
-}
+A * f(A& x);
 
-namespace Foo
+class A
 {
-	class A
-	{
-		public:
-			int r;
-			A();
-	};
-	namespace Bar {extern A v;}
-}
+	public:
+		int r;
+		A();
+};
+
+extern A v;
 
 int main()
 {
-	std::cout << Foo::Bar::v.r << "\n";
+	A * u = f(v);
+	std::cout << "Value of u->r = " << u->r << "\n";
 	return 0;
 }

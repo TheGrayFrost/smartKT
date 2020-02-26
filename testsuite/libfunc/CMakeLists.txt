@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.1.0)
 
 # set the project name
-project(simple CXX)
+project(libfunc CXX)
 
 set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_CXX_FLAGS_DEBUG "-gdwarf-4")
@@ -12,8 +12,5 @@ add_library (B SHARED foo.cc)
 add_library (A SHARED bar.cc)
 target_link_libraries (A B)
 add_library (C SHARED rand.cc)
-add_executable (base base.cc)
+add_executable (base main.cc)
 target_link_libraries (base C A)
-
-
-add_executable (random random.cc)

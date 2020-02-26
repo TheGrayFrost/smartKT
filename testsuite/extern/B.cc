@@ -1,17 +1,14 @@
 #include <iostream>
 
-typedef int myint;
-extern myint f();
+int f();
 
-namespace Foo
+class A
 {
-	class A
-	{
-		public:
-			int r;
-			A();
-	};
-	A::A() {std::cout << "In class A's cons.\n"; r = f();}
-	A v;
-	namespace Bar {A v;}
-}
+	public:
+		int r;
+		A();
+};
+
+A::A() {std::cout << "In class A's cons.\n"; r = f();}
+
+A v;
