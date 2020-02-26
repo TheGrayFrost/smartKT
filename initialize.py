@@ -113,8 +113,12 @@ def generate_static_info(path):
             # Update the command to emit ast
             cmd[0] = clangv + ' -emit-ast'
             cmd[cmd.index('-o')+1] = mainfname + '.ast'
-            os.system(' '.join(cmd))
+            
+            # Remove flags that cause errors
+            cmd = [x for x in cmd if x not in ['-flifetime-dse=1']]
 
+            os.system(' '.join(cmd))
+            
             # Generate func, calls, xml - file number prepended to all nodeids to make unique
             for clangexe, output_extension in zip(CLANGTOOLS, CLANG_OUTPUTEXT):
                 os.system (' '.join(['parsers/'+clangexe, str(num), 
