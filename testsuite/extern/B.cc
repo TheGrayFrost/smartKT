@@ -11,4 +11,4 @@ class A
 
 A::A() {std::cout << "In class A's cons.\n"; r = f();}
 
-A v;
+A v, * p;

@@ -2,6 +2,14 @@
 
 static int x = 9;
 
+class A
+{
+	public:
+		int r;
+		A();
+};
+
+
 int f()
 {
 	std::cout << "In f():\n";
@@ -9,13 +17,6 @@ int f()
 }
 
 A * f(A& x);
-
-class A
-{
-	public:
-		int r;
-		A();
-};
 
 extern A v;
 

@@ -17,6 +17,12 @@ from xml.etree import ElementTree as ET
 from xml.dom import minidom
 from collections import defaultdict
 
+
+
+import parsers.imp_ddx as ddx
+
+DEBUG = False
+
 # tools
 PROJPARSER = 'project_parser.py'
 DWARFTOOL = 'dwxml.py'
@@ -65,16 +71,35 @@ dependencies = pickle.load(open(os.path.join(outfolder, 'dependencies.p'), 'rb')
 def combine_all_clang(depmap):
     CURFINALFILE = os.path.join(foutfolder, FINAL_FILE)
 
+    # create joint info files
     for EXT in [CALL_EXTENSION, SIGN_EXTENSION, OFFSET_EXTENSION, STATIC_EXTENSION]:
         os.system('> ' + os.path.join(foutfolder, CURFINALFILE+EXT))
 
+    # list of exe/so roots
+    rootlist = []
+
     headerWrite = [False, False, False]
-    for num, (exe, flist) in enumerate(depmap.items()):
+    for num, (exe, flist) in enumerate(depmap):
         exenamestrip = exe[exe.rfind('/')+1:]
         exeoutfolder = os.path.join(foutfolder, exenamestrip)
         exestrip = os.path.join(exeoutfolder, exenamestrip)
         os.system('mkdir ' + exeoutfolder)
         print ('\nGenerating info for ' + exenamestrip)
+
+        # generate dwarfdump and its xml for the so or the main executable
+        # print('parsers/'+DWARFTOOL+' '+exe+' -q -o '+exestrip+DWARF_EXTENSION)
+        os.system('parsers/'+DWARFTOOL+' '+exe+' -q -o '+exestrip+DWARF_EXTENSION)
+        print ('Created dwarfdump for ' + exenamestrip)
+
+        # create map from the dwarf xml
+        dtree = ET.parse(exestrip+DWARF_EXTENSION)
+        droot = dtree.getroot()
+
+        # print(exestrip+DWARF_EXTENSION)
+
+        ddx.address = True
+        ddx.TraverseDtree(droot, [None]) # sets ddx.dtree_hashmap
+
 
         if '.so' in exe:
             root = Element('DYNAMIC_LIBRARY')
@@ -100,28 +125,36 @@ def combine_all_clang(depmap):
             # collect clangs
             stree = ET.parse(combstrip + COMB_EXTENSION)
             sroot = stree.getroot()
+            ddx.UpdateCtree (sroot)
             root.append(sroot)
         
+        # link the addresses into the executables and emit the address files
         print ('Combined static info for ' + exenamestrip)
 
         xmlstr = minidom.parseString(ET.tostring(root)).toprettyxml(indent='   ')
-        with open(exestrip+TEMP_EXTENSION, 'w') as f:
+        with open(exestrip+COMB_EXTENSION, 'w') as f:
             f.write(xmlstr)
-        print ('Written temp clang for ' + exenamestrip)
+        print ('Written combined clang for ' + exenamestrip)
+        
+        # create the address file in the exe/so's folder
+        ddx.generate_var(root, exestrip+ADDRESS_EXTENSION)
 
-        # generate dwarfdump and its xml for the so or the main executable
-        print('parsers/'+DWARFTOOL+' '+exe+' -q -o '+exestrip+DWARF_EXTENSION)
-        os.system('parsers/'+DWARFTOOL+' '+exe+' -q -o '+exestrip+DWARF_EXTENSION)
-        print ('Created dwarfdump for ' + exenamestrip)
-
-        # link the addresses into the executables and emit the address files
-        COMBINE_OUTEXT = ' '.join([DWARF_EXTENSION, TEMP_EXTENSION, COMB_EXTENSION, ADDRESS_EXTENSION])
-        print('parsers/'+COMBINER+' '+exestrip+' ADDRESS '+COMBINE_OUTEXT)
-        os.system('parsers/'+COMBINER+' '+exestrip+' ADDRESS '+COMBINE_OUTEXT)
+        rootlist.append(root)
+        
+        # COMBINE_OUTEXT = ' '.join([DWARF_EXTENSION, TEMP_EXTENSION, COMB_EXTENSION, ADDRESS_EXTENSION])
+        # print('parsers/'+COMBINER+' '+exestrip+' ADDRESS '+COMBINE_OUTEXT)
+        # os.system('parsers/'+COMBINER+' '+exestrip+' ADDRESS '+COMBINE_OUTEXT)
         os.system('cp ' + exestrip + ADDRESS_EXTENSION + ' ' + foutfolder+'/')
         print ('Generated addresses for ' + exenamestrip)
-        # combine address patched xmls into one final static xml
-        os.system('cat ' + exestrip + COMB_EXTENSION + ' >> ' + CURFINALFILE + STATIC_EXTENSION)
+        
+    patched_xml = ddx.patch_external_def_ids(rootlist)
+
+    finalxmlstr = minidom.parseString(ET.tostring(patched_xml)).toprettyxml(indent='   ')
+    with open(CURFINALFILE + STATIC_EXTENSION, 'w') as f:
+        f.write(finalxmlstr)
+    print ('\nWritten interlinked combined clang for ' + executable)
+    # # combine address patched xmls into one final static xml
+    # os.system('cat ' + exestrip + COMB_EXTENSION + ' >> ' + CURFINALFILE + STATIC_EXTENSION)
         
 def generate_static_info():
     print('Starting Static!')
@@ -147,7 +180,21 @@ def generate_static_info():
         return recdeps
     
     add_loaded_binaries(executable)
-    combine_all_clang(ls)
+
+    orderls = [(executable, ls[executable])]
+    os.system('ldd '+executable+' > ldd.info')
+    with open('ldd.info', 'r') as f:
+        for line in f:
+            r = line.strip().split()
+            if (len(r) == 4): # location available
+                libloc = r[2]
+                if libloc in ls:
+                    orderls.append((libloc, ls[libloc]))
+    os.system('rm ldd.info')
+    if DEBUG:
+        print (orderls)
+        exit()
+    combine_all_clang(orderls)
 
 def generate_dynamic_info(path, test=None):
     # Add dynamic_information to the combined static XML
@@ -214,7 +261,7 @@ def collect_results(project_name, executable):
         os.system('cp final_universal.xml ' + colpath) 
     print ('Information collected in: ', colpath)
 
-generate_static_info()
+# generate_static_info()
 
 if CALLDYN:
     dynamic_file = generate_dynamic_info(executable, test_input)

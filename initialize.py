@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # To use:
-# python initialize.py <path to project>
+# python initialize.py <path to project> [<optional output folder name>]
 # The last name in the path is assumed the project name
 
 import sys, os, pickle
@@ -16,6 +16,8 @@ C_EXTENSION = ['c', 'C']
 CXX_EXTENSION = ['cc', 'cpp', 'cxx', 'c++']
 FILE_EXTENSION = C_EXTENSION + CXX_EXTENSION
 INIT_FILE = 'init.sh'
+
+FOLDER = 'outputs'
 
 # tools
 CLANGTOOLS = ['ast2xml', 'calls', 'funcs']
@@ -34,9 +36,13 @@ CLANG_OUTPUTEXT = [CLANG_EXTENSION, CALL_EXTENSION, SIGN_EXTENSION]
 COMB_OUTPUTEXT = ' '.join([DWARF_EXTENSION, CLANG_EXTENSION, COMB_EXTENSION, OFFSET_EXTENSION])
 
 path = os.path.abspath(sys.argv[1])
+
+if (len(sys.argv) == 3):
+    FOLDER = sys.argv[2]
+
 sppath = path.split('/')
 project_name = (sppath[-1] if sppath[-1] != '' else sppath[-2])
-outfolder = os.path.abspath('outputs/'+project_name)
+outfolder = os.path.abspath(os.path.join(FOLDER,project_name))
 
 def init(path):
     # This function builds the project and in that process gets the make log file

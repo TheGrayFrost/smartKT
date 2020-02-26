@@ -377,7 +377,10 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
     };
 
     const char * propKind;
-    if (cursorKind == CXCursor_CXXBaseSpecifier) propKind = "inheritance_kind";
+    if (cursorKind == CXCursor_CXXBaseSpecifier) {
+        propKind = "inheritance_kind";
+        if (clang_isVirtualBase(cursor)) xmlNewProp(cur_ptr, BAD_CAST "isVirtualBase", BAD_CAST "True");
+    }
     else propKind = "access_specifier";
 
     if( ac_spec_str != nullptr ) {
