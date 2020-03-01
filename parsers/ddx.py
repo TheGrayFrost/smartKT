@@ -22,6 +22,7 @@ dwarfxml_filename = fstrip + sys.argv[3]
 clangxml_filename = fstrip + sys.argv[4]
 combined_filename = fstrip + sys.argv[5]
 outemits_filename = fstrip + sys.argv[6]
+outemits_file = None
 
 dtree = ET.parse(dwarfxml_filename)
 droot = dtree.getroot()
@@ -33,18 +34,24 @@ ddtype = dict()	# dictioary of type sizes
 ddref = dict() 	# mapping from ELF byte offset to corresponding DIEs' XML nodes
 dtree_hashmap = defaultdict(list)
 
+dd_subprogram_map = dict() # map from DWARF node to lowest DW_TAG_subprogram ancestor
 
 Functions = {'FunctionDecl','CXXMethod','CXXConstructor','CXXDestructor'}
 Types = {'EnumDecl', 'StructDecl', 'ClassDecl'}
 Variables = {'VarDecl', 'FieldDecl', 'ParmDecl'}
+Variable_DIEs = {"DW_TAG_variable", "DW_TAG_formal_parameter"}
 All = (Types | Variables | Functions)
 
-def TraverseDtree(dnode, filetable): # collect all pokemon in dtree
+def TraverseDtree(dnode, filetable = [None], subprogram_node = None): # collect all pokemon in dtree
 	if 'offset' in dnode.attrib :
 		ddref[int(dnode.attrib['offset'])] = dnode
 	if dnode.tag == 'DW_TAG_compile_unit' :
 		sources = dnode.find('sources')
 		filetable = [None] + [entry.attrib['file'] for entry in sources]
+	if dnode.tag == 'DW_TAG_subprogram' :
+		subprogram_node = dnode
+	if dnode.tag in Variable_DIEs :
+		dd_subprogram_map[ dnode ] = subprogram_node
 	if all('DW_AT_decl_'+x in dnode.attrib for x in ('file', 'line', 'column')):
 		# covers everything except enum const, which are not needed anyway
 		node_hash = (filetable[ int(dnode.attrib['DW_AT_decl_file']) ],
@@ -54,7 +61,7 @@ def TraverseDtree(dnode, filetable): # collect all pokemon in dtree
 	if 'DW_AT_byte_size' in dnode.attrib:
 		ddtype[int(dnode.attrib['offset'])] = dnode.attrib['DW_AT_byte_size']
 	for child in dnode:
-		TraverseDtree(child, filetable)
+		TraverseDtree(child, filetable, subprogram_node)
 
 def try_getting_size_info(dnode) :
 	if 'DW_AT_byte_size' in dnode.attrib :
@@ -64,14 +71,14 @@ def try_getting_size_info(dnode) :
 		ref_dnode = ddref[ ref_offset ] if ref_offset in ddref else None
 		if ref_dnode is not None :
 			ret = try_getting_size_info(ref_dnode)
-			if ret != -1 : return ret
+			if ret is not None : return ret
 	if 'DW_AT_specification' in dnode.attrib :
 		ref_offset = int(dnode.attrib['DW_AT_specification'])
 		ref_dnode = ddref[ ref_offset ] if ref_offset in ddref else None
 		if ref_dnode is not None :
 			ret = try_getting_size_info(ref_dnode)
-			if ret != -1 : return ret
-	return -1
+			if ret is not None : return ret
+	return None
 
 def patch_offset(cnode, dnode):
 	if 'DW_AT_location' in dnode.attrib:
@@ -91,7 +98,7 @@ def patch_offset(cnode, dnode):
 
 def patch_size(cnode, dnode):
 	type_size = try_getting_size_info(dnode)
-	if type_size != -1 :
+	if type_size is not None :
 		cnode.set('size', type_size)
 	elif DEBUG:
 		print ('SIZE NOT FOUND: ', cnode.attrib['spelling'], dnode.attrib)
@@ -119,6 +126,7 @@ def UpdateCtree (cnode, filename=None, lineno=None, colno=None):
 		lineno = int(cnode.attrib['line'])
 	if 'col' in cnode.attrib :
 		colno = int(cnode.attrib['col'])
+
 	if cnode.tag in All:
 		cloc = (filename, lineno, colno)
 		if all(cloc) :
@@ -136,8 +144,52 @@ def UpdateCtree (cnode, filename=None, lineno=None, colno=None):
 					patch_mangled(cnode, match)
 			elif DEBUG and 'usr' in cnode.attrib:
 				print ('MATCH NOT FOUND ', cloc, cnode.tag, cnode.attrib['usr'])
+
+	if cnode.tag in ("VarDecl", "ParmDecl") and all(cloc) :
+		if cloc in dtree_hashmap :
+			for match in dtree_hashmap[cloc] :
+				emit_auto_variable_data(filename, cnode, match)
+
 	for child in cnode:
 		UpdateCtree(child,filename,lineno,colno)
+
+
+def emit_auto_variable_data(filename, cnode, dnode) :
+	parnode = dd_subprogram_map[ dnode ] if dnode in dd_subprogram_map else None
+	if parnode is None : return
+
+	funcname, var_offset, var_name, var_type, type_size = None, None, None, None, None
+
+	if "DW_AT_linkage_name" in parnode.attrib :
+		funcname = parnode.attrib["DW_AT_linkage_name"]
+	elif "DW_AT_specification" in parnode.attrib :
+		snode = ddref[ int(parnode.attrib["DW_AT_specification"]) ]
+		if "DW_AT_linkage_name" in snode.attrib :
+			funcname = snode.attrib["DW_AT_linkage_name"]
+		elif "DW_AT_name" in snode.attrib :
+			funcname = snode.attrib["DW_AT_name"]
+	elif "DW_AT_name" in parnode.attrib :
+		funcname = parnode.attrib["DW_AT_name"]
+
+	if "DW_AT_location" in dnode.attrib :
+		vloc = dnode.attrib["DW_AT_location"][1:-1].split()
+		if 'DW_OP_fbreg' in vloc[0] :
+			var_offset = abs( int(vloc[1]) + 16 )
+
+	if "DW_AT_name" in dnode.attrib :
+		var_name = dnode.attrib["DW_AT_name"]
+
+	var_type = cnode.attrib["type"] if "type" in cnode.attrib else None
+	type_size = try_getting_size_info(dnode)
+	var_id = cnode.attrib["id"] if "id" in cnode.attrib else None
+
+	# if not any((funcname, var_offset, var_name, var_type, type_size, var_id)) and DEBUG :
+	# 	print("><>>", cnode.tag, cnode.attrib, dnode.tag, dnode.attrib,
+	# 		parnode.tag, parnode.attrib, '\n', file = sys.stderr)
+
+	print(filename, funcname, var_offset, var_name,
+		var_id, var_type, type_size, sep='\t', file=outemits_file)
+
 
 # generates string representation of given variable node for linkage with PIN later
 def helper(var, var_class, var_container = None):
@@ -247,8 +299,11 @@ def generate_var(croot):
 					f.write(s)
 	# Offset
 
-TraverseDtree(droot, [None])
-UpdateCtree(croot)
+TraverseDtree(droot)
+
+with open(outemits_filename, 'w') as outemits_file :
+	print('# FILENAME\tFUNCTION\tOFFSET\tVARNAME\tVARID\tVARTYPE\tVARSIZE', file=outemits_file)
+	UpdateCtree(croot)
 
 # write out updated xml
 xmlstr = minidom.parseString(ET.tostring(croot)).toprettyxml(indent='   ')
@@ -256,4 +311,5 @@ with open(combined_filename, 'w') as f:
 	f.write(xmlstr)
 
 # write out updated address/offset file
-generate_var(croot)
+if not offset :
+	generate_var(croot)

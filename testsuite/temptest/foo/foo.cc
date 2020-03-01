@@ -23,6 +23,8 @@ namespace Foo {
 
   template<typename T1, typename T2>
   bool tfun(T1 targ_x, T2 targ_y) {
+    int local_x = targ_x + targ_y;
+    if( local_x == -8 ) return false;
     return targ_x < targ_y;
   }
 
