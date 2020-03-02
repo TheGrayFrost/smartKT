@@ -1,5 +1,19 @@
 #include <clang-c/Index.h>
 #include <iostream>
+#include <vector>
+#include <unordered_set>
+
+
+bool operator==(const CXCursor & x, const CXCursor & y) {
+    return clang_equalCursors(x, y) != 0;
+}
+
+template<> struct std::hash<CXCursor> {
+    size_t operator()(const CXCursor & cursor) const
+    { return (size_t) clang_hashCursor(cursor); }
+};
+
+std::unordered_set< CXCursor > emitted_functions;
 
 #define FILEHEADER "# FILENAME\tFUNCNODEID\tFUNCNAME\tNARGS\tARGTYPE*\tRETTYPE\n"
 # define IDSIZE 11   // normal unsigned int has 10 digits.. we are padding with one extra zero
@@ -18,9 +32,8 @@ std::string makeUniqueID (unsigned id)
 void emit_function_info
 (CXCursor cursor, CXCursorKind cursorKind) {
 
-  /* Emit source location. */
-  CXCursor refc = clang_getCursorReferenced(cursor);
-  if( !clang_Cursor_isNull(refc) ) {
+    if( !emitted_functions.insert( cursor ).second )
+        return;
 
     CXSourceLocation location = clang_getCursorLocation( cursor );
     CXFile file;
@@ -34,13 +47,13 @@ void emit_function_info
 
     /* Emit generic function data. */
     // CXString usr = clang_getCursorUSR(refc);
-    CXString mangling = clang_Cursor_getMangling(refc);
-  
+    CXString mangling = clang_Cursor_getMangling( cursor );
+
     // CXString spelling = clang_getCursorSpelling(cursor);
     CXType cursor_type = clang_getCursorType( cursor );
 
     CXString result_type = clang_getTypeSpelling(
-      clang_getResultType( cursor_type ));
+        clang_getResultType( cursor_type ));
 
     // Pretty printed function signature with arguments.
     // CXString display_name = clang_getCursorDisplayName(cursor);
@@ -57,17 +70,19 @@ void emit_function_info
     int nargs = clang_Cursor_getNumArguments(cursor);
     std::cout << delim << nargs;
     for( int i = 0; i < nargs; i++ ) {
-      CXCursor arg_cursor = clang_Cursor_getArgument(cursor, i);
-      // CXString arg_spelling = clang_getCursorSpelling(arg_cursor);
-      CXType arg_type = clang_getCursorType(arg_cursor);
-      CXString arg_type_spelling = clang_getTypeSpelling(arg_type);
-      std::cout << delim << clang_getCString(arg_type_spelling) ;
+        CXCursor arg_cursor = clang_Cursor_getArgument(cursor, i);
+        // CXString arg_spelling = clang_getCursorSpelling(arg_cursor);
+        CXType arg_type = clang_getCursorType(arg_cursor);
+        CXString arg_type_spelling = clang_getTypeSpelling(arg_type);
+        std::cout << delim << clang_getCString(arg_type_spelling) ;
                 // << " "  << clang_getCString(arg_spelling);
-      clang_disposeString(arg_type_spelling);
-      // clang_disposeString(arg_spelling);
+        clang_disposeString(arg_type_spelling);
+        // clang_disposeString(arg_spelling);
     }
 
     std::cout << delim << clang_getCString(result_type);
+
+    std::cout << "\n";
 
     /* C++ class/struct method declaration metadata. */
     // if( cursorKind == CXCursor_CXXMethod ) {
@@ -99,35 +114,39 @@ void emit_function_info
     clang_disposeString(mangling);
     // clang_disposeString(spelling);
     // clang_disposeString(usr);
-  }
 }
 
 
 CXChildVisitResult get_function_info
 (CXCursor cursor, CXCursor parent, CXClientData) {
-  CXCursorKind cursorKind = clang_getCursorKind(cursor);
 
-  if( clang_isDeclaration(cursorKind) &&
-      clang_equalCursors(cursor, clang_getCanonicalCursor(cursor)) ) {
-      CXString kindName = clang_getCursorKindSpelling(cursorKind);
+    std::vector< CXCursor > cursors{};
 
-      switch(cursorKind) {
-        // case CXCursor_FunctionTemplate :
-        case CXCursor_Constructor :
-        case CXCursor_Destructor :
-        case CXCursor_CXXMethod :
-        case CXCursor_FunctionDecl :
-          // std::cout << clang_getCString(kindName);
-          emit_function_info(cursor, cursorKind);
-          std::cout << "\n";
-        default: ;
-      }
+    if( !clang_Cursor_isNull(cursor) ) {
+        cursors.push_back(cursor);
+    }
+    CXCursor refc = clang_getCursorReferenced(cursor);
+    if( (!clang_Cursor_isNull(refc)) && (!clang_equalCursors(cursor, refc)) ) {
+        cursors.push_back(refc);
+    }
 
-      clang_disposeString(kindName);
-  }
 
-  clang_visitChildren(cursor, get_function_info, nullptr);
-  return CXChildVisit_Continue;
+    for(CXCursor csr: cursors) {
+        CXCursorKind ck = clang_getCursorKind(csr);
+        switch(ck) {
+            case CXCursor_Constructor :
+            case CXCursor_Destructor :
+            case CXCursor_CXXMethod :
+            case CXCursor_FunctionDecl :
+
+                emit_function_info(csr, ck);
+            default: ;
+        }
+
+    }
+
+    clang_visitChildren(cursor, get_function_info, nullptr);
+    return CXChildVisit_Continue;
 }
 
 

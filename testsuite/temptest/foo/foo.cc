@@ -28,6 +28,10 @@ namespace Foo {
     return targ_x < targ_y;
   }
 
+  template<> bool tfun<float, float>(float, float);
+  template<> bool tfun<float, float>(float, float);
+  template<> bool tfun<float, float>(float, float);
+
   // template<int, typename T2>
   // bool tfun(int targx, T2 targy) {
   //   return targx == targy;
@@ -36,6 +40,9 @@ namespace Foo {
   template<> bool tfun<float, float>(float x, float y) {
   	return x > y;
   }
+
+  template<> bool tfun<float, float>(float, float);
+  template<> bool tfun<float, float>(float, float);
 
   week day;
   A r;
