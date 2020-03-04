@@ -1,8 +1,7 @@
 #include <clang-c/Index.h>
 #include <iostream>
+#include <sstream>
 #include <unordered_set>
-
-#include <cassert>
 
 #include <libxml/parser.h>
 #include <libxml/tree.h>
@@ -96,8 +95,43 @@ std::string cursorInspect (CXCursor& cursor) {
   return clause;
 }
 
+
+void add_function_information(CXCursor cursor, xmlNodePtr cur_ptr) {
+    /* Emit generic function data. */
+    CXString linkage_name = clang_Cursor_getMangling( cursor );
+    xmlNewProp(cur_ptr, BAD_CAST "linkage_name", BAD_CAST clang_getCString(linkage_name));
+    clang_disposeString(linkage_name);
+
+    CXType cursor_type = clang_getCursorType( cursor );
+    CXString result_type = clang_getTypeSpelling(clang_getResultType( cursor_type ));
+    xmlNewProp(cur_ptr, BAD_CAST "result_type", BAD_CAST clang_getCString(result_type));
+    clang_disposeString(result_type);
+
+    // Names of individual argument types included in display_name.
+    int nargs = clang_Cursor_getNumArguments(cursor);
+    std::stringstream argstream;
+    for( int i = 0; i < nargs; i++) {
+        CXCursor arg_cursor = clang_Cursor_getArgument(cursor, i);
+        CXType arg_type = clang_getCursorType(arg_cursor);
+        CXString arg_type_spelling = clang_getTypeSpelling(arg_type);
+        argstream << (i==0 ? "" : ",") << clang_getCString(arg_type_spelling) ;
+        clang_disposeString(arg_type_spelling);
+    }
+
+    xmlNewProp(cur_ptr, BAD_CAST "funcargs", BAD_CAST argstream.str().c_str());
+}
+
 void add_information(CXCursor cursor, xmlNodePtr cur_ptr) {
   CXCursorKind cursorKind = clang_getCursorKind(cursor);
+
+  switch(cursorKind) {
+    case CXCursor_Constructor :
+    case CXCursor_Destructor :
+    case CXCursor_CXXMethod :
+    case CXCursor_FunctionDecl :
+      add_function_information(cursor, cur_ptr);
+    default: ;
+  }
 
   CXSourceLocation location = clang_getCursorLocation( cursor );
 
@@ -466,8 +500,6 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
 
                 xmlNodePtr stub_ptr = xmlNewChild(stub_root_node, nullptr,
                     BAD_CAST camelCaseSanitize(stubNodeName).c_str(), nullptr);
-
-                // xmlNewProp(stub_ptr, BAD_CAST "id", BAD_CAST refnodeid.c_str());
 
                 add_information(refc, stub_ptr);
 

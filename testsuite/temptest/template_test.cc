@@ -42,7 +42,7 @@ int main(int argc, char** argv)
 //   cout << local_q.foo() << endl;
 
   if( local_p.member_method(2) ) {
-    // cout << local_p.tvar << endl;
+    local_p.svar = 5;
   }
 
   Dummy<float, int> isThis(3.0, 4);
