@@ -32,7 +32,7 @@ template<> struct std::hash<CXCursor>
     }
 };
 
-std::unordered_set< CXCursor > stubs_seen;
+std::unordered_set< CXCursor > cursors_seen, stubs_seen;
 
 xmlDocPtr doc = nullptr;
 xmlNodePtr root_node = nullptr, stub_root_node = nullptr;
@@ -103,9 +103,9 @@ void add_function_information(CXCursor cursor, xmlNodePtr cur_ptr) {
     clang_disposeString(linkage_name);
 
     CXType cursor_type = clang_getCursorType( cursor );
-    CXString result_type = clang_getTypeSpelling(clang_getResultType( cursor_type ));
-    xmlNewProp(cur_ptr, BAD_CAST "result_type", BAD_CAST clang_getCString(result_type));
-    clang_disposeString(result_type);
+    CXString return_type = clang_getTypeSpelling(clang_getResultType( cursor_type ));
+    xmlNewProp(cur_ptr, BAD_CAST "return_type", BAD_CAST clang_getCString(return_type));
+    clang_disposeString(return_type);
 
     // Names of individual argument types included in display_name.
     int nargs = clang_Cursor_getNumArguments(cursor);
@@ -449,6 +449,10 @@ CXChildVisitResult
 visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
   auto parentData = (reinterpret_cast<trav_data_t*>(clientData));
 
+  if( !cursors_seen.insert( cursor ).second ) {
+    return CXChildVisit_Continue;
+  }
+
   CXCursorKind cursorKind = clang_getCursorKind(cursor);
   CXString kindName = clang_getCursorKindSpelling(cursorKind);
   std::string xmlNodeName(clang_getCString(kindName));
@@ -468,11 +472,8 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
         (!clang_equalCursors(cursor, defc)) ) {
       std::string defnodeid = makeUniqueID(clang_hashCursor(defc));
       xmlNewProp(cur_ptr, BAD_CAST "def_id", BAD_CAST defnodeid.c_str());
-      // CXString usr = clang_getCursorUSR(defc);
-      // const char * usr_cstr = clang_getCString(usr);
-      // if( std::strlen(usr_cstr) > 0 )
-      //   xmlNewProp(cur_ptr, BAD_CAST "def_usr", BAD_CAST usr_cstr);
-      // clang_disposeString( usr );
+
+      stubs_seen.insert(defc);
     }
    
     // Otherwise, get referenced cursor
@@ -482,32 +483,8 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
           (!clang_equalCursors(cursor, refc)) ) {
         std::string refnodeid = makeUniqueID(clang_hashCursor(refc));
         xmlNewProp(cur_ptr, BAD_CAST "ref_id", BAD_CAST refnodeid.c_str());
-        // CXString usr = clang_getCursorUSR(refc);
-        // const char * usr_cstr = clang_getCString(usr);
-        // if( std::strlen(usr_cstr) > 0 )
-        //   xmlNewProp(cur_ptr, BAD_CAST "ref_usr", BAD_CAST usr_cstr);
-        // clang_disposeString( usr );
 
-        CXCursor spt = clang_getSpecializedCursorTemplate(refc);
-        if( ! clang_Cursor_isNull(spt) ) {
-            // set cursor id
-            if( stubs_seen.insert(refc).second ) {
-                CXCursorKind stubCursorKind = clang_getCursorKind(refc);
-                CXString stubKindName = clang_getCursorKindSpelling(stubCursorKind);
-                std::string stubNodeName(clang_getCString(stubKindName));
-
-                // visitor(refc, cursor, nullptr);
-
-                xmlNodePtr stub_ptr = xmlNewChild(stub_root_node, nullptr,
-                    BAD_CAST camelCaseSanitize(stubNodeName).c_str(), nullptr);
-
-                add_information(refc, stub_ptr);
-
-                std::string tempnodeid = makeUniqueID(clang_hashCursor(spt));
-                xmlNewProp(stub_ptr, BAD_CAST "ref_tmp", BAD_CAST tempnodeid.c_str());
-            }
-        }
-
+        stubs_seen.insert(refc);
       }
     }
   }
@@ -517,6 +494,42 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
   clang_visitChildren( cursor, visitor, &nodeData );
 
   return CXChildVisit_Continue;
+}
+
+void add_stub_nodes() {
+    for( CXCursor stub: stubs_seen ) {
+        if( cursors_seen.find(stub) != cursors_seen.end() )
+            continue;
+
+        CXCursorKind stubCursorKind = clang_getCursorKind(stub);
+        CXString stubKindName = clang_getCursorKindSpelling(stubCursorKind);
+        std::string stubNodeName(clang_getCString(stubKindName));
+
+        xmlNodePtr stub_ptr = xmlNewChild(stub_root_node, nullptr,
+            BAD_CAST camelCaseSanitize(stubNodeName).c_str(), nullptr);
+
+        add_information(stub, stub_ptr);
+
+        CXCursor defc = clang_getCursorDefinition(stub);
+        if( (!clang_Cursor_isNull(defc)) &&
+            (!clang_equalCursors(stub, defc)) ) {
+            std::string defnodeid = makeUniqueID(clang_hashCursor(defc));
+            xmlNewProp(stub_ptr, BAD_CAST "def_id", BAD_CAST defnodeid.c_str());
+        } else {
+           CXCursor refc = clang_getCursorReferenced(stub);
+           if( (!clang_Cursor_isNull(refc)) &&
+                (!clang_equalCursors(stub, refc)) ) {
+                std::string refnodeid = makeUniqueID(clang_hashCursor(refc));
+                xmlNewProp(stub_ptr, BAD_CAST "ref_id", BAD_CAST refnodeid.c_str());
+            }
+        }
+
+        CXCursor spt = clang_getSpecializedCursorTemplate(stub);
+        if( ! clang_Cursor_isNull(spt) ) {
+            std::string tempnodeid = makeUniqueID(clang_hashCursor(spt));
+            xmlNewProp(stub_ptr, BAD_CAST "ref_tmp", BAD_CAST tempnodeid.c_str());
+        }
+    }
 }
 
 int main( int argc, char** argv ) {
@@ -555,6 +568,7 @@ int main( int argc, char** argv ) {
   trav_data_t root_data{clang_getNullLocation(), root_node};
 
   clang_visitChildren(rootCursor, visitor, &root_data);
+  add_stub_nodes();
 
   /* Dump document to stdio or redirect to file */
   xmlSaveFormatFileEnc("-", doc, "UTF-8", 1);

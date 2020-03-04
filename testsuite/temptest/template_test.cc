@@ -2,6 +2,7 @@
 // #include <iostream>
 // #include <complex>
 // using namespace std;
+#include <cstdio>
 
 template<typename V>
 V fun(V arg_value) {
@@ -9,11 +10,14 @@ V fun(V arg_value) {
 }
 
 // typedef complex<int> CXI;
+int not_a_template = 42;
 
 template<class S, class T>
 struct Dummy {
   S svar;
   T tvar;
+  int ivar;
+
   Dummy(S s, T t) : svar(s), tvar(t) { } ;
   auto foo() {
     return fun<S>(svar) + fun<T>(tvar);
@@ -43,10 +47,12 @@ int main(int argc, char** argv)
 
   if( local_p.member_method(2) ) {
     local_p.svar = 5;
+    local_p.ivar = 3;
   }
 
   Dummy<float, int> isThis(3.0, 4);
   isThis.reality();
+  not_a_template = 43;
 
   return 0;
 }
