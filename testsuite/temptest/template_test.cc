@@ -28,6 +28,8 @@ struct Dummy {
     }
     return false;
   }
+
+  virtual void reality() { };
 };
 
 int main(int argc, char** argv)
@@ -42,6 +44,9 @@ int main(int argc, char** argv)
   if( local_p.member_method(2) ) {
     // cout << local_p.tvar << endl;
   }
+
+  Dummy<float, int> isThis(3.0, 4);
+  isThis.reality();
 
   return 0;
 }
