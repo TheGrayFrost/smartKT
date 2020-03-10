@@ -87,7 +87,8 @@ def try_getting_var_location(dnode) :
 		if address and 'DW_OP_addr' in m[0]:
 			return ('address', str(m[1]))
 		elif offset and 'DW_OP_fbreg' in m[0]:
-			return ('offset', str(abs(int(m[1]) + 16)))
+			return ('offset', hex(abs(int(m[1].strip(';')) + 16)))
+		return None
 	elif 'DW_AT_data_member_location' in dnode.attrib:
 		return ('offset', dnode.attrib['DW_AT_data_member_location'])
 	return None
