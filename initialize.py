@@ -9,9 +9,12 @@ from xml.etree.ElementTree import Element, SubElement
 from xml.etree import ElementTree as ET
 from xml.dom import minidom
 
+from concurrent.futures import ThreadPoolExecutor
 from parsers.funcs import emit_funcargs
 
 DEBUG = False
+
+MAX_WORKERS = 8
 
 # input files and extensions
 C_EXTENSION = ['c', 'C']
@@ -80,7 +83,9 @@ def generate_static_info(path):
     with open(os.path.join(outfolder, 'compile_commands.json'), "r") as f:
         instrs = eval(f.read())
 
-    for num, instr in enumerate(instrs, 1):
+    # for num, instr in enumerate(instrs, 1):
+    def generate_static_info_for_tu(arg) :
+        num, instr = arg
         f = instr['file']
         mainfname = f[f.rfind('/')+1:f.rfind('.')]
         relpath = f[len(path)+1:]
@@ -94,9 +99,11 @@ def generate_static_info(path):
 
         if not (relpath.split('.')[-1] in C_EXTENSION or relpath.split('.')[-1] in CXX_EXTENSION):
             print('\n(%2d/%2d): Ommiting info (non C/C++) for '%(num, len(instrs)) + relpath)
-            continue
+            return # continue
 
-        print ('\n(%2d/%2d): Generating info for '%(num, len(instrs)) + relpath)
+        print ('\n(%2d/%2d): Generating info for ' % (num, len(instrs)) + relpath + '\n', end='')
+
+        logstr = '\n(%2d/%2d): Generated info for ' % (num, len(instrs)) + relpath + '\n'
 
         try:
             # Select clang/Clang++ based on whether it is C/C++
@@ -123,34 +130,40 @@ def generate_static_info(path):
             for clangexe, output_extension in zip(CLANGTOOLS, CLANG_OUTPUTEXT):
                 os.system (' '.join(['parsers/'+clangexe, str(num), 
                     mainfname+'.ast', '>', stripop + output_extension]))
-                print ('output :', stripop + output_extension)
+                logstr += ('output :' + stripop + output_extension + '\n')
 
             emit_funcargs(stripop + CLANG_EXTENSION, stripop + SIGN_EXTENSION)
-            print('output :', stripop + SIGN_EXTENSION)
+            logstr += ('output :' + stripop + output_extension + '\n')
 
             # Move the ast into outputs
             os.system ('mv ' + mainfname + '.ast ' + outpath)
-
-            print ('Clang output generated')
+            logstr += ('Clang output generated ' + outpath + '\n')
 
         except Exception as e:
-            print(e)
-            continue
+            print('\n'.join([relpath, logstr, e]), end='', file=sys.stderr)
+            return # continue
 
         # direct object file parsing
         try:
             # generate dwarfdump for corresponding object file
-            # print('parsers/' + DWARFTOOL + ' ' + objectfile + ' -q -o ' + stripop + DWARF_EXTENSION)
             os.system('parsers/' + DWARFTOOL + ' ' + objectfile + ' -q -o ' + stripop + DWARF_EXTENSION)
-            print ('Dwarfdump Generated')
+            logstr += ('Dwarfdump Generated : parsers/' + DWARFTOOL + ' ' +
+                objectfile + ' -q -o ' + stripop + DWARF_EXTENSION)
+            # print ('Dwarfdump Generated')
 
             # combine dwarfdump and clang and get offset file
-            # print('parsers/' + COMBINER + ' ' + stripop + ' OFFSET ' + COMB_OUTPUTEXT)
             os.system('parsers/' + COMBINER + ' ' + stripop + ' OFFSET ' + COMB_OUTPUTEXT)
-            print ('Information combined')
+            logstr += ('Information combined : parsers/' + COMBINER + ' ' +
+                stripop + ' OFFSET ' + COMB_OUTPUTEXT + '\n')
+            # print ('Information combined')
         except Exception as e:
-            print(e)
-            continue
+            print('\n'.join([relpath, logstr, e]), end='', file=sys.stderr)
+            return # continue
+        print('\n'.join([relpath, logstr]), end='')
+
+    with ThreadPoolExecutor(max_workers = MAX_WORKERS) as pool :
+        pool.map( generate_static_info_for_tu, enumerate(instrs, 1) )
+
 
 if not os.listdir(os.path.join("parsers", "pyelftools")):
     os.system("cd parsers && git clone https://github.com/eliben/pyelftools.git")
