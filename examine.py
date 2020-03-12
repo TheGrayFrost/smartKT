@@ -2,7 +2,7 @@
 
 # Before you can use, specify the details in config.txt file
 # To use:
-# python examine.py <clean/retain> <project_name> <vocab_file> <problem_domain_file> <path_to_executable> {path_to_input_file}
+# python examine.py <exec_json_file> <clean/retain> {<vocab> <prob_dom>} 
 
 
 '''
@@ -16,7 +16,7 @@ from xml.etree.ElementTree import Element, SubElement
 from xml.etree import ElementTree as ET
 from xml.dom import minidom
 from collections import defaultdict
-
+import json
 
 
 import parsers.imp_ddx as ddx
@@ -42,31 +42,43 @@ DYNAMIC_EXTENSION = '_dynamic.xml'
 
 CALLDYN = True
 CALLCOMM = False
+CALLVCS = False
 
-executable = os.path.abspath(sys.argv[1])
-test_input = None
-n = 2
 if CALLCOMM:
-    n = 4
-    vocab_file = sys.argv[2]
-    problem_domain_file = sys.argv[3]
-if len(sys.argv) > n:
-    test_input = sys.argv[n]
-
-execstrip = executable[executable.rfind('/')+1:]
-origpath = executable[:executable.rfind('build/')-1]
-project_name = origpath[origpath.rfind('/')+1:]
-outfolder = os.path.abspath('outputs/'+project_name)
-foutfolder = os.path.join(outfolder,'exe_'+execstrip)
-os.system('mkdir ' + foutfolder)
-
-# print(' '.join(['parsers/' + PROJPARSER, os.path.join(outfolder, 'make_log.txt'),
-#                     os.path.join(origpath, 'build'), os.path.join(outfolder, 'dependencies.p')]))
-os.system(' '.join(['parsers/' + PROJPARSER, os.path.join(outfolder, 'make_log.txt'),
-                    os.path.join(origpath, 'build'), os.path.join(outfolder, 'dependencies.p')]))
-dependencies = pickle.load(open(os.path.join(outfolder, 'dependencies.p'), 'rb'))
+    vocab_file = sys.argv[3]
+    problem_domain_file = sys.argv[4]
 
 
+# Rewriting to be able to run multiple tests simultaneously
+executable, test_input, execstrip = None, None, None
+origpath, project_name, outfolder = None, None, None
+foutfolder, dependencies = None, None
+
+
+# A few dicts to help optimize data redundancy
+visited = {}
+mappedID = {}
+
+def prune(node, parentNode):
+    global visited, mappedID
+    if 'range.start' in node.attrib and 'range.end' in node.attrib and 'file' in node.attrib:
+        if (node.attrib['file'], node.attrib['range.start'], node.attrib['range.end']) in  visited:
+            # We've seen this node. So just update mappedIDs recursively and remove then current node 
+            mappedID[node.attrib['id']] = visited[(node.attrib['file'], node.attrib['range.start'], node.attrib['range.end'])]['id']
+            for child in node.getchildren():
+                prune(child, node)
+            parentNode.remove(node)
+    else:
+        # Try and update as many values as you can find from the mappedID
+        for x in ['def_id', 'ref_id', 'lex_parent_id', 'sem_parent_id', 'ref_tmp']:
+            if x in node.attrib and node.attrib[x] in mappedID:
+                node.set(x, mappedID[node.attrib[x]])
+        # We've not seen this node before. So add it to visited and update the mappedID
+        if 'range.start' in node.attrib and 'range.end' in node.attrib and 'file' in node.attrib:
+            mappedID[node.attrib['id']] = node.attrib['id']
+            visited[(node.attrib['file'], node.attrib['range.start'], node.attrib['range.end'])] = True
+        for child in node.getchildren():
+            prune(child, node)
 
 def combine_all_clang(depmap):
     CURFINALFILE = os.path.join(foutfolder, FINAL_FILE)
@@ -83,11 +95,10 @@ def combine_all_clang(depmap):
         exenamestrip = exe[exe.rfind('/')+1:]
         exeoutfolder = os.path.join(foutfolder, exenamestrip)
         exestrip = os.path.join(exeoutfolder, exenamestrip)
-        os.system('mkdir ' + exeoutfolder)
+        os.system('mkdir -p ' + exeoutfolder)
         print ('\nGenerating info for ' + exenamestrip)
 
         # generate dwarfdump and its xml for the so or the main executable
-        # print('parsers/'+DWARFTOOL+' '+exe+' -q -o '+exestrip+DWARF_EXTENSION)
         os.system('parsers/'+DWARFTOOL+' '+exe+' -q -o '+exestrip+DWARF_EXTENSION)
         print ('Created dwarfdump for ' + exenamestrip)
 
@@ -126,8 +137,9 @@ def combine_all_clang(depmap):
             stree = ET.parse(combstrip + COMB_EXTENSION)
             sroot = stree.getroot()
             ddx.UpdateCtree (sroot)
+            prune(sroot, None)
             root.append(sroot)
-        
+
         # link the addresses into the executables and emit the address files
         print ('Combined static info for ' + exenamestrip)
 
@@ -140,10 +152,7 @@ def combine_all_clang(depmap):
         ddx.generate_var(root, exestrip+ADDRESS_EXTENSION)
 
         rootlist.append(root)
-        
-        # COMBINE_OUTEXT = ' '.join([DWARF_EXTENSION, TEMP_EXTENSION, COMB_EXTENSION, ADDRESS_EXTENSION])
-        # print('parsers/'+COMBINER+' '+exestrip+' ADDRESS '+COMBINE_OUTEXT)
-        # os.system('parsers/'+COMBINER+' '+exestrip+' ADDRESS '+COMBINE_OUTEXT)
+
         os.system('cp ' + exestrip + ADDRESS_EXTENSION + ' ' + foutfolder+'/')
         print ('Generated addresses for ' + exenamestrip)
         
@@ -153,11 +162,10 @@ def combine_all_clang(depmap):
     with open(CURFINALFILE + STATIC_EXTENSION, 'w') as f:
         f.write(finalxmlstr)
     print ('\nWritten interlinked combined clang for ' + executable)
-    # # combine address patched xmls into one final static xml
-    # os.system('cat ' + exestrip + COMB_EXTENSION + ' >> ' + CURFINALFILE + STATIC_EXTENSION)
+
         
 def generate_static_info():
-    print('Starting Static!')
+    print('Starting Static: '+ executable)
 
     # This function extract the dependencies of the binary under study, and
     # recursively finds out the list of source files responsible for this executable
@@ -165,6 +173,7 @@ def generate_static_info():
     
     # get list of all cpp's forming this executable
     ls = dict()
+
     def add_loaded_binaries(path):
         ls[path] = get_rec_deps(path)
 
@@ -196,7 +205,7 @@ def generate_static_info():
         exit()
     combine_all_clang(orderls)
 
-def generate_dynamic_info(path, test=None):
+def generate_dynamic_info(path, test, inputNum, runNum):
     # Add dynamic_information to the combined static XML
     global project_name
     print('Starting Dynamic!')
@@ -261,14 +270,42 @@ def collect_results(project_name, executable):
         os.system('cp final_universal.xml ' + colpath) 
     print ('Information collected in: ', colpath)
 
-# generate_static_info()
 
-if CALLDYN:
-    dynamic_file = generate_dynamic_info(executable, test_input)
+runs = json.loads(open(sys.argv[1], "r").read())
+
+for exe in runs:
+    executable = os.path.abspath(exe)
+    execstrip = executable[executable.rfind('/')+1:]
+    origpath = executable[:executable.rfind('build/')-1]
+    project_name = origpath[origpath.rfind('/')+1:]
+    outfolder = os.path.abspath('outputs/'+project_name)
+    foutfolder = os.path.join(outfolder,'exe_'+execstrip)
+    os.system('mkdir -p ' + foutfolder)
+
+    # Parse dependencies
+    os.system(' '.join(['parsers/' + PROJPARSER, os.path.join(outfolder, 'make_log.txt'),
+                    os.path.join(origpath, 'build'), os.path.join(outfolder, 'dependencies.p')]))
+    dependencies = pickle.load(open(os.path.join(outfolder, 'dependencies.p'), 'rb'))
+
+    generate_static_info()
+    inputNum  = 0
+    for ti in runs[exe]:
+        test_input = os.path.abspath(ti)
+        for i in range(runs[exe][ti]):
+            if CALLDYN:
+                if len(ti) > 0:
+                    generate_dynamic_info(executable, test_input, inputNum, i)
+                else:
+                    generate_dynamic_info(executable, None, inputNum, i)
+        inputNum += 1
 if CALLCOMM:
     comments_file = generate_comments_info(project_name, vocab_file, problem_domain_file)
-# if isClean:
-#     vcs_file = generate_vcs_info(project_name)
+
+# if CALLVCS:
+#     isClean = (sys.argv[1] == "clean")
+#     if isClean:
+#         vcs_file = generate_vcs_info(project_name)
+
 # collect_results(project_name, executable)
 
 # start_website()
