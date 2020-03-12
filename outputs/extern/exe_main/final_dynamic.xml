@@ -1,0 +1,30 @@
+<DYNAMICROOT id="-1">
+   <CALL ARGS="NONE" CALLEENAME="_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt" CALLERNAME="_Z1fv" INVNO="1" STATICCALL="[ 103048778022 std :: cout &lt;&lt; &quot;In f():\n&quot; ]" THREADID="0" id="1"/>
+   <IO FUNCNAME="_Z1fv" INVNO="1" SYNCS="ASYNC" THREADID="0">
+      <NONLOCALREAD ADDRESS="0x60105c" FUNCNAME="_Z1fv" INVNO="1" SYNCS="ASYNC" THREADID="0" VARCLASS="GLOBAL" VARID="102441900648" VARNAME="x" id="2"/>
+   </IO>
+   <RETURN FUNCNAME="_Z1fv" INVNO="1" THREADID="0" id="3"/>
+   <RETURN FUNCNAME="_ZN1AC2Ev" INVNO="1" THREADID="0" id="4"/>
+   <RETURN FUNCNAME="_Z41__static_initialization_and_destruction_0ii" INVNO="1" THREADID="0" id="5"/>
+   <RETURN FUNCNAME="_GLOBAL__sub_I_B.cc" INVNO="1" THREADID="0" id="6"/>
+   <CALL ARGS="NONE" CALLEENAME="_Z41__static_initialization_and_destruction_0ii" CALLERNAME="_GLOBAL__sub_I__Z1fv" INVNO="1" STATICCALL="[ ]" THREADID="0" id="7"/>
+   <RETURN FUNCNAME="_Z41__static_initialization_and_destruction_0ii" INVNO="2" THREADID="0" id="8"/>
+   <RETURN FUNCNAME="_GLOBAL__sub_I__Z1fv" INVNO="1" THREADID="0" id="9"/>
+   <CALL ARGS="NONE" CALLEENAME="_Z1fR1A@plt" CALLERNAME="main" INVNO="1" STATICCALL="[ 103643878457 f ( v ) ]" THREADID="0" id="10"/>
+   <IO FUNCNAME="_Z1fR1A" INVNO="1" SYNCS="ASYNC" THREADID="0">
+      <NONLOCALWRITE ADDRESS="0x7f4be9218060" FUNCNAME="_Z1fR1A" INVNO="1" SYNCS="ASYNC" THREADID="0" VARCLASS="GLOBAL" VARID="302109179419" VARNAME="p" id="13"/>
+      <NONLOCALREAD ADDRESS="0x7f4be9218060" FUNCNAME="_Z1fR1A" INVNO="1" SYNCS="ASYNC" THREADID="0" VARCLASS="GLOBAL" VARID="302109179419" VARNAME="p" id="14"/>
+      <LOCALACCESS OFFSET="0x8" READCOUNT="1" VARID="202584130888" VARNAME="x" WRITECOUNT="1"/>
+   </IO>
+   <RETURN FUNCNAME="_Z1fR1A" INVNO="1" THREADID="0" id="15"/>
+   <IO FUNCNAME="main" INVNO="1" SYNCS="ASYNC" THREADID="0">
+      <LOCALACCESS OFFSET="0x8" READCOUNT="0" VARID="102645498730" VARNAME="u" WRITECOUNT="1"/>
+   </IO>
+   <CALL ARGS="NONE" CALLEENAME="_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt" CALLERNAME="main" INVNO="1" STATICCALL="[ 100633594579 std :: cout &lt;&lt; &quot;Value of u-&gt;r = &quot; &lt;&lt; u -&gt; r &lt;&lt; &quot;\n&quot; 102469910908 std :: cout &lt;&lt; &quot;Value of u-&gt;r = &quot; ]" THREADID="0" id="17"/>
+   <IO FUNCNAME="main" INVNO="1" SYNCS="ASYNC" THREADID="0">
+      <LOCALACCESS OFFSET="0x8" READCOUNT="1" VARID="102645498730" VARNAME="u" WRITECOUNT="0"/>
+   </IO>
+   <CALL ARGS="NONE" CALLEENAME="_ZNSolsEi@plt" CALLERNAME="main" INVNO="1" STATICCALL="[ 103985622052 std :: cout &lt;&lt; &quot;Value of u-&gt;r = &quot; &lt;&lt; u -&gt; r ]" THREADID="0" id="19"/>
+   <CALL ARGS="NONE" CALLEENAME="_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt" CALLERNAME="main" INVNO="1" STATICCALL="[ 100633594579 std :: cout &lt;&lt; &quot;Value of u-&gt;r = &quot; &lt;&lt; u -&gt; r &lt;&lt; &quot;\n&quot; 102469910908 std :: cout &lt;&lt; &quot;Value of u-&gt;r = &quot; ]" THREADID="0" id="20"/>
+   <RETURN FUNCNAME="main" INVNO="1" THREADID="0" id="21"/>
+</DYNAMICROOT>

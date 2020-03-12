@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<root>
+  <file name="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build/CMakeFiles/test.out.dir/template_test.cc.o">
+    <DW_TAG_compile_unit address_size="8" debug_abbrev_offset="0" offset="0" path="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc" unit_length="503" version="4">
+      <sources>
+        <entry file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc" id="1"/>
+      </sources>
+      <DW_TAG_structure_type DW_AT_byte_size="8" DW_AT_decl_column="8" DW_AT_decl_file="1" DW_AT_decl_line="14" DW_AT_name="Dummy&lt;int, float&gt;" DW_AT_sibling="196" offset="41">
+        <DW_TAG_member DW_AT_data_member_location="0" DW_AT_decl_column="5" DW_AT_decl_file="1" DW_AT_decl_line="15" DW_AT_name="svar" DW_AT_type="196" offset="54"/>
+        <DW_TAG_member DW_AT_data_member_location="4" DW_AT_decl_column="5" DW_AT_decl_file="1" DW_AT_decl_line="16" DW_AT_name="tvar" DW_AT_type="203" offset="67"/>
+        <DW_TAG_subprogram DW_AT_decl_column="3" DW_AT_decl_file="1" DW_AT_decl_line="17" DW_AT_declaration="True" DW_AT_external="True" DW_AT_inline="2" DW_AT_linkage_name="_ZN5DummyIifEC4Eif" DW_AT_name="Dummy" DW_AT_object_pointer="100" DW_AT_sibling="116" offset="80">
+          <DW_TAG_formal_parameter DW_AT_artificial="True" DW_AT_type="215" offset="100"/>
+          <DW_TAG_formal_parameter DW_AT_type="196" offset="105"/>
+          <DW_TAG_formal_parameter DW_AT_type="203" offset="110"/>
+        </DW_TAG_subprogram>
+        <DW_TAG_subprogram DW_AT_decl_column="8" DW_AT_decl_file="1" DW_AT_decl_line="18" DW_AT_declaration="True" DW_AT_external="True" DW_AT_linkage_name="_ZN5DummyIifE3fooEv" DW_AT_name="foo" DW_AT_object_pointer="140" DW_AT_sibling="146" DW_AT_type="226" offset="116">
+          <DW_TAG_formal_parameter DW_AT_artificial="True" DW_AT_type="215" offset="140"/>
+        </DW_TAG_subprogram>
+        <DW_TAG_subprogram DW_AT_GNU_all_call_sites="True" DW_AT_decl_column="8" DW_AT_decl_file="1" DW_AT_decl_line="22" DW_AT_declaration="True" DW_AT_external="True" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_high_pc="65" DW_AT_linkage_name="_ZN5DummyIifE13member_methodERKf" DW_AT_low_pc="0" DW_AT_name="member_method" DW_AT_object_pointer="170" DW_AT_sibling="181" DW_AT_type="231" offset="146">
+          <DW_TAG_formal_parameter DW_AT_artificial="True" DW_AT_type="215" offset="170"/>
+          <DW_TAG_formal_parameter DW_AT_type="238" offset="175"/>
+        </DW_TAG_subprogram>
+        <DW_TAG_template_type_param DW_AT_name="S" DW_AT_type="196" offset="181"/>
+        <DW_TAG_template_type_param DW_AT_name="T" DW_AT_type="203" offset="188"/>
+      </DW_TAG_structure_type>
+      <DW_TAG_base_type DW_AT_byte_size="4" DW_AT_encoding="5" DW_AT_name="int" offset="196"/>
+      <DW_TAG_base_type DW_AT_byte_size="4" DW_AT_encoding="4" DW_AT_name="float" offset="203"/>
+      <DW_TAG_const_type DW_AT_type="203" offset="210"/>
+      <DW_TAG_pointer_type DW_AT_byte_size="8" DW_AT_type="41" offset="215"/>
+      <DW_TAG_const_type DW_AT_type="215" offset="221"/>
+      <DW_TAG_unspecified_type DW_AT_name="auto" offset="226"/>
+      <DW_TAG_base_type DW_AT_byte_size="1" DW_AT_encoding="2" DW_AT_name="bool" offset="231"/>
+      <DW_TAG_reference_type DW_AT_byte_size="8" DW_AT_type="210" offset="238"/>
+      <DW_TAG_subprogram DW_AT_GNU_all_call_sites="True" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_high_pc="65" DW_AT_low_pc="0" DW_AT_object_pointer="275" DW_AT_sibling="303" DW_AT_specification="146" offset="244">
+        <DW_TAG_formal_parameter DW_AT_artificial="True" DW_AT_location="(DW_OP_fbreg: -24)" DW_AT_name="this" DW_AT_type="221" offset="275"/>
+        <DW_TAG_formal_parameter DW_AT_decl_column="31" DW_AT_decl_file="1" DW_AT_decl_line="22" DW_AT_location="(DW_OP_fbreg: -32)" DW_AT_name="arg_value" DW_AT_type="238" offset="287"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram DW_AT_inline="2" DW_AT_object_pointer="317" DW_AT_sibling="347" DW_AT_specification="80" offset="303">
+        <DW_TAG_formal_parameter DW_AT_artificial="True" DW_AT_name="this" DW_AT_type="221" offset="317"/>
+        <DW_TAG_formal_parameter DW_AT_decl_column="11" DW_AT_decl_file="1" DW_AT_decl_line="17" DW_AT_name="s" DW_AT_type="196" offset="326"/>
+        <DW_TAG_formal_parameter DW_AT_decl_column="16" DW_AT_decl_file="1" DW_AT_decl_line="17" DW_AT_name="t" DW_AT_type="203" offset="336"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram DW_AT_GNU_all_call_sites="True" DW_AT_abstract_origin="303" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_high_pc="42" DW_AT_linkage_name="_ZN5DummyIifEC2Eif" DW_AT_low_pc="0" DW_AT_object_pointer="382" DW_AT_sibling="407" offset="347">
+        <DW_TAG_formal_parameter DW_AT_abstract_origin="317" DW_AT_location="(DW_OP_fbreg: -24)" offset="382"/>
+        <DW_TAG_formal_parameter DW_AT_abstract_origin="326" DW_AT_location="(DW_OP_fbreg: -28)" offset="390"/>
+        <DW_TAG_formal_parameter DW_AT_abstract_origin="336" DW_AT_location="(DW_OP_fbreg: -32)" offset="398"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_subprogram DW_AT_GNU_all_tail_call_sites="True" DW_AT_decl_column="5" DW_AT_decl_file="1" DW_AT_decl_line="33" DW_AT_external="True" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_high_pc="79" DW_AT_low_pc="0" DW_AT_name="main" DW_AT_sibling="487" DW_AT_type="196" offset="407">
+        <DW_TAG_formal_parameter DW_AT_decl_column="14" DW_AT_decl_file="1" DW_AT_decl_line="33" DW_AT_location="(DW_OP_fbreg: -36)" DW_AT_name="argc" DW_AT_type="196" offset="441"/>
+        <DW_TAG_formal_parameter DW_AT_decl_column="27" DW_AT_decl_file="1" DW_AT_decl_line="33" DW_AT_location="(DW_OP_fbreg: -48)" DW_AT_name="argv" DW_AT_type="487" offset="456"/>
+        <DW_TAG_variable DW_AT_decl_column="21" DW_AT_decl_file="1" DW_AT_decl_line="35" DW_AT_location="(DW_OP_fbreg: -28)" DW_AT_name="local_p" DW_AT_type="41" offset="471"/>
+      </DW_TAG_subprogram>
+      <DW_TAG_pointer_type DW_AT_byte_size="8" DW_AT_type="493" offset="487"/>
+      <DW_TAG_pointer_type DW_AT_byte_size="8" DW_AT_type="499" offset="493"/>
+      <DW_TAG_base_type DW_AT_byte_size="1" DW_AT_encoding="6" DW_AT_name="char" offset="499"/>
+    </DW_TAG_compile_unit>
+  </file>
+</root>
+

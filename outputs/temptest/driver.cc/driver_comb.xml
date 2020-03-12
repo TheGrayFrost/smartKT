@@ -2,31 +2,31 @@
 <TranslationUnit>
    
   
-   <Namespace col="11" display_name="Foo" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="102773607785" isDecl="True" isDef="True" lex_parent_id="100359209662" line="8" linkage_kind="external" range.end="[29:2]" range.start="[8:1]" spelling="Foo" usr="c:@N@Foo" visibility="default">
+   <Namespace col="11" display_name="Foo" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="203215207770" isDecl="True" isDef="True" lex_parent_id="202718877270" line="8" linkage_kind="external" range.end="[29:2]" range.start="[8:1]" spelling="Foo" usr="c:@N@Foo" visibility="default">
       
     
-      <FunctionTemplate col="43" def_id="102023857787" display_name="tfun(T1, T2)" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="104173874134" isDecl="True" lex_parent_id="102773607785" line="12" linkage_kind="external" range.end="[12:55]" range.start="[12:3]" spelling="tfun" type="bool (T1, T2)" usr="c:@N@Foo@FT@&gt;2#T#Ttfun#t0.0#t0.1#b#" visibility="default">
+      <FunctionTemplate col="43" def_id="202574015014" display_name="tfun(T1, T2)" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="203635306369" isDecl="True" lex_parent_id="203215207770" line="12" linkage_kind="external" range.end="[12:55]" range.start="[12:3]" spelling="tfun" type="bool (T1, T2)" usr="c:@N@Foo@FT@&gt;2#T#Ttfun#t0.0#t0.1#b#" visibility="default">
          
       
-         <TemplateTypeParameter access_specifier="Public" col="21" display_name="T1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="103503441885" isDecl="True" isDef="True" lex_parent_id="104173874134" line="12" linkage_kind="auto" range.end="[12:23]" range.start="[12:12]" spelling="T1" type="T1" usr="c:foo.hh@144" visibility="default"/>
+         <TemplateTypeParameter access_specifier="Public" col="21" display_name="T1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="203431150205" isDecl="True" isDef="True" lex_parent_id="203635306369" line="12" linkage_kind="auto" range.end="[12:23]" range.start="[12:12]" spelling="T1" type="T1" usr="c:foo.hh@144" visibility="default"/>
          
       
-         <TemplateTypeParameter access_specifier="Public" col="34" display_name="T2" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="104103485297" isDecl="True" isDef="True" lex_parent_id="104173874134" line="12" linkage_kind="auto" range.end="[12:36]" range.start="[12:25]" spelling="T2" type="T2" usr="c:foo.hh@157" visibility="default"/>
+         <TemplateTypeParameter access_specifier="Public" col="34" display_name="T2" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="201953784100" isDecl="True" isDef="True" lex_parent_id="203635306369" line="12" linkage_kind="auto" range.end="[12:36]" range.start="[12:25]" spelling="T2" type="T2" usr="c:foo.hh@157" visibility="default"/>
          
       
-         <ParmDecl col="50" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="103753410701" isDecl="True" isDef="True" lex_parent_id="104173874134" line="12" linkage_kind="auto" range.end="[12:50]" range.start="[12:48]" storage_class="default_auto" type="T1" visibility="default">
+         <ParmDecl col="50" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="202795941413" isDecl="True" isDef="True" lex_parent_id="203635306369" line="12" linkage_kind="auto" range.end="[12:50]" range.start="[12:48]" storage_class="default_auto" type="T1" visibility="default">
             
         
-            <TypeRef col="48" def_id="103503441885" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="100263046525" isRef="True" line="12" range.end="[12:50]" range.start="[12:48]" spelling="T1" type="T1"/>
+            <TypeRef col="48" def_id="203431150205" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="200625226281" isRef="True" line="12" range.end="[12:50]" range.start="[12:48]" spelling="T1" type="T1"/>
             
       
          </ParmDecl>
          
       
-         <ParmDecl col="54" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="101030138772" isDecl="True" isDef="True" lex_parent_id="104173874134" line="12" linkage_kind="auto" range.end="[12:54]" range.start="[12:52]" storage_class="default_auto" type="T2" visibility="default">
+         <ParmDecl col="54" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="201627622407" isDecl="True" isDef="True" lex_parent_id="203635306369" line="12" linkage_kind="auto" range.end="[12:54]" range.start="[12:52]" storage_class="default_auto" type="T2" visibility="default">
             
         
-            <TypeRef col="52" def_id="104103485297" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="102790126152" isRef="True" line="12" range.end="[12:54]" range.start="[12:52]" spelling="T2" type="T2"/>
+            <TypeRef col="52" def_id="201953784100" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="201725454404" isRef="True" line="12" range.end="[12:54]" range.start="[12:52]" spelling="T2" type="T2"/>
             
       
          </ParmDecl>
@@ -35,49 +35,49 @@
       </FunctionTemplate>
       
     
-      <StructDecl col="10" display_name="A" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="103987133793" isDecl="True" isDef="True" lex_parent_id="102773607785" line="14" linkage_kind="external" range.end="[17:5]" range.start="[14:3]" size="8" spelling="A" type="Foo::A" usr="c:@N@Foo@S@A" visibility="default">
+      <StructDecl col="10" display_name="A" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="203388279011" isDecl="True" isDef="True" lex_parent_id="203215207770" line="14" linkage_kind="external" range.end="[17:5]" range.start="[14:3]" size="8" spelling="A" type="Foo::A" usr="c:@N@Foo@S@A" visibility="default">
          
       
-         <FieldDecl access_specifier="Public" col="10" display_name="y" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="103062534331" isDecl="True" isDef="True" lex_parent_id="103987133793" line="15" linkage_kind="external" offset="0" range.end="[15:11]" range.start="[15:5]" size="1" spelling="y" type="char" usr="c:@N@Foo@S@A@FI@y" visibility="default"/>
+         <FieldDecl access_specifier="Public" col="10" display_name="y" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="202056518489" isDecl="True" isDef="True" lex_parent_id="203388279011" line="15" linkage_kind="external" offset="0" range.end="[15:11]" range.start="[15:5]" size="1" spelling="y" type="char" usr="c:@N@Foo@S@A@FI@y" visibility="default"/>
          
       
-         <FieldDecl access_specifier="Public" col="9" display_name="x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="101428782142" isDecl="True" isDef="True" lex_parent_id="103987133793" line="16" linkage_kind="external" offset="4" range.end="[16:10]" range.start="[16:5]" size="4" spelling="x" type="int" usr="c:@N@Foo@S@A@FI@x" visibility="default"/>
+         <FieldDecl access_specifier="Public" col="9" display_name="x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="202620449716" isDecl="True" isDef="True" lex_parent_id="203388279011" line="16" linkage_kind="external" offset="4" range.end="[16:10]" range.start="[16:5]" size="4" spelling="x" type="int" usr="c:@N@Foo@S@A@FI@x" visibility="default"/>
          
     
       </StructDecl>
       
     
-      <ClassDecl col="9" display_name="B" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="100689153244" isDecl="True" isDef="True" lex_parent_id="102773607785" line="19" linkage_kind="external" range.end="[26:4]" range.start="[19:3]" size="6" spelling="B" type="Foo::B" usr="c:@N@Foo@S@B" visibility="default">
+      <ClassDecl col="9" display_name="B" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="202049188155" isDecl="True" isDef="True" lex_parent_id="203215207770" line="19" linkage_kind="external" range.end="[26:4]" range.start="[19:3]" size="6" spelling="B" type="Foo::B" usr="c:@N@Foo@S@B" visibility="default">
          
       
-         <CXXAccessSpecifier access_specifier="Private" col="3" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="101040228234" isDecl="True" isDef="True" lex_parent_id="100689153244" line="20" range.end="[20:11]" range.start="[20:3]" usr="c:"/>
+         <CXXAccessSpecifier access_specifier="Private" col="3" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="203123770919" isDecl="True" isDef="True" lex_parent_id="202049188155" line="20" range.end="[20:11]" range.start="[20:3]" usr="c:"/>
          
       
-         <FieldDecl access_specifier="Private" col="9" display_name="y" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="102353956344" isDecl="True" isDef="True" lex_parent_id="100689153244" line="21" linkage_kind="external" offset="0" range.end="[21:10]" range.start="[21:4]" size="1" spelling="y" type="char" usr="c:@N@Foo@S@B@FI@y" visibility="default"/>
+         <FieldDecl access_specifier="Private" col="9" display_name="y" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="202461751399" isDecl="True" isDef="True" lex_parent_id="202049188155" line="21" linkage_kind="external" offset="0" range.end="[21:10]" range.start="[21:4]" size="1" spelling="y" type="char" usr="c:@N@Foo@S@B@FI@y" visibility="default"/>
          
       
-         <FieldDecl access_specifier="Private" col="9" display_name="z" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="100783969633" isDecl="True" isDef="True" lex_parent_id="100689153244" line="22" linkage_kind="external" range.end="[22:13]" range.start="[22:4]" spelling="z" type="char [4]" usr="c:@N@Foo@S@B@FI@z" visibility="default">
+         <FieldDecl access_specifier="Private" col="9" display_name="z" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="203132014904" isDecl="True" isDef="True" lex_parent_id="202049188155" line="22" linkage_kind="external" range.end="[22:13]" range.start="[22:4]" spelling="z" type="char [4]" usr="c:@N@Foo@S@B@FI@z" visibility="default">
             
         
-            <IntegerLiteral col="11" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="100359296617" line="22" range.end="[22:12]" range.start="[22:11]" sem_parent_id="100783969633" type="int"/>
+            <IntegerLiteral col="11" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="200645948494" line="22" range.end="[22:12]" range.start="[22:11]" sem_parent_id="203132014904" type="int"/>
             
       
          </FieldDecl>
          
       
-         <CXXAccessSpecifier access_specifier="Public" col="3" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="100431480357" isDecl="True" isDef="True" lex_parent_id="100689153244" line="23" range.end="[23:10]" range.start="[23:3]" usr="c:"/>
+         <CXXAccessSpecifier access_specifier="Public" col="3" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="202154726495" isDecl="True" isDef="True" lex_parent_id="202049188155" line="23" range.end="[23:10]" range.start="[23:3]" usr="c:"/>
          
       
-         <FieldDecl access_specifier="Public" col="10" display_name="a" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="103565122687" isDecl="True" isDef="True" lex_parent_id="100689153244" line="24" linkage_kind="external" offset="5" range.end="[24:11]" range.start="[24:5]" size="1" spelling="a" type="char" usr="c:@N@Foo@S@B@FI@a" visibility="default"/>
+         <FieldDecl access_specifier="Public" col="10" display_name="a" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="203764087484" isDecl="True" isDef="True" lex_parent_id="202049188155" line="24" linkage_kind="external" offset="5" range.end="[24:11]" range.start="[24:5]" size="1" spelling="a" type="char" usr="c:@N@Foo@S@B@FI@a" visibility="default"/>
          
       
-         <CXXConstructor access_specifier="Public" col="4" display_name="B()" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="103176023220" isDecl="True" isDef="True" lex_parent_id="100689153244" line="25" linkage_kind="external" mangled_name="_ZN3Foo1BC4Ev" range.end="[25:11]" range.start="[25:4]" spelling="B" storage_class="default_auto" type="void ()" usr="c:@N@Foo@S@B@F@B#" visibility="default">
+         <CXXConstructor access_specifier="Public" col="4" display_name="B()" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="201811159478" isDecl="True" isDef="True" lex_parent_id="202049188155" line="25" linkage_kind="external" mangled_name="_ZN3Foo1BC4Ev" range.end="[25:11]" range.start="[25:4]" spelling="B" storage_class="default_auto" type="void ()" usr="c:@N@Foo@S@B@F@B#" visibility="default">
             
         
-            <CompoundStmt col="8" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="102752924845" line="25" range.end="[25:11]" range.start="[25:8]" sem_parent_id="103176023220" storage_class="default_auto">
+            <CompoundStmt col="8" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="203343409053" line="25" range.end="[25:11]" range.start="[25:8]" sem_parent_id="201811159478" storage_class="default_auto">
                
           
-               <NullStmt col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="101115035108" line="25" range.end="[25:10]" range.start="[25:9]"/>
+               <NullStmt col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="200822990805" line="25" range.end="[25:10]" range.start="[25:9]"/>
                
         
             </CompoundStmt>
@@ -89,16 +89,16 @@
       </ClassDecl>
       
     
-      <EnumDecl col="8" display_name="week" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="101080838097" isDecl="True" isDef="True" lex_parent_id="102773607785" line="28" linkage_kind="external" range.end="[28:21]" range.start="[28:3]" size="4" spelling="week" type="Foo::week" usr="c:@N@Foo@E@week" visibility="default">
+      <EnumDecl col="8" display_name="week" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="203327097209" isDecl="True" isDef="True" lex_parent_id="203215207770" line="28" linkage_kind="external" range.end="[28:21]" range.start="[28:3]" size="4" spelling="week" type="Foo::week" usr="c:@N@Foo@E@week" visibility="default">
          
       
-         <EnumConstantDecl col="13" display_name="M" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="101486640756" isDecl="True" isDef="True" lex_parent_id="101080838097" line="28" linkage_kind="external" range.end="[28:14]" range.start="[28:13]" spelling="M" type="Foo::week" usr="c:@N@Foo@E@week@M" visibility="default"/>
+         <EnumConstantDecl col="13" display_name="M" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="203069070352" isDecl="True" isDef="True" lex_parent_id="203327097209" line="28" linkage_kind="external" range.end="[28:14]" range.start="[28:13]" spelling="M" type="Foo::week" usr="c:@N@Foo@E@week@M" visibility="default"/>
          
       
-         <EnumConstantDecl col="16" display_name="T" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="100804999084" isDecl="True" isDef="True" lex_parent_id="101080838097" line="28" linkage_kind="external" range.end="[28:17]" range.start="[28:16]" spelling="T" type="Foo::week" usr="c:@N@Foo@E@week@T" visibility="default"/>
+         <EnumConstantDecl col="16" display_name="T" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="203000412731" isDecl="True" isDef="True" lex_parent_id="203327097209" line="28" linkage_kind="external" range.end="[28:17]" range.start="[28:16]" spelling="T" type="Foo::week" usr="c:@N@Foo@E@week@T" visibility="default"/>
          
       
-         <EnumConstantDecl col="19" display_name="F" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="100029174138" isDecl="True" isDef="True" lex_parent_id="101080838097" line="28" linkage_kind="external" range.end="[28:20]" range.start="[28:19]" spelling="F" type="Foo::week" usr="c:@N@Foo@E@week@F" visibility="default"/>
+         <EnumConstantDecl col="19" display_name="F" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh" id="200347124510" isDecl="True" isDef="True" lex_parent_id="203327097209" line="28" linkage_kind="external" range.end="[28:20]" range.start="[28:19]" spelling="F" type="Foo::week" usr="c:@N@Foo@E@week@F" visibility="default"/>
          
     
       </EnumDecl>
@@ -107,52 +107,52 @@
    </Namespace>
    
   
-   <Namespace col="11" display_name="Foo" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="103758625891" isDecl="True" isDef="True" lex_parent_id="100359209662" line="6" linkage_kind="external" range.end="[43:2]" range.start="[6:1]" spelling="Foo" usr="c:@N@Foo" visibility="default">
+   <Namespace col="11" display_name="Foo" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="202025814824" isDecl="True" isDef="True" lex_parent_id="202718877270" line="6" linkage_kind="external" range.end="[52:2]" range.start="[6:1]" spelling="Foo" usr="c:@N@Foo" visibility="default">
       
     
-      <FunctionDecl col="8" display_name="fun(int, int)" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="101794560132" isDecl="True" isDef="True" lex_parent_id="103758625891" line="8" linkage_kind="external" mangled_name="_ZN3Foo3funEii" range.end="[14:4]" range.start="[8:3]" spelling="fun" storage_class="default_auto" type="void (int, int)" usr="c:@N@Foo@F@fun#I#I#" visibility="default">
+      <FunctionDecl col="8" display_name="fun(int, int)" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203014991855" isDecl="True" isDef="True" lex_parent_id="202025814824" line="8" linkage_kind="external" mangled_name="_ZN3Foo3funEii" range.end="[14:4]" range.start="[8:3]" spelling="fun" storage_class="default_auto" type="void (int, int)" usr="c:@N@Foo@F@fun#I#I#" visibility="default">
          
       
-         <ParmDecl col="16" display_name="arg_x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="102276798112" isDecl="True" isDef="True" lex_parent_id="101794560132" line="8" linkage_kind="auto" offset="0x4" range.end="[8:21]" range.start="[8:12]" size="4" spelling="arg_x" storage_class="default_auto" type="int" usr="c:foo.cc@72@N@Foo@F@fun#I#I#@arg_x" visibility="default"/>
+         <ParmDecl col="16" display_name="arg_x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="201522739528" isDecl="True" isDef="True" lex_parent_id="203014991855" line="8" linkage_kind="auto" offset="0x4" range.end="[8:21]" range.start="[8:12]" size="4" spelling="arg_x" storage_class="default_auto" type="int" usr="c:foo.cc@72@N@Foo@F@fun#I#I#@arg_x" visibility="default"/>
          
       
-         <ParmDecl col="27" display_name="arg_y" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="102557404432" isDecl="True" isDef="True" lex_parent_id="101794560132" line="8" linkage_kind="auto" offset="0x8" range.end="[8:32]" range.start="[8:23]" size="4" spelling="arg_y" storage_class="default_auto" type="int" usr="c:foo.cc@83@N@Foo@F@fun#I#I#@arg_y" visibility="default"/>
+         <ParmDecl col="27" display_name="arg_y" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="204119305908" isDecl="True" isDef="True" lex_parent_id="203014991855" line="8" linkage_kind="auto" offset="0x8" range.end="[8:32]" range.start="[8:23]" size="4" spelling="arg_y" storage_class="default_auto" type="int" usr="c:foo.cc@83@N@Foo@F@fun#I#I#@arg_y" visibility="default"/>
          
       
-         <CompoundStmt col="34" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="103834126743" line="8" range.end="[14:4]" range.start="[8:34]" sem_parent_id="101794560132" storage_class="default_auto"/>
+         <CompoundStmt col="34" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="204190771406" line="8" range.end="[14:4]" range.start="[8:34]" sem_parent_id="203014991855" storage_class="default_auto"/>
          
     
       </FunctionDecl>
       
     
-      <FunctionDecl col="8" display_name="fun(int)" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="102427888943" isDecl="True" isDef="True" lex_parent_id="103758625891" line="16" linkage_kind="external" mangled_name="_ZN3Foo3funEi" range.end="[22:4]" range.start="[16:3]" spelling="fun" storage_class="default_auto" type="void (int)" usr="c:@N@Foo@F@fun#I#" visibility="default">
+      <FunctionDecl col="8" display_name="fun(int)" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="202663530899" isDecl="True" isDef="True" lex_parent_id="202025814824" line="16" linkage_kind="external" mangled_name="_ZN3Foo3funEi" range.end="[22:4]" range.start="[16:3]" spelling="fun" storage_class="default_auto" type="void (int)" usr="c:@N@Foo@F@fun#I#" visibility="default">
          
       
-         <ParmDecl col="16" display_name="arg_x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="100396844553" isDecl="True" isDef="True" lex_parent_id="102427888943" line="16" linkage_kind="auto" offset="0x24" range.end="[16:21]" range.start="[16:12]" size="4" spelling="arg_x" storage_class="default_auto" type="int" usr="c:foo.cc@239@N@Foo@F@fun#I#@arg_x" visibility="default"/>
+         <ParmDecl col="16" display_name="arg_x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203279878500" isDecl="True" isDef="True" lex_parent_id="202663530899" line="16" linkage_kind="auto" offset="0x24" range.end="[16:21]" range.start="[16:12]" size="4" spelling="arg_x" storage_class="default_auto" type="int" usr="c:foo.cc@239@N@Foo@F@fun#I#@arg_x" visibility="default"/>
          
       
-         <CompoundStmt col="23" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="103856198684" line="16" range.end="[22:4]" range.start="[16:23]" sem_parent_id="102427888943" storage_class="default_auto">
+         <CompoundStmt col="23" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203058419234" line="16" range.end="[22:4]" range.start="[16:23]" sem_parent_id="202663530899" storage_class="default_auto">
             
         
-            <DeclStmt col="7" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="102346615754" line="18" range.end="[18:13]" range.start="[18:7]">
+            <DeclStmt col="7" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="202595422404" line="18" range.end="[18:13]" range.start="[18:7]">
                
           
-               <VarDecl col="11" display_name="u" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="102801028809" isDecl="True" isDef="True" lex_parent_id="102427888943" line="18" linkage_kind="auto" offset="0x4" range.end="[18:12]" range.start="[18:7]" size="4" spelling="u" storage_class="default_auto" type="int" usr="c:foo.cc@320@N@Foo@F@fun#I#@u" visibility="default"/>
+               <VarDecl col="11" display_name="u" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="200128416196" isDecl="True" isDef="True" lex_parent_id="202663530899" line="18" linkage_kind="auto" offset="0x4" range.end="[18:12]" range.start="[18:7]" size="4" spelling="u" storage_class="default_auto" type="int" usr="c:foo.cc@320@N@Foo@F@fun#I#@u" visibility="default"/>
                
         
             </DeclStmt>
             
         
-            <DeclStmt col="7" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="102563476048" line="19" range.end="[19:11]" range.start="[19:7]">
+            <DeclStmt col="7" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203956280296" line="19" range.end="[19:11]" range.start="[19:7]">
                
           
-               <VarDecl col="9" display_name="r" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="100998029423" isDecl="True" isDef="True" lex_parent_id="102427888943" line="19" linkage_kind="auto" offset="0xc" range.end="[19:10]" range.start="[19:7]" size="8" spelling="r" storage_class="default_auto" type="Foo::A" usr="c:foo.cc@333@N@Foo@F@fun#I#@r" visibility="default">
+               <VarDecl col="9" display_name="r" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="202290496081" isDecl="True" isDef="True" lex_parent_id="202663530899" line="19" linkage_kind="auto" offset="0xc" range.end="[19:10]" range.start="[19:7]" size="8" spelling="r" storage_class="default_auto" type="Foo::A" usr="c:foo.cc@333@N@Foo@F@fun#I#@r" visibility="default">
                   
             
-                  <TypeRef col="7" def_id="103987133793" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="103074177542" isRef="True" line="19" range.end="[19:8]" range.start="[19:7]" spelling="struct Foo::A" type="Foo::A"/>
+                  <TypeRef col="7" def_id="203388279011" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203823542289" isRef="True" line="19" range.end="[19:8]" range.start="[19:7]" spelling="struct Foo::A" type="Foo::A"/>
                   
             
-                  <CallExpr col="9" def_id="103166777569" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="100852942337" line="19" range.end="[19:10]" range.start="[19:9]" sem_parent_id="100998029423" spelling="A" storage_class="default_auto" type="Foo::A"/>
+                  <CallExpr col="9" def_id="201256103499" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="201301874665" line="19" range.end="[19:10]" range.start="[19:9]" sem_parent_id="202290496081" spelling="A" storage_class="default_auto" type="Foo::A"/>
                   
           
                </VarDecl>
@@ -161,16 +161,16 @@
             </DeclStmt>
             
         
-            <DeclStmt col="7" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="100405339200" line="20" range.end="[20:11]" range.start="[20:7]">
+            <DeclStmt col="7" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="204238363022" line="20" range.end="[20:11]" range.start="[20:7]">
                
           
-               <VarDecl col="9" display_name="q" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="100549416654" isDecl="True" isDef="True" lex_parent_id="102427888943" line="20" linkage_kind="auto" offset="0x12" range.end="[20:10]" range.start="[20:7]" size="6" spelling="q" storage_class="default_auto" type="Foo::B" usr="c:foo.cc@344@N@Foo@F@fun#I#@q" visibility="default">
+               <VarDecl col="9" display_name="q" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203242592639" isDecl="True" isDef="True" lex_parent_id="202663530899" line="20" linkage_kind="auto" offset="0x12" range.end="[20:10]" range.start="[20:7]" size="6" spelling="q" storage_class="default_auto" type="Foo::B" usr="c:foo.cc@344@N@Foo@F@fun#I#@q" visibility="default">
                   
             
-                  <TypeRef col="7" def_id="100689153244" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="101085353272" isRef="True" line="20" range.end="[20:8]" range.start="[20:7]" spelling="class Foo::B" type="Foo::B"/>
+                  <TypeRef col="7" def_id="202049188155" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203389622149" isRef="True" line="20" range.end="[20:8]" range.start="[20:7]" spelling="class Foo::B" type="Foo::B"/>
                   
             
-                  <CallExpr col="9" def_id="103176023220" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="103040806567" line="20" range.end="[20:10]" range.start="[20:9]" sem_parent_id="100549416654" spelling="B" storage_class="default_auto" type="Foo::B"/>
+                  <CallExpr col="9" def_id="201811159478" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="202661586429" line="20" range.end="[20:10]" range.start="[20:9]" sem_parent_id="203242592639" spelling="B" storage_class="default_auto" type="Foo::B"/>
                   
           
                </VarDecl>
@@ -179,16 +179,16 @@
             </DeclStmt>
             
         
-            <BinaryOperator col="7" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="102473008713" isAssignment="True" line="21" range.end="[21:16]" range.start="[21:7]" type="int">
+            <BinaryOperator col="7" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="200820422552" isAssignment="True" line="21" range.end="[21:16]" range.start="[21:7]" type="int">
                
           
-               <DeclRefExpr col="7" def_id="102801028809" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="100882517603" line="21" range.end="[21:8]" range.start="[21:7]" spelling="u" type="int"/>
+               <DeclRefExpr col="7" def_id="200128416196" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203739156837" line="21" range.end="[21:8]" range.start="[21:7]" spelling="u" type="int"/>
                
           
-               <UnexposedExpr col="11" def_id="100396844553" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="102115278457" line="21" range.end="[21:16]" range.start="[21:11]" spelling="arg_x" type="int">
+               <UnexposedExpr col="11" def_id="203279878500" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="201737115660" line="21" range.end="[21:16]" range.start="[21:11]" spelling="arg_x" type="int">
                   
             
-                  <DeclRefExpr col="11" def_id="100396844553" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="102680126434" line="21" range.end="[21:16]" range.start="[21:11]" spelling="arg_x" type="int"/>
+                  <DeclRefExpr col="11" def_id="203279878500" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="200974467173" line="21" range.end="[21:16]" range.start="[21:11]" spelling="arg_x" type="int"/>
                   
           
                </UnexposedExpr>
@@ -203,46 +203,109 @@
       </FunctionDecl>
       
     
-      <FunctionTemplate col="8" display_name="tfun(T1, T2)" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="102023857787" isDecl="True" isDef="True" lex_parent_id="103758625891" line="25" linkage_kind="external" range.end="[27:4]" range.start="[24:3]" spelling="tfun" type="bool (T1, T2)" usr="c:@N@Foo@FT@&gt;2#T#Ttfun#t0.0#t0.1#b#" visibility="default">
+      <FunctionTemplate col="8" display_name="tfun(T1, T2)" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="202574015014" isDecl="True" isDef="True" lex_parent_id="202025814824" line="25" linkage_kind="external" range.end="[29:4]" range.start="[24:3]" spelling="tfun" type="bool (T1, T2)" usr="c:@N@Foo@FT@&gt;2#T#Ttfun#t0.0#t0.1#b#" visibility="default">
          
       
-         <TemplateTypeParameter access_specifier="Public" col="21" display_name="T1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="102464422004" isDecl="True" isDef="True" lex_parent_id="102023857787" line="24" linkage_kind="auto" range.end="[24:23]" range.start="[24:12]" spelling="T1" type="T1" usr="c:foo.cc@382" visibility="default"/>
+         <TemplateTypeParameter access_specifier="Public" col="21" display_name="T1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="200241275819" isDecl="True" isDef="True" lex_parent_id="202574015014" line="24" linkage_kind="auto" range.end="[24:23]" range.start="[24:12]" spelling="T1" type="T1" usr="c:foo.cc@382" visibility="default"/>
          
       
-         <TemplateTypeParameter access_specifier="Public" col="34" display_name="T2" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="103766654949" isDecl="True" isDef="True" lex_parent_id="102023857787" line="24" linkage_kind="auto" range.end="[24:36]" range.start="[24:25]" spelling="T2" type="T2" usr="c:foo.cc@395" visibility="default"/>
+         <TemplateTypeParameter access_specifier="Public" col="34" display_name="T2" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="201228514305" isDecl="True" isDef="True" lex_parent_id="202574015014" line="24" linkage_kind="auto" range.end="[24:36]" range.start="[24:25]" spelling="T2" type="T2" usr="c:foo.cc@395" visibility="default"/>
          
       
-         <ParmDecl col="16" display_name="targ_x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="101548656038" isDecl="True" isDef="True" lex_parent_id="102023857787" line="25" linkage_kind="auto" range.end="[25:22]" range.start="[25:13]" spelling="targ_x" storage_class="default_auto" type="T1" usr="c:foo.cc@420@N@Foo@FT@&gt;2#T#Ttfun#t0.0#t0.1#b#@targ_x" visibility="default">
+         <ParmDecl col="16" display_name="targ_x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="201901423148" isDecl="True" isDef="True" lex_parent_id="202574015014" line="25" linkage_kind="auto" range.end="[25:22]" range.start="[25:13]" spelling="targ_x" storage_class="default_auto" type="T1" usr="c:foo.cc@420@N@Foo@FT@&gt;2#T#Ttfun#t0.0#t0.1#b#@targ_x" visibility="default">
             
         
-            <TypeRef col="13" def_id="102464422004" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="100064446178" isRef="True" line="25" range.end="[25:15]" range.start="[25:13]" spelling="T1" type="T1"/>
+            <TypeRef col="13" def_id="200241275819" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="200748534760" isRef="True" line="25" range.end="[25:15]" range.start="[25:13]" spelling="T1" type="T1"/>
             
       
          </ParmDecl>
          
       
-         <ParmDecl col="27" display_name="targ_y" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="103432408773" isDecl="True" isDef="True" lex_parent_id="102023857787" line="25" linkage_kind="auto" range.end="[25:33]" range.start="[25:24]" spelling="targ_y" storage_class="default_auto" type="T2" usr="c:foo.cc@431@N@Foo@FT@&gt;2#T#Ttfun#t0.0#t0.1#b#@targ_y" visibility="default">
+         <ParmDecl col="27" display_name="targ_y" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="201244184534" isDecl="True" isDef="True" lex_parent_id="202574015014" line="25" linkage_kind="auto" range.end="[25:33]" range.start="[25:24]" spelling="targ_y" storage_class="default_auto" type="T2" usr="c:foo.cc@431@N@Foo@FT@&gt;2#T#Ttfun#t0.0#t0.1#b#@targ_y" visibility="default">
             
         
-            <TypeRef col="24" def_id="103766654949" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="101937291865" isRef="True" line="25" range.end="[25:26]" range.start="[25:24]" spelling="T2" type="T2"/>
+            <TypeRef col="24" def_id="201228514305" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="201183285317" isRef="True" line="25" range.end="[25:26]" range.start="[25:24]" spelling="T2" type="T2"/>
             
       
          </ParmDecl>
          
       
-         <CompoundStmt col="35" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="100995493869" line="25" range.end="[27:4]" range.start="[25:35]" sem_parent_id="102023857787">
+         <CompoundStmt col="35" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203154295959" line="25" range.end="[29:4]" range.start="[25:35]" sem_parent_id="202574015014">
             
         
-            <ReturnStmt col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="103972819338" line="26" range.end="[26:27]" range.start="[26:5]">
+            <DeclStmt col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="202167504346" line="26" range.end="[26:35]" range.start="[26:5]">
                
           
-               <BinaryOperator col="12" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="100337488797" line="26" range.end="[26:27]" range.start="[26:12]" type="&lt;dependent type&gt;">
+               <VarDecl col="9" display_name="local_x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203704110374" isDecl="True" isDef="True" lex_parent_id="202574015014" line="26" linkage_kind="auto" range.end="[26:34]" range.start="[26:5]" spelling="local_x" storage_class="default_auto" type="int" usr="c:foo.cc@448@N@Foo@FT@&gt;2#T#Ttfun#t0.0#t0.1#b#@local_x" visibility="default">
                   
             
-                  <DeclRefExpr col="12" def_id="101548656038" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="102168562134" line="26" range.end="[26:18]" range.start="[26:12]" spelling="targ_x" type="T1"/>
+                  <BinaryOperator col="19" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="202339945016" line="26" range.end="[26:34]" range.start="[26:19]" sem_parent_id="203704110374" storage_class="default_auto" type="&lt;dependent type&gt;">
+                     
+              
+                     <DeclRefExpr col="19" def_id="201901423148" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="200849589530" line="26" range.end="[26:25]" range.start="[26:19]" spelling="targ_x" type="T1"/>
+                     
+              
+                     <DeclRefExpr col="28" def_id="201244184534" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="204175464116" line="26" range.end="[26:34]" range.start="[26:28]" spelling="targ_y" type="T2"/>
+                     
+            
+                  </BinaryOperator>
+                  
+          
+               </VarDecl>
+               
+        
+            </DeclStmt>
+            
+        
+            <IfStmt col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="204172631355" line="27" range.end="[27:37]" range.start="[27:5]">
+               
+          
+               <BinaryOperator col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="204258266513" line="27" range.end="[27:22]" range.start="[27:9]" type="bool">
                   
             
-                  <DeclRefExpr col="21" def_id="103432408773" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="102456065443" line="26" range.end="[26:27]" range.start="[26:21]" spelling="targ_y" type="T2"/>
+                  <UnexposedExpr col="9" def_id="203704110374" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="200547253003" line="27" range.end="[27:16]" range.start="[27:9]" spelling="local_x" type="int">
+                     
+              
+                     <DeclRefExpr col="9" def_id="203704110374" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203297747772" line="27" range.end="[27:16]" range.start="[27:9]" spelling="local_x" type="int"/>
+                     
+            
+                  </UnexposedExpr>
+                  
+            
+                  <UnaryOperator col="20" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="202309492157" line="27" range.end="[27:22]" range.start="[27:20]" type="int">
+                     
+              
+                     <IntegerLiteral col="21" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="202387936950" line="27" range.end="[27:22]" range.start="[27:21]" type="int"/>
+                     
+            
+                  </UnaryOperator>
+                  
+          
+               </BinaryOperator>
+               
+          
+               <ReturnStmt col="25" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="201800150003" line="27" range.end="[27:37]" range.start="[27:25]">
+                  
+            
+                  <CXXBoolLiteralExpr col="32" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203298754834" line="27" range.end="[27:37]" range.start="[27:32]" type="bool"/>
+                  
+          
+               </ReturnStmt>
+               
+        
+            </IfStmt>
+            
+        
+            <ReturnStmt col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="201370241034" line="28" range.end="[28:27]" range.start="[28:5]">
+               
+          
+               <BinaryOperator col="12" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="200995128795" line="28" range.end="[28:27]" range.start="[28:12]" type="&lt;dependent type&gt;">
+                  
+            
+                  <DeclRefExpr col="12" def_id="201901423148" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="200196703488" line="28" range.end="[28:18]" range.start="[28:12]" spelling="targ_x" type="T1"/>
+                  
+            
+                  <DeclRefExpr col="21" def_id="201244184534" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="202577310779" line="28" range.end="[28:27]" range.start="[28:21]" spelling="targ_y" type="T2"/>
                   
           
                </BinaryOperator>
@@ -257,37 +320,73 @@
       </FunctionTemplate>
       
     
-      <FunctionDecl col="19" display_name="tfun&lt;&gt;(float, float)" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="102847768392" isDecl="True" isDef="True" lex_parent_id="103758625891" line="34" linkage_kind="external" mangled_name="_ZN3Foo4tfunIffEEbT_T0_" range.end="[36:4]" range.start="[34:3]" spelling="tfun" storage_class="default_auto" type="bool (float, float)" usr="c:@N@Foo@F@tfun&lt;#f#f&gt;#f#f#" visibility="default">
+      <FunctionDecl col="19" def_id="201094995016" display_name="tfun&lt;&gt;(float, float)" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="202919834297" isDecl="True" lex_parent_id="202025814824" line="31" linkage_kind="external" range.end="[31:51]" range.start="[31:3]" spelling="tfun" storage_class="default_auto" type="bool (float, float)" usr="c:@N@Foo@F@tfun&lt;#f#f&gt;#f#f#" visibility="default">
          
       
-         <ParmDecl col="44" display_name="x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="101815388259" isDecl="True" isDef="True" lex_parent_id="102847768392" line="34" linkage_kind="auto" offset="0x4" range.end="[34:45]" range.start="[34:38]" size="4" spelling="x" storage_class="default_auto" type="float" usr="c:foo.cc@622@N@Foo@F@tfun&lt;#f#f&gt;#f#f#@x" visibility="default"/>
+         <ParmDecl col="43" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203547165107" isDecl="True" isDef="True" lex_parent_id="202919834297" line="31" linkage_kind="auto" range.end="[31:43]" range.start="[31:38]" storage_class="default_auto" type="float" visibility="default"/>
          
       
-         <ParmDecl col="53" display_name="y" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="102268972211" isDecl="True" isDef="True" lex_parent_id="102847768392" line="34" linkage_kind="auto" offset="0x8" range.end="[34:54]" range.start="[34:47]" size="4" spelling="y" storage_class="default_auto" type="float" usr="c:foo.cc@631@N@Foo@F@tfun&lt;#f#f&gt;#f#f#@y" visibility="default"/>
+         <ParmDecl col="50" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203847964840" isDecl="True" isDef="True" lex_parent_id="202919834297" line="31" linkage_kind="auto" range.end="[31:50]" range.start="[31:45]" storage_class="default_auto" type="float" visibility="default"/>
+         
+    
+      </FunctionDecl>
+      
+    
+      <FunctionDecl col="19" def_id="201094995016" display_name="tfun&lt;&gt;(float, float)" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="204062995272" isDecl="True" lex_parent_id="202025814824" line="32" linkage_kind="external" range.end="[32:51]" range.start="[32:3]" spelling="tfun" storage_class="default_auto" type="bool (float, float)" usr="c:@N@Foo@F@tfun&lt;#f#f&gt;#f#f#" visibility="default">
          
       
-         <CompoundStmt col="56" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="100365080540" line="34" range.end="[36:4]" range.start="[34:56]" sem_parent_id="102847768392" storage_class="default_auto">
+         <ParmDecl col="43" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="201183087958" isDecl="True" isDef="True" lex_parent_id="204062995272" line="32" linkage_kind="auto" range.end="[32:43]" range.start="[32:38]" storage_class="default_auto" type="float" visibility="default"/>
+         
+      
+         <ParmDecl col="50" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="202261808505" isDecl="True" isDef="True" lex_parent_id="204062995272" line="32" linkage_kind="auto" range.end="[32:50]" range.start="[32:45]" storage_class="default_auto" type="float" visibility="default"/>
+         
+    
+      </FunctionDecl>
+      
+    
+      <FunctionDecl col="19" def_id="201094995016" display_name="tfun&lt;&gt;(float, float)" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="201786179299" isDecl="True" lex_parent_id="202025814824" line="33" linkage_kind="external" range.end="[33:51]" range.start="[33:3]" spelling="tfun" storage_class="default_auto" type="bool (float, float)" usr="c:@N@Foo@F@tfun&lt;#f#f&gt;#f#f#" visibility="default">
+         
+      
+         <ParmDecl col="43" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="202718053558" isDecl="True" isDef="True" lex_parent_id="201786179299" line="33" linkage_kind="auto" range.end="[33:43]" range.start="[33:38]" storage_class="default_auto" type="float" visibility="default"/>
+         
+      
+         <ParmDecl col="50" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203010724594" isDecl="True" isDef="True" lex_parent_id="201786179299" line="33" linkage_kind="auto" range.end="[33:50]" range.start="[33:45]" storage_class="default_auto" type="float" visibility="default"/>
+         
+    
+      </FunctionDecl>
+      
+    
+      <FunctionDecl col="19" display_name="tfun&lt;&gt;(float, float)" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="201094995016" isDecl="True" isDef="True" lex_parent_id="202025814824" line="40" linkage_kind="external" mangled_name="_ZN3Foo4tfunIffEEbT_T0_" range.end="[42:4]" range.start="[40:3]" spelling="tfun" storage_class="default_auto" type="bool (float, float)" usr="c:@N@Foo@F@tfun&lt;#f#f&gt;#f#f#" visibility="default">
+         
+      
+         <ParmDecl col="44" display_name="x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203321700848" isDecl="True" isDef="True" lex_parent_id="201094995016" line="40" linkage_kind="auto" offset="0x4" range.end="[40:45]" range.start="[40:38]" size="4" spelling="x" storage_class="default_auto" type="float" usr="c:foo.cc@852@N@Foo@F@tfun&lt;#f#f&gt;#f#f#@x" visibility="default"/>
+         
+      
+         <ParmDecl col="53" display_name="y" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="202627863816" isDecl="True" isDef="True" lex_parent_id="201094995016" line="40" linkage_kind="auto" offset="0x8" range.end="[40:54]" range.start="[40:47]" size="4" spelling="y" storage_class="default_auto" type="float" usr="c:foo.cc@861@N@Foo@F@tfun&lt;#f#f&gt;#f#f#@y" visibility="default"/>
+         
+      
+         <CompoundStmt col="56" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="200824036720" line="40" range.end="[42:4]" range.start="[40:56]" sem_parent_id="201094995016" storage_class="default_auto">
             
         
-            <ReturnStmt col="4" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="103232431269" line="35" range.end="[35:16]" range.start="[35:4]">
+            <ReturnStmt col="4" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="201490603384" line="41" range.end="[41:16]" range.start="[41:4]">
                
           
-               <BinaryOperator col="11" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="101888417742" line="35" range.end="[35:16]" range.start="[35:11]" type="bool">
+               <BinaryOperator col="11" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="201724175272" line="41" range.end="[41:16]" range.start="[41:11]" type="bool">
                   
             
-                  <UnexposedExpr col="11" def_id="101815388259" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="102221590293" line="35" range.end="[35:12]" range.start="[35:11]" spelling="x" type="float">
+                  <UnexposedExpr col="11" def_id="203321700848" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203910109341" line="41" range.end="[41:12]" range.start="[41:11]" spelling="x" type="float">
                      
               
-                     <DeclRefExpr col="11" def_id="101815388259" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="103614045654" line="35" range.end="[35:12]" range.start="[35:11]" spelling="x" type="float"/>
+                     <DeclRefExpr col="11" def_id="203321700848" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203952180825" line="41" range.end="[41:12]" range.start="[41:11]" spelling="x" type="float"/>
                      
             
                   </UnexposedExpr>
                   
             
-                  <UnexposedExpr col="15" def_id="102268972211" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="102993835426" line="35" range.end="[35:16]" range.start="[35:15]" spelling="y" type="float">
+                  <UnexposedExpr col="15" def_id="202627863816" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="202084623405" line="41" range.end="[41:16]" range.start="[41:15]" spelling="y" type="float">
                      
               
-                     <DeclRefExpr col="15" def_id="102268972211" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="101803454959" line="35" range.end="[35:16]" range.start="[35:15]" spelling="y" type="float"/>
+                     <DeclRefExpr col="15" def_id="202627863816" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203174527736" line="41" range.end="[41:16]" range.start="[41:15]" spelling="y" type="float"/>
                      
             
                   </UnexposedExpr>
@@ -305,133 +404,157 @@
       </FunctionDecl>
       
     
-      <VarDecl col="8" display_name="day" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="100097280147" isDecl="True" isDef="True" lex_parent_id="103758625891" line="38" linkage_kind="external" range.end="[38:11]" range.start="[38:3]" size="4" spelling="day" storage_class="default_auto" type="Foo::week" usr="c:@N@Foo@day" visibility="default">
+      <FunctionDecl col="19" def_id="201094995016" display_name="tfun&lt;&gt;(float, float)" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="200087390135" isDecl="True" lex_parent_id="202025814824" line="44" linkage_kind="external" range.end="[44:51]" range.start="[44:3]" spelling="tfun" storage_class="default_auto" type="bool (float, float)" usr="c:@N@Foo@F@tfun&lt;#f#f&gt;#f#f#" visibility="default">
          
       
-         <TypeRef col="3" def_id="101080838097" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="100186302325" isRef="True" line="38" range.end="[38:7]" range.start="[38:3]" spelling="enum Foo::week" type="Foo::week"/>
+         <ParmDecl col="43" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="204230866626" isDecl="True" isDef="True" lex_parent_id="200087390135" line="44" linkage_kind="auto" range.end="[44:43]" range.start="[44:38]" storage_class="default_auto" type="float" visibility="default"/>
+         
+      
+         <ParmDecl col="50" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203850079214" isDecl="True" isDef="True" lex_parent_id="200087390135" line="44" linkage_kind="auto" range.end="[44:50]" range.start="[44:45]" storage_class="default_auto" type="float" visibility="default"/>
+         
+    
+      </FunctionDecl>
+      
+    
+      <FunctionDecl col="19" def_id="201094995016" display_name="tfun&lt;&gt;(float, float)" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="204101102662" isDecl="True" lex_parent_id="202025814824" line="45" linkage_kind="external" range.end="[45:51]" range.start="[45:3]" spelling="tfun" storage_class="default_auto" type="bool (float, float)" usr="c:@N@Foo@F@tfun&lt;#f#f&gt;#f#f#" visibility="default">
+         
+      
+         <ParmDecl col="43" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203750148478" isDecl="True" isDef="True" lex_parent_id="204101102662" line="45" linkage_kind="auto" range.end="[45:43]" range.start="[45:38]" storage_class="default_auto" type="float" visibility="default"/>
+         
+      
+         <ParmDecl col="50" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="201804283907" isDecl="True" isDef="True" lex_parent_id="204101102662" line="45" linkage_kind="auto" range.end="[45:50]" range.start="[45:45]" storage_class="default_auto" type="float" visibility="default"/>
+         
+    
+      </FunctionDecl>
+      
+    
+      <VarDecl col="8" display_name="day" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="202073080033" isDecl="True" isDef="True" lex_parent_id="202025814824" line="47" linkage_kind="external" range.end="[47:11]" range.start="[47:3]" size="4" spelling="day" storage_class="default_auto" type="Foo::week" usr="c:@N@Foo@day" visibility="default">
+         
+      
+         <TypeRef col="3" def_id="203327097209" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="202314466684" isRef="True" line="47" range.end="[47:7]" range.start="[47:3]" spelling="enum Foo::week" type="Foo::week"/>
          
     
       </VarDecl>
       
     
-      <VarDecl col="5" display_name="r" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="102690076484" isDecl="True" isDef="True" lex_parent_id="103758625891" line="39" linkage_kind="external" range.end="[39:6]" range.start="[39:3]" size="8" spelling="r" storage_class="default_auto" type="Foo::A" usr="c:@N@Foo@r" visibility="default">
+      <VarDecl col="5" display_name="r" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="201388516286" isDecl="True" isDef="True" lex_parent_id="202025814824" line="48" linkage_kind="external" range.end="[48:6]" range.start="[48:3]" size="8" spelling="r" storage_class="default_auto" type="Foo::A" usr="c:@N@Foo@r" visibility="default">
          
       
-         <TypeRef col="3" def_id="103987133793" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="103074177542" isRef="True" line="39" range.end="[39:4]" range.start="[39:3]" spelling="struct Foo::A" type="Foo::A"/>
+         <TypeRef col="3" def_id="203388279011" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203823542289" isRef="True" line="48" range.end="[48:4]" range.start="[48:3]" spelling="struct Foo::A" type="Foo::A"/>
          
       
-         <CallExpr col="5" def_id="103166777569" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="103535225996" line="39" range.end="[39:6]" range.start="[39:5]" sem_parent_id="102690076484" spelling="A" storage_class="default_auto" type="Foo::A"/>
-         
-    
-      </VarDecl>
-      
-    
-      <VarDecl col="5" display_name="q" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="103992022086" isDecl="True" isDef="True" lex_parent_id="103758625891" line="40" linkage_kind="external" range.end="[40:6]" range.start="[40:3]" size="6" spelling="q" storage_class="default_auto" type="Foo::B" usr="c:@N@Foo@q" visibility="default">
-         
-      
-         <TypeRef col="3" def_id="100689153244" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="101085353272" isRef="True" line="40" range.end="[40:4]" range.start="[40:3]" spelling="class Foo::B" type="Foo::B"/>
-         
-      
-         <CallExpr col="5" def_id="103176023220" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="100345657801" line="40" range.end="[40:6]" range.start="[40:5]" sem_parent_id="103992022086" spelling="B" storage_class="default_auto" type="Foo::B"/>
+         <CallExpr col="5" def_id="201256103499" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="200680908854" line="48" range.end="[48:6]" range.start="[48:5]" sem_parent_id="201388516286" spelling="A" storage_class="default_auto" type="Foo::A"/>
          
     
       </VarDecl>
       
     
-      <VarDecl col="7" display_name="m" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="100713092987" isDecl="True" isDef="True" lex_parent_id="103758625891" line="42" linkage_kind="external" range.end="[42:8]" range.start="[42:3]" size="8" spelling="m" storage_class="default_auto" type="long long" usr="c:@N@Foo@m" visibility="default"/>
+      <VarDecl col="5" display_name="q" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203644003877" isDecl="True" isDef="True" lex_parent_id="202025814824" line="49" linkage_kind="external" range.end="[49:6]" range.start="[49:3]" size="6" spelling="q" storage_class="default_auto" type="Foo::B" usr="c:@N@Foo@q" visibility="default">
+         
+      
+         <TypeRef col="3" def_id="202049188155" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203389622149" isRef="True" line="49" range.end="[49:4]" range.start="[49:3]" spelling="class Foo::B" type="Foo::B"/>
+         
+      
+         <CallExpr col="5" def_id="201811159478" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203443594975" line="49" range.end="[49:6]" range.start="[49:5]" sem_parent_id="203644003877" spelling="B" storage_class="default_auto" type="Foo::B"/>
+         
+    
+      </VarDecl>
+      
+    
+      <VarDecl col="7" display_name="m" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc" id="203235245006" isDecl="True" isDef="True" lex_parent_id="202025814824" line="51" linkage_kind="external" range.end="[51:8]" range.start="[51:3]" size="8" spelling="m" storage_class="default_auto" type="long long" usr="c:@N@Foo@m" visibility="default"/>
       
   
    </Namespace>
    
   
-   <TypedefDecl col="27" display_name="uli" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="101143759751" isDecl="True" isDef="True" lex_parent_id="100359209662" line="4" linkage_kind="auto" range.end="[4:30]" range.start="[4:1]" spelling="uli" type="uli" usr="c:driver.cc@T@uli" visibility="default"/>
+   <TypedefDecl col="27" display_name="uli" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200865974357" isDecl="True" isDef="True" lex_parent_id="202718877270" line="4" linkage_kind="auto" range.end="[4:30]" range.start="[4:1]" spelling="uli" type="uli" usr="c:driver.cc@T@uli" visibility="default"/>
    
   
-   <TypedefDecl col="13" display_name="vli" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="100185998159" isDecl="True" isDef="True" lex_parent_id="100359209662" line="5" linkage_kind="auto" range.end="[5:16]" range.start="[5:1]" spelling="vli" type="vli" usr="c:driver.cc@T@vli" visibility="default">
+   <TypedefDecl col="13" display_name="vli" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203332999239" isDecl="True" isDef="True" lex_parent_id="202718877270" line="5" linkage_kind="auto" range.end="[5:16]" range.start="[5:1]" spelling="vli" type="vli" usr="c:driver.cc@T@vli" visibility="default">
       
     
-      <TypeRef col="9" def_id="101143759751" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="104064352097" isRef="True" line="5" range.end="[5:12]" range.start="[5:9]" spelling="uli" type="uli"/>
+      <TypeRef col="9" def_id="200865974357" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200925348466" isRef="True" line="5" range.end="[5:12]" range.start="[5:9]" spelling="uli" type="uli"/>
       
   
    </TypedefDecl>
    
   
-   <VarDecl col="13" display_name="day" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="101139986544" isDecl="True" isDef="True" lex_parent_id="100359209662" line="7" linkage_kind="external" range.end="[7:16]" range.start="[7:3]" size="4" spelling="day" storage_class="default_auto" type="Foo::week" usr="c:@day" visibility="default">
+   <VarDecl col="13" display_name="day" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203618290397" isDecl="True" isDef="True" lex_parent_id="202718877270" line="7" linkage_kind="external" range.end="[7:16]" range.start="[7:3]" size="4" spelling="day" storage_class="default_auto" type="Foo::week" usr="c:@day" visibility="default">
       
     
-      <NamespaceRef col="3" def_id="103758625891" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102548905234" isRef="True" line="7" range.end="[7:6]" range.start="[7:3]" spelling="Foo"/>
+      <NamespaceRef col="3" def_id="202025814824" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200394404539" isRef="True" line="7" range.end="[7:6]" range.start="[7:3]" spelling="Foo"/>
       
     
-      <TypeRef col="8" def_id="101080838097" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="100186302325" isRef="True" line="7" range.end="[7:12]" range.start="[7:8]" spelling="enum Foo::week" type="Foo::week"/>
+      <TypeRef col="8" def_id="203327097209" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="202314466684" isRef="True" line="7" range.end="[7:12]" range.start="[7:8]" spelling="enum Foo::week" type="Foo::week"/>
       
   
    </VarDecl>
    
   
-   <VarDecl col="10" display_name="r" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="101475832139" isDecl="True" isDef="True" lex_parent_id="100359209662" line="8" linkage_kind="external" range.end="[8:11]" range.start="[8:3]" size="8" spelling="r" storage_class="default_auto" type="Foo::A" usr="c:@r" visibility="default">
+   <VarDecl col="10" display_name="r" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="202850609901" isDecl="True" isDef="True" lex_parent_id="202718877270" line="8" linkage_kind="external" range.end="[8:11]" range.start="[8:3]" size="8" spelling="r" storage_class="default_auto" type="Foo::A" usr="c:@r" visibility="default">
       
     
-      <NamespaceRef col="3" def_id="103758625891" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102548905234" isRef="True" line="8" range.end="[8:6]" range.start="[8:3]" spelling="Foo"/>
+      <NamespaceRef col="3" def_id="202025814824" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200394404539" isRef="True" line="8" range.end="[8:6]" range.start="[8:3]" spelling="Foo"/>
       
     
-      <TypeRef col="8" def_id="103987133793" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="103074177542" isRef="True" line="8" range.end="[8:9]" range.start="[8:8]" spelling="struct Foo::A" type="Foo::A"/>
+      <TypeRef col="8" def_id="203388279011" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203823542289" isRef="True" line="8" range.end="[8:9]" range.start="[8:8]" spelling="struct Foo::A" type="Foo::A"/>
       
     
-      <CallExpr col="10" def_id="103166777569" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102001276378" line="8" range.end="[8:11]" range.start="[8:10]" sem_parent_id="101475832139" spelling="A" storage_class="default_auto" type="Foo::A"/>
+      <CallExpr col="10" def_id="201256103499" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="204073263931" line="8" range.end="[8:11]" range.start="[8:10]" sem_parent_id="202850609901" spelling="A" storage_class="default_auto" type="Foo::A"/>
       
   
    </VarDecl>
    
   
-   <VarDecl col="10" display_name="q" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="101008040084" isDecl="True" isDef="True" lex_parent_id="100359209662" line="9" linkage_kind="external" range.end="[9:11]" range.start="[9:3]" size="6" spelling="q" storage_class="default_auto" type="Foo::B" usr="c:@q" visibility="default">
+   <VarDecl col="10" display_name="q" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="201964235195" isDecl="True" isDef="True" lex_parent_id="202718877270" line="9" linkage_kind="external" range.end="[9:11]" range.start="[9:3]" size="6" spelling="q" storage_class="default_auto" type="Foo::B" usr="c:@q" visibility="default">
       
     
-      <NamespaceRef col="3" def_id="103758625891" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102548905234" isRef="True" line="9" range.end="[9:6]" range.start="[9:3]" spelling="Foo"/>
+      <NamespaceRef col="3" def_id="202025814824" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200394404539" isRef="True" line="9" range.end="[9:6]" range.start="[9:3]" spelling="Foo"/>
       
     
-      <TypeRef col="8" def_id="100689153244" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="101085353272" isRef="True" line="9" range.end="[9:9]" range.start="[9:8]" spelling="class Foo::B" type="Foo::B"/>
+      <TypeRef col="8" def_id="202049188155" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203389622149" isRef="True" line="9" range.end="[9:9]" range.start="[9:8]" spelling="class Foo::B" type="Foo::B"/>
       
     
-      <CallExpr col="10" def_id="103176023220" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="100746703739" line="9" range.end="[9:11]" range.start="[9:10]" sem_parent_id="101008040084" spelling="B" storage_class="default_auto" type="Foo::B"/>
+      <CallExpr col="10" def_id="201811159478" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203288879988" line="9" range.end="[9:11]" range.start="[9:10]" sem_parent_id="201964235195" spelling="B" storage_class="default_auto" type="Foo::B"/>
       
   
    </VarDecl>
    
   
-   <VarDecl col="7" display_name="m" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="103862729562" isDecl="True" isDef="True" lex_parent_id="100359209662" line="11" linkage_kind="external" range.end="[11:8]" range.start="[11:3]" size="8" spelling="m" storage_class="default_auto" type="long long" usr="c:@m" visibility="default"/>
+   <VarDecl col="7" display_name="m" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203946995438" isDecl="True" isDef="True" lex_parent_id="202718877270" line="11" linkage_kind="external" range.end="[11:8]" range.start="[11:3]" size="8" spelling="m" storage_class="default_auto" type="long long" usr="c:@m" visibility="default"/>
    
   
-   <FunctionDecl col="6" display_name="fun(int)" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="104268339408" isDecl="True" isDef="True" lex_parent_id="100359209662" line="14" linkage_kind="external" mangled_name="_Z3funi" range.end="[19:4]" range.start="[14:1]" spelling="fun" storage_class="default_auto" type="void (int)" usr="c:@F@fun#I#" visibility="default">
+   <FunctionDecl col="6" display_name="fun(int)" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="202460781162" isDecl="True" isDef="True" lex_parent_id="202718877270" line="14" linkage_kind="external" mangled_name="_Z3funi" range.end="[19:4]" range.start="[14:1]" spelling="fun" storage_class="default_auto" type="void (int)" usr="c:@F@fun#I#" visibility="default">
       
     
-      <ParmDecl col="14" display_name="arg_x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="103082765383" isDecl="True" isDef="True" lex_parent_id="104268339408" line="14" linkage_kind="auto" offset="0x14" range.end="[14:19]" range.start="[14:10]" size="4" spelling="arg_x" storage_class="default_auto" type="int" usr="c:driver.cc@153@F@fun#I#@arg_x" visibility="default"/>
+      <ParmDecl col="14" display_name="arg_x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="202769216922" isDecl="True" isDef="True" lex_parent_id="202460781162" line="14" linkage_kind="auto" offset="0x14" range.end="[14:19]" range.start="[14:10]" size="4" spelling="arg_x" storage_class="default_auto" type="int" usr="c:driver.cc@153@F@fun#I#@arg_x" visibility="default"/>
       
     
-      <CompoundStmt col="21" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="103276597868" line="14" range.end="[19:4]" range.start="[14:21]" sem_parent_id="104268339408" storage_class="default_auto">
+      <CompoundStmt col="21" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="201254633927" line="14" range.end="[19:4]" range.start="[14:21]" sem_parent_id="202460781162" storage_class="default_auto">
          
       
-         <DeclStmt col="7" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102509865474" line="16" range.end="[16:13]" range.start="[16:7]">
+         <DeclStmt col="7" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="204078694675" line="16" range.end="[16:13]" range.start="[16:7]">
             
         
-            <VarDecl col="11" display_name="u" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="101177521479" isDecl="True" isDef="True" lex_parent_id="104268339408" line="16" linkage_kind="auto" range.end="[16:12]" range.start="[16:7]" size="4" spelling="u" storage_class="default_auto" type="int" usr="c:driver.cc@234@F@fun#I#@u" visibility="default"/>
+            <VarDecl col="11" display_name="u" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="202757597889" isDecl="True" isDef="True" lex_parent_id="202460781162" line="16" linkage_kind="auto" range.end="[16:12]" range.start="[16:7]" size="4" spelling="u" storage_class="default_auto" type="int" usr="c:driver.cc@234@F@fun#I#@u" visibility="default"/>
             
       
          </DeclStmt>
          
       
-         <DeclStmt col="13" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102857142935" line="17" range.end="[17:22]" range.start="[17:13]">
+         <DeclStmt col="13" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203107550968" line="17" range.end="[17:22]" range.start="[17:13]">
             
         
-            <VarDecl col="20" display_name="r" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="101112178012" isDecl="True" isDef="True" lex_parent_id="104268339408" line="17" linkage_kind="auto" offset="0x8" range.end="[17:21]" range.start="[17:13]" size="8" spelling="r" storage_class="default_auto" type="Foo::A" usr="c:driver.cc@253@F@fun#I#@r" visibility="default">
+            <VarDecl col="20" display_name="r" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="201512544377" isDecl="True" isDef="True" lex_parent_id="202460781162" line="17" linkage_kind="auto" offset="0x8" range.end="[17:21]" range.start="[17:13]" size="8" spelling="r" storage_class="default_auto" type="Foo::A" usr="c:driver.cc@253@F@fun#I#@r" visibility="default">
                
           
-               <NamespaceRef col="13" def_id="103758625891" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102548905234" isRef="True" line="17" range.end="[17:16]" range.start="[17:13]" spelling="Foo"/>
+               <NamespaceRef col="13" def_id="202025814824" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200394404539" isRef="True" line="17" range.end="[17:16]" range.start="[17:13]" spelling="Foo"/>
                
           
-               <TypeRef col="18" def_id="103987133793" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="103074177542" isRef="True" line="17" range.end="[17:19]" range.start="[17:18]" spelling="struct Foo::A" type="Foo::A"/>
+               <TypeRef col="18" def_id="203388279011" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203823542289" isRef="True" line="17" range.end="[17:19]" range.start="[17:18]" spelling="struct Foo::A" type="Foo::A"/>
                
           
-               <CallExpr col="20" def_id="103166777569" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="103280416758" line="17" range.end="[17:21]" range.start="[17:20]" sem_parent_id="101112178012" spelling="A" storage_class="default_auto" type="Foo::A"/>
+               <CallExpr col="20" def_id="201256103499" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200664353441" line="17" range.end="[17:21]" range.start="[17:20]" sem_parent_id="201512544377" spelling="A" storage_class="default_auto" type="Foo::A"/>
                
         
             </VarDecl>
@@ -440,19 +563,19 @@
          </DeclStmt>
          
       
-         <DeclStmt col="7" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="100058725254" line="18" range.end="[18:16]" range.start="[18:7]">
+         <DeclStmt col="7" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="202983016550" line="18" range.end="[18:16]" range.start="[18:7]">
             
         
-            <VarDecl col="14" display_name="q" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="100633536619" isDecl="True" isDef="True" lex_parent_id="104268339408" line="18" linkage_kind="auto" offset="0xe" range.end="[18:15]" range.start="[18:7]" size="6" spelling="q" storage_class="default_auto" type="Foo::B" usr="c:driver.cc@269@F@fun#I#@q" visibility="default">
+            <VarDecl col="14" display_name="q" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203225455013" isDecl="True" isDef="True" lex_parent_id="202460781162" line="18" linkage_kind="auto" offset="0xe" range.end="[18:15]" range.start="[18:7]" size="6" spelling="q" storage_class="default_auto" type="Foo::B" usr="c:driver.cc@269@F@fun#I#@q" visibility="default">
                
           
-               <NamespaceRef col="7" def_id="103758625891" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102548905234" isRef="True" line="18" range.end="[18:10]" range.start="[18:7]" spelling="Foo"/>
+               <NamespaceRef col="7" def_id="202025814824" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200394404539" isRef="True" line="18" range.end="[18:10]" range.start="[18:7]" spelling="Foo"/>
                
           
-               <TypeRef col="12" def_id="100689153244" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="101085353272" isRef="True" line="18" range.end="[18:13]" range.start="[18:12]" spelling="class Foo::B" type="Foo::B"/>
+               <TypeRef col="12" def_id="202049188155" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203389622149" isRef="True" line="18" range.end="[18:13]" range.start="[18:12]" spelling="class Foo::B" type="Foo::B"/>
                
           
-               <CallExpr col="14" def_id="103176023220" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="100648822244" line="18" range.end="[18:15]" range.start="[18:14]" sem_parent_id="100633536619" spelling="B" storage_class="default_auto" type="Foo::B"/>
+               <CallExpr col="14" def_id="201811159478" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="202044479185" line="18" range.end="[18:15]" range.start="[18:14]" sem_parent_id="203225455013" spelling="B" storage_class="default_auto" type="Foo::B"/>
                
         
             </VarDecl>
@@ -467,28 +590,28 @@
    </FunctionDecl>
    
   
-   <FunctionDecl col="5" display_name="main()" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="100081595973" isDecl="True" isDef="True" lex_parent_id="100359209662" line="21" linkage_kind="external" range.end="[42:2]" range.start="[21:1]" spelling="main" storage_class="default_auto" type="int ()" usr="c:@F@main#" visibility="default">
+   <FunctionDecl col="5" display_name="main()" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="202850928036" isDecl="True" isDef="True" lex_parent_id="202718877270" line="21" linkage_kind="external" range.end="[42:2]" range.start="[21:1]" spelling="main" storage_class="default_auto" type="int ()" usr="c:@F@main#" visibility="default">
       
     
-      <CompoundStmt col="12" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="101149917200" line="21" range.end="[42:2]" range.start="[21:12]" sem_parent_id="100081595973" storage_class="default_auto">
+      <CompoundStmt col="12" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="202566415912" line="21" range.end="[42:2]" range.start="[21:12]" sem_parent_id="202850928036" storage_class="default_auto">
          
       
-         <DeclStmt col="3" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102441473805" line="22" range.end="[22:32]" range.start="[22:3]">
+         <DeclStmt col="3" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200134725961" line="22" range.end="[22:32]" range.start="[22:3]">
             
         
-            <VarDecl col="7" display_name="local_p" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="101880693474" isDecl="True" isDef="True" lex_parent_id="100081595973" line="22" linkage_kind="auto" offset="0x4" range.end="[22:18]" range.start="[22:3]" size="4" spelling="local_p" storage_class="default_auto" type="int" usr="c:driver.cc@299@F@main#@local_p" visibility="default">
+            <VarDecl col="7" display_name="local_p" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203571941592" isDecl="True" isDef="True" lex_parent_id="202850928036" line="22" linkage_kind="auto" offset="0x4" range.end="[22:18]" range.start="[22:3]" size="4" spelling="local_p" storage_class="default_auto" type="int" usr="c:driver.cc@299@F@main#@local_p" visibility="default">
                
           
-               <IntegerLiteral col="17" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="100806979107" line="22" range.end="[22:18]" range.start="[22:17]" sem_parent_id="101880693474" storage_class="default_auto" type="int"/>
+               <IntegerLiteral col="17" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200062878180" line="22" range.end="[22:18]" range.start="[22:17]" sem_parent_id="203571941592" storage_class="default_auto" type="int"/>
                
         
             </VarDecl>
             
         
-            <VarDecl col="20" display_name="local_q" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="104261832716" isDecl="True" isDef="True" lex_parent_id="100081595973" line="22" linkage_kind="auto" offset="0x8" range.end="[22:31]" range.start="[22:20]" size="4" spelling="local_q" storage_class="default_auto" type="int" usr="c:driver.cc@299@F@main#@local_q" visibility="default">
+            <VarDecl col="20" display_name="local_q" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203999918020" isDecl="True" isDef="True" lex_parent_id="202850928036" line="22" linkage_kind="auto" offset="0x8" range.end="[22:31]" range.start="[22:20]" size="4" spelling="local_q" storage_class="default_auto" type="int" usr="c:driver.cc@299@F@main#@local_q" visibility="default">
                
           
-               <IntegerLiteral col="30" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="104284402549" line="22" range.end="[22:31]" range.start="[22:30]" sem_parent_id="104261832716" storage_class="default_auto" type="int"/>
+               <IntegerLiteral col="30" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="201141048694" line="22" range.end="[22:31]" range.start="[22:30]" sem_parent_id="203999918020" storage_class="default_auto" type="int"/>
                
         
             </VarDecl>
@@ -497,19 +620,19 @@
          </DeclStmt>
          
       
-         <DeclStmt col="3" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="101814134345" line="24" range.end="[24:15]" range.start="[24:3]">
+         <DeclStmt col="3" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200786183362" line="24" range.end="[24:15]" range.start="[24:3]">
             
         
-            <VarDecl col="7" display_name="omg" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102504674150" isDecl="True" isDef="True" lex_parent_id="100081595973" line="24" linkage_kind="auto" offset="0x10" range.end="[24:14]" range.start="[24:3]" size="8" spelling="omg" storage_class="default_auto" type="vli" usr="c:driver.cc@332@F@main#@omg" visibility="default">
+            <VarDecl col="7" display_name="omg" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200331290762" isDecl="True" isDef="True" lex_parent_id="202850928036" line="24" linkage_kind="auto" offset="0x10" range.end="[24:14]" range.start="[24:3]" size="8" spelling="omg" storage_class="default_auto" type="vli" usr="c:driver.cc@332@F@main#@omg" visibility="default">
                
           
-               <TypeRef col="3" def_id="100185998159" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102680947248" isRef="True" line="24" range.end="[24:6]" range.start="[24:3]" spelling="vli" type="vli"/>
+               <TypeRef col="3" def_id="203332999239" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="201489367393" isRef="True" line="24" range.end="[24:6]" range.start="[24:3]" spelling="vli" type="vli"/>
                
           
-               <UnexposedExpr col="13" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="100460132120" line="24" range.end="[24:14]" range.start="[24:13]" sem_parent_id="102504674150" storage_class="default_auto" type="vli">
+               <UnexposedExpr col="13" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200981317980" line="24" range.end="[24:14]" range.start="[24:13]" sem_parent_id="200331290762" storage_class="default_auto" type="vli">
                   
             
-                  <IntegerLiteral col="13" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="104081734851" line="24" range.end="[24:14]" range.start="[24:13]" type="int"/>
+                  <IntegerLiteral col="13" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203048116009" line="24" range.end="[24:14]" range.start="[24:13]" type="int"/>
                   
           
                </UnexposedExpr>
@@ -521,16 +644,16 @@
          </DeclStmt>
          
       
-         <CompoundAssignOperator col="3" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="101965808453" isAssignment="True" line="26" range.end="[26:11]" range.start="[26:3]" type="vli">
+         <CompoundAssignOperator col="3" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="202554585727" isAssignment="True" line="26" range.end="[26:11]" range.start="[26:3]" type="vli">
             
         
-            <DeclRefExpr col="3" def_id="102504674150" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="100490970954" line="26" range.end="[26:6]" range.start="[26:3]" spelling="omg" type="vli"/>
+            <DeclRefExpr col="3" def_id="200331290762" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200435563679" line="26" range.end="[26:6]" range.start="[26:3]" spelling="omg" type="vli"/>
             
         
-            <UnexposedExpr col="10" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102408701953" line="26" range.end="[26:11]" range.start="[26:10]" type="unsigned long">
+            <UnexposedExpr col="10" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203484793544" line="26" range.end="[26:11]" range.start="[26:10]" type="unsigned long">
                
           
-               <IntegerLiteral col="10" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="103870319550" line="26" range.end="[26:11]" range.start="[26:10]" type="int"/>
+               <IntegerLiteral col="10" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203145495876" line="26" range.end="[26:11]" range.start="[26:10]" type="int"/>
                
         
             </UnexposedExpr>
@@ -539,16 +662,16 @@
          </CompoundAssignOperator>
          
       
-         <CallExpr col="3" def_id="101794560132" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102803518631" line="31" range.end="[31:29]" range.start="[31:3]" spelling="fun" type="void">
+         <CallExpr col="3" def_id="203014991855" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203663089145" line="31" range.end="[31:29]" range.start="[31:3]" spelling="fun" type="void">
             
         
-            <UnexposedExpr col="8" def_id="101794560132" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102370573660" line="31" range.end="[31:11]" range.start="[31:3]" spelling="fun" type="void (*)(int, int)">
+            <UnexposedExpr col="8" def_id="203014991855" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203231314529" line="31" range.end="[31:11]" range.start="[31:3]" spelling="fun" type="void (*)(int, int)">
                
           
-               <DeclRefExpr col="8" def_id="101794560132" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="103398981314" line="31" range.end="[31:11]" range.start="[31:3]" spelling="fun" type="void (int, int)">
+               <DeclRefExpr col="8" def_id="203014991855" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203335711827" line="31" range.end="[31:11]" range.start="[31:3]" spelling="fun" type="void (int, int)">
                   
             
-                  <NamespaceRef col="3" def_id="103758625891" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102548905234" isRef="True" line="31" range.end="[31:6]" range.start="[31:3]" spelling="Foo"/>
+                  <NamespaceRef col="3" def_id="202025814824" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200394404539" isRef="True" line="31" range.end="[31:6]" range.start="[31:3]" spelling="Foo"/>
                   
           
                </DeclRefExpr>
@@ -557,19 +680,19 @@
             </UnexposedExpr>
             
         
-            <UnexposedExpr col="12" def_id="101880693474" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="101804343025" line="31" range.end="[31:19]" range.start="[31:12]" spelling="local_p" type="int">
+            <UnexposedExpr col="12" def_id="203571941592" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200920685946" line="31" range.end="[31:19]" range.start="[31:12]" spelling="local_p" type="int">
                
           
-               <DeclRefExpr col="12" def_id="101880693474" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102702760642" line="31" range.end="[31:19]" range.start="[31:12]" spelling="local_p" type="int"/>
+               <DeclRefExpr col="12" def_id="203571941592" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203470049411" line="31" range.end="[31:19]" range.start="[31:12]" spelling="local_p" type="int"/>
                
         
             </UnexposedExpr>
             
         
-            <UnexposedExpr col="21" def_id="104261832716" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102426516125" line="31" range.end="[31:28]" range.start="[31:21]" spelling="local_q" type="int">
+            <UnexposedExpr col="21" def_id="203999918020" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200596117104" line="31" range.end="[31:28]" range.start="[31:21]" spelling="local_q" type="int">
                
           
-               <DeclRefExpr col="21" def_id="104261832716" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="101815648171" line="31" range.end="[31:28]" range.start="[31:21]" spelling="local_q" type="int"/>
+               <DeclRefExpr col="21" def_id="203999918020" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="201904663691" line="31" range.end="[31:28]" range.start="[31:21]" spelling="local_q" type="int"/>
                
         
             </UnexposedExpr>
@@ -578,19 +701,19 @@
          </CallExpr>
          
       
-         <IfStmt col="3" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="103616096121" line="32" range.end="[34:4]" range.start="[32:3]">
+         <IfStmt col="3" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="202328831404" line="32" range.end="[34:4]" range.start="[32:3]">
             
         
-            <CallExpr col="7" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="101514485502" line="32" range.end="[32:34]" range.start="[32:7]" ref_id="103168492379" spelling="tfun" type="bool">
+            <CallExpr col="7" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200095728616" line="32" range.end="[32:34]" range.start="[32:7]" ref_id="201207176551" spelling="tfun" type="bool">
                
           
-               <UnexposedExpr col="12" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="100885767379" line="32" range.end="[32:28]" range.start="[32:7]" ref_id="103168492379" spelling="tfun" type="bool (*)(int, float)">
+               <UnexposedExpr col="12" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203702782365" line="32" range.end="[32:28]" range.start="[32:7]" ref_id="201207176551" spelling="tfun" type="bool (*)(int, float)">
                   
             
-                  <DeclRefExpr col="12" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="103950765067" line="32" range.end="[32:28]" range.start="[32:7]" ref_id="103168492379" spelling="tfun" type="bool (int, float)">
+                  <DeclRefExpr col="12" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200742976677" line="32" range.end="[32:28]" range.start="[32:7]" ref_id="201207176551" spelling="tfun" type="bool (int, float)">
                      
               
-                     <NamespaceRef col="7" def_id="103758625891" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102548905234" isRef="True" line="32" range.end="[32:10]" range.start="[32:7]" spelling="Foo"/>
+                     <NamespaceRef col="7" def_id="202025814824" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200394404539" isRef="True" line="32" range.end="[32:10]" range.start="[32:7]" spelling="Foo"/>
                      
             
                   </DeclRefExpr>
@@ -599,13 +722,13 @@
                </UnexposedExpr>
                
           
-               <IntegerLiteral col="29" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="100526902058" line="32" range.end="[32:30]" range.start="[32:29]" type="int"/>
+               <IntegerLiteral col="29" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203685456407" line="32" range.end="[32:30]" range.start="[32:29]" type="int"/>
                
           
-               <UnexposedExpr col="32" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102065754597" line="32" range.end="[32:33]" range.start="[32:32]" type="float">
+               <UnexposedExpr col="32" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="202062188356" line="32" range.end="[32:33]" range.start="[32:32]" type="float">
                   
             
-                  <IntegerLiteral col="32" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="100328984756" line="32" range.end="[32:33]" range.start="[32:32]" type="int"/>
+                  <IntegerLiteral col="32" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203825396074" line="32" range.end="[32:33]" range.start="[32:32]" type="int"/>
                   
           
                </UnexposedExpr>
@@ -614,25 +737,25 @@
             </CallExpr>
             
         
-            <CompoundStmt col="37" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="101239762541" line="32" range.end="[34:4]" range.start="[32:37]"/>
+            <CompoundStmt col="37" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="201317505922" line="32" range.end="[34:4]" range.start="[32:37]"/>
             
       
          </IfStmt>
          
       
-         <IfStmt col="3" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="101122345306" line="35" range.end="[37:4]" range.start="[35:3]">
+         <IfStmt col="3" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="201167611220" line="35" range.end="[37:4]" range.start="[35:3]">
             
         
-            <CallExpr col="7" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="101914640204" line="35" range.end="[35:34]" range.start="[35:7]" ref_id="102213108175" spelling="tfun" type="bool">
+            <CallExpr col="7" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="201521947577" line="35" range.end="[35:34]" range.start="[35:7]" ref_id="200927183644" spelling="tfun" type="bool">
                
           
-               <UnexposedExpr col="12" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="100378446120" line="35" range.end="[35:28]" range.start="[35:7]" ref_id="102213108175" spelling="tfun" type="bool (*)(char, char)">
+               <UnexposedExpr col="12" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="202829865665" line="35" range.end="[35:28]" range.start="[35:7]" ref_id="200927183644" spelling="tfun" type="bool (*)(char, char)">
                   
             
-                  <DeclRefExpr col="12" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="101410511872" line="35" range.end="[35:28]" range.start="[35:7]" ref_id="102213108175" spelling="tfun" type="bool (char, char)">
+                  <DeclRefExpr col="12" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="202700547263" line="35" range.end="[35:28]" range.start="[35:7]" ref_id="200927183644" spelling="tfun" type="bool (char, char)">
                      
               
-                     <NamespaceRef col="7" def_id="103758625891" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102548905234" isRef="True" line="35" range.end="[35:10]" range.start="[35:7]" spelling="Foo"/>
+                     <NamespaceRef col="7" def_id="202025814824" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200394404539" isRef="True" line="35" range.end="[35:10]" range.start="[35:7]" spelling="Foo"/>
                      
             
                   </DeclRefExpr>
@@ -641,19 +764,19 @@
                </UnexposedExpr>
                
           
-               <UnexposedExpr col="29" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="100044622176" line="35" range.end="[35:30]" range.start="[35:29]" type="char">
+               <UnexposedExpr col="29" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="201548083845" line="35" range.end="[35:30]" range.start="[35:29]" type="char">
                   
             
-                  <IntegerLiteral col="29" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="103312576171" line="35" range.end="[35:30]" range.start="[35:29]" type="int"/>
+                  <IntegerLiteral col="29" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="201521630899" line="35" range.end="[35:30]" range.start="[35:29]" type="int"/>
                   
           
                </UnexposedExpr>
                
           
-               <UnexposedExpr col="32" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="100652513328" line="35" range.end="[35:33]" range.start="[35:32]" type="char">
+               <UnexposedExpr col="32" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200231571743" line="35" range.end="[35:33]" range.start="[35:32]" type="char">
                   
             
-                  <IntegerLiteral col="32" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="100280790563" line="35" range.end="[35:33]" range.start="[35:32]" type="int"/>
+                  <IntegerLiteral col="32" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200726156720" line="35" range.end="[35:33]" range.start="[35:32]" type="int"/>
                   
           
                </UnexposedExpr>
@@ -662,25 +785,25 @@
             </CallExpr>
             
         
-            <CompoundStmt col="37" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="100573702575" line="35" range.end="[37:4]" range.start="[35:37]"/>
+            <CompoundStmt col="37" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="201558667460" line="35" range.end="[37:4]" range.start="[35:37]"/>
             
       
          </IfStmt>
          
       
-         <IfStmt col="3" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102528581573" line="38" range.end="[40:4]" range.start="[38:3]">
+         <IfStmt col="3" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="203216844541" line="38" range.end="[40:4]" range.start="[38:3]">
             
         
-            <CallExpr col="7" def_id="102847768392" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102481464285" line="38" range.end="[38:36]" range.start="[38:7]" spelling="tfun" type="bool">
+            <CallExpr col="7" def_id="201094995016" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="201532493577" line="38" range.end="[38:36]" range.start="[38:7]" spelling="tfun" type="bool">
                
           
-               <UnexposedExpr col="12" def_id="102847768392" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="101179415883" line="38" range.end="[38:30]" range.start="[38:7]" spelling="tfun" type="bool (*)(float, float)">
+               <UnexposedExpr col="12" def_id="201094995016" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200052282663" line="38" range.end="[38:30]" range.start="[38:7]" spelling="tfun" type="bool (*)(float, float)">
                   
             
-                  <DeclRefExpr col="12" def_id="102847768392" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102999552757" line="38" range.end="[38:30]" range.start="[38:7]" spelling="tfun" type="bool (float, float)">
+                  <DeclRefExpr col="12" def_id="201094995016" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="201418811691" line="38" range.end="[38:30]" range.start="[38:7]" spelling="tfun" type="bool (float, float)">
                      
               
-                     <NamespaceRef col="7" def_id="103758625891" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="102548905234" isRef="True" line="38" range.end="[38:10]" range.start="[38:7]" spelling="Foo"/>
+                     <NamespaceRef col="7" def_id="202025814824" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="200394404539" isRef="True" line="38" range.end="[38:10]" range.start="[38:7]" spelling="Foo"/>
                      
             
                   </DeclRefExpr>
@@ -689,19 +812,19 @@
                </UnexposedExpr>
                
           
-               <UnexposedExpr col="31" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="101919831680" line="38" range.end="[38:32]" range.start="[38:31]" type="float">
+               <UnexposedExpr col="31" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="202425731498" line="38" range.end="[38:32]" range.start="[38:31]" type="float">
                   
             
-                  <IntegerLiteral col="31" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="101740774600" line="38" range.end="[38:32]" range.start="[38:31]" type="int"/>
+                  <IntegerLiteral col="31" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="204095002273" line="38" range.end="[38:32]" range.start="[38:31]" type="int"/>
                   
           
                </UnexposedExpr>
                
           
-               <UnexposedExpr col="34" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="104020021540" line="38" range.end="[38:35]" range.start="[38:34]" type="float">
+               <UnexposedExpr col="34" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="201961897209" line="38" range.end="[38:35]" range.start="[38:34]" type="float">
                   
             
-                  <IntegerLiteral col="34" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="100186153891" line="38" range.end="[38:35]" range.start="[38:34]" type="int"/>
+                  <IntegerLiteral col="34" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="201116279769" line="38" range.end="[38:35]" range.start="[38:34]" type="int"/>
                   
           
                </UnexposedExpr>
@@ -710,7 +833,7 @@
             </CallExpr>
             
         
-            <CompoundStmt col="39" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="103316450050" line="38" range.end="[40:4]" range.start="[38:39]"/>
+            <CompoundStmt col="39" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc" id="202423629049" line="38" range.end="[40:4]" range.start="[38:39]"/>
             
       
          </IfStmt>

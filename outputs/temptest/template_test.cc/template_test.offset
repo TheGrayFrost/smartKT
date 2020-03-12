@@ -1,0 +1,7 @@
+# FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	_ZN5DummyIifEC4Eif	None	s	100182658817	S	4
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	_ZN5DummyIifEC4Eif	None	t	102856780555	T	4
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	_ZN5DummyIifE13member_methodERKf	16	arg_value	100081109070	const T &	8
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	main	20	argc	102554949111	int	4
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	main	32	argv	102571758920	char **	8
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	main	12	local_p	100955746978	Dummy<int, float>	8

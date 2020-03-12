@@ -37,7 +37,7 @@ main.out: main.o lib.so
 %.out.address: statinfo/%.address
 	cp $< statinfo/$@
 %.dump: %.out %.out.address ./obj-intel64/memtracker.so
-	../PIN/pin -t obj-intel64/memtracker.so -- ./$< $(inp) > op.txt
+	../PIN/pin -t obj-intel64/memtracker.so exe=./$< inp=$(inp) run=$(run) -- ./$< $(inp) > op.txt
 
 cleaner:
 # 	-rm -r statinfo/

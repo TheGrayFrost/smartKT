@@ -1,0 +1,7 @@
+# FILENAME	FUNCNODEID	FUNCNAME	NARGS	ARGTYPE*	RETTYPE
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	100916312646		2	S	T	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	101066055708		0	auto
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	102198344914		1	const T &	bool
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	100042968821	main	2	int	char **	int
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	100590627402	_ZN5DummyIifEC1Eif	2	int	float	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	103287032661	_ZN5DummyIifE13member_methodERKf	1	const float &	bool

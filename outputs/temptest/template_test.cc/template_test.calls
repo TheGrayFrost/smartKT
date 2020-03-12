@@ -1,0 +1,3 @@
+# FILENAME	LINENUM	FUNCNAME	CALLNODEID	CALLEXPR
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	35	_ZN5DummyIifEC1Eif	100039720895	local_p ( 3 , 4.0 )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	42	_ZN5DummyIifE13member_methodERKf	101272735174	local_p . member_method ( 2 )

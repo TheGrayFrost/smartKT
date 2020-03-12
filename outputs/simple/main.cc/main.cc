@@ -1,18 +1,28 @@
-#include "random.hh"
+int b[4];
 
-namespace Foo
+struct r
 {
-	extern int u, v;
-}
-
-using namespace Foo;
-using namespace Bar;
-
-int r = v, z = u;
+	int x;
+	char y;
+} z;
 
 int main()
 {
-	A i, j;
-	int x = z = f(j), y = Bar::f(i);
+	int a[2] = {1, 4};
+	r s[4];
+	r k = z;
+	a[1] = 9;
+	int x = 8;
+	int * p;
+	p = &x;
+	(*p) = 5;
+	p = &b[2];
+	(*p) = 7;
+	p = a;
+	p = &s[2].x;
+	p = (int *)&k.y;
+	int * q = p;
+	q++;
+	q = p + 1;
 	return 0;
 }

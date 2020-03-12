@@ -1,6 +1,15 @@
 # FILENAME	FUNCNODEID	FUNCNAME	NARGS	ARGTYPE*	RETTYPE
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh	101624955110	_ZN3Foo1BC1Ev	0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	100261001983	_ZN3Foo3funEii	2	int	int	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	100344721268	_ZN3Foo3funEi	1	int	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	103378484318	_Z3funi	1	int	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	101423211659	main	0	int
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh	204200020930	_ZN3Foo1BC1Ev	0	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	200874775306	_ZN3Foo3funEii	2	int	int	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	203738382970	_ZN3Foo3funEi	1	int	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh	202617132068	_ZN3Foo1AC1Ev	0	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	203975854746	_ZN3Foo4tfunIffEEbT_T0_	2	float	float	bool
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	200113116055	_ZN3Foo4tfunIffEEbT_T0_	2	float	float	bool
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	200326145118	_ZN3Foo4tfunIffEEbT_T0_	2	float	float	bool
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	202967075768	_ZN3Foo4tfunIffEEbT_T0_	2	float	float	bool
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	204072119631	_ZN3Foo4tfunIffEEbT_T0_	2	float	float	bool
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	203303049121	_ZN3Foo4tfunIffEEbT_T0_	2	float	float	bool
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	201641901094	_Z3funi	1	int	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	200083054576	main	0	int
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	201063258799	_ZN3Foo4tfunIifEEbT_T0_	2	int	float	bool
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	201622772562	_ZN3Foo4tfunIccEEbT_T0_	2	char	char	bool

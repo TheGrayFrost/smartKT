@@ -2,20 +2,36 @@
 /usr/bin/cmake3 -E cmake_progress_start /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build/CMakeFiles /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build/CMakeFiles/progress.marks
 make -f CMakeFiles/Makefile2 all
 make[1]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build'
+make -f CMakeFiles/test.out.dir/build.make CMakeFiles/test.out.dir/depend
 make -f CMakeFiles/driver.out.dir/build.make CMakeFiles/driver.out.dir/depend
 make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build'
+cd /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build && /usr/bin/cmake3 -E cmake_depends "Unix Makefiles" /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build/CMakeFiles/test.out.dir/DependInfo.cmake --color=
+make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build'
 cd /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build && /usr/bin/cmake3 -E cmake_depends "Unix Makefiles" /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build/CMakeFiles/driver.out.dir/DependInfo.cmake --color=
+Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build/CMakeFiles/test.out.dir/DependInfo.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build/CMakeFiles/test.out.dir/depend.internal".
+Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build/CMakeFiles/test.out.dir/depend.internal".
+Scanning dependencies of target test.out
+make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build'
+make -f CMakeFiles/test.out.dir/build.make CMakeFiles/test.out.dir/build
+make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build'
 Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build/CMakeFiles/driver.out.dir/DependInfo.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build/CMakeFiles/driver.out.dir/depend.internal".
 Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build/CMakeFiles/driver.out.dir/depend.internal".
 Scanning dependencies of target driver.out
 make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build'
 make -f CMakeFiles/driver.out.dir/build.make CMakeFiles/driver.out.dir/build
 make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build'
+[ 25%] Building CXX object CMakeFiles/test.out.dir/template_test.cc.o
+/opt/rh/devtoolset-8/root/usr/bin/c++   -I/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo  -gdwarf-4   -std=gnu++14 -o CMakeFiles/test.out.dir/template_test.cc.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc
 [ 50%] Building CXX object CMakeFiles/driver.out.dir/driver.cc.o
-/opt/rh/devtoolset-8/root/usr/bin/c++   -I/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo  -gdwarf-4   -o CMakeFiles/driver.out.dir/driver.cc.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc
+/opt/rh/devtoolset-8/root/usr/bin/c++   -I/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo  -gdwarf-4   -std=gnu++14 -o CMakeFiles/driver.out.dir/driver.cc.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc
+[ 75%] Linking CXX executable test.out
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/test.out.dir/link.txt --verbose=1
+/opt/rh/devtoolset-8/root/usr/bin/c++  -gdwarf-4  -L/usr/lib64/mysql -L/usr/lib64/ -rdynamic CMakeFiles/test.out.dir/template_test.cc.o  -o test.out 
 [100%] Linking CXX executable driver.out
 /usr/bin/cmake3 -E cmake_link_script CMakeFiles/driver.out.dir/link.txt --verbose=1
 /opt/rh/devtoolset-8/root/usr/bin/c++  -gdwarf-4  -L/usr/lib64/mysql -L/usr/lib64/ -rdynamic CMakeFiles/driver.out.dir/driver.cc.o  -o driver.out 
+make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build'
+[100%] Built target test.out
 make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build'
 [100%] Built target driver.out
 make[1]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build'

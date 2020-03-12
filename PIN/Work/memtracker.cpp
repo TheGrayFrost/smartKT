@@ -8,6 +8,8 @@
 #include <set>
 #include <cstdlib>
 
+#define DEBUG true
+
 // parse with new header
 // emit with new header
 // id -> ts
@@ -117,14 +119,33 @@ struct variable
 {
 	std::string name;	// variable name
 	std::string id;		// clang node id
-	ssize_t size;		// size (needed for structs, classes)
+	ssize_t size;		// base class size (needed for structs, classes)
+	int nElem;			// number of elements in array
 	std::string fname;	// variable container
 	std::string type;	// variable type
 	std::string pid;	// variable semantic parent id
-	std::string spattr;	// special attribute: storage class type
+	std::string spattr;	// special attribute: storage class type'
+	bool isPtr;			// whether this is a pointer
 
 	void print(std::ostream& outf = std::cout) 
-	{outf << fname << ": " << type << " - " << name << ": " << id << " " << spattr << " " << (((signed)(spattr.find("STATIC")) > 0)?fname:"") << "\n";};
+	{
+		outf << fname << ": " << type << " - " << name << ": " << size << " " << nElem << " " << id << " " << 
+				spattr << " " << "\n";
+	}
+	void setAttr()
+	{
+		nElem = -1;
+		isPtr = false;
+		int u = type.find("[");
+		if (u != -1)
+		{
+			std::string numE = type.substr(u+1, type.find("]")-u-1);
+			nElem = std::atoi(numE.c_str());
+		}
+		u = type.find("*");
+		if (u != -1)
+			isPtr = true;
+	}
 };
 
 
@@ -141,23 +162,46 @@ std::map <ADDRINT, variable> globalMap;								// global address -> var id
 std::map <std::string, std::map<int, std::map<std::string, std::set<std::string>>>> funccallMap;		
 														// fname x lineno x funcname -> vector<calls>
 
-std::map <ADDRINT, variable>::iterator lookup (std::map <ADDRINT, variable>& mymap, ADDRINT addr)
+std::map <ADDRINT, variable>::iterator lookup (std::map <ADDRINT, variable>& mymap, ADDRINT addr, int& index)
 {
-	std::map <ADDRINT, variable>::iterator it = mymap.upper_bound(addr);
-	if (it != mymap.begin())
+	int sind = index;
+	index = -1;
+	std::map <ADDRINT, variable>::iterator it = mymap.lower_bound(addr);
+	if (it != mymap.begin() || sind != 0)
 	{
 		// outp << "\n\nADD: " << std::hex << it->first;
-		it--;
-		// outp << " " << std::hex << it->first << " ADD\n\n" << std::dec;
-
-		// it = std::prev(it);
+		if (sind == 0) // global
+			it--;
 		ADDRINT diff = addr - it->first;
+		// if (DEBUG)
+		// 	outp << "SIND " << sind << " ";
+		
+		if (sind != 0)
+			diff = -diff;
+
+		if (DEBUG)
+			outp << "FOUND FOR OFFSET " << addr << " " << it->first << " " << diff;
+		// outp << " " << std::hex << it->first << " ADD\n\n" << std::dec;
+		
+		// it = std::prev(it);
+			
 		ssize_t size = it->second.size;
+		if (it->second.nElem != -1)
+			size *= it->second.nElem;
+		if (DEBUG)
+			outp << " " << it->second.nElem << " " << size << "\n";
 		// if (diff != 0)
 		// 	outp << "\n\nADD: " << std::hex << it->first << " " << addr << std::dec << " << DIFF: " << diff << " Size: " << size << "\n\n";
 		if (size > diff)
+		{
+			if (it->second.nElem != -1)
+				index = diff/it->second.size;
+			// if (DEBUG)
+			// 	outp << "FOUND FOR OFFSET " << std::dec << addr << " " << it->first << "\n";
 			return it;
+		}
 	}
+	
 	return mymap.end();
 }
 
@@ -182,7 +226,7 @@ std::vector <std::pair <ADDRINT, std::pair <std::string, int>>> stackMap;
 
 
 // basic initialization
-VOID init(std::string locf)
+VOID init(std::string locf, std::string inp, std::string rid)
 {
 	// set up the type maps
 	locks["mutex"] = 1;
@@ -197,10 +241,11 @@ VOID init(std::string locf)
 	// open the output file
 	std::string opfile = locf + ".dump";
 	outp.open(opfile.c_str());
+	outp << "DYNAMICROOT EXE " << locf << " INPUT " << inp << " RUNID " << rid << "\n";
 
 
 	// offset file
-	// FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
+	// FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE
 
 	{
 		std::ifstream offFile((folder+foff).c_str());
@@ -219,25 +264,32 @@ VOID init(std::string locf)
 
 		while (offFile.good())
 		{
-			offFile >> filename >> funcname >> hex >> offset >> dec >> var.name >> var.id;
+			offFile >> filename >> funcname >> offset >> var.name >> var.id;
+			std::cerr << filename << "\t" << funcname << "\t";
 			var.fname = funcname;
 			offFile.get();
 			std::getline (offFile, var.type, '\t');
-			offFile >> var.size >> var.pid;
+			std::cerr << var.type << "\n";
+			var.setAttr();
+			offFile >> var.size;
 			funcLocalMap[funcname][offset] = var;
 			// std::cout << funcname << "\n";
 		}
 
-		// for (auto i: funcLocalMap)
-		// {
-		// 	outp << i.first << "\n";
-		// 	for (auto j : i.second)
-		// 	{
-		// 		outp << j.first << " ";
-		// 		j.second.print(outp);
-		// 	}
-		// }
-		// outp << "\n";
+		if (DEBUG)
+		{
+			for (auto i: funcLocalMap)
+			{
+				outp << i.first << "\n";
+				for (auto j : i.second)
+				{
+					outp << j.first << " ";
+					j.second.print(outp);
+				}
+			}
+			outp << "\n";
+		}
+		
 
 		offFile.close();
 
@@ -309,6 +361,7 @@ VOID init(std::string locf)
 				std::getline (argFile, vartype, '\n');
 			}
 		}
+
 
 	// while (offFile.good())
 	// {
@@ -432,6 +485,7 @@ VOID ImageLoad(IMG img, VOID *v)
 		addrFile >> hex >> address >> dec >> var.name >> var.id;
 		addrFile.get();
 		std::getline (addrFile, var.type, '\t');
+		var.setAttr();
 		addrFile >> var.size >> var.pid >> var.spattr;
 		if ((signed)(var.spattr.find("STATIC")) > 0)
 			addrFile >> var.fname;
@@ -483,13 +537,14 @@ VOID dataman (THREADID tid, ADDRINT ina, ADDRINT memOp)
 	variable var;
 	fnlog f;
 	ADDRINT offset;
+	int index = 0;
 	bool found = false;
 	bool stat = false;
 	std::string accessType;
 	std::map <ADDRINT, variable>::iterator it;
 
 	// look in globals
-	it = lookup(globalMap, memOp);
+	it = lookup(globalMap, memOp, index);
 	if (it != globalMap.end())
 	{
 		var = it->second;
@@ -499,11 +554,12 @@ VOID dataman (THREADID tid, ADDRINT ina, ADDRINT memOp)
 	}
 	else
 	{
+		index = 1;
 		// look in current stack
 		f = invstack[tid].back();
 		offset = f.rbp - memOp;
 		auto& curmap = funcLocalMap[f.fname];
-		it = lookup(curmap, offset);
+		it = lookup(curmap, offset, index);
 		if (it != curmap.end())
 		{
 			accessType = "LOCAL";	// local access
@@ -522,7 +578,7 @@ VOID dataman (THREADID tid, ADDRINT ina, ADDRINT memOp)
 				offset = itstack->first - memOp;	// get offset from current RBP
 				// lookup in funcLocals
 				auto& offMap = funcLocalMap[f.fname];
-				it = lookup(offMap, offset);
+				it = lookup(offMap, offset, index);
 				if (it != offMap.end())
 				{
 					accessType = "NONLOCALSTACK";	// nonlocal access
@@ -537,19 +593,25 @@ VOID dataman (THREADID tid, ADDRINT ina, ADDRINT memOp)
 
 	if (not found)
 	{
-		// outp << "VARIABLE NOT FOUND.... REAL ADDRESS: 0x" << std::hex << memOp << std::dec << ".\n";
-		// inslist[ina].shortPrint(outp);
+		outp << "VARIABLE NOT FOUND.... REAL ADDRESS: 0x" << std::hex << memOp << std::dec << ".\n";
+		if (DEBUG)
+			inslist[ina].shortPrint(outp);
 		return;
 	}
 	else
 	{
-		// inslist[ina].shortPrint(outp);
+		if (DEBUG)
+			inslist[ina].shortPrint(outp);
 		
 		// print event type
 		if (inslist[ina].flag == 'r')
 			outp << "READ";
 		else if (inslist[ina].flag == 'w')
+		{
+			if (var.isPtr)
+				outp << "POINTER";
 			outp << "WRITE";
+		}
 		outp << " THREADID " << tid << " VARCLASS " << accessType;		// print thread id and access type
 		if (stat)
 		{
@@ -564,7 +626,15 @@ VOID dataman (THREADID tid, ADDRINT ina, ADDRINT memOp)
 				// function linkage name PIN_UndecorateSymbolName(fnstack[tid][idx], UNDECORATION_NAME_ONLY)
 			outp << " OFFSET 0x" << std::hex << offset << std::dec;
 		}
-		outp << " VARNAME " << var.name << " VARID " << var.id;
+		if (DEBUG)
+			outp << " OFFSET 0x" << std::hex << offset << std::dec;
+		if (var.isPtr)
+		{
+
+		}
+		outp << " VARNAME " << var.name << " VARID " << var.id;;
+		if (index != -1) outp << " INDEX " << index;
+			
 		outp << " FUNCNAME " << inslist[ina].rtnName;
 		// synchronization info
 		outp << " SYNCS ";
@@ -706,7 +776,8 @@ VOID Instruction(INS ins, VOID * v)
 	{
 		if (inslist.find(ina) == inslist.end())
 			inslist[ina] = INSINFO(ins, fname, column, line);	// add to list
-		// inslist[ina].shortPrint(outp);
+		// if (DEBUG)
+		// 	inslist[ina].shortPrint(outp);
 
 		// if it is a call event
 		std::string target = inslist[ina].target;
@@ -935,11 +1006,24 @@ int main(int argc, char * argv[])
 	PIN_Init(argc, argv);
 	PIN_InitSymbols();
 
-	// get the executable name
-	std::string u(argv[argc-1]);
+	if (DEBUG)
+		for (int i = 0; i < argc; ++i)
+			std::cerr << argv[i] << "\n";
+
+	// get run info
+	std::string u(argv[5]);
 	std::string locf = u.substr(u.find_last_of("/") + 1, u.find_last_of(".") - u.find_last_of("/") - 1);
+	std::string v(argv[6]);
+	std::string inp = v.substr(v.find("=") + 1, -1);
+	if (inp.length() == 0)
+		inp = "[None]";
+	std::string w(argv[6]);
+	std::string rid = w.substr(w.find("=") + 1, -1);
+	if (rid.length() == 0)
+		rid = "0";
+
 	// basic variable initializations
-	init(locf);
+	init(locf, inp, rid);
 	IMG_AddInstrumentFunction(ImageLoad, 0);
 	RTN_AddInstrumentFunction(Routine, 0);		// Routine level Instrumentation for locking and invocation events
 	INS_AddInstrumentFunction(Instruction, 0);	// Instruction level Instrumentation for all other events

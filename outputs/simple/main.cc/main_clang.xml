@@ -1,100 +1,153 @@
-<?xml version="1.0" ?>
-<STATICROOT id="0">
-   <TRANSLATION_UNIT extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[18]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[1]" id="2063699857" is_definition="False" linenum="0" location="None" spelling="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" type="" usr="">
-      <NAMESPACE extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[11]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[4]" id="1829009447" is_definition="True" lex_parent_id="2063699857" linenum="4" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[4]" parent_id="2063699857" spelling="Foo" type="" usr="c:@N@Foo">
-         <CLASS_DECL extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[6]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[6]" id="3632570317" is_definition="False" lex_parent_id="1829009447" linenum="6" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[6]" parent_id="1829009447" spelling="A" type="Foo::A" usr="c:@N@Foo@S@A"/>
-         <NAMESPACE extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[10]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[7]" id="125352691" is_definition="True" lex_parent_id="1829009447" linenum="7" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[7]" parent_id="1829009447" spelling="Bar" type="" usr="c:@N@Foo@N@Bar">
-            <FUNCTION_DECL extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[9]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[9]" id="670231781" is_definition="False" lex_parent_id="125352691" linenum="9" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[9]" parent_id="125352691" spelling="f" type="int (Foo::A)" usr="c:@N@Foo@N@Bar@F@f#$@N@Foo@S@A#">
-               <PARM_DECL extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[9]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[9]" id="1830472454" is_definition="True" lex_parent_id="670231781" linenum="9" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[9]" parent_id="670231781" spelling="u" type="Foo::A" usr="c:random.hh@87@N@Foo@N@Bar@F@f#$@N@Foo@S@A#@u">
-                  <TYPE_REF extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[9]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[9]" id="3619895453" is_definition="False" linenum="9" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[9]" spelling="class Foo::A" type="Foo::A" usr=""/>
-               </PARM_DECL>
-            </FUNCTION_DECL>
-         </NAMESPACE>
-      </NAMESPACE>
-      <CLASS_DECL extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[19]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[13]" id="3619895453" is_definition="True" lex_parent_id="2063699857" linenum="13" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[13]" parent_id="1829009447" spelling="A" type="Foo::A" usr="c:@N@Foo@S@A">
-         <NAMESPACE_REF extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[13]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[13]" id="1829009447" is_definition="False" linenum="13" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[13]" spelling="Foo" type="" usr=""/>
-         <CXX_ACCESS_SPEC_DECL access_specifier="PUBLIC" extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[15]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[15]" id="240774479" is_definition="True" lex_parent_id="3619895453" linenum="15" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[15]" parent_id="3619895453" spelling="" type="" usr="c:"/>
-         <FIELD_DECL access_specifier="PUBLIC" extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[16]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[16]" id="3942302518" is_definition="True" lex_parent_id="3619895453" linenum="16" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[16]" parent_id="3619895453" spelling="x" type="int" usr="c:@N@Foo@S@A@FI@x"/>
-         <FIELD_DECL access_specifier="PUBLIC" extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[16]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[16]" id="1197413994" is_definition="True" lex_parent_id="3619895453" linenum="16" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[16]" parent_id="3619895453" spelling="y" type="int" usr="c:@N@Foo@S@A@FI@y"/>
-         <CONSTRUCTOR access_specifier="PUBLIC" extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[17]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[17]" id="1228498380" is_definition="True" lex_parent_id="3619895453" linenum="17" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[17]" parent_id="3619895453" spelling="A" type="void ()" usr="c:@N@Foo@S@A@F@A#">
-            <COMPOUND_STMT extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[17]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[17]" id="3111229637" is_definition="False" linenum="17" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[17]" parent_id="1228498380" spelling="" type="" usr="">
-               <BINARY_OPERATOR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[17]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[17]" id="2904680143" is_definition="False" linenum="17" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[17]" spelling="" type="int" usr="">
-                  <MEMBER_REF_EXPR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[17]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[17]" id="3942302518" is_definition="False" linenum="17" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[17]" spelling="x" type="int" usr=""/>
-                  <INTEGER_LITERAL extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[17]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[17]" id="2651665006" is_definition="False" linenum="17" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/random.hh[17]" spelling="" type="int" usr=""/>
-               </BINARY_OPERATOR>
-            </COMPOUND_STMT>
-         </CONSTRUCTOR>
-      </CLASS_DECL>
-      <NAMESPACE extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[6]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[3]" id="1903108222" is_definition="True" lex_parent_id="2063699857" linenum="3" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[3]" parent_id="2063699857" spelling="Foo" type="" usr="c:@N@Foo">
-         <VAR_DECL extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[5]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[5]" id="3392248390" is_definition="False" lex_parent_id="1903108222" linenum="5" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[5]" parent_id="1903108222" spelling="u" storage_class="EXTERN" type="int" usr="c:@N@Foo@u"/>
-         <VAR_DECL extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[5]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[5]" id="3433108443" is_definition="False" lex_parent_id="1903108222" linenum="5" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[5]" parent_id="1903108222" spelling="v" storage_class="EXTERN" type="int" usr="c:@N@Foo@v"/>
-      </NAMESPACE>
-      <USING_DIRECTIVE extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[8]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[8]" id="3343174663" is_definition="False" lex_parent_id="2063699857" linenum="8" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[8]" parent_id="2063699857" spelling="" type="" usr="">
-         <NAMESPACE_REF extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[8]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[8]" id="1829009447" is_definition="False" linenum="8" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[8]" spelling="Foo" type="" usr=""/>
-      </USING_DIRECTIVE>
-      <USING_DIRECTIVE extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[9]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[9]" id="4016577751" is_definition="False" lex_parent_id="2063699857" linenum="9" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[9]" parent_id="2063699857" spelling="" type="" usr="">
-         <NAMESPACE_REF extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[9]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[9]" id="125352691" is_definition="False" linenum="9" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[9]" spelling="Bar" type="" usr=""/>
-      </USING_DIRECTIVE>
-      <VAR_DECL extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[11]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[11]" id="3469640654" is_definition="True" lex_parent_id="2063699857" linenum="11" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[11]" parent_id="2063699857" spelling="r" type="int" usr="c:@r">
-         <UNEXPOSED_EXPR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[11]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[11]" id="3433108443" is_definition="False" linenum="11" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[11]" parent_id="3469640654" spelling="v" type="int" usr="">
-            <DECL_REF_EXPR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[11]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[11]" id="3433108443" is_definition="False" linenum="11" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[11]" spelling="v" type="int" usr=""/>
-         </UNEXPOSED_EXPR>
-      </VAR_DECL>
-      <VAR_DECL extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[11]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[11]" id="2159813011" is_definition="True" lex_parent_id="2063699857" linenum="11" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[11]" parent_id="2063699857" spelling="z" type="int" usr="c:@z">
-         <UNEXPOSED_EXPR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[11]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[11]" id="3392248390" is_definition="False" linenum="11" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[11]" parent_id="2159813011" spelling="u" type="int" usr="">
-            <DECL_REF_EXPR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[11]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[11]" id="3392248390" is_definition="False" linenum="11" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[11]" spelling="u" type="int" usr=""/>
-         </UNEXPOSED_EXPR>
-      </VAR_DECL>
-      <FUNCTION_DECL extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[18]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[13]" id="3909365802" is_definition="True" lex_parent_id="2063699857" linenum="13" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[13]" parent_id="2063699857" spelling="main" type="int ()" usr="c:@F@main#">
-         <COMPOUND_STMT extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[18]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[14]" id="390012254" is_definition="False" linenum="14" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[14]" parent_id="3909365802" spelling="" type="" usr="">
-            <DECL_STMT extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[15]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[15]" id="789166957" is_definition="False" linenum="15" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[15]" spelling="" type="" usr="">
-               <VAR_DECL extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[15]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[15]" id="168619143" is_definition="True" lex_parent_id="3909365802" linenum="15" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[15]" parent_id="3909365802" spelling="i" type="Foo::A" usr="c:main.cc@135@F@main#@i">
-                  <TYPE_REF extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[15]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[15]" id="3619895453" is_definition="False" linenum="15" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[15]" spelling="class Foo::A" type="Foo::A" usr=""/>
-                  <CALL_EXPR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[15]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[15]" id="1228498380" is_definition="False" linenum="15" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[15]" parent_id="168619143" spelling="A" type="Foo::A" usr=""/>
-               </VAR_DECL>
-               <VAR_DECL extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[15]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[15]" id="3832911438" is_definition="False" lex_parent_id="3909365802" linenum="15" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[15]" parent_id="3909365802" spelling="j" type="Foo::A" usr="c:main.cc@135@F@main#@j">
-                  <TYPE_REF extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[15]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[15]" id="3619895453" is_definition="False" linenum="15" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[15]" spelling="class Foo::A" type="Foo::A" usr=""/>
-                  <CALL_EXPR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[15]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[15]" id="1228498380" is_definition="False" linenum="15" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[15]" parent_id="3832911438" spelling="A" type="Foo::A" usr=""/>
-               </VAR_DECL>
-            </DECL_STMT>
-            <DECL_STMT extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" id="1914896069" is_definition="False" linenum="16" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" spelling="" type="" usr="">
-               <VAR_DECL extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" id="3755875972" is_definition="True" lex_parent_id="3909365802" linenum="16" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" parent_id="3909365802" spelling="x" type="int" usr="c:main.cc@144@F@main#@x">
-                  <UNEXPOSED_EXPR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" id="3864082768" is_definition="False" linenum="16" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" parent_id="3755875972" spelling="" type="int" usr="">
-                     <BINARY_OPERATOR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" id="3079537148" is_definition="False" linenum="16" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" spelling="" type="int" usr="">
-                        <DECL_REF_EXPR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" id="2159813011" is_definition="False" linenum="16" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" spelling="z" type="int" usr=""/>
-                        <CALL_EXPR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" id="670231781" is_definition="False" linenum="16" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" spelling="f" type="int" usr="">
-                           <UNEXPOSED_EXPR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" id="670231781" is_definition="False" linenum="16" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" spelling="f" type="int (*)(Foo::A)" usr="">
-                              <DECL_REF_EXPR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" id="670231781" is_definition="False" linenum="16" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" spelling="f" type="int (Foo::A)" usr=""/>
-                           </UNEXPOSED_EXPR>
-                           <CALL_EXPR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" id="1472016901" is_definition="False" linenum="16" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" spelling="A" type="Foo::A" usr="">
-                              <UNEXPOSED_EXPR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" id="3832911438" is_definition="False" linenum="16" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" spelling="j" type="const Foo::A" usr="">
-                                 <DECL_REF_EXPR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" id="3832911438" is_definition="False" linenum="16" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" spelling="j" type="Foo::A" usr=""/>
-                              </UNEXPOSED_EXPR>
-                           </CALL_EXPR>
-                        </CALL_EXPR>
-                     </BINARY_OPERATOR>
-                  </UNEXPOSED_EXPR>
-               </VAR_DECL>
-               <VAR_DECL extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" id="2204409424" is_definition="False" lex_parent_id="3909365802" linenum="16" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" parent_id="3909365802" spelling="y" type="int" usr="c:main.cc@144@F@main#@y">
-                  <CALL_EXPR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" id="670231781" is_definition="False" linenum="16" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" parent_id="2204409424" spelling="f" type="int" usr="">
-                     <UNEXPOSED_EXPR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" id="670231781" is_definition="False" linenum="16" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" spelling="f" type="int (*)(Foo::A)" usr="">
-                        <DECL_REF_EXPR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" id="670231781" is_definition="False" linenum="16" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" spelling="f" type="int (Foo::A)" usr="">
-                           <NAMESPACE_REF extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" id="125352691" is_definition="False" linenum="16" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" spelling="Bar" type="" usr=""/>
-                        </DECL_REF_EXPR>
-                     </UNEXPOSED_EXPR>
-                     <CALL_EXPR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" id="1472016901" is_definition="False" linenum="16" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" spelling="A" type="Foo::A" usr="">
-                        <UNEXPOSED_EXPR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" id="168619143" is_definition="False" linenum="16" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" spelling="i" type="const Foo::A" usr="">
-                           <DECL_REF_EXPR extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" id="168619143" is_definition="False" linenum="16" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[16]" spelling="i" type="Foo::A" usr=""/>
-                        </UNEXPOSED_EXPR>
-                     </CALL_EXPR>
-                  </CALL_EXPR>
-               </VAR_DECL>
-            </DECL_STMT>
-            <RETURN_STMT extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[17]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[17]" id="1872062678" is_definition="False" linenum="17" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[17]" spelling="" type="" usr="">
-               <INTEGER_LITERAL extent.end="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[17]" extent.start="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[17]" id="1582570070" is_definition="False" linenum="17" location="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc[17]" spelling="" type="int" usr=""/>
-            </RETURN_STMT>
-         </COMPOUND_STMT>
-      </FUNCTION_DECL>
-   </TRANSLATION_UNIT>
-</STATICROOT>
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TranslationUnit SYSTEM "smartkt.dtd">
+<TranslationUnit>
+  <VarDecl id="103536028573" spelling="b" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="1" col="5" range.start="[1:1]" range.end="[1:9]" type="int [4]" usr="c:@b" lex_parent_id="100047033030" storage_class="default_auto" visibility="default" display_name="b" isDecl="True" isDef="True" linkage_kind="external">
+    <IntegerLiteral id="104052150418" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="1" col="7" range.start="[1:7]" range.end="[1:8]" type="int" sem_parent_id="103536028573" storage_class="default_auto"/>
+  </VarDecl>
+  <StructDecl id="100248289036" spelling="r" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="3" col="8" range.start="[3:1]" range.end="[7:2]" type="r" usr="c:@S@r" lex_parent_id="100047033030" visibility="default" display_name="r" isDecl="True" isDef="True" linkage_kind="external">
+    <FieldDecl id="102333352086" spelling="x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="5" col="6" range.start="[5:2]" range.end="[5:7]" type="int" usr="c:@S@r@FI@x" lex_parent_id="100248289036" visibility="default" display_name="x" access_specifier="Public" isDecl="True" isDef="True" linkage_kind="external"/>
+    <FieldDecl id="100376001225" spelling="y" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="6" col="7" range.start="[6:2]" range.end="[6:8]" type="char" usr="c:@S@r@FI@y" lex_parent_id="100248289036" visibility="default" display_name="y" access_specifier="Public" isDecl="True" isDef="True" linkage_kind="external"/>
+  </StructDecl>
+  <VarDecl id="101189767137" spelling="z" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="7" col="3" range.start="[3:1]" range.end="[7:4]" type="struct r" usr="c:@z" lex_parent_id="100047033030" storage_class="default_auto" visibility="default" display_name="z" isDecl="True" isDef="True" linkage_kind="external">
+    <StructDecl id="100248289036" spelling="r" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="3" col="8" range.start="[3:1]" range.end="[7:2]" type="r" usr="c:@S@r" lex_parent_id="100047033030" visibility="default" display_name="r" isDecl="True" isDef="True" linkage_kind="external">
+      <FieldDecl id="102333352086" spelling="x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="5" col="6" range.start="[5:2]" range.end="[5:7]" type="int" usr="c:@S@r@FI@x" lex_parent_id="100248289036" visibility="default" display_name="x" access_specifier="Public" isDecl="True" isDef="True" linkage_kind="external"/>
+      <FieldDecl id="100376001225" spelling="y" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="6" col="7" range.start="[6:2]" range.end="[6:8]" type="char" usr="c:@S@r@FI@y" lex_parent_id="100248289036" visibility="default" display_name="y" access_specifier="Public" isDecl="True" isDef="True" linkage_kind="external"/>
+    </StructDecl>
+    <CallExpr id="102784261563" spelling="r" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="7" col="3" range.start="[7:3]" range.end="[7:4]" type="struct r" sem_parent_id="101189767137" def_id="102610114999" storage_class="default_auto"/>
+  </VarDecl>
+  <FunctionDecl id="102386053810" spelling="main" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="9" col="5" range.start="[9:1]" range.end="[28:2]" type="int ()" usr="c:@F@main#" lex_parent_id="100047033030" storage_class="default_auto" visibility="default" display_name="main()" isDecl="True" isDef="True" linkage_kind="external">
+    <CompoundStmt id="100215283995" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="10" col="1" range.start="[10:1]" range.end="[28:2]" sem_parent_id="102386053810" storage_class="default_auto">
+      <DeclStmt id="103406952224" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="11" col="2" range.start="[11:2]" range.end="[11:20]">
+        <VarDecl id="101503234558" spelling="a" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="11" col="6" range.start="[11:2]" range.end="[11:19]" type="int [2]" usr="c:main.cc@59@F@main#@a" lex_parent_id="102386053810" storage_class="default_auto" visibility="default" display_name="a" isDecl="True" isDef="True" linkage_kind="auto">
+          <IntegerLiteral id="100877093316" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="11" col="8" range.start="[11:8]" range.end="[11:9]" type="int" sem_parent_id="101503234558" storage_class="default_auto"/>
+          <InitListExpr id="101751103178" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="11" col="13" range.start="[11:13]" range.end="[11:19]" type="int [2]" sem_parent_id="101503234558" storage_class="default_auto">
+            <IntegerLiteral id="102356251858" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="11" col="14" range.start="[11:14]" range.end="[11:15]" type="int"/>
+            <IntegerLiteral id="102721375540" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="11" col="17" range.start="[11:17]" range.end="[11:18]" type="int"/>
+          </InitListExpr>
+        </VarDecl>
+      </DeclStmt>
+      <DeclStmt id="100447208621" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="12" col="2" range.start="[12:2]" range.end="[12:9]">
+        <VarDecl id="102154669942" spelling="s" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="12" col="4" range.start="[12:2]" range.end="[12:8]" type="r [4]" usr="c:main.cc@79@F@main#@s" lex_parent_id="102386053810" storage_class="default_auto" visibility="default" display_name="s" isDecl="True" isDef="True" linkage_kind="auto">
+          <TypeRef id="101474573359" spelling="struct r" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="12" col="2" range.start="[12:2]" range.end="[12:3]" type="r" def_id="100248289036" isRef="True"/>
+          <IntegerLiteral id="103641169526" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="12" col="6" range.start="[12:6]" range.end="[12:7]" type="int" sem_parent_id="102154669942" storage_class="default_auto"/>
+          <CallExpr id="101176477251" spelling="r" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="12" col="4" range.start="[12:4]" range.end="[12:5]" type="r [4]" sem_parent_id="102154669942" def_id="102610114999" storage_class="default_auto"/>
+        </VarDecl>
+      </DeclStmt>
+      <DeclStmt id="102623436467" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="13" col="2" range.start="[13:2]" range.end="[13:10]">
+        <VarDecl id="100689026449" spelling="k" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="13" col="4" range.start="[13:2]" range.end="[13:9]" type="r" usr="c:main.cc@88@F@main#@k" lex_parent_id="102386053810" storage_class="default_auto" visibility="default" display_name="k" isDecl="True" isDef="True" linkage_kind="auto">
+          <TypeRef id="101474573359" spelling="struct r" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="13" col="2" range.start="[13:2]" range.end="[13:3]" type="r" def_id="100248289036" isRef="True"/>
+          <CallExpr id="102004119547" spelling="r" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="13" col="8" range.start="[13:8]" range.end="[13:9]" type="r" sem_parent_id="100689026449" def_id="102917753014" storage_class="default_auto">
+            <UnexposedExpr id="102876409649" spelling="z" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="13" col="8" range.start="[13:8]" range.end="[13:9]" type="const struct r" def_id="101189767137">
+              <DeclRefExpr id="101538291792" spelling="z" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="13" col="8" range.start="[13:8]" range.end="[13:9]" type="struct r" def_id="101189767137"/>
+            </UnexposedExpr>
+          </CallExpr>
+        </VarDecl>
+      </DeclStmt>
+      <BinaryOperator id="100087007530" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="14" col="2" range.start="[14:2]" range.end="[14:10]" type="int" isAssignment="True">
+        <ArraySubscriptExpr id="103677639760" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="14" col="2" range.start="[14:2]" range.end="[14:6]" type="int">
+          <UnexposedExpr id="101764041112" spelling="a" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="14" col="2" range.start="[14:2]" range.end="[14:3]" type="int *" def_id="101503234558">
+            <DeclRefExpr id="103437268641" spelling="a" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="14" col="2" range.start="[14:2]" range.end="[14:3]" type="int [2]" def_id="101503234558"/>
+          </UnexposedExpr>
+          <IntegerLiteral id="101512223832" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="14" col="4" range.start="[14:4]" range.end="[14:5]" type="int"/>
+        </ArraySubscriptExpr>
+        <IntegerLiteral id="102246574927" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="14" col="9" range.start="[14:9]" range.end="[14:10]" type="int"/>
+      </BinaryOperator>
+      <DeclStmt id="103647731476" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="15" col="2" range.start="[15:2]" range.end="[15:12]">
+        <VarDecl id="101320580781" spelling="x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="15" col="6" range.start="[15:2]" range.end="[15:11]" type="int" usr="c:main.cc@109@F@main#@x" lex_parent_id="102386053810" storage_class="default_auto" visibility="default" display_name="x" isDecl="True" isDef="True" linkage_kind="auto">
+          <IntegerLiteral id="101112348364" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="15" col="10" range.start="[15:10]" range.end="[15:11]" type="int" sem_parent_id="101320580781" storage_class="default_auto"/>
+        </VarDecl>
+      </DeclStmt>
+      <DeclStmt id="100546670406" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="16" col="2" range.start="[16:2]" range.end="[16:10]">
+        <VarDecl id="102036129553" spelling="p" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="16" col="8" range.start="[16:2]" range.end="[16:9]" type="int *" usr="c:main.cc@121@F@main#@p" lex_parent_id="102386053810" storage_class="default_auto" visibility="default" display_name="p" isDecl="True" isDef="True" linkage_kind="auto"/>
+      </DeclStmt>
+      <BinaryOperator id="104103308319" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="17" col="2" range.start="[17:2]" range.end="[17:8]" type="int *" isAssignment="True">
+        <DeclRefExpr id="104210691788" spelling="p" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="17" col="2" range.start="[17:2]" range.end="[17:3]" type="int *" def_id="102036129553"/>
+        <UnaryOperator id="103069406569" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="17" col="6" range.start="[17:6]" range.end="[17:8]" type="int *">
+          <DeclRefExpr id="102952921805" spelling="x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="17" col="7" range.start="[17:7]" range.end="[17:8]" type="int" def_id="101320580781"/>
+        </UnaryOperator>
+      </BinaryOperator>
+      <BinaryOperator id="102096055481" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="18" col="2" range.start="[18:2]" range.end="[18:10]" type="int" isAssignment="True">
+        <ParenExpr id="104140632883" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="18" col="2" range.start="[18:2]" range.end="[18:6]" type="int">
+          <UnaryOperator id="103122098557" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="18" col="3" range.start="[18:3]" range.end="[18:5]" type="int">
+            <UnexposedExpr id="100976752182" spelling="p" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="18" col="4" range.start="[18:4]" range.end="[18:5]" type="int *" def_id="102036129553">
+              <DeclRefExpr id="101423847277" spelling="p" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="18" col="4" range.start="[18:4]" range.end="[18:5]" type="int *" def_id="102036129553"/>
+            </UnexposedExpr>
+          </UnaryOperator>
+        </ParenExpr>
+        <IntegerLiteral id="103405868699" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="18" col="9" range.start="[18:9]" range.end="[18:10]" type="int"/>
+      </BinaryOperator>
+      <BinaryOperator id="100770685499" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="19" col="2" range.start="[19:2]" range.end="[19:11]" type="int *" isAssignment="True">
+        <DeclRefExpr id="100679414977" spelling="p" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="19" col="2" range.start="[19:2]" range.end="[19:3]" type="int *" def_id="102036129553"/>
+        <UnaryOperator id="102586410956" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="19" col="6" range.start="[19:6]" range.end="[19:11]" type="int *">
+          <ArraySubscriptExpr id="104076104270" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="19" col="7" range.start="[19:7]" range.end="[19:11]" type="int">
+            <UnexposedExpr id="101051168698" spelling="b" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="19" col="7" range.start="[19:7]" range.end="[19:8]" type="int *" def_id="103536028573">
+              <DeclRefExpr id="102900690902" spelling="b" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="19" col="7" range.start="[19:7]" range.end="[19:8]" type="int [4]" def_id="103536028573"/>
+            </UnexposedExpr>
+            <IntegerLiteral id="101327078533" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="19" col="9" range.start="[19:9]" range.end="[19:10]" type="int"/>
+          </ArraySubscriptExpr>
+        </UnaryOperator>
+      </BinaryOperator>
+      <BinaryOperator id="103384090983" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="20" col="2" range.start="[20:2]" range.end="[20:10]" type="int" isAssignment="True">
+        <ParenExpr id="102923112842" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="20" col="2" range.start="[20:2]" range.end="[20:6]" type="int">
+          <UnaryOperator id="101206870939" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="20" col="3" range.start="[20:3]" range.end="[20:5]" type="int">
+            <UnexposedExpr id="101367716096" spelling="p" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="20" col="4" range.start="[20:4]" range.end="[20:5]" type="int *" def_id="102036129553">
+              <DeclRefExpr id="102314929535" spelling="p" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="20" col="4" range.start="[20:4]" range.end="[20:5]" type="int *" def_id="102036129553"/>
+            </UnexposedExpr>
+          </UnaryOperator>
+        </ParenExpr>
+        <IntegerLiteral id="103319332000" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="20" col="9" range.start="[20:9]" range.end="[20:10]" type="int"/>
+      </BinaryOperator>
+      <BinaryOperator id="103609953676" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="21" col="2" range.start="[21:2]" range.end="[21:7]" type="int *" isAssignment="True">
+        <DeclRefExpr id="100996566086" spelling="p" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="21" col="2" range.start="[21:2]" range.end="[21:3]" type="int *" def_id="102036129553"/>
+        <UnexposedExpr id="100654073726" spelling="a" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="21" col="6" range.start="[21:6]" range.end="[21:7]" type="int *" def_id="101503234558">
+          <DeclRefExpr id="102784646111" spelling="a" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="21" col="6" range.start="[21:6]" range.end="[21:7]" type="int [2]" def_id="101503234558"/>
+        </UnexposedExpr>
+      </BinaryOperator>
+      <BinaryOperator id="103639532784" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="22" col="2" range.start="[22:2]" range.end="[22:13]" type="int *" isAssignment="True">
+        <DeclRefExpr id="101250307552" spelling="p" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="22" col="2" range.start="[22:2]" range.end="[22:3]" type="int *" def_id="102036129553"/>
+        <UnaryOperator id="100289336513" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="22" col="6" range.start="[22:6]" range.end="[22:13]" type="int *">
+          <MemberRefExpr id="102776145446" spelling="x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="22" col="12" range.start="[22:7]" range.end="[22:13]" type="int" def_id="102333352086">
+            <ArraySubscriptExpr id="102731351077" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="22" col="7" range.start="[22:7]" range.end="[22:11]" type="r">
+              <UnexposedExpr id="103832700626" spelling="s" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="22" col="7" range.start="[22:7]" range.end="[22:8]" type="r *" def_id="102154669942">
+                <DeclRefExpr id="100963757630" spelling="s" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="22" col="7" range.start="[22:7]" range.end="[22:8]" type="r [4]" def_id="102154669942"/>
+              </UnexposedExpr>
+              <IntegerLiteral id="102915367083" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="22" col="9" range.start="[22:9]" range.end="[22:10]" type="int"/>
+            </ArraySubscriptExpr>
+          </MemberRefExpr>
+        </UnaryOperator>
+      </BinaryOperator>
+      <BinaryOperator id="103147129518" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="23" col="2" range.start="[23:2]" range.end="[23:17]" type="int *" isAssignment="True">
+        <DeclRefExpr id="100060365531" spelling="p" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="23" col="2" range.start="[23:2]" range.end="[23:3]" type="int *" def_id="102036129553"/>
+        <CStyleCastExpr id="100114909777" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="23" col="6" range.start="[23:6]" range.end="[23:17]" type="int *">
+          <UnaryOperator id="103696039797" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="23" col="13" range.start="[23:13]" range.end="[23:17]" type="char *">
+            <MemberRefExpr id="103914507815" spelling="y" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="23" col="16" range.start="[23:14]" range.end="[23:17]" type="char" def_id="100376001225">
+              <DeclRefExpr id="103908599287" spelling="k" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="23" col="14" range.start="[23:14]" range.end="[23:15]" type="r" def_id="100689026449"/>
+            </MemberRefExpr>
+          </UnaryOperator>
+        </CStyleCastExpr>
+      </BinaryOperator>
+      <DeclStmt id="100886085356" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="24" col="2" range.start="[24:2]" range.end="[24:14]">
+        <VarDecl id="101407259264" spelling="q" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="24" col="8" range.start="[24:2]" range.end="[24:13]" type="int *" usr="c:main.cc@214@F@main#@q" lex_parent_id="102386053810" storage_class="default_auto" visibility="default" display_name="q" isDecl="True" isDef="True" linkage_kind="auto">
+          <UnexposedExpr id="101782511620" spelling="p" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="24" col="12" range.start="[24:12]" range.end="[24:13]" type="int *" sem_parent_id="101407259264" def_id="102036129553" storage_class="default_auto">
+            <DeclRefExpr id="102042019623" spelling="p" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="24" col="12" range.start="[24:12]" range.end="[24:13]" type="int *" def_id="102036129553"/>
+          </UnexposedExpr>
+        </VarDecl>
+      </DeclStmt>
+      <UnaryOperator id="103033097496" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="25" col="2" range.start="[25:2]" range.end="[25:5]" type="int *">
+        <DeclRefExpr id="101623316198" spelling="q" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="25" col="2" range.start="[25:2]" range.end="[25:3]" type="int *" def_id="101407259264"/>
+      </UnaryOperator>
+      <BinaryOperator id="102406068354" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="26" col="2" range.start="[26:2]" range.end="[26:11]" type="int *" isAssignment="True">
+        <DeclRefExpr id="103089097817" spelling="q" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="26" col="2" range.start="[26:2]" range.end="[26:3]" type="int *" def_id="101407259264"/>
+        <BinaryOperator id="101850129043" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="26" col="6" range.start="[26:6]" range.end="[26:11]" type="int *">
+          <UnexposedExpr id="102327878777" spelling="p" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="26" col="6" range.start="[26:6]" range.end="[26:7]" type="int *" def_id="102036129553">
+            <DeclRefExpr id="103295995536" spelling="p" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="26" col="6" range.start="[26:6]" range.end="[26:7]" type="int *" def_id="102036129553"/>
+          </UnexposedExpr>
+          <IntegerLiteral id="103850654668" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="26" col="10" range.start="[26:10]" range.end="[26:11]" type="int"/>
+        </BinaryOperator>
+      </BinaryOperator>
+      <ReturnStmt id="102621747189" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="27" col="2" range.start="[27:2]" range.end="[27:10]">
+        <IntegerLiteral id="100772959629" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc" line="27" col="9" range.start="[27:9]" range.end="[27:10]" type="int"/>
+      </ReturnStmt>
+    </CompoundStmt>
+  </FunctionDecl>
+</TranslationUnit>

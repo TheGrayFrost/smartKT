@@ -1,15 +1,22 @@
-# FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo3funEii	0x4	arg_x	102276798112	int	4	101794560132	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo3funEii	0x8	arg_y	102557404432	int	4	101794560132	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo3funEi	0x24	arg_x	100396844553	int	4	102427888943	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo3funEi	0x4	u	102801028809	int	4	102427888943	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo3funEi	0xc	r	100998029423	Foo::A	8	102427888943	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo3funEi	0x12	q	100549416654	Foo::B	6	102427888943	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo4tfunIffEEbT_T0_	0x4	x	101815388259	float	4	102847768392	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo4tfunIffEEbT_T0_	0x8	y	102268972211	float	4	102847768392	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	_Z3funi	0x14	arg_x	103082765383	int	4	104268339408	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	_Z3funi	0x8	r	101112178012	Foo::A	8	104268339408	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	_Z3funi	0xe	q	100633536619	Foo::B	6	104268339408	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	main	0x4	local_p	101880693474	int	4	100081595973	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	main	0x8	local_q	104261832716	int	4	100081595973	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	main	0x10	omg	102504674150	vli	8	100081595973	
+# FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo3funEii	4	arg_x	201522739528	int	4
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo3funEii	8	arg_y	204119305908	int	4
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo3funEi	36	arg_x	203279878500	int	4
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo3funEi	4	u	200128416196	int	4
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo3funEi	12	r	202290496081	Foo::A	8
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo3funEi	18	q	203242592639	Foo::B	6
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo4tfunIccEEbT_T0_	20	targ_x	201901423148	T1	1
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo4tfunIifEEbT_T0_	20	targ_x	201901423148	T1	4
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo4tfunIccEEbT_T0_	24	targ_y	201244184534	T2	1
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo4tfunIifEEbT_T0_	24	targ_y	201244184534	T2	4
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo4tfunIccEEbT_T0_	4	local_x	203704110374	int	4
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo4tfunIifEEbT_T0_	4	local_x	203704110374	int	4
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo4tfunIffEEbT_T0_	4	x	203321700848	float	4
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	_ZN3Foo4tfunIffEEbT_T0_	8	y	202627863816	float	4
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	_Z3funi	20	arg_x	202769216922	int	4
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	_Z3funi	None	u	202757597889	int	4
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	_Z3funi	8	r	201512544377	Foo::A	8
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	_Z3funi	14	q	203225455013	Foo::B	6
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	main	4	local_p	203571941592	int	4
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	main	8	local_q	203999918020	int	4
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	main	16	omg	200331290762	vli	8

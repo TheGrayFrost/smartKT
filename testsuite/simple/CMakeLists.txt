@@ -16,4 +16,4 @@ set(CMAKE_CXX_FLAGS "-std=c++17")
 # target_link_libraries (base C A)
 
 
-add_executable (random random.cc main.cc)
+add_executable (random main.cc)

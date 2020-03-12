@@ -80,7 +80,10 @@ def process_para(para, ctxt):
 
 # read the event trace
 with open(filename, 'r') as inf, open('dynamic.xml', 'w') as opf:
-	opf.write('<DYNAMICROOT id="-1">\n')
+	# add run info
+	head = to_xml(inf.readline())
+	opf.write('<' + head.tag + ' ' + ' '.join([f'{u}="{v}"' for (u,v) in head.attrib.items()]) + '>\n')
+	# now start life
 	if DEBUG:
 		print ('cool')
 	ctxt = None
