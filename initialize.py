@@ -9,6 +9,8 @@ from xml.etree.ElementTree import Element, SubElement
 from xml.etree import ElementTree as ET
 from xml.dom import minidom
 
+from parsers.funcs import emit_funcargs
+
 DEBUG = False
 
 # input files and extensions
@@ -20,7 +22,8 @@ INIT_FILE = 'init.sh'
 FOLDER = 'outputs'
 
 # tools
-CLANGTOOLS = ['ast2xml', 'calls', 'funcs']
+CLANGTOOLS = ['ast2xml', 'calls'] # , 'funcs']
+# SOURCE_EXTENSION = {'ast2xml': '.ast', 'calls': '.ast', 'funcs': '_clang.xml'}
 # CLANGTOOLS[0] = 'clang_parser.py'
 DWARFTOOL = 'dwxml.py'
 COMBINER = 'ddx.py'
@@ -32,7 +35,7 @@ COMB_EXTENSION = '_comb.xml'
 CALL_EXTENSION = '.calls'
 SIGN_EXTENSION = '.funcargs'
 OFFSET_EXTENSION = '.offset'
-CLANG_OUTPUTEXT = [CLANG_EXTENSION, CALL_EXTENSION, SIGN_EXTENSION]
+CLANG_OUTPUTEXT = [CLANG_EXTENSION, CALL_EXTENSION] # , SIGN_EXTENSION]
 COMB_OUTPUTEXT = ' '.join([DWARF_EXTENSION, CLANG_EXTENSION, COMB_EXTENSION, OFFSET_EXTENSION])
 
 path = os.path.abspath(sys.argv[1])
@@ -77,7 +80,7 @@ def generate_static_info(path):
     with open(os.path.join(outfolder, 'compile_commands.json'), "r") as f:
         instrs = eval(f.read())
 
-    for num, instr in enumerate(instrs):
+    for num, instr in enumerate(instrs, 1):
         f = instr['file']
         mainfname = f[f.rfind('/')+1:f.rfind('.')]
         relpath = f[len(path)+1:]
@@ -87,9 +90,9 @@ def generate_static_info(path):
         os.system('cp ' + f + ' ' + os.path.join(outpath, f[f.rfind('/')+1:]))
 
         if DEBUG:
-            print(stripop, fdep)
+            print(stripop, f)
 
-        print ('\n(%2d/%2d): Generating info for '%(num+1, len(instrs)) + relpath)
+        print ('\n(%2d/%2d): Generating info for '%(num, len(instrs)) + relpath)
 
         try:
             # Select clang/Clang++ based on whether it is C/C++
@@ -110,9 +113,12 @@ def generate_static_info(path):
 
             # Generate func, calls, xml - file number prepended to all nodeids to make unique
             for clangexe, output_extension in zip(CLANGTOOLS, CLANG_OUTPUTEXT):
-                os.system (' '.join(['parsers/'+clangexe, str(num+1), 
+                os.system (' '.join(['parsers/'+clangexe, str(num), 
                     mainfname+'.ast', '>', stripop + output_extension]))
                 print ('output :', stripop + output_extension)
+
+            emit_funcargs(stripop + CLANG_EXTENSION, stripop + SIGN_EXTENSION)
+            print('output :', stripop + SIGN_EXTENSION)
 
             # Move the ast into outputs
             os.system ('mv ' + mainfname + '.ast ' + outpath)
