@@ -17,19 +17,32 @@ find $2 -maxdepth 1 -type f -exec cp -t PIN/Work/statinfo/ {} +
 if [ $# -eq 4 ]
 then
 	inp=${4##*/}
-	cp $3 PIN/Work/$inp					# copy input file to pin if specified
+	cp $4 PIN/Work/$inp					# copy input file to pin if specified
 else
 	inp=""
 fi
 
 cd PIN/Work										# move to pin folder
 chmod +x $exe.out								# make .out runnable
+
+makerun()
+{
+	local i=$1
+	make inp=$inp run=$i exe=$exe $exe.dump		# create the dump
+	python pass2.py $exe$i.dump	dynamic$i.xml	# add dump info to xml
+	cp $exe$i.dump $2							# copy back the dump
+}
+
+for i in $(seq 1 $run); do
+	makerun $i $2 &
+done
+wait
+
 > dynamic.xml
 for i in $(seq 1 $run); do
-	make inp=$inp run=$i exe=$exe $exe.dump		# create the dump
-	python pass2.py $exe$i.dump					# add dump info to xml
-	cp $exe$i.dump $2							# copy back the dump
+	cat dynamic$i.xml >> dynamic.xml
 done
+
 
 cp dynamic.xml $2/final_dynamic.xml
 # mv $exe.dump $2

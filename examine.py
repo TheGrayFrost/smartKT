@@ -40,6 +40,10 @@ FINAL_FILE = 'final'
 STATIC_EXTENSION = '_static.xml'
 DYNAMIC_EXTENSION = '_dynamic.xml'
 
+OUTF = 'outputs'
+if (len(sys.argv) > 2):
+    OUTF = sys.argv[2]
+
 CALLDYN = True
 CALLCOMM = False
 CALLVCS = False
@@ -250,7 +254,7 @@ for exe in runs:
     execstrip = executable[executable.rfind('/')+1:]
     origpath = executable[:executable.rfind('build/')-1]
     project_name = origpath[origpath.rfind('/')+1:]
-    outfolder = os.path.abspath('outputs/'+project_name)
+    outfolder = os.path.abspath(os.path.join(OUTF, project_name))
     foutfolder = os.path.join(outfolder,'exe_'+execstrip)
     os.system('mkdir -p ' + foutfolder)
     # Parse dependencies
@@ -258,7 +262,7 @@ for exe in runs:
                     os.path.join(origpath, 'build'), os.path.join(outfolder, 'dependencies.p')]))
     dependencies = pickle.load(open(os.path.join(outfolder, 'dependencies.p'), 'rb'))
 
-    generate_static_info()
+    # generate_static_info()
     for ti in runs[exe]:
         test_input = os.path.abspath(ti)
         if CALLDYN:

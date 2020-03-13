@@ -143,7 +143,12 @@ struct variable
 		nElem = -1;
 		int r = type.find("[");
 		if (r != -1)
+		{
+			int v = type.find("]");
 			nElem = std::atoi(type.substr(r+1, type.find("]")-r-1).c_str());
+			if (nElem == 0)
+				nElem = -1;
+		}
 	}
 };
 
@@ -280,8 +285,8 @@ VOID init(std::string inp, std::string runid, std::string locf)
 			std::getline (offFile, var.type, '\t');
 			offFile >> var.size >> var.pid;
 			var.patch();
-			if (DEBUG)
-				var.print(outp);
+			// if (DEBUG)
+			// 	var.print(outp);
 
 			funcLocalMap[funcname][offset] = var;
 			// std::cout << funcname << "\n";
@@ -497,8 +502,8 @@ VOID ImageLoad(IMG img, VOID *v)
 		else
 			var.fname = "";
 		var.patch();
-		if (DEBUG)
-			var.print(outp);
+		// if (DEBUG)
+		// 	var.print(outp);
 		if (var.name != "")
 			globalMap[img_loff+address] = var;
 	}
@@ -589,7 +594,7 @@ bool findPointee (ADDRINT memOp, THREADID tid, ADDRINT ina, writeInfo& u)
 				}
 				// else
 				else if (DEBUG || VARSEARCH)
-				 	outp << "VARSEARCH FAILED IN " << u.f.fname << "\n";
+				 	outp << "\nVARSEARCH FAILED IN " << u.f.fname << " OFFSET " << std::hex << u.offset << std::dec;
 			}
 		}
 	}
@@ -598,7 +603,7 @@ bool findPointee (ADDRINT memOp, THREADID tid, ADDRINT ina, writeInfo& u)
 	{
 		if (DEBUG || VARSEARCH)
 		{
-			outp << "VARIABLE NOT FOUND.... REAL ADDRESS: 0x" << std::hex << memOp << std::dec << ".\n";
+			outp << "\nVARIABLE NOT FOUND.... REAL ADDRESS: 0x" << std::hex << memOp << std::dec << ".\n";
 			inslist[ina].shortPrint(outp);			
 		}
 	}
@@ -609,7 +614,7 @@ bool findPointee (ADDRINT memOp, THREADID tid, ADDRINT ina, writeInfo& u)
 VOID ptrWrite (THREADID tid, ADDRINT ina)
 {
 	writeInfo w = writeTrace[tid][ina];
-	if (!w.var.isPtr)
+	if (!w.var.isPtr || w.var.name == "")
 		return;
 	ADDRINT value;
 	PIN_GetLock(&globalLock, 1);
@@ -848,6 +853,9 @@ VOID Instruction(INS ins, VOID * v)
 			inslist[ina] = INSINFO(ins, fname, column, line);	// add to list
 		if (DEBUG)
 			inslist[ina].shortPrint(outp);
+
+		// if (ina == 0x4047b8)
+		// 	exit(0);
 
 		// if it is a call event
 		std::string target = inslist[ina].target;

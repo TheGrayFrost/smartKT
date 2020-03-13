@@ -6,6 +6,7 @@ from xml.etree import ElementTree as ET
 from xml.dom import minidom
 
 filename = str(sys.argv[1])		# event trace dump file
+outfile = str(sys.argv[2])		# output file
 
 DEBUG = False
 
@@ -22,8 +23,8 @@ def to_xml(line):
 		for inloop in range(statbeg,statend+1):
 			t.pop(statbeg)
 		t.insert(statbeg, stat)
-		if DEBUG:
-			print ('\n'.join(t))
+	if DEBUG:
+		print (' '.join(t))
 	i += 1
 	while i < len(t):
 		entry.attrib[t[i]] = t[i+1]	 # all other events come in key:value pairs
@@ -79,7 +80,7 @@ def process_para(para, ctxt):
 	return entry
 
 # read the event trace
-with open(filename, 'r') as inf, open('dynamic.xml', 'a') as opf:
+with open(filename, 'r') as inf, open(outfile, 'w') as opf:
 	header = inf.readline()
 	hxml = to_xml(header)
 	opf.write ('<'+hxml.tag+' '+' '.join([u+'="'+hxml.attrib[u]+'"' for u in hxml.attrib])+'>\n')
