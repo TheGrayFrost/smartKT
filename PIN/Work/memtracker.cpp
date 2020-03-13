@@ -21,13 +21,13 @@
 // 2. tracing mallocs
 // 3. tracing non-primitive return values and call arguments
 
+PIN_LOCK globalLock;
+
 std::string folder = "statinfo/";
 std::string foff = "final.offset";
 std::string faddr = ".address";
 std::string fargs = "final.funcargs";
 std::string fcalls = "final.calls";
-
-
 
 
 std::map <std::string, int> locks;		// mutex -> type
@@ -148,6 +148,24 @@ struct variable
 };
 
 
+struct writeInfo
+{
+	ADDRINT memOp, offset;
+	variable var;
+	fnlog f;
+	int elPos;
+	std::string accessType;
+	bool stat;
+
+	writeInfo() {;}
+	writeInfo(std::string A, int E, fnlog F, ADDRINT M, ADDRINT O, bool S, variable V)
+	{
+		accessType = A; memOp = M; offset = O; var = V; f = F; elPos = E; stat = S;
+	}
+};
+
+std::map <THREADID, std::map<ADDRINT, writeInfo>> writeTrace;
+
 
 
 std::map<std::string, std::map <ADDRINT, variable>> funcLocalMap;  
@@ -226,6 +244,9 @@ VOID init(std::string inp, std::string runid, std::string locf)
 	unlocks[2] = "SEMAPHONE";
 	unlocks[3] = "READLOCK";
 	unlocks[4] = "WRITELOCK";
+
+	// initialize the lock
+	PIN_InitLock(&globalLock);
 
 	// open the output file
 	std::string opfile = locf + runid + ".dump";
@@ -515,66 +536,60 @@ VOID updateRBP (ADDRINT ina, THREADID tid, ADDRINT rbpval)
 	// outp << "\n";
 }
 
-
-// memory access event handler
-VOID dataman (THREADID tid, ADDRINT ina, ADDRINT memOp)
+bool findPointee (ADDRINT memOp, THREADID tid, ADDRINT ina, writeInfo& u)
 {
-	inslist[ina].memOp = memOp;		// set target memory address - helps in debugging later
-
-	variable var;
-	fnlog f;
-	ADDRINT offset;
-	int elPos = 1;
+	u.memOp = memOp;
+	u.elPos = 1;
+	u.stat = false;
 	bool found = false;
-	bool stat = false;
-	std::string accessType;
 	std::map <ADDRINT, variable>::iterator it;
 
 	// look in globals
-	it = lookup(globalMap, memOp, elPos);
+	it = lookup(globalMap, memOp, u.elPos);
 	if (it != globalMap.end())
 	{
-		var = it->second;
-		accessType = var.spattr;
+		u.var = it->second;
+		u.accessType = u.var.spattr;
 		found = true;
-		stat = true;
+		u.stat = true;
 	}
 	else
 	{
-		elPos = 0;
+		u.elPos = 0;
 		// look in current stack
-		f = invstack[tid].back();
-		offset = f.rbp - memOp;
-		auto& curmap = funcLocalMap[f.fname];
-		it = lookup(curmap, offset, elPos);
+		u.f = invstack[tid].back();
+		u.offset = u.f.rbp - memOp;
+		auto& curmap = funcLocalMap[u.f.fname];
+		it = lookup(curmap, u.offset, u.elPos);
 		if (it != curmap.end())
 		{
-			accessType = "LOCAL";	// local access
-			var = it->second;
+			u.accessType = "LOCAL";	// local access
+			u.var = it->second;
 			found = true;
 		}
 
 		// look across other function invocations
 		else
 		{
+			u.elPos = 0;
 			auto itstack = RBPstack.upper_bound(memOp);
 
 			if (itstack != RBPstack.end())
 			{
-				f = itstack->second;
-				offset = itstack->first - memOp;	// get offset from current RBP
+				u.f = itstack->second;
+				u.offset = itstack->first - memOp;	// get offset from current RBP
 				// lookup in funcLocals
-				auto& offMap = funcLocalMap[f.fname];
-				it = lookup(offMap, offset, elPos);
+				auto& offMap = funcLocalMap[u.f.fname];
+				it = lookup(offMap, u.offset, u.elPos);
 				if (it != offMap.end())
 				{
-					accessType = "NONLOCALSTACK";	// nonlocal access
-					var = it->second;
+					u.accessType = "NONLOCALSTACK";	// nonlocal access
+					u.var = it->second;
 					found = true;
 				}
 				// else
 				else if (DEBUG || VARSEARCH)
-				 	outp << "VARSEARCH FAILED IN " << f.fname << "\n";
+				 	outp << "VARSEARCH FAILED IN " << u.f.fname << "\n";
 			}
 		}
 	}
@@ -586,36 +601,110 @@ VOID dataman (THREADID tid, ADDRINT ina, ADDRINT memOp)
 			outp << "VARIABLE NOT FOUND.... REAL ADDRESS: 0x" << std::hex << memOp << std::dec << ".\n";
 			inslist[ina].shortPrint(outp);			
 		}
+	}
+
+	return found;
+}
+
+VOID ptrWrite (THREADID tid, ADDRINT ina)
+{
+	writeInfo w = writeTrace[tid][ina];
+	if (!w.var.isPtr)
 		return;
+	ADDRINT value;
+	PIN_GetLock(&globalLock, 1);
+	PIN_SafeCopy(&value, (ADDRINT *)w.memOp, sizeof(ADDRINT));
+	PIN_ReleaseLock(&globalLock);
+	outp << "POINTERWRITE";
+	outp << " THREADID " << tid << " VARCLASS " << w.accessType;		// print thread id and access type
+	if (value == 0)
+		outp << " POINTEE NULL";
+	else
+	{
+		outp << " WRITEVALUE 0x" << std::hex << value << std::dec;
+		writeInfo v;
+		bool found = findPointee(value, tid, ina, v);
+		if (found)
+		{
+			outp << " POINTEEID " << v.var.id << " POINTEECLASS " << v.accessType
+				<< " POINTEENAME " << v.var.name;
+			if (v.elPos != -1)
+				outp << " POINTEEINDEX " << v.elPos;
+			if (v.accessType == "NONLOCALSTACK")
+				outp << " POINTEEFUNC " << v.f.fname << " POINTEEFUNCTID " << v.f.tid 
+					<< " POINTEEFUNCINVNO " << v.f.invNo;
+		}
+	}
+	if (w.stat)
+	{
+		if ((signed)(w.accessType.find("STATIC")) > 0)
+			outp << " VARCONTAINER " << w.var.fname;
+		outp << " ADDRESS 0x" << std::hex << w.memOp << std::dec;
+	}
+	else 
+	{
+		if (w.accessType == "NONLOCALSTACK")
+			outp << " VARFUNCNAME " << w.f.fname << " VARFUNCTID " << w.f.tid << " VARFUNCINVNO " << w.f.invNo;
+			// function linkage name PIN_UndecorateSymbolName(fnstack[tid][idx], UNDECORATION_NAME_ONLY)
+		outp << " OFFSET 0x" << std::hex << w.offset << std::dec;
+	}
+	outp << " VARNAME " << w.var.name << " VARID " << w.var.id;
+	if (w.elPos != -1)
+		outp << " POS " << w.elPos;
+	outp << " FUNCNAME " << inslist[ina].rtnName;
+	// synchronization info
+	outp << " SYNCS ";
+	if (syncs.find(tid) != syncs.end())
+	{
+		outp << syncs[tid].size() << " ";
+		for (auto l: syncs[tid])
+			outp << "ADDRESS 0x" << std::hex << l.first << std::dec << " TYPE " << unlocks[l.second] << " ";
 	}
 	else
+		outp << "ASYNC ";
+	outp << "id " << std::dec << ++timeStamp << " ";						// event timestamp
+	outp << "INVNO " << invMap[inslist[ina].rtnName][tid] << "\n";	// function invocation count	
+}
+
+// memory access event handler
+VOID dataman (THREADID tid, ADDRINT ina, ADDRINT memOp)
+{
+	inslist[ina].memOp = memOp;		// set target memory address - helps in debugging later
+	
+	writeInfo u;
+	bool found = findPointee(memOp, tid, ina, u);
+
+	if (found)
 	{
 		// inslist[ina].shortPrint(outp);
 		
-		// print event type
-		if (var.isPtr)
-			outp << "POINTER";
+		// save what you have learnt and return
+		writeTrace[tid][ina] = u;
+		if (u.var.isPtr && inslist[ina].flag == 'w')
+			return;
+
 		if (inslist[ina].flag == 'r')
 			outp << "READ";
 		else if (inslist[ina].flag == 'w')
 			outp << "WRITE";
-		outp << " THREADID " << tid << " VARCLASS " << accessType;		// print thread id and access type
-		if (stat)
+		outp << " THREADID " << tid << " VARCLASS " << u.accessType;		// print thread id and access type
+		if (u.stat)
 		{
-			if ((signed)(accessType.find("STATIC")) > 0)
-				outp << " VARCONTAINER " << var.fname;
+			if ((signed)(u.accessType.find("STATIC")) > 0)
+				outp << " VARCONTAINER " << u.var.fname;
 			outp << " ADDRESS 0x" << std::hex << memOp << std::dec;
 		}
 		else 
 		{
-			if (accessType == "NONLOCALSTACK")
-				outp << " VARFUNCNAME " << f.fname << " VARFUNCTID " << f.tid << " VARFUNCINVNO " << f.invNo;
+			if (u.accessType == "NONLOCALSTACK")
+				outp << " VARFUNCNAME " << u.f.fname << " VARFUNCTID " << u.f.tid
+					 << " VARFUNCINVNO " << u.f.invNo;
 				// function linkage name PIN_UndecorateSymbolName(fnstack[tid][idx], UNDECORATION_NAME_ONLY)
-			outp << " OFFSET 0x" << std::hex << offset << std::dec;
+			outp << " OFFSET 0x" << std::hex << u.offset << std::dec;
 		}
-		outp << " VARNAME " << var.name << " VARID " << var.id;
-		if (elPos != -1)
-			outp << " POS " << elPos;
+		outp << " VARNAME " << u.var.name << " VARID " << u.var.id;
+		if (u.elPos != -1)
+			outp << " POS " << u.elPos;
 		outp << " FUNCNAME " << inslist[ina].rtnName;
 		// synchronization info
 		outp << " SYNCS ";
@@ -803,11 +892,18 @@ VOID Instruction(INS ins, VOID * v)
 
 		// if it is a memory access
 		if (inslist[ina].flag != 'n')
+		{
 			INS_InsertCall(
 			ins, IPOINT_BEFORE, (AFUNPTR)dataman,
 			IARG_THREAD_ID, IARG_ADDRINT, ina,
 			IARG_MEMORYOP_EA, 0,
 			IARG_END);
+			if (inslist[ina].flag == 'w')
+				INS_InsertCall(
+				ins, IPOINT_AFTER, (AFUNPTR)ptrWrite,
+				IARG_THREAD_ID, IARG_ADDRINT, ina,
+				IARG_END);
+		}
 
 		if (INS_IsRet(ins))
 			INS_InsertCall(

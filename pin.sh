@@ -7,6 +7,7 @@ set -x # echo on
 
 P=$(pwd)								# save current location
 exe=${1##*/}							# extract executable and input filename
+runid=0
 cp $1 PIN/Work/$exe.out					# copy executable to pin folder
 rm -rf PIN/Work/statinfo/
 mkdir PIN/Work/statinfo/
@@ -24,7 +25,7 @@ fi
 cd PIN/Work										# move to pin folder
 chmod +x $exe.out								# make .out runnable
 make inp=$inp run=$runid exe=$exe $exe.dump		# create the dump
-python pass2.py $exe.dump						# add dump info to xml
+python pass2.py $exe$runid.dump						# add dump info to xml
 cp $exe.dump $2
 cp dynamic.xml $2/final_dynamic.xml
 # mv $exe.dump $2

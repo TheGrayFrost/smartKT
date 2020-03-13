@@ -63,7 +63,7 @@ def process_para(para, ctxt):
 					p[h][att] = en.attrib[att]
 			p[h][en.tag] += 1
 		else:
-			en.tag = "NONLOCAL" + en.tag
+			en.tag = 'NONLOCAL' + en.tag
 			entry.append(en)
 	
 	for var in p.items():
