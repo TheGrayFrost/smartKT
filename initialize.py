@@ -137,7 +137,7 @@ def generate_static_info(path):
 
             # Move the ast into outputs
             os.system ('mv ' + mainfname + '.ast ' + outpath)
-            logstr += ('Clang output generated ' + outpath + '\n')
+            logstr += ('Clang output generated: ' + outpath + '\n')
 
         except Exception as e:
             print('\n'.join([relpath, logstr, e]), end='', file=sys.stderr)
@@ -147,19 +147,27 @@ def generate_static_info(path):
         try:
             # generate dwarfdump for corresponding object file
             os.system('parsers/' + DWARFTOOL + ' ' + objectfile + ' -q -o ' + stripop + DWARF_EXTENSION)
-            logstr += ('Dwarfdump Generated : parsers/' + DWARFTOOL + ' ' +
-                objectfile + ' -q -o ' + stripop + DWARF_EXTENSION)
+            logstr += 'Dwarfdump Generated : '
+            if DEBUG:
+                logstr += 'parsers/' + DWARFTOOL + ' ' + objectfile + ' -q -o ' 
+            logstr += stripop + DWARF_EXTENSION + '\n'
             # print ('Dwarfdump Generated')
 
             # combine dwarfdump and clang and get offset file
             os.system('parsers/' + COMBINER + ' ' + stripop + ' OFFSET ' + COMB_OUTPUTEXT)
-            logstr += ('Information combined : parsers/' + COMBINER + ' ' +
-                stripop + ' OFFSET ' + COMB_OUTPUTEXT + '\n')
+            logstr += 'Information combined : '
+            if DEBUG:
+                logstr += 'parsers/' + COMBINER + ' ' + stripop + ' OFFSET ' + COMB_OUTPUTEXT + '\n'
+            else:
+                logstr += '\n' + '\n'.join([stripop + myext for myext in [COMB_EXTENSION, OFFSET_EXTENSION]]) + '\n\n'
             # print ('Information combined')
         except Exception as e:
             print('\n'.join([relpath, logstr, e]), end='', file=sys.stderr)
             return # continue
-        print('\n'.join([relpath, logstr]), end='')
+        if DEBUG:
+            print('\n'.join(['\nGenerating for: ' + relpath, logstr]), end='')
+        else:
+            print(logstr, end='')
 
     with ThreadPoolExecutor(max_workers = MAX_WORKERS) as pool :
         pool.map( generate_static_info_for_tu, enumerate(instrs, 1) )

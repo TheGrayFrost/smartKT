@@ -16,7 +16,7 @@ def to_xml(line):
 	if t[0] == 'CALL':
 		# collect static calls
 		statbeg = t.index('[')
-		statend = len(t) - 1 - t[::-1].index(']') 
+		statend = len(t) - 1 - t[::-1].index(']')
 		if statbeg != -1:
 			stat = ' '.join(t[statbeg:statend+1])
 		for inloop in range(statbeg,statend+1):
@@ -80,7 +80,10 @@ def process_para(para, ctxt):
 
 # read the event trace
 with open(filename, 'r') as inf, open('dynamic.xml', 'w') as opf:
-	opf.write('<DYNAMICROOT id="-1">\n')
+	header = inf.readline()
+	hxml = to_xml(header)
+	opf.write ('<'+hxml.tag+' '+' '.join([u+'="'+hxml.attrib[u]+'"' for u in hxml.attrib])+'>\n')
+	# exit()
 	if DEBUG:
 		print ('cool')
 	ctxt = None
@@ -119,5 +122,5 @@ with open(filename, 'r') as inf, open('dynamic.xml', 'w') as opf:
 		xmlstr = minidom.parseString(ET.tostring(para_entry)).toprettyxml(indent='   ')
 		xmlstr = '\n'.join(['   '+l for l in xmlstr.split('\n')[1:-1]])
 		opf.write(xmlstr+'\n')
-	opf.write('</DYNAMICROOT>\n')
+	opf.write('</'+hxml.tag+'>\n')
 	print ()

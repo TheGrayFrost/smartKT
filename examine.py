@@ -261,7 +261,7 @@ def collect_results(project_name, executable):
         os.system('cp final_universal.xml ' + colpath) 
     print ('Information collected in: ', colpath)
 
-# generate_static_info()
+generate_static_info()
 
 if CALLDYN:
     dynamic_file = generate_dynamic_info(executable, test_input)
