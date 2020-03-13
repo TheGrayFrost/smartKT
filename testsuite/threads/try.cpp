@@ -7,6 +7,7 @@ pthread_mutex_t lock;
 
 void * trythis(void * arg)
 {
+	printf("\n Came here with arg = %d\n", *((int *)arg));
     unsigned long i = 0, r = 1;
     pthread_mutex_lock(&lock);
     counter += r;

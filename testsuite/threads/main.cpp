@@ -16,6 +16,8 @@ int main()
 {
     int i = 0;
     int error;
+
+    int a[2];
   
     if (pthread_mutex_init(&lock, NULL) != 0) { 
         printf("\n mutex init has failed\n"); 
@@ -24,7 +26,8 @@ int main()
 
     while (i < 2)
     {
-        error = pthread_create(&(tid[i]), NULL, &trythis, NULL);
+        a[i] = 2 * i;
+        error = pthread_create(&(tid[i]), NULL, &trythis, (void *)(&a[i]));
         if (error != 0)
             printf("\nThread can't be created : [%s]", strerror(error));
         i++;

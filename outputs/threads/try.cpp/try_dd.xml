@@ -488,10 +488,10 @@
       </DW_TAG_enumeration_type>
       <DW_TAG_variable DW_AT_decl_column="12" DW_AT_decl_file="1" DW_AT_decl_line="5" DW_AT_declaration="True" DW_AT_external="True" DW_AT_name="counter" DW_AT_type="99" offset="3779"/>
       <DW_TAG_variable DW_AT_decl_column="17" DW_AT_decl_file="1" DW_AT_decl_line="6" DW_AT_external="True" DW_AT_location="(DW_OP_addr: 0)" DW_AT_name="lock" DW_AT_type="2546" offset="3791"/>
-      <DW_TAG_subprogram DW_AT_GNU_all_tail_call_sites="True" DW_AT_decl_column="8" DW_AT_decl_file="1" DW_AT_decl_line="8" DW_AT_external="True" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_high_pc="143" DW_AT_linkage_name="_Z7trythisPv" DW_AT_low_pc="0" DW_AT_name="trythis" DW_AT_type="137" offset="3813">
+      <DW_TAG_subprogram DW_AT_GNU_all_tail_call_sites="True" DW_AT_decl_column="8" DW_AT_decl_file="1" DW_AT_decl_line="8" DW_AT_external="True" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_high_pc="166" DW_AT_linkage_name="_Z7trythisPv" DW_AT_low_pc="0" DW_AT_name="trythis" DW_AT_type="137" offset="3813">
         <DW_TAG_formal_parameter DW_AT_decl_column="23" DW_AT_decl_file="1" DW_AT_decl_line="8" DW_AT_location="(DW_OP_fbreg: -40)" DW_AT_name="arg" DW_AT_type="137" offset="3847"/>
-        <DW_TAG_variable DW_AT_decl_column="19" DW_AT_decl_file="1" DW_AT_decl_line="10" DW_AT_location="(DW_OP_fbreg: -24)" DW_AT_name="i" DW_AT_type="57" offset="3862"/>
-        <DW_TAG_variable DW_AT_decl_column="26" DW_AT_decl_file="1" DW_AT_decl_line="10" DW_AT_location="(DW_OP_fbreg: -32)" DW_AT_name="r" DW_AT_type="57" offset="3875"/>
+        <DW_TAG_variable DW_AT_decl_column="19" DW_AT_decl_file="1" DW_AT_decl_line="11" DW_AT_location="(DW_OP_fbreg: -24)" DW_AT_name="i" DW_AT_type="57" offset="3862"/>
+        <DW_TAG_variable DW_AT_decl_column="26" DW_AT_decl_file="1" DW_AT_decl_line="11" DW_AT_location="(DW_OP_fbreg: -32)" DW_AT_name="r" DW_AT_type="57" offset="3875"/>
       </DW_TAG_subprogram>
     </DW_TAG_compile_unit>
   </file>

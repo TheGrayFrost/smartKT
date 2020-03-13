@@ -1,32 +1,30 @@
 # FILENAME	FUNCNODEID	FUNCNAME	NARGS	ARGTYPE*	RETTYPE
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	101919413543	_Z3foo7foo_str	1	struct foo_str	struct foo_str
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	100500696745	_ZN11ParentClass5helloEv	0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	100172610814	_Z23accessFriendClassGlobalv	0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	100533788056	_ZN13DerivedClass15helloEv	0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	101272235533	_ZN13DerivedClass15helloEi	1	int	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	102312134093	_ZN13DerivedClass15helloEd	1	double	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	100845373288	_ZN12ParentClass117accessFriendClassEv	0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	103015620918	_ZN2MI10do_nothingEv	0	int
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	100840876963	_ZN11LivingThing7breatheEv	0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	103450812406	_ZN11LivingThingC1Ev	0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	103158618557	_ZN6Animal7breatheEv	0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	102214762450	_ZN6AnimalC1Ev	0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	102029659017	_ZN7ReptileC1Ev	0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	100553184750	_ZN7Reptile5crawlEv	0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	100090283344	_ZN5Snake5crawlEv	0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	100534177834	main	0	int
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	201624590690	_Z3foo7foo_str	1	struct foo_str	struct foo_str
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	203244335333	_ZN11ParentClass5helloEv	0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	203808079996	_Z23accessFriendClassGlobalv	0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	202942491431	_ZN13DerivedClass15helloEv	0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	202330715478	_ZN13DerivedClass15helloEi	1	int	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	201618760702	_ZN13DerivedClass15helloEd	1	double	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	203919997078	_ZN12ParentClass117accessFriendClassEv	0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	202921771534	_ZN2MI10do_nothingEv	0	int
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	202507387071	_ZN11LivingThing7breatheEv	0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	202874821723	_ZN11LivingThingC1Ev	0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	200266455180	_ZN6Animal7breatheEv	0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	200231234614	_ZN6AnimalC1Ev	0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	200864420274	_ZN7ReptileC1Ev	0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	201088454486	_ZN7Reptile5crawlEv	0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	201841190867	_ZN5Snake5crawlEv	0	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	100093055462	_ZN7foo_straSEOS_	1	foo_str &&	foo_str &
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	102344384494	_Z3foo7foo_str	1	struct foo_str	struct foo_str
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	102446479921	_ZN11ParentClass5helloEv	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	103633422624	_Z23accessFriendClassGlobalv	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	102451926470	_ZN13DerivedClass15helloEv	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	101783148214	_ZN13DerivedClass15helloEi	1	int	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	104006417771	_ZN13DerivedClass15helloEd	1	double	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	101907124604	_ZN12ParentClass117accessFriendClassEv	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	102873800654	_ZN2MI10do_nothingEv	1		int
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	102694670267	_ZN11LivingThing7breatheEv	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	100290926350	_ZN6Animal7breatheEv	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	100321819153	_ZN7Reptile5crawlEv	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	100315326812	_ZN5Snake5crawlEv	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	100252185384	main	1		int
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	202666531013	_Z3foo7foo_str	1	struct foo_str	struct foo_str
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	202435584453	_ZN11ParentClass5helloEv	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	201895681871	_Z23accessFriendClassGlobalv	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	202080837042	_ZN13DerivedClass15helloEv	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	200587941848	_ZN13DerivedClass15helloEi	1	int	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	201779790909	_ZN13DerivedClass15helloEd	1	double	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	203515374939	_ZN12ParentClass117accessFriendClassEv	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	200461681605	_ZN2MI10do_nothingEv	1		int
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	202470413280	_ZN11LivingThing7breatheEv	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	203282426031	_ZN6Animal7breatheEv	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	203193500334	_ZN7Reptile5crawlEv	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	204159655949	_ZN5Snake5crawlEv	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	202883818811	_Z3foo7foo_str	1	struct foo_str	struct foo_str
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	202651437238	_Z23accessFriendClassGlobalv	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	203539464615	_ZN5Snake5crawlEv	1		void
