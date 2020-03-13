@@ -48,39 +48,10 @@ if CALLCOMM:
     vocab_file = sys.argv[3]
     problem_domain_file = sys.argv[4]
 
-# Parse dependencies
-os.system(' '.join(['parsers/' + PROJPARSER, os.path.join(outfolder, 'make_log.txt'),
-                    os.path.join(origpath, 'build'), os.path.join(outfolder, 'dependencies.p')]))
-dependencies = pickle.load(open(os.path.join(outfolder, 'dependencies.p'), 'rb'))
-
 # Rewriting to be able to run multiple tests simultaneously
 executable, test_input, execstrip = None, None, None
 origpath, project_name, outfolder = None, None, None
-foutfolder = None
-
-# A few dicts to help optimize data redundancy
-visited = {}
-mappedID = {}
-
-def prune(node, parentNode):
-    if 'range.start' in node.attrib and 'range.end' in node.attrib and 'file' in node.attrib:
-        if (node.attrib['file'], node.attrib['range.start'], node.attrib['range.end']) in  visited:
-            # We've seen this node. So just update mappedIDs recursively and remove then current node 
-            mappedID[node.attrib['id']] = visited[(node.attrib['file'], node.attrib['range.start'], node.attrib['range.end'])]['id']
-            for child in node.getchildren():
-                prune(child, node)
-            parentNode.remove(node)
-    else:
-        # Try and update as many values as you can find from the mappedID
-        for x in ['def_id', 'ref_id', 'lex_parent_id', 'sem_parent_id', 'ref_tmp']:
-            if x in node.attrib and node.attrib[x] in mappedID:
-                node.set(x, mappedID[node.attrib[x]])
-        # We've not seen this node before. So add it to visited and update the mappedID
-        if 'range.start' in node.attrib and 'range.end' in node.attrib and 'file' in node.attrib:
-            mappedID[node.attrib['id']] = node.attrib['id']
-            visited[(node.attrib['file'], node.attrib['range.start'], node.attrib['range.end'])] = True
-        for child in node.getchildren():
-            prune(child, node)
+foutfolder, dependencies = None, None
 
 def combine_all_clang(depmap):
     CURFINALFILE = os.path.join(foutfolder, FINAL_FILE)
@@ -139,7 +110,6 @@ def combine_all_clang(depmap):
             stree = ET.parse(combstrip + COMB_EXTENSION)
             sroot = stree.getroot()
             ddx.UpdateCtree (sroot)
-            prune(sroot)
             root.append(sroot)
 
         # link the addresses into the executables and emit the address files
@@ -154,10 +124,7 @@ def combine_all_clang(depmap):
         ddx.generate_var(root, exestrip+ADDRESS_EXTENSION)
 
         rootlist.append(root)
-        
-        # COMBINE_OUTEXT = ' '.join([DWARF_EXTENSION, TEMP_EXTENSION, COMB_EXTENSION, ADDRESS_EXTENSION])
-        # print('parsers/'+COMBINER+' '+exestrip+' ADDRESS '+COMBINE_OUTEXT)
-        # os.system('parsers/'+COMBINER+' '+exestrip+' ADDRESS '+COMBINE_OUTEXT)
+
         os.system('cp ' + exestrip + ADDRESS_EXTENSION + ' ' + foutfolder+'/')
         print ('Generated addresses for ' + exenamestrip)
         
@@ -167,8 +134,7 @@ def combine_all_clang(depmap):
     with open(CURFINALFILE + STATIC_EXTENSION, 'w') as f:
         f.write(finalxmlstr)
     print ('\nWritten interlinked combined clang for ' + executable)
-    # # combine address patched xmls into one final static xml
-    # os.system('cat ' + exestrip + COMB_EXTENSION + ' >> ' + CURFINALFILE + STATIC_EXTENSION)
+
         
 def generate_static_info():
     print('Starting Static: '+ executable)
@@ -211,7 +177,7 @@ def generate_static_info():
         exit()
     combine_all_clang(orderls)
 
-def generate_dynamic_info(path, test=None):
+def generate_dynamic_info(path, test, inputNum, runNum):
     # Add dynamic_information to the combined static XML
     global project_name
     print('Starting Dynamic!')
@@ -278,20 +244,29 @@ def collect_results(project_name, executable):
 
 
 runs = json.loads(open(sys.argv[1], "r").read())
-for executable in runs:
+
+for exe in runs:
+    executable = os.path.abspath(exe)
     execstrip = executable[executable.rfind('/')+1:]
     origpath = executable[:executable.rfind('build/')-1]
     project_name = origpath[origpath.rfind('/')+1:]
     outfolder = os.path.abspath('outputs/'+project_name)
     foutfolder = os.path.join(outfolder,'exe_'+execstrip)
     os.system('mkdir -p ' + foutfolder)
-    for test_input in runs[executable]:
-        generate_static_info()
+    # Parse dependencies
+    os.system(' '.join(['parsers/' + PROJPARSER, os.path.join(outfolder, 'make_log.txt'),
+                    os.path.join(origpath, 'build'), os.path.join(outfolder, 'dependencies.p')]))
+    dependencies = pickle.load(open(os.path.join(outfolder, 'dependencies.p'), 'rb'))
+
+    generate_static_info()
+
+    for ti in runs[exe]:
+        test_input = os.path.abspath(ti)
         if CALLDYN:
-            if len(test_input) > 0:
-                generate_dynamic_info(executable, test_input)
+            if len(ti) > 0:
+                generate_dynamic_info(executable, test_input, runs[exe][ti])
             else:
-                generate_dynamic_info(executable, None)
+                generate_dynamic_info(executable, None, runs[exe][ti])
 
 if CALLCOMM:
     comments_file = generate_comments_info(project_name, vocab_file, problem_domain_file)

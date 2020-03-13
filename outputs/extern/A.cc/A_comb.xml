@@ -1,74 +1,26 @@
-<?xml version="1.0" ?>
 <TranslationUnit>
-   
-  
-   <ClassDecl col="7" display_name="A" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="204046003692" isDecl="True" lex_parent_id="201176526607" line="1" linkage_kind="external" range.end="[1:8]" range.start="[1:1]" spelling="A" type="A" usr="c:@S@A" visibility="default"/>
-   
-  
-   <VarDecl col="12" display_name="p" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="201570690570" isDecl="True" lex_parent_id="201176526607" line="3" linkage_kind="external" range.end="[3:13]" range.start="[3:1]" size="8" spelling="p" storage_class="extern" type="A *" usr="c:@p" visibility="default">
-      
-    
-      <TypeRef col="8" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="201080280143" isRef="True" line="3" range.end="[3:9]" range.start="[3:8]" ref_id="204046003692" spelling="class A" type="A"/>
-      
-  
-   </VarDecl>
-   
-  
-   <FunctionDecl col="5" display_name="f(A &amp;)" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="201784735187" isDecl="True" isDef="True" lex_parent_id="201176526607" line="5" linkage_kind="external" mangled_name="_Z1fR1A" range.end="[9:2]" range.start="[5:1]" spelling="f" storage_class="default_auto" type="A *(A &amp;)" usr="c:@F@f#&amp;$@S@A#" visibility="default">
-      
-    
-      <TypeRef col="1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="201080280143" isRef="True" line="5" range.end="[5:2]" range.start="[5:1]" ref_id="204046003692" spelling="class A" type="A"/>
-      
-    
-      <ParmDecl col="10" display_name="x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="202584130888" isDecl="True" isDef="True" lex_parent_id="201784735187" line="5" linkage_kind="auto" offset="0x8" range.end="[5:11]" range.start="[5:7]" size="8" spelling="x" storage_class="default_auto" type="A &amp;" usr="c:A.cc@31@F@f#&amp;$@S@A#@x" visibility="default">
-         
-      
-         <TypeRef col="7" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="201080280143" isRef="True" line="5" range.end="[5:8]" range.start="[5:7]" ref_id="204046003692" spelling="class A" type="A"/>
-         
-    
-      </ParmDecl>
-      
-    
-      <CompoundStmt col="1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="203693881905" line="6" range.end="[9:2]" range.start="[6:1]" sem_parent_id="201784735187" storage_class="default_auto">
-         
-      
-         <BinaryOperator col="2" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="202478783812" isAssignment="True" line="7" range.end="[7:8]" range.start="[7:2]" type="A *">
-            
-        
-            <DeclRefExpr col="2" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="202223410236" line="7" range.end="[7:3]" range.start="[7:2]" ref_id="201570690570" spelling="p" type="A *"/>
-            
-        
-            <UnaryOperator col="6" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="203138520179" line="7" range.end="[7:8]" range.start="[7:6]" type="A *">
-               
-          
-               <DeclRefExpr col="7" def_id="202584130888" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="204206544636" line="7" range.end="[7:8]" range.start="[7:7]" spelling="x" type="A"/>
-               
-        
-            </UnaryOperator>
-            
-      
-         </BinaryOperator>
-         
-      
-         <ReturnStmt col="2" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="202351422817" line="8" range.end="[8:10]" range.start="[8:2]">
-            
-        
-            <UnexposedExpr col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="201360799378" line="8" range.end="[8:10]" range.start="[8:9]" ref_id="201570690570" spelling="p" type="A *">
-               
-          
-               <DeclRefExpr col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="201664506925" line="8" range.end="[8:10]" range.start="[8:9]" ref_id="201570690570" spelling="p" type="A *"/>
-               
-        
-            </UnexposedExpr>
-            
-      
-         </ReturnStmt>
-         
-    
-      </CompoundStmt>
-      
-  
-   </FunctionDecl>
-   
-
+  <TemplateStubs />
+  <ClassDecl col="7" display_name="A" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="202609232595" isDecl="True" lex_parent_id="201834728630" line="1" linkage_kind="external" range.end="[1:8]" range.start="[1:1]" spelling="A" type="A" usr="c:@S@A" visibility="default" />
+  <VarDecl col="12" display_name="p" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="202713816444" isDecl="True" lex_parent_id="201834728630" line="3" linkage_kind="external" range.end="[3:13]" range.start="[3:1]" size="8" spelling="p" storage_class="extern" type="A *" usr="c:@p" visibility="default">
+    <TypeRef col="8" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="203918565925" isRef="True" line="3" range.end="[3:9]" range.start="[3:8]" ref_id="202609232595" spelling="class A" type="A" />
+  </VarDecl>
+  <FunctionDecl col="5" display_name="f(A &amp;)" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" funcargs="A &amp;" id="200041863336" isDecl="True" isDef="True" lex_parent_id="201834728630" line="5" linkage_kind="external" linkage_name="_Z1fR1A" mangled_name="_Z1fR1A" range.end="[9:2]" range.start="[5:1]" return_type="A *" spelling="f" storage_class="default_auto" type="A *(A &amp;)" usr="c:@F@f#&amp;$@S@A#" visibility="default">
+    <TypeRef col="1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="203918565925" isRef="True" line="5" range.end="[5:2]" range.start="[5:1]" ref_id="202609232595" spelling="class A" type="A" />
+    <ParmDecl col="10" display_name="x" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="202126698757" isDecl="True" isDef="True" lex_parent_id="200041863336" line="5" linkage_kind="auto" offset="0x8" range.end="[5:11]" range.start="[5:7]" size="8" spelling="x" storage_class="default_auto" type="A &amp;" usr="c:A.cc@31@F@f#&amp;$@S@A#@x" visibility="default">
+      <TypeRef col="7" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="203918565925" isRef="True" line="5" range.end="[5:8]" range.start="[5:7]" ref_id="202609232595" spelling="class A" type="A" />
+    </ParmDecl>
+    <CompoundStmt col="1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="202712533456" line="6" range.end="[9:2]" range.start="[6:1]" sem_parent_id="200041863336" storage_class="default_auto">
+      <BinaryOperator col="2" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="200766743755" isAssignment="True" line="7" range.end="[7:8]" range.start="[7:2]" type="A *">
+        <DeclRefExpr col="2" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="203753145190" line="7" range.end="[7:3]" range.start="[7:2]" ref_id="202713816444" spelling="p" type="A *" />
+        <UnaryOperator col="6" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="202055827066" line="7" range.end="[7:8]" range.start="[7:6]" type="A *">
+          <DeclRefExpr col="7" def_id="202126698757" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="202044480182" line="7" range.end="[7:8]" range.start="[7:7]" spelling="x" type="A" />
+        </UnaryOperator>
+      </BinaryOperator>
+      <ReturnStmt col="2" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="202038633748" line="8" range.end="[8:10]" range.start="[8:2]">
+        <UnexposedExpr col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="201341792823" line="8" range.end="[8:10]" range.start="[8:9]" ref_id="202713816444" spelling="p" type="A *">
+          <DeclRefExpr col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="204207836768" line="8" range.end="[8:10]" range.start="[8:9]" ref_id="202713816444" spelling="p" type="A *" />
+        </UnexposedExpr>
+      </ReturnStmt>
+    </CompoundStmt>
+  </FunctionDecl>
 </TranslationUnit>

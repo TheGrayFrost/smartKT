@@ -1,910 +1,911 @@
 # FILENAME	FUNCNODEID	FUNCNAME	NARGS	ARGTYPE*	RETTYPE
-/usr/include/libio.h	202410556897	_IO_cookie_init	4	struct _IO_cookie_file *	int	void *	_IO_cookie_io_functions_t	void
-/usr/include/libio.h	201779681851	__underflow	1	_IO_FILE *	int
-/usr/include/libio.h	203824398803	__uflow	1	_IO_FILE *	int
-/usr/include/libio.h	201830077003	__overflow	2	_IO_FILE *	int	int
-/usr/include/libio.h	200482589695	_IO_getc	1	_IO_FILE *	int
-/usr/include/libio.h	201494957693	_IO_putc	2	int	_IO_FILE *	int
-/usr/include/libio.h	200953880292	_IO_feof	1	_IO_FILE *	int
-/usr/include/libio.h	201068079144	_IO_ferror	1	_IO_FILE *	int
-/usr/include/libio.h	201562707889	_IO_peekc_locked	1	_IO_FILE *	int
-/usr/include/libio.h	202038443752	_IO_flockfile	1	_IO_FILE *	void
-/usr/include/libio.h	204016830202	_IO_funlockfile	1	_IO_FILE *	void
-/usr/include/libio.h	201529247293	_IO_ftrylockfile	1	_IO_FILE *	int
-/usr/include/libio.h	203815028688	_IO_vfscanf	4	_IO_FILE *__restrict	const char *__restrict	__gnuc_va_list	int *__restrict	int
-/usr/include/libio.h	201050313021	_IO_vfprintf	3	_IO_FILE *__restrict	const char *__restrict	__gnuc_va_list	int
-/usr/include/libio.h	203960187698	_IO_padn	3	_IO_FILE *	int	__ssize_t	__ssize_t
-/usr/include/libio.h	201968539293	_IO_sgetn	3	_IO_FILE *	void *	size_t	size_t
-/usr/include/libio.h	202104451436	_IO_seekoff	4	_IO_FILE *	__off64_t	int	int	__off64_t
-/usr/include/libio.h	202767559928	_IO_seekpos	3	_IO_FILE *	__off64_t	int	__off64_t
-/usr/include/libio.h	200448219776	_IO_free_backup_area	1	_IO_FILE *	void
-/usr/include/stdio.h	201765193865	remove	1	const char *	int
-/usr/include/stdio.h	200271176645	rename	2	const char *	const char *	int
-/usr/include/stdio.h	200119835778	renameat	4	int	const char *	int	const char *	int
-/usr/include/stdio.h	200816254057	tmpfile	0	FILE *
-/usr/include/stdio.h	201596045362	tmpfile64	0	FILE *
-/usr/include/stdio.h	201540137329	tmpnam	1	char *	char *
-/usr/include/stdio.h	204125442843	tmpnam_r	1	char *	char *
-/usr/include/stdio.h	200961597685	tempnam	2	const char *	const char *	char *
-/usr/include/stdio.h	200241154047	fclose	1	FILE *	int
-/usr/include/stdio.h	200946457299	fflush	1	FILE *	int
-/usr/include/stdio.h	203059952574	fflush_unlocked	1	FILE *	int
-/usr/include/stdio.h	202966630485	fcloseall	0	int
-/usr/include/stdio.h	201301432185	fopen	2	const char *__restrict	const char *__restrict	FILE *
-/usr/include/stdio.h	200348176770	freopen	3	const char *__restrict	const char *__restrict	FILE *__restrict	FILE *
-/usr/include/stdio.h	202892045122	fopen64	2	const char *__restrict	const char *__restrict	FILE *
-/usr/include/stdio.h	201329227236	freopen64	3	const char *__restrict	const char *__restrict	FILE *__restrict	FILE *
-/usr/include/stdio.h	203055155912	fdopen	2	int	const char *	FILE *
-/usr/include/stdio.h	202796455028	fopencookie	3	void *__restrict	const char *__restrict	_IO_cookie_io_functions_t	FILE *
-/usr/include/stdio.h	201498995360	fmemopen	3	void *	size_t	const char *	FILE *
-/usr/include/stdio.h	201935396099	open_memstream	2	char **	size_t *	FILE *
-/usr/include/stdio.h	201211628060	setbuf	2	FILE *__restrict	char *__restrict	void
-/usr/include/stdio.h	201181560853	setvbuf	4	FILE *__restrict	char *__restrict	int	size_t	int
-/usr/include/stdio.h	202657445876	setbuffer	3	FILE *__restrict	char *__restrict	size_t	void
-/usr/include/stdio.h	203942837835	setlinebuf	1	FILE *	void
-/usr/include/stdio.h	200163133206	fprintf	2	FILE *__restrict	const char *__restrict	int
-/usr/include/stdio.h	204165379860	printf	1	const char *__restrict	int
-/usr/include/stdio.h	201316647317	sprintf	2	char *__restrict	const char *__restrict	int
-/usr/include/stdio.h	202844615828	vfprintf	3	FILE *__restrict	const char *__restrict	__gnuc_va_list	int
-/usr/include/stdio.h	202464108357	vprintf	2	const char *__restrict	__gnuc_va_list	int
-/usr/include/stdio.h	202811314507	vsprintf	3	char *__restrict	const char *__restrict	__gnuc_va_list	int
-/usr/include/stdio.h	201397614687	snprintf	3	char *__restrict	size_t	const char *__restrict	int
-/usr/include/stdio.h	200150184445	vsnprintf	4	char *__restrict	size_t	const char *__restrict	__gnuc_va_list	int
-/usr/include/stdio.h	203739525219	vasprintf	3	char **__restrict	const char *__restrict	__gnuc_va_list	int
-/usr/include/stdio.h	202752869809	__asprintf	2	char **__restrict	const char *__restrict	int
-/usr/include/stdio.h	200835686794	asprintf	2	char **__restrict	const char *__restrict	int
-/usr/include/stdio.h	201992071393	vdprintf	3	int	const char *__restrict	__gnuc_va_list	int
-/usr/include/stdio.h	201331416743	dprintf	2	int	const char *__restrict	int
-/usr/include/stdio.h	201616058390	fscanf	2	FILE *__restrict	const char *__restrict	int
-/usr/include/stdio.h	203352250493	scanf	1	const char *__restrict	int
-/usr/include/stdio.h	203096170691	sscanf	2	const char *__restrict	const char *__restrict	int
-/usr/include/stdio.h	203955280348	vfscanf	3	FILE *__restrict	const char *__restrict	__gnuc_va_list	int
-/usr/include/stdio.h	202681999697	vscanf	2	const char *__restrict	__gnuc_va_list	int
-/usr/include/stdio.h	201507403480	vsscanf	3	const char *__restrict	const char *__restrict	__gnuc_va_list	int
-/usr/include/stdio.h	203714440128	fgetc	1	FILE *	int
-/usr/include/stdio.h	203395003839	getc	1	FILE *	int
-/usr/include/stdio.h	204195320147	getchar	0	int
-/usr/include/stdio.h	201471324451	getc_unlocked	1	FILE *	int
-/usr/include/stdio.h	201560635747	getchar_unlocked	0	int
-/usr/include/stdio.h	202085580106	fgetc_unlocked	1	FILE *	int
-/usr/include/stdio.h	201965805386	fputc	2	int	FILE *	int
-/usr/include/stdio.h	201086523470	putc	2	int	FILE *	int
-/usr/include/stdio.h	201408014641	putchar	1	int	int
-/usr/include/stdio.h	203199865518	fputc_unlocked	2	int	FILE *	int
-/usr/include/stdio.h	202055015798	putc_unlocked	2	int	FILE *	int
-/usr/include/stdio.h	201488364748	putchar_unlocked	1	int	int
-/usr/include/stdio.h	202604224209	getw	1	FILE *	int
-/usr/include/stdio.h	204138703887	putw	2	int	FILE *	int
-/usr/include/stdio.h	201480351033	fgets	3	char *__restrict	int	FILE *__restrict	char *
-/usr/include/stdio.h	200535545897	fgets_unlocked	3	char *__restrict	int	FILE *__restrict	char *
-/usr/include/stdio.h	203910404069	__getdelim	4	char **__restrict	size_t *__restrict	int	FILE *__restrict	__ssize_t
-/usr/include/stdio.h	200430055455	getdelim	4	char **__restrict	size_t *__restrict	int	FILE *__restrict	__ssize_t
-/usr/include/stdio.h	201651624804	getline	3	char **__restrict	size_t *__restrict	FILE *__restrict	__ssize_t
-/usr/include/stdio.h	203125654669	fputs	2	const char *__restrict	FILE *__restrict	int
-/usr/include/stdio.h	203612248278	puts	1	const char *	int
-/usr/include/stdio.h	200187967924	ungetc	2	int	FILE *	int
-/usr/include/stdio.h	200209829138	fread	4	void *__restrict	size_t	size_t	FILE *__restrict	size_t
-/usr/include/stdio.h	201764469132	fwrite	4	const void *__restrict	size_t	size_t	FILE *__restrict	size_t
-/usr/include/stdio.h	203510082005	fputs_unlocked	2	const char *__restrict	FILE *__restrict	int
-/usr/include/stdio.h	201637132494	fread_unlocked	4	void *__restrict	size_t	size_t	FILE *__restrict	size_t
-/usr/include/stdio.h	204197095627	fwrite_unlocked	4	const void *__restrict	size_t	size_t	FILE *__restrict	size_t
-/usr/include/stdio.h	202394199273	fseek	3	FILE *	long	int	int
-/usr/include/stdio.h	200725638073	ftell	1	FILE *	long
-/usr/include/stdio.h	200491840398	rewind	1	FILE *	void
-/usr/include/stdio.h	203820343570	fseeko	3	FILE *	__off_t	int	int
-/usr/include/stdio.h	200991286713	ftello	1	FILE *	__off_t
-/usr/include/stdio.h	204169863163	fgetpos	2	FILE *__restrict	fpos_t *__restrict	int
-/usr/include/stdio.h	201339248654	fsetpos	2	FILE *	const fpos_t *	int
-/usr/include/stdio.h	202891811007	fseeko64	3	FILE *	__off64_t	int	int
-/usr/include/stdio.h	202912897385	ftello64	1	FILE *	__off64_t
-/usr/include/stdio.h	202897183975	fgetpos64	2	FILE *__restrict	fpos64_t *__restrict	int
-/usr/include/stdio.h	203613909968	fsetpos64	2	FILE *	const fpos64_t *	int
-/usr/include/stdio.h	200904734083	clearerr	1	FILE *	void
-/usr/include/stdio.h	200335857396	feof	1	FILE *	int
-/usr/include/stdio.h	203666152542	ferror	1	FILE *	int
-/usr/include/stdio.h	201141589386	clearerr_unlocked	1	FILE *	void
-/usr/include/stdio.h	204234519124	feof_unlocked	1	FILE *	int
-/usr/include/stdio.h	201769926335	ferror_unlocked	1	FILE *	int
-/usr/include/stdio.h	203611171011	perror	1	const char *	void
-/usr/include/stdio.h	200123654690	fileno	1	FILE *	int
-/usr/include/stdio.h	204131587230	fileno_unlocked	1	FILE *	int
-/usr/include/stdio.h	203161215787	popen	2	const char *	const char *	FILE *
-/usr/include/stdio.h	200958118196	pclose	1	FILE *	int
-/usr/include/stdio.h	200468914841	ctermid	1	char *	char *
-/usr/include/stdio.h	202376272421	cuserid	1	char *	char *
-/usr/include/stdio.h	203517639957	obstack_printf	2	struct obstack *__restrict	const char *__restrict	int
-/usr/include/stdio.h	203697142345	obstack_vprintf	3	struct obstack *__restrict	const char *__restrict	__gnuc_va_list	int
-/usr/include/stdio.h	201364892634	flockfile	1	FILE *	void
-/usr/include/stdio.h	201967962236	ftrylockfile	1	FILE *	int
-/usr/include/stdio.h	201558903193	funlockfile	1	FILE *	void
-/usr/include/stdlib.h	202586817756	__ctype_get_mb_cur_max	0	size_t
-/usr/include/stdlib.h	202198556131	atof	1	const char *	double
-/usr/include/stdlib.h	200342108201	atoi	1	const char *	int
-/usr/include/stdlib.h	204105740019	atol	1	const char *	long
-/usr/include/stdlib.h	201584078509	atoll	1	const char *	long long
-/usr/include/stdlib.h	200327150585	strtod	2	const char *__restrict	char **__restrict	double
-/usr/include/stdlib.h	203514370784	strtof	2	const char *__restrict	char **__restrict	float
-/usr/include/stdlib.h	202647400935	strtold	2	const char *__restrict	char **__restrict	long double
-/usr/include/stdlib.h	200918518069	strtol	3	const char *__restrict	char **__restrict	int	long
-/usr/include/stdlib.h	202724845985	strtoul	3	const char *__restrict	char **__restrict	int	unsigned long
-/usr/include/stdlib.h	202946834489	strtoq	3	const char *__restrict	char **__restrict	int	long long
-/usr/include/stdlib.h	203447943878	strtouq	3	const char *__restrict	char **__restrict	int	unsigned long long
-/usr/include/stdlib.h	203585615040	strtoll	3	const char *__restrict	char **__restrict	int	long long
-/usr/include/stdlib.h	203772242696	strtoull	3	const char *__restrict	char **__restrict	int	unsigned long long
-/usr/include/stdlib.h	202677128837	strtol_l	4	const char *__restrict	char **__restrict	int	__locale_t	long
-/usr/include/stdlib.h	202970886417	strtoul_l	4	const char *__restrict	char **__restrict	int	__locale_t	unsigned long
-/usr/include/stdlib.h	200393302743	strtoll_l	4	const char *__restrict	char **__restrict	int	__locale_t	long long
-/usr/include/stdlib.h	203999094966	strtoull_l	4	const char *__restrict	char **__restrict	int	__locale_t	unsigned long long
-/usr/include/stdlib.h	203215893676	strtod_l	3	const char *__restrict	char **__restrict	__locale_t	double
-/usr/include/stdlib.h	202687973166	strtof_l	3	const char *__restrict	char **__restrict	__locale_t	float
-/usr/include/stdlib.h	201995146017	strtold_l	3	const char *__restrict	char **__restrict	__locale_t	long double
-/usr/include/stdlib.h	203668675619	l64a	1	long	char *
-/usr/include/stdlib.h	201490539525	a64l	1	const char *	long
-/usr/include/sys/select.h	203053004657	select	5	int	fd_set *__restrict	fd_set *__restrict	fd_set *__restrict	struct timeval *__restrict	int
-/usr/include/sys/select.h	201309559623	pselect	6	int	fd_set *__restrict	fd_set *__restrict	fd_set *__restrict	const struct timespec *__restrict	const __sigset_t *__restrict	int
-/usr/include/sys/sysmacros.h	203780073221	gnu_dev_major	1	unsigned long long	unsigned int
-/usr/include/sys/sysmacros.h	203414304173	gnu_dev_minor	1	unsigned long long	unsigned int
-/usr/include/sys/sysmacros.h	203806348565	gnu_dev_makedev	2	unsigned int	unsigned int	unsigned long long
-/usr/include/stdlib.h	203244678161	random	0	long
-/usr/include/stdlib.h	203475375189	srandom	1	unsigned int	void
-/usr/include/stdlib.h	201221746631	initstate	3	unsigned int	char *	size_t	char *
-/usr/include/stdlib.h	204254993445	setstate	1	char *	char *
-/usr/include/stdlib.h	200868230046	random_r	2	struct random_data *__restrict	int32_t *__restrict	int
-/usr/include/stdlib.h	201546247251	srandom_r	2	unsigned int	struct random_data *	int
-/usr/include/stdlib.h	202725357282	initstate_r	4	unsigned int	char *__restrict	size_t	struct random_data *__restrict	int
-/usr/include/stdlib.h	203052560996	setstate_r	2	char *__restrict	struct random_data *__restrict	int
-/usr/include/stdlib.h	201352076825	rand	0	int
-/usr/include/stdlib.h	203792274843	srand	1	unsigned int	void
-/usr/include/stdlib.h	202276794469	rand_r	1	unsigned int *	int
-/usr/include/stdlib.h	202711728642	drand48	0	double
-/usr/include/stdlib.h	200049861086	erand48	1	unsigned short [3]	double
-/usr/include/stdlib.h	202126897471	lrand48	0	long
-/usr/include/stdlib.h	201784921445	nrand48	1	unsigned short [3]	long
-/usr/include/stdlib.h	201625049406	mrand48	0	long
-/usr/include/stdlib.h	202786990311	jrand48	1	unsigned short [3]	long
-/usr/include/stdlib.h	202539650178	srand48	1	long	void
-/usr/include/stdlib.h	201523211186	seed48	1	unsigned short [3]	unsigned short *
-/usr/include/stdlib.h	200491964912	lcong48	1	unsigned short [7]	void
-/usr/include/stdlib.h	200146909136	drand48_r	2	struct drand48_data *__restrict	double *__restrict	int
-/usr/include/stdlib.h	202526039601	erand48_r	3	unsigned short [3]	struct drand48_data *__restrict	double *__restrict	int
-/usr/include/stdlib.h	203819394082	lrand48_r	2	struct drand48_data *__restrict	long *__restrict	int
-/usr/include/stdlib.h	201772177678	nrand48_r	3	unsigned short [3]	struct drand48_data *__restrict	long *__restrict	int
-/usr/include/stdlib.h	201739933759	mrand48_r	2	struct drand48_data *__restrict	long *__restrict	int
-/usr/include/stdlib.h	203935686325	jrand48_r	3	unsigned short [3]	struct drand48_data *__restrict	long *__restrict	int
-/usr/include/stdlib.h	203239059191	srand48_r	2	long	struct drand48_data *	int
-/usr/include/stdlib.h	203567656293	seed48_r	2	unsigned short [3]	struct drand48_data *	int
-/usr/include/stdlib.h	203594482122	lcong48_r	2	unsigned short [7]	struct drand48_data *	int
-/usr/include/stdlib.h	204130604494	malloc	1	size_t	void *
-/usr/include/stdlib.h	202164999476	calloc	2	size_t	size_t	void *
-/usr/include/stdlib.h	201115373764	realloc	2	void *	size_t	void *
-/usr/include/stdlib.h	203903687258	free	1	void *	void
-/usr/include/stdlib.h	200166436630	cfree	1	void *	void
-/usr/include/alloca.h	200926556306	alloca	1	size_t	void *
-/usr/include/stdlib.h	201075237411	valloc	1	size_t	void *
-/usr/include/stdlib.h	201604435769	posix_memalign	3	void **	size_t	size_t	int
-/usr/include/stdlib.h	200889739182	aligned_alloc	2	size_t	size_t	void *
-/usr/include/stdlib.h	201905544680	abort	0	void
-/usr/include/stdlib.h	202800401827	atexit	1	void (*)()	int
-/usr/include/stdlib.h	200582972537	at_quick_exit	1	void (*)()	int
-/usr/include/stdlib.h	200552514451	on_exit	2	void (*)(int, void *)	void *	int
-/usr/include/stdlib.h	202089880856	exit	1	int	void
-/usr/include/stdlib.h	201951990907	quick_exit	1	int	void
-/usr/include/stdlib.h	202014731671	_Exit	1	int	void
-/usr/include/stdlib.h	200963500819	getenv	1	const char *	char *
-/usr/include/stdlib.h	200596491121	secure_getenv	1	const char *	char *
-/usr/include/stdlib.h	203069457514	putenv	1	char *	int
-/usr/include/stdlib.h	200409226813	setenv	3	const char *	const char *	int	int
-/usr/include/stdlib.h	200955329881	unsetenv	1	const char *	int
-/usr/include/stdlib.h	202076267740	clearenv	0	int
-/usr/include/stdlib.h	202182652953	mktemp	1	char *	char *
-/usr/include/stdlib.h	200780205041	mkstemp	1	char *	int
-/usr/include/stdlib.h	201560594659	mkstemp64	1	char *	int
-/usr/include/stdlib.h	202850521323	mkstemps	2	char *	int	int
-/usr/include/stdlib.h	203160309736	mkstemps64	2	char *	int	int
-/usr/include/stdlib.h	202677259910	mkdtemp	1	char *	char *
-/usr/include/stdlib.h	202928398336	mkostemp	2	char *	int	int
-/usr/include/stdlib.h	202064903852	mkostemp64	2	char *	int	int
-/usr/include/stdlib.h	203152592729	mkostemps	3	char *	int	int	int
-/usr/include/stdlib.h	201668838067	mkostemps64	3	char *	int	int	int
-/usr/include/stdlib.h	203250665914	system	1	const char *	int
-/usr/include/stdlib.h	200340922430	canonicalize_file_name	1	const char *	char *
-/usr/include/stdlib.h	203266198108	realpath	2	const char *__restrict	char *__restrict	char *
-/usr/include/stdlib.h	203170622910	bsearch	5	const void *	const void *	size_t	size_t	__compar_fn_t	void *
-/usr/include/stdlib.h	200671181861	qsort	4	void *	size_t	size_t	__compar_fn_t	void
-/usr/include/stdlib.h	200512926410	qsort_r	5	void *	size_t	size_t	__compar_d_fn_t	void *	void
-/usr/include/stdlib.h	203120301750	abs	1	int	int
-/usr/include/stdlib.h	201674633049	labs	1	long	long
-/usr/include/stdlib.h	201416084292	llabs	1	long long	long long
-/usr/include/stdlib.h	200980867898	div	2	int	int	div_t
-/usr/include/stdlib.h	200164238059	ldiv	2	long	long	ldiv_t
-/usr/include/stdlib.h	201412742215	lldiv	2	long long	long long	lldiv_t
-/usr/include/stdlib.h	203217534858	ecvt	4	double	int	int *__restrict	int *__restrict	char *
-/usr/include/stdlib.h	204076304228	fcvt	4	double	int	int *__restrict	int *__restrict	char *
-/usr/include/stdlib.h	200389563289	gcvt	3	double	int	char *	char *
-/usr/include/stdlib.h	200316306121	qecvt	4	long double	int	int *__restrict	int *__restrict	char *
-/usr/include/stdlib.h	201320609421	qfcvt	4	long double	int	int *__restrict	int *__restrict	char *
-/usr/include/stdlib.h	203327147710	qgcvt	3	long double	int	char *	char *
-/usr/include/stdlib.h	201186776129	ecvt_r	6	double	int	int *__restrict	int *__restrict	char *__restrict	size_t	int
-/usr/include/stdlib.h	203010699562	fcvt_r	6	double	int	int *__restrict	int *__restrict	char *__restrict	size_t	int
-/usr/include/stdlib.h	203614039681	qecvt_r	6	long double	int	int *__restrict	int *__restrict	char *__restrict	size_t	int
-/usr/include/stdlib.h	202056928496	qfcvt_r	6	long double	int	int *__restrict	int *__restrict	char *__restrict	size_t	int
-/usr/include/stdlib.h	203453452991	mblen	2	const char *	size_t	int
-/usr/include/stdlib.h	204116122126	mbtowc	3	wchar_t *__restrict	const char *__restrict	size_t	int
-/usr/include/stdlib.h	201075558669	wctomb	2	char *	wchar_t	int
-/usr/include/stdlib.h	204245343339	mbstowcs	3	wchar_t *__restrict	const char *__restrict	size_t	size_t
-/usr/include/stdlib.h	201254732281	wcstombs	3	char *__restrict	const wchar_t *__restrict	size_t	size_t
-/usr/include/stdlib.h	200937091699	rpmatch	1	const char *	int
-/usr/include/stdlib.h	203438625975	getsubopt	3	char **__restrict	char *const *__restrict	char **__restrict	int
-/usr/include/stdlib.h	204028751992	setkey	1	const char *	void
-/usr/include/stdlib.h	203805157210	posix_openpt	1	int	int
-/usr/include/stdlib.h	203132628354	grantpt	1	int	int
-/usr/include/stdlib.h	200041193968	unlockpt	1	int	int
-/usr/include/stdlib.h	201437952318	ptsname	1	int	char *
-/usr/include/stdlib.h	200937076421	ptsname_r	3	int	char *	size_t	int
-/usr/include/stdlib.h	204110625740	getpt	0	int
-/usr/include/stdlib.h	201918866409	getloadavg	2	double []	int	int
-/usr/local/include/bits/std_abs.h	201207560490	_ZSt3absl	1	long	long
-/usr/local/include/bits/std_abs.h	204078580876	_ZSt3absx	1	long long	long long
-/usr/local/include/bits/std_abs.h	200122534485	_ZSt3absd	1	double	double
-/usr/local/include/bits/std_abs.h	203417349440	_ZSt3absf	1	float	float
-/usr/local/include/bits/std_abs.h	203808356038	_ZSt3abse	1	long double	long double
-/usr/local/include/cstdlib	200063877911	_ZSt3divll	2	long	long	ldiv_t
-/usr/local/include/cstdlib	200251655864	_ZN9__gnu_cxx3divExx	2	long long	long long	lldiv_t
-/usr/include/bits/sched.h	202788255262	clone	4	int (*)(void *)	void *	int	void *	int
-/usr/include/bits/sched.h	202590894364	unshare	1	int	int
-/usr/include/bits/sched.h	200212722615	sched_getcpu	0	int
-/usr/include/bits/sched.h	203047701642	setns	2	int	int	int
-/usr/include/bits/sched.h	203223416577	__sched_cpucount	2	size_t	const cpu_set_t *	int
-/usr/include/bits/sched.h	203640004595	__sched_cpualloc	1	size_t	cpu_set_t *
-/usr/include/bits/sched.h	202593220016	__sched_cpufree	1	cpu_set_t *	void
-/usr/include/sched.h	203799521332	sched_setparam	2	__pid_t	const struct sched_param *	int
-/usr/include/sched.h	202515433876	sched_getparam	2	__pid_t	struct sched_param *	int
-/usr/include/sched.h	200945324514	sched_setscheduler	3	__pid_t	int	const struct sched_param *	int
-/usr/include/sched.h	202999957695	sched_getscheduler	1	__pid_t	int
-/usr/include/sched.h	204116973104	sched_yield	0	int
-/usr/include/sched.h	202833496002	sched_get_priority_max	1	int	int
-/usr/include/sched.h	201573378511	sched_get_priority_min	1	int	int
-/usr/include/sched.h	200333356234	sched_rr_get_interval	2	__pid_t	struct timespec *	int
-/usr/include/sched.h	201764006486	sched_setaffinity	3	__pid_t	size_t	const cpu_set_t *	int
-/usr/include/sched.h	201015178820	sched_getaffinity	3	__pid_t	size_t	cpu_set_t *	int
-/usr/include/bits/time.h	201927957386	clock_adjtime	2	__clockid_t	struct timex *	int
-/usr/include/time.h	201596928058	clock	0	clock_t
-/usr/include/time.h	203637409782	time	1	time_t *	time_t
-/usr/include/time.h	201382452064	difftime	2	time_t	time_t	double
-/usr/include/time.h	200392359698	mktime	1	struct tm *	time_t
-/usr/include/time.h	202841737860	strftime	4	char *__restrict	size_t	const char *__restrict	const struct tm *__restrict	size_t
-/usr/include/time.h	201689320899	strptime	3	const char *__restrict	const char *__restrict	struct tm *	char *
-/usr/include/time.h	203480708512	strftime_l	5	char *__restrict	size_t	const char *__restrict	const struct tm *__restrict	__locale_t	size_t
-/usr/include/time.h	200075613075	strptime_l	4	const char *__restrict	const char *__restrict	struct tm *	__locale_t	char *
-/usr/include/time.h	202619219999	gmtime	1	const time_t *	struct tm *
-/usr/include/time.h	203689820945	localtime	1	const time_t *	struct tm *
-/usr/include/time.h	201563612578	gmtime_r	2	const time_t *__restrict	struct tm *__restrict	struct tm *
-/usr/include/time.h	200917045233	localtime_r	2	const time_t *__restrict	struct tm *__restrict	struct tm *
-/usr/include/time.h	200270264703	asctime	1	const struct tm *	char *
-/usr/include/time.h	203461601739	ctime	1	const time_t *	char *
-/usr/include/time.h	204237489335	asctime_r	2	const struct tm *__restrict	char *__restrict	char *
-/usr/include/time.h	201517610518	ctime_r	2	const time_t *__restrict	char *__restrict	char *
-/usr/include/time.h	201381665901	tzset	0	void
-/usr/include/time.h	202045472808	stime	1	const time_t *	int
-/usr/include/time.h	202260925743	timegm	1	struct tm *	time_t
-/usr/include/time.h	204120541294	timelocal	1	struct tm *	time_t
-/usr/include/time.h	200071533883	dysize	1	int	int
-/usr/include/time.h	202724167465	nanosleep	2	const struct timespec *	struct timespec *	int
-/usr/include/time.h	203897742331	clock_getres	2	clockid_t	struct timespec *	int
-/usr/include/time.h	203178472896	clock_gettime	2	clockid_t	struct timespec *	int
-/usr/include/time.h	201096144179	clock_settime	2	clockid_t	const struct timespec *	int
-/usr/include/time.h	201683964584	clock_nanosleep	4	clockid_t	int	const struct timespec *	struct timespec *	int
-/usr/include/time.h	201357929007	clock_getcpuclockid	2	pid_t	clockid_t *	int
-/usr/include/time.h	204159806534	timer_create	3	clockid_t	struct sigevent *__restrict	timer_t *__restrict	int
-/usr/include/time.h	203856006799	timer_delete	1	timer_t	int
-/usr/include/time.h	203128375975	timer_settime	4	timer_t	int	const struct itimerspec *__restrict	struct itimerspec *__restrict	int
-/usr/include/time.h	200941275080	timer_gettime	2	timer_t	struct itimerspec *	int
-/usr/include/time.h	200359222791	timer_getoverrun	1	timer_t	int
-/usr/include/time.h	200169733287	timespec_get	2	struct timespec *	int	int
-/usr/include/time.h	201407224356	getdate	1	const char *	struct tm *
-/usr/include/time.h	202059512111	getdate_r	2	const char *__restrict	struct tm *__restrict	int
-/usr/include/pthread.h	201540668204	pthread_create	4	pthread_t *__restrict	const pthread_attr_t *__restrict	void *(*)(void *)	void *__restrict	int
-/usr/include/pthread.h	203200797088	pthread_exit	1	void *	void
-/usr/include/pthread.h	201609194990	pthread_join	2	pthread_t	void **	int
-/usr/include/pthread.h	200408868237	pthread_tryjoin_np	2	pthread_t	void **	int
-/usr/include/pthread.h	200918462262	pthread_timedjoin_np	3	pthread_t	void **	const struct timespec *	int
-/usr/include/pthread.h	203646731103	pthread_detach	1	pthread_t	int
-/usr/include/pthread.h	200770529468	pthread_self	0	pthread_t
-/usr/include/pthread.h	200076859767	pthread_equal	2	pthread_t	pthread_t	int
-/usr/include/pthread.h	203163595907	pthread_attr_init	1	pthread_attr_t *	int
-/usr/include/pthread.h	203475134889	pthread_attr_destroy	1	pthread_attr_t *	int
-/usr/include/pthread.h	203915944484	pthread_attr_getdetachstate	2	const pthread_attr_t *	int *	int
-/usr/include/pthread.h	201719569349	pthread_attr_setdetachstate	2	pthread_attr_t *	int	int
-/usr/include/pthread.h	203715779773	pthread_attr_getguardsize	2	const pthread_attr_t *	size_t *	int
-/usr/include/pthread.h	202278195716	pthread_attr_setguardsize	2	pthread_attr_t *	size_t	int
-/usr/include/pthread.h	202165251513	pthread_attr_getschedparam	2	const pthread_attr_t *__restrict	struct sched_param *__restrict	int
-/usr/include/pthread.h	201544927898	pthread_attr_setschedparam	2	pthread_attr_t *__restrict	const struct sched_param *__restrict	int
-/usr/include/pthread.h	202314595971	pthread_attr_getschedpolicy	2	const pthread_attr_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	203068855502	pthread_attr_setschedpolicy	2	pthread_attr_t *	int	int
-/usr/include/pthread.h	202551210504	pthread_attr_getinheritsched	2	const pthread_attr_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	201587699291	pthread_attr_setinheritsched	2	pthread_attr_t *	int	int
-/usr/include/pthread.h	203959859683	pthread_attr_getscope	2	const pthread_attr_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	202760985081	pthread_attr_setscope	2	pthread_attr_t *	int	int
-/usr/include/pthread.h	201606290293	pthread_attr_getstackaddr	2	const pthread_attr_t *__restrict	void **__restrict	int
-/usr/include/pthread.h	200606083697	pthread_attr_setstackaddr	2	pthread_attr_t *	void *	int
-/usr/include/pthread.h	200055060434	pthread_attr_getstacksize	2	const pthread_attr_t *__restrict	size_t *__restrict	int
-/usr/include/pthread.h	202417762866	pthread_attr_setstacksize	2	pthread_attr_t *	size_t	int
-/usr/include/pthread.h	202019331956	pthread_attr_getstack	3	const pthread_attr_t *__restrict	void **__restrict	size_t *__restrict	int
-/usr/include/pthread.h	203475477347	pthread_attr_setstack	3	pthread_attr_t *	void *	size_t	int
-/usr/include/pthread.h	203078542828	pthread_attr_setaffinity_np	3	pthread_attr_t *	size_t	const cpu_set_t *	int
-/usr/include/pthread.h	203691793688	pthread_attr_getaffinity_np	3	const pthread_attr_t *	size_t	cpu_set_t *	int
-/usr/include/pthread.h	201660215471	pthread_getattr_np	2	pthread_t	pthread_attr_t *	int
-/usr/include/pthread.h	204187137956	pthread_setschedparam	3	pthread_t	int	const struct sched_param *	int
-/usr/include/pthread.h	202891736811	pthread_getschedparam	3	pthread_t	int *__restrict	struct sched_param *__restrict	int
-/usr/include/pthread.h	201257322347	pthread_setschedprio	2	pthread_t	int	int
-/usr/include/pthread.h	201621533720	pthread_getname_np	3	pthread_t	char *	size_t	int
-/usr/include/pthread.h	200601390701	pthread_setname_np	2	pthread_t	const char *	int
-/usr/include/pthread.h	201271658296	pthread_getconcurrency	0	int
-/usr/include/pthread.h	200800431406	pthread_setconcurrency	1	int	int
-/usr/include/pthread.h	202688747196	pthread_yield	0	int
-/usr/include/pthread.h	202495106231	pthread_setaffinity_np	3	pthread_t	size_t	const cpu_set_t *	int
-/usr/include/pthread.h	202308552996	pthread_getaffinity_np	3	pthread_t	size_t	cpu_set_t *	int
-/usr/include/pthread.h	203176587514	pthread_once	2	pthread_once_t *	void (*)()	int
-/usr/include/pthread.h	203195019949	pthread_setcancelstate	2	int	int *	int
-/usr/include/pthread.h	203298143262	pthread_setcanceltype	2	int	int *	int
-/usr/include/pthread.h	203290892271	pthread_cancel	1	pthread_t	int
-/usr/include/pthread.h	201709036308	pthread_testcancel	0	void
-/usr/include/pthread.h	201181784426	_ZN23__pthread_cleanup_classC1EPFvPvES0_	2	void (*)(void *)	void *	void
-/usr/include/pthread.h	203510553540	_ZN23__pthread_cleanup_classD1Ev	0	void
-/usr/include/pthread.h	200795840418	_ZN23__pthread_cleanup_class9__setdoitEi	1	int	void
-/usr/include/pthread.h	203495008837	_ZN23__pthread_cleanup_class7__deferEv	0	void
-/usr/include/pthread.h	204169361957	_ZNK23__pthread_cleanup_class9__restoreEv	0	void
-/usr/include/pthread.h	202357806507	__sigsetjmp	2	struct __jmp_buf_tag *	int	int
-/usr/include/pthread.h	204097983931	pthread_mutex_init	2	pthread_mutex_t *	const pthread_mutexattr_t *	int
-/usr/include/pthread.h	204105780094	pthread_mutex_destroy	1	pthread_mutex_t *	int
-/usr/include/pthread.h	200113238305	pthread_mutex_trylock	1	pthread_mutex_t *	int
-/usr/include/pthread.h	201908294980	pthread_mutex_lock	1	pthread_mutex_t *	int
-/usr/include/pthread.h	200388040382	pthread_mutex_timedlock	2	pthread_mutex_t *__restrict	const struct timespec *__restrict	int
-/usr/include/pthread.h	201384484837	pthread_mutex_unlock	1	pthread_mutex_t *	int
-/usr/include/pthread.h	200619775968	pthread_mutex_getprioceiling	2	const pthread_mutex_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	200309107920	pthread_mutex_setprioceiling	3	pthread_mutex_t *__restrict	int	int *__restrict	int
-/usr/include/pthread.h	202606597064	pthread_mutex_consistent	1	pthread_mutex_t *	int
-/usr/include/pthread.h	201336283080	pthread_mutex_consistent_np	1	pthread_mutex_t *	int
-/usr/include/pthread.h	202862308136	pthread_mutexattr_init	1	pthread_mutexattr_t *	int
-/usr/include/pthread.h	201306267887	pthread_mutexattr_destroy	1	pthread_mutexattr_t *	int
-/usr/include/pthread.h	202932070418	pthread_mutexattr_getpshared	2	const pthread_mutexattr_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	202539720241	pthread_mutexattr_setpshared	2	pthread_mutexattr_t *	int	int
-/usr/include/pthread.h	200090964912	pthread_mutexattr_gettype	2	const pthread_mutexattr_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	203832862964	pthread_mutexattr_settype	2	pthread_mutexattr_t *	int	int
-/usr/include/pthread.h	200799147605	pthread_mutexattr_getprotocol	2	const pthread_mutexattr_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	204239559008	pthread_mutexattr_setprotocol	2	pthread_mutexattr_t *	int	int
-/usr/include/pthread.h	203236568496	pthread_mutexattr_getprioceiling	2	const pthread_mutexattr_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	202844636255	pthread_mutexattr_setprioceiling	2	pthread_mutexattr_t *	int	int
-/usr/include/pthread.h	203733308213	pthread_mutexattr_getrobust	2	const pthread_mutexattr_t *	int *	int
-/usr/include/pthread.h	202642622454	pthread_mutexattr_getrobust_np	2	const pthread_mutexattr_t *	int *	int
-/usr/include/pthread.h	203212160352	pthread_mutexattr_setrobust	2	pthread_mutexattr_t *	int	int
-/usr/include/pthread.h	201002631785	pthread_mutexattr_setrobust_np	2	pthread_mutexattr_t *	int	int
-/usr/include/pthread.h	200375046023	pthread_rwlock_init	2	pthread_rwlock_t *__restrict	const pthread_rwlockattr_t *__restrict	int
-/usr/include/pthread.h	202734036351	pthread_rwlock_destroy	1	pthread_rwlock_t *	int
-/usr/include/pthread.h	200688355964	pthread_rwlock_rdlock	1	pthread_rwlock_t *	int
-/usr/include/pthread.h	202337863669	pthread_rwlock_tryrdlock	1	pthread_rwlock_t *	int
-/usr/include/pthread.h	200605092940	pthread_rwlock_timedrdlock	2	pthread_rwlock_t *__restrict	const struct timespec *__restrict	int
-/usr/include/pthread.h	203133325941	pthread_rwlock_wrlock	1	pthread_rwlock_t *	int
-/usr/include/pthread.h	200596925746	pthread_rwlock_trywrlock	1	pthread_rwlock_t *	int
-/usr/include/pthread.h	203826439916	pthread_rwlock_timedwrlock	2	pthread_rwlock_t *__restrict	const struct timespec *__restrict	int
-/usr/include/pthread.h	200178409803	pthread_rwlock_unlock	1	pthread_rwlock_t *	int
-/usr/include/pthread.h	201657224719	pthread_rwlockattr_init	1	pthread_rwlockattr_t *	int
-/usr/include/pthread.h	203906515720	pthread_rwlockattr_destroy	1	pthread_rwlockattr_t *	int
-/usr/include/pthread.h	201921435135	pthread_rwlockattr_getpshared	2	const pthread_rwlockattr_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	202921643685	pthread_rwlockattr_setpshared	2	pthread_rwlockattr_t *	int	int
-/usr/include/pthread.h	204293548567	pthread_rwlockattr_getkind_np	2	const pthread_rwlockattr_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	203225478484	pthread_rwlockattr_setkind_np	2	pthread_rwlockattr_t *	int	int
-/usr/include/pthread.h	204221560701	pthread_cond_init	2	pthread_cond_t *__restrict	const pthread_condattr_t *__restrict	int
-/usr/include/pthread.h	201633919164	pthread_cond_destroy	1	pthread_cond_t *	int
-/usr/include/pthread.h	202700801335	pthread_cond_signal	1	pthread_cond_t *	int
-/usr/include/pthread.h	200247870264	pthread_cond_broadcast	1	pthread_cond_t *	int
-/usr/include/pthread.h	201969829244	pthread_cond_wait	2	pthread_cond_t *__restrict	pthread_mutex_t *__restrict	int
-/usr/include/pthread.h	200823980344	pthread_cond_timedwait	3	pthread_cond_t *__restrict	pthread_mutex_t *__restrict	const struct timespec *__restrict	int
-/usr/include/pthread.h	203844810267	pthread_condattr_init	1	pthread_condattr_t *	int
-/usr/include/pthread.h	201368380888	pthread_condattr_destroy	1	pthread_condattr_t *	int
-/usr/include/pthread.h	200591791345	pthread_condattr_getpshared	2	const pthread_condattr_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	202511623099	pthread_condattr_setpshared	2	pthread_condattr_t *	int	int
-/usr/include/pthread.h	201326951222	pthread_condattr_getclock	2	const pthread_condattr_t *__restrict	__clockid_t *__restrict	int
-/usr/include/pthread.h	200569548516	pthread_condattr_setclock	2	pthread_condattr_t *	__clockid_t	int
-/usr/include/pthread.h	200201262880	pthread_spin_init	2	pthread_spinlock_t *	int	int
-/usr/include/pthread.h	202975151487	pthread_spin_destroy	1	pthread_spinlock_t *	int
-/usr/include/pthread.h	203093241008	pthread_spin_lock	1	pthread_spinlock_t *	int
-/usr/include/pthread.h	201832547595	pthread_spin_trylock	1	pthread_spinlock_t *	int
-/usr/include/pthread.h	201333539983	pthread_spin_unlock	1	pthread_spinlock_t *	int
-/usr/include/pthread.h	202862408801	pthread_barrier_init	3	pthread_barrier_t *__restrict	const pthread_barrierattr_t *__restrict	unsigned int	int
-/usr/include/pthread.h	200091608066	pthread_barrier_destroy	1	pthread_barrier_t *	int
-/usr/include/pthread.h	202036579890	pthread_barrier_wait	1	pthread_barrier_t *	int
-/usr/include/pthread.h	200592843448	pthread_barrierattr_init	1	pthread_barrierattr_t *	int
-/usr/include/pthread.h	204052004796	pthread_barrierattr_destroy	1	pthread_barrierattr_t *	int
-/usr/include/pthread.h	200941329965	pthread_barrierattr_getpshared	2	const pthread_barrierattr_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	201381002645	pthread_barrierattr_setpshared	2	pthread_barrierattr_t *	int	int
-/usr/include/pthread.h	200468238070	pthread_key_create	2	pthread_key_t *	void (*)(void *)	int
-/usr/include/pthread.h	202752475737	pthread_key_delete	1	pthread_key_t	int
-/usr/include/pthread.h	203713263871	pthread_getspecific	1	pthread_key_t	void *
-/usr/include/pthread.h	200878919257	pthread_setspecific	2	pthread_key_t	const void *	int
-/usr/include/pthread.h	202422458876	pthread_getcpuclockid	2	pthread_t	__clockid_t *	int
-/usr/include/pthread.h	201932735452	pthread_atfork	3	void (*)()	void (*)()	void (*)()	int
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	200522583714	_Z7trythisPv	1	void *	void *
-/usr/include/libio.h	103990324858	_IO_cookie_init	4	struct _IO_cookie_file *	int	void *	_IO_cookie_io_functions_t	void
-/usr/include/libio.h	101747916388	__underflow	1	_IO_FILE *	int
-/usr/include/libio.h	101606323020	__uflow	1	_IO_FILE *	int
-/usr/include/libio.h	100857865838	__overflow	2	_IO_FILE *	int	int
-/usr/include/libio.h	102000741840	_IO_getc	1	_IO_FILE *	int
-/usr/include/libio.h	103854809478	_IO_putc	2	int	_IO_FILE *	int
-/usr/include/libio.h	100708003556	_IO_feof	1	_IO_FILE *	int
-/usr/include/libio.h	103203762664	_IO_ferror	1	_IO_FILE *	int
-/usr/include/libio.h	103269529055	_IO_peekc_locked	1	_IO_FILE *	int
-/usr/include/libio.h	103667424173	_IO_flockfile	1	_IO_FILE *	void
-/usr/include/libio.h	102314000323	_IO_funlockfile	1	_IO_FILE *	void
-/usr/include/libio.h	103507837294	_IO_ftrylockfile	1	_IO_FILE *	int
-/usr/include/libio.h	103842473964	_IO_vfscanf	4	_IO_FILE *__restrict	const char *__restrict	__gnuc_va_list	int *__restrict	int
-/usr/include/libio.h	101810126811	_IO_vfprintf	3	_IO_FILE *__restrict	const char *__restrict	__gnuc_va_list	int
-/usr/include/libio.h	100171030820	_IO_padn	3	_IO_FILE *	int	__ssize_t	__ssize_t
-/usr/include/libio.h	102019552365	_IO_sgetn	3	_IO_FILE *	void *	size_t	size_t
-/usr/include/libio.h	104125032504	_IO_seekoff	4	_IO_FILE *	__off64_t	int	int	__off64_t
-/usr/include/libio.h	103827346275	_IO_seekpos	3	_IO_FILE *	__off64_t	int	__off64_t
-/usr/include/libio.h	102903735680	_IO_free_backup_area	1	_IO_FILE *	void
-/usr/include/stdio.h	103159186225	remove	1	const char *	int
-/usr/include/stdio.h	103294939124	rename	2	const char *	const char *	int
-/usr/include/stdio.h	102994978573	renameat	4	int	const char *	int	const char *	int
-/usr/include/stdio.h	102945344711	tmpfile	0	FILE *
-/usr/include/stdio.h	102786398924	tmpfile64	0	FILE *
-/usr/include/stdio.h	102944675225	tmpnam	1	char *	char *
-/usr/include/stdio.h	100245600770	tmpnam_r	1	char *	char *
-/usr/include/stdio.h	102086553400	tempnam	2	const char *	const char *	char *
-/usr/include/stdio.h	101448266740	fclose	1	FILE *	int
-/usr/include/stdio.h	102072647615	fflush	1	FILE *	int
-/usr/include/stdio.h	101660105718	fflush_unlocked	1	FILE *	int
-/usr/include/stdio.h	104080302039	fcloseall	0	int
-/usr/include/stdio.h	102768893407	fopen	2	const char *__restrict	const char *__restrict	FILE *
-/usr/include/stdio.h	101396223564	freopen	3	const char *__restrict	const char *__restrict	FILE *__restrict	FILE *
-/usr/include/stdio.h	101167913508	fopen64	2	const char *__restrict	const char *__restrict	FILE *
-/usr/include/stdio.h	102868903719	freopen64	3	const char *__restrict	const char *__restrict	FILE *__restrict	FILE *
-/usr/include/stdio.h	102711417126	fdopen	2	int	const char *	FILE *
-/usr/include/stdio.h	102249349469	fopencookie	3	void *__restrict	const char *__restrict	_IO_cookie_io_functions_t	FILE *
-/usr/include/stdio.h	101411463967	fmemopen	3	void *	size_t	const char *	FILE *
-/usr/include/stdio.h	102742290021	open_memstream	2	char **	size_t *	FILE *
-/usr/include/stdio.h	103606104110	setbuf	2	FILE *__restrict	char *__restrict	void
-/usr/include/stdio.h	104240365581	setvbuf	4	FILE *__restrict	char *__restrict	int	size_t	int
-/usr/include/stdio.h	102480273781	setbuffer	3	FILE *__restrict	char *__restrict	size_t	void
-/usr/include/stdio.h	101270549373	setlinebuf	1	FILE *	void
-/usr/include/stdio.h	103662265766	fprintf	2	FILE *__restrict	const char *__restrict	int
-/usr/include/stdio.h	100532405089	printf	1	const char *__restrict	int
-/usr/include/stdio.h	103753840752	sprintf	2	char *__restrict	const char *__restrict	int
-/usr/include/stdio.h	102131386075	vfprintf	3	FILE *__restrict	const char *__restrict	__gnuc_va_list	int
-/usr/include/stdio.h	101016895106	vprintf	2	const char *__restrict	__gnuc_va_list	int
-/usr/include/stdio.h	102096304829	vsprintf	3	char *__restrict	const char *__restrict	__gnuc_va_list	int
-/usr/include/stdio.h	103079140195	snprintf	3	char *__restrict	size_t	const char *__restrict	int
-/usr/include/stdio.h	100820685674	vsnprintf	4	char *__restrict	size_t	const char *__restrict	__gnuc_va_list	int
-/usr/include/stdio.h	102698306471	vasprintf	3	char **__restrict	const char *__restrict	__gnuc_va_list	int
-/usr/include/stdio.h	100291548691	__asprintf	2	char **__restrict	const char *__restrict	int
-/usr/include/stdio.h	101883768891	asprintf	2	char **__restrict	const char *__restrict	int
-/usr/include/stdio.h	103902156557	vdprintf	3	int	const char *__restrict	__gnuc_va_list	int
-/usr/include/stdio.h	103172301132	dprintf	2	int	const char *__restrict	int
-/usr/include/stdio.h	103244258154	fscanf	2	FILE *__restrict	const char *__restrict	int
-/usr/include/stdio.h	103041440850	scanf	1	const char *__restrict	int
-/usr/include/stdio.h	104148490228	sscanf	2	const char *__restrict	const char *__restrict	int
-/usr/include/stdio.h	104103296370	vfscanf	3	FILE *__restrict	const char *__restrict	__gnuc_va_list	int
-/usr/include/stdio.h	100920515223	vscanf	2	const char *__restrict	__gnuc_va_list	int
-/usr/include/stdio.h	102304689922	vsscanf	3	const char *__restrict	const char *__restrict	__gnuc_va_list	int
-/usr/include/stdio.h	103838068133	fgetc	1	FILE *	int
-/usr/include/stdio.h	100029015627	getc	1	FILE *	int
-/usr/include/stdio.h	100232141198	getchar	0	int
-/usr/include/stdio.h	100563345656	getc_unlocked	1	FILE *	int
-/usr/include/stdio.h	103119630951	getchar_unlocked	0	int
-/usr/include/stdio.h	102625675358	fgetc_unlocked	1	FILE *	int
-/usr/include/stdio.h	100185976848	fputc	2	int	FILE *	int
-/usr/include/stdio.h	103802812123	putc	2	int	FILE *	int
-/usr/include/stdio.h	103458805564	putchar	1	int	int
-/usr/include/stdio.h	102294857868	fputc_unlocked	2	int	FILE *	int
-/usr/include/stdio.h	103950180255	putc_unlocked	2	int	FILE *	int
-/usr/include/stdio.h	101810653112	putchar_unlocked	1	int	int
-/usr/include/stdio.h	103546017093	getw	1	FILE *	int
-/usr/include/stdio.h	100795482562	putw	2	int	FILE *	int
-/usr/include/stdio.h	100436446649	fgets	3	char *__restrict	int	FILE *__restrict	char *
-/usr/include/stdio.h	102658671459	fgets_unlocked	3	char *__restrict	int	FILE *__restrict	char *
-/usr/include/stdio.h	101621837616	__getdelim	4	char **__restrict	size_t *__restrict	int	FILE *__restrict	__ssize_t
-/usr/include/stdio.h	104099650749	getdelim	4	char **__restrict	size_t *__restrict	int	FILE *__restrict	__ssize_t
-/usr/include/stdio.h	101597834146	getline	3	char **__restrict	size_t *__restrict	FILE *__restrict	__ssize_t
-/usr/include/stdio.h	102430781081	fputs	2	const char *__restrict	FILE *__restrict	int
-/usr/include/stdio.h	100006972173	puts	1	const char *	int
-/usr/include/stdio.h	102090854504	ungetc	2	int	FILE *	int
-/usr/include/stdio.h	102601257479	fread	4	void *__restrict	size_t	size_t	FILE *__restrict	size_t
-/usr/include/stdio.h	100298595033	fwrite	4	const void *__restrict	size_t	size_t	FILE *__restrict	size_t
-/usr/include/stdio.h	103105790040	fputs_unlocked	2	const char *__restrict	FILE *__restrict	int
-/usr/include/stdio.h	102928688146	fread_unlocked	4	void *__restrict	size_t	size_t	FILE *__restrict	size_t
-/usr/include/stdio.h	102244923652	fwrite_unlocked	4	const void *__restrict	size_t	size_t	FILE *__restrict	size_t
-/usr/include/stdio.h	101871114451	fseek	3	FILE *	long	int	int
-/usr/include/stdio.h	102053263222	ftell	1	FILE *	long
-/usr/include/stdio.h	103057172674	rewind	1	FILE *	void
-/usr/include/stdio.h	103478323326	fseeko	3	FILE *	__off_t	int	int
-/usr/include/stdio.h	102158344954	ftello	1	FILE *	__off_t
-/usr/include/stdio.h	102366572969	fgetpos	2	FILE *__restrict	fpos_t *__restrict	int
-/usr/include/stdio.h	100411751431	fsetpos	2	FILE *	const fpos_t *	int
-/usr/include/stdio.h	103041850687	fseeko64	3	FILE *	__off64_t	int	int
-/usr/include/stdio.h	103782253607	ftello64	1	FILE *	__off64_t
-/usr/include/stdio.h	100777059655	fgetpos64	2	FILE *__restrict	fpos64_t *__restrict	int
-/usr/include/stdio.h	103005631508	fsetpos64	2	FILE *	const fpos64_t *	int
-/usr/include/stdio.h	102424456426	clearerr	1	FILE *	void
-/usr/include/stdio.h	102339050521	feof	1	FILE *	int
-/usr/include/stdio.h	100693252834	ferror	1	FILE *	int
-/usr/include/stdio.h	100864537611	clearerr_unlocked	1	FILE *	void
-/usr/include/stdio.h	100865473775	feof_unlocked	1	FILE *	int
-/usr/include/stdio.h	100190348319	ferror_unlocked	1	FILE *	int
-/usr/include/stdio.h	103493861420	perror	1	const char *	void
-/usr/include/stdio.h	103116325897	fileno	1	FILE *	int
-/usr/include/stdio.h	104272136276	fileno_unlocked	1	FILE *	int
-/usr/include/stdio.h	103325918188	popen	2	const char *	const char *	FILE *
-/usr/include/stdio.h	100086399357	pclose	1	FILE *	int
-/usr/include/stdio.h	101443071504	ctermid	1	char *	char *
-/usr/include/stdio.h	104109067270	cuserid	1	char *	char *
-/usr/include/stdio.h	100765427607	obstack_printf	2	struct obstack *__restrict	const char *__restrict	int
-/usr/include/stdio.h	102189353610	obstack_vprintf	3	struct obstack *__restrict	const char *__restrict	__gnuc_va_list	int
-/usr/include/stdio.h	103844755157	flockfile	1	FILE *	void
-/usr/include/stdio.h	100696518117	ftrylockfile	1	FILE *	int
-/usr/include/stdio.h	100167043507	funlockfile	1	FILE *	void
-/usr/include/bits/sched.h	102333182475	clone	4	int (*)(void *)	void *	int	void *	int
-/usr/include/bits/sched.h	102846953896	unshare	1	int	int
-/usr/include/bits/sched.h	100601978267	sched_getcpu	0	int
-/usr/include/bits/sched.h	102664464741	setns	2	int	int	int
-/usr/include/bits/sched.h	104070011844	__sched_cpucount	2	size_t	const cpu_set_t *	int
-/usr/include/bits/sched.h	101053013513	__sched_cpualloc	1	size_t	cpu_set_t *
-/usr/include/bits/sched.h	101438837609	__sched_cpufree	1	cpu_set_t *	void
-/usr/include/sched.h	100853582613	sched_setparam	2	__pid_t	const struct sched_param *	int
-/usr/include/sched.h	102472521988	sched_getparam	2	__pid_t	struct sched_param *	int
-/usr/include/sched.h	102295532985	sched_setscheduler	3	__pid_t	int	const struct sched_param *	int
-/usr/include/sched.h	101479024924	sched_getscheduler	1	__pid_t	int
-/usr/include/sched.h	102301079267	sched_yield	0	int
-/usr/include/sched.h	101295575145	sched_get_priority_max	1	int	int
-/usr/include/sched.h	100765596431	sched_get_priority_min	1	int	int
-/usr/include/sched.h	102912410072	sched_rr_get_interval	2	__pid_t	struct timespec *	int
-/usr/include/sched.h	102166098941	sched_setaffinity	3	__pid_t	size_t	const cpu_set_t *	int
-/usr/include/sched.h	102905817504	sched_getaffinity	3	__pid_t	size_t	cpu_set_t *	int
-/usr/include/bits/time.h	100983666165	clock_adjtime	2	__clockid_t	struct timex *	int
-/usr/include/time.h	103839123112	clock	0	clock_t
-/usr/include/time.h	100337543892	time	1	time_t *	time_t
-/usr/include/time.h	103311803029	difftime	2	time_t	time_t	double
-/usr/include/time.h	100093532671	mktime	1	struct tm *	time_t
-/usr/include/time.h	100418068084	strftime	4	char *__restrict	size_t	const char *__restrict	const struct tm *__restrict	size_t
-/usr/include/time.h	102769269579	strptime	3	const char *__restrict	const char *__restrict	struct tm *	char *
-/usr/include/time.h	103921594319	strftime_l	5	char *__restrict	size_t	const char *__restrict	const struct tm *__restrict	__locale_t	size_t
-/usr/include/time.h	103663503315	strptime_l	4	const char *__restrict	const char *__restrict	struct tm *	__locale_t	char *
-/usr/include/time.h	100568790543	gmtime	1	const time_t *	struct tm *
-/usr/include/time.h	103694417038	localtime	1	const time_t *	struct tm *
-/usr/include/time.h	101876287477	gmtime_r	2	const time_t *__restrict	struct tm *__restrict	struct tm *
-/usr/include/time.h	103045154605	localtime_r	2	const time_t *__restrict	struct tm *__restrict	struct tm *
-/usr/include/time.h	102691538552	asctime	1	const struct tm *	char *
-/usr/include/time.h	102889426979	ctime	1	const time_t *	char *
-/usr/include/time.h	103237370615	asctime_r	2	const struct tm *__restrict	char *__restrict	char *
-/usr/include/time.h	100611902519	ctime_r	2	const time_t *__restrict	char *__restrict	char *
-/usr/include/time.h	103731342900	tzset	0	void
-/usr/include/time.h	104158529743	stime	1	const time_t *	int
-/usr/include/time.h	102796459579	timegm	1	struct tm *	time_t
-/usr/include/time.h	103872195110	timelocal	1	struct tm *	time_t
-/usr/include/time.h	100428000848	dysize	1	int	int
-/usr/include/time.h	103214648149	nanosleep	2	const struct timespec *	struct timespec *	int
-/usr/include/time.h	101462959666	clock_getres	2	clockid_t	struct timespec *	int
-/usr/include/time.h	103672759930	clock_gettime	2	clockid_t	struct timespec *	int
-/usr/include/time.h	100518899535	clock_settime	2	clockid_t	const struct timespec *	int
-/usr/include/time.h	102944403578	clock_nanosleep	4	clockid_t	int	const struct timespec *	struct timespec *	int
-/usr/include/time.h	102082845524	clock_getcpuclockid	2	pid_t	clockid_t *	int
-/usr/include/time.h	101213860995	timer_create	3	clockid_t	struct sigevent *__restrict	timer_t *__restrict	int
-/usr/include/time.h	102306979876	timer_delete	1	timer_t	int
-/usr/include/time.h	101031417028	timer_settime	4	timer_t	int	const struct itimerspec *__restrict	struct itimerspec *__restrict	int
-/usr/include/time.h	102894181917	timer_gettime	2	timer_t	struct itimerspec *	int
-/usr/include/time.h	103481406984	timer_getoverrun	1	timer_t	int
-/usr/include/time.h	103212131900	timespec_get	2	struct timespec *	int	int
-/usr/include/time.h	100458349512	getdate	1	const char *	struct tm *
-/usr/include/time.h	102245260142	getdate_r	2	const char *__restrict	struct tm *__restrict	int
-/usr/include/pthread.h	103905750710	pthread_create	4	pthread_t *__restrict	const pthread_attr_t *__restrict	void *(*)(void *)	void *__restrict	int
-/usr/include/pthread.h	102879719272	pthread_exit	1	void *	void
-/usr/include/pthread.h	100962791839	pthread_join	2	pthread_t	void **	int
-/usr/include/pthread.h	102512032154	pthread_tryjoin_np	2	pthread_t	void **	int
-/usr/include/pthread.h	103105150891	pthread_timedjoin_np	3	pthread_t	void **	const struct timespec *	int
-/usr/include/pthread.h	104108626309	pthread_detach	1	pthread_t	int
-/usr/include/pthread.h	100284475802	pthread_self	0	pthread_t
-/usr/include/pthread.h	100271726761	pthread_equal	2	pthread_t	pthread_t	int
-/usr/include/pthread.h	103425833396	pthread_attr_init	1	pthread_attr_t *	int
-/usr/include/pthread.h	101489756259	pthread_attr_destroy	1	pthread_attr_t *	int
-/usr/include/pthread.h	103487830048	pthread_attr_getdetachstate	2	const pthread_attr_t *	int *	int
-/usr/include/pthread.h	100012262660	pthread_attr_setdetachstate	2	pthread_attr_t *	int	int
-/usr/include/pthread.h	103276493834	pthread_attr_getguardsize	2	const pthread_attr_t *	size_t *	int
-/usr/include/pthread.h	100965504234	pthread_attr_setguardsize	2	pthread_attr_t *	size_t	int
-/usr/include/pthread.h	103154140560	pthread_attr_getschedparam	2	const pthread_attr_t *__restrict	struct sched_param *__restrict	int
-/usr/include/pthread.h	103448126301	pthread_attr_setschedparam	2	pthread_attr_t *__restrict	const struct sched_param *__restrict	int
-/usr/include/pthread.h	100111051490	pthread_attr_getschedpolicy	2	const pthread_attr_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	103623544297	pthread_attr_setschedpolicy	2	pthread_attr_t *	int	int
-/usr/include/pthread.h	102464593889	pthread_attr_getinheritsched	2	const pthread_attr_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	102983189051	pthread_attr_setinheritsched	2	pthread_attr_t *	int	int
-/usr/include/pthread.h	100876732286	pthread_attr_getscope	2	const pthread_attr_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	102092150527	pthread_attr_setscope	2	pthread_attr_t *	int	int
-/usr/include/pthread.h	102341603901	pthread_attr_getstackaddr	2	const pthread_attr_t *__restrict	void **__restrict	int
-/usr/include/pthread.h	101198744887	pthread_attr_setstackaddr	2	pthread_attr_t *	void *	int
-/usr/include/pthread.h	104204622975	pthread_attr_getstacksize	2	const pthread_attr_t *__restrict	size_t *__restrict	int
-/usr/include/pthread.h	102210482062	pthread_attr_setstacksize	2	pthread_attr_t *	size_t	int
-/usr/include/pthread.h	103386715670	pthread_attr_getstack	3	const pthread_attr_t *__restrict	void **__restrict	size_t *__restrict	int
-/usr/include/pthread.h	102225016778	pthread_attr_setstack	3	pthread_attr_t *	void *	size_t	int
-/usr/include/pthread.h	101185845234	pthread_attr_setaffinity_np	3	pthread_attr_t *	size_t	const cpu_set_t *	int
-/usr/include/pthread.h	102655247366	pthread_attr_getaffinity_np	3	const pthread_attr_t *	size_t	cpu_set_t *	int
-/usr/include/pthread.h	103293862858	pthread_getattr_np	2	pthread_t	pthread_attr_t *	int
-/usr/include/pthread.h	103805660583	pthread_setschedparam	3	pthread_t	int	const struct sched_param *	int
-/usr/include/pthread.h	104210408892	pthread_getschedparam	3	pthread_t	int *__restrict	struct sched_param *__restrict	int
-/usr/include/pthread.h	100146494416	pthread_setschedprio	2	pthread_t	int	int
-/usr/include/pthread.h	102189297377	pthread_getname_np	3	pthread_t	char *	size_t	int
-/usr/include/pthread.h	101431449163	pthread_setname_np	2	pthread_t	const char *	int
-/usr/include/pthread.h	102778211024	pthread_getconcurrency	0	int
-/usr/include/pthread.h	104148634121	pthread_setconcurrency	1	int	int
-/usr/include/pthread.h	103512128587	pthread_yield	0	int
-/usr/include/pthread.h	103155056980	pthread_setaffinity_np	3	pthread_t	size_t	const cpu_set_t *	int
-/usr/include/pthread.h	101082551136	pthread_getaffinity_np	3	pthread_t	size_t	cpu_set_t *	int
-/usr/include/pthread.h	100508650354	pthread_once	2	pthread_once_t *	void (*)()	int
-/usr/include/pthread.h	102342473348	pthread_setcancelstate	2	int	int *	int
-/usr/include/pthread.h	100046715938	pthread_setcanceltype	2	int	int *	int
-/usr/include/pthread.h	100814847475	pthread_cancel	1	pthread_t	int
-/usr/include/pthread.h	101164295964	pthread_testcancel	0	void
-/usr/include/pthread.h	104291246258	_ZN23__pthread_cleanup_classC1EPFvPvES0_	2	void (*)(void *)	void *	void
-/usr/include/pthread.h	100713792934	_ZN23__pthread_cleanup_classD1Ev	0	void
-/usr/include/pthread.h	101320584743	_ZN23__pthread_cleanup_class9__setdoitEi	1	int	void
-/usr/include/pthread.h	103806898365	_ZN23__pthread_cleanup_class7__deferEv	0	void
-/usr/include/pthread.h	100709755552	_ZNK23__pthread_cleanup_class9__restoreEv	0	void
-/usr/include/pthread.h	103729880091	__sigsetjmp	2	struct __jmp_buf_tag *	int	int
-/usr/include/pthread.h	101465801261	pthread_mutex_init	2	pthread_mutex_t *	const pthread_mutexattr_t *	int
-/usr/include/pthread.h	102254099212	pthread_mutex_destroy	1	pthread_mutex_t *	int
-/usr/include/pthread.h	101117090021	pthread_mutex_trylock	1	pthread_mutex_t *	int
-/usr/include/pthread.h	101967165571	pthread_mutex_lock	1	pthread_mutex_t *	int
-/usr/include/pthread.h	103871040082	pthread_mutex_timedlock	2	pthread_mutex_t *__restrict	const struct timespec *__restrict	int
-/usr/include/pthread.h	101478540759	pthread_mutex_unlock	1	pthread_mutex_t *	int
-/usr/include/pthread.h	104111553986	pthread_mutex_getprioceiling	2	const pthread_mutex_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	103648291296	pthread_mutex_setprioceiling	3	pthread_mutex_t *__restrict	int	int *__restrict	int
-/usr/include/pthread.h	100306910506	pthread_mutex_consistent	1	pthread_mutex_t *	int
-/usr/include/pthread.h	101029032753	pthread_mutex_consistent_np	1	pthread_mutex_t *	int
-/usr/include/pthread.h	100793348700	pthread_mutexattr_init	1	pthread_mutexattr_t *	int
-/usr/include/pthread.h	104154032958	pthread_mutexattr_destroy	1	pthread_mutexattr_t *	int
-/usr/include/pthread.h	100068217908	pthread_mutexattr_getpshared	2	const pthread_mutexattr_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	100083863082	pthread_mutexattr_setpshared	2	pthread_mutexattr_t *	int	int
-/usr/include/pthread.h	103686875440	pthread_mutexattr_gettype	2	const pthread_mutexattr_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	102412778958	pthread_mutexattr_settype	2	pthread_mutexattr_t *	int	int
-/usr/include/pthread.h	103076832603	pthread_mutexattr_getprotocol	2	const pthread_mutexattr_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	103747055894	pthread_mutexattr_setprotocol	2	pthread_mutexattr_t *	int	int
-/usr/include/pthread.h	102672857646	pthread_mutexattr_getprioceiling	2	const pthread_mutexattr_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	101039833509	pthread_mutexattr_setprioceiling	2	pthread_mutexattr_t *	int	int
-/usr/include/pthread.h	100461388576	pthread_mutexattr_getrobust	2	const pthread_mutexattr_t *	int *	int
-/usr/include/pthread.h	100017197957	pthread_mutexattr_getrobust_np	2	const pthread_mutexattr_t *	int *	int
-/usr/include/pthread.h	102490444012	pthread_mutexattr_setrobust	2	pthread_mutexattr_t *	int	int
-/usr/include/pthread.h	101553398141	pthread_mutexattr_setrobust_np	2	pthread_mutexattr_t *	int	int
-/usr/include/pthread.h	101204872024	pthread_rwlock_init	2	pthread_rwlock_t *__restrict	const pthread_rwlockattr_t *__restrict	int
-/usr/include/pthread.h	102790744519	pthread_rwlock_destroy	1	pthread_rwlock_t *	int
-/usr/include/pthread.h	103404178768	pthread_rwlock_rdlock	1	pthread_rwlock_t *	int
-/usr/include/pthread.h	101587588029	pthread_rwlock_tryrdlock	1	pthread_rwlock_t *	int
-/usr/include/pthread.h	100890985561	pthread_rwlock_timedrdlock	2	pthread_rwlock_t *__restrict	const struct timespec *__restrict	int
-/usr/include/pthread.h	102601983278	pthread_rwlock_wrlock	1	pthread_rwlock_t *	int
-/usr/include/pthread.h	103896797685	pthread_rwlock_trywrlock	1	pthread_rwlock_t *	int
-/usr/include/pthread.h	102409905498	pthread_rwlock_timedwrlock	2	pthread_rwlock_t *__restrict	const struct timespec *__restrict	int
-/usr/include/pthread.h	102586126531	pthread_rwlock_unlock	1	pthread_rwlock_t *	int
-/usr/include/pthread.h	100325639366	pthread_rwlockattr_init	1	pthread_rwlockattr_t *	int
-/usr/include/pthread.h	101100830350	pthread_rwlockattr_destroy	1	pthread_rwlockattr_t *	int
-/usr/include/pthread.h	100919062805	pthread_rwlockattr_getpshared	2	const pthread_rwlockattr_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	103550978983	pthread_rwlockattr_setpshared	2	pthread_rwlockattr_t *	int	int
-/usr/include/pthread.h	102242535929	pthread_rwlockattr_getkind_np	2	const pthread_rwlockattr_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	101970569080	pthread_rwlockattr_setkind_np	2	pthread_rwlockattr_t *	int	int
-/usr/include/pthread.h	100480739082	pthread_cond_init	2	pthread_cond_t *__restrict	const pthread_condattr_t *__restrict	int
-/usr/include/pthread.h	103598812687	pthread_cond_destroy	1	pthread_cond_t *	int
-/usr/include/pthread.h	100368498868	pthread_cond_signal	1	pthread_cond_t *	int
-/usr/include/pthread.h	104126441462	pthread_cond_broadcast	1	pthread_cond_t *	int
-/usr/include/pthread.h	103587917044	pthread_cond_wait	2	pthread_cond_t *__restrict	pthread_mutex_t *__restrict	int
-/usr/include/pthread.h	102805854575	pthread_cond_timedwait	3	pthread_cond_t *__restrict	pthread_mutex_t *__restrict	const struct timespec *__restrict	int
-/usr/include/pthread.h	101936394149	pthread_condattr_init	1	pthread_condattr_t *	int
-/usr/include/pthread.h	103968572573	pthread_condattr_destroy	1	pthread_condattr_t *	int
-/usr/include/pthread.h	102892875767	pthread_condattr_getpshared	2	const pthread_condattr_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	102797729123	pthread_condattr_setpshared	2	pthread_condattr_t *	int	int
-/usr/include/pthread.h	103584291021	pthread_condattr_getclock	2	const pthread_condattr_t *__restrict	__clockid_t *__restrict	int
-/usr/include/pthread.h	101424295694	pthread_condattr_setclock	2	pthread_condattr_t *	__clockid_t	int
-/usr/include/pthread.h	101406143169	pthread_spin_init	2	pthread_spinlock_t *	int	int
-/usr/include/pthread.h	101353869653	pthread_spin_destroy	1	pthread_spinlock_t *	int
-/usr/include/pthread.h	100192091026	pthread_spin_lock	1	pthread_spinlock_t *	int
-/usr/include/pthread.h	102433282171	pthread_spin_trylock	1	pthread_spinlock_t *	int
-/usr/include/pthread.h	102864706543	pthread_spin_unlock	1	pthread_spinlock_t *	int
-/usr/include/pthread.h	104107762077	pthread_barrier_init	3	pthread_barrier_t *__restrict	const pthread_barrierattr_t *__restrict	unsigned int	int
-/usr/include/pthread.h	102651004926	pthread_barrier_destroy	1	pthread_barrier_t *	int
-/usr/include/pthread.h	103815650099	pthread_barrier_wait	1	pthread_barrier_t *	int
-/usr/include/pthread.h	103179249398	pthread_barrierattr_init	1	pthread_barrierattr_t *	int
-/usr/include/pthread.h	100101563308	pthread_barrierattr_destroy	1	pthread_barrierattr_t *	int
-/usr/include/pthread.h	101325961460	pthread_barrierattr_getpshared	2	const pthread_barrierattr_t *__restrict	int *__restrict	int
-/usr/include/pthread.h	102067872365	pthread_barrierattr_setpshared	2	pthread_barrierattr_t *	int	int
-/usr/include/pthread.h	102121707220	pthread_key_create	2	pthread_key_t *	void (*)(void *)	int
-/usr/include/pthread.h	102352416805	pthread_key_delete	1	pthread_key_t	int
-/usr/include/pthread.h	103492307628	pthread_getspecific	1	pthread_key_t	void *
-/usr/include/pthread.h	103035937924	pthread_setspecific	2	pthread_key_t	const void *	int
-/usr/include/pthread.h	102264248573	pthread_getcpuclockid	2	pthread_t	__clockid_t *	int
-/usr/include/pthread.h	101575725778	pthread_atfork	3	void (*)()	void (*)()	void (*)()	int
-/usr/include/unistd.h	102498187938	access	2	const char *	int	int
-/usr/include/unistd.h	101812297112	euidaccess	2	const char *	int	int
-/usr/include/unistd.h	102152788056	eaccess	2	const char *	int	int
-/usr/include/unistd.h	101233074344	faccessat	4	int	const char *	int	int	int
-/usr/include/unistd.h	101166760946	lseek	3	int	__off_t	int	__off_t
-/usr/include/unistd.h	102293590931	lseek64	3	int	__off64_t	int	__off64_t
-/usr/include/unistd.h	102416049753	close	1	int	int
-/usr/include/unistd.h	103974780329	read	3	int	void *	size_t	ssize_t
-/usr/include/unistd.h	104056321026	write	3	int	const void *	size_t	ssize_t
-/usr/include/unistd.h	101668201550	pread	4	int	void *	size_t	__off_t	ssize_t
-/usr/include/unistd.h	104146520410	pwrite	4	int	const void *	size_t	__off_t	ssize_t
-/usr/include/unistd.h	102528800584	pread64	4	int	void *	size_t	__off64_t	ssize_t
-/usr/include/unistd.h	101892082890	pwrite64	4	int	const void *	size_t	__off64_t	ssize_t
-/usr/include/unistd.h	101297787876	pipe	1	int [2]	int
-/usr/include/unistd.h	103522373001	pipe2	2	int [2]	int	int
-/usr/include/unistd.h	102066411836	alarm	1	unsigned int	unsigned int
-/usr/include/unistd.h	101687140812	sleep	1	unsigned int	unsigned int
-/usr/include/unistd.h	101879359402	ualarm	2	__useconds_t	__useconds_t	__useconds_t
-/usr/include/unistd.h	100018730673	usleep	1	__useconds_t	int
-/usr/include/unistd.h	104269037831	pause	0	int
-/usr/include/unistd.h	103860693461	chown	3	const char *	__uid_t	__gid_t	int
-/usr/include/unistd.h	103620338992	fchown	3	int	__uid_t	__gid_t	int
-/usr/include/unistd.h	100673195415	lchown	3	const char *	__uid_t	__gid_t	int
-/usr/include/unistd.h	100152983722	fchownat	5	int	const char *	__uid_t	__gid_t	int	int
-/usr/include/unistd.h	103856924013	chdir	1	const char *	int
-/usr/include/unistd.h	101502198929	fchdir	1	int	int
-/usr/include/unistd.h	100501469163	getcwd	2	char *	size_t	char *
-/usr/include/unistd.h	103344196225	get_current_dir_name	0	char *
-/usr/include/unistd.h	100870529770	getwd	1	char *	char *
-/usr/include/unistd.h	103056143745	dup	1	int	int
-/usr/include/unistd.h	103403957562	dup2	2	int	int	int
-/usr/include/unistd.h	103190076519	dup3	3	int	int	int	int
-/usr/include/unistd.h	103695998811	execve	3	const char *	char *const []	char *const []	int
-/usr/include/unistd.h	100066390932	fexecve	3	int	char *const []	char *const []	int
-/usr/include/unistd.h	102987225980	execv	2	const char *	char *const []	int
-/usr/include/unistd.h	101562841236	execle	2	const char *	const char *	int
-/usr/include/unistd.h	100276140543	execl	2	const char *	const char *	int
-/usr/include/unistd.h	104135221904	execvp	2	const char *	char *const []	int
-/usr/include/unistd.h	100841494840	execlp	2	const char *	const char *	int
-/usr/include/unistd.h	100218204228	execvpe	3	const char *	char *const []	char *const []	int
-/usr/include/unistd.h	103445498517	nice	1	int	int
-/usr/include/unistd.h	103413916367	_exit	1	int	void
-/usr/include/unistd.h	102164981280	pathconf	2	const char *	int	long
-/usr/include/unistd.h	104102343679	fpathconf	2	int	int	long
-/usr/include/unistd.h	100047690266	sysconf	1	int	long
-/usr/include/unistd.h	102742363613	confstr	3	int	char *	size_t	size_t
-/usr/include/unistd.h	101397722138	getpid	0	__pid_t
-/usr/include/unistd.h	102997676854	getppid	0	__pid_t
-/usr/include/unistd.h	100344848345	getpgrp	0	__pid_t
-/usr/include/unistd.h	100393971959	__getpgid	1	__pid_t	__pid_t
-/usr/include/unistd.h	103197471585	getpgid	1	__pid_t	__pid_t
-/usr/include/unistd.h	102906290673	setpgid	2	__pid_t	__pid_t	int
-/usr/include/unistd.h	102554817079	setpgrp	0	int
-/usr/include/unistd.h	101638409275	setsid	0	__pid_t
-/usr/include/unistd.h	100625119587	getsid	1	__pid_t	__pid_t
-/usr/include/unistd.h	104189657935	getuid	0	__uid_t
-/usr/include/unistd.h	102308931183	geteuid	0	__uid_t
-/usr/include/unistd.h	103956030312	getgid	0	__gid_t
-/usr/include/unistd.h	101228713746	getegid	0	__gid_t
-/usr/include/unistd.h	100178605506	getgroups	2	int	__gid_t []	int
-/usr/include/unistd.h	100208556544	group_member	1	__gid_t	int
-/usr/include/unistd.h	101918506337	setuid	1	__uid_t	int
-/usr/include/unistd.h	103184365570	setreuid	2	__uid_t	__uid_t	int
-/usr/include/unistd.h	100730255576	seteuid	1	__uid_t	int
-/usr/include/unistd.h	103751599783	setgid	1	__gid_t	int
-/usr/include/unistd.h	103862167246	setregid	2	__gid_t	__gid_t	int
-/usr/include/unistd.h	100692106392	setegid	1	__gid_t	int
-/usr/include/unistd.h	102813525291	getresuid	3	__uid_t *	__uid_t *	__uid_t *	int
-/usr/include/unistd.h	104017835120	getresgid	3	__gid_t *	__gid_t *	__gid_t *	int
-/usr/include/unistd.h	101914851401	setresuid	3	__uid_t	__uid_t	__uid_t	int
-/usr/include/unistd.h	102021174996	setresgid	3	__gid_t	__gid_t	__gid_t	int
-/usr/include/unistd.h	101434959934	fork	0	__pid_t
-/usr/include/unistd.h	103115604032	vfork	0	__pid_t
-/usr/include/unistd.h	100152542707	ttyname	1	int	char *
-/usr/include/unistd.h	101019208304	ttyname_r	3	int	char *	size_t	int
-/usr/include/unistd.h	102661759135	isatty	1	int	int
-/usr/include/unistd.h	101733139770	ttyslot	0	int
-/usr/include/unistd.h	103470012086	link	2	const char *	const char *	int
-/usr/include/unistd.h	101632440236	linkat	5	int	const char *	int	const char *	int	int
-/usr/include/unistd.h	102743894814	symlink	2	const char *	const char *	int
-/usr/include/unistd.h	102930333297	readlink	3	const char *__restrict	char *__restrict	size_t	ssize_t
-/usr/include/unistd.h	102001421345	symlinkat	3	const char *	int	const char *	int
-/usr/include/unistd.h	100645919847	readlinkat	4	int	const char *__restrict	char *__restrict	size_t	ssize_t
-/usr/include/unistd.h	103765038056	unlink	1	const char *	int
-/usr/include/unistd.h	101069089414	unlinkat	3	int	const char *	int	int
-/usr/include/unistd.h	101254745164	rmdir	1	const char *	int
-/usr/include/unistd.h	103800967295	tcgetpgrp	1	int	__pid_t
-/usr/include/unistd.h	101814735194	tcsetpgrp	2	int	__pid_t	int
-/usr/include/unistd.h	103352677077	getlogin	0	char *
-/usr/include/unistd.h	104088069331	getlogin_r	2	char *	size_t	int
-/usr/include/unistd.h	104084296745	setlogin	1	const char *	int
-/usr/include/getopt.h	102331985781	getopt	3	int	char *const *	const char *	int
-/usr/include/unistd.h	100059828912	gethostname	2	char *	size_t	int
-/usr/include/unistd.h	100173124943	sethostname	2	const char *	size_t	int
-/usr/include/unistd.h	101744534164	sethostid	1	long	int
-/usr/include/unistd.h	101450919891	getdomainname	2	char *	size_t	int
-/usr/include/unistd.h	102835567568	setdomainname	2	const char *	size_t	int
-/usr/include/unistd.h	103004020446	vhangup	0	int
-/usr/include/unistd.h	102439778673	revoke	1	const char *	int
-/usr/include/unistd.h	101078915625	profil	4	unsigned short *	size_t	size_t	unsigned int	int
-/usr/include/unistd.h	102291568939	acct	1	const char *	int
-/usr/include/unistd.h	103667125748	getusershell	0	char *
-/usr/include/unistd.h	102513700274	endusershell	0	void
-/usr/include/unistd.h	104130665914	setusershell	0	void
-/usr/include/unistd.h	102235910100	daemon	2	int	int	int
-/usr/include/unistd.h	102965083370	chroot	1	const char *	int
-/usr/include/unistd.h	101327610153	getpass	1	const char *	char *
-/usr/include/unistd.h	104001988365	fsync	1	int	int
-/usr/include/unistd.h	100366054267	syncfs	1	int	int
-/usr/include/unistd.h	100231702850	gethostid	0	long
-/usr/include/unistd.h	103308938654	sync	0	void
-/usr/include/unistd.h	100095281907	getpagesize	0	int
-/usr/include/unistd.h	103969422797	getdtablesize	0	int
-/usr/include/unistd.h	101580980861	truncate	2	const char *	__off_t	int
-/usr/include/unistd.h	103492072900	truncate64	2	const char *	__off64_t	int
-/usr/include/unistd.h	103528373410	ftruncate	2	int	__off_t	int
-/usr/include/unistd.h	102376720997	ftruncate64	2	int	__off64_t	int
-/usr/include/unistd.h	101028918141	brk	1	void *	int
-/usr/include/unistd.h	101690380520	sbrk	1	intptr_t	void *
-/usr/include/unistd.h	100876885555	syscall	1	long	long
-/usr/include/unistd.h	100664614078	lockf	3	int	int	__off_t	int
-/usr/include/unistd.h	102383630456	lockf64	3	int	int	__off64_t	int
-/usr/include/unistd.h	100266959570	fdatasync	1	int	int
-/usr/include/unistd.h	100231012293	crypt	2	const char *	const char *	char *
-/usr/include/unistd.h	102131664564	encrypt	2	char *	int	void
-/usr/include/unistd.h	102419087662	swab	3	const void *__restrict	void *__restrict	ssize_t	void
-/usr/include/string.h	100997715700	memcpy	3	void *__restrict	const void *__restrict	size_t	void *
-/usr/include/string.h	102075001317	memmove	3	void *	const void *	size_t	void *
-/usr/include/string.h	103941933483	memccpy	4	void *__restrict	const void *__restrict	int	size_t	void *
-/usr/include/string.h	100321513808	memset	3	void *	int	size_t	void *
-/usr/include/string.h	102812657290	memcmp	3	const void *	const void *	size_t	int
-/usr/include/string.h	101407219106	memchr	3	const void *	int	size_t	void *
-/usr/include/string.h	102779875822	rawmemchr	2	const void *	int	void *
-/usr/include/string.h	102458250027	memrchr	3	const void *	int	size_t	void *
-/usr/include/string.h	100213547658	strcpy	2	char *__restrict	const char *__restrict	char *
-/usr/include/string.h	102889757597	strncpy	3	char *__restrict	const char *__restrict	size_t	char *
-/usr/include/string.h	100521472101	strcat	2	char *__restrict	const char *__restrict	char *
-/usr/include/string.h	102009636509	strncat	3	char *__restrict	const char *__restrict	size_t	char *
-/usr/include/string.h	101443876473	strcmp	2	const char *	const char *	int
-/usr/include/string.h	103185849131	strncmp	3	const char *	const char *	size_t	int
-/usr/include/string.h	100228913423	strcoll	2	const char *	const char *	int
-/usr/include/string.h	100857429093	strxfrm	3	char *__restrict	const char *__restrict	size_t	size_t
-/usr/include/string.h	100498745313	strcoll_l	3	const char *	const char *	__locale_t	int
-/usr/include/string.h	102932440030	strxfrm_l	4	char *	const char *	size_t	__locale_t	size_t
-/usr/include/string.h	101513584306	strdup	1	const char *	char *
-/usr/include/string.h	101095920906	strndup	2	const char *	size_t	char *
-/usr/include/string.h	101137456469	strchr	2	const char *	int	char *
-/usr/include/string.h	102188080357	strrchr	2	const char *	int	char *
-/usr/include/string.h	101172907713	strchrnul	2	const char *	int	char *
-/usr/include/string.h	102522309568	strcspn	2	const char *	const char *	size_t
-/usr/include/string.h	103656673360	strspn	2	const char *	const char *	size_t
-/usr/include/string.h	102964260530	strpbrk	2	const char *	const char *	char *
-/usr/include/string.h	103085476986	strstr	2	const char *	const char *	char *
-/usr/include/string.h	103198245037	strtok	2	char *__restrict	const char *__restrict	char *
-/usr/include/string.h	103959609884	__strtok_r	3	char *__restrict	const char *__restrict	char **__restrict	char *
-/usr/include/string.h	101601174036	strtok_r	3	char *__restrict	const char *__restrict	char **__restrict	char *
-/usr/include/string.h	100458410272	strcasestr	2	const char *	const char *	char *
-/usr/include/string.h	100477261088	memmem	4	const void *	size_t	const void *	size_t	void *
-/usr/include/string.h	104153544295	__mempcpy	3	void *__restrict	const void *__restrict	size_t	void *
-/usr/include/string.h	102729494583	mempcpy	3	void *__restrict	const void *__restrict	size_t	void *
-/usr/include/string.h	100227112008	strlen	1	const char *	size_t
-/usr/include/string.h	100943956273	strnlen	2	const char *	size_t	size_t
-/usr/include/string.h	103714025728	strerror	1	int	char *
-/usr/include/string.h	102939549574	strerror_r	3	int	char *	size_t	char *
-/usr/include/string.h	101792437331	strerror_l	2	int	__locale_t	char *
-/usr/include/string.h	100769669639	__bzero	2	void *	size_t	void
-/usr/include/string.h	103093112560	bcopy	3	const void *	void *	size_t	void
-/usr/include/string.h	101063582124	bzero	2	void *	size_t	void
-/usr/include/string.h	100090730444	bcmp	3	const void *	const void *	size_t	int
-/usr/include/string.h	102069734306	index	2	const char *	int	char *
-/usr/include/string.h	101315243056	rindex	2	const char *	int	char *
-/usr/include/string.h	104017910526	ffs	1	int	int
-/usr/include/string.h	100001202133	ffsl	1	long	int
-/usr/include/string.h	100832943939	ffsll	1	long long	int
-/usr/include/string.h	100932959113	strcasecmp	2	const char *	const char *	int
-/usr/include/string.h	100556181588	strncasecmp	3	const char *	const char *	size_t	int
-/usr/include/string.h	103773915102	strcasecmp_l	3	const char *	const char *	__locale_t	int
-/usr/include/string.h	103385263473	strncasecmp_l	4	const char *	const char *	size_t	__locale_t	int
-/usr/include/string.h	101921286532	strsep	2	char **__restrict	const char *__restrict	char *
-/usr/include/string.h	100687990452	strsignal	1	int	char *
-/usr/include/string.h	101631457736	__stpcpy	2	char *__restrict	const char *__restrict	char *
-/usr/include/string.h	102949135939	stpcpy	2	char *__restrict	const char *__restrict	char *
-/usr/include/string.h	101057566128	__stpncpy	3	char *__restrict	const char *__restrict	size_t	char *
-/usr/include/string.h	103694878915	stpncpy	3	char *__restrict	const char *__restrict	size_t	char *
-/usr/include/string.h	100614754604	strverscmp	2	const char *	const char *	int
-/usr/include/string.h	100030108080	strfry	1	char *	char *
-/usr/include/string.h	103675488936	memfrob	2	void *	size_t	void *
-/usr/include/string.h	103833780143	basename	1	const char *	char *
-/usr/include/bits/errno.h	101034433702	__errno_location	0	int *
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	103894202263	_Z7trythisPv	1	void *	void *
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	102143099823	main	0	int
+/usr/include/libio.h	100701514828	_IO_cookie_init	4	struct _IO_cookie_file *	int	void *	_IO_cookie_io_functions_t	void
+/usr/include/libio.h	103911944817	__underflow	1	_IO_FILE *	int
+/usr/include/libio.h	101110799840	__uflow	1	_IO_FILE *	int
+/usr/include/libio.h	100743519639	__overflow	2	_IO_FILE *	int	int
+/usr/include/libio.h	100308570812	_IO_getc	1	_IO_FILE *	int
+/usr/include/libio.h	101381949585	_IO_putc	2	int	_IO_FILE *	int
+/usr/include/libio.h	102328934936	_IO_feof	1	_IO_FILE *	int
+/usr/include/libio.h	102835551931	_IO_ferror	1	_IO_FILE *	int
+/usr/include/libio.h	102568936296	_IO_peekc_locked	1	_IO_FILE *	int
+/usr/include/libio.h	100755602199	_IO_flockfile	1	_IO_FILE *	void
+/usr/include/libio.h	102014464536	_IO_funlockfile	1	_IO_FILE *	void
+/usr/include/libio.h	103892045178	_IO_ftrylockfile	1	_IO_FILE *	int
+/usr/include/libio.h	100485272328	_IO_vfscanf	4	_IO_FILE *__restrict	const char *__restrict	__gnuc_va_list	int *__restrict	int
+/usr/include/libio.h	102790821430	_IO_vfprintf	3	_IO_FILE *__restrict	const char *__restrict	__gnuc_va_list	int
+/usr/include/libio.h	101217556047	_IO_padn	3	_IO_FILE *	int	__ssize_t	__ssize_t
+/usr/include/libio.h	103626599880	_IO_sgetn	3	_IO_FILE *	void *	size_t	size_t
+/usr/include/libio.h	103710451769	_IO_seekoff	4	_IO_FILE *	__off64_t	int	int	__off64_t
+/usr/include/libio.h	101689741244	_IO_seekpos	3	_IO_FILE *	__off64_t	int	__off64_t
+/usr/include/libio.h	100344495437	_IO_free_backup_area	1	_IO_FILE *	void
+/usr/include/stdio.h	101822703602	remove	1	const char *	int
+/usr/include/stdio.h	101644355554	rename	2	const char *	const char *	int
+/usr/include/stdio.h	100228460058	renameat	4	int	const char *	int	const char *	int
+/usr/include/stdio.h	103235861895	tmpfile	1		FILE *
+/usr/include/stdio.h	100654612982	tmpfile64	1		FILE *
+/usr/include/stdio.h	104035264001	tmpnam	1	char *	char *
+/usr/include/stdio.h	100912087153	tmpnam_r	1	char *	char *
+/usr/include/stdio.h	103395857660	tempnam	2	const char *	const char *	char *
+/usr/include/stdio.h	100692023954	fclose	1	FILE *	int
+/usr/include/stdio.h	100492810852	fflush	1	FILE *	int
+/usr/include/stdio.h	104068063777	fflush_unlocked	1	FILE *	int
+/usr/include/stdio.h	101145548595	fcloseall	1		int
+/usr/include/stdio.h	102298680622	fopen	2	const char *__restrict	const char *__restrict	FILE *
+/usr/include/stdio.h	103793173080	freopen	3	const char *__restrict	const char *__restrict	FILE *__restrict	FILE *
+/usr/include/stdio.h	102827184560	fopen64	2	const char *__restrict	const char *__restrict	FILE *
+/usr/include/stdio.h	100134401281	freopen64	3	const char *__restrict	const char *__restrict	FILE *__restrict	FILE *
+/usr/include/stdio.h	100539908997	fdopen	2	int	const char *	FILE *
+/usr/include/stdio.h	101816519665	fopencookie	3	void *__restrict	const char *__restrict	_IO_cookie_io_functions_t	FILE *
+/usr/include/stdio.h	103412683216	fmemopen	3	void *	size_t	const char *	FILE *
+/usr/include/stdio.h	101432079277	open_memstream	2	char **	size_t *	FILE *
+/usr/include/stdio.h	102398310778	setbuf	2	FILE *__restrict	char *__restrict	void
+/usr/include/stdio.h	103806344588	setvbuf	4	FILE *__restrict	char *__restrict	int	size_t	int
+/usr/include/stdio.h	101262836491	setbuffer	3	FILE *__restrict	char *__restrict	size_t	void
+/usr/include/stdio.h	101083218793	setlinebuf	1	FILE *	void
+/usr/include/stdio.h	100811057826	fprintf	2	FILE *__restrict	const char *__restrict	int
+/usr/include/stdio.h	101986099767	printf	1	const char *__restrict	int
+/usr/include/stdio.h	103336580790	sprintf	2	char *__restrict	const char *__restrict	int
+/usr/include/stdio.h	103549424498	vfprintf	3	FILE *__restrict	const char *__restrict	__gnuc_va_list	int
+/usr/include/stdio.h	103904928595	vprintf	2	const char *__restrict	__gnuc_va_list	int
+/usr/include/stdio.h	104201834967	vsprintf	3	char *__restrict	const char *__restrict	__gnuc_va_list	int
+/usr/include/stdio.h	104115047413	snprintf	3	char *__restrict	size_t	const char *__restrict	int
+/usr/include/stdio.h	100028952790	vsnprintf	4	char *__restrict	size_t	const char *__restrict	__gnuc_va_list	int
+/usr/include/stdio.h	100518072421	vasprintf	3	char **__restrict	const char *__restrict	__gnuc_va_list	int
+/usr/include/stdio.h	100332093492	__asprintf	2	char **__restrict	const char *__restrict	int
+/usr/include/stdio.h	100534696775	asprintf	2	char **__restrict	const char *__restrict	int
+/usr/include/stdio.h	101699830301	vdprintf	3	int	const char *__restrict	__gnuc_va_list	int
+/usr/include/stdio.h	102859029812	dprintf	2	int	const char *__restrict	int
+/usr/include/stdio.h	100813234785	fscanf	2	FILE *__restrict	const char *__restrict	int
+/usr/include/stdio.h	102892143347	scanf	1	const char *__restrict	int
+/usr/include/stdio.h	103215876900	sscanf	2	const char *__restrict	const char *__restrict	int
+/usr/include/stdio.h	101221358798	vfscanf	3	FILE *__restrict	const char *__restrict	__gnuc_va_list	int
+/usr/include/stdio.h	103502689032	vscanf	2	const char *__restrict	__gnuc_va_list	int
+/usr/include/stdio.h	101764577175	vsscanf	3	const char *__restrict	const char *__restrict	__gnuc_va_list	int
+/usr/include/stdio.h	102344575178	fgetc	1	FILE *	int
+/usr/include/stdio.h	104110434345	getc	1	FILE *	int
+/usr/include/stdio.h	100108679728	getchar	1		int
+/usr/include/stdio.h	103315927745	getc_unlocked	1	FILE *	int
+/usr/include/stdio.h	103327166422	getchar_unlocked	1		int
+/usr/include/stdio.h	103863904215	fgetc_unlocked	1	FILE *	int
+/usr/include/stdio.h	104289839968	fputc	2	int	FILE *	int
+/usr/include/stdio.h	102696933224	putc	2	int	FILE *	int
+/usr/include/stdio.h	103827252022	putchar	1	int	int
+/usr/include/stdio.h	103202383076	fputc_unlocked	2	int	FILE *	int
+/usr/include/stdio.h	100457233466	putc_unlocked	2	int	FILE *	int
+/usr/include/stdio.h	100707263566	putchar_unlocked	1	int	int
+/usr/include/stdio.h	103562260154	getw	1	FILE *	int
+/usr/include/stdio.h	102286759806	putw	2	int	FILE *	int
+/usr/include/stdio.h	102343820002	fgets	3	char *__restrict	int	FILE *__restrict	char *
+/usr/include/stdio.h	103046366286	fgets_unlocked	3	char *__restrict	int	FILE *__restrict	char *
+/usr/include/stdio.h	100128535471	__getdelim	4	char **__restrict	size_t *__restrict	int	FILE *__restrict	__ssize_t
+/usr/include/stdio.h	102456386840	getdelim	4	char **__restrict	size_t *__restrict	int	FILE *__restrict	__ssize_t
+/usr/include/stdio.h	103915722256	getline	3	char **__restrict	size_t *__restrict	FILE *__restrict	__ssize_t
+/usr/include/stdio.h	100424586470	fputs	2	const char *__restrict	FILE *__restrict	int
+/usr/include/stdio.h	100774766681	puts	1	const char *	int
+/usr/include/stdio.h	103881475139	ungetc	2	int	FILE *	int
+/usr/include/stdio.h	100672650748	fread	4	void *__restrict	size_t	size_t	FILE *__restrict	size_t
+/usr/include/stdio.h	101617107209	fwrite	4	const void *__restrict	size_t	size_t	FILE *__restrict	size_t
+/usr/include/stdio.h	101217714499	fputs_unlocked	2	const char *__restrict	FILE *__restrict	int
+/usr/include/stdio.h	100329211664	fread_unlocked	4	void *__restrict	size_t	size_t	FILE *__restrict	size_t
+/usr/include/stdio.h	101786166462	fwrite_unlocked	4	const void *__restrict	size_t	size_t	FILE *__restrict	size_t
+/usr/include/stdio.h	101337001152	fseek	3	FILE *	long	int	int
+/usr/include/stdio.h	104050931206	ftell	1	FILE *	long
+/usr/include/stdio.h	104031081199	rewind	1	FILE *	void
+/usr/include/stdio.h	102283627054	fseeko	3	FILE *	__off_t	int	int
+/usr/include/stdio.h	103937406660	ftello	1	FILE *	__off_t
+/usr/include/stdio.h	103449628177	fgetpos	2	FILE *__restrict	fpos_t *__restrict	int
+/usr/include/stdio.h	103782557437	fsetpos	2	FILE *	const fpos_t *	int
+/usr/include/stdio.h	103872233202	fseeko64	3	FILE *	__off64_t	int	int
+/usr/include/stdio.h	101182109165	ftello64	1	FILE *	__off64_t
+/usr/include/stdio.h	101064911041	fgetpos64	2	FILE *__restrict	fpos64_t *__restrict	int
+/usr/include/stdio.h	102175181121	fsetpos64	2	FILE *	const fpos64_t *	int
+/usr/include/stdio.h	101759531625	clearerr	1	FILE *	void
+/usr/include/stdio.h	103149091418	feof	1	FILE *	int
+/usr/include/stdio.h	101429913574	ferror	1	FILE *	int
+/usr/include/stdio.h	103746937817	clearerr_unlocked	1	FILE *	void
+/usr/include/stdio.h	100235883870	feof_unlocked	1	FILE *	int
+/usr/include/stdio.h	102045371558	ferror_unlocked	1	FILE *	int
+/usr/include/stdio.h	101023909107	perror	1	const char *	void
+/usr/include/stdio.h	103887235828	fileno	1	FILE *	int
+/usr/include/stdio.h	100500738725	fileno_unlocked	1	FILE *	int
+/usr/include/stdio.h	103237194222	popen	2	const char *	const char *	FILE *
+/usr/include/stdio.h	102154819797	pclose	1	FILE *	int
+/usr/include/stdio.h	103834451204	ctermid	1	char *	char *
+/usr/include/stdio.h	101857537990	cuserid	1	char *	char *
+/usr/include/stdio.h	101618758615	obstack_printf	2	struct obstack *__restrict	const char *__restrict	int
+/usr/include/stdio.h	102614517625	obstack_vprintf	3	struct obstack *__restrict	const char *__restrict	__gnuc_va_list	int
+/usr/include/stdio.h	102489969863	flockfile	1	FILE *	void
+/usr/include/stdio.h	102364363616	ftrylockfile	1	FILE *	int
+/usr/include/stdio.h	101521696407	funlockfile	1	FILE *	void
+/usr/include/bits/sched.h	104078021991	clone	4	int (*)(void *)	void *	int	void *	int
+/usr/include/bits/sched.h	103708137907	unshare	1	int	int
+/usr/include/bits/sched.h	101161774290	sched_getcpu	1		int
+/usr/include/bits/sched.h	101406688464	setns	2	int	int	int
+/usr/include/bits/sched.h	100202595536	__sched_cpucount	2	size_t	const cpu_set_t *	int
+/usr/include/bits/sched.h	101022560080	__sched_cpualloc	1	size_t	cpu_set_t *
+/usr/include/bits/sched.h	104140257084	__sched_cpufree	1	cpu_set_t *	void
+/usr/include/sched.h	103223845848	sched_setparam	2	__pid_t	const struct sched_param *	int
+/usr/include/sched.h	101024729187	sched_getparam	2	__pid_t	struct sched_param *	int
+/usr/include/sched.h	102494992208	sched_setscheduler	3	__pid_t	int	const struct sched_param *	int
+/usr/include/sched.h	102912910815	sched_getscheduler	1	__pid_t	int
+/usr/include/sched.h	102351881118	sched_yield	1		int
+/usr/include/sched.h	102901342630	sched_get_priority_max	1	int	int
+/usr/include/sched.h	100284958165	sched_get_priority_min	1	int	int
+/usr/include/sched.h	103636510451	sched_rr_get_interval	2	__pid_t	struct timespec *	int
+/usr/include/sched.h	104002206699	sched_setaffinity	3	__pid_t	size_t	const cpu_set_t *	int
+/usr/include/sched.h	101251998970	sched_getaffinity	3	__pid_t	size_t	cpu_set_t *	int
+/usr/include/bits/time.h	104275133968	clock_adjtime	2	__clockid_t	struct timex *	int
+/usr/include/time.h	101164355112	clock	1		clock_t
+/usr/include/time.h	103592803837	time	1	time_t *	time_t
+/usr/include/time.h	102795898366	difftime	2	time_t	time_t	double
+/usr/include/time.h	103069255088	mktime	1	struct tm *	time_t
+/usr/include/time.h	100559905621	strftime	4	char *__restrict	size_t	const char *__restrict	const struct tm *__restrict	size_t
+/usr/include/time.h	102401388367	strptime	3	const char *__restrict	const char *__restrict	struct tm *	char *
+/usr/include/time.h	104047983686	strftime_l	5	char *__restrict	size_t	const char *__restrict	const struct tm *__restrict	__locale_t	size_t
+/usr/include/time.h	104217966565	strptime_l	4	const char *__restrict	const char *__restrict	struct tm *	__locale_t	char *
+/usr/include/time.h	103110774351	gmtime	1	const time_t *	struct tm *
+/usr/include/time.h	102207004067	localtime	1	const time_t *	struct tm *
+/usr/include/time.h	103826017147	gmtime_r	2	const time_t *__restrict	struct tm *__restrict	struct tm *
+/usr/include/time.h	103435806925	localtime_r	2	const time_t *__restrict	struct tm *__restrict	struct tm *
+/usr/include/time.h	100109177585	asctime	1	const struct tm *	char *
+/usr/include/time.h	103554614472	ctime	1	const time_t *	char *
+/usr/include/time.h	102994640491	asctime_r	2	const struct tm *__restrict	char *__restrict	char *
+/usr/include/time.h	101255268229	ctime_r	2	const time_t *__restrict	char *__restrict	char *
+/usr/include/time.h	102935784204	tzset	1		void
+/usr/include/time.h	100242765384	stime	1	const time_t *	int
+/usr/include/time.h	103909497784	timegm	1	struct tm *	time_t
+/usr/include/time.h	103679084949	timelocal	1	struct tm *	time_t
+/usr/include/time.h	102292192910	dysize	1	int	int
+/usr/include/time.h	103092301760	nanosleep	2	const struct timespec *	struct timespec *	int
+/usr/include/time.h	102842767048	clock_getres	2	clockid_t	struct timespec *	int
+/usr/include/time.h	103564952807	clock_gettime	2	clockid_t	struct timespec *	int
+/usr/include/time.h	104029825895	clock_settime	2	clockid_t	const struct timespec *	int
+/usr/include/time.h	103128462773	clock_nanosleep	4	clockid_t	int	const struct timespec *	struct timespec *	int
+/usr/include/time.h	102726466041	clock_getcpuclockid	2	pid_t	clockid_t *	int
+/usr/include/time.h	100029240329	timer_create	3	clockid_t	struct sigevent *__restrict	timer_t *__restrict	int
+/usr/include/time.h	103308127906	timer_delete	1	timer_t	int
+/usr/include/time.h	102675275473	timer_settime	4	timer_t	int	const struct itimerspec *__restrict	struct itimerspec *__restrict	int
+/usr/include/time.h	102412533794	timer_gettime	2	timer_t	struct itimerspec *	int
+/usr/include/time.h	102492110581	timer_getoverrun	1	timer_t	int
+/usr/include/time.h	103454321644	timespec_get	2	struct timespec *	int	int
+/usr/include/time.h	102472356566	getdate	1	const char *	struct tm *
+/usr/include/time.h	103558715596	getdate_r	2	const char *__restrict	struct tm *__restrict	int
+/usr/include/pthread.h	101133776100	pthread_create	4	pthread_t *__restrict	const pthread_attr_t *__restrict	void *(*)(void *)	void *__restrict	int
+/usr/include/pthread.h	101057247249	pthread_exit	1	void *	void
+/usr/include/pthread.h	102472822181	pthread_join	2	pthread_t	void **	int
+/usr/include/pthread.h	102365770504	pthread_tryjoin_np	2	pthread_t	void **	int
+/usr/include/pthread.h	102926431636	pthread_timedjoin_np	3	pthread_t	void **	const struct timespec *	int
+/usr/include/pthread.h	103368155377	pthread_detach	1	pthread_t	int
+/usr/include/pthread.h	101017902713	pthread_self	1		pthread_t
+/usr/include/pthread.h	100825923325	pthread_equal	2	pthread_t	pthread_t	int
+/usr/include/pthread.h	101764417907	pthread_attr_init	1	pthread_attr_t *	int
+/usr/include/pthread.h	101253805514	pthread_attr_destroy	1	pthread_attr_t *	int
+/usr/include/pthread.h	100363852241	pthread_attr_getdetachstate	2	const pthread_attr_t *	int *	int
+/usr/include/pthread.h	101672013089	pthread_attr_setdetachstate	2	pthread_attr_t *	int	int
+/usr/include/pthread.h	100372036415	pthread_attr_getguardsize	2	const pthread_attr_t *	size_t *	int
+/usr/include/pthread.h	104108109162	pthread_attr_setguardsize	2	pthread_attr_t *	size_t	int
+/usr/include/pthread.h	101008989689	pthread_attr_getschedparam	2	const pthread_attr_t *__restrict	struct sched_param *__restrict	int
+/usr/include/pthread.h	101262919358	pthread_attr_setschedparam	2	pthread_attr_t *__restrict	const struct sched_param *__restrict	int
+/usr/include/pthread.h	104028444559	pthread_attr_getschedpolicy	2	const pthread_attr_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	101783812879	pthread_attr_setschedpolicy	2	pthread_attr_t *	int	int
+/usr/include/pthread.h	101834045651	pthread_attr_getinheritsched	2	const pthread_attr_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	100107201234	pthread_attr_setinheritsched	2	pthread_attr_t *	int	int
+/usr/include/pthread.h	103688525542	pthread_attr_getscope	2	const pthread_attr_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	102607536707	pthread_attr_setscope	2	pthread_attr_t *	int	int
+/usr/include/pthread.h	104174126462	pthread_attr_getstackaddr	2	const pthread_attr_t *__restrict	void **__restrict	int
+/usr/include/pthread.h	102091850163	pthread_attr_setstackaddr	2	pthread_attr_t *	void *	int
+/usr/include/pthread.h	103886192541	pthread_attr_getstacksize	2	const pthread_attr_t *__restrict	size_t *__restrict	int
+/usr/include/pthread.h	103257024503	pthread_attr_setstacksize	2	pthread_attr_t *	size_t	int
+/usr/include/pthread.h	101890359229	pthread_attr_getstack	3	const pthread_attr_t *__restrict	void **__restrict	size_t *__restrict	int
+/usr/include/pthread.h	101811662211	pthread_attr_setstack	3	pthread_attr_t *	void *	size_t	int
+/usr/include/pthread.h	103390264195	pthread_attr_setaffinity_np	3	pthread_attr_t *	size_t	const cpu_set_t *	int
+/usr/include/pthread.h	103978131916	pthread_attr_getaffinity_np	3	const pthread_attr_t *	size_t	cpu_set_t *	int
+/usr/include/pthread.h	103823947219	pthread_getattr_np	2	pthread_t	pthread_attr_t *	int
+/usr/include/pthread.h	100002176372	pthread_setschedparam	3	pthread_t	int	const struct sched_param *	int
+/usr/include/pthread.h	100603279521	pthread_getschedparam	3	pthread_t	int *__restrict	struct sched_param *__restrict	int
+/usr/include/pthread.h	103177142526	pthread_setschedprio	2	pthread_t	int	int
+/usr/include/pthread.h	103932190201	pthread_getname_np	3	pthread_t	char *	size_t	int
+/usr/include/pthread.h	102493165712	pthread_setname_np	2	pthread_t	const char *	int
+/usr/include/pthread.h	101354473329	pthread_getconcurrency	1		int
+/usr/include/pthread.h	104012510123	pthread_setconcurrency	1	int	int
+/usr/include/pthread.h	103831128111	pthread_yield	1		int
+/usr/include/pthread.h	101609390575	pthread_setaffinity_np	3	pthread_t	size_t	const cpu_set_t *	int
+/usr/include/pthread.h	101991035045	pthread_getaffinity_np	3	pthread_t	size_t	cpu_set_t *	int
+/usr/include/pthread.h	103571574863	pthread_once	2	pthread_once_t *	void (*)()	int
+/usr/include/pthread.h	100685338778	pthread_setcancelstate	2	int	int *	int
+/usr/include/pthread.h	101826938499	pthread_setcanceltype	2	int	int *	int
+/usr/include/pthread.h	102041564156	pthread_cancel	1	pthread_t	int
+/usr/include/pthread.h	101842560131	pthread_testcancel	1		void
+/usr/include/pthread.h	104169552218	_ZN23__pthread_cleanup_class9__setdoitEi	1	int	void
+/usr/include/pthread.h	100760146041	_ZN23__pthread_cleanup_class7__deferEv	1		void
+/usr/include/pthread.h	102805002223	_ZNK23__pthread_cleanup_class9__restoreEv	1		void
+/usr/include/pthread.h	103072630771	__sigsetjmp	2	struct __jmp_buf_tag *	int	int
+/usr/include/pthread.h	102501402554	pthread_mutex_init	2	pthread_mutex_t *	const pthread_mutexattr_t *	int
+/usr/include/pthread.h	100761881631	pthread_mutex_destroy	1	pthread_mutex_t *	int
+/usr/include/pthread.h	101546942028	pthread_mutex_trylock	1	pthread_mutex_t *	int
+/usr/include/pthread.h	102064293112	pthread_mutex_lock	1	pthread_mutex_t *	int
+/usr/include/pthread.h	101453857382	pthread_mutex_timedlock	2	pthread_mutex_t *__restrict	const struct timespec *__restrict	int
+/usr/include/pthread.h	103897166385	pthread_mutex_unlock	1	pthread_mutex_t *	int
+/usr/include/pthread.h	100036050367	pthread_mutex_getprioceiling	2	const pthread_mutex_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	101122313769	pthread_mutex_setprioceiling	3	pthread_mutex_t *__restrict	int	int *__restrict	int
+/usr/include/pthread.h	102933503242	pthread_mutex_consistent	1	pthread_mutex_t *	int
+/usr/include/pthread.h	102381424553	pthread_mutex_consistent_np	1	pthread_mutex_t *	int
+/usr/include/pthread.h	100710156381	pthread_mutexattr_init	1	pthread_mutexattr_t *	int
+/usr/include/pthread.h	101795374920	pthread_mutexattr_destroy	1	pthread_mutexattr_t *	int
+/usr/include/pthread.h	104135566006	pthread_mutexattr_getpshared	2	const pthread_mutexattr_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	103842806892	pthread_mutexattr_setpshared	2	pthread_mutexattr_t *	int	int
+/usr/include/pthread.h	101310492797	pthread_mutexattr_gettype	2	const pthread_mutexattr_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	103110040981	pthread_mutexattr_settype	2	pthread_mutexattr_t *	int	int
+/usr/include/pthread.h	102371468110	pthread_mutexattr_getprotocol	2	const pthread_mutexattr_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	102252555926	pthread_mutexattr_setprotocol	2	pthread_mutexattr_t *	int	int
+/usr/include/pthread.h	103980374053	pthread_mutexattr_getprioceiling	2	const pthread_mutexattr_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	101369688345	pthread_mutexattr_setprioceiling	2	pthread_mutexattr_t *	int	int
+/usr/include/pthread.h	102543109163	pthread_mutexattr_getrobust	2	const pthread_mutexattr_t *	int *	int
+/usr/include/pthread.h	103290540340	pthread_mutexattr_getrobust_np	2	const pthread_mutexattr_t *	int *	int
+/usr/include/pthread.h	103651484604	pthread_mutexattr_setrobust	2	pthread_mutexattr_t *	int	int
+/usr/include/pthread.h	104059977093	pthread_mutexattr_setrobust_np	2	pthread_mutexattr_t *	int	int
+/usr/include/pthread.h	101944550594	pthread_rwlock_init	2	pthread_rwlock_t *__restrict	const pthread_rwlockattr_t *__restrict	int
+/usr/include/pthread.h	102744343459	pthread_rwlock_destroy	1	pthread_rwlock_t *	int
+/usr/include/pthread.h	101703320427	pthread_rwlock_rdlock	1	pthread_rwlock_t *	int
+/usr/include/pthread.h	101958945916	pthread_rwlock_tryrdlock	1	pthread_rwlock_t *	int
+/usr/include/pthread.h	100185163107	pthread_rwlock_timedrdlock	2	pthread_rwlock_t *__restrict	const struct timespec *__restrict	int
+/usr/include/pthread.h	103818670500	pthread_rwlock_wrlock	1	pthread_rwlock_t *	int
+/usr/include/pthread.h	101937092768	pthread_rwlock_trywrlock	1	pthread_rwlock_t *	int
+/usr/include/pthread.h	101080820375	pthread_rwlock_timedwrlock	2	pthread_rwlock_t *__restrict	const struct timespec *__restrict	int
+/usr/include/pthread.h	101795732765	pthread_rwlock_unlock	1	pthread_rwlock_t *	int
+/usr/include/pthread.h	101098148123	pthread_rwlockattr_init	1	pthread_rwlockattr_t *	int
+/usr/include/pthread.h	104090260942	pthread_rwlockattr_destroy	1	pthread_rwlockattr_t *	int
+/usr/include/pthread.h	102201705863	pthread_rwlockattr_getpshared	2	const pthread_rwlockattr_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	101105549018	pthread_rwlockattr_setpshared	2	pthread_rwlockattr_t *	int	int
+/usr/include/pthread.h	103957282280	pthread_rwlockattr_getkind_np	2	const pthread_rwlockattr_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	104008034167	pthread_rwlockattr_setkind_np	2	pthread_rwlockattr_t *	int	int
+/usr/include/pthread.h	102362004537	pthread_cond_init	2	pthread_cond_t *__restrict	const pthread_condattr_t *__restrict	int
+/usr/include/pthread.h	102686152657	pthread_cond_destroy	1	pthread_cond_t *	int
+/usr/include/pthread.h	103846419278	pthread_cond_signal	1	pthread_cond_t *	int
+/usr/include/pthread.h	100992291722	pthread_cond_broadcast	1	pthread_cond_t *	int
+/usr/include/pthread.h	104064203225	pthread_cond_wait	2	pthread_cond_t *__restrict	pthread_mutex_t *__restrict	int
+/usr/include/pthread.h	100312661688	pthread_cond_timedwait	3	pthread_cond_t *__restrict	pthread_mutex_t *__restrict	const struct timespec *__restrict	int
+/usr/include/pthread.h	100674333562	pthread_condattr_init	1	pthread_condattr_t *	int
+/usr/include/pthread.h	104111045328	pthread_condattr_destroy	1	pthread_condattr_t *	int
+/usr/include/pthread.h	100580935491	pthread_condattr_getpshared	2	const pthread_condattr_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	100048128015	pthread_condattr_setpshared	2	pthread_condattr_t *	int	int
+/usr/include/pthread.h	101194596227	pthread_condattr_getclock	2	const pthread_condattr_t *__restrict	__clockid_t *__restrict	int
+/usr/include/pthread.h	100238748783	pthread_condattr_setclock	2	pthread_condattr_t *	__clockid_t	int
+/usr/include/pthread.h	101291450459	pthread_spin_init	2	pthread_spinlock_t *	int	int
+/usr/include/pthread.h	103573066058	pthread_spin_destroy	1	pthread_spinlock_t *	int
+/usr/include/pthread.h	101460813194	pthread_spin_lock	1	pthread_spinlock_t *	int
+/usr/include/pthread.h	102350852855	pthread_spin_trylock	1	pthread_spinlock_t *	int
+/usr/include/pthread.h	100348770195	pthread_spin_unlock	1	pthread_spinlock_t *	int
+/usr/include/pthread.h	100604774611	pthread_barrier_init	3	pthread_barrier_t *__restrict	const pthread_barrierattr_t *__restrict	unsigned int	int
+/usr/include/pthread.h	102875423768	pthread_barrier_destroy	1	pthread_barrier_t *	int
+/usr/include/pthread.h	103592871999	pthread_barrier_wait	1	pthread_barrier_t *	int
+/usr/include/pthread.h	101573535970	pthread_barrierattr_init	1	pthread_barrierattr_t *	int
+/usr/include/pthread.h	100408612313	pthread_barrierattr_destroy	1	pthread_barrierattr_t *	int
+/usr/include/pthread.h	103621160945	pthread_barrierattr_getpshared	2	const pthread_barrierattr_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	102910118166	pthread_barrierattr_setpshared	2	pthread_barrierattr_t *	int	int
+/usr/include/pthread.h	101971294983	pthread_key_create	2	pthread_key_t *	void (*)(void *)	int
+/usr/include/pthread.h	100774363878	pthread_key_delete	1	pthread_key_t	int
+/usr/include/pthread.h	103947851448	pthread_getspecific	1	pthread_key_t	void *
+/usr/include/pthread.h	100118701941	pthread_setspecific	2	pthread_key_t	const void *	int
+/usr/include/pthread.h	101640274745	pthread_getcpuclockid	2	pthread_t	__clockid_t *	int
+/usr/include/pthread.h	101348943117	pthread_atfork	3	void (*)()	void (*)()	void (*)()	int
+/usr/include/unistd.h	101941740050	access	2	const char *	int	int
+/usr/include/unistd.h	101226808827	euidaccess	2	const char *	int	int
+/usr/include/unistd.h	103517037528	eaccess	2	const char *	int	int
+/usr/include/unistd.h	103974426040	faccessat	4	int	const char *	int	int	int
+/usr/include/unistd.h	103402492799	lseek	3	int	__off_t	int	__off_t
+/usr/include/unistd.h	100251310321	lseek64	3	int	__off64_t	int	__off64_t
+/usr/include/unistd.h	102707634344	close	1	int	int
+/usr/include/unistd.h	103340788901	read	3	int	void *	size_t	ssize_t
+/usr/include/unistd.h	100431910632	write	3	int	const void *	size_t	ssize_t
+/usr/include/unistd.h	103441323806	pread	4	int	void *	size_t	__off_t	ssize_t
+/usr/include/unistd.h	102902394536	pwrite	4	int	const void *	size_t	__off_t	ssize_t
+/usr/include/unistd.h	102228407780	pread64	4	int	void *	size_t	__off64_t	ssize_t
+/usr/include/unistd.h	102730022965	pwrite64	4	int	const void *	size_t	__off64_t	ssize_t
+/usr/include/unistd.h	102762347639	pipe	1	int [2]	int
+/usr/include/unistd.h	100656112174	pipe2	2	int [2]	int	int
+/usr/include/unistd.h	103565022293	alarm	1	unsigned int	unsigned int
+/usr/include/unistd.h	102143221120	sleep	1	unsigned int	unsigned int
+/usr/include/unistd.h	102964194378	ualarm	2	__useconds_t	__useconds_t	__useconds_t
+/usr/include/unistd.h	103991159077	usleep	1	__useconds_t	int
+/usr/include/unistd.h	103633812100	pause	1		int
+/usr/include/unistd.h	103101825843	chown	3	const char *	__uid_t	__gid_t	int
+/usr/include/unistd.h	101733714622	fchown	3	int	__uid_t	__gid_t	int
+/usr/include/unistd.h	103278149623	lchown	3	const char *	__uid_t	__gid_t	int
+/usr/include/unistd.h	100824691396	fchownat	5	int	const char *	__uid_t	__gid_t	int	int
+/usr/include/unistd.h	102967863183	chdir	1	const char *	int
+/usr/include/unistd.h	103550753859	fchdir	1	int	int
+/usr/include/unistd.h	101386973726	getcwd	2	char *	size_t	char *
+/usr/include/unistd.h	103908810721	get_current_dir_name	1		char *
+/usr/include/unistd.h	101104455472	getwd	1	char *	char *
+/usr/include/unistd.h	104046147512	dup	1	int	int
+/usr/include/unistd.h	102755691052	dup2	2	int	int	int
+/usr/include/unistd.h	101485366015	dup3	3	int	int	int	int
+/usr/include/unistd.h	104127463448	execve	3	const char *	char *const []	char *const []	int
+/usr/include/unistd.h	103738805703	fexecve	3	int	char *const []	char *const []	int
+/usr/include/unistd.h	101119939327	execv	2	const char *	char *const []	int
+/usr/include/unistd.h	103657327255	execle	2	const char *	const char *	int
+/usr/include/unistd.h	104113893416	execl	2	const char *	const char *	int
+/usr/include/unistd.h	102957230484	execvp	2	const char *	char *const []	int
+/usr/include/unistd.h	103562833580	execlp	2	const char *	const char *	int
+/usr/include/unistd.h	104027766334	execvpe	3	const char *	char *const []	char *const []	int
+/usr/include/unistd.h	102257397359	nice	1	int	int
+/usr/include/unistd.h	103239492470	_exit	1	int	void
+/usr/include/unistd.h	101824408578	pathconf	2	const char *	int	long
+/usr/include/unistd.h	100625267269	fpathconf	2	int	int	long
+/usr/include/unistd.h	103901256872	sysconf	1	int	long
+/usr/include/unistd.h	100146697729	confstr	3	int	char *	size_t	size_t
+/usr/include/unistd.h	101252841287	getpid	1		__pid_t
+/usr/include/unistd.h	103191514316	getppid	1		__pid_t
+/usr/include/unistd.h	103083066917	getpgrp	1		__pid_t
+/usr/include/unistd.h	102985136750	__getpgid	1	__pid_t	__pid_t
+/usr/include/unistd.h	101526599216	getpgid	1	__pid_t	__pid_t
+/usr/include/unistd.h	102260840716	setpgid	2	__pid_t	__pid_t	int
+/usr/include/unistd.h	101026150849	setpgrp	1		int
+/usr/include/unistd.h	100731502171	setsid	1		__pid_t
+/usr/include/unistd.h	103786560727	getsid	1	__pid_t	__pid_t
+/usr/include/unistd.h	102206921131	getuid	1		__uid_t
+/usr/include/unistd.h	100291418509	geteuid	1		__uid_t
+/usr/include/unistd.h	101102303235	getgid	1		__gid_t
+/usr/include/unistd.h	102408921145	getegid	1		__gid_t
+/usr/include/unistd.h	100529738917	getgroups	2	int	__gid_t []	int
+/usr/include/unistd.h	100412351218	group_member	1	__gid_t	int
+/usr/include/unistd.h	101053745232	setuid	1	__uid_t	int
+/usr/include/unistd.h	101501529119	setreuid	2	__uid_t	__uid_t	int
+/usr/include/unistd.h	103693207876	seteuid	1	__uid_t	int
+/usr/include/unistd.h	103723497126	setgid	1	__gid_t	int
+/usr/include/unistd.h	100966623394	setregid	2	__gid_t	__gid_t	int
+/usr/include/unistd.h	103347026496	setegid	1	__gid_t	int
+/usr/include/unistd.h	103438661292	getresuid	3	__uid_t *	__uid_t *	__uid_t *	int
+/usr/include/unistd.h	101505277849	getresgid	3	__gid_t *	__gid_t *	__gid_t *	int
+/usr/include/unistd.h	103317103183	setresuid	3	__uid_t	__uid_t	__uid_t	int
+/usr/include/unistd.h	100096257446	setresgid	3	__gid_t	__gid_t	__gid_t	int
+/usr/include/unistd.h	103377343469	fork	1		__pid_t
+/usr/include/unistd.h	101673669812	vfork	1		__pid_t
+/usr/include/unistd.h	104045615246	ttyname	1	int	char *
+/usr/include/unistd.h	100621123913	ttyname_r	3	int	char *	size_t	int
+/usr/include/unistd.h	104150165951	isatty	1	int	int
+/usr/include/unistd.h	103774240925	ttyslot	1		int
+/usr/include/unistd.h	103303267592	link	2	const char *	const char *	int
+/usr/include/unistd.h	101526088467	linkat	5	int	const char *	int	const char *	int	int
+/usr/include/unistd.h	103007045233	symlink	2	const char *	const char *	int
+/usr/include/unistd.h	103085948464	readlink	3	const char *__restrict	char *__restrict	size_t	ssize_t
+/usr/include/unistd.h	102000855645	symlinkat	3	const char *	int	const char *	int
+/usr/include/unistd.h	102404374614	readlinkat	4	int	const char *__restrict	char *__restrict	size_t	ssize_t
+/usr/include/unistd.h	101711860841	unlink	1	const char *	int
+/usr/include/unistd.h	100586616582	unlinkat	3	int	const char *	int	int
+/usr/include/unistd.h	103054624772	rmdir	1	const char *	int
+/usr/include/unistd.h	100577159585	tcgetpgrp	1	int	__pid_t
+/usr/include/unistd.h	102811721520	tcsetpgrp	2	int	__pid_t	int
+/usr/include/unistd.h	100266314594	getlogin	1		char *
+/usr/include/unistd.h	100354308362	getlogin_r	2	char *	size_t	int
+/usr/include/unistd.h	104074297701	setlogin	1	const char *	int
+/usr/include/getopt.h	102593312187	getopt	3	int	char *const *	const char *	int
+/usr/include/unistd.h	100166920874	gethostname	2	char *	size_t	int
+/usr/include/unistd.h	103279025123	sethostname	2	const char *	size_t	int
+/usr/include/unistd.h	102147035465	sethostid	1	long	int
+/usr/include/unistd.h	101188076769	getdomainname	2	char *	size_t	int
+/usr/include/unistd.h	104090288108	setdomainname	2	const char *	size_t	int
+/usr/include/unistd.h	101212594143	vhangup	1		int
+/usr/include/unistd.h	103699888702	revoke	1	const char *	int
+/usr/include/unistd.h	100517628580	profil	4	unsigned short *	size_t	size_t	unsigned int	int
+/usr/include/unistd.h	101110259877	acct	1	const char *	int
+/usr/include/unistd.h	103784390937	getusershell	1		char *
+/usr/include/unistd.h	100048478391	endusershell	1		void
+/usr/include/unistd.h	104225468287	setusershell	1		void
+/usr/include/unistd.h	100452974497	daemon	2	int	int	int
+/usr/include/unistd.h	101671213900	chroot	1	const char *	int
+/usr/include/unistd.h	103937939985	getpass	1	const char *	char *
+/usr/include/unistd.h	100670062159	fsync	1	int	int
+/usr/include/unistd.h	102820731438	syncfs	1	int	int
+/usr/include/unistd.h	104269756006	gethostid	1		long
+/usr/include/unistd.h	102999258332	sync	1		void
+/usr/include/unistd.h	103421641022	getpagesize	1		int
+/usr/include/unistd.h	102056362308	getdtablesize	1		int
+/usr/include/unistd.h	101951881155	truncate	2	const char *	__off_t	int
+/usr/include/unistd.h	102963401664	truncate64	2	const char *	__off64_t	int
+/usr/include/unistd.h	103339972245	ftruncate	2	int	__off_t	int
+/usr/include/unistd.h	101928519450	ftruncate64	2	int	__off64_t	int
+/usr/include/unistd.h	101255100471	brk	1	void *	int
+/usr/include/unistd.h	102375402117	sbrk	1	intptr_t	void *
+/usr/include/unistd.h	100727843807	syscall	1	long	long
+/usr/include/unistd.h	102889206384	lockf	3	int	int	__off_t	int
+/usr/include/unistd.h	102172981987	lockf64	3	int	int	__off64_t	int
+/usr/include/unistd.h	101669459903	fdatasync	1	int	int
+/usr/include/unistd.h	101865794298	crypt	2	const char *	const char *	char *
+/usr/include/unistd.h	102165036116	encrypt	2	char *	int	void
+/usr/include/unistd.h	103035323405	swab	3	const void *__restrict	void *__restrict	ssize_t	void
+/usr/include/string.h	103846281004	memcpy	3	void *__restrict	const void *__restrict	size_t	void *
+/usr/include/string.h	103457166888	memmove	3	void *	const void *	size_t	void *
+/usr/include/string.h	101545715006	memccpy	4	void *__restrict	const void *__restrict	int	size_t	void *
+/usr/include/string.h	101319829495	memset	3	void *	int	size_t	void *
+/usr/include/string.h	102617894342	memcmp	3	const void *	const void *	size_t	int
+/usr/include/string.h	102254453269	memchr	3	const void *	int	size_t	void *
+/usr/include/string.h	104140708606	rawmemchr	2	const void *	int	void *
+/usr/include/string.h	102862046290	memrchr	3	const void *	int	size_t	void *
+/usr/include/string.h	100655263778	strcpy	2	char *__restrict	const char *__restrict	char *
+/usr/include/string.h	101108460803	strncpy	3	char *__restrict	const char *__restrict	size_t	char *
+/usr/include/string.h	102736639344	strcat	2	char *__restrict	const char *__restrict	char *
+/usr/include/string.h	104111157271	strncat	3	char *__restrict	const char *__restrict	size_t	char *
+/usr/include/string.h	100108382828	strcmp	2	const char *	const char *	int
+/usr/include/string.h	101208192229	strncmp	3	const char *	const char *	size_t	int
+/usr/include/string.h	103746892468	strcoll	2	const char *	const char *	int
+/usr/include/string.h	102349204284	strxfrm	3	char *__restrict	const char *__restrict	size_t	size_t
+/usr/include/string.h	100324069251	strcoll_l	3	const char *	const char *	__locale_t	int
+/usr/include/string.h	104074021525	strxfrm_l	4	char *	const char *	size_t	__locale_t	size_t
+/usr/include/string.h	103335939233	strdup	1	const char *	char *
+/usr/include/string.h	102539124470	strndup	2	const char *	size_t	char *
+/usr/include/string.h	101019337411	strchr	2	const char *	int	char *
+/usr/include/string.h	103284943393	strrchr	2	const char *	int	char *
+/usr/include/string.h	101562708877	strchrnul	2	const char *	int	char *
+/usr/include/string.h	102339922351	strcspn	2	const char *	const char *	size_t
+/usr/include/string.h	101570959462	strspn	2	const char *	const char *	size_t
+/usr/include/string.h	104201078216	strpbrk	2	const char *	const char *	char *
+/usr/include/string.h	103385598989	strstr	2	const char *	const char *	char *
+/usr/include/string.h	100856716317	strtok	2	char *__restrict	const char *__restrict	char *
+/usr/include/string.h	102289844509	__strtok_r	3	char *__restrict	const char *__restrict	char **__restrict	char *
+/usr/include/string.h	103427035639	strtok_r	3	char *__restrict	const char *__restrict	char **__restrict	char *
+/usr/include/string.h	102149735078	strcasestr	2	const char *	const char *	char *
+/usr/include/string.h	101632227354	memmem	4	const void *	size_t	const void *	size_t	void *
+/usr/include/string.h	103034659839	__mempcpy	3	void *__restrict	const void *__restrict	size_t	void *
+/usr/include/string.h	102058821140	mempcpy	3	void *__restrict	const void *__restrict	size_t	void *
+/usr/include/string.h	103088956574	strlen	1	const char *	size_t
+/usr/include/string.h	104128691212	strnlen	2	const char *	size_t	size_t
+/usr/include/string.h	101175417594	strerror	1	int	char *
+/usr/include/string.h	103345854019	strerror_r	3	int	char *	size_t	char *
+/usr/include/string.h	102822421119	strerror_l	2	int	__locale_t	char *
+/usr/include/string.h	101792670135	__bzero	2	void *	size_t	void
+/usr/include/string.h	103162472761	bcopy	3	const void *	void *	size_t	void
+/usr/include/string.h	101802592127	bzero	2	void *	size_t	void
+/usr/include/string.h	101146307595	bcmp	3	const void *	const void *	size_t	int
+/usr/include/string.h	101950084126	index	2	const char *	int	char *
+/usr/include/string.h	101727258598	rindex	2	const char *	int	char *
+/usr/include/string.h	102805110147	ffs	1	int	int
+/usr/include/string.h	103825423366	ffsl	1	long	int
+/usr/include/string.h	104064409065	ffsll	1	long long	int
+/usr/include/string.h	100915649723	strcasecmp	2	const char *	const char *	int
+/usr/include/string.h	101398385799	strncasecmp	3	const char *	const char *	size_t	int
+/usr/include/string.h	102584911866	strcasecmp_l	3	const char *	const char *	__locale_t	int
+/usr/include/string.h	100763882443	strncasecmp_l	4	const char *	const char *	size_t	__locale_t	int
+/usr/include/string.h	103892955358	strsep	2	char **__restrict	const char *__restrict	char *
+/usr/include/string.h	103150619374	strsignal	1	int	char *
+/usr/include/string.h	101047181440	__stpcpy	2	char *__restrict	const char *__restrict	char *
+/usr/include/string.h	102026630627	stpcpy	2	char *__restrict	const char *__restrict	char *
+/usr/include/string.h	101922239073	__stpncpy	3	char *__restrict	const char *__restrict	size_t	char *
+/usr/include/string.h	103661147412	stpncpy	3	char *__restrict	const char *__restrict	size_t	char *
+/usr/include/string.h	104199291382	strverscmp	2	const char *	const char *	int
+/usr/include/string.h	100787580287	strfry	1	char *	char *
+/usr/include/string.h	101715231838	memfrob	2	void *	size_t	void *
+/usr/include/string.h	100664040912	basename	1	const char *	char *
+/usr/include/bits/errno.h	100848390283	__errno_location	1		int *
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	101893678278	_Z7trythisPv	1	void *	void *
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	103140844131	main	1		int
+/usr/local/include/bits/std_abs.h	201162303621	__builtin_fabsf	1	float	float
+/usr/local/include/bits/std_abs.h	203120094506	__builtin_fabsl	1	long double	long double
+/usr/local/include/bits/std_abs.h	203626404402	__builtin_labs	1	long	long
+/usr/local/include/bits/std_abs.h	204101858167	__builtin_llabs	1	long long	long long
+/usr/local/include/bits/std_abs.h	202193843313	__builtin_fabs	1	double	double
+/usr/include/libio.h	203873680244	_IO_cookie_init	4	struct _IO_cookie_file *	int	void *	_IO_cookie_io_functions_t	void
+/usr/include/libio.h	202511909264	__underflow	1	_IO_FILE *	int
+/usr/include/libio.h	201209146922	__uflow	1	_IO_FILE *	int
+/usr/include/libio.h	201357517773	__overflow	2	_IO_FILE *	int	int
+/usr/include/libio.h	203451667367	_IO_getc	1	_IO_FILE *	int
+/usr/include/libio.h	200212079894	_IO_putc	2	int	_IO_FILE *	int
+/usr/include/libio.h	200469925407	_IO_feof	1	_IO_FILE *	int
+/usr/include/libio.h	201735095042	_IO_ferror	1	_IO_FILE *	int
+/usr/include/libio.h	202461481474	_IO_peekc_locked	1	_IO_FILE *	int
+/usr/include/libio.h	202349027650	_IO_flockfile	1	_IO_FILE *	void
+/usr/include/libio.h	200208277678	_IO_funlockfile	1	_IO_FILE *	void
+/usr/include/libio.h	201077089386	_IO_ftrylockfile	1	_IO_FILE *	int
+/usr/include/libio.h	201718533261	_IO_vfscanf	4	_IO_FILE *__restrict	const char *__restrict	__gnuc_va_list	int *__restrict	int
+/usr/include/libio.h	203129696555	_IO_vfprintf	3	_IO_FILE *__restrict	const char *__restrict	__gnuc_va_list	int
+/usr/include/libio.h	201769038551	_IO_padn	3	_IO_FILE *	int	__ssize_t	__ssize_t
+/usr/include/libio.h	200966130146	_IO_sgetn	3	_IO_FILE *	void *	size_t	size_t
+/usr/include/libio.h	201545722640	_IO_seekoff	4	_IO_FILE *	__off64_t	int	int	__off64_t
+/usr/include/libio.h	204033018745	_IO_seekpos	3	_IO_FILE *	__off64_t	int	__off64_t
+/usr/include/libio.h	201854297216	_IO_free_backup_area	1	_IO_FILE *	void
+/usr/include/stdio.h	200790665140	remove	1	const char *	int
+/usr/include/stdio.h	201722306708	rename	2	const char *	const char *	int
+/usr/include/stdio.h	204214092218	renameat	4	int	const char *	int	const char *	int
+/usr/include/stdio.h	200834678847	tmpfile	1		FILE *
+/usr/include/stdio.h	200917959874	tmpfile64	1		FILE *
+/usr/include/stdio.h	202362558257	tmpnam	1	char *	char *
+/usr/include/stdio.h	203872807336	tmpnam_r	1	char *	char *
+/usr/include/stdio.h	201507878889	tempnam	2	const char *	const char *	char *
+/usr/include/stdio.h	203848425683	fclose	1	FILE *	int
+/usr/include/stdio.h	200901150163	fflush	1	FILE *	int
+/usr/include/stdio.h	202040859423	fflush_unlocked	1	FILE *	int
+/usr/include/stdio.h	200826006066	fcloseall	1		int
+/usr/include/stdio.h	201758849170	fopen	2	const char *__restrict	const char *__restrict	FILE *
+/usr/include/stdio.h	200111295041	freopen	3	const char *__restrict	const char *__restrict	FILE *__restrict	FILE *
+/usr/include/stdio.h	200138570031	fopen64	2	const char *__restrict	const char *__restrict	FILE *
+/usr/include/stdio.h	201748186625	freopen64	3	const char *__restrict	const char *__restrict	FILE *__restrict	FILE *
+/usr/include/stdio.h	200611617539	fdopen	2	int	const char *	FILE *
+/usr/include/stdio.h	201076911007	fopencookie	3	void *__restrict	const char *__restrict	_IO_cookie_io_functions_t	FILE *
+/usr/include/stdio.h	204090230832	fmemopen	3	void *	size_t	const char *	FILE *
+/usr/include/stdio.h	201016895004	open_memstream	2	char **	size_t *	FILE *
+/usr/include/stdio.h	200669006583	setbuf	2	FILE *__restrict	char *__restrict	void
+/usr/include/stdio.h	201266863494	setvbuf	4	FILE *__restrict	char *__restrict	int	size_t	int
+/usr/include/stdio.h	204128567244	setbuffer	3	FILE *__restrict	char *__restrict	size_t	void
+/usr/include/stdio.h	200121143397	setlinebuf	1	FILE *	void
+/usr/include/stdio.h	200358828999	fprintf	2	FILE *__restrict	const char *__restrict	int
+/usr/include/stdio.h	202514879694	printf	1	const char *__restrict	int
+/usr/include/stdio.h	203784041257	sprintf	2	char *__restrict	const char *__restrict	int
+/usr/include/stdio.h	202401751626	vfprintf	3	FILE *__restrict	const char *__restrict	__gnuc_va_list	int
+/usr/include/stdio.h	203135079424	vprintf	2	const char *__restrict	__gnuc_va_list	int
+/usr/include/stdio.h	203555634731	vsprintf	3	char *__restrict	const char *__restrict	__gnuc_va_list	int
+/usr/include/stdio.h	202385151355	snprintf	3	char *__restrict	size_t	const char *__restrict	int
+/usr/include/stdio.h	202083657725	vsnprintf	4	char *__restrict	size_t	const char *__restrict	__gnuc_va_list	int
+/usr/include/stdio.h	201976372659	vasprintf	3	char **__restrict	const char *__restrict	__gnuc_va_list	int
+/usr/include/stdio.h	202390714646	__asprintf	2	char **__restrict	const char *__restrict	int
+/usr/include/stdio.h	201349881835	asprintf	2	char **__restrict	const char *__restrict	int
+/usr/include/stdio.h	200501671850	vdprintf	3	int	const char *__restrict	__gnuc_va_list	int
+/usr/include/stdio.h	201556135675	dprintf	2	int	const char *__restrict	int
+/usr/include/stdio.h	201349634966	fscanf	2	FILE *__restrict	const char *__restrict	int
+/usr/include/stdio.h	202753046918	scanf	1	const char *__restrict	int
+/usr/include/stdio.h	204035703273	sscanf	2	const char *__restrict	const char *__restrict	int
+/usr/include/stdio.h	200656700084	vfscanf	3	FILE *__restrict	const char *__restrict	__gnuc_va_list	int
+/usr/include/stdio.h	203957607994	vscanf	2	const char *__restrict	__gnuc_va_list	int
+/usr/include/stdio.h	202032781689	vsscanf	3	const char *__restrict	const char *__restrict	__gnuc_va_list	int
+/usr/include/stdio.h	204153741088	fgetc	1	FILE *	int
+/usr/include/stdio.h	201399556567	getc	1	FILE *	int
+/usr/include/stdio.h	203365103582	getchar	1		int
+/usr/include/stdio.h	204086554958	getc_unlocked	1	FILE *	int
+/usr/include/stdio.h	201963725406	getchar_unlocked	1		int
+/usr/include/stdio.h	201380279401	fgetc_unlocked	1	FILE *	int
+/usr/include/stdio.h	201140204404	fputc	2	int	FILE *	int
+/usr/include/stdio.h	201492159205	putc	2	int	FILE *	int
+/usr/include/stdio.h	203638875592	putchar	1	int	int
+/usr/include/stdio.h	202077161578	fputc_unlocked	2	int	FILE *	int
+/usr/include/stdio.h	201413602838	putc_unlocked	2	int	FILE *	int
+/usr/include/stdio.h	203135640581	putchar_unlocked	1	int	int
+/usr/include/stdio.h	202250892693	getw	1	FILE *	int
+/usr/include/stdio.h	202298725286	putw	2	int	FILE *	int
+/usr/include/stdio.h	203632623015	fgets	3	char *__restrict	int	FILE *__restrict	char *
+/usr/include/stdio.h	202559523170	fgets_unlocked	3	char *__restrict	int	FILE *__restrict	char *
+/usr/include/stdio.h	202579802014	__getdelim	4	char **__restrict	size_t *__restrict	int	FILE *__restrict	__ssize_t
+/usr/include/stdio.h	203661944663	getdelim	4	char **__restrict	size_t *__restrict	int	FILE *__restrict	__ssize_t
+/usr/include/stdio.h	203905912103	getline	3	char **__restrict	size_t *__restrict	FILE *__restrict	__ssize_t
+/usr/include/stdio.h	201661692411	fputs	2	const char *__restrict	FILE *__restrict	int
+/usr/include/stdio.h	203488530277	puts	1	const char *	int
+/usr/include/stdio.h	200518351848	ungetc	2	int	FILE *	int
+/usr/include/stdio.h	202067871947	fread	4	void *__restrict	size_t	size_t	FILE *__restrict	size_t
+/usr/include/stdio.h	200886159346	fwrite	4	const void *__restrict	size_t	size_t	FILE *__restrict	size_t
+/usr/include/stdio.h	203462406381	fputs_unlocked	2	const char *__restrict	FILE *__restrict	int
+/usr/include/stdio.h	203549766229	fread_unlocked	4	void *__restrict	size_t	size_t	FILE *__restrict	size_t
+/usr/include/stdio.h	201453641776	fwrite_unlocked	4	const void *__restrict	size_t	size_t	FILE *__restrict	size_t
+/usr/include/stdio.h	201164044854	fseek	3	FILE *	long	int	int
+/usr/include/stdio.h	200942626433	ftell	1	FILE *	long
+/usr/include/stdio.h	201095602671	rewind	1	FILE *	void
+/usr/include/stdio.h	203808054473	fseeko	3	FILE *	__off_t	int	int
+/usr/include/stdio.h	200782488066	ftello	1	FILE *	__off_t
+/usr/include/stdio.h	200948530245	fgetpos	2	FILE *__restrict	fpos_t *__restrict	int
+/usr/include/stdio.h	200651173621	fsetpos	2	FILE *	const fpos_t *	int
+/usr/include/stdio.h	202054584969	fseeko64	3	FILE *	__off64_t	int	int
+/usr/include/stdio.h	201464655853	ftello64	1	FILE *	__off64_t
+/usr/include/stdio.h	202790429245	fgetpos64	2	FILE *__restrict	fpos64_t *__restrict	int
+/usr/include/stdio.h	204102832838	fsetpos64	2	FILE *	const fpos64_t *	int
+/usr/include/stdio.h	204180642123	clearerr	1	FILE *	void
+/usr/include/stdio.h	203477504690	feof	1	FILE *	int
+/usr/include/stdio.h	202224612761	ferror	1	FILE *	int
+/usr/include/stdio.h	204203664202	clearerr_unlocked	1	FILE *	void
+/usr/include/stdio.h	201806828780	feof_unlocked	1	FILE *	int
+/usr/include/stdio.h	203098461145	ferror_unlocked	1	FILE *	int
+/usr/include/stdio.h	202486877018	perror	1	const char *	void
+/usr/include/stdio.h	202102167144	fileno	1	FILE *	int
+/usr/include/stdio.h	200847169048	fileno_unlocked	1	FILE *	int
+/usr/include/stdio.h	202269912438	popen	2	const char *	const char *	FILE *
+/usr/include/stdio.h	200404009380	pclose	1	FILE *	int
+/usr/include/stdio.h	203161596960	ctermid	1	char *	char *
+/usr/include/stdio.h	203742261002	cuserid	1	char *	char *
+/usr/include/stdio.h	203846701941	obstack_printf	2	struct obstack *__restrict	const char *__restrict	int
+/usr/include/stdio.h	203634749027	obstack_vprintf	3	struct obstack *__restrict	const char *__restrict	__gnuc_va_list	int
+/usr/include/stdio.h	202849135842	flockfile	1	FILE *	void
+/usr/include/stdio.h	203993780824	ftrylockfile	1	FILE *	int
+/usr/include/stdio.h	203208612090	funlockfile	1	FILE *	void
+/usr/include/stdlib.h	201048528159	__ctype_get_mb_cur_max	1		size_t
+/usr/include/stdlib.h	203744823769	atof	1	const char *	double
+/usr/include/stdlib.h	202198871481	atoi	1	const char *	int
+/usr/include/stdlib.h	203187653591	atol	1	const char *	long
+/usr/include/stdlib.h	202770248333	atoll	1	const char *	long long
+/usr/include/stdlib.h	200782282066	strtod	2	const char *__restrict	char **__restrict	double
+/usr/include/stdlib.h	202013006829	strtof	2	const char *__restrict	char **__restrict	float
+/usr/include/stdlib.h	204273106300	strtold	2	const char *__restrict	char **__restrict	long double
+/usr/include/stdlib.h	200021234036	strtol	3	const char *__restrict	char **__restrict	int	long
+/usr/include/stdlib.h	202749556954	strtoul	3	const char *__restrict	char **__restrict	int	unsigned long
+/usr/include/stdlib.h	204133211688	strtoq	3	const char *__restrict	char **__restrict	int	long long
+/usr/include/stdlib.h	202498948614	strtouq	3	const char *__restrict	char **__restrict	int	unsigned long long
+/usr/include/stdlib.h	201746346196	strtoll	3	const char *__restrict	char **__restrict	int	long long
+/usr/include/stdlib.h	204081024488	strtoull	3	const char *__restrict	char **__restrict	int	unsigned long long
+/usr/include/stdlib.h	202426734882	strtol_l	4	const char *__restrict	char **__restrict	int	__locale_t	long
+/usr/include/stdlib.h	201589871805	strtoul_l	4	const char *__restrict	char **__restrict	int	__locale_t	unsigned long
+/usr/include/stdlib.h	203163699363	strtoll_l	4	const char *__restrict	char **__restrict	int	__locale_t	long long
+/usr/include/stdlib.h	202553169339	strtoull_l	4	const char *__restrict	char **__restrict	int	__locale_t	unsigned long long
+/usr/include/stdlib.h	203394111685	strtod_l	3	const char *__restrict	char **__restrict	__locale_t	double
+/usr/include/stdlib.h	202716319340	strtof_l	3	const char *__restrict	char **__restrict	__locale_t	float
+/usr/include/stdlib.h	200654356314	strtold_l	3	const char *__restrict	char **__restrict	__locale_t	long double
+/usr/include/stdlib.h	201328147969	l64a	1	long	char *
+/usr/include/stdlib.h	200194607385	a64l	1	const char *	long
+/usr/include/sys/select.h	200091014072	select	5	int	fd_set *__restrict	fd_set *__restrict	fd_set *__restrict	struct timeval *__restrict	int
+/usr/include/sys/select.h	200236489769	pselect	6	int	fd_set *__restrict	fd_set *__restrict	fd_set *__restrict	const struct timespec *__restrict	const __sigset_t *__restrict	int
+/usr/include/sys/sysmacros.h	200487388059	gnu_dev_major	1	unsigned long long	unsigned int
+/usr/include/sys/sysmacros.h	200941884949	gnu_dev_minor	1	unsigned long long	unsigned int
+/usr/include/sys/sysmacros.h	203552664629	gnu_dev_makedev	2	unsigned int	unsigned int	unsigned long long
+/usr/include/stdlib.h	201472347483	random	1		long
+/usr/include/stdlib.h	204187461231	srandom	1	unsigned int	void
+/usr/include/stdlib.h	201068693954	initstate	3	unsigned int	char *	size_t	char *
+/usr/include/stdlib.h	201390168688	setstate	1	char *	char *
+/usr/include/stdlib.h	200051764300	random_r	2	struct random_data *__restrict	int32_t *__restrict	int
+/usr/include/stdlib.h	202412483326	srandom_r	2	unsigned int	struct random_data *	int
+/usr/include/stdlib.h	203832295323	initstate_r	4	unsigned int	char *__restrict	size_t	struct random_data *__restrict	int
+/usr/include/stdlib.h	200365204597	setstate_r	2	char *__restrict	struct random_data *__restrict	int
+/usr/include/stdlib.h	203969445489	rand	1		int
+/usr/include/stdlib.h	201954609832	srand	1	unsigned int	void
+/usr/include/stdlib.h	204043556597	rand_r	1	unsigned int *	int
+/usr/include/stdlib.h	202498078919	drand48	1		double
+/usr/include/stdlib.h	202280161391	erand48	1	unsigned short [3]	double
+/usr/include/stdlib.h	200277482571	lrand48	1		long
+/usr/include/stdlib.h	203124266343	nrand48	1	unsigned short [3]	long
+/usr/include/stdlib.h	203422168516	mrand48	1		long
+/usr/include/stdlib.h	201130519533	jrand48	1	unsigned short [3]	long
+/usr/include/stdlib.h	200436105397	srand48	1	long	void
+/usr/include/stdlib.h	200411785581	seed48	1	unsigned short [3]	unsigned short *
+/usr/include/stdlib.h	203920173590	lcong48	1	unsigned short [7]	void
+/usr/include/stdlib.h	200941602094	drand48_r	2	struct drand48_data *__restrict	double *__restrict	int
+/usr/include/stdlib.h	200272313992	erand48_r	3	unsigned short [3]	struct drand48_data *__restrict	double *__restrict	int
+/usr/include/stdlib.h	200226979922	lrand48_r	2	struct drand48_data *__restrict	long *__restrict	int
+/usr/include/stdlib.h	201599200211	nrand48_r	3	unsigned short [3]	struct drand48_data *__restrict	long *__restrict	int
+/usr/include/stdlib.h	203764559531	mrand48_r	2	struct drand48_data *__restrict	long *__restrict	int
+/usr/include/stdlib.h	202763146171	jrand48_r	3	unsigned short [3]	struct drand48_data *__restrict	long *__restrict	int
+/usr/include/stdlib.h	203126026249	srand48_r	2	long	struct drand48_data *	int
+/usr/include/stdlib.h	202240283124	seed48_r	2	unsigned short [3]	struct drand48_data *	int
+/usr/include/stdlib.h	202480779306	lcong48_r	2	unsigned short [7]	struct drand48_data *	int
+/usr/include/stdlib.h	200863761941	malloc	1	size_t	void *
+/usr/include/stdlib.h	201494103017	calloc	2	size_t	size_t	void *
+/usr/include/stdlib.h	203909004061	realloc	2	void *	size_t	void *
+/usr/include/stdlib.h	202108923850	free	1	void *	void
+/usr/include/stdlib.h	200188602059	cfree	1	void *	void
+/usr/include/alloca.h	200073229071	alloca	1	size_t	void *
+/usr/include/stdlib.h	200112277846	valloc	1	size_t	void *
+/usr/include/stdlib.h	203568331273	posix_memalign	3	void **	size_t	size_t	int
+/usr/include/stdlib.h	200996683507	aligned_alloc	2	size_t	size_t	void *
+/usr/include/stdlib.h	202214006642	abort	1		void
+/usr/include/stdlib.h	202521656588	atexit	1	void (*)()	int
+/usr/include/stdlib.h	200253472242	at_quick_exit	1	void (*)()	int
+/usr/include/stdlib.h	201249967714	on_exit	3	void (*)(int	 void *)	void *	int
+/usr/include/stdlib.h	203265626645	exit	1	int	void
+/usr/include/stdlib.h	200409643263	quick_exit	1	int	void
+/usr/include/stdlib.h	201083022443	_Exit	1	int	void
+/usr/include/stdlib.h	200536305416	getenv	1	const char *	char *
+/usr/include/stdlib.h	201815753302	secure_getenv	1	const char *	char *
+/usr/include/stdlib.h	202981500600	putenv	1	char *	int
+/usr/include/stdlib.h	201007053955	setenv	3	const char *	const char *	int	int
+/usr/include/stdlib.h	201309215855	unsetenv	1	const char *	int
+/usr/include/stdlib.h	202141085345	clearenv	1		int
+/usr/include/stdlib.h	203364744449	mktemp	1	char *	char *
+/usr/include/stdlib.h	201631655745	mkstemp	1	char *	int
+/usr/include/stdlib.h	202758737869	mkstemp64	1	char *	int
+/usr/include/stdlib.h	203294585381	mkstemps	2	char *	int	int
+/usr/include/stdlib.h	203985007032	mkstemps64	2	char *	int	int
+/usr/include/stdlib.h	203229593873	mkdtemp	1	char *	char *
+/usr/include/stdlib.h	201090857657	mkostemp	2	char *	int	int
+/usr/include/stdlib.h	203270947459	mkostemp64	2	char *	int	int
+/usr/include/stdlib.h	200115149744	mkostemps	3	char *	int	int	int
+/usr/include/stdlib.h	202046807342	mkostemps64	3	char *	int	int	int
+/usr/include/stdlib.h	203524847846	system	1	const char *	int
+/usr/include/stdlib.h	200541690502	canonicalize_file_name	1	const char *	char *
+/usr/include/stdlib.h	203346915906	realpath	2	const char *__restrict	char *__restrict	char *
+/usr/include/stdlib.h	200101496045	bsearch	5	const void *	const void *	size_t	size_t	__compar_fn_t	void *
+/usr/include/stdlib.h	203095671315	qsort	4	void *	size_t	size_t	__compar_fn_t	void
+/usr/include/stdlib.h	200583313385	qsort_r	5	void *	size_t	size_t	__compar_d_fn_t	void *	void
+/usr/include/stdlib.h	202438680910	abs	1	int	int
+/usr/include/stdlib.h	200771998164	labs	1	long	long
+/usr/include/stdlib.h	204091661224	llabs	1	long long	long long
+/usr/include/stdlib.h	203617499209	div	2	int	int	div_t
+/usr/include/stdlib.h	203363487526	ldiv	2	long	long	ldiv_t
+/usr/include/stdlib.h	203329400263	lldiv	2	long long	long long	lldiv_t
+/usr/include/stdlib.h	200809717117	ecvt	4	double	int	int *__restrict	int *__restrict	char *
+/usr/include/stdlib.h	203785206372	fcvt	4	double	int	int *__restrict	int *__restrict	char *
+/usr/include/stdlib.h	202275255068	gcvt	3	double	int	char *	char *
+/usr/include/stdlib.h	201275237166	qecvt	4	long double	int	int *__restrict	int *__restrict	char *
+/usr/include/stdlib.h	203766315855	qfcvt	4	long double	int	int *__restrict	int *__restrict	char *
+/usr/include/stdlib.h	201348529291	qgcvt	3	long double	int	char *	char *
+/usr/include/stdlib.h	200811753930	ecvt_r	6	double	int	int *__restrict	int *__restrict	char *__restrict	size_t	int
+/usr/include/stdlib.h	200080413577	fcvt_r	6	double	int	int *__restrict	int *__restrict	char *__restrict	size_t	int
+/usr/include/stdlib.h	203865923359	qecvt_r	6	long double	int	int *__restrict	int *__restrict	char *__restrict	size_t	int
+/usr/include/stdlib.h	203645106569	qfcvt_r	6	long double	int	int *__restrict	int *__restrict	char *__restrict	size_t	int
+/usr/include/stdlib.h	200661838914	mblen	2	const char *	size_t	int
+/usr/include/stdlib.h	200758297919	mbtowc	3	wchar_t *__restrict	const char *__restrict	size_t	int
+/usr/include/stdlib.h	200974922797	wctomb	2	char *	wchar_t	int
+/usr/include/stdlib.h	204291891195	mbstowcs	3	wchar_t *__restrict	const char *__restrict	size_t	size_t
+/usr/include/stdlib.h	203348673401	wcstombs	3	char *__restrict	const wchar_t *__restrict	size_t	size_t
+/usr/include/stdlib.h	202041685048	rpmatch	1	const char *	int
+/usr/include/stdlib.h	203885243972	getsubopt	3	char **__restrict	char *const *__restrict	char **__restrict	int
+/usr/include/stdlib.h	203948277286	setkey	1	const char *	void
+/usr/include/stdlib.h	200727500864	posix_openpt	1	int	int
+/usr/include/stdlib.h	204025347720	grantpt	1	int	int
+/usr/include/stdlib.h	201845953198	unlockpt	1	int	int
+/usr/include/stdlib.h	201208501652	ptsname	1	int	char *
+/usr/include/stdlib.h	201194652752	ptsname_r	3	int	char *	size_t	int
+/usr/include/stdlib.h	203255905481	getpt	1		int
+/usr/include/stdlib.h	200071083424	getloadavg	2	double []	int	int
+/usr/local/include/bits/std_abs.h	200343931028	_ZSt3absl	1	long	long
+/usr/local/include/bits/std_abs.h	202116666009	_ZSt3absx	1	long long	long long
+/usr/local/include/bits/std_abs.h	203009471431	_ZSt3absd	1	double	double
+/usr/local/include/bits/std_abs.h	202622431460	_ZSt3absf	1	float	float
+/usr/local/include/bits/std_abs.h	202613185642	_ZSt3abse	1	long double	long double
+/usr/local/include/cstdlib	202435574500	_ZSt3divll	2	long	long	ldiv_t
+/usr/local/include/cstdlib	200705148236	_ZN9__gnu_cxx3divExx	2	long long	long long	lldiv_t
+/usr/include/bits/sched.h	204260140011	clone	4	int (*)(void *)	void *	int	void *	int
+/usr/include/bits/sched.h	201740309577	unshare	1	int	int
+/usr/include/bits/sched.h	203852494257	sched_getcpu	1		int
+/usr/include/bits/sched.h	200701723187	setns	2	int	int	int
+/usr/include/bits/sched.h	201459390273	__sched_cpucount	2	size_t	const cpu_set_t *	int
+/usr/include/bits/sched.h	203616085998	__sched_cpualloc	1	size_t	cpu_set_t *
+/usr/include/bits/sched.h	202761487448	__sched_cpufree	1	cpu_set_t *	void
+/usr/include/sched.h	201814500309	sched_setparam	2	__pid_t	const struct sched_param *	int
+/usr/include/sched.h	201159395690	sched_getparam	2	__pid_t	struct sched_param *	int
+/usr/include/sched.h	200692832980	sched_setscheduler	3	__pid_t	int	const struct sched_param *	int
+/usr/include/sched.h	200285992947	sched_getscheduler	1	__pid_t	int
+/usr/include/sched.h	201998957270	sched_yield	1		int
+/usr/include/sched.h	201828875565	sched_get_priority_max	1	int	int
+/usr/include/sched.h	202329077085	sched_get_priority_min	1	int	int
+/usr/include/sched.h	204001306761	sched_rr_get_interval	2	__pid_t	struct timespec *	int
+/usr/include/sched.h	203490979250	sched_setaffinity	3	__pid_t	size_t	const cpu_set_t *	int
+/usr/include/sched.h	201396512740	sched_getaffinity	3	__pid_t	size_t	cpu_set_t *	int
+/usr/include/bits/time.h	202742784508	clock_adjtime	2	__clockid_t	struct timex *	int
+/usr/include/time.h	202866760105	clock	1		clock_t
+/usr/include/time.h	202491822928	time	1	time_t *	time_t
+/usr/include/time.h	204260405965	difftime	2	time_t	time_t	double
+/usr/include/time.h	201531304519	mktime	1	struct tm *	time_t
+/usr/include/time.h	203628868039	strftime	4	char *__restrict	size_t	const char *__restrict	const struct tm *__restrict	size_t
+/usr/include/time.h	203987582188	strptime	3	const char *__restrict	const char *__restrict	struct tm *	char *
+/usr/include/time.h	201849618658	strftime_l	5	char *__restrict	size_t	const char *__restrict	const struct tm *__restrict	__locale_t	size_t
+/usr/include/time.h	200272550330	strptime_l	4	const char *__restrict	const char *__restrict	struct tm *	__locale_t	char *
+/usr/include/time.h	201511476317	gmtime	1	const time_t *	struct tm *
+/usr/include/time.h	201346621950	localtime	1	const time_t *	struct tm *
+/usr/include/time.h	203588769308	gmtime_r	2	const time_t *__restrict	struct tm *__restrict	struct tm *
+/usr/include/time.h	200411391322	localtime_r	2	const time_t *__restrict	struct tm *__restrict	struct tm *
+/usr/include/time.h	203439558231	asctime	1	const struct tm *	char *
+/usr/include/time.h	201893068523	ctime	1	const time_t *	char *
+/usr/include/time.h	203483568068	asctime_r	2	const struct tm *__restrict	char *__restrict	char *
+/usr/include/time.h	203766868562	ctime_r	2	const time_t *__restrict	char *__restrict	char *
+/usr/include/time.h	202473568433	tzset	1		void
+/usr/include/time.h	200573234687	stime	1	const time_t *	int
+/usr/include/time.h	201373849196	timegm	1	struct tm *	time_t
+/usr/include/time.h	203465183619	timelocal	1	struct tm *	time_t
+/usr/include/time.h	201080483074	dysize	1	int	int
+/usr/include/time.h	201441049744	nanosleep	2	const struct timespec *	struct timespec *	int
+/usr/include/time.h	203028498285	clock_getres	2	clockid_t	struct timespec *	int
+/usr/include/time.h	200303054502	clock_gettime	2	clockid_t	struct timespec *	int
+/usr/include/time.h	203562445325	clock_settime	2	clockid_t	const struct timespec *	int
+/usr/include/time.h	202265850039	clock_nanosleep	4	clockid_t	int	const struct timespec *	struct timespec *	int
+/usr/include/time.h	203415470090	clock_getcpuclockid	2	pid_t	clockid_t *	int
+/usr/include/time.h	202895194317	timer_create	3	clockid_t	struct sigevent *__restrict	timer_t *__restrict	int
+/usr/include/time.h	200812361279	timer_delete	1	timer_t	int
+/usr/include/time.h	203091831598	timer_settime	4	timer_t	int	const struct itimerspec *__restrict	struct itimerspec *__restrict	int
+/usr/include/time.h	201669698832	timer_gettime	2	timer_t	struct itimerspec *	int
+/usr/include/time.h	201924061768	timer_getoverrun	1	timer_t	int
+/usr/include/time.h	203222496270	timespec_get	2	struct timespec *	int	int
+/usr/include/time.h	203628707864	getdate	1	const char *	struct tm *
+/usr/include/time.h	200278622359	getdate_r	2	const char *__restrict	struct tm *__restrict	int
+/usr/include/pthread.h	201728214245	pthread_create	4	pthread_t *__restrict	const pthread_attr_t *__restrict	void *(*)(void *)	void *__restrict	int
+/usr/include/pthread.h	200873651650	pthread_exit	1	void *	void
+/usr/include/pthread.h	201619664471	pthread_join	2	pthread_t	void **	int
+/usr/include/pthread.h	202166470582	pthread_tryjoin_np	2	pthread_t	void **	int
+/usr/include/pthread.h	200707824338	pthread_timedjoin_np	3	pthread_t	void **	const struct timespec *	int
+/usr/include/pthread.h	203241565063	pthread_detach	1	pthread_t	int
+/usr/include/pthread.h	202436199491	pthread_self	1		pthread_t
+/usr/include/pthread.h	202998388727	pthread_equal	2	pthread_t	pthread_t	int
+/usr/include/pthread.h	203368546460	pthread_attr_init	1	pthread_attr_t *	int
+/usr/include/pthread.h	202231050865	pthread_attr_destroy	1	pthread_attr_t *	int
+/usr/include/pthread.h	200821535755	pthread_attr_getdetachstate	2	const pthread_attr_t *	int *	int
+/usr/include/pthread.h	200817818678	pthread_attr_setdetachstate	2	pthread_attr_t *	int	int
+/usr/include/pthread.h	200545509144	pthread_attr_getguardsize	2	const pthread_attr_t *	size_t *	int
+/usr/include/pthread.h	200028514197	pthread_attr_setguardsize	2	pthread_attr_t *	size_t	int
+/usr/include/pthread.h	203489689455	pthread_attr_getschedparam	2	const pthread_attr_t *__restrict	struct sched_param *__restrict	int
+/usr/include/pthread.h	203984432686	pthread_attr_setschedparam	2	pthread_attr_t *__restrict	const struct sched_param *__restrict	int
+/usr/include/pthread.h	200561954366	pthread_attr_getschedpolicy	2	const pthread_attr_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	204199827926	pthread_attr_setschedpolicy	2	pthread_attr_t *	int	int
+/usr/include/pthread.h	202812858034	pthread_attr_getinheritsched	2	const pthread_attr_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	204235140634	pthread_attr_setinheritsched	2	pthread_attr_t *	int	int
+/usr/include/pthread.h	202738337158	pthread_attr_getscope	2	const pthread_attr_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	203371393832	pthread_attr_setscope	2	pthread_attr_t *	int	int
+/usr/include/pthread.h	200854883998	pthread_attr_getstackaddr	2	const pthread_attr_t *__restrict	void **__restrict	int
+/usr/include/pthread.h	200986817257	pthread_attr_setstackaddr	2	pthread_attr_t *	void *	int
+/usr/include/pthread.h	201697620251	pthread_attr_getstacksize	2	const pthread_attr_t *__restrict	size_t *__restrict	int
+/usr/include/pthread.h	202967379098	pthread_attr_setstacksize	2	pthread_attr_t *	size_t	int
+/usr/include/pthread.h	202336422533	pthread_attr_getstack	3	const pthread_attr_t *__restrict	void **__restrict	size_t *__restrict	int
+/usr/include/pthread.h	201353651450	pthread_attr_setstack	3	pthread_attr_t *	void *	size_t	int
+/usr/include/pthread.h	201656199952	pthread_attr_setaffinity_np	3	pthread_attr_t *	size_t	const cpu_set_t *	int
+/usr/include/pthread.h	201059090675	pthread_attr_getaffinity_np	3	const pthread_attr_t *	size_t	cpu_set_t *	int
+/usr/include/pthread.h	203355847570	pthread_getattr_np	2	pthread_t	pthread_attr_t *	int
+/usr/include/pthread.h	204032614295	pthread_setschedparam	3	pthread_t	int	const struct sched_param *	int
+/usr/include/pthread.h	204223938041	pthread_getschedparam	3	pthread_t	int *__restrict	struct sched_param *__restrict	int
+/usr/include/pthread.h	203263642364	pthread_setschedprio	2	pthread_t	int	int
+/usr/include/pthread.h	202872024592	pthread_getname_np	3	pthread_t	char *	size_t	int
+/usr/include/pthread.h	201039064272	pthread_setname_np	2	pthread_t	const char *	int
+/usr/include/pthread.h	204199984928	pthread_getconcurrency	1		int
+/usr/include/pthread.h	200811407452	pthread_setconcurrency	1	int	int
+/usr/include/pthread.h	203042812264	pthread_yield	1		int
+/usr/include/pthread.h	202610637837	pthread_setaffinity_np	3	pthread_t	size_t	const cpu_set_t *	int
+/usr/include/pthread.h	200639093068	pthread_getaffinity_np	3	pthread_t	size_t	cpu_set_t *	int
+/usr/include/pthread.h	203738858437	pthread_once	2	pthread_once_t *	void (*)()	int
+/usr/include/pthread.h	200995054492	pthread_setcancelstate	2	int	int *	int
+/usr/include/pthread.h	200017877261	pthread_setcanceltype	2	int	int *	int
+/usr/include/pthread.h	200067609439	pthread_cancel	1	pthread_t	int
+/usr/include/pthread.h	201785953514	pthread_testcancel	1		void
+/usr/include/pthread.h	202157221508	_ZN23__pthread_cleanup_class9__setdoitEi	1	int	void
+/usr/include/pthread.h	201789348467	_ZN23__pthread_cleanup_class7__deferEv	1		void
+/usr/include/pthread.h	200105282456	_ZNK23__pthread_cleanup_class9__restoreEv	1		void
+/usr/include/pthread.h	202269031837	__sigsetjmp	2	struct __jmp_buf_tag *	int	int
+/usr/include/pthread.h	201662595061	pthread_mutex_init	2	pthread_mutex_t *	const pthread_mutexattr_t *	int
+/usr/include/pthread.h	201056702701	pthread_mutex_destroy	1	pthread_mutex_t *	int
+/usr/include/pthread.h	201426773620	pthread_mutex_trylock	1	pthread_mutex_t *	int
+/usr/include/pthread.h	201053664219	pthread_mutex_lock	1	pthread_mutex_t *	int
+/usr/include/pthread.h	202734475802	pthread_mutex_timedlock	2	pthread_mutex_t *__restrict	const struct timespec *__restrict	int
+/usr/include/pthread.h	203540800162	pthread_mutex_unlock	1	pthread_mutex_t *	int
+/usr/include/pthread.h	201574832478	pthread_mutex_getprioceiling	2	const pthread_mutex_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	203924536548	pthread_mutex_setprioceiling	3	pthread_mutex_t *__restrict	int	int *__restrict	int
+/usr/include/pthread.h	202694719015	pthread_mutex_consistent	1	pthread_mutex_t *	int
+/usr/include/pthread.h	200162753666	pthread_mutex_consistent_np	1	pthread_mutex_t *	int
+/usr/include/pthread.h	200135215095	pthread_mutexattr_init	1	pthread_mutexattr_t *	int
+/usr/include/pthread.h	201995630707	pthread_mutexattr_destroy	1	pthread_mutexattr_t *	int
+/usr/include/pthread.h	203771398103	pthread_mutexattr_getpshared	2	const pthread_mutexattr_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	201015943803	pthread_mutexattr_setpshared	2	pthread_mutexattr_t *	int	int
+/usr/include/pthread.h	200071720427	pthread_mutexattr_gettype	2	const pthread_mutexattr_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	201872215204	pthread_mutexattr_settype	2	pthread_mutexattr_t *	int	int
+/usr/include/pthread.h	202042176236	pthread_mutexattr_getprotocol	2	const pthread_mutexattr_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	202804793167	pthread_mutexattr_setprotocol	2	pthread_mutexattr_t *	int	int
+/usr/include/pthread.h	200425276079	pthread_mutexattr_getprioceiling	2	const pthread_mutexattr_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	200190829884	pthread_mutexattr_setprioceiling	2	pthread_mutexattr_t *	int	int
+/usr/include/pthread.h	200959579620	pthread_mutexattr_getrobust	2	const pthread_mutexattr_t *	int *	int
+/usr/include/pthread.h	200173573069	pthread_mutexattr_getrobust_np	2	const pthread_mutexattr_t *	int *	int
+/usr/include/pthread.h	203247577467	pthread_mutexattr_setrobust	2	pthread_mutexattr_t *	int	int
+/usr/include/pthread.h	200693671103	pthread_mutexattr_setrobust_np	2	pthread_mutexattr_t *	int	int
+/usr/include/pthread.h	200370338105	pthread_rwlock_init	2	pthread_rwlock_t *__restrict	const pthread_rwlockattr_t *__restrict	int
+/usr/include/pthread.h	201391737273	pthread_rwlock_destroy	1	pthread_rwlock_t *	int
+/usr/include/pthread.h	203117336883	pthread_rwlock_rdlock	1	pthread_rwlock_t *	int
+/usr/include/pthread.h	200545332377	pthread_rwlock_tryrdlock	1	pthread_rwlock_t *	int
+/usr/include/pthread.h	203773289365	pthread_rwlock_timedrdlock	2	pthread_rwlock_t *__restrict	const struct timespec *__restrict	int
+/usr/include/pthread.h	201371678550	pthread_rwlock_wrlock	1	pthread_rwlock_t *	int
+/usr/include/pthread.h	202139707187	pthread_rwlock_trywrlock	1	pthread_rwlock_t *	int
+/usr/include/pthread.h	202795967455	pthread_rwlock_timedwrlock	2	pthread_rwlock_t *__restrict	const struct timespec *__restrict	int
+/usr/include/pthread.h	201142635964	pthread_rwlock_unlock	1	pthread_rwlock_t *	int
+/usr/include/pthread.h	201041776068	pthread_rwlockattr_init	1	pthread_rwlockattr_t *	int
+/usr/include/pthread.h	204065388328	pthread_rwlockattr_destroy	1	pthread_rwlockattr_t *	int
+/usr/include/pthread.h	201113424502	pthread_rwlockattr_getpshared	2	const pthread_rwlockattr_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	202400982887	pthread_rwlockattr_setpshared	2	pthread_rwlockattr_t *	int	int
+/usr/include/pthread.h	200534710254	pthread_rwlockattr_getkind_np	2	const pthread_rwlockattr_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	202069967968	pthread_rwlockattr_setkind_np	2	pthread_rwlockattr_t *	int	int
+/usr/include/pthread.h	203538823125	pthread_cond_init	2	pthread_cond_t *__restrict	const pthread_condattr_t *__restrict	int
+/usr/include/pthread.h	201716798426	pthread_cond_destroy	1	pthread_cond_t *	int
+/usr/include/pthread.h	203023730567	pthread_cond_signal	1	pthread_cond_t *	int
+/usr/include/pthread.h	204223263438	pthread_cond_broadcast	1	pthread_cond_t *	int
+/usr/include/pthread.h	200332197751	pthread_cond_wait	2	pthread_cond_t *__restrict	pthread_mutex_t *__restrict	int
+/usr/include/pthread.h	201028242099	pthread_cond_timedwait	3	pthread_cond_t *__restrict	pthread_mutex_t *__restrict	const struct timespec *__restrict	int
+/usr/include/pthread.h	202393986832	pthread_condattr_init	1	pthread_condattr_t *	int
+/usr/include/pthread.h	203882423733	pthread_condattr_destroy	1	pthread_condattr_t *	int
+/usr/include/pthread.h	200185148431	pthread_condattr_getpshared	2	const pthread_condattr_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	200574197758	pthread_condattr_setpshared	2	pthread_condattr_t *	int	int
+/usr/include/pthread.h	200964039602	pthread_condattr_getclock	2	const pthread_condattr_t *__restrict	__clockid_t *__restrict	int
+/usr/include/pthread.h	203464825546	pthread_condattr_setclock	2	pthread_condattr_t *	__clockid_t	int
+/usr/include/pthread.h	202426114138	pthread_spin_init	2	pthread_spinlock_t *	int	int
+/usr/include/pthread.h	204125329700	pthread_spin_destroy	1	pthread_spinlock_t *	int
+/usr/include/pthread.h	201278585200	pthread_spin_lock	1	pthread_spinlock_t *	int
+/usr/include/pthread.h	200806322561	pthread_spin_trylock	1	pthread_spinlock_t *	int
+/usr/include/pthread.h	201595937361	pthread_spin_unlock	1	pthread_spinlock_t *	int
+/usr/include/pthread.h	200486073726	pthread_barrier_init	3	pthread_barrier_t *__restrict	const pthread_barrierattr_t *__restrict	unsigned int	int
+/usr/include/pthread.h	203156430842	pthread_barrier_destroy	1	pthread_barrier_t *	int
+/usr/include/pthread.h	200513200049	pthread_barrier_wait	1	pthread_barrier_t *	int
+/usr/include/pthread.h	202964936456	pthread_barrierattr_init	1	pthread_barrierattr_t *	int
+/usr/include/pthread.h	202327065357	pthread_barrierattr_destroy	1	pthread_barrierattr_t *	int
+/usr/include/pthread.h	204257044700	pthread_barrierattr_getpshared	2	const pthread_barrierattr_t *__restrict	int *__restrict	int
+/usr/include/pthread.h	203747734028	pthread_barrierattr_setpshared	2	pthread_barrierattr_t *	int	int
+/usr/include/pthread.h	204043246347	pthread_key_create	2	pthread_key_t *	void (*)(void *)	int
+/usr/include/pthread.h	200476243928	pthread_key_delete	1	pthread_key_t	int
+/usr/include/pthread.h	200128047060	pthread_getspecific	1	pthread_key_t	void *
+/usr/include/pthread.h	203858282610	pthread_setspecific	2	pthread_key_t	const void *	int
+/usr/include/pthread.h	202316579550	pthread_getcpuclockid	2	pthread_t	__clockid_t *	int
+/usr/include/pthread.h	202185340623	pthread_atfork	3	void (*)()	void (*)()	void (*)()	int
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	202868281528	_Z7trythisPv	1	void *	void *

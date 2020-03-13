@@ -1,16 +1,17 @@
 # FILENAME	LINENUM	FUNCNAME	CALLNODEID	CALLEXPR
-/usr/local/include/bits/std_abs.h	56	__builtin_labs	201527579901	__builtin_labs ( __i )
-/usr/local/include/bits/std_abs.h	61	__builtin_llabs	203380145216	__builtin_llabs ( __x )
-/usr/local/include/bits/std_abs.h	71	__builtin_fabs	201476868179	__builtin_fabs ( __x )
-/usr/local/include/bits/std_abs.h	75	__builtin_fabsf	200832580760	__builtin_fabsf ( __x )
-/usr/local/include/bits/std_abs.h	79	__builtin_fabsl	204267596962	__builtin_fabsl ( __x )
-/usr/local/include/cstdlib	177	ldiv	203472827586	ldiv ( __i , __j )
-/usr/local/include/cstdlib	214	_ZN7lldiv_tC1Ev	200707097374	__q
-/usr/include/pthread.h	555		202496981173	__cancel_routine ( __cancel_arg )
-/usr/include/pthread.h	557	pthread_setcanceltype	200120091715	pthread_setcanceltype ( PTHREAD_CANCEL_DEFERRED , & __cancel_type )
-/usr/include/pthread.h	559	pthread_setcanceltype	203683773788	pthread_setcanceltype ( __cancel_type , 0 )
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	6	_ZN15pthread_mutex_tC1Ev	203555834571	lock
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	11	pthread_mutex_lock	201462322019	pthread_mutex_lock ( & lock )
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	13	printf	201447674666	printf ( "\n Job %d has started\n" , counter )
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	15	printf	201884611868	printf ( "\n Job %d has finished\n" , counter )
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	16	pthread_mutex_unlock	203463060963	pthread_mutex_unlock ( & lock )
+/usr/local/include/bits/std_abs.h	56	__builtin_labs	202804515628	__builtin_labs ( __i )
+/usr/local/include/bits/std_abs.h	61	__builtin_llabs	202461520065	__builtin_llabs ( __x )
+/usr/local/include/bits/std_abs.h	71	__builtin_fabs	200671177306	__builtin_fabs ( __x )
+/usr/local/include/bits/std_abs.h	75	__builtin_fabsf	202212320121	__builtin_fabsf ( __x )
+/usr/local/include/bits/std_abs.h	79	__builtin_fabsl	201308620670	__builtin_fabsl ( __x )
+/usr/local/include/cstdlib	177	ldiv	204234681004	ldiv ( __i , __j )
+/usr/local/include/cstdlib	214	_ZN7lldiv_tC1Ev	201097551338	__q
+/usr/include/pthread.h	555		202522343971	__cancel_routine ( __cancel_arg )
+/usr/include/pthread.h	557	pthread_setcanceltype	203222444797	pthread_setcanceltype ( PTHREAD_CANCEL_DEFERRED , & __cancel_type )
+/usr/include/pthread.h	559	pthread_setcanceltype	200073596635	pthread_setcanceltype ( __cancel_type , 0 )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	6	_ZN15pthread_mutex_tC1Ev	200897327591	lock
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	10	printf	202439010029	printf ( "\n Came here with arg = %d\n" , * ( ( int * ) arg ) )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	12	pthread_mutex_lock	201283292591	pthread_mutex_lock ( & lock )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	14	printf	203089726240	printf ( "\n Job %d has started\n" , counter )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	16	printf	201567443402	printf ( "\n Job %d has finished\n" , counter )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	17	pthread_mutex_unlock	201620325997	pthread_mutex_unlock ( & lock )
