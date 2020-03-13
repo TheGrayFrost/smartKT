@@ -79,7 +79,7 @@ def process_para(para, ctxt):
 	return entry
 
 # read the event trace
-with open(filename, 'r') as inf, open('dynamic.xml', 'w') as opf:
+with open(filename, 'r') as inf, open('dynamic.xml', 'a') as opf:
 	header = inf.readline()
 	hxml = to_xml(header)
 	opf.write ('<'+hxml.tag+' '+' '.join([u+'="'+hxml.attrib[u]+'"' for u in hxml.attrib])+'>\n')

@@ -65,7 +65,7 @@ def prune(node, parentNode):
         if (node.attrib['file'], node.attrib['range.start'], node.attrib['range.end']) in  visited:
             # We've seen this node. So just update mappedIDs recursively and remove then current node 
             mappedID[node.attrib['id']] = visited[(node.attrib['file'], node.attrib['range.start'], node.attrib['range.end'])]['id']
-            for child in node.getchildren():
+            for child in list(node.iter()):
                 prune(child, node)
             parentNode.remove(node)
     else:
@@ -77,7 +77,7 @@ def prune(node, parentNode):
         if 'range.start' in node.attrib and 'range.end' in node.attrib and 'file' in node.attrib:
             mappedID[node.attrib['id']] = node.attrib['id']
             visited[(node.attrib['file'], node.attrib['range.start'], node.attrib['range.end'])] = True
-        for child in node.getchildren():
+        for child in list(node.iter()):
             prune(child, node)
 
 def combine_all_clang(depmap):
@@ -205,14 +205,14 @@ def generate_static_info():
         exit()
     combine_all_clang(orderls)
 
-def generate_dynamic_info(path, test, inputNum, runNum):
+def generate_dynamic_info(path, test, runNum):
     # Add dynamic_information to the combined static XML
     global project_name
     print('Starting Dynamic!')
     if test is None:
-        os.system('./pin.sh {} {}'.format(executable, foutfolder))
+        os.system(f'./pin.sh {executable} {foutfolder} {runNum}')
     else:
-        os.system('./pin.sh {} {} {}'.format(executable, foutfolder, test))
+        os.system(f'./pin.sh {executable} {foutfolder} {runNum} {test}')
     print('Dynamic Done!')
     return 'dynamic.xml'
 
@@ -288,16 +288,13 @@ for exe in runs:
     dependencies = pickle.load(open(os.path.join(outfolder, 'dependencies.p'), 'rb'))
 
     generate_static_info()
-    inputNum  = 0
     for ti in runs[exe]:
         test_input = os.path.abspath(ti)
-        for i in range(runs[exe][ti]):
-            if CALLDYN:
-                if len(ti) > 0:
-                    generate_dynamic_info(executable, test_input, inputNum, i)
-                else:
-                    generate_dynamic_info(executable, None, inputNum, i)
-        inputNum += 1
+        if CALLDYN:
+            if len(ti) > 0:
+                generate_dynamic_info(executable, test_input, runs[exe][ti])
+            else:
+                generate_dynamic_info(executable, None, runs[exe][ti])
 if CALLCOMM:
     comments_file = generate_comments_info(project_name, vocab_file, problem_domain_file)
 
