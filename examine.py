@@ -40,7 +40,7 @@ FINAL_FILE = 'final'
 STATIC_EXTENSION = '_static.xml'
 DYNAMIC_EXTENSION = '_dynamic.xml'
 
-CALLDYN = True
+CALLDYN = False
 CALLCOMM = False
 CALLVCS = False
 
@@ -260,13 +260,14 @@ for exe in runs:
 
     generate_static_info()
 
-    for ti in runs[exe]:
+    for idx, ti in enumerate(runs[exe]):
         test_input = os.path.abspath(ti)
         if CALLDYN:
             if len(ti) > 0:
                 generate_dynamic_info(executable, test_input, runs[exe][ti])
             else:
                 generate_dynamic_info(executable, None, runs[exe][ti])
+            os.system("mv " + os.path.join(foutfolder, "final_dynamic.xml") + " " + os.path.join(foutfolder, "inp"+idx+".xml"))
 
 if CALLCOMM:
     comments_file = generate_comments_info(project_name, vocab_file, problem_domain_file)
