@@ -1,5 +1,5 @@
 {
-    "projects/libpng/build/pngtest": {
-    	"projects/libpng/pngtest.png" : 3 
+    "/data/user-home/srijoni/PIN_Tests/smartKT/projects/libpng/build/pngtest": {
+    	"/data/user-home/srijoni/PIN_Tests/smartKT/projects/libpng/pngtest.png pngout.png" : 3
     }
 }

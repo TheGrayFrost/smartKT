@@ -1092,10 +1092,8 @@ int main(int argc, char * argv[])
 	PIN_InitSymbols();
 
 	if (DEBUG)
-	{
 		for (int i = 0; i < argc; ++i)
 			std::cout << i << " " << argv[i] << "\n";
-	}
 
 	// get the input, runid, outdump
 	std::string inp(argv[5]);

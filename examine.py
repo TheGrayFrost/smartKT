@@ -185,10 +185,11 @@ def generate_dynamic_info(path, test, runNum):
     # Add dynamic_information to the combined static XML
     global project_name
     print('Starting Dynamic!')
+    # print (test)
     if test is None:
         os.system(f'./pin.sh {executable} {foutfolder} {runNum}')
     else:
-        os.system(f'./pin.sh {executable} {foutfolder} {runNum} {test}')
+        os.system(f'./pin.sh {executable} {foutfolder} {runNum} "{test}"')
     print('Dynamic Done!')
     return 'dynamic.xml'
 
@@ -262,14 +263,18 @@ for exe in runs:
                     os.path.join(origpath, 'build'), os.path.join(outfolder, 'dependencies.p')]))
     dependencies = pickle.load(open(os.path.join(outfolder, 'dependencies.p'), 'rb'))
 
+
     # generate_static_info()
-    for ti in runs[exe]:
-        test_input = os.path.abspath(ti)
+
+    for idx, ti in enumerate(runs[exe]):
+        test_input = ti
         if CALLDYN:
             if len(ti) > 0:
                 generate_dynamic_info(executable, test_input, runs[exe][ti])
             else:
                 generate_dynamic_info(executable, None, runs[exe][ti])
+            os.system("mv " + os.path.join(foutfolder, "final_dynamic.xml") + " " + os.path.join(foutfolder, "inp"+str(idx)+".xml"))
+
 if CALLCOMM:
     comments_file = generate_comments_info(project_name, vocab_file, problem_domain_file)
 

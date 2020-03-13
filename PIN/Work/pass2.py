@@ -12,6 +12,7 @@ DEBUG = False
 
 def to_xml(line):
 	t = line.split()
+	
 	i = 0
 	entry = Element(t[i])	# first word is event type
 	if t[0] == 'CALL':
@@ -27,6 +28,13 @@ def to_xml(line):
 		print (' '.join(t))
 	i += 1
 	while i < len(t):
+		if t[i] == 'INP':
+			j = i+1
+			ipend = t.index('RUNID')
+			ipstr = ' '.join(t[i+1:ipend])
+			for myloop in range(i+1,ipend):
+				t.pop(i+1)
+			t.insert (i+1, ipstr)
 		entry.attrib[t[i]] = t[i+1]	 # all other events come in key:value pairs
 		if t[i] == 'SYNCS' and t[i+1] != 'ASYNC':	# synchronization locks are kept as children of events
 			k = int(t[i+1])							# get number of locks
