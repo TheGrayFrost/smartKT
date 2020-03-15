@@ -453,6 +453,13 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
     return CXChildVisit_Continue;
   }
 
+
+  // Remove system headers' location
+  CXSourceLocation location = clang_getCursorLocation( cursor );
+  if ( clang_Location_isInSystemHeader(location) ) {
+  	return CXChildVisit_Continue;
+  }
+
   CXCursorKind cursorKind = clang_getCursorKind(cursor);
   CXString kindName = clang_getCursorKindSpelling(cursorKind);
   std::string xmlNodeName(clang_getCString(kindName));
