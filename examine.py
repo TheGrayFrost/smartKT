@@ -16,7 +16,7 @@ from xml.etree import ElementTree as ET
 from xml.dom import minidom
 from collections import defaultdict
 import json
-
+import parsers.imp_ddx as ddx
 import parsers.vcs as vcs
 
 # For debug, set true
@@ -49,7 +49,7 @@ OUTPUTS_FOLDER = 'outputs'
 # DOMAINS TO RUN
 CALLSTATIC = True
 CALLDYN = True
-CALLCOMM = False
+CALLCOMM = True
 CALLVCS = False
 
 
@@ -197,11 +197,11 @@ def generate_dynamic_info(path, test, runNum):
 def generate_comments_info(project_name, vocab_file, problem_domain_file, output_file):
     # Return relative path (wrt to this file) to the comments' XML output
     print('Starting Comments!')
-    os.system('python2 '+ os.path.join(COMMENTS_FOLDER, "GenerateCommentsXMLForAFolder.py") + \
+    os.system('python3 '+ os.path.join(COMMENTS_FOLDER, "GenerateCommentsXMLForAFolder.py") + \
         " " + os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name)) + " " + vocab_file + \
          " " + problem_domain_file + " " + project_name)
 
-    os.system('python2 ' + os.path.join(COMMENTS_FOLDER, "MergeAllCommentsXML.py") + " " + \
+    os.system('python3 ' + os.path.join(COMMENTS_FOLDER, "MergeAllCommentsXML.py") + " " + \
         os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name)) + " " + output_file)
     print('Comments Done!')
 
@@ -246,7 +246,7 @@ for exe in runs:
     execstrip = executable[executable.rfind('/')+1:]
     origpath = executable[:executable.rfind('build/')-1]
     project_name = origpath[origpath.rfind('/')+1:]
-    outfolder = os.path.abspath(os.path.join(OUTF, project_name))
+    outfolder = os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name))
     foutfolder = os.path.join(outfolder,'exe_'+execstrip)
     os.system('mkdir -p ' + foutfolder)
 
@@ -271,11 +271,11 @@ for exe in runs:
 if CALLCOMM:
     # comments_config
     cc = jsonInfo['comments']
-    generate_comments_info(cc['project_name'], cc['vocab_file'], cc['problem_domain_file'],\
-     os.path.join(outfolder, FINAL_FILE+COMMENTS_EXTENSION)
+    generate_comments_info(cc['project_name'], cc['vocab_loc'], \
+    cc['problem_domain_loc'], os.path.join(outfolder, FINAL_FILE+COMMENTS_EXTENSION))
 
 if CALLVCS:
-    #vcs_config
+    # vcs_config
     if jsonInfo['vcs']['fresh_fetch']:
         vcs.generate_vcs_info(jsonInfo['vcs'], os.path.join(outfolder, FINAL_FILE+VCS_EXTENSION))
 

@@ -103,7 +103,7 @@ def parseXML(xmlfname, cfname, type_tag):
 	data = []
 	for each in root.findall(".//" + type_tag):
 		dict_now = each.attrib
-		if dict_now["spelling"] is None or dict_now["spelling"] == 'None':
+		if dict_now is None or dict_now.get("spelling", 'None') == 'None':
 			continue
 		try:
 			location = dict_now["location"]
@@ -111,7 +111,7 @@ def parseXML(xmlfname, cfname, type_tag):
 				continue
 			loc = location[:location.find('[')]
 			if loc.endswith(cfname):
-                		id = dict_now["id"]
+				id = dict_now["id"]
 				symbol_now = dict_now["spelling"]
 				type_now = dict_now["type"]
 				start_line = int(location[location.find('[') + 1 : location.find(']')])
@@ -127,7 +127,7 @@ def parseXML(xmlfname, cfname, type_tag):
 
 if __name__ == '__main__':
 	if len(sys.argv) != 5:
-		print "Give four arguments, src location, clang file, program domain location, problem domain location"
+		print("Give four arguments, src location, clang file, program domain location, problem domain location")
 		exit(-1)
 
 	cfname = sys.argv[1]
@@ -142,7 +142,7 @@ if __name__ == '__main__':
 		output.extend(data)
 
 	(file, ext) = os.path.splitext(cfname)
-	f = open(file+"_identifier_commentsXML.csv", 'w')
+	f = open(file+"_identifiers_commentsXML.csv", 'w')
 	writer = csv.writer(f, delimiter=',', quoting=csv.QUOTE_NONNUMERIC)
 	writer.writerow(["Symbol", "Type", "Start line", "End line", "Data type", "Identifier tokens", "Program Domain matches", "Problem Domain matches", "Symbol id"])
 	for each in output:

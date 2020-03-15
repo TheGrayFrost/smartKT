@@ -58,7 +58,7 @@ def getComments(filename):
 
 def main():
 	if len(sys.argv) != 2:
-		print "Give one argument which is the location of the source code"
+		print("Give one argument which is the location of the source code")
 		exit(-1)
 	fname = sys.argv[1]
 	comments = getComments(fname)

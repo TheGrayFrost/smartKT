@@ -25,11 +25,10 @@ def MergeAll(folder_name):
             file_path = comment.attrib["src_file_location"]
             if file_path[:2] == '..':
                 file_path = file_path[3:]
-            comment.set('src_file_location',file_path)
-	    comment.set('id', str(COMMENT_ID))
-	    COMMENT_ID += 1
-        ROOT.append(comment)
-
+            comment.set('src_file_location', file_path)
+            comment.set('id', str(COMMENT_ID))
+            COMMENT_ID += 1
+            ROOT.append(comment)
 
 if len(sys.argv) != 3:
     print("Give 2 arguments - ProjectPath, Output XML FILE")
