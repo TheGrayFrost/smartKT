@@ -39,6 +39,7 @@ FINAL_FILE = 'final'
 STATIC_EXTENSION = '_static.xml'
 DYNAMIC_EXTENSION = '_dynamic.xml'
 COMMENTS_EXTENSION = "_comments.xml"
+VCS_EXTENSION = "_vcs.xml"
 
 # FOLDERS
 COMMENTS_FOLDER = 'parsers/comments'
@@ -193,7 +194,7 @@ def generate_dynamic_info(path, test, runNum):
     print('Dynamic Done!')
     return 'dynamic.xml'
 
-def generate_comments_info(project_name, vocab_file, problem_domain_file):
+def generate_comments_info(project_name, vocab_file, problem_domain_file, output_file):
     # Return relative path (wrt to this file) to the comments' XML output
     print('Starting Comments!')
     os.system('python2 '+ os.path.join(COMMENTS_FOLDER, "GenerateCommentsXMLForAFolder.py") + \
@@ -201,18 +202,8 @@ def generate_comments_info(project_name, vocab_file, problem_domain_file):
          " " + problem_domain_file + " " + project_name)
 
     os.system('python2 ' + os.path.join(COMMENTS_FOLDER, "MergeAllCommentsXML.py") + " " + \
-        os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name)) + " " + \
-        os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name, FINAL_FILE, COMMENTS_EXTENSION)))
-
+        os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name)) + " " + output_file)
     print('Comments Done!')
-
-    return os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name, FINAL_FILE, COMMENTS_EXTENSION))
-
-def generate_vcs_info(project_name):
-    print('Starting VCS!')
-    os.system('python vcs.py')
-    print('VCS Done!')
-    return 'vcs.xml'
 
 def start_website():
     # Start the user inerface to query
@@ -280,12 +271,13 @@ for exe in runs:
 if CALLCOMM:
     # comments_config
     cc = jsonInfo['comments']
-    comments_file = generate_comments_info(cc['project_name'], cc['vocab_file'], cc['problem_domain_file'])
+    generate_comments_info(cc['project_name'], cc['vocab_file'], cc['problem_domain_file'],\
+     os.path.join(outfolder, FINAL_FILE+COMMENTS_EXTENSION)
 
 if CALLVCS:
     #vcs_config
     if jsonInfo['vcs']['fresh_fetch']:
-        vcs_file = vcs.generate_vcs_info(jsonInfo['vcs'])
+        vcs.generate_vcs_info(jsonInfo['vcs'], os.path.join(outfolder, FINAL_FILE+VCS_EXTENSION))
 
 # collect_results(project_name, executable)
 
