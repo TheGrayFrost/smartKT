@@ -1,5 +1,18 @@
 {
-    "/data/user-home/srijoni/PIN_Tests/smartKT/projects/libpng/build/pngtest": {
-    	"/data/user-home/srijoni/PIN_Tests/smartKT/projects/libpng/pngtest.png pngout.png" : 3
+    "runs": {
+    	"/data/user-home/srijoni/PIN_Tests/smartKT/projects/libpng/build/pngtest": {
+            "/data/user-home/srijoni/PIN_Tests/smartKT/projects/libpng/pngtest.png" : 3 
+    },
+    "comments": {
+        "project_name": "libpng",
+        "vocab": "/data/user-home/srijoni/PIN_Tests/smartKT/comments/vocab",
+        "problem_domain": "/data/user-home/srijoni/PIN_Tests/smartKT/libpng/problem_domain"
+    },
+    "vcs": {
+        "username": "spandankumarsahu",
+        "oauth": "this_is_fake_oauth_using_real_one_in_server",
+        "repo": "glennrp/libpng",
+        "project_name": "libpng",
+        "fresh_fetch": true
     }
 }

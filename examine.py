@@ -2,8 +2,7 @@
 
 # Before you can use, specify the details in config.txt file
 # To use:
-# python examine.py <exec_json_file> <clean/retain> {<vocab> <prob_dom>} 
-
+# python examine.py <json_file>
 
 '''
 Dynamic information is available for executables only. So we combine all static
@@ -17,10 +16,10 @@ from xml.etree import ElementTree as ET
 from xml.dom import minidom
 from collections import defaultdict
 import json
-
-
 import parsers.imp_ddx as ddx
+from parsers.comments import GenerateCommentsXMLForAFolder as vcs
 
+# For debug, set true
 DEBUG = False
 
 # tools
@@ -39,18 +38,19 @@ TEMP_EXTENSION = '.temp.xml'
 FINAL_FILE = 'final'
 STATIC_EXTENSION = '_static.xml'
 DYNAMIC_EXTENSION = '_dynamic.xml'
+COMMENTS_EXTENSION = "_comments.xml"
 
-OUTF = 'outputs'
-if (len(sys.argv) > 2):
-    OUTF = sys.argv[2]
+# FOLDERS
+COMMENTS_FOLDER = 'comments'
+PROJECTS_FOLDER = 'projects'
+OUTPUTS_FOLDER = 'outputs'
 
+# DOMAINS TO RUN
+CALLSTATIC = True
 CALLDYN = True
 CALLCOMM = False
 CALLVCS = False
 
-if CALLCOMM:
-    vocab_file = sys.argv[3]
-    problem_domain_file = sys.argv[4]
 
 # Rewriting to be able to run multiple tests simultaneously
 executable, test_input, execstrip = None, None, None
@@ -196,18 +196,15 @@ def generate_dynamic_info(path, test, runNum):
 def generate_comments_info(project_name, vocab_file, problem_domain_file):
     # Return relative path (wrt to this file) to the comments' XML output
     print('Starting Comments!')
-    if not os.path.exists('comments/temp'):
-        os.mkdir('comments/temp')
-    if not os.path.exists('comments/temp/'+project_name):
-        os.mkdir('comments/temp/'+project_name)
-    os.system('python2 comments/GenerateCommentsXMLForAFolder.py /workspace/projects/ ' + project_name + 
-        ' /workspace/' + project_name + ' ' + vocab_file + ' ' + problem_domain_file+ ' ' + 
-        '/workspace/comments/temp/'+project_name)
+    os.system('python2 '+ os.path.join(COMMENTS_FOLDER, "GenerateCommentsXMLForAFolder.py") + \
+        " " + os.path.abspath(PROJECTS_FOLDER) + " " + project_name + " " +
+        os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name)) + " " + 
+        vocab_file + " " + problem_domain_file + " " + os.path.abspath())
     os.system('python2 comments/MergeAllCommentsXML.py ' + '/workspace/comments/temp/' + project_name + 
         ' /workspace/' + project_name + ' ' + '/workspace/projects/'+ project_name + 
         ' /workspace/comments.xml')
     print('Comments Done!')
-    return 'comments.xml'
+    return os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name, FINAL_FILE, COMMENTS_EXTENSION))
 
 def generate_vcs_info(project_name):
     print('Starting VCS!')
@@ -248,8 +245,9 @@ def collect_results(project_name, executable):
     print ('Information collected in: ', colpath)
 
 
-runs = json.loads(open(sys.argv[1], "r").read())
+jsonInfo = json.loads(open(sys.argv[1], "r").read())
 
+runs = jsonInfo['runs']
 for exe in runs:
     executable = os.path.abspath(exe)
     execstrip = executable[executable.rfind('/')+1:]
@@ -258,17 +256,19 @@ for exe in runs:
     outfolder = os.path.abspath(os.path.join(OUTF, project_name))
     foutfolder = os.path.join(outfolder,'exe_'+execstrip)
     os.system('mkdir -p ' + foutfolder)
+
     # Parse dependencies
     os.system(' '.join(['parsers/' + PROJPARSER, os.path.join(outfolder, 'make_log.txt'),
                     os.path.join(origpath, 'build'), os.path.join(outfolder, 'dependencies.p')]))
     dependencies = pickle.load(open(os.path.join(outfolder, 'dependencies.p'), 'rb'))
 
+    if CALLSTATIC:
+        generate_static_info()
 
-    # generate_static_info()
-
-    for idx, ti in enumerate(runs[exe]):
-        test_input = ti
-        if CALLDYN:
+    # Generate dynamic data
+    if CALLDYN:
+        for idx, ti in enumerate(runs[exe]):
+            test_input = os.path.abspath(ti)
             if len(ti) > 0:
                 generate_dynamic_info(executable, test_input, runs[exe][ti])
             else:
@@ -276,12 +276,14 @@ for exe in runs:
             os.system("mv " + os.path.join(foutfolder, "final_dynamic.xml") + " " + os.path.join(foutfolder, "inp"+str(idx)+".xml"))
 
 if CALLCOMM:
-    comments_file = generate_comments_info(project_name, vocab_file, problem_domain_file)
+    # comments_config
+    cc = jsonInfo['comments']
+    comments_file = generate_comments_info(cc['project_name'], cc['vocab_file'], cc['problem_domain_file'])
 
-# if CALLVCS:
-#     isClean = (sys.argv[1] == "clean")
-#     if isClean:
-#         vcs_file = generate_vcs_info(project_name)
+if CALLVCS:
+    #vcs_config
+    if jsonInfo['vcs']['fresh_fetch']:
+        vcs_file = vcs.generate_vcs_info(jsonInfo['vcs'])
 
 # collect_results(project_name, executable)
 
