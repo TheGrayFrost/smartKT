@@ -2,6 +2,7 @@
     "runs": {
     	"/data/user-home/srijoni/PIN_Tests/smartKT/projects/libpng/build/pngtest": {
             "/data/user-home/srijoni/PIN_Tests/smartKT/projects/libpng/pngtest.png" : 3 
+        }
     },
     "comments": {
         "project_name": "libpng",
