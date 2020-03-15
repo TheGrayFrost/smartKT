@@ -47,8 +47,8 @@ PROJECTS_FOLDER = 'projects'
 OUTPUTS_FOLDER = 'outputs'
 
 # DOMAINS TO RUN
-CALLSTATIC = False
-CALLDYN = False
+CALLSTATIC = True
+CALLDYN = True
 CALLCOMM = True
 CALLVCS = False
 
