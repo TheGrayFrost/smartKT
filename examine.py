@@ -16,8 +16,8 @@ from xml.etree import ElementTree as ET
 from xml.dom import minidom
 from collections import defaultdict
 import json
-import parsers.imp_ddx as ddx
-from parsers.comments import GenerateCommentsXMLForAFolder as vcs
+
+import parsers.vcs as vcs
 
 # For debug, set true
 DEBUG = False
@@ -41,7 +41,7 @@ DYNAMIC_EXTENSION = '_dynamic.xml'
 COMMENTS_EXTENSION = "_comments.xml"
 
 # FOLDERS
-COMMENTS_FOLDER = 'comments'
+COMMENTS_FOLDER = 'parsers/comments'
 PROJECTS_FOLDER = 'projects'
 OUTPUTS_FOLDER = 'outputs'
 
@@ -197,9 +197,9 @@ def generate_comments_info(project_name, vocab_file, problem_domain_file):
     # Return relative path (wrt to this file) to the comments' XML output
     print('Starting Comments!')
     os.system('python2 '+ os.path.join(COMMENTS_FOLDER, "GenerateCommentsXMLForAFolder.py") + \
-        " " + os.path.abspath(PROJECTS_FOLDER) + " " + project_name + " " +
-        os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name)) + " " + 
-        vocab_file + " " + problem_domain_file + " " + os.path.abspath())
+        " " + os.path.abspath(os.path.join(PROJECTS_FOLDER, project_name)) + " " + vocab_file + \
+         " " + problem_domain_file + " " + project_name)
+
     os.system('python2 comments/MergeAllCommentsXML.py ' + '/workspace/comments/temp/' + project_name + 
         ' /workspace/' + project_name + ' ' + '/workspace/projects/'+ project_name + 
         ' /workspace/comments.xml')
