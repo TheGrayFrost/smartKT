@@ -197,13 +197,15 @@ def generate_comments_info(project_name, vocab_file, problem_domain_file):
     # Return relative path (wrt to this file) to the comments' XML output
     print('Starting Comments!')
     os.system('python2 '+ os.path.join(COMMENTS_FOLDER, "GenerateCommentsXMLForAFolder.py") + \
-        " " + os.path.abspath(os.path.join(PROJECTS_FOLDER, project_name)) + " " + vocab_file + \
+        " " + os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name)) + " " + vocab_file + \
          " " + problem_domain_file + " " + project_name)
 
-    os.system('python2 comments/MergeAllCommentsXML.py ' + '/workspace/comments/temp/' + project_name + 
-        ' /workspace/' + project_name + ' ' + '/workspace/projects/'+ project_name + 
-        ' /workspace/comments.xml')
+    os.system('python2 ' + os.path.join(COMMENTS_FOLDER, "MergeAllCommentsXML.py") + " " + \
+        os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name)) + " " + \
+        os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name, FINAL_FILE, COMMENTS_EXTENSION)))
+
     print('Comments Done!')
+
     return os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name, FINAL_FILE, COMMENTS_EXTENSION))
 
 def generate_vcs_info(project_name):
