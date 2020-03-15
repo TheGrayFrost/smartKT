@@ -16,7 +16,7 @@ from xml.etree import ElementTree as ET
 from xml.dom import minidom
 from collections import defaultdict
 import json
-
+import parsers.imp_ddx as ddx
 import parsers.vcs as vcs
 
 # For debug, set true
@@ -48,7 +48,7 @@ OUTPUTS_FOLDER = 'outputs'
 
 # DOMAINS TO RUN
 CALLSTATIC = True
-CALLDYN = True
+CALLDYN = False
 CALLCOMM = True
 CALLVCS = False
 
@@ -271,8 +271,8 @@ for exe in runs:
 if CALLCOMM:
     # comments_config
     cc = jsonInfo['comments']
-    generate_comments_info(cc['project_name'], cc['vocab_file'], \
-    cc['problem_domain_file'], os.path.join(outfolder, FINAL_FILE+COMMENTS_EXTENSION))
+    generate_comments_info(cc['project_name'], cc['vocab_loc'], \
+    cc['problem_domain_loc'], os.path.join(outfolder, FINAL_FILE+COMMENTS_EXTENSION))
 
 if CALLVCS:
     # vcs_config

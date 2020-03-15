@@ -1,13 +1,13 @@
 {
     "runs": {
-    	"/data/user-home/srijoni/PIN_Tests/smartKT/projects/libpng/build/pngtest": {
-            "/data/user-home/srijoni/PIN_Tests/smartKT/projects/libpng/pngtest.png" : 3 
+    	"/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/libpng/build/pngtest": {
+            "/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/libpng/pngtest.png" : 1 
         }
     },
     "comments": {
         "project_name": "libpng",
-        "vocab": "/data/user-home/srijoni/PIN_Tests/smartKT/comments/vocab",
-        "problem_domain": "/data/user-home/srijoni/PIN_Tests/smartKT/libpng/problem_domain"
+        "vocab_loc": "/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/parsers/comments/Identifiers/program_domain.csv",
+        "problem_domain_loc": "/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/parsers/comments/ProblemDomains/libpng/problem_domain.txt"
     },
     "vcs": {
         "username": "spandankumarsahu",
