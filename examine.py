@@ -49,7 +49,7 @@ OUTPUTS_FOLDER = 'outputs'
 # DOMAINS TO RUN
 CALLSTATIC = True
 CALLDYN = True
-CALLCOMM = False
+CALLCOMM = True
 CALLVCS = False
 
 
@@ -246,7 +246,7 @@ for exe in runs:
     execstrip = executable[executable.rfind('/')+1:]
     origpath = executable[:executable.rfind('build/')-1]
     project_name = origpath[origpath.rfind('/')+1:]
-    outfolder = os.path.abspath(os.path.join(OUTF, project_name))
+    outfolder = os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name))
     foutfolder = os.path.join(outfolder,'exe_'+execstrip)
     os.system('mkdir -p ' + foutfolder)
 
@@ -271,11 +271,11 @@ for exe in runs:
 if CALLCOMM:
     # comments_config
     cc = jsonInfo['comments']
-    generate_comments_info(cc['project_name'], cc['vocab_file'], cc['problem_domain_file'],\
-     os.path.join(outfolder, FINAL_FILE+COMMENTS_EXTENSION)
+    generate_comments_info(cc['project_name'], cc['vocab_file'], \
+    cc['problem_domain_file'], os.path.join(outfolder, FINAL_FILE+COMMENTS_EXTENSION))
 
 if CALLVCS:
-    #vcs_config
+    # vcs_config
     if jsonInfo['vcs']['fresh_fetch']:
         vcs.generate_vcs_info(jsonInfo['vcs'], os.path.join(outfolder, FINAL_FILE+VCS_EXTENSION))
 
