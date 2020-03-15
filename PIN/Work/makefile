@@ -12,8 +12,8 @@ include $(CONFIG_ROOT)/makefile.config
 include makefile.rules
 include $(CONFIG_ROOT)/makefile.default.rules
 
-ifndef runid
-runid := 0
+ifndef run
+run := 1
 endif
 
 CC := gcc
@@ -41,7 +41,7 @@ main.out: main.o lib.so
 %.out.address: statinfo/%.address
 	cp $< statinfo/$@
 %.dump: %.out %.out.address ./obj-intel64/memtracker.so
-	../PIN/pin -t obj-intel64/memtracker.so inp=$(inp) run=$(runid) exe=$< -- ./$< $(inp) > op.txt
+	../PIN/pin -t obj-intel64/memtracker.so inp="$(inp)" run=$(run) exe=$< -- ./$< $(inp) > op.txt
 
 cleaner:
 # 	-rm -r statinfo/

@@ -109,10 +109,10 @@ INSINFO::INSINFO(INS& ins, std::string fn, int col, int lno): fname(fn), column(
 
 void INSINFO::shortPrint(std::ostream& outf)
 {
-	outf << fname.substr(fname.length()-12) << ":" << line << "\n"; 
-	outf << rtnName << " INS: 0x" << std::hex << ina << ": " << diss << " - " << flag;
+	outf << fname.substr(fname.length()-12) << ": " << line << "\n"; 
+	outf << rtnName << " INS: 0x" << std::hex << ina << std::dec << ": " << diss << " - " << flag;
 	if (flag != 'n') 
-		outf << " 0x" << std::hex << memOp;
+		outf << " 0x" << std::hex << memOp << std::dec;
 	outf << "\n";
 	// outf << "LOCATION: " << fname << ": " << std::dec << line << " ";
 	// outf << "FUNCTION: " << rtnName << " ";
@@ -139,10 +139,10 @@ void INSINFO::shortPrint(std::ostream& outf)
 */ 
 void INSINFO::print(std::ostream& outf)
 {
-	outf << "LOCATION: " << fname << ": " << std::dec << line << "\n";
+	outf << "LOCATION: " << fname << ": " << line << "\n";
 	outf << "FUNCTION: " << rtnName << "\n";
-	outf << "INS: 0x" << std::hex << ina << ": " << diss << " - " << flag << " ";
-	if (flag != 'n') outf << "0x" << std::hex << memOp;
+	outf << "INS: 0x" << std::hex << ina << std::dec << ": " << diss << " - " << flag << " ";
+	if (flag != 'n') outf << "0x" << std::hex << memOp << std::dec;
 	if (target != "") outf << "\nTARGET: " << target;
 	outf << "\nRR: " << regR.size() << " ";
 	for (auto l: regR)
