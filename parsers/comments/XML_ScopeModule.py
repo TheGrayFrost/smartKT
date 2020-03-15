@@ -1,12 +1,10 @@
-import sys
-import re
-import glob
-import os
+import sys, os
+import re, glob
 import pickle
 
 # Get Comments for C/C++ file
 def getComments(cfilepath):
-	pklfile = cfilepath.splitext()[0] + "_comments.p"
+	pklfile = os.path.splitext(cfilepath)[0] + "_comments.p"
 	comments = pickle.load(open(pklfile, "rb"))
 	return comments
 
@@ -171,5 +169,5 @@ fname = sys.argv[1]
 results = getComments(fname)
 scopes = getScopeForAFile(fname, results)
 
-with open(file+"_scope.p", 'wb') as fp:
+with open(file+"_scopes.p", 'wb') as fp:
 	pickle.dump(scopes, fp, protocol=2)

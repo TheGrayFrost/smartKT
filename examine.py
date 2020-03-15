@@ -47,7 +47,7 @@ PROJECTS_FOLDER = 'projects'
 OUTPUTS_FOLDER = 'outputs'
 
 # DOMAINS TO RUN
-CALLSTATIC = True
+CALLSTATIC = False
 CALLDYN = False
 CALLCOMM = True
 CALLVCS = False
@@ -197,11 +197,11 @@ def generate_dynamic_info(path, test, runNum):
 def generate_comments_info(project_name, vocab_file, problem_domain_file, output_file):
     # Return relative path (wrt to this file) to the comments' XML output
     print('Starting Comments!')
-    os.system('python2 '+ os.path.join(COMMENTS_FOLDER, "GenerateCommentsXMLForAFolder.py") + \
+    os.system('python3 '+ os.path.join(COMMENTS_FOLDER, "GenerateCommentsXMLForAFolder.py") + \
         " " + os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name)) + " " + vocab_file + \
          " " + problem_domain_file + " " + project_name)
 
-    os.system('python2 ' + os.path.join(COMMENTS_FOLDER, "MergeAllCommentsXML.py") + " " + \
+    os.system('python3 ' + os.path.join(COMMENTS_FOLDER, "MergeAllCommentsXML.py") + " " + \
         os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name)) + " " + output_file)
     print('Comments Done!')
 

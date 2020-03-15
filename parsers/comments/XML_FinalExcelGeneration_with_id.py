@@ -36,8 +36,7 @@ def getProblemDomainWords(fname):
 
 def getScope(fname):
 	filename = os.path.splitext(fname)[0]+"_scopes.p"
-	with open(filename, 'r') as fp:
-		scopes = pickle.load(fp)
+	scopes = pickle.load( open(filename, "rb"))
 	return scopes
 
 def getIdentifierInfo(fname):
@@ -134,11 +133,11 @@ def constructGraph(fname, vocab_loc, probdom_loc):
 		comment_text = comments[i][0]
 		scope_now = scopes[i]
 		if DEBUG:
-			print "+++ Comment now:", comment_text
+			print("+++ Comment now:", comment_text)
 		(vocab_matches, prob_matches, tokens) = getConceptMatches(comment_text, vocab_loc, probdom_loc)
 		if DEBUG:
-			print "Vocab matches:", vocab_matches
-			print "Prob matches:", prob_matches
+			print("Vocab matches:", vocab_matches)
+			print("Prob matches:", prob_matches)
 
 
 		id_matches_symbol = []
@@ -147,7 +146,7 @@ def constructGraph(fname, vocab_loc, probdom_loc):
 		id_matches_scope = []
 		id_matches_prog = []
 		id_matches_prob = []
-        	id_matches_symbolId = []
+		id_matches_symbolId = []
 		skip_header = False
 		for each in identifier_info:
 			if each[0] == "":
@@ -162,7 +161,7 @@ def constructGraph(fname, vocab_loc, probdom_loc):
 				id_matches_scope.append(joinByDel(each[2:4], ":"))
 				id_matches_prog.append(each[6])
 				id_matches_prob.append(each[7])
-                		id_matches_symbolId.append(each[8])
+				id_matches_symbolId.append(each[8])
 
 		id_comment_prog_matches = []
 		id_comment_prob_matches = []
@@ -185,7 +184,7 @@ def constructGraph(fname, vocab_loc, probdom_loc):
 	
 	if len(output) > 1:
 		filename = os.path.splitext(fname)[0] + "_knowledgeBase_commentsXML.csv"
-		outfile = open(filename, 'wb')
+		outfile = open(filename, 'w')
 		writer = csv.writer(outfile , delimiter = ',', quoting = csv.QUOTE_NONNUMERIC)
 		for eachrow in output:
 			writer.writerow(eachrow)

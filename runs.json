@@ -6,7 +6,7 @@
     },
     "comments": {
         "project_name": "libpng",
-        "vocab_loc": "/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/parsers/comments/Identifiers/program_domain.csv",
+        "vocab_loc": "/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/parsers/comments/program_domain.csv",
         "problem_domain_loc": "/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/parsers/comments/ProblemDomains/libpng/problem_domain.txt"
     },
     "vcs": {

@@ -1,4 +1,4 @@
-import sys
+import sys, os
 import xml.etree.ElementTree as ET
 import pandas as pd
 import numpy as np
@@ -86,12 +86,12 @@ def createXML(project_name, project_path, file_location, knowledge_base_path, ou
     xml_data = ET.tostring(root)
     reparsed = minidom.parseString(xml_data)
     xml_data = reparsed.toprettyxml()
-    with open(output_xml_file,'wb') as f:
+    with open(output_xml_file,'w') as f:
         f.write(xml_data)
 
-if len(sys.argv) != 7:
-    print "Give 6 Arguments: project_name, project_path, file_location, knowledge_base_path"
+if len(sys.argv) != 5:
+    print("Give 4 Arguments: project_name, project_path, file_location, knowledge_base_path")
     exit(-1)
 
-output_xml_file = os.path.split(sys.argv[3])[0] + "_comments.xml"
+output_xml_file = os.path.splitext(sys.argv[3])[0] + "_comments.xml"
 createXML(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], output_xml_file)
