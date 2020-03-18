@@ -47,6 +47,9 @@ COMMENTS_FOLDER = 'parsers/comments'
 PROJECTS_FOLDER = 'projects'
 OUTPUTS_FOLDER = 'outputs'
 
+if len(sys.argv) > 2:
+    OUTPUTS_FOLDER = sys.argv[2]
+
 # DOMAINS TO RUN
 CALLSTATIC = True
 CALLDYN = True
@@ -256,6 +259,8 @@ for exe in runs:
     os.system('mkdir -p ' + foutfolder)
 
     # Parse dependencies
+    # print (os.system(' '.join(['parsers/' + PROJPARSER, os.path.join(outfolder, 'make_log.txt'),
+    #                 os.path.join(origpath, 'build'), os.path.join(outfolder, 'dependencies.p')])))
     os.system(' '.join(['parsers/' + PROJPARSER, os.path.join(outfolder, 'make_log.txt'),
                     os.path.join(origpath, 'build'), os.path.join(outfolder, 'dependencies.p')]))
     dependencies = pickle.load(open(os.path.join(outfolder, 'dependencies.p'), 'rb'))
