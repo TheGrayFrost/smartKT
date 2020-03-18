@@ -100,7 +100,7 @@ with open(filename, 'r') as inf, open(outfile, 'w') as opf:
 	for line in inf:
 		entry = to_xml(line)
 		if entry is not None:
-			print (entry.attrib['id'], '\r', end='')
+			print (entry.attrib['TS'], '\r', end='')
 			if entry.tag == 'WRITE' or entry.tag == 'READ':
 				curctxt = (entry.attrib['THREADID'], entry.attrib['FUNCNAME'], entry.attrib['INVNO'], entry.attrib['SYNCS'])
 				if ctxt is None:
