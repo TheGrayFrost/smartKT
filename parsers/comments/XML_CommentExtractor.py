@@ -57,12 +57,12 @@ def getComments(filename):
 	return result
 
 def main():
-	if len(sys.argv) != 2:
-		print("Give one argument which is the location of the source code")
+	if len(sys.argv) != 3:
+		print("Give 2 inputs: src_file_name outputprefix - in this order")
 		exit(-1)
-	fname = sys.argv[1]
-	comments = getComments(fname)
-	(file, ext) = os.path.splitext(fname)
-	pickle.dump(comments, open( file+"_comments.p", "wb" ))
+	srcfilename = sys.argv[1]
+	outputprefix = sys.argv[2]
+	comments = getComments(srcfilename)
+	pickle.dump(comments, open( outputprefix+"_comments.p", "wb" ))
 
 main()

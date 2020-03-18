@@ -2,7 +2,7 @@ import xml.etree.ElementTree as ET
 import sys, os, csv
 
 # SYS ARGS TO BE FILLED LATER
-cfname, clangfname, vocabfile, pdname = None, None, None, None
+cfname, clangfname, outputprefix, vocabfile, pdname = None, None, None, None, None
 
 def getProgramDomainWords():
 	f = open(vocabfile, 'r')
@@ -106,34 +106,32 @@ def parseXML(xmlfname, cfname, type_tag):
 		if dict_now is None or dict_now.get("spelling", 'None') == 'None':
 			continue
 		try:
-			location = dict_now["location"]
-			if location == None:
+			if dict_now.get("file", None) == None:
 				continue
-			loc = location[:location.find('[')]
-			if loc.endswith(cfname):
-				id = dict_now["id"]
-				symbol_now = dict_now["spelling"]
-				type_now = dict_now["type"]
-				start_line = int(location[location.find('[') + 1 : location.find(']')])
-				end_line = dict_now["extent.end"]
-				end_line = int(end_line[end_line.find('[') + 1 : end_line.find(']')])
+			if dict_now['file'].endswith(cfname):
+				id = dict_now.get("id", None)
+				symbol_now = dict_now.get("spelling", None)
+				type_now = dict_now.get("type", None)
+				start_line = int(dict_now["range.start"].split(':')[0][1:])
+				end_line = int(dict_now["range.end"].split(':')[0][1:])
 				tokens = wordSegmentation(symbol_now)
 				prog_matches = findProgramDomainMatches(tokens)
 				prob_matches = findProblemDomainMatches(tokens)
-				data.append([symbol_now, type_tag, start_line, end_line, dict_now["type"], joinBySpace(tokens), prog_matches, prob_matches, id])
+				data.append([symbol_now, type_tag, start_line, end_line, type_now, joinBySpace(tokens), prog_matches, prob_matches, id])
 		except:
 			pass
 	return data
 
 if __name__ == '__main__':
-	if len(sys.argv) != 5:
-		print("Give four arguments, src location, clang file, program domain location, problem domain location")
+	if len(sys.argv) != 6:
+		print("Give five arguments, src location, clang file, outputprefix, program domain location, problem domain location")
 		exit(-1)
 
 	cfname = sys.argv[1]
 	clangfname = sys.argv[2]
-	vocabfile = sys.argv[3]
-	pdname = sys.argv[4]
+	outputprefix = sys.argv[3]
+	vocabfile = sys.argv[4]
+	pdname = sys.argv[5]
 
 	tags = getAllTags(clangfname)
 	output = []
@@ -142,7 +140,7 @@ if __name__ == '__main__':
 		output.extend(data)
 
 	(file, ext) = os.path.splitext(cfname)
-	f = open(file+"_identifiers_commentsXML.csv", 'w')
+	f = open(outputprefix+"_identifiers_commentsXML.csv", 'w')
 	writer = csv.writer(f, delimiter=',', quoting=csv.QUOTE_NONNUMERIC)
 	writer.writerow(["Symbol", "Type", "Start line", "End line", "Data type", "Identifier tokens", "Program Domain matches", "Problem Domain matches", "Symbol id"])
 	for each in output:

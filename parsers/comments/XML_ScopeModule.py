@@ -2,12 +2,6 @@ import sys, os
 import re, glob
 import pickle
 
-# Get Comments for C/C++ file
-def getComments(cfilepath):
-	pklfile = os.path.splitext(cfilepath)[0] + "_comments.p"
-	comments = pickle.load(open(pklfile, "rb"))
-	return comments
-
 # Given a C/C++ code removes all comments from it
 def removeComments(content):
 	index = 0
@@ -48,12 +42,12 @@ def min(x, y):
 		return x
 	return y
 
-def getScopeForAFile(file, results):
+def getScopeForAFile(file, results, outputprefix):
 	# Read the code from the .c or .cpp file
 	lines = open(file, 'r').read().split('\n')
 	
 	# Comments extracted from the file
-	comments = getComments(file)
+	comments = pickle.load(open(outputprefix+"_comments.p", "rb"))
 
 	scope = [0] * len(comments)
 	i = 0
@@ -160,14 +154,15 @@ def getScopeForAFile(file, results):
 		i = j
 	return scope
 	
-if len(sys.argv) != 2:
-	print("Give one argument as filename")
+if len(sys.argv) != 3:
+	print("Give 2 inputs: srcfilename outputprefix")
 	exit(-1)
 
 fname = sys.argv[1]
+outputprefix = sys.argv[2]
 (file, ext) = os.path.splitext(fname)
-results = getComments(fname)
-scopes = getScopeForAFile(fname, results)
+results = pickle.load(open(outputprefix+"_comments.p", "rb"))
+scopes = getScopeForAFile(fname, results, outputprefix)
 
-with open(file+"_scopes.p", 'wb') as fp:
+with open(outputprefix+"_scopes.p", 'wb') as fp:
 	pickle.dump(scopes, fp, protocol=2)
