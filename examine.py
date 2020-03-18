@@ -270,7 +270,8 @@ for exe in runs:
                 generate_dynamic_info(executable, test_input, runs[exe][ti])
             else:
                 generate_dynamic_info(executable, None, runs[exe][ti])
-            os.system("mv " + os.path.join(foutfolder, "final_dynamic.xml") + " " + os.path.join(foutfolder, "inp"+str(idx)+".xml"))
+            os.system("mv " + os.path.join(foutfolder, "final_dynamic.xml") + " " + os.path.join(foutfolder, \
+                "inp_" + os.path.splitext(ti.split('/')[-1])[0] + ".xml"))
 
 if CALLCOMM:
     # comments_config
