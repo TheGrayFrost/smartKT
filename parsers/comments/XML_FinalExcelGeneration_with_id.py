@@ -6,12 +6,6 @@ from difflib import SequenceMatcher
 
 DEBUG = False
 
-# Returns comments from the database
-def getComments(fname):
-	filename = os.path.splitext(fname)[0]+"_comments.p"
-	comments = pickle.load( open( filename, "rb" ) )
-	return comments
-
 def getProgramDomainWords(fname):
 	f = open(fname, 'r')
 	prog_dom_reader = csv.reader(f)
@@ -34,14 +28,9 @@ def getProblemDomainWords(fname):
 	f.close()
 	return dom_list
 
-def getScope(fname):
-	filename = os.path.splitext(fname)[0]+"_scopes.p"
-	scopes = pickle.load( open(filename, "rb"))
-	return scopes
-
-def getIdentifierInfo(fname):
+def getIdentifierInfo(outputprefix):
 	identifier_info = []
-	filename = os.path.splitext(fname)[0]+"_identifiers_commentsXML.csv"
+	filename = outputprefix+"_identifiers_commentsXML.csv"
 	f = open(filename, 'r')
 	r = csv.reader(f)
 	for each in r:
@@ -123,10 +112,10 @@ def joinByDel(l, d):
 	output += str(l[-1])
 	return output
 
-def constructGraph(fname, vocab_loc, probdom_loc):
-	identifier_info = getIdentifierInfo(fname)
-	comments = getComments(fname)
-	scopes = getScope(fname)
+def constructGraph(fname, outputprefix, vocab_loc, probdom_loc):
+	identifier_info = getIdentifierInfo(outputprefix)
+	comments = pickle.load(open(outputprefix+"_comments.p", "rb"))
+	scopes = pickle.load(open(outputprefix+"_scopes.p", "rb"))
 	output = [["File name", "Comment Id", "Comment Text", "Comment Tokens", "Comment scope", "Prog.dom matches (comm.)", "Prob.dom matches (comm.)", "Identifier symbol", "Identifier type", "Identifier tokens", "Identifier scopes", "prog.dom matches (id)", "prob. dom matches (id)", "prog.dom matches (comm+id)", "prob. dom matches (comm+id)", "Symbol ids"]]
 
 	for i in range(len(comments)):
@@ -183,15 +172,14 @@ def constructGraph(fname, vocab_loc, probdom_loc):
         joinByDel(id_comment_prob_matches, " |||"), joinByDel(id_matches_symbolId, " |||")])
 	
 	if len(output) > 1:
-		filename = os.path.splitext(fname)[0] + "_knowledgeBase_commentsXML.csv"
-		outfile = open(filename, 'w')
+		outfile = open(outputprefix + "_knowledgeBase_commentsXML.csv", 'w')
 		writer = csv.writer(outfile , delimiter = ',', quoting = csv.QUOTE_NONNUMERIC)
 		for eachrow in output:
 			writer.writerow(eachrow)
 		outfile.close()
 
-if len(sys.argv) != 4:
-	print("Give 3 arguments: src filename, program domain location, problem domain location in order")
+if len(sys.argv) != 5:
+	print("Give 4 arguments: src filename, outputprefix, program domain location, problem domain location in order")
 	exit(-1)
 
-constructGraph(sys.argv[1], sys.argv[2], sys.argv[3])
+constructGraph(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])

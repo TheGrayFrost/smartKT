@@ -197,12 +197,16 @@ def generate_dynamic_info(path, test, runNum):
 def generate_comments_info(project_name, vocab_file, problem_domain_file, output_file):
     # Return relative path (wrt to this file) to the comments' XML output
     print('Starting Comments!')
+
+    # Need to use the exact source locations because comments' location gets mangled
     os.system('python3 '+ os.path.join(COMMENTS_FOLDER, "GenerateCommentsXMLForAFolder.py") + \
+        " " + os.path.abspath(os.path.join(PROJECTS_FOLDER, project_name)) + " " \
         " " + os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name)) + " " + vocab_file + \
-         " " + problem_domain_file + " " + project_name)
+        " " + problem_domain_file + " " + project_name)
 
     os.system('python3 ' + os.path.join(COMMENTS_FOLDER, "MergeAllCommentsXML.py") + " " + \
-        os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name)) + " " + output_file)
+        os.path.abspath(os.path.join(PROJECTS_FOLDER, project_name)) + " " + \
+        os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name)) + "  " + output_file)
     print('Comments Done!')
 
 def start_website():

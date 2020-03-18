@@ -16,11 +16,11 @@ def getKnowledgeBase(knowledge_base_path):
             knowledge_base.append([comment[2], comment[4], comment[7], comment[8], comment[15], comment[5], comment[6]])
     return knowledge_base
 
-def createXML(project_name, project_path, file_location, knowledge_base_path, output_xml_file):
+def createXML(project_name, project_path, file_location, outputprefix):
     root = ET.Element('COMMENTS')
     root.set('project_name', project_name)
     root.set('project_path', project_path)
-    knowledge_base = getKnowledgeBase(knowledge_base_path)
+    knowledge_base = getKnowledgeBase(outputprefix + "_knowledgeBase_commentsXML.csv")
     for comment in knowledge_base:
         comment_node = ET.SubElement(root, 'COMMENT')
         comment_node.set('src_file_location', file_location)
@@ -86,12 +86,11 @@ def createXML(project_name, project_path, file_location, knowledge_base_path, ou
     xml_data = ET.tostring(root)
     reparsed = minidom.parseString(xml_data)
     xml_data = reparsed.toprettyxml()
-    with open(output_xml_file,'w') as f:
+    with open(outputprefix+"_comments.xml",'w') as f:
         f.write(xml_data)
 
 if len(sys.argv) != 5:
-    print("Give 4 Arguments: project_name, project_path, file_location, knowledge_base_path")
+    print("Give 4 Arguments: project_name, project_path, file_location, outputprefix")
     exit(-1)
 
-output_xml_file = os.path.splitext(sys.argv[3])[0] + "_comments.xml"
-createXML(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], output_xml_file)
+createXML(sys.argv[1], sys.argv[2], sys.argv[3], outputprefix)
