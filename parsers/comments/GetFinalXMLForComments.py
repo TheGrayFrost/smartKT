@@ -93,4 +93,4 @@ if len(sys.argv) != 5:
     print("Give 4 Arguments: project_name, project_path, file_location, outputprefix")
     exit(-1)
 
-createXML(sys.argv[1], sys.argv[2], sys.argv[3], outputprefix)
+createXML(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
