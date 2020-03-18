@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<COMMENTS project_name="extern" project_path="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern">
+	<COMMENT comment_scope_end="11" comment_scope_start="5" comment_text="Class A's defination" src_file_location="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/B.cc">
+		<SYMBOLS>
+			<ClassDecl id="300856413946" spelling="A" type="A"/>
+			<CXXConstructor id="302215697034" spelling="A" type="void ()"/>
+			<FieldDecl id="302356902844" spelling="r" type="int"/>
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN type=" 'Data-Structure and its Components" word="class"/>
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS/>
+	</COMMENT>
+	<COMMENT comment_scope_end="18" comment_scope_start="15" comment_text="Instantiation of p" src_file_location="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/B.cc"/>
+</COMMENTS>

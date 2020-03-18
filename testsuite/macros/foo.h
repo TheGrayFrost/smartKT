@@ -1,3 +1,4 @@
+/* Demonstrate conditional macro */
 #ifndef __FOO__
 #define __FOO__
 
