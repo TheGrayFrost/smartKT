@@ -51,9 +51,9 @@ if len(sys.argv) > 2:
     OUTPUTS_FOLDER = sys.argv[2]
 
 # DOMAINS TO RUN
-CALLSTATIC = True
+CALLSTATIC = False
 CALLDYN = True
-CALLCOMM = True
+CALLCOMM = False
 CALLVCS = False
 
 
