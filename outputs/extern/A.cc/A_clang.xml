@@ -2,25 +2,25 @@
 <!DOCTYPE TranslationUnit SYSTEM "smartkt.dtd">
 <TranslationUnit>
   <TemplateStubs/>
-  <ClassDecl file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" line="1" col="7" id="202609232595" spelling="A" usr="c:@S@A" lex_parent_id="201834728630" type="A" isDecl="True" linkage_kind="external" range.start="[1:1]" range.end="[1:8]" visibility="default" display_name="A"/>
-  <VarDecl file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" line="3" col="12" id="202713816444" spelling="p" usr="c:@p" lex_parent_id="201834728630" type="A *" isDecl="True" linkage_kind="external" range.start="[3:1]" range.end="[3:13]" storage_class="extern" visibility="default" display_name="p">
-    <TypeRef ref_id="202609232595" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" line="3" col="8" id="203918565925" spelling="class A" type="A" isRef="True" range.start="[3:8]" range.end="[3:9]"/>
+  <ClassDecl file="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/A.cc" line="1" col="7" id="202458404954" spelling="A" usr="c:@S@A" lex_parent_id="202376532045" type="A" isDecl="True" linkage_kind="external" range.start="[1:1]" range.end="[1:8]" visibility="default" display_name="A"/>
+  <VarDecl file="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/A.cc" line="3" col="12" id="202035016981" spelling="p" usr="c:@p" lex_parent_id="202376532045" type="A *" isDecl="True" linkage_kind="external" range.start="[3:1]" range.end="[3:13]" storage_class="extern" visibility="default" display_name="p">
+    <TypeRef ref_id="202458404954" file="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/A.cc" line="3" col="8" id="201356229437" spelling="class A" type="A" isRef="True" range.start="[3:8]" range.end="[3:9]"/>
   </VarDecl>
-  <FunctionDecl linkage_name="_Z1fR1A" return_type="A *" funcargs="A &amp;" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" line="5" col="5" id="200041863336" spelling="f" usr="c:@F@f#&amp;$@S@A#" lex_parent_id="201834728630" type="A *(A &amp;)" isDecl="True" isDef="True" linkage_kind="external" range.start="[5:1]" range.end="[9:2]" storage_class="default_auto" visibility="default" display_name="f(A &amp;)">
-    <TypeRef ref_id="202609232595" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" line="5" col="1" id="203918565925" spelling="class A" type="A" isRef="True" range.start="[5:1]" range.end="[5:2]"/>
-    <ParmDecl file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" line="5" col="10" id="202126698757" spelling="x" usr="c:A.cc@31@F@f#&amp;$@S@A#@x" lex_parent_id="200041863336" type="A &amp;" isDecl="True" isDef="True" linkage_kind="auto" range.start="[5:7]" range.end="[5:11]" storage_class="default_auto" visibility="default" display_name="x">
-      <TypeRef ref_id="202609232595" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" line="5" col="7" id="203918565925" spelling="class A" type="A" isRef="True" range.start="[5:7]" range.end="[5:8]"/>
+  <FunctionDecl linkage_name="_Z1fR1A" return_type="A *" funcargs="A &amp;" file="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/A.cc" line="5" col="5" id="203328533443" spelling="f" usr="c:@F@f#&amp;$@S@A#" lex_parent_id="202376532045" type="A *(A &amp;)" isDecl="True" isDef="True" linkage_kind="external" range.start="[5:1]" range.end="[9:2]" storage_class="default_auto" visibility="default" display_name="f(A &amp;)">
+    <TypeRef ref_id="202458404954" file="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/A.cc" line="5" col="1" id="201356229437" spelling="class A" type="A" isRef="True" range.start="[5:1]" range.end="[5:2]"/>
+    <ParmDecl file="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/A.cc" line="5" col="10" id="202922905653" spelling="x" usr="c:A.cc@31@F@f#&amp;$@S@A#@x" lex_parent_id="203328533443" type="A &amp;" isDecl="True" isDef="True" linkage_kind="auto" range.start="[5:7]" range.end="[5:11]" storage_class="default_auto" visibility="default" display_name="x">
+      <TypeRef ref_id="202458404954" file="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/A.cc" line="5" col="7" id="201356229437" spelling="class A" type="A" isRef="True" range.start="[5:7]" range.end="[5:8]"/>
     </ParmDecl>
-    <CompoundStmt file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" line="6" col="1" id="202712533456" sem_parent_id="200041863336" range.start="[6:1]" range.end="[9:2]" storage_class="default_auto">
-      <BinaryOperator file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" line="7" col="2" id="200766743755" type="A *" range.start="[7:2]" range.end="[7:8]" isAssignment="True">
-        <DeclRefExpr ref_id="202713816444" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" line="7" col="2" id="203753145190" spelling="p" type="A *" range.start="[7:2]" range.end="[7:3]"/>
-        <UnaryOperator file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" line="7" col="6" id="202055827066" type="A *" range.start="[7:6]" range.end="[7:8]">
-          <DeclRefExpr def_id="202126698757" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" line="7" col="7" id="202044480182" spelling="x" type="A" range.start="[7:7]" range.end="[7:8]"/>
+    <CompoundStmt file="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/A.cc" line="6" col="1" id="201998782162" sem_parent_id="203328533443" range.start="[6:1]" range.end="[9:2]" storage_class="default_auto">
+      <BinaryOperator file="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/A.cc" line="7" col="2" id="200265908980" type="A *" range.start="[7:2]" range.end="[7:8]" isAssignment="True">
+        <DeclRefExpr ref_id="202035016981" file="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/A.cc" line="7" col="2" id="203511370363" spelling="p" type="A *" range.start="[7:2]" range.end="[7:3]"/>
+        <UnaryOperator file="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/A.cc" line="7" col="6" id="202850176457" type="A *" range.start="[7:6]" range.end="[7:8]">
+          <DeclRefExpr def_id="202922905653" file="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/A.cc" line="7" col="7" id="200206173639" spelling="x" type="A" range.start="[7:7]" range.end="[7:8]"/>
         </UnaryOperator>
       </BinaryOperator>
-      <ReturnStmt file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" line="8" col="2" id="202038633748" range.start="[8:2]" range.end="[8:10]">
-        <UnexposedExpr ref_id="202713816444" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" line="8" col="9" id="201341792823" spelling="p" type="A *" range.start="[8:9]" range.end="[8:10]">
-          <DeclRefExpr ref_id="202713816444" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" line="8" col="9" id="204207836768" spelling="p" type="A *" range.start="[8:9]" range.end="[8:10]"/>
+      <ReturnStmt file="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/A.cc" line="8" col="2" id="200559807044" range.start="[8:2]" range.end="[8:10]">
+        <UnexposedExpr ref_id="202035016981" file="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/A.cc" line="8" col="9" id="204067842377" spelling="p" type="A *" range.start="[8:9]" range.end="[8:10]">
+          <DeclRefExpr ref_id="202035016981" file="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/A.cc" line="8" col="9" id="200850111956" spelling="p" type="A *" range.start="[8:9]" range.end="[8:10]"/>
         </UnexposedExpr>
       </ReturnStmt>
     </CompoundStmt>

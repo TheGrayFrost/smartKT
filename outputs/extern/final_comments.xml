@@ -1,0 +1,75 @@
+<COMMENTS project_name="extern" project_path="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern"><COMMENT comment_id="1" comment_scope_end="11" comment_scope_start="5" comment_text="Class A's defination" src_file_location="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/B.cc">
+		<SYMBOLS>
+			<ClassDecl id="300856413946" spelling="A" type="A" />
+			<CXXConstructor id="302215697034" spelling="A" type="void ()" />
+			<FieldDecl id="302356902844" spelling="r" type="int" />
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN type=" 'Data-Structure and its Components" word="class" />
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS />
+	</COMMENT>
+	<COMMENT comment_id="2" comment_scope_end="18" comment_scope_start="15" comment_text="Instantiation of p" src_file_location="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/B.cc" />
+<COMMENT comment_id="3" comment_scope_end="3" comment_scope_start="1" comment_text="Class A's defination will be provided by someone else" src_file_location="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/A.cc">
+		<SYMBOLS>
+			<TypeRef id="201356229437" spelling="class A" type="A" />
+			<ClassDecl id="202458404954" spelling="A" type="A" />
+			<VarDecl id="202035016981" spelling="p" type="A *" />
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN type=" 'Data-Structure and its Components" word="class" />
+			<POGRAM_DOMAIN type=" 'Operations as part of Algorithms" word="else" />
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS />
+	</COMMENT>
+	<COMMENT comment_id="4" comment_scope_end="13" comment_scope_start="4" comment_text="Externally linked p" src_file_location="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/A.cc">
+		<SYMBOLS>
+			<TypeRef id="201356229437" spelling="class A" type="A" />
+			<TypeRef id="201356229437" spelling="class A" type="A" />
+			<ParmDecl id="202922905653" spelling="x" type="A &amp;" />
+			<DeclRefExpr id="203511370363" spelling="p" type="A *" />
+			<DeclRefExpr id="200206173639" spelling="x" type="A" />
+			<DeclRefExpr id="200850111956" spelling="p" type="A *" />
+			<FunctionDecl id="203328533443" spelling="f" type="A *(A &amp;)" />
+			<UnexposedExpr id="204067842377" spelling="p" type="A *" />
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN type=" 'Properties of Datastructure / Function / Blocks" word="linked" />
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS />
+	</COMMENT>
+<COMMENT comment_id="5" comment_scope_end="31" comment_scope_start="21" comment_text="extern linking" src_file_location="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/C.cc">
+		<SYMBOLS>
+			<MemberRefExpr id="100554632667" spelling="r" type="int" />
+			<UnexposedExpr id="100957660181" spelling="f" type="A *(*)(A &amp;)" />
+			<UnexposedExpr id="101742481271" spelling="operator&lt;&lt;" type="basic_ostream&lt;char, std" />
+			<UnexposedExpr id="101722112440" spelling="operator&lt;&lt;" type="std" />
+			<UnexposedExpr id="102730300205" spelling="r" type="int" />
+			<UnexposedExpr id="100426445533" spelling="u" type="A *" />
+			<UnexposedExpr id="102036326940" spelling="operator&lt;&lt;" type="basic_ostream&lt;char, std" />
+			<TypeRef id="103490643417" spelling="class A" type="A" />
+			<TypeRef id="103490643417" spelling="class A" type="A" />
+			<StringLiteral id="100080427770" spelling="&quot;Value of u-&gt;r = &quot;" type="const char [17]" />
+			<StringLiteral id="103891028872" spelling="&quot;\n&quot;" type="const char [2]" />
+			<NamespaceRef id="102576260337" spelling="std" type="" />
+			<DeclRefExpr id="104292661174" spelling="f" type="A *(A &amp;)" />
+			<DeclRefExpr id="101294077625" spelling="v" type="A" />
+			<DeclRefExpr id="103629930078" spelling="cout" type="std" />
+			<DeclRefExpr id="103366970597" spelling="operator&lt;&lt;" type="basic_ostream&lt;char, std" />
+			<DeclRefExpr id="103854688260" spelling="operator&lt;&lt;" type="std" />
+			<DeclRefExpr id="103665139722" spelling="u" type="A *" />
+			<DeclRefExpr id="101173379920" spelling="operator&lt;&lt;" type="basic_ostream&lt;char, std" />
+			<FunctionDecl id="100055273548" spelling="main" type="int ()" />
+			<CallExpr id="102480291206" spelling="f" type="A *" />
+			<CallExpr id="101390290665" spelling="operator&lt;&lt;" type="basic_ostream&lt;char, std" />
+			<CallExpr id="101528700791" spelling="operator&lt;&lt;" type="std" />
+			<CallExpr id="104223042600" spelling="operator&lt;&lt;" type="basic_ostream&lt;char, std" />
+			<VarDecl id="100766366562" spelling="v" type="A" />
+			<VarDecl id="104107026904" spelling="u" type="A *" />
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN type=" 'Properties of Datastructure / Function / Blocks" word="extern" />
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS />
+	</COMMENT>
+</COMMENTS>

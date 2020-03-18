@@ -1,5 +1,7 @@
 #include "foo.h"
 
+
+// A really weird macro
 #define A(x) f(x
 
 int main()
