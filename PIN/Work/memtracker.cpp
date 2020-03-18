@@ -23,6 +23,8 @@
 
 PIN_LOCK globalLock;
 
+std::string runid;
+
 std::string folder = "statinfo/";
 std::string foff = "final.offset";
 std::string faddr = ".address";
@@ -667,7 +669,7 @@ VOID ptrWrite (THREADID tid, ADDRINT ina)
 	}
 	else
 		outp << "ASYNC ";
-	outp << "id " << std::dec << ++timeStamp << " ";						// event timestamp
+	outp << "TS " << std::dec << runid << "_" << ++timeStamp << " "; // event timestamp
 	outp << "INVNO " << invMap[inslist[ina].rtnName][tid] << "\n";	// function invocation count	
 }
 
@@ -1100,7 +1102,7 @@ int main(int argc, char * argv[])
 	inp = inp.substr(inp.find("=")+1);
 	if (inp == "")
 		inp = "[None]";
-	std::string runid(argv[6]);
+	runid = std::string(argv[6]);
 	runid = runid.substr(runid.find("=")+1);
 	std::string locf(argv[7]);
 	locf = locf.substr(locf.find("=")+1);

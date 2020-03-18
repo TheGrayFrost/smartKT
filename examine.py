@@ -16,6 +16,7 @@ from xml.etree import ElementTree as ET
 from xml.dom import minidom
 from collections import defaultdict
 import json
+
 import parsers.imp_ddx as ddx
 import parsers.vcs as vcs
 
@@ -173,10 +174,10 @@ def generate_static_info():
         for line in f:
             r = line.strip().split()
             if (len(r) == 4): # location available
-                libloc = r[2]
+                libloc = os.path.realpath(r[2])
                 if libloc in ls:
                     orderls.append((libloc, ls[libloc]))
-    os.system('rm ldd.info')
+    # os.system('rm ldd.info')
     if DEBUG:
         print (orderls)
         exit()

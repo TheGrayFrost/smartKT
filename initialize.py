@@ -60,6 +60,13 @@ def init(path):
     s += 'mkdir build\n'
     s += 'cd build\n'
     s += 'cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..\n'
+    # s += """
+    #         alias ninja ninja-build
+    #         export PATH=$PATH:/usr/lib64/openmpi/bin/
+    #         cmake -G "Unix Makefiles" -DPARAVIEW_ENABLE_PYTHON=ON -DPARAVIEW_USE_MPI=ON \
+    #         -DVTK_SMP_IMPLEMENTATION_TYPE=TBB -DCMAKE_EXPORT_COMPILE_COMMANDS=1 \
+    #         -DCMAKE_BUILD_TYPE=Debug ..
+    #     """
     s += 'make -j$(nproc) VERBOSE=1 > make_log.txt\n'
     s += 'mkdir -p ' + outfolder + '\n'
     s += 'mv compile_commands.json ' + outfolder + '/\n'
@@ -176,4 +183,4 @@ def generate_static_info(path):
 if not os.listdir(os.path.join("parsers", "pyelftools")):
     os.system("cd parsers && git clone https://github.com/eliben/pyelftools.git")
 init(path)
-generate_static_info(path)
+# generate_static_info(path)
