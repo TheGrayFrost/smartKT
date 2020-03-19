@@ -67,13 +67,12 @@ def properPathJoin(base, next):
     return '/'.join(stack)
 
 def searchFile(filePath):
-    cwd = os.getcwd()
-    os.chdir(base)
     file = filePath.split('/')[-1]
     abspath = subprocess.check_output("find "+ sys.argv[2] +" -name "+file+" | grep "+filePath, shell=True).decode('utf-8').strip()
     if not os.path.isabs(abspath):
         abspath = properPathJoin(base, abspath)
-    os.chdir(cwd)
+    if not os.path.exists(abspath) or not os.path.isabs(abspath):
+        print("Incorrect file: " + abspath)
     return abspath
 
 for line_num, x in enumerate(data):
@@ -196,7 +195,7 @@ for path, data in static_link_cmds:
     for x in d[3:]:
         if x[-2:] == '.o' or x[-2:] == '.a' : # added check for archives getting linked to bigger archives
             if not os.path.isabs(x):
-                x = searchFile(cwd, x)
+                x = searchFile(x)
             dependencies[libfile].add(os.path.abspath(x))
 
 pickle.dump(dependencies, open(sys.argv[3], 'wb'))
