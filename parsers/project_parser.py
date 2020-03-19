@@ -66,11 +66,11 @@ def properPathJoin(base, next):
             stack.append(t)
     return '/'.join(stack)
 
-def searchFile(base, filePath):
+def searchFile(filePath):
     cwd = os.getcwd()
     os.chdir(base)
     file = filePath.split('/')[-1]
-    abspath = subprocess.check_output("find . -name "+file+" | grep "+filePath, shell=True).decode('utf-8').strip()
+    abspath = subprocess.check_output("find "+ sys.argv[2] +" -name "+file+" | grep "+filePath, shell=True).decode('utf-8').strip()
     if not os.path.isabs(abspath):
         abspath = properPathJoin(base, abspath)
     os.chdir(cwd)
