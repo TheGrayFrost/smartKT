@@ -6,6 +6,7 @@ and stores in dependencies.p (pickle format)
 '''
 
 import re, os, sys, pickle
+import subprocess
 
 DEBUG = False
 
@@ -52,6 +53,29 @@ cd_cmds = []
 static_link_cmds = []
 cur_path = sys.argv[2]
 
+# Proper path takes care of .. and .
+def properPathJoin(base, next):
+    stack = base.split('/')
+    toAppend = next.strip().split('/')
+    for t in toAppend:
+        if t == "..":
+            stack = stack[:-1]
+        elif t == ".":
+            continue
+        else:
+            stack.append(t)
+    return '/'.join(stack)
+
+def searchFile(base, filePath):
+    cwd = os.getcwd()
+    os.chdir(base)
+    file = filePath.split('/')[-1]
+    abspath = subprocess.check_output("find . -name "+file+" | grep "+filePath, shell=True).decode('utf-8').strip()
+    if not os.path.isabs(abspath):
+        abspath = properPathJoin(base, abspath)
+    os.chdir(cwd)
+    return abspath
+
 for line_num, x in enumerate(data):
     # expects only one cd in any command - true for cmake generated and any other sensible make file
     if CHANGE_DIRECTORY_CMD in x:
@@ -94,8 +118,6 @@ for line_num, x in enumerate(data):
         cxx_cmds.append((cd_cmds[-1], req_cmd))
     elif STATIC_ARCHIVER in x:
         static_link_cmds.append((cd_cmds[-1], x.strip()))
-
-
 
 dependencies = {}
 
@@ -167,15 +189,14 @@ for path, data in static_link_cmds:
     d = data.strip().split()
     # qc is specific to cmake... ar options order guarantees that archive is the third element (2nd being the options)
     # libfile = cwd+'/'+d[d.index('qc')+1]
-    libfile = d[2]
+    libfile = d[2]       
     if not os.path.isabs(libfile):
-        libfile = os.path.join(cwd, libfile)
-    libfile = os.path.abspath(libfile)
+        properPathJoin(cwd, libfile)
     dependencies[libfile] = set()
     for x in d[3:]:
         if x[-2:] == '.o' or x[-2:] == '.a' : # added check for archives getting linked to bigger archives
             if not os.path.isabs(x):
-                x = os.path.join(cwd, x)
+                x = searchFile(cwd, x)
             dependencies[libfile].add(os.path.abspath(x))
 
 pickle.dump(dependencies, open(sys.argv[3], 'wb'))
