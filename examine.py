@@ -262,13 +262,14 @@ for exe in runs:
 
     # Generate dynamic data
     if CALLDYN:
-        for idx, ti in enumerate(runs[exe]):
+        for ti in runs[exe]:
             test_input = os.path.abspath(ti)
             if len(ti) > 0:
                 generate_dynamic_info(executable, test_input, runs[exe][ti])
             else:
                 generate_dynamic_info(executable, None, runs[exe][ti])
-            os.system("mv " + os.path.join(foutfolder, "final_dynamic.xml") + " " + os.path.join(foutfolder, "inp"+str(idx)+".xml"))
+            os.system("mv " + os.path.join(foutfolder, "final_dynamic.xml") + " " + \
+                os.path.join(foutfolder, "inp_"+ti.split('/')[-1]+".xml"))
 
 if CALLCOMM:
     # comments_config
