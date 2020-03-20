@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # To use:
-# python initialize.py <path to project> [<optional output folder name>]
+# python3 initialize.py <path to project> [<optional output folder name>]
 # The last name in the path is assumed the project name
 
 import sys, os, pickle

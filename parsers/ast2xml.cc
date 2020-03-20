@@ -20,17 +20,19 @@ std::string FILEID; // FILEID passed to ast2xml
 
 CXTranslationUnit tu; // declared global for accessing the source when needed
 
-
 inline bool operator==(const CXCursor & x, const CXCursor & y) {
     return clang_equalCursors(x, y) != 0;
 }
-template<> struct std::hash<CXCursor>
-{
 
-    inline size_t operator()(const CXCursor & cursor) const {
-        return (size_t) clang_hashCursor(cursor);
-    }
-};
+namespace std {
+	template<> struct hash<CXCursor>
+	{
+
+	    inline size_t operator()(const CXCursor & cursor) const {
+		return (size_t) clang_hashCursor(cursor);
+	    }
+	};
+}
 
 std::unordered_set< CXCursor > cursors_seen, stubs_seen;
 
