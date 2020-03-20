@@ -160,6 +160,8 @@ def generate_static_info():
 
     def get_rec_deps(path):
         recdeps = []
+        if path not in dependencies:
+            return recdeps
         for x in dependencies[path]:
             if x[-2:] == '.o':
                 recdeps.append(dependencies[x])
@@ -168,7 +170,7 @@ def generate_static_info():
             elif x.find('.so') != -1:
                 add_loaded_binaries(x)
         return recdeps
-    
+
     add_loaded_binaries(executable)
 
     orderls = [(executable, ls[executable])]
@@ -270,7 +272,7 @@ for exe in runs:
 
     # Generate dynamic data
     if CALLDYN:
-        for idx, ti in enumerate(runs[exe]):
+        for ti in runs[exe]:
             test_input = os.path.abspath(ti)
             if len(ti) > 0:
                 generate_dynamic_info(executable, test_input, runs[exe][ti])
