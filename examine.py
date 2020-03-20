@@ -2,7 +2,7 @@
 
 # Before you can use, specify the details in config.txt file
 # To use:
-# python examine.py <json_file>
+# python3 examine.py <json_file>
 
 '''
 Dynamic information is available for executables only. So we combine all static

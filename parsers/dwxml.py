@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import sys
 import os
 
@@ -25,7 +25,7 @@ def process_file(filename, xml_root):
         elffile = ELFFile(f)
 
         if not elffile.has_dwarf_info():
-            print(f'{filename} has no DWARF info', file=sys.stderr)
+            print('{} has no DWARF info'.format(filename), file=sys.stderr)
             return
 
         dwarfinfo = elffile.get_dwarf_info()
@@ -83,7 +83,7 @@ def process_file(filename, xml_root):
                     # FIXME: update pyelftools/elftools/dwarf/enums.py
                     if not isinstance(attr_name, str) :
                         if not args.quiet :
-                            print(f"{sys.argv[0]} warning : {filename}:",
+                            print("{} warning : {}:".format(sys.argv[0], filename),
                                     " unknown attribute :", attr_values,
                                     file=sys.stderr)
                         continue

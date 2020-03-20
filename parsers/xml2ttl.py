@@ -2,7 +2,7 @@
 # Fixes multiple header file inclusion problem
 # and converts to TTL
 
-# Usage: python xml2ttl.py <fileName>
+# Usage: python3 xml2ttl.py <fileName>
 # Output: TTL file with same filename and extension .ttl
 
 from xml.etree.ElementTree import Element, SubElement
