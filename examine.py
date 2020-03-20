@@ -16,6 +16,7 @@ from xml.etree import ElementTree as ET
 from xml.dom import minidom
 from collections import defaultdict
 import json
+
 import parsers.imp_ddx as ddx
 import parsers.vcs as vcs
 
@@ -46,10 +47,13 @@ COMMENTS_FOLDER = 'parsers/comments'
 PROJECTS_FOLDER = 'projects'
 OUTPUTS_FOLDER = 'outputs'
 
+if len(sys.argv) > 2:
+    OUTPUTS_FOLDER = sys.argv[2]
+
 # DOMAINS TO RUN
-CALLSTATIC = True
+CALLSTATIC = False
 CALLDYN = True
-CALLCOMM = True
+CALLCOMM = False
 CALLVCS = False
 
 
@@ -175,10 +179,10 @@ def generate_static_info():
         for line in f:
             r = line.strip().split()
             if (len(r) == 4): # location available
-                libloc = r[2]
+                libloc = os.path.realpath(r[2])
                 if libloc in ls:
                     orderls.append((libloc, ls[libloc]))
-    os.system('rm ldd.info')
+    # os.system('rm ldd.info')
     if DEBUG:
         print (orderls)
         exit()
@@ -199,12 +203,16 @@ def generate_dynamic_info(path, test, runNum):
 def generate_comments_info(project_name, vocab_file, problem_domain_file, output_file):
     # Return relative path (wrt to this file) to the comments' XML output
     print('Starting Comments!')
+
+    # Need to use the exact source locations because comments' location gets mangled
     os.system('python3 '+ os.path.join(COMMENTS_FOLDER, "GenerateCommentsXMLForAFolder.py") + \
+        " " + os.path.abspath(os.path.join(PROJECTS_FOLDER, project_name)) + " " \
         " " + os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name)) + " " + vocab_file + \
-         " " + problem_domain_file + " " + project_name)
+        " " + problem_domain_file + " " + project_name)
 
     os.system('python3 ' + os.path.join(COMMENTS_FOLDER, "MergeAllCommentsXML.py") + " " + \
-        os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name)) + " " + output_file)
+        os.path.abspath(os.path.join(PROJECTS_FOLDER, project_name)) + " " + \
+        os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name)) + "  " + output_file)
     print('Comments Done!')
 
 def start_website():
@@ -253,6 +261,8 @@ for exe in runs:
     os.system('mkdir -p ' + foutfolder)
 
     # Parse dependencies
+    # print (os.system(' '.join(['parsers/' + PROJPARSER, os.path.join(outfolder, 'make_log.txt'),
+    #                 os.path.join(origpath, 'build'), os.path.join(outfolder, 'dependencies.p')])))
     os.system(' '.join(['parsers/' + PROJPARSER, os.path.join(outfolder, 'make_log.txt'),
                     os.path.join(origpath, 'build'), os.path.join(outfolder, 'dependencies.p')]))
     dependencies = pickle.load(open(os.path.join(outfolder, 'dependencies.p'), 'rb'))
@@ -268,8 +278,8 @@ for exe in runs:
                 generate_dynamic_info(executable, test_input, runs[exe][ti])
             else:
                 generate_dynamic_info(executable, None, runs[exe][ti])
-            os.system("mv " + os.path.join(foutfolder, "final_dynamic.xml") + " " + \
-                os.path.join(foutfolder, "inp_"+ti.split('/')[-1]+".xml"))
+            os.system("mv " + os.path.join(foutfolder, "final_dynamic.xml") + " " + os.path.join(foutfolder, \
+                "inp_" + os.path.splitext(ti.split('/')[-1])[0] + ".xml"))
 
 if CALLCOMM:
     # comments_config

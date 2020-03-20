@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <root>
-  <file name="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/build/libfoo.so">
-    <DW_TAG_compile_unit address_size="8" debug_abbrev_offset="0" offset="0" path="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" unit_length="117" version="4">
+  <file name="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/build/libfoo.so">
+    <DW_TAG_compile_unit address_size="8" debug_abbrev_offset="0" offset="0" path="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/A.cc" unit_length="117" version="4">
       <sources>
-        <entry file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc" id="1"/>
+        <entry file="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/A.cc" id="1"/>
       </sources>
       <DW_TAG_class_type DW_AT_declaration="True" DW_AT_name="A" offset="45"/>
       <DW_TAG_variable DW_AT_decl_column="12" DW_AT_decl_file="1" DW_AT_decl_line="3" DW_AT_declaration="True" DW_AT_external="True" DW_AT_name="p" DW_AT_type="58" offset="48"/>
@@ -13,13 +13,13 @@
       </DW_TAG_subprogram>
       <DW_TAG_reference_type DW_AT_byte_size="8" DW_AT_type="45" offset="114"/>
     </DW_TAG_compile_unit>
-    <DW_TAG_compile_unit address_size="8" debug_abbrev_offset="113" offset="121" path="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/B.cc" unit_length="30270" version="4">
+    <DW_TAG_compile_unit address_size="8" debug_abbrev_offset="113" offset="121" path="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/B.cc" unit_length="30270" version="4">
       <sources>
-        <entry file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/B.cc" id="1"/>
+        <entry file="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/B.cc" id="1"/>
         <entry file="/opt/rh/devtoolset-8/root/usr/include/c++/8/iostream" id="2"/>
         <entry file="/usr/include/libio.h" id="3"/>
         <entry file="/usr/include/stdio.h" id="4"/>
-        <entry file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/build/&lt;built-in&gt;" id="5"/>
+        <entry file="/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/extern/build/&lt;built-in&gt;" id="5"/>
         <entry file="/opt/rh/devtoolset-8/root/usr/lib/gcc/x86_64-redhat-linux/8/include/stddef.h" id="6"/>
         <entry file="/usr/include/wchar.h" id="7"/>
         <entry file="/opt/rh/devtoolset-8/root/usr/include/c++/8/cwchar" id="8"/>

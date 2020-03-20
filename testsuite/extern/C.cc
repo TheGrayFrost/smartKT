@@ -18,6 +18,7 @@ int f()
 
 A * f(A& x);
 
+// extern linking
 extern A v;
 
 int main()

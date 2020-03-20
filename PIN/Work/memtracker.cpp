@@ -23,6 +23,8 @@
 
 PIN_LOCK globalLock;
 
+std::string runid;
+
 std::string folder = "statinfo/";
 std::string foff = "final.offset";
 std::string faddr = ".address";
@@ -667,7 +669,7 @@ VOID ptrWrite (THREADID tid, ADDRINT ina)
 	}
 	else
 		outp << "ASYNC ";
-	outp << "id " << std::dec << ++timeStamp << " ";						// event timestamp
+	outp << "TS " << std::dec << runid << "_" << ++timeStamp << " "; // event timestamp
 	outp << "INVNO " << invMap[inslist[ina].rtnName][tid] << "\n";	// function invocation count	
 }
 
@@ -722,7 +724,7 @@ VOID dataman (THREADID tid, ADDRINT ina, ADDRINT memOp)
 		else
 			outp << "ASYNC ";
 
-		outp << "id " << std::dec << ++timeStamp << " ";						// event timestamp
+		outp << "TS " << std::dec << runid << "_" << ++timeStamp << " ";	// event timestamp
 		outp << "INVNO " << invMap[inslist[ina].rtnName][tid] << "\n";	// function invocation count	
 	}
 }
@@ -756,7 +758,7 @@ VOID callP (THREADID tid, ADDRINT ina, int count, ...)
 	outp << "CALL THREADID " << tid << " ";							// event type and thread id
 	outp << "CALLERNAME " << inslist[ina].rtnName << " ";			// caller linkage name
 	outp << "CALLEENAME " << inslist[ina].target << " ";			// callee linkage name
-	outp << "id " << std::dec << ++timeStamp << " ";						// event timestamp
+	outp << "TS " << std::dec << runid << "_" << ++timeStamp << " ";// event timestamp
 	std::string dyntarget = inslist[ina].target;
 	dyntarget = dyntarget.substr(0, dyntarget.find("@plt"));		// removing @PLT's
 	if (count > 0)
@@ -807,7 +809,7 @@ VOID retP (THREADID tid, ADDRINT ina, ADDRINT * retval)
 	fnlog f = invstack[tid].back();
 	outp << "RETURN THREADID " << f.tid << " ";							// event type and thread id
 	outp << "FUNCNAME " << f.fname << " ";							// returning function
-	outp << "id " << std::dec << ++timeStamp << " ";						// event timestamp
+	outp << "TS " << std::dec << runid << "_" << ++timeStamp << " ";	// event timestamp
 	if (funcinfoMap.find(f.fname) != funcinfoMap.end())
 	{
 		std::string rettype = funcinfoMap[f.fname].back();
@@ -934,7 +936,8 @@ VOID lock_func_bf (THREADID tid, ADDRINT addr, int type, ADDRINT rta)
 {
 	syncs[tid][addr] = type;													// thread id and lock variable address
 	outp << "LOCK TID " << tid << " ADDRESS 0x" << std::hex << addr;					// event record
-	outp << " TYPE " << unlocks[type] << " id " << std::dec << ++timeStamp << "\n";
+	outp << " TYPE " << unlocks[type] << " TS " << 
+				std::dec << runid << "_" << ++timeStamp << "\n";
 }
 
 /*		need to check out why this does not work
@@ -963,7 +966,8 @@ VOID unlock_func(THREADID tid, ADDRINT addr, ADDRINT rta)
 	// else
 	// {
 		outp << "UNLOCK TID " << tid << " ADDRESS 0x" << std::hex << addr;			// event record
-		outp << " TYPE " << unlocks[syncs[tid][addr]] << " id " << std::dec << ++timeStamp << "\n";
+		outp << " TYPE " << unlocks[syncs[tid][addr]]  << " TS " << 
+								std::dec << runid << "_" << ++timeStamp << "\n";
 		auto loc = syncs[tid].find(addr);				// unset the locks for thread
 		syncs[tid].erase(loc);
 		if (syncs[tid].size() == 0)						// remove thread from list if it holds no locks
@@ -1100,7 +1104,7 @@ int main(int argc, char * argv[])
 	inp = inp.substr(inp.find("=")+1);
 	if (inp == "")
 		inp = "[None]";
-	std::string runid(argv[6]);
+	runid = std::string(argv[6]);
 	runid = runid.substr(runid.find("=")+1);
 	std::string locf(argv[7]);
 	locf = locf.substr(locf.find("=")+1);
