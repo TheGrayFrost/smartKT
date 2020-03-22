@@ -11,11 +11,11 @@
 9. Enjoy!
 
 # TODO
-[] Parallelize comments analysis part
-[] System benchmarking for large projects
-[] Check parallel execution for dynamic runtimes
-[] Provide option for choosing what to run (static/dynamic/comments/vcs)
-[] start vcs before initialize (if possible!), takes way long time though! 
+- [ ] Parallelize comments analysis part
+- [ ] System benchmarking for large projects
+- [ ] Check parallel execution for dynamic runtimes
+- [ ] Provide option for choosing what to run (static/dynamic/comments/vcs)
+- [ ] start vcs before initialize (if possible!), takes way long time though! 
 
 
 # KNOWN ISSUES
