@@ -1,8 +1,0 @@
-# FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc	f	0x4	p	101118076102	int	4	103215145526	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc	f	0x18	v	100967717954	Foo::A	8	103902820751	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc	f	0x4	b	101137432283	int	4	103902820751	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/main.cc	main	0x10	i	201799563764	Foo::A	8	200136553674	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/main.cc	main	0x18	j	204066511821	Foo::A	8	200136553674	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/main.cc	main	0x4	x	203035098395	int	4	200136553674	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/main.cc	main	0x8	y	201432041116	int	4	200136553674	

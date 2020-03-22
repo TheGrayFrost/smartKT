@@ -1,4 +1,0 @@
-# FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/base.c	main	0x4	z	101144058331	int	4	104162346658	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/base.c	main	0x8	y	104244614352	int	4	104162346658	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/foo.c	f	0x4	x	201999951589	int	4	201508608778	

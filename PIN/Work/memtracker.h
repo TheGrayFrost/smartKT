@@ -64,10 +64,19 @@ INSINFO::INSINFO(INS& ins, std::string fn, int col, int lno): fname(fn), column(
 	rtnName = RTN_FindNameByAddress(INS_Address(ins));			// get routine name
 	ina = INS_Address(ins);										// get instruction address
 	target = "";
-	if (INS_IsDirectBranchOrCall(ins) && INS_IsProcedureCall(ins))
+	if (INS_IsDirectBranchOrCall(ins))
 	{
-		int taddr = INS_DirectBranchOrCallTargetAddress(ins);	// if procedure call
-		target = RTN_FindNameByAddress(taddr);					// set target
+		ADDRINT taddr = INS_DirectBranchOrCallTargetAddress(ins);	// if procedure call
+		// target = "IsDBorC_";
+		// char buf[50]; sprintf(buf, "0x%llx", taddr); target += std::string(buf);
+
+		if (INS_IsProcedureCall(ins))
+		{
+			target += RTN_FindNameByAddress(taddr);					// set target
+		}
+		// else
+		// 	target += "_BUT_NOT_PROCCALL";
+		
 	}
 
 	// disassembly
@@ -152,7 +161,7 @@ void INSINFO::print(std::ostream& outf)
 		outf << l << " ";
 	if (rbploc != -1)
 		outf << "RBP Updated.";
-	outf << "\n\n";
+	outf << "\n";
 }
 
 #endif

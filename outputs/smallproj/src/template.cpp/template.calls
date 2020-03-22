@@ -1,4 +1,0 @@
-# FILENAME	LINENUM	FUNCNAME	CALLNODEID	CALLEXPR
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/template.cpp	4	_ZN7spandan5myMaxIiEET_S1_S1_	c:@N@spandan@F@myMax<#I>#I#I#	spandan :: myMax < int > ( 3 , 5 )
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/template.cpp	6	_ZN5ArrayIfEC1EPfi	c:@S@Array>#f@F@Array#*f#I#	arm ( ar , 3 )
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/template.cpp	7	_ZN5ArrayIfE6smfuncEv	c:@S@Array>#f@F@smfunc#	arm . smfunc ( )

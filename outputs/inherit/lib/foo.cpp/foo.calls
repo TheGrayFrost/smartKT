@@ -1,4 +1,0 @@
-# FILENAME	LINENUM	FUNCNAME	CALLNODEID	CALLEXPR
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	6	_ZN7foo_strC1EOS_	200822079741	x
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	10	_ZN11ParentClassC1Ev	201334256686	p
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	15	_ZN6Animal7breatheEv	204181908726	this -> breathe ( )

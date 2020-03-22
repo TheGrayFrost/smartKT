@@ -43,7 +43,7 @@ COMB_OUTPUTEXT = ' '.join([DWARF_EXTENSION, CLANG_EXTENSION, COMB_EXTENSION, OFF
 
 path = os.path.abspath(sys.argv[1])
 
-if (len(sys.argv) == 3):
+if (len(sys.argv) > 2):
     FOLDER = sys.argv[2]
 
 sppath = path.split('/')

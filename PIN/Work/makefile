@@ -23,7 +23,7 @@ CXXFLAGS := -gdwarf-4
 
 .SECONDARY: 
 
-.PRECIOUS: %.dump #%.symtab %_static.offset
+.PRECIOUS: %.dump %.out %.xml #%.symtab %_static.offset
 
 # tartest:
 # 	echo $(ARGS)

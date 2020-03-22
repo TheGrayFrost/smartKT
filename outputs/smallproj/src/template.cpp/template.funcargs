@@ -1,4 +1,0 @@
-# FILENAME	FUNCNODEID	FUNCNAME	NARGS	ARGTYPE*	RETTYPE
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/tem.h	c:@ST>1#T@Array@F@Array#*t0.0#I#		2	T []	int	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/tem.h	c:@ST>1#T@Array@F@smfunc#		0	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/template.cpp	c:@F@main#	main	0	int

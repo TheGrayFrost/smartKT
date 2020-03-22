@@ -1,8 +1,0 @@
-# FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/inherit.cpp	main	0x24	x	c:inherit.cpp@188@F@main#@x	struct foo_str	12	None	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/inherit.cpp	main	0x30	y	c:inherit.cpp@223@F@main#@y	struct foo_str	12	None	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/inherit.cpp	main	0x70	snake	c:inherit.cpp@291@F@main#@snake	Snake	64	None	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/inherit.cpp	main	0x18	p	c:inherit.cpp@359@F@main#@p	ParentClass *	8	None	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/src/inherit.cpp	main	0x90	d	c:inherit.cpp@448@F@main#@d	DerivedClass1	32	None	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/foo.h	_ZN13DerivedClass15helloEi	0xc	i	c:foo.h@718@S@DerivedClass1@F@hello#I#@i	int	4	None	
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/lib/foo.h	_ZN13DerivedClass15helloEd	0x10	z	c:foo.h@765@S@DerivedClass1@F@hello#d#@z	double	8	None	

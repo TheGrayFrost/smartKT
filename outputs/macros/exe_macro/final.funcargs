@@ -1,4 +1,0 @@
-# FILENAME	FUNCNODEID	FUNCNAME	NARGS	ARGTYPE*	RETTYPE
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/foo.h	103567422726	f	1	int	int
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/base.c	104285844008	main	0	int
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/macros/foo.h	202831129197	f	1	int	int

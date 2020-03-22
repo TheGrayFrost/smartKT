@@ -1,8 +1,0 @@
-# FILENAME	LINENUM	FUNCNAME	CALLNODEID	CALLEXPR
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/random.cc	23	_ZN3Foo3BarL1fEv	103621493414	Foo :: Bar :: f ( )
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/main.cc	15	_ZN3Foo1AC1Ev	202931723230	i
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/main.cc	15	_ZN3Foo1AC1Ev	203360407738	j
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/main.cc	16	_ZN3Foo3Bar1fENS_1AE	201568659702	f ( j )
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/main.cc	16	_ZN3Foo1AC1ERKS0_	201790689971	j
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/main.cc	16	_ZN3Foo3Bar1fENS_1AE	200646553618	Bar :: f ( i )
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/namespace/main.cc	16	_ZN3Foo1AC1ERKS0_	200071130781	i

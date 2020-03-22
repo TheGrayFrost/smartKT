@@ -7,18 +7,20 @@ set -x # echo on
 
 P=$(pwd)								# save current location
 exe=${1##*/}							# extract executable and input filename
-run=$3
+
+typeset -i runid nruns
+nruns=$4
+runid=$3
+
 cp $1 PIN/Work/$exe.out					# copy executable to pin folder
 rm -rf PIN/Work/statinfo/
 mkdir PIN/Work/statinfo/
 # copy the static results into pin folder
 find $2 -maxdepth 1 -type f -exec cp -t PIN/Work/statinfo/ {} +
 
-if [ $# -eq 4 ]
+if [ $# -eq 5 ]
 then
-	# inp=${4##*/}
-	# cp $4 PIN/Work/$inp					# copy input file to pin if specified
-	inp=$4
+	inp=$5
 else
 	inp=""
 fi
@@ -29,19 +31,20 @@ chmod +x $exe.out								# make .out runnable
 makerun()
 {
 	local i=$1
-	make inp="$inp" run=$i exe=$exe $exe.dump	# create the dump
-	python pass2.py $exe$i.dump	dynamic$i.xml	# add dump info to xml
-	cp $exe$i.dump $2							# copy back the dump
+	make inp="$inp" run=$i exe=$exe $exe.dump		# create the dump
+	python pass2.py ${exe}_$i.dump	dynamic_$i.xml	# add dump info to xml
+	cp ${exe}_$i.dump $2							# copy back the dump
 }
 
-for i in $(seq 1 $run); do
-	makerun $i $2 &
+typeset -i i
+for ((i=1;i<=nruns;++i)); do
+	makerun ${runid}_${i} $2 &
 done
 wait
 
 > dynamic.xml
-for i in $(seq 1 $run); do
-	cat dynamic$i.xml >> dynamic.xml
+for ((i=1;i<=nruns;++i)); do
+	cat dynamic_${runid}_$i.xml >> dynamic.xml
 done
 
 

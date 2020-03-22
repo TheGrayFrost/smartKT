@@ -1,7 +1,0 @@
-# FILENAME	LINENUM	FUNCNAME	CALLNODEID	CALLEXPR
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc	15	_ZN3Foo1AC1Ev	c:@N@Foo@S@A@F@A#	i
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc	15	_ZN3Foo1AC1Ev	c:@N@Foo@S@A@F@A#	j
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc	16	_ZN3Foo3Bar1fENS_1AE	c:@N@Foo@N@Bar@F@f#$@N@Foo@S@A#	f ( j )
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc	16	_ZN3Foo1AC1ERKS0_	c:@N@Foo@S@A@F@A#&1$@N@Foo@S@A#	j
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc	16	_ZN3Foo3Bar1fENS_1AE	c:@N@Foo@N@Bar@F@f#$@N@Foo@S@A#	Bar :: f ( i )
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/main.cc	16	_ZN3Foo1AC1ERKS0_	c:@N@Foo@S@A@F@A#&1$@N@Foo@S@A#	i

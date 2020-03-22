@@ -256,7 +256,7 @@ VOID init(std::string inp, std::string runid, std::string locf)
 	PIN_InitLock(&globalLock);
 
 	// open the output file
-	std::string opfile = locf + runid + ".dump";
+	std::string opfile = locf + "_" + runid + ".dump";
 	outp.open(opfile.c_str());
 
 	outp << "DYNAMICTRACE INP " << inp << " RUNID " << runid << " EXE " << locf << "\n";
@@ -287,8 +287,8 @@ VOID init(std::string inp, std::string runid, std::string locf)
 			std::getline (offFile, var.type, '\t');
 			offFile >> var.size >> var.pid;
 			var.patch();
-			// if (DEBUG)
-			// 	var.print(outp);
+			if (DEBUG)
+				var.print(outp);
 
 			funcLocalMap[funcname][offset] = var;
 			// std::cout << funcname << "\n";
@@ -510,13 +510,16 @@ VOID ImageLoad(IMG img, VOID *v)
 			globalMap[img_loff+address] = var;
 	}
 	
-	// outp << img_name << "\n";
-	// for (auto j: globalMap)
-	// {
-	// 	outp << std::hex << j.first << std::dec << ": ";
-	// 	j.second.print(outp);
-	// }
-	// outp << "\n";
+	if (DEBUG)
+	{
+		outp << img_name << "\n";
+		for (auto j: globalMap)
+		{
+			outp << std::hex << j.first << std::dec << ": ";
+			j.second.print(outp);
+		}
+		outp << "\n";	
+	}
 	
 	addrFile.close();
 
@@ -525,6 +528,8 @@ VOID ImageLoad(IMG img, VOID *v)
 // update rbp on change
 VOID updateRBP (ADDRINT ina, THREADID tid, ADDRINT rbpval) 
 {
+	if (DEBUG)
+		outp << "IN UPDATERBP\n";
 	fnlog f(RTN_FindNameByAddress(ina), tid, rbpval);
 	RBPstack[rbpval] = f; 
 	// fnstack[f] = rbpval;
@@ -676,6 +681,8 @@ VOID ptrWrite (THREADID tid, ADDRINT ina)
 // memory access event handler
 VOID dataman (THREADID tid, ADDRINT ina, ADDRINT memOp)
 {
+	if (DEBUG)
+		outp << "IN DATAMAN\n";
 	inslist[ina].memOp = memOp;		// set target memory address - helps in debugging later
 	
 	writeInfo u;
@@ -751,6 +758,8 @@ VOID printval (ADDRINT * arg, std::string type)
 // funcation call event handler
 VOID callP (THREADID tid, ADDRINT ina, int count, ...)
 {
+	if (DEBUG)
+		outp << "IN CALLP\n";
 	// THREADID tid = va_arg(ap, THREADID);
 	// ADDRINT ina = va_arg(ap, ADDRINT);
 
@@ -805,7 +814,9 @@ VOID retP (THREADID tid, ADDRINT ina, ADDRINT * retval)
 	// outp << "INVOKED RETP\n\n";
 	// outp << "PREREMOVAL\n\n";
 	// printall();
-	
+	if (DEBUG)
+		outp << "IN RETP\n";
+
 	fnlog f = invstack[tid].back();
 	outp << "RETURN THREADID " << f.tid << " ";							// event type and thread id
 	outp << "FUNCNAME " << f.fname << " ";							// returning function
@@ -854,7 +865,12 @@ VOID Instruction(INS ins, VOID * v)
 		if (inslist.find(ina) == inslist.end())
 			inslist[ina] = INSINFO(ins, fname, column, line);	// add to list
 		if (DEBUG)
-			inslist[ina].shortPrint(outp);
+		{
+			inslist[ina].print(std::cout);
+			std::cout << "REALLY??\n";
+			// exit(0);
+		}
+
 
 		// if (ina == 0x4047b8)
 		// 	exit(0);
@@ -864,6 +880,8 @@ VOID Instruction(INS ins, VOID * v)
 		int nargs = 0;
 		if (target != "")
 		{
+			if (DEBUG)
+				std::cout << "PUT FOR CALLP\n";
 			if (funcinfoMap.find(target) != funcinfoMap.end())
 				nargs = funcinfoMap[target].size() - 1;
 
@@ -891,6 +909,8 @@ VOID Instruction(INS ins, VOID * v)
 
 		if (t != -1)
 		{
+			if (DEBUG)
+				std::cout << "PUT FOR UPDATERBP\n";
 			//inslist[ina].shortPrint(outp);
 			INS_InsertCall(
 			ins, IPOINT_AFTER, (AFUNPTR)updateRBP,
@@ -903,25 +923,37 @@ VOID Instruction(INS ins, VOID * v)
 		// if it is a memory access
 		if (inslist[ina].flag != 'n')
 		{
+			if (DEBUG)
+				std::cout << "PUT FOR DATAMAN\n";
 			INS_InsertCall(
 			ins, IPOINT_BEFORE, (AFUNPTR)dataman,
 			IARG_THREAD_ID, IARG_ADDRINT, ina,
 			IARG_MEMORYOP_EA, 0,
 			IARG_END);
 			if (inslist[ina].flag == 'w')
+			{
+				if (DEBUG)
+					std::cout << "PUT FOR PTRWRITE\n";
 				INS_InsertCall(
 				ins, IPOINT_AFTER, (AFUNPTR)ptrWrite,
 				IARG_THREAD_ID, IARG_ADDRINT, ina,
 				IARG_END);
+			}
 		}
 
 		if (INS_IsRet(ins))
+		{
+			if (DEBUG)
+				std::cout << "PUT FOR RETP\n";
 			INS_InsertCall(
 			ins, IPOINT_BEFORE, (AFUNPTR)retP, 
 			IARG_THREAD_ID, IARG_INST_PTR, 
 			IARG_FUNCRET_EXITPOINT_REFERENCE,
 			IARG_END);
-		
+		}
+
+		if (DEBUG)
+			std::cout << "\n";
 		// else
 		// 	INS_InsertCall(
 		// 	ins, IPOINT_BEFORE, (AFUNPTR)dataman,
@@ -990,9 +1022,17 @@ VOID Routine (RTN rtn, VOID * v)
 	if (fname.length() > 0 && fname.find("/usr") == -1)		// instrument only instructions whose source location is available
 	{
 		RTN_Open(rtn);
+		// if (DEBUG)
+		// 	std::cout << "IS THIS KILLING ME??\n";
 		// string rtnName = RTN_Name(rtn);
 		// outp << fname << "\n" << rtnName << "\n";
 		
+		// if (DEBUG)
+		// {
+		// 	std::string rtnName = RTN_Name(rtn);
+		// 	std::cout << fname << " " << ": " << rtnName << "\n";
+		// }
+		// 
 		// for (INS ins = RTN_InsHead(rtn); INS_Valid(ins); ins = INS_Next(ins))
 		// {
 		// 	ADDRINT ina = INS_Address(ins);
@@ -1001,7 +1041,8 @@ VOID Routine (RTN rtn, VOID * v)
 		// 	PIN_UnlockClient();
 		// 	INSINFO(ins, fname, column, line).print(outp);
 		// }
-
+		// if (DEBUG)
+		// 	std::cout << "ADDING INVP\n";
 		RTN_InsertCall(rtn, IPOINT_BEFORE,
 			(AFUNPTR)invP, IARG_THREAD_ID,
 			IARG_ADDRINT, rta, IARG_END);
@@ -1030,6 +1071,8 @@ VOID Routine (RTN rtn, VOID * v)
 	if (pat != "")
 	{
 		RTN_Open(rtn);
+		if (DEBUG)
+			std::cout << "ADDING LOCK_BF\n";
 		RTN_InsertCall(rtn, IPOINT_BEFORE,
 			(AFUNPTR)lock_func_bf,
 			IARG_THREAD_ID, IARG_FUNCARG_ENTRYPOINT_VALUE, 0,
@@ -1048,6 +1091,8 @@ VOID Routine (RTN rtn, VOID * v)
 	{
 		// call the lock release event handler
 	 	RTN_Open(rtn);
+	 	if (DEBUG)
+			std::cout << "ADDING LOCK_AF\n";
 		RTN_InsertCall (rtn, IPOINT_BEFORE,
 			(AFUNPTR) unlock_func,
 			IARG_THREAD_ID, IARG_FUNCARG_ENTRYPOINT_VALUE, 0,
