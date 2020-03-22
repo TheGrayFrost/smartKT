@@ -2,7 +2,7 @@
 
 # Before you can use, specify the details in config.txt file
 # To use:
-# python examine.py <json_file>
+# python3 examine.py <json_file>
 
 '''
 Dynamic information is available for executables only. So we combine all static
@@ -160,6 +160,8 @@ def generate_static_info():
 
     def get_rec_deps(path):
         recdeps = []
+        if path not in dependencies:
+            return recdeps
         for x in dependencies[path]:
             if x[-2:] == '.o':
                 recdeps.append(dependencies[x])
@@ -168,7 +170,7 @@ def generate_static_info():
             elif x.find('.so') != -1:
                 add_loaded_binaries(x)
         return recdeps
-    
+
     add_loaded_binaries(executable)
 
     orderls = [(executable, ls[executable])]
