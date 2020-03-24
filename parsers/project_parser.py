@@ -52,6 +52,8 @@ cxx_cmds = []
 cd_cmds = []
 static_link_cmds = []
 cur_path = sys.argv[2]
+BUILD_BASE_DIR = sys.argv[2]
+
 
 # Proper path takes care of .. and .
 def properPathJoin(base, next):
@@ -87,7 +89,6 @@ for line_num, x in enumerate(data):
             cd_path = os.path.join(cur_path, cd_path)
         cd_path = os.path.abspath(cd_path)
         cur_path = cd_path
-        # print (cur_path)
         cd_cmds.append(cd_path)
 
         # again, expects only one cxx in any command - true for cmake generated and any other sensible make file
@@ -119,11 +120,12 @@ for line_num, x in enumerate(data):
         static_link_cmds.append((cd_cmds[-1], x.strip()))
 
 dependencies = {}
+dependencies["compile_instrs"] = {}
+compile_instrs = dependencies["compile_instrs"]
 
 # For this small project, it is sufficient to print this
 for path, data in cxx_cmds: # these commands create some executable
     cwd = path
-    # print (path)
     d = data.split()
 
     # get the output file name
@@ -131,9 +133,8 @@ for path, data in cxx_cmds: # these commands create some executable
         eidx = d.index('-o')+1
         executable = d[d.index('-o')+1]
         if not os.path.isabs(executable):
-            executable = os.path.join(cwd, executable)
+            executable = searchFile(BUILD_BASE_DIR, executable)
         executable = os.path.abspath(executable)
-        # print (executable)
         dependencies[executable] = set()
 
     # an object creation command
@@ -148,9 +149,16 @@ for path, data in cxx_cmds: # these commands create some executable
                     print (filename)
                 break
         if not os.path.isabs(filename):
+            # SRC files are generally mentioned with absolute path
             filename = os.path.join(cwd, filename)
         filename = os.path.abspath(filename)
         dependencies[executable] = filename
+        compile_instrs[filename] + {
+            'command': data,
+            'directory': cwd,
+            'file': filename,
+            'object': executable
+        }
 
     else:
         # must be a linking instruction
@@ -163,7 +171,7 @@ for path, data in cxx_cmds: # these commands create some executable
                     linker_opts += x.split(',')[1:]
                 elif x[-2:] == '.o' or x[-2:] == '.a':
                     if not os.path.isabs(x):
-                        x = os.path.join(cwd, x)
+                        x = searchFile(BUILD_BASE_DIR, x)
                     dependencies[executable].add(os.path.abspath(x))
                 elif x.find('.so') != -1:
                     rdynamic_lib.append(x)
@@ -187,7 +195,6 @@ for path, data in static_link_cmds:
     cwd = path
     d = data.strip().split()
     # qc is specific to cmake... ar options order guarantees that archive is the third element (2nd being the options)
-    # libfile = cwd+'/'+d[d.index('qc')+1]
     libfile = d[2]       
     if not os.path.isabs(libfile):
         properPathJoin(cwd, libfile)

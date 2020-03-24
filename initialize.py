@@ -80,8 +80,8 @@ def generate_static_info(path):
 
     # Get compile instructions
     # THIS PART WILL CHANGE FOR OTHER BUILD TOOLS
-    with open(os.path.join(outfolder, 'compile_commands.json'), "r") as f:
-        instrs = eval(f.read())
+    dependencies = pickle.load(open(os.path.join(outfolder, 'dependencies.p'), 'rb'))
+    compile_instrs = dependencies['compile_instrs']
 
     # for num, instr in enumerate(instrs, 1):
     def generate_static_info_for_tu(arg) :
@@ -113,14 +113,16 @@ def generate_static_info(path):
                 clangv = 'clang'
 
             # Get the objectfile
-            objectfile = cmd[cmd.index('-o')+1]
+            objectfile = instr.get('object', None)
+            if objectfile is None:
+                objectfile = cmd[cmd.index('-o')+1]
             if not os.path.isabs(objectfile):
                 objectfile = os.path.join(instr['directory'], objectfile)
 
             # Update the command to emit ast
             cmd[0] = clangv + ' -emit-ast'
             cmd[cmd.index('-o')+1] = mainfname + '.ast'
-            
+
             # Remove flags that cause errors
             cmd = [x for x in cmd if x not in ['-flifetime-dse=1']]
 
@@ -170,7 +172,7 @@ def generate_static_info(path):
             print(logstr, end='')
 
     with ThreadPoolExecutor(max_workers = MAX_WORKERS) as pool :
-        pool.map( generate_static_info_for_tu, enumerate(instrs, 1) )
+        pool.map( generate_static_info_for_tu, enumerate(compile_instrs, 1) )
 
 
 if not os.listdir(os.path.join("parsers", "pyelftools")):
