@@ -52,8 +52,6 @@ cxx_cmds = []
 cd_cmds = []
 static_link_cmds = []
 cur_path = sys.argv[2]
-BUILD_BASE_DIR = sys.argv[2]
-
 
 # Proper path takes care of .. and .
 def properPathJoin(base, next):
@@ -133,7 +131,7 @@ for path, data in cxx_cmds: # these commands create some executable
         eidx = d.index('-o')+1
         executable = d[d.index('-o')+1]
         if not os.path.isabs(executable):
-            executable = searchFile(BUILD_BASE_DIR, executable)
+            executable = searchFile(executable)
         executable = os.path.abspath(executable)
         dependencies[executable] = set()
 
@@ -153,7 +151,7 @@ for path, data in cxx_cmds: # these commands create some executable
             filename = os.path.join(cwd, filename)
         filename = os.path.abspath(filename)
         dependencies[executable] = filename
-        compile_instrs[filename] + {
+        compile_instrs[filename] = {
             'command': data,
             'directory': cwd,
             'file': filename,
@@ -171,7 +169,7 @@ for path, data in cxx_cmds: # these commands create some executable
                     linker_opts += x.split(',')[1:]
                 elif x[-2:] == '.o' or x[-2:] == '.a':
                     if not os.path.isabs(x):
-                        x = searchFile(BUILD_BASE_DIR, x)
+                        x = searchFile(x)
                     dependencies[executable].add(os.path.abspath(x))
                 elif x.find('.so') != -1:
                     rdynamic_lib.append(x)
