@@ -25,11 +25,10 @@ INIT_FILE = 'init.sh'
 FOLDER = 'outputs'
 
 # tools
-CLANGTOOLS = ['ast2xml', 'calls'] # , 'funcs']
-# SOURCE_EXTENSION = {'ast2xml': '.ast', 'calls': '.ast', 'funcs': '_clang.xml'}
-# CLANGTOOLS[0] = 'clang_parser.py'
+CLANGTOOLS = ['ast2xml', 'calls']
 DWARFTOOL = 'dwxml.py'
 COMBINER = 'ddx.py'
+PROJPARSER = 'project_parser.py'
 
 # output extensions
 CLANG_EXTENSION = '_clang.xml'
@@ -78,14 +77,18 @@ def generate_static_info(path):
     # Build the AST parser
     os.system('cd parsers && make all')
 
-    # Get compile instructions
+    # Get compile instructions using project_parser.py
     # THIS PART WILL CHANGE FOR OTHER BUILD TOOLS
-    with open(os.path.join(outfolder, 'compile_commands.json'), "r") as f:
-        instrs = eval(f.read())
+    os.system(' '.join(['parsers/' + PROJPARSER, os.path.join(outfolder, 'make_log.txt'),
+                    os.path.join(path, 'build'), os.path.join(outfolder, 'dependencies.p')]))
+
+    dependencies = pickle.load(open(os.path.join(outfolder, 'dependencies.p'), 'rb'))
+    compile_instrs = dependencies['compile_instrs']
 
     # for num, instr in enumerate(instrs, 1):
     def generate_static_info_for_tu(arg) :
-        num, instr = arg
+        num, fname = arg
+        instr = compile_instrs[fname]
         f = instr['file']
         mainfname = f[f.rfind('/')+1:f.rfind('.')]
         relpath = f[len(path)+1:]
@@ -98,12 +101,12 @@ def generate_static_info(path):
             print(stripop, f)
 
         if not (relpath.split('.')[-1] in C_EXTENSION or relpath.split('.')[-1] in CXX_EXTENSION):
-            print('\n(%2d/%2d): Ommiting info (non C/C++) for '%(num, len(instrs)) + relpath)
+            print('\n(%2d/%2d): Ommiting info (non C/C++) for '%(num, len(compile_instrs)) + relpath)
             return # continue
 
-        print ('\n(%2d/%2d): Generating info for ' % (num, len(instrs)) + relpath + '\n', end='')
+        print ('\n(%2d/%2d): Generating info for ' % (num, len(compile_instrs)) + relpath + '\n', end='')
 
-        logstr = '\n(%2d/%2d): Generated info for ' % (num, len(instrs)) + relpath + '\n'
+        logstr = '\n(%2d/%2d): Generated info for ' % (num, len(compile_instrs)) + relpath + '\n'
 
         try:
             # Select clang/Clang++ based on whether it is C/C++
@@ -113,19 +116,21 @@ def generate_static_info(path):
                 clangv = 'clang'
 
             # Get the objectfile
-            objectfile = cmd[cmd.index('-o')+1]
+            objectfile = instr.get('object', None)
+            if objectfile is None:
+                objectfile = cmd[cmd.index('-o')+1]
             if not os.path.isabs(objectfile):
                 objectfile = os.path.join(instr['directory'], objectfile)
 
             # Update the command to emit ast
             cmd[0] = clangv + ' -emit-ast'
             cmd[cmd.index('-o')+1] = mainfname + '.ast'
-            
+
             # Remove flags that cause errors
             cmd = [x for x in cmd if x not in ['-flifetime-dse=1']]
 
             os.system(' '.join(cmd))
-            
+
             # Generate func, calls, xml - file number prepended to all nodeids to make unique
             for clangexe, output_extension in zip(CLANGTOOLS, CLANG_OUTPUTEXT):
                 os.system (' '.join(['parsers/'+clangexe, str(num), 
@@ -170,7 +175,7 @@ def generate_static_info(path):
             print(logstr, end='')
 
     with ThreadPoolExecutor(max_workers = MAX_WORKERS) as pool :
-        pool.map( generate_static_info_for_tu, enumerate(instrs, 1) )
+        pool.map( generate_static_info_for_tu, enumerate(compile_instrs, 1) )
 
 
 if not os.listdir(os.path.join("parsers", "pyelftools")):
