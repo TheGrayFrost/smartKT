@@ -25,11 +25,10 @@ INIT_FILE = 'init.sh'
 FOLDER = 'outputs'
 
 # tools
-CLANGTOOLS = ['ast2xml', 'calls'] # , 'funcs']
-# SOURCE_EXTENSION = {'ast2xml': '.ast', 'calls': '.ast', 'funcs': '_clang.xml'}
-# CLANGTOOLS[0] = 'clang_parser.py'
+CLANGTOOLS = ['ast2xml', 'calls']
 DWARFTOOL = 'dwxml.py'
 COMBINER = 'ddx.py'
+PROJPARSER = 'project_parser.py'
 
 # output extensions
 CLANG_EXTENSION = '_clang.xml'
@@ -78,8 +77,11 @@ def generate_static_info(path):
     # Build the AST parser
     os.system('cd parsers && make all')
 
-    # Get compile instructions
+    # Get compile instructions using project_parser.py
     # THIS PART WILL CHANGE FOR OTHER BUILD TOOLS
+    os.system(' '.join(['parsers/' + PROJPARSER, os.path.join(outfolder, 'make_log.txt'),
+                    os.path.join(path, 'build'), os.path.join(outfolder, 'dependencies.p')]))
+
     dependencies = pickle.load(open(os.path.join(outfolder, 'dependencies.p'), 'rb'))
     compile_instrs = dependencies['compile_instrs']
 
