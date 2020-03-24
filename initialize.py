@@ -87,7 +87,8 @@ def generate_static_info(path):
 
     # for num, instr in enumerate(instrs, 1):
     def generate_static_info_for_tu(arg) :
-        num, instr = arg
+        num, fname = arg
+        instr = compile_instrs[fname]
         f = instr['file']
         mainfname = f[f.rfind('/')+1:f.rfind('.')]
         relpath = f[len(path)+1:]
@@ -100,12 +101,12 @@ def generate_static_info(path):
             print(stripop, f)
 
         if not (relpath.split('.')[-1] in C_EXTENSION or relpath.split('.')[-1] in CXX_EXTENSION):
-            print('\n(%2d/%2d): Ommiting info (non C/C++) for '%(num, len(instrs)) + relpath)
+            print('\n(%2d/%2d): Ommiting info (non C/C++) for '%(num, len(compile_instrs)) + relpath)
             return # continue
 
-        print ('\n(%2d/%2d): Generating info for ' % (num, len(instrs)) + relpath + '\n', end='')
+        print ('\n(%2d/%2d): Generating info for ' % (num, len(compile_instrs)) + relpath + '\n', end='')
 
-        logstr = '\n(%2d/%2d): Generated info for ' % (num, len(instrs)) + relpath + '\n'
+        logstr = '\n(%2d/%2d): Generated info for ' % (num, len(compile_instrs)) + relpath + '\n'
 
         try:
             # Select clang/Clang++ based on whether it is C/C++
@@ -129,7 +130,7 @@ def generate_static_info(path):
             cmd = [x for x in cmd if x not in ['-flifetime-dse=1']]
 
             os.system(' '.join(cmd))
-            
+
             # Generate func, calls, xml - file number prepended to all nodeids to make unique
             for clangexe, output_extension in zip(CLANGTOOLS, CLANG_OUTPUTEXT):
                 os.system (' '.join(['parsers/'+clangexe, str(num), 
