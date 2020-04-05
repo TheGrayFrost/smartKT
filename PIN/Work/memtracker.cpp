@@ -189,13 +189,14 @@ std::map <std::string, std::map<int, std::map<std::string, std::set<std::string>
 std::map <ADDRINT, variable>::iterator lookup (std::map <ADDRINT, variable>& mymap, ADDRINT addr, int& glob)
 {
 	std::map <ADDRINT, variable>::iterator it = mymap.lower_bound(addr);
-	if (glob == 1 || it != mymap.end())
+	if (!mymap.empty() && (glob == 1 || it != mymap.end()))
 	{
-		// outp << "\n\nADD: " << std::hex << it->first;
+		if (DEBUG)
+			outp << "\n\nADD: " << std::hex << it->first;
 		if (glob == 1 && (it == mymap.end() || it->first != addr))
 			it--;
-
-		// outp << " " << std::hex << it->first << " ADD\n\n" << std::dec;
+		if (DEBUG)
+			outp << " " << std::hex << it->first << " ADD\n" << std::dec;
 
 		// it = std::prev(it);
 		ADDRINT diff = it->first - addr;
@@ -205,10 +206,11 @@ std::map <ADDRINT, variable>::iterator lookup (std::map <ADDRINT, variable>& mym
 		int r = it->second.nElem;
 		if (r != -1)
 			size *= r;
-		// outp << "GLOB: " << glob << " SIZE: " << size << " DIFF: " << diff << " ADDR: " << addr << " EST: " << it->first << "\n";
+		if (DEBUG)
+			outp << "GLOB: " << glob << " SIZE: " << size << " DIFF: " << diff << " ADDR: " << addr << " EST: " << it->first << "\n\n";
 		// if (diff != 0)
 		// 	outp << "\n\nADD: " << std::hex << it->first << " " << addr << std::dec << " << DIFF: " << diff << " Size: " << size << "\n\n";
-		glob = r;
+		glob = r; // -1 if no elements
 		if (size > diff)
 		{
 			if (r != -1)
@@ -690,7 +692,8 @@ VOID dataman (THREADID tid, ADDRINT ina, ADDRINT memOp)
 
 	if (found)
 	{
-		// inslist[ina].shortPrint(outp);
+		if(DEBUG)
+			inslist[ina].shortPrint(outp);
 		
 		// save what you have learnt and return
 		writeTrace[tid][ina] = u;
@@ -934,10 +937,10 @@ VOID Instruction(INS ins, VOID * v)
 			{
 				if (DEBUG)
 					std::cout << "PUT FOR PTRWRITE\n";
-				INS_InsertCall(
-				ins, IPOINT_AFTER, (AFUNPTR)ptrWrite,
-				IARG_THREAD_ID, IARG_ADDRINT, ina,
-				IARG_END);
+				// INS_InsertCall(
+				// ins, IPOINT_AFTER, (AFUNPTR)ptrWrite,
+				// IARG_THREAD_ID, IARG_ADDRINT, ina,
+				// IARG_END);
 			}
 		}
 

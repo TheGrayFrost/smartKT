@@ -98,9 +98,24 @@ with open(filename, 'r') as inf, open(outfile, 'w') as opf:
 	ctxt = None
 	para = []
 	for line in inf:
+		# t = line.split()
+		# u = t[t.index('TS')+1]
+		# rl = u.rfind('_')
+		# rid = int(u[rl+1:])
+		# if rid % 100 == 0:
+		# 	print (u, '\r', end='')
+		# if rid < 116417593:
+		# 	continue
+		# else:
+		# 	print(line)
+			# exit()
 		entry = to_xml(line)
 		if entry is not None:
-			print (entry.attrib['TS'], '\r', end='')
+			u = entry.attrib['TS']
+			rl = u.rfind('_')
+			rid = int(u[rl+1:])
+			if rid % 100 == 0:
+				print (u, '\r', end='')
 			if entry.tag == 'WRITE' or entry.tag == 'READ':
 				curctxt = (entry.attrib['THREADID'], entry.attrib['FUNCNAME'], entry.attrib['INVNO'], entry.attrib['SYNCS'])
 				if ctxt is None:

@@ -1,0 +1,5 @@
+# FILENAME	FUNCNODEID	FUNCNAME	NARGS	ARGTYPE*	RETTYPE
+/usr/include/pthread.h	204025026728	pthread_mutex_unlock	1	pthread_mutex_t *	int
+/usr/include/pthread.h	202156490234	pthread_mutex_lock	1	pthread_mutex_t *	int
+/usr/include/stdio.h	200114725042	printf	1	const char *__restrict	int
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	203894552649	_Z7trythisPv	1	void *	void *

@@ -1,0 +1,13 @@
+# FILENAME	LINENUM	FUNCNAME	CALLNODEID	CALLEXPR
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	19	_ZN3Foo1AC1Ev	101737465778	r
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	20	_ZN3Foo1BC1Ev	101503202525	q
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	48	_ZN3Foo1AC1Ev	100089672594	r
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	49	_ZN3Foo1BC1Ev	101624938990	q
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	8	_ZN3Foo1AC1Ev	104269958178	r
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	9	_ZN3Foo1BC1Ev	100793371118	q
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	17	_ZN3Foo1AC1Ev	101599069434	r
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	18	_ZN3Foo1BC1Ev	103030282425	q
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	31	_ZN3Foo3funEii	100328497177	Foo :: fun ( local_p , local_q )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	32	_ZN3Foo4tfunIifEEbT_T0_	101893945422	Foo :: tfun < int , float > ( 3 , 4 )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	35	_ZN3Foo4tfunIccEEbT_T0_	100127248170	Foo :: tfun < char , char > ( 3 , 4 )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	38	_ZN3Foo4tfunIffEEbT_T0_	103500048852	Foo :: tfun < float , float > ( 3 , 4 )

@@ -1,0 +1,16 @@
+# FILENAME	LINENUM	FUNCNAME	CALLNODEID	CALLEXPR
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	10	_ZN7foo_strC1Ev	201209495493	x
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	12	_ZN7foo_strC1Ev	202986766265	y
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	13	_ZN7foo_straSEOS_	202855462561	y = foo ( x )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	13	_Z3foo7foo_str	202922050902	foo ( x )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	13	_ZN7foo_strC1ERKS_	202028229235	x
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	15	_ZN5SnakeC1Ev	204133684554	snake
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	16	_ZN5Snake5crawlEv	203504030844	snake . crawl ( )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	19	_ZN13DerivedClass1C1Ev	202644500920	DerivedClass1 ( )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	20	_ZN11ParentClass5helloEv	201377037022	p -> hello ( )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	21	_ZN13DerivedClass1C1Ev	201246443086	d
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	22	_ZN13DerivedClass15helloEi	202903419415	d . hello ( 1 )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	23	_ZN13DerivedClass15helloEd	201393724133	d . hello ( 1.2 )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	6	_ZN7foo_strC1EOS_	100407475172	x
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	10	_ZN11ParentClassC1Ev	103571919708	p
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	15	_ZN6Animal7breatheEv	101459449859	this -> breathe ( )

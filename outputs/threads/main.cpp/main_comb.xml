@@ -1,0 +1,207 @@
+<TranslationUnit>
+  <TemplateStubs>
+    <FunctionDecl col="12" display_name="pthread_join(pthread_t, void **)" file="/usr/include/pthread.h" funcargs="pthread_t,void **" id="103800472036" isDecl="True" lex_parent_id="103815250525" line="252" linkage_kind="external" linkage_name="pthread_join" range.end="[252:65]" range.start="[252:1]" return_type="int" spelling="pthread_join" storage_class="extern" type="int (pthread_t, void **)" usr="c:@F@pthread_join" visibility="default" />
+    <FunctionDecl col="14" display_name="strerror(int)" file="/usr/include/string.h" funcargs="int" id="103936728013" isDecl="True" lex_parent_id="102087628999" line="409" linkage_kind="external" linkage_name="strerror" range.end="[409:45]" range.start="[409:1]" return_type="char *" spelling="strerror" storage_class="extern" type="char *(int) throw()" usr="c:@F@strerror" visibility="default" />
+    <FunctionDecl col="12" display_name="pthread_mutex_destroy(pthread_mutex_t *)" file="/usr/include/pthread.h" funcargs="pthread_mutex_t *" id="103890106301" isDecl="True" lex_parent_id="103815250525" line="748" linkage_kind="external" linkage_name="pthread_mutex_destroy" range.end="[749:29]" range.start="[748:1]" return_type="int" spelling="pthread_mutex_destroy" storage_class="extern" type="int (pthread_mutex_t *) throw()" usr="c:@F@pthread_mutex_destroy" visibility="default" />
+    <FunctionDecl col="12" display_name="pthread_mutex_init(pthread_mutex_t *, const pthread_mutexattr_t *)" file="/usr/include/pthread.h" funcargs="pthread_mutex_t *,const pthread_mutexattr_t *" id="101562360159" isDecl="True" lex_parent_id="103815250525" line="743" linkage_kind="external" linkage_name="pthread_mutex_init" range.end="[745:29]" range.start="[743:1]" return_type="int" spelling="pthread_mutex_init" storage_class="extern" type="int (pthread_mutex_t *, const pthread_mutexattr_t *) throw()" usr="c:@F@pthread_mutex_init" visibility="default" />
+    <FunctionDecl col="12" display_name="printf(const char *__restrict, ...)" file="/usr/include/stdio.h" funcargs="const char *__restrict" id="101349885672" isDecl="True" lex_parent_id="101960888000" line="362" linkage_kind="external" linkage_name="printf" range.end="[362:57]" range.start="[362:1]" return_type="int" spelling="printf" storage_class="extern" type="int (const char *__restrict, ...)" usr="c:@F@printf" visibility="default" />
+    <FunctionDecl col="12" display_name="pthread_create(pthread_t *__restrict, const pthread_attr_t *__restrict, void *(*)(void *), void *__restrict)" file="/usr/include/pthread.h" funcargs="pthread_t *__restrict,const pthread_attr_t *__restrict,void *(*)(void *),void *__restrict" id="100855275212" isDecl="True" lex_parent_id="103815250525" line="235" linkage_kind="external" linkage_name="pthread_create" range.end="[238:59]" range.start="[235:1]" return_type="int" spelling="pthread_create" storage_class="extern" type="int (pthread_t *__restrict, const pthread_attr_t *__restrict, void *(*)(void *), void *__restrict) throw()" usr="c:@F@pthread_create" visibility="default" />
+  </TemplateStubs>
+  <VarDecl col="11" display_name="tid" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103478728560" isDecl="True" isDef="True" lex_parent_id="101932837217" line="8" linkage_kind="external" range.end="[8:17]" range.start="[8:1]" size="8" spelling="tid" storage_class="default_auto" type="pthread_t [2]" usr="c:@tid" visibility="default">
+    <TypeRef col="1" def_id="100088607770" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102151625350" isRef="True" line="8" range.end="[8:10]" range.start="[8:1]" spelling="pthread_t" type="pthread_t" />
+    <IntegerLiteral col="15" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101980307204" line="8" range.end="[8:16]" range.start="[8:15]" sem_parent_id="103478728560" storage_class="default_auto" type="int" />
+  </VarDecl>
+  <VarDecl col="5" display_name="counter" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101812706779" isDecl="True" isDef="True" lex_parent_id="101932837217" line="9" linkage_kind="external" range.end="[9:16]" range.start="[9:1]" size="4" spelling="counter" storage_class="default_auto" type="int" usr="c:@counter" visibility="default">
+    <IntegerLiteral col="15" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103526731086" line="9" range.end="[9:16]" range.start="[9:15]" sem_parent_id="101812706779" storage_class="default_auto" type="int" />
+  </VarDecl>
+  <FunctionDecl col="8" display_name="trythis(void *)" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" funcargs="void *" id="100188559292" isDecl="True" lex_parent_id="101932837217" line="12" linkage_kind="external" linkage_name="_Z7trythisPv" range.end="[12:27]" range.start="[12:1]" return_type="void *" spelling="trythis" storage_class="default_auto" type="void *(void *)" usr="c:@F@trythis#*v#" visibility="default">
+    <ParmDecl col="23" display_name="arg" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101574575774" isDecl="True" isDef="True" lex_parent_id="100188559292" line="12" linkage_kind="auto" range.end="[12:26]" range.start="[12:16]" spelling="arg" storage_class="default_auto" type="void *" usr="c:main.cpp@186@F@trythis#*v#@arg" visibility="default" />
+  </FunctionDecl>
+  <VarDecl col="24" display_name="lock" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103988418846" isDecl="True" lex_parent_id="101932837217" line="13" linkage_kind="external" range.end="[13:28]" range.start="[13:1]" size="40" spelling="lock" storage_class="extern" type="pthread_mutex_t" usr="c:@lock" visibility="default">
+    <TypeRef col="8" def_id="101369158336" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102465847757" isRef="True" line="13" range.end="[13:23]" range.start="[13:8]" spelling="pthread_mutex_t" type="pthread_mutex_t" />
+  </VarDecl>
+  <FunctionDecl col="5" display_name="main()" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" funcargs="" id="103347705612" isDecl="True" isDef="True" lex_parent_id="101932837217" line="15" linkage_kind="external" linkage_name="main" range.end="[40:2]" range.start="[15:1]" return_type="int" spelling="main" storage_class="default_auto" type="int ()" usr="c:@F@main#" visibility="default">
+    <CompoundStmt col="1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101694186748" line="16" range.end="[40:2]" range.start="[16:1]" sem_parent_id="103347705612" storage_class="default_auto">
+      <DeclStmt col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103221090136" line="17" range.end="[17:15]" range.start="[17:5]">
+        <VarDecl col="9" display_name="i" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103559319398" isDecl="True" isDef="True" lex_parent_id="103347705612" line="17" linkage_kind="auto" offset="0x4" range.end="[17:14]" range.start="[17:5]" size="4" spelling="i" storage_class="default_auto" type="int" usr="c:main.cpp@246@F@main#@i" visibility="default">
+          <IntegerLiteral col="13" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102234412740" line="17" range.end="[17:14]" range.start="[17:13]" sem_parent_id="103559319398" storage_class="default_auto" type="int" />
+        </VarDecl>
+      </DeclStmt>
+      <DeclStmt col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100961554331" line="18" range.end="[18:15]" range.start="[18:5]">
+        <VarDecl col="9" display_name="error" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101966439505" isDecl="True" isDef="True" lex_parent_id="103347705612" line="18" linkage_kind="auto" offset="0x8" range.end="[18:14]" range.start="[18:5]" size="4" spelling="error" storage_class="default_auto" type="int" usr="c:main.cpp@261@F@main#@error" visibility="default" />
+      </DeclStmt>
+      <DeclStmt col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100524096249" line="20" range.end="[20:14]" range.start="[20:5]">
+        <VarDecl col="9" display_name="a" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100827854070" isDecl="True" isDef="True" lex_parent_id="103347705612" line="20" linkage_kind="auto" offset="0x10" range.end="[20:13]" range.start="[20:5]" size="4" spelling="a" storage_class="default_auto" type="int [2]" usr="c:main.cpp@277@F@main#@a" visibility="default">
+          <IntegerLiteral col="11" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103119898970" line="20" range.end="[20:12]" range.start="[20:11]" sem_parent_id="100827854070" storage_class="default_auto" type="int" />
+        </VarDecl>
+      </DeclStmt>
+      <IfStmt col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100532876132" line="22" range.end="[25:6]" range.start="[22:5]">
+        <BinaryOperator col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100273777142" line="22" range.end="[22:45]" range.start="[22:9]" type="bool">
+          <CallExpr col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100664867706" line="22" range.end="[22:40]" range.start="[22:9]" ref_id="101562360159" spelling="pthread_mutex_init" type="int">
+            <UnexposedExpr col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100989653540" line="22" range.end="[22:27]" range.start="[22:9]" ref_id="101562360159" spelling="pthread_mutex_init" type="int (*)(pthread_mutex_t *, const pthread_mutexattr_t *) throw()">
+              <DeclRefExpr col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103461602527" line="22" range.end="[22:27]" range.start="[22:9]" ref_id="101562360159" spelling="pthread_mutex_init" type="int (pthread_mutex_t *, const pthread_mutexattr_t *) throw()" />
+            </UnexposedExpr>
+            <UnaryOperator col="28" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102992906363" line="22" range.end="[22:33]" range.start="[22:28]" type="pthread_mutex_t *">
+              <DeclRefExpr col="29" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102602093600" line="22" range.end="[22:33]" range.start="[22:29]" ref_id="103988418846" spelling="lock" type="pthread_mutex_t" />
+            </UnaryOperator>
+            <UnexposedExpr col="35" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100213562035" line="22" range.end="[22:39]" range.start="[22:35]" type="const pthread_mutexattr_t *">
+              <GNUNullExpr col="35" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101215982623" line="22" range.end="[22:39]" range.start="[22:35]" type="long" />
+            </UnexposedExpr>
+          </CallExpr>
+          <IntegerLiteral col="44" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101622683301" line="22" range.end="[22:45]" range.start="[22:44]" type="int" />
+        </BinaryOperator>
+        <CompoundStmt col="47" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100104686590" line="22" range.end="[25:6]" range.start="[22:47]">
+          <CallExpr col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100283043863" line="23" range.end="[23:45]" range.start="[23:9]" ref_id="101349885672" spelling="printf" type="int">
+            <UnexposedExpr col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103633705909" line="23" range.end="[23:15]" range.start="[23:9]" ref_id="101349885672" spelling="printf" type="int (*)(const char *__restrict, ...)">
+              <DeclRefExpr col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="104135824316" line="23" range.end="[23:15]" range.start="[23:9]" ref_id="101349885672" spelling="printf" type="int (const char *__restrict, ...)" />
+            </UnexposedExpr>
+            <UnexposedExpr col="16" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103024436993" line="23" range.end="[23:44]" range.start="[23:16]" type="const char *">
+              <StringLiteral col="16" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103228534691" line="23" range.end="[23:44]" range.start="[23:16]" spelling="&quot;\n mutex init has failed\n&quot;" type="const char [25]" />
+            </UnexposedExpr>
+          </CallExpr>
+          <ReturnStmt col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102278299467" line="24" range.end="[24:17]" range.start="[24:9]">
+            <IntegerLiteral col="16" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100321998373" line="24" range.end="[24:17]" range.start="[24:16]" type="int" />
+          </ReturnStmt>
+        </CompoundStmt>
+      </IfStmt>
+      <WhileStmt col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101963038336" line="27" range.end="[34:6]" range.start="[27:5]">
+        <BinaryOperator col="12" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101815487112" line="27" range.end="[27:17]" range.start="[27:12]" type="bool">
+          <UnexposedExpr col="12" def_id="103559319398" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101916956272" line="27" range.end="[27:13]" range.start="[27:12]" spelling="i" type="int">
+            <DeclRefExpr col="12" def_id="103559319398" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102566076575" line="27" range.end="[27:13]" range.start="[27:12]" spelling="i" type="int" />
+          </UnexposedExpr>
+          <IntegerLiteral col="16" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102186176124" line="27" range.end="[27:17]" range.start="[27:16]" type="int" />
+        </BinaryOperator>
+        <CompoundStmt col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101424413121" line="28" range.end="[34:6]" range.start="[28:5]">
+          <BinaryOperator col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101573646299" isAssignment="True" line="29" range.end="[29:21]" range.start="[29:9]" type="int">
+            <ArraySubscriptExpr col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102215261583" line="29" range.end="[29:13]" range.start="[29:9]" type="int">
+              <UnexposedExpr col="9" def_id="100827854070" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100150111865" line="29" range.end="[29:10]" range.start="[29:9]" spelling="a" type="int *">
+                <DeclRefExpr col="9" def_id="100827854070" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103126949503" line="29" range.end="[29:10]" range.start="[29:9]" spelling="a" type="int [2]" />
+              </UnexposedExpr>
+              <UnexposedExpr col="11" def_id="103559319398" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102382263187" line="29" range.end="[29:12]" range.start="[29:11]" spelling="i" type="int">
+                <DeclRefExpr col="11" def_id="103559319398" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="104229178689" line="29" range.end="[29:12]" range.start="[29:11]" spelling="i" type="int" />
+              </UnexposedExpr>
+            </ArraySubscriptExpr>
+            <BinaryOperator col="16" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100225718555" line="29" range.end="[29:21]" range.start="[29:16]" type="int">
+              <IntegerLiteral col="16" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102029685103" line="29" range.end="[29:17]" range.start="[29:16]" type="int" />
+              <UnexposedExpr col="20" def_id="103559319398" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100553180717" line="29" range.end="[29:21]" range.start="[29:20]" spelling="i" type="int">
+                <DeclRefExpr col="20" def_id="103559319398" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102636702413" line="29" range.end="[29:21]" range.start="[29:20]" spelling="i" type="int" />
+              </UnexposedExpr>
+            </BinaryOperator>
+          </BinaryOperator>
+          <BinaryOperator col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100598508814" isAssignment="True" line="30" range.end="[30:75]" range.start="[30:9]" type="int">
+            <DeclRefExpr col="9" def_id="101966439505" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100497810300" line="30" range.end="[30:14]" range.start="[30:9]" spelling="error" type="int" />
+            <CallExpr col="17" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102949364067" line="30" range.end="[30:75]" range.start="[30:17]" ref_id="100855275212" spelling="pthread_create" type="int">
+              <UnexposedExpr col="17" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="104187617606" line="30" range.end="[30:31]" range.start="[30:17]" ref_id="100855275212" spelling="pthread_create" type="int (*)(pthread_t *__restrict, const pthread_attr_t *__restrict, void *(*)(void *), void *__restrict) throw()">
+                <DeclRefExpr col="17" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100701657236" line="30" range.end="[30:31]" range.start="[30:17]" ref_id="100855275212" spelling="pthread_create" type="int (pthread_t *__restrict, const pthread_attr_t *__restrict, void *(*)(void *), void *__restrict) throw()" />
+              </UnexposedExpr>
+              <UnaryOperator col="32" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103799561876" line="30" range.end="[30:41]" range.start="[30:32]" type="pthread_t *">
+                <ParenExpr col="33" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101642705349" line="30" range.end="[30:41]" range.start="[30:33]" type="pthread_t">
+                  <ArraySubscriptExpr col="34" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100621609726" line="30" range.end="[30:40]" range.start="[30:34]" type="pthread_t">
+                    <UnexposedExpr col="34" def_id="103478728560" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103354180036" line="30" range.end="[30:37]" range.start="[30:34]" spelling="tid" type="pthread_t *">
+                      <DeclRefExpr col="34" def_id="103478728560" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103315791877" line="30" range.end="[30:37]" range.start="[30:34]" spelling="tid" type="pthread_t [2]" />
+                    </UnexposedExpr>
+                    <UnexposedExpr col="38" def_id="103559319398" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101542638605" line="30" range.end="[30:39]" range.start="[30:38]" spelling="i" type="int">
+                      <DeclRefExpr col="38" def_id="103559319398" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="104005791324" line="30" range.end="[30:39]" range.start="[30:38]" spelling="i" type="int" />
+                    </UnexposedExpr>
+                  </ArraySubscriptExpr>
+                </ParenExpr>
+              </UnaryOperator>
+              <UnexposedExpr col="43" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101171661532" line="30" range.end="[30:47]" range.start="[30:43]" type="const pthread_attr_t *">
+                <GNUNullExpr col="43" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103429038759" line="30" range.end="[30:47]" range.start="[30:43]" type="long" />
+              </UnexposedExpr>
+              <UnaryOperator col="49" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100481573245" line="30" range.end="[30:57]" range.start="[30:49]" type="void *(*)(void *)">
+                <DeclRefExpr col="50" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103714184497" line="30" range.end="[30:57]" range.start="[30:50]" ref_id="100188559292" spelling="trythis" type="void *(void *)" />
+              </UnaryOperator>
+              <CStyleCastExpr col="59" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102259499755" line="30" range.end="[30:74]" range.start="[30:59]" type="void *">
+                <UnexposedExpr col="67" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102980756739" line="30" range.end="[30:74]" range.start="[30:67]" type="void *">
+                  <ParenExpr col="67" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100459608693" line="30" range.end="[30:74]" range.start="[30:67]" type="int *">
+                    <UnaryOperator col="68" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103646977178" line="30" range.end="[30:73]" range.start="[30:68]" type="int *">
+                      <ArraySubscriptExpr col="69" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103159977418" line="30" range.end="[30:73]" range.start="[30:69]" type="int">
+                        <UnexposedExpr col="69" def_id="100827854070" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103333381643" line="30" range.end="[30:70]" range.start="[30:69]" spelling="a" type="int *">
+                          <DeclRefExpr col="69" def_id="100827854070" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102906910766" line="30" range.end="[30:70]" range.start="[30:69]" spelling="a" type="int [2]" />
+                        </UnexposedExpr>
+                        <UnexposedExpr col="71" def_id="103559319398" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="104288612909" line="30" range.end="[30:72]" range.start="[30:71]" spelling="i" type="int">
+                          <DeclRefExpr col="71" def_id="103559319398" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="104185626310" line="30" range.end="[30:72]" range.start="[30:71]" spelling="i" type="int" />
+                        </UnexposedExpr>
+                      </ArraySubscriptExpr>
+                    </UnaryOperator>
+                  </ParenExpr>
+                </UnexposedExpr>
+              </CStyleCastExpr>
+            </CallExpr>
+          </BinaryOperator>
+          <IfStmt col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101719328783" line="31" range.end="[32:72]" range.start="[31:9]">
+            <BinaryOperator col="13" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101106814416" line="31" range.end="[31:23]" range.start="[31:13]" type="bool">
+              <UnexposedExpr col="13" def_id="101966439505" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100547469134" line="31" range.end="[31:18]" range.start="[31:13]" spelling="error" type="int">
+                <DeclRefExpr col="13" def_id="101966439505" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="104263670892" line="31" range.end="[31:18]" range.start="[31:13]" spelling="error" type="int" />
+              </UnexposedExpr>
+              <IntegerLiteral col="22" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102453086458" line="31" range.end="[31:23]" range.start="[31:22]" type="int" />
+            </BinaryOperator>
+            <CallExpr col="13" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102774306983" line="32" range.end="[32:72]" range.start="[32:13]" ref_id="101349885672" spelling="printf" type="int">
+              <UnexposedExpr col="13" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102716585786" line="32" range.end="[32:19]" range.start="[32:13]" ref_id="101349885672" spelling="printf" type="int (*)(const char *__restrict, ...)">
+                <DeclRefExpr col="13" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103208289525" line="32" range.end="[32:19]" range.start="[32:13]" ref_id="101349885672" spelling="printf" type="int (const char *__restrict, ...)" />
+              </UnexposedExpr>
+              <UnexposedExpr col="20" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100217525686" line="32" range.end="[32:54]" range.start="[32:20]" type="const char *">
+                <StringLiteral col="20" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100344219512" line="32" range.end="[32:54]" range.start="[32:20]" spelling="&quot;\nThread can't be created : [%s]&quot;" type="const char [32]" />
+              </UnexposedExpr>
+              <CallExpr col="56" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102737629817" line="32" range.end="[32:71]" range.start="[32:56]" ref_id="103936728013" spelling="strerror" type="char *">
+                <UnexposedExpr col="56" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102388728176" line="32" range.end="[32:64]" range.start="[32:56]" ref_id="103936728013" spelling="strerror" type="char *(*)(int) throw()">
+                  <DeclRefExpr col="56" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102845566802" line="32" range.end="[32:64]" range.start="[32:56]" ref_id="103936728013" spelling="strerror" type="char *(int) throw()" />
+                </UnexposedExpr>
+                <UnexposedExpr col="65" def_id="101966439505" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103768564027" line="32" range.end="[32:70]" range.start="[32:65]" spelling="error" type="int">
+                  <DeclRefExpr col="65" def_id="101966439505" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101136354822" line="32" range.end="[32:70]" range.start="[32:65]" spelling="error" type="int" />
+                </UnexposedExpr>
+              </CallExpr>
+            </CallExpr>
+          </IfStmt>
+          <UnaryOperator col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="104095495016" line="33" range.end="[33:12]" range.start="[33:9]" type="int">
+            <DeclRefExpr col="9" def_id="103559319398" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101106288623" line="33" range.end="[33:10]" range.start="[33:9]" spelling="i" type="int" />
+          </UnaryOperator>
+        </CompoundStmt>
+      </WhileStmt>
+      <CallExpr col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102015433026" line="36" range.end="[36:31]" range.start="[36:5]" ref_id="103800472036" spelling="pthread_join" type="int">
+        <UnexposedExpr col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102257472977" line="36" range.end="[36:17]" range.start="[36:5]" ref_id="103800472036" spelling="pthread_join" type="int (*)(pthread_t, void **)">
+          <DeclRefExpr col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103600812584" line="36" range.end="[36:17]" range.start="[36:5]" ref_id="103800472036" spelling="pthread_join" type="int (pthread_t, void **)" />
+        </UnexposedExpr>
+        <UnexposedExpr col="18" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101890037478" line="36" range.end="[36:24]" range.start="[36:18]" type="pthread_t">
+          <ArraySubscriptExpr col="18" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100117331705" line="36" range.end="[36:24]" range.start="[36:18]" type="pthread_t">
+            <UnexposedExpr col="18" def_id="103478728560" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103528340716" line="36" range.end="[36:21]" range.start="[36:18]" spelling="tid" type="pthread_t *">
+              <DeclRefExpr col="18" def_id="103478728560" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101553826037" line="36" range.end="[36:21]" range.start="[36:18]" spelling="tid" type="pthread_t [2]" />
+            </UnexposedExpr>
+            <IntegerLiteral col="22" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101227065728" line="36" range.end="[36:23]" range.start="[36:22]" type="int" />
+          </ArraySubscriptExpr>
+        </UnexposedExpr>
+        <UnexposedExpr col="26" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101113550738" line="36" range.end="[36:30]" range.start="[36:26]" type="void **">
+          <GNUNullExpr col="26" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103870432094" line="36" range.end="[36:30]" range.start="[36:26]" type="long" />
+        </UnexposedExpr>
+      </CallExpr>
+      <CallExpr col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102500269436" line="37" range.end="[37:31]" range.start="[37:5]" ref_id="103800472036" spelling="pthread_join" type="int">
+        <UnexposedExpr col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102944929210" line="37" range.end="[37:17]" range.start="[37:5]" ref_id="103800472036" spelling="pthread_join" type="int (*)(pthread_t, void **)">
+          <DeclRefExpr col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101703627904" line="37" range.end="[37:17]" range.start="[37:5]" ref_id="103800472036" spelling="pthread_join" type="int (pthread_t, void **)" />
+        </UnexposedExpr>
+        <UnexposedExpr col="18" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101125289788" line="37" range.end="[37:24]" range.start="[37:18]" type="pthread_t">
+          <ArraySubscriptExpr col="18" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103021003146" line="37" range.end="[37:24]" range.start="[37:18]" type="pthread_t">
+            <UnexposedExpr col="18" def_id="103478728560" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102847540145" line="37" range.end="[37:21]" range.start="[37:18]" spelling="tid" type="pthread_t *">
+              <DeclRefExpr col="18" def_id="103478728560" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101294443792" line="37" range.end="[37:21]" range.start="[37:18]" spelling="tid" type="pthread_t [2]" />
+            </UnexposedExpr>
+            <IntegerLiteral col="22" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103772808067" line="37" range.end="[37:23]" range.start="[37:22]" type="int" />
+          </ArraySubscriptExpr>
+        </UnexposedExpr>
+        <UnexposedExpr col="26" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101322375295" line="37" range.end="[37:30]" range.start="[37:26]" type="void **">
+          <GNUNullExpr col="26" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101175217905" line="37" range.end="[37:30]" range.start="[37:26]" type="long" />
+        </UnexposedExpr>
+      </CallExpr>
+      <CallExpr col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101751659901" line="38" range.end="[38:33]" range.start="[38:5]" ref_id="103890106301" spelling="pthread_mutex_destroy" type="int">
+        <UnexposedExpr col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="103958024160" line="38" range.end="[38:26]" range.start="[38:5]" ref_id="103890106301" spelling="pthread_mutex_destroy" type="int (*)(pthread_mutex_t *) throw()">
+          <DeclRefExpr col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102939352404" line="38" range.end="[38:26]" range.start="[38:5]" ref_id="103890106301" spelling="pthread_mutex_destroy" type="int (pthread_mutex_t *) throw()" />
+        </UnexposedExpr>
+        <UnaryOperator col="27" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="100470944546" line="38" range.end="[38:32]" range.start="[38:27]" type="pthread_mutex_t *">
+          <DeclRefExpr col="28" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102918713114" line="38" range.end="[38:32]" range.start="[38:28]" ref_id="103988418846" spelling="lock" type="pthread_mutex_t" />
+        </UnaryOperator>
+      </CallExpr>
+      <ReturnStmt col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="101619656287" line="39" range.end="[39:13]" range.start="[39:5]">
+        <IntegerLiteral col="12" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp" id="102573289666" line="39" range.end="[39:13]" range.start="[39:12]" type="int" />
+      </ReturnStmt>
+    </CompoundStmt>
+  </FunctionDecl>
+</TranslationUnit>

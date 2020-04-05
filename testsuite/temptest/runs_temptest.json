@@ -1,0 +1,23 @@
+{
+    "runs": {
+        "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build/driver.out": {
+            "" : 1
+        },
+        "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/build/test.out": {
+            "" : 1
+        }
+    },
+    "comments": {
+        "project_name": "temptest",
+        "project_path": "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest",
+        "vocab_loc": "/data/user-home/srijoni/PIN_Tests/smartKT/parsers/comments/program_domain.csv",
+        "problem_domain_loc": "/data/user-home/srijoni/PIN_Tests/smartKT/parsers/comments/ProblemDomains/libpng/problem_domain.txt"
+    },
+    "vcs": {
+        "username": "spandankumarsahu",
+        "oauth": "this_is_fake_oauth_using_real_one_in_server",
+        "repo": "glennrp/libpng",
+        "project_name": "libpng",
+        "fresh_fetch": true
+    }
+}

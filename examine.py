@@ -43,7 +43,7 @@ COMMENTS_EXTENSION = "_comments.xml"
 VCS_EXTENSION = "_vcs.xml"
 
 # FOLDERS
-COMMENTS_FOLDER = 'parsers/comments'
+COMMENTS_FOLDER = os.path.join('parsers', 'comments')
 PROJECTS_FOLDER = 'projects'
 OUTPUTS_FOLDER = 'outputs'
 
@@ -200,18 +200,18 @@ def generate_dynamic_info(path, test, runidx, runNum):
     print('Dynamic Done!')
     return 'dynamic.xml'
 
-def generate_comments_info(project_name, vocab_file, problem_domain_file, output_file):
+def generate_comments_info(project_name, project_path, vocab_file, problem_domain_file, output_file):
     # Return relative path (wrt to this file) to the comments' XML output
     print('Starting Comments!')
 
     # Need to use the exact source locations because comments' location gets mangled
     os.system('python3 '+ os.path.join(COMMENTS_FOLDER, "GenerateCommentsXMLForAFolder.py") + \
-        " " + os.path.abspath(os.path.join(PROJECTS_FOLDER, project_name)) + " " \
+        " " + os.path.abspath(project_path) + " " \
         " " + os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name)) + " " + vocab_file + \
         " " + problem_domain_file + " " + project_name)
 
     os.system('python3 ' + os.path.join(COMMENTS_FOLDER, "MergeAllCommentsXML.py") + " " + \
-        os.path.abspath(os.path.join(PROJECTS_FOLDER, project_name)) + " " + \
+        os.path.abspath(project_path) + " " + \
         os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name)) + "  " + output_file)
     print('Comments Done!')
 
@@ -280,7 +280,11 @@ for exe in runs:
 if CALLCOMM:
     # comments_config
     cc = jsonInfo['comments']
-    generate_comments_info(cc['project_name'], cc['vocab_loc'], \
+    if 'project_path' not in cc:
+        project_path = os.path.join(PROJECTS_FOLDER, cc['project_name'])
+    else:
+        project_path = cc['project_path']
+    generate_comments_info(cc['project_name'], project_path, cc['vocab_loc'], \
     cc['problem_domain_loc'], os.path.join(outfolder, FINAL_FILE+COMMENTS_EXTENSION))
 
 if CALLVCS:

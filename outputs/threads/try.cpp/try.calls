@@ -1,0 +1,17 @@
+# FILENAME	LINENUM	FUNCNAME	CALLNODEID	CALLEXPR
+/usr/local/include/bits/std_abs.h	56	__builtin_labs	202756573608	__builtin_labs ( __i )
+/usr/local/include/bits/std_abs.h	61	__builtin_llabs	201158899834	__builtin_llabs ( __x )
+/usr/local/include/bits/std_abs.h	71	__builtin_fabs	203147990388	__builtin_fabs ( __x )
+/usr/local/include/bits/std_abs.h	75	__builtin_fabsf	203872110011	__builtin_fabsf ( __x )
+/usr/local/include/bits/std_abs.h	79	__builtin_fabsl	201067397099	__builtin_fabsl ( __x )
+/usr/local/include/cstdlib	177	ldiv	201606337338	ldiv ( __i , __j )
+/usr/local/include/cstdlib	214	_ZN7lldiv_tC1Ev	200557116701	__q
+/usr/include/pthread.h	555		202016754938	__cancel_routine ( __cancel_arg )
+/usr/include/pthread.h	557	pthread_setcanceltype	201448667124	pthread_setcanceltype ( PTHREAD_CANCEL_DEFERRED , & __cancel_type )
+/usr/include/pthread.h	559	pthread_setcanceltype	200062526927	pthread_setcanceltype ( __cancel_type , 0 )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	6	_ZN15pthread_mutex_tC1Ev	202080593089	lock
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	10	printf	202468517075	printf ( "\n Came here with arg = %d\n" , * ( ( int * ) arg ) )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	12	pthread_mutex_lock	200831778623	pthread_mutex_lock ( & lock )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	14	printf	202075259421	printf ( "\n Job %d has started\n" , counter )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	16	printf	202931910402	printf ( "\n Job %d has finished\n" , counter )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	17	pthread_mutex_unlock	202943505317	pthread_mutex_unlock ( & lock )

@@ -1,0 +1,10 @@
+# FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	_ZN13DerivedClass15helloEi	0xc	i	200915542573	int	4	201927905176
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	_ZN13DerivedClass15helloEd	0x10	z	201506701755	double	8	200473361045
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	main	0x24	x	203333779368	struct foo_str	12	200638077034
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	main	0x30	y	201268141368	struct foo_str	12	200638077034
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	main	0x70	snake	203516376093	Snake	64	200638077034
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	main	0x18	p	203022861206	ParentClass *	8	200638077034
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	main	0x90	d	203097467584	DerivedClass1	32	200638077034
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	_Z3foo7foo_str	0x20	x	101767916124	struct foo_str	12	100633315069
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	_Z23accessFriendClassGlobalv	0x20	p	104083697463	ParentClass	32	102867305989

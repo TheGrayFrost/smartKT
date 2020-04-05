@@ -1,0 +1,24 @@
+/usr/bin/cmake3 -S/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads -B/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake3 -E cmake_progress_start /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build/CMakeFiles /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[1]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build'
+make -f CMakeFiles/thread.dir/build.make CMakeFiles/thread.dir/depend
+make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build'
+cd /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build && /usr/bin/cmake3 -E cmake_depends "Unix Makefiles" /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build/CMakeFiles/thread.dir/DependInfo.cmake --color=
+Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build/CMakeFiles/thread.dir/DependInfo.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build/CMakeFiles/thread.dir/depend.internal".
+Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build/CMakeFiles/thread.dir/depend.internal".
+Scanning dependencies of target thread
+make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build'
+make -f CMakeFiles/thread.dir/build.make CMakeFiles/thread.dir/build
+make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build'
+[ 33%] Building CXX object CMakeFiles/thread.dir/main.cpp.o
+/opt/rh/devtoolset-8/root/usr/bin/c++    -std=c++17 -gdwarf-4   -o CMakeFiles/thread.dir/main.cpp.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp
+[ 66%] Building CXX object CMakeFiles/thread.dir/try.cpp.o
+/opt/rh/devtoolset-8/root/usr/bin/c++    -std=c++17 -gdwarf-4   -o CMakeFiles/thread.dir/try.cpp.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp
+[100%] Linking CXX executable thread
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/thread.dir/link.txt --verbose=1
+/opt/rh/devtoolset-8/root/usr/bin/c++  -std=c++17 -gdwarf-4  -L/usr/lib64/mysql -L/usr/lib64/ -rdynamic CMakeFiles/thread.dir/main.cpp.o CMakeFiles/thread.dir/try.cpp.o  -o thread -lpthread 
+make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build'
+[100%] Built target thread
+make[1]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build'
+/usr/bin/cmake3 -E cmake_progress_start /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build/CMakeFiles 0

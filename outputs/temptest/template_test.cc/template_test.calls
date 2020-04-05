@@ -1,0 +1,5 @@
+# FILENAME	LINENUM	FUNCNAME	CALLNODEID	CALLEXPR
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	41	_ZN5DummyIifEC1Eif	202314806913	local_p ( 3 , 4.0 )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	48	_ZN5DummyIifE13member_methodERKf	200983377520	local_p . member_method ( 2 )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	53	_ZN5DummyIfiEC1Efi	203060845773	isThis ( 3.0 , 4 )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	54	_ZN5DummyIfiE7realityEv	202628287227	isThis . reality ( )

@@ -1,0 +1,4 @@
+# FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	main	0x4	i	103559319398	int	4	103347705612
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	main	0x8	error	101966439505	int	4	103347705612
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	main	0x10	a	100827854070	int [2]	4	103347705612

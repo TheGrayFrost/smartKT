@@ -1,0 +1,4 @@
+# FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	_Z7trythisPv	0x18	arg	202696264120	void *	8	203894552649
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	_Z7trythisPv	0x8	i	200484785457	unsigned long	8	203894552649
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	_Z7trythisPv	0x10	r	201250229434	unsigned long	8	203894552649
