@@ -17,7 +17,7 @@ Note: For the `testsuite` the runs.json have been placed in the folder itself (e
 - [ ] System benchmarking for large projects
 - [X] Check parallel execution for dynamic runtimes
 - [ ] Provide option for choosing what to run (static/dynamic/comments/vcs)
-- [ ] start vcs before initialize (if possible!), takes way long time though! 
+- [ ] Start vcs before initialize (if possible!), takes way long time though! 
 
 
 # KNOWN ISSUES
