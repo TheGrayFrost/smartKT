@@ -6,6 +6,7 @@
 !parsers/
 !PIN/
 !testsuite/
+!projects/
 !outputs/
 !sample_runs.json
 !.gitignore

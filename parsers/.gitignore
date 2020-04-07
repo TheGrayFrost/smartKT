@@ -13,3 +13,4 @@
 !.gitignore
 !deflocation.py
 !funcs.py
+!vcs.py
