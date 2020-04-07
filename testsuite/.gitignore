@@ -1,0 +1,9 @@
+/*
+.*
+*.o
+/*/build/
+!extern/
+!inherit/
+!threads/
+!temptest/
+!.gitignore

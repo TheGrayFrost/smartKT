@@ -10,10 +10,12 @@
 8. Run `./examine.py runs.json`
 9. Enjoy!
 
+Note: For the `testsuite` the runs.json have been placed in the folder itself (e.g. `testsuite/extern/ contains runs_extern.json`)
+
 # TODO
 - [ ] Parallelize comments analysis part
 - [ ] System benchmarking for large projects
-- [ ] Check parallel execution for dynamic runtimes
+- [X] Check parallel execution for dynamic runtimes
 - [ ] Provide option for choosing what to run (static/dynamic/comments/vcs)
 - [ ] start vcs before initialize (if possible!), takes way long time though! 
 

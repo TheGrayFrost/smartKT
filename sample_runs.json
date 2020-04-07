@@ -1,7 +1,8 @@
 {
     "runs": {
-        "/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/libpng/build/pngtest": {
-            "/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/libpng/pngtest.png" : 1 
+        "/data/user-home/srijoni/PIN_Tests/smartKT/projects/libpng/build/pngtest": {
+            "/data/user-home/srijoni/PIN_Tests/smartKT/projects/libpng/pngtest.png" : 1,
+            "/data/user-home/srijoni/PIN_Tests/smartKT/projects/libpng/pngbar.png": 1
         }
     },
     "comments": {
