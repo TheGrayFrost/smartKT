@@ -132,13 +132,21 @@ def generate_static_info(path):
             os.system(' '.join(cmd))
 
             # Generate func, calls, xml - file number prepended to all nodeids to make unique
-            for clangexe, output_extension in zip(CLANGTOOLS, CLANG_OUTPUTEXT):
-                os.system (' '.join(['parsers/'+clangexe, str(num), 
-                    mainfname+'.ast', '>', stripop + output_extension]))
-                logstr += ('output :' + stripop + output_extension + '\n')
+            # for clangexe, output_extension in zip(CLANGTOOLS, CLANG_OUTPUTEXT):
+            #     os.system (' '.join(['parsers/'+clangexe, str(num),
+            #         mainfname+'.ast', '>', stripop + output_extension]))
+            #     logstr += ('output :' + stripop + output_extension + '\n')
+
+            os.system(' '.join(["parsers/ast2xml", str(num),
+                mainfname+".ast", f, ">", stripop+CLANG_EXTENSION ]))
+            logstr += ("output :" + stripop + CLANG_EXTENSION + "\n")
+
+            os.system(' '.join(["parsers/calls", str(num),
+                mainfname+".ast", ">", stripop+CALL_EXTENSION ]))
+            logstr += ("output :" + stripop + CALL_EXTENSION + "\n")
 
             emit_funcargs(stripop + CLANG_EXTENSION, stripop + SIGN_EXTENSION)
-            logstr += ('output :' + stripop + output_extension + '\n')
+            logstr += ('output :' + stripop + SIGN_EXTENSION + '\n')
 
             # Move the ast into outputs
             os.system ('mv ' + mainfname + '.ast ' + outpath)

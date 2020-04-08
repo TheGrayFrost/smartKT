@@ -13,12 +13,13 @@
 
 #include "ctype.h"
 
-#define DEBUG true
+#define DEBUG false
 
 #define IDSIZE 11   // normal unsigned int has 10 digits.. we are padding with one extra zero
 std::string FILEID; // FILEID passed to ast2xml
 
-CXTranslationUnit tu; // declared global for accessing the source when needed
+CXTranslationUnit tu, macro_tu; // declared global for accessing the source when needed
+int preprocessing_phase;
 
 inline bool operator==(const CXCursor & x, const CXCursor & y) {
     return clang_equalCursors(x, y) != 0;
@@ -463,7 +464,11 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
   CXCursorKind cursorKind = clang_getCursorKind(cursor);
   CXString kindName = clang_getCursorKindSpelling(cursorKind);
   std::string xmlNodeName(clang_getCString(kindName));
-  
+
+  if( preprocessing_phase && ! clang_isPreprocessing(cursorKind) ) {
+    return CXChildVisit_Continue;
+  }
+
   xmlNodePtr cur_ptr = xmlNewChild(parentData->xml_ptr, nullptr, 
     BAD_CAST camelCaseSanitize(xmlNodeName).c_str(), nullptr);  
   clang_disposeString(kindName);
@@ -539,10 +544,11 @@ void add_stub_nodes() {
     }
 }
 
-int main(int argc, char** argv) {
 
-  if(argc < 3) {
-    fprintf(stderr, "Usage : %s <file_num> <ast_file>\n", argv[0]);
+int main( int argc, char** argv ) {
+
+  if( argc != 4 ) {
+    fprintf(stderr, "Usage : %s <file_num> <ast_file> <source_file>\n", argv[0]);
     return -1;
   }
 
@@ -553,6 +559,14 @@ int main(int argc, char** argv) {
 
   if(!tu) {
     fprintf(stderr, "Error while reading / parsing %s\n", argv[2]);
+    return -1;
+  }
+
+  CXIndex macro_index = clang_createIndex(0, 0);
+  macro_tu = clang_parseTranslationUnit(macro_index, argv[3],
+		  0, 0, 0, 0, CXTranslationUnit_DetailedPreprocessingRecord);
+  if( !macro_tu ) {
+    fprintf(stderr, "Error while reading / parsing %s\n", argv[3]);
     return -1;
   }
 
@@ -572,8 +586,14 @@ int main(int argc, char** argv) {
   /* Get root cursor. */
   CXCursor rootCursor  = clang_getTranslationUnitCursor(tu);
 
+  CXCursor macro_rootCursor  = clang_getTranslationUnitCursor( macro_tu );
+
   trav_data_t root_data{clang_getNullLocation(), root_node};
 
+  preprocessing_phase = 1;
+  clang_visitChildren(macro_rootCursor, visitor, &root_data);
+
+  preprocessing_phase = 0;
   clang_visitChildren(rootCursor, visitor, &root_data);
   add_stub_nodes();
 
@@ -584,8 +604,10 @@ int main(int argc, char** argv) {
   xmlFreeDoc(doc);
 
   /* Free global variables that may have been allocated by libclang. */
-  clang_disposeTranslationUnit(tu);
-  clang_disposeIndex(index);
+  clang_disposeTranslationUnit( macro_tu );
+  clang_disposeIndex( macro_index );
+  clang_disposeTranslationUnit( tu );
+  clang_disposeIndex( index );
 
   /* Free the global variables that may have been allocated by the parser. */
   xmlCleanupParser();
