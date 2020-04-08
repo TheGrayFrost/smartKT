@@ -27,7 +27,7 @@ if __name__ == "__main__" :
     parser.add_argument("static_xml", type=str, help="static files")
     parser.add_argument("output", type=str, help="output file")
 
-    try :
+    try:
         args = parser.parse_args()
     except Exception as e :
         parser.print_help()

@@ -120,7 +120,7 @@ def generate_static_info(path):
             if objectfile is None:
                 objectfile = cmd[cmd.index('-o')+1]
             if not os.path.isabs(objectfile):
-                objectfile = os.path.join(instr['directory'], objectfile)
+                objectfile = os.path.abspath(os.path.join(instr['directory'], objectfile))
 
             # Update the command to emit ast
             cmd[0] = clangv + ' -emit-ast'

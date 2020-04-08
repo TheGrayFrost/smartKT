@@ -3,4 +3,5 @@
 *.o
 /*/build/
 !mrfs/
+!libpng/
 !.gitignore
