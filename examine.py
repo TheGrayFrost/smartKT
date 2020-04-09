@@ -20,6 +20,8 @@ import json
 import parsers.imp_ddx as ddx
 import parsers.vcs as vcs
 
+from parsers.uniquify import uniquify
+
 # For debug, set true
 DEBUG = False
 
@@ -142,6 +144,8 @@ def combine_all_clang(depmap):
     finalxmlstr = minidom.parseString(ET.tostring(patched_xml)).toprettyxml(indent='   ')
     with open(CURFINALFILE + STATIC_EXTENSION, 'w') as f:
         f.write(finalxmlstr)
+
+    uniquify(CURFINALFILE+STATIC_EXTENSION, CURFINALFILE+STATIC_EXTENSION)
     print ('\nWritten interlinked combined clang for ' + executable)
 
         
