@@ -138,11 +138,8 @@ def generate_static_info(path):
             #     logstr += ('output :' + stripop + output_extension + '\n')
 
             os.system(' '.join(["parsers/ast2xml", str(num),
-                mainfname+".ast", f, ">", stripop+CLANG_EXTENSION ]))
+                mainfname+".ast", f, stripop+CALL_EXTENSION, stripop+CLANG_EXTENSION ]))
             logstr += ("output :" + stripop + CLANG_EXTENSION + "\n")
-
-            os.system(' '.join(["parsers/calls", str(num),
-                mainfname+".ast", ">", stripop+CALL_EXTENSION ]))
             logstr += ("output :" + stripop + CALL_EXTENSION + "\n")
 
             emit_funcargs(stripop + CLANG_EXTENSION, stripop + SIGN_EXTENSION)

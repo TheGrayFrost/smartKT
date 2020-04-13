@@ -1,11 +1,13 @@
 #include <clang-c/Index.h>
 #include <iostream>
+#include <fstream>
 #include <sstream>
 #include <unordered_set>
 
 #include <libxml/parser.h>
 #include <libxml/tree.h>
 
+#include <utility>
 #include <algorithm>
 #include <string>
 #include <cstring>
@@ -18,7 +20,7 @@
 #define IDSIZE 11   // normal unsigned int has 10 digits.. we are padding with one extra zero
 std::string FILEID; // FILEID passed to ast2xml
 
-CXTranslationUnit tu, macro_tu; // declared global for accessing the source when needed
+CXTranslationUnit tu, source_tu; // declared global for accessing the source when needed
 int preprocessing_phase;
 
 inline bool operator==(const CXCursor & x, const CXCursor & y) {
@@ -67,6 +69,71 @@ std::string makeUniqueID (unsigned id)
   std::string p = std::to_string(id);
   p = FILEID + std::string(IDSIZE - p.length(), '0') + p;
   return p;
+}
+
+# define CALLS_FILEHEADER "# FILENAME\tLOCATION\tFUNCNAME\tCALLNODEID\n"
+std::ofstream calls_file;
+
+CXChildVisitResult get_call_expressions
+(CXCursor cursor, CXCursor parent, CXClientData) {
+
+  static std::string const delim = "\t";
+
+  CXCursorKind cursorKind = clang_getCursorKind(cursor);
+
+  // Remove system headers' location
+  CXSourceLocation location = clang_getCursorLocation(cursor);
+  if (clang_Location_isInSystemHeader(location)) {
+  	return CXChildVisit_Continue;
+  }
+
+  if( cursorKind == CXCursor_CallExpr ) {
+    CXCursor refc = clang_getCursorReferenced(cursor);
+    if( !clang_Cursor_isNull(refc) ) {
+
+      /* Emit source location. */
+      // CXSourceLocation location = clang_getCursorLocation( cursor );
+      CXFile file;
+      CXString fileName;
+      unsigned line, column;
+      clang_getSpellingLocation(location, &file, &line, &column, nullptr);
+      fileName = clang_getFileName(file);
+      calls_file << clang_getCString(fileName);
+      // calls_file << delim << line;
+
+      CXSourceRange Range = clang_getCursorExtent(cursor);
+      CXSourceLocation Rstart = clang_getRangeStart(Range);
+      CXSourceLocation Rend = clang_getRangeEnd(Range);
+
+      std::pair<unsigned, unsigned> rstart, rend;
+      clang_getSpellingLocation(Rstart, nullptr, &(rstart.first), &(rstart.second), nullptr);
+      clang_getSpellingLocation(Rend, nullptr, &(rend.first), &(rend.second), nullptr);
+
+      calls_file << delim << rstart.first << ":" << rstart.second
+        << "::" << rend.first << ":" << rend.second;
+
+      /* Get source and linkage identifiers. */
+      CXString mangling = clang_Cursor_getMangling(refc);
+      // CXString usr = clang_getCursorUSR(refc);
+
+      calls_file << delim << clang_getCString(mangling)
+                << delim << makeUniqueID(clang_hashCursor(cursor));
+                // << delim << clang_getCString(usr);
+
+      // if( clang_Cursor_isDynamicCall(cursor) ) {
+      //   std::cout << delim << "Dynamic";
+      // }
+
+      calls_file << "\n";
+
+      clang_disposeString(mangling);
+      // clang_disposeString(usr);
+      clang_disposeString( fileName );
+    }
+  }
+
+  clang_visitChildren(cursor, get_call_expressions, nullptr);
+  return CXChildVisit_Continue;
 }
 
 // prints tokenwise information about a cursor
@@ -547,14 +614,14 @@ void add_stub_nodes() {
 
 int main( int argc, char** argv ) {
 
-  if( argc != 4 ) {
-    fprintf(stderr, "Usage : %s <file_num> <ast_file> <source_file>\n", argv[0]);
+  if( argc != 6 ) {
+    fprintf(stderr, "Usage : %s <file_num> <ast_file> <source_file> <calls_file> <xml_file>\n", argv[0]);
     return -1;
   }
 
   FILEID = std::string(argv[1]);
 
-  CXIndex index = clang_createIndex(0, 1);
+  CXIndex index = clang_createIndex(0, 0);
   tu = clang_createTranslationUnit(index, argv[2]);
 
   if(!tu) {
@@ -562,10 +629,9 @@ int main( int argc, char** argv ) {
     return -1;
   }
 
-  CXIndex macro_index = clang_createIndex(0, 0);
-  macro_tu = clang_parseTranslationUnit(macro_index, argv[3],
+  source_tu = clang_parseTranslationUnit(index, argv[3],
 		  0, 0, 0, 0, CXTranslationUnit_DetailedPreprocessingRecord);
-  if( !macro_tu ) {
+  if( !source_tu ) {
     fprintf(stderr, "Error while reading / parsing %s\n", argv[3]);
     return -1;
   }
@@ -584,28 +650,32 @@ int main( int argc, char** argv ) {
     nullptr, BAD_CAST "smartkt.dtd");
 
   /* Get root cursor. */
-  CXCursor rootCursor  = clang_getTranslationUnitCursor(tu);
+  CXCursor root_cursor  = clang_getTranslationUnitCursor(tu);
 
-  CXCursor macro_rootCursor  = clang_getTranslationUnitCursor( macro_tu );
+  CXCursor source_root_cursor  = clang_getTranslationUnitCursor( source_tu );
 
   trav_data_t root_data{clang_getNullLocation(), root_node};
 
   preprocessing_phase = 1;
-  clang_visitChildren(macro_rootCursor, visitor, &root_data);
+  clang_visitChildren(source_root_cursor, visitor, &root_data);
 
   preprocessing_phase = 0;
-  clang_visitChildren(rootCursor, visitor, &root_data);
+  clang_visitChildren(root_cursor, visitor, &root_data);
   add_stub_nodes();
 
   /* Dump document to stdio or redirect to file */
-  xmlSaveFormatFileEnc("-", doc, "UTF-8", 1);
+  xmlSaveFormatFileEnc(argv[5], doc, "UTF-8", 1);
 
   /* Free the document */
   xmlFreeDoc(doc);
 
+  calls_file.open(argv[4]);
+  calls_file << CALLS_FILEHEADER;
+  clang_visitChildren(root_cursor, get_call_expressions, nullptr);
+  calls_file.close();
+
   /* Free global variables that may have been allocated by libclang. */
-  clang_disposeTranslationUnit( macro_tu );
-  clang_disposeIndex( macro_index );
+  clang_disposeTranslationUnit( source_tu );
   clang_disposeTranslationUnit( tu );
   clang_disposeIndex( index );
 
