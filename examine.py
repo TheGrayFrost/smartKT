@@ -74,6 +74,9 @@ def combine_all_clang(depmap):
     # list of exe/so roots
     rootlist = []
 
+    # list of .address files
+    address_files = []
+
     headerWrite = [False, False, False]
     for num, (exe, flist) in enumerate(depmap):
         exenamestrip = exe[exe.rfind('/')+1:]
@@ -136,7 +139,9 @@ def combine_all_clang(depmap):
 
         rootlist.append(root)
 
-        os.system('cp ' + exestrip + ADDRESS_EXTENSION + ' ' + foutfolder+'/')
+        address_files.append(exestrip+ADDRESS_EXTENSION)
+
+        os.system('ln -sf ' + exestrip + ADDRESS_EXTENSION + ' ' + foutfolder+'/')
         print ('Generated addresses for ' + exenamestrip)
         
     patched_xml = ddx.patch_external_def_ids(rootlist)
@@ -145,7 +150,9 @@ def combine_all_clang(depmap):
     with open(CURFINALFILE + STATIC_EXTENSION, 'w') as f:
         f.write(finalxmlstr)
 
-    uniquify(CURFINALFILE+STATIC_EXTENSION, CURFINALFILE+STATIC_EXTENSION)
+    uniquify(CURFINALFILE, STATIC_EXTENSION, CALL_EXTENSION,
+        SIGN_EXTENSION, OFFSET_EXTENSION, address_files)
+
     print ('\nWritten interlinked combined clang for ' + executable)
 
         
