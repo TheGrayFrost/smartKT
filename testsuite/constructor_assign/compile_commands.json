@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/srijoni/SMARTKT_HANDOVER/smartKT/testsuite/Constructor_assign",
-  "command": "/usr/bin/c++     -gdwarf-4   -o CMakeFiles/assign.dir/assign.cpp.o -c /home/srijoni/SMARTKT_HANDOVER/smartKT/testsuite/Constructor_assign/assign.cpp",
-  "file": "/home/srijoni/SMARTKT_HANDOVER/smartKT/testsuite/Constructor_assign/assign.cpp"
-}
-]
