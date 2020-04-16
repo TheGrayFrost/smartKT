@@ -8,8 +8,8 @@
 #include <set>
 #include <cstdlib>
 
-#define DEBUG false
-#define VARSEARCH false
+#define DEBUG true
+#define VARSEARCH true
 
 // parse with new header
 // emit with new header
@@ -192,11 +192,17 @@ std::map <ADDRINT, variable>::iterator lookup (std::map <ADDRINT, variable>& mym
 	if (!mymap.empty() && (glob == 1 || it != mymap.end()))
 	{
 		if (DEBUG)
-			outp << "\n\nADD: " << std::hex << it->first;
+		{
+			outp << "\n\nSEARCHING FOR: 0x" << std::hex << addr << std::dec << " INITADD: ";
+			if (it != mymap.end()) 
+				outp << "0x" << std::hex << it->first << std::dec;
+			else
+				outp << "MAPEND";
+		}
 		if (glob == 1 && (it == mymap.end() || it->first != addr))
 			it--;
 		if (DEBUG)
-			outp << " " << std::hex << it->first << " ADD\n" << std::dec;
+			outp << " POSTUPDATE: 0x" << std::hex << it->first << std::dec << "\n";
 
 		// it = std::prev(it);
 		ADDRINT diff = it->first - addr;
@@ -207,7 +213,7 @@ std::map <ADDRINT, variable>::iterator lookup (std::map <ADDRINT, variable>& mym
 		if (r != -1)
 			size *= r;
 		if (DEBUG)
-			outp << "GLOB: " << glob << " SIZE: " << size << " DIFF: " << diff << " ADDR: " << addr << " EST: " << it->first << "\n\n";
+			outp << "GLOB: " << glob << " SIZE: " << size << " DIFF: " << diff << "\n\n";
 		// if (diff != 0)
 		// 	outp << "\n\nADD: " << std::hex << it->first << " " << addr << std::dec << " << DIFF: " << diff << " Size: " << size << "\n\n";
 		glob = r; // -1 if no elements

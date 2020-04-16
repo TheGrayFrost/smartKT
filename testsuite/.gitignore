@@ -6,4 +6,5 @@
 !inherit/
 !threads/
 !temptest/
+!simple/
 !.gitignore

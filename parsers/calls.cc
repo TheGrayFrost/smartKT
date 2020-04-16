@@ -22,7 +22,7 @@ CXChildVisitResult get_call_expressions
 
   if( cursorKind == CXCursor_CallExpr ) {
     CXCursor refc = clang_getCursorReferenced(cursor);
-    if( !clang_Cursor_isNull(refc) ) {
+    if(!clang_Cursor_isNull(refc) ) {
 
       /* Emit source location. */
       CXSourceLocation location = clang_getCursorLocation( cursor );
@@ -46,8 +46,6 @@ CXChildVisitResult get_call_expressions
       CXToken* Tokens;
       unsigned NumTokens;
       CXSourceRange Range = clang_getCursorExtent(cursor);
-      CXSourceLocation Rstart = clang_getRangeStart(Range);
-      CXSourceLocation Rend = clang_getRangeEnd(Range);
 
       clang_tokenize(tu, Range, &Tokens, &NumTokens);
       for (unsigned i = 0; i < NumTokens; ++i) {

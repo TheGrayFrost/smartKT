@@ -27,7 +27,7 @@ FOLDER = 'outputs'
 # tools
 CLANGTOOLS = ['ast2xml', 'calls']
 DWARFTOOL = 'dwxml.py'
-COMBINER = 'ddx.py'
+COMBINER = 'saved_ddx.py'
 PROJPARSER = 'project_parser.py'
 
 # output extensions
@@ -74,7 +74,7 @@ def init(path):
 def generate_static_info(path):
     global outfolder
 
-    # Build the AST parser
+    # Build the clang tools
     os.system('cd parsers && make all')
 
     # Get compile instructions using project_parser.py
@@ -86,10 +86,20 @@ def generate_static_info(path):
     compile_instrs = dependencies['compile_instrs']
 
     # for num, instr in enumerate(instrs, 1):
-    def generate_static_info_for_tu(arg) :
+    def generate_static_info_for_tu(arg):
         num, fname = arg
         instr = compile_instrs[fname]
         f = instr['file']
+
+        # if file's full path is project/exp/src/alpha.cc
+        # path would be projects/exp
+        # outfolder will be outputs/exp
+        # mainfname will be alpha
+        # relpath will be src/alpha.cc
+        # i.e. the folder name alpha.cc shall contain files generated for the file alpha.cc
+        # outpath, thus will be outputs/exp/src/alpha.cc
+        # stripop will be: outputs/exp/src/alpha.cc/alpha
+        # so, all extensions are appended to stripop, eg: outputs/exp/src/alpha.cc/alpha_clang.xml
         mainfname = f[f.rfind('/')+1:f.rfind('.')]
         relpath = f[len(path)+1:]
         outpath = os.path.join(outfolder, relpath)
@@ -109,7 +119,7 @@ def generate_static_info(path):
         logstr = '\n(%2d/%2d): Generated info for ' % (num, len(compile_instrs)) + relpath + '\n'
 
         try:
-            # Select clang/Clang++ based on whether it is C/C++
+            # Select clang/clang++ based on whether it is C/C++
             cmd = instr['command'].split(' ')
             clangv = 'clang++ -std=c++11'
             if f.split('.')[-1] in C_EXTENSION:
@@ -131,14 +141,14 @@ def generate_static_info(path):
 
             os.system(' '.join(cmd))
 
-            # Generate func, calls, xml - file number prepended to all nodeids to make unique
+            # Generate clang xml and calls - file number prepended to all nodeids to make unique
             for clangexe, output_extension in zip(CLANGTOOLS, CLANG_OUTPUTEXT):
                 os.system (' '.join(['parsers/'+clangexe, str(num), 
-                    mainfname+'.ast', '>', stripop + output_extension]))
+                    mainfname+'.ast', path, '>', stripop + output_extension]))
                 logstr += ('output :' + stripop + output_extension + '\n')
 
             emit_funcargs(stripop + CLANG_EXTENSION, stripop + SIGN_EXTENSION)
-            logstr += ('output :' + stripop + output_extension + '\n')
+            logstr += ('output :' + stripop + SIGN_EXTENSION + '\n')
 
             # Move the ast into outputs
             os.system ('mv ' + mainfname + '.ast ' + outpath)
@@ -175,7 +185,7 @@ def generate_static_info(path):
             print(logstr, end='')
 
     with ThreadPoolExecutor(max_workers = MAX_WORKERS) as pool :
-        pool.map( generate_static_info_for_tu, enumerate(compile_instrs, 1) )
+        pool.map(generate_static_info_for_tu, enumerate(compile_instrs, 1))
 
 
 if not os.listdir(os.path.join("parsers", "pyelftools")):
