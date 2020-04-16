@@ -7,7 +7,6 @@
 #include <libxml/parser.h>
 #include <libxml/tree.h>
 
-#include <utility>
 #include <algorithm>
 #include <string>
 #include <cstring>
@@ -105,12 +104,10 @@ CXChildVisitResult get_call_expressions
       CXSourceLocation Rstart = clang_getRangeStart(Range);
       CXSourceLocation Rend = clang_getRangeEnd(Range);
 
-      std::pair<unsigned, unsigned> rstart, rend;
-      clang_getSpellingLocation(Rstart, nullptr, &(rstart.first), &(rstart.second), nullptr);
-      clang_getSpellingLocation(Rend, nullptr, &(rend.first), &(rend.second), nullptr);
-
-      calls_file << delim << rstart.first << ":" << rstart.second
-        << "::" << rend.first << ":" << rend.second;
+      clang_getSpellingLocation(Rstart, nullptr, &line, &column, nullptr);
+      calls_file << delim << line << ":" << column;
+      clang_getSpellingLocation(Rend, nullptr, &line, &column, nullptr);
+      calls_file << "::" << line << ":" << column;
 
       /* Get source and linkage identifiers. */
       CXString mangling = clang_Cursor_getMangling(refc);

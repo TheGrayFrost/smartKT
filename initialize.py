@@ -142,6 +142,9 @@ def generate_static_info(path):
             logstr += ("output :" + stripop + CLANG_EXTENSION + "\n")
             logstr += ("output :" + stripop + CALL_EXTENSION + "\n")
 
+            os.system(' '.join(["parsers/calls", stripop + CALL_EXTENSION]))
+            logstr += ("output :" + stripop + CALL_EXTENSION + ".tokens" + "\n")
+
             emit_funcargs(stripop + CLANG_EXTENSION, stripop + SIGN_EXTENSION)
             logstr += ('output :' + stripop + SIGN_EXTENSION + '\n')
 
