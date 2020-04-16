@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/srijoni/SMARTKT_HANDOVER/smartKT/testsuite/Constructor_assign/assign.cpp
+iostream
+-
+cstdlib
+-
+cstring
+-
+

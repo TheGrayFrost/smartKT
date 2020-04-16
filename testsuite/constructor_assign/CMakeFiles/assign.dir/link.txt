@@ -1,0 +1,1 @@
+/usr/bin/c++   -gdwarf-4   CMakeFiles/assign.dir/assign.cpp.o  -o assign -rdynamic 

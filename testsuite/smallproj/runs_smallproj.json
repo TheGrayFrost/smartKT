@@ -1,0 +1,10 @@
+{
+    "runs": {
+        "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/build/ptrtest": {
+            "" : 1 
+        },
+        "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/smallproj/build/ptrtestC": {
+            "" : 1 
+        }
+    }
+}
