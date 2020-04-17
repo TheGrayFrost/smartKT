@@ -12,12 +12,14 @@ private:
 
 struct foo_str foo(struct foo_str x);  /* An example function declaration */
 
+namespace nonstd {
+
 /* CLASSES */
 class ParentClass{
   int x, y, z;
-  static int a;
+  static int alpha, beta;
 public:
-  const static int b;
+  const static int gamma;
   int c;
   float d;
   enum days{sun, mon, tue, wed, thrus, fri, sat};
@@ -26,7 +28,7 @@ public:
     float f;
   };
   virtual void hello(){
-    this->x = y + ParentClass::a;
+    this->x = y + ParentClass::alpha;
   }
   friend class ParentClass1;
   friend void accessFriendClassGlobal();
@@ -36,7 +38,7 @@ public:
 class DerivedClass1: public ParentClass{
 public:
   void hello(){
-    this->c += ParentClass::b;
+    this->c += ParentClass::gamma;
     (this->c)++;
   }
 
@@ -107,6 +109,8 @@ protected:
 class Snake : protected Animal, Reptile, ParentClass {
 public:
   void crawl();
+};
+
 };
 
 #endif // FOO_H_

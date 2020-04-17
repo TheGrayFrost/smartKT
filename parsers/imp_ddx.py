@@ -94,16 +94,8 @@ def get_match(cloc):
 			print('MULTIPLE MATCHES:', cloc, match)
 	return None
 
-
-def UpdateCtree (cnode, filename=None, lineno=None, colno=None):
-	if 'file' in cnode.attrib:
-		filename = os.path.abspath( cnode.attrib['file'] )
-	if 'line' in cnode.attrib :
-		lineno = int(cnode.attrib['line'])
-	if 'col' in cnode.attrib :
-		colno = int(cnode.attrib['col'])
-	if cnode.tag in All:
-		cloc = (filename, lineno, colno)
+def try_patching_node(cloc, cnode) :
+	if cnode.tag in All :
 		if all(cloc) :
 			match = get_match(cloc)
 			if match is not None:
@@ -119,8 +111,20 @@ def UpdateCtree (cnode, filename=None, lineno=None, colno=None):
 					patch_mangled(cnode, match)
 			elif DEBUG and 'usr' in cnode.attrib:
 				print ('MATCH NOT FOUND ', cloc, cnode.tag, cnode.attrib['usr'])
+
+def UpdateCtree (cnode, filename=None, lineno=None, colno=None, parent_node = None):
+	if 'file' in cnode.attrib:
+		filename = os.path.abspath( cnode.attrib['file'] )
+	if 'line' in cnode.attrib :
+		lineno = int(cnode.attrib['line'])
+	if 'col' in cnode.attrib :
+		colno = int(cnode.attrib['col'])
+	cloc = (filename, lineno, colno)
+	if parent_node is not None and parent_node.tag in Variables :
+		try_patching_node(cloc, parent_node)
 	for child in cnode:
-		UpdateCtree(child,filename,lineno,colno)
+		UpdateCtree(child,filename,lineno,colno,cnode)
+	try_patching_node(cloc, cnode)
 
 # generates string representation of given variable node for linkage with PIN later
 def helper(var, var_class, var_container = None):
