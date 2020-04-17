@@ -1,9 +1,6 @@
-/*
 .*
 *.o
 /*/build/
-!extern/
-!inherit/
-!threads/
-!temptest/
+macros/
+namespace/
 !.gitignore

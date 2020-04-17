@@ -7,6 +7,7 @@ from xml.etree.ElementTree import Element, SubElement
 from xml.etree import ElementTree as ET
 from xml.dom import minidom
 from collections import defaultdict
+from itertools import chain
 
 DEBUG = False
 
@@ -30,7 +31,7 @@ def TraverseDtree(dnode, filetable): # collect all pokemon in dtree
 		filetable = [None] + [entry.attrib['file'] for entry in sources]
 	if all('DW_AT_decl_'+x in dnode.attrib for x in ('file', 'line', 'column')):
 		# covers everything except enum const, which are not needed anyway
-		node_hash = (filetable[ int(dnode.attrib['DW_AT_decl_file']) ],
+		node_hash = (filetable[int(dnode.attrib['DW_AT_decl_file']) ],
 			int(dnode.attrib['DW_AT_decl_line']), int(dnode.attrib['DW_AT_decl_column']))
 		# if DEBUG : print(node_hash)
 		dtree_hashmap[node_hash].append(dnode)
@@ -135,7 +136,10 @@ def helper(var, var_class, var_container = None):
 		s += var_container + '\t'
 		s += var.attrib['offset'] + '\t'
 	else:
-		s = var.attrib['address'] + '\t'
+		addr = '-1'
+		if 'address' in var.attrib:
+			addr = var.attrib['address']
+		s = addr + '\t'
 
 	var_name = (var.attrib['mangled_name'] if ('mangled_name' in var.attrib) else var.attrib['spelling'])
 	s += var_name + '\t'
@@ -156,11 +160,12 @@ def helper(var, var_class, var_container = None):
 		s += var_class
 		if var_container is not None:
 			s += '\t' + var_container
-	
+	if DEBUG:
+		print (s)
 	s += '\n'
 	return s
 
-def generate_var(croot, outemits_filename):
+def generate_var(croot, outemits_filename, mainexe = False):
 	with open(outemits_filename, 'w') as f:
 		if address:
 			# writing globals
@@ -184,28 +189,46 @@ def generate_var(croot, outemits_filename):
 					if 'spelling' in obj.attrib:
 						obj_name = (obj.attrib['mangled_name'] if ('mangled_name' \
 											in obj.attrib) else obj.attrib['spelling'])
-						for var in obj.findall('.//*[@address]'):
-							if var.tag in Variables and var.attrib['address'] not in printed:
-								printed.add(var.attrib['address'])
+						if DEBUG:
+							print (obj_name)
+						gen = obj.findall('.//*[@address]')
+						if mainexe:
+							gen = chain(gen, obj.findall('.//VarDecl[@linkage_kind="external"]'))
+						for var in gen:
+							if 'offset' in var.attrib:
+								continue
+							var_name = var.attrib['spelling']
+							if 'address' in var.attrib:
+								var_name = var.attrib['address']
+							elif 'mangled_name' in var.attrib:
+								var_name = var.attrib['mangled_name']
+							if var_name not in printed:
+								printed.add(var_name)
 								if DEBUG:
-									print (var.attrib['address'])
+									print (var_name)
 								s += helper(var, store, obj_name)
 				f.write(s)
 
 			# Now out all global variables
 			s = ''
-			for var in croot.findall('.//*[@address]'):
-				if var.tag in Variables and var.attrib['address'] not in printed:
-					printed.add(var.attrib['address'])
+			gen = croot.findall('.//*[@address]')
+			if mainexe:
+				gen = chain(gen, croot.findall('.//VarDecl[@linkage_kind="external"]'))
+			for var in gen:
+				if 'offset' in var.attrib:
+					continue
+				var_name = var.attrib['spelling']
+				if 'address' in var.attrib:
+					var_name = var.attrib['address']
+				elif 'mangled_name' in var.attrib:
+					var_name = var.attrib['mangled_name']
+				if var_name not in printed:
+					printed.add(var_name)
 					if DEBUG:
-						print (var.attrib['address'])
+						print (var_name)
 					if 'storage_class' in var.attrib and var.attrib['storage_class'] == 'STATIC':
 						s += helper(var, 'STATIC')
 					else:
-						if 'mangled_name' in var.attrib:
-							var_name = var.attrib['mangled_name']
-						else:
-							var_name = var.attrib['spelling']
 						s += helper(var, 'GLOBAL')
 			f.write(s)
 

@@ -1,3 +1,3 @@
 # FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/C.cc	main	0x8	u	303604471610	A *	8	303614444029
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc	_Z1fR1A	0x8	x	103956835711	A &	8	103621811515
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/C.cc	main	0x8	u	302906115897	A *	8	301225971511
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc	_Z1fR1A	0x8	x	100332628703	A &	8	102811530659

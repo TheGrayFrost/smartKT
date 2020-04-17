@@ -33,18 +33,18 @@ Our tool expects projects to:
 - It will do other things like detect the C++ compiler you are saying eg: maybe the system has clang C compiler instead of gcc
 
 
-## CMAKE BUILD PROCESS
+### CMAKE BUILD PROCESS
 
 Basic idea of the CMake build process:
 1. You have the source C code
 2. You convert each C file to a .o file using `gcc -c`. This .o is called a relocatable object file
 3. You can combine a few related object files into two forms of collections: archives(.a) and shared object/shared library (.so)
 4. Archives and Shared Objects are basically the .o files written one after the other, combined into one file
-5. To create an executable, you take a bunch of .o files (.a and .so are also collections of .o files only as mentioned earlier), and you link them together. This is done using the `gcc` command by passing it the object files
-5. The difference between .a and .so files is that: 
+5. To create an executable, you take a bunch of .o files (.a and .so are also collections of .o files only as mentioned earlier), and you link them together. This is done using by passing it the object files to gcc.
+6. The difference between .a and .so files is that: 
 	- .a gets linked statically ie its code gets written into the final executable directly
-	- .so gets linked dynamically ie its code is loaded at runtime when executable calls functions from it. its code is also shared as in multiple executables will use the same copy of the .so
-6. Usually, the large projects have this structure:
+	- .so gets linked dynamically ie its code is loaded at runtime when executable calls functions from it. Its code is also shared as in multiple executables will use the same copy of the .so
+7. Usually, large projects have this structure:
 	- take lots and lots of small .c files
 	- convert each to .o
 	- join all of them into a very large .so file
@@ -69,14 +69,14 @@ Basic idea of the CMake build process:
 		- the make command is run in verbose mode, and the commands run by make are collected in make_log.txt
 		- creates the folder outputs/projectname
 		- moves make_log.txt to this folder
-	- dependency_parser():
+	- generate_static_info():
 		- runs parsers/project_parser.py on make_log.txt
 		- that generate a dependencies.p (pickle file) that contains file dependency relationships (explained later)
-	- generate_static_info():
 		- for each C/C++ file, say projects/exp/src/A.c, in dependencies.p, we know that a .o will be generated corr. to it. We
+			- run clang on A.c to generate A.ast
 			- run clangtools
-				- parsers/ast2xml: generates A_clang.xml from A.c
-				- parsers/calls: generates A.calls from A.c
+				- parsers/ast2xml: generates A_clang.xml from A.ast
+				- parsers/calls: generates A.calls from A.ast
 				- parsers/funcs.py: generates A.funcargs from A_clang.xml
 			- copy these 3 files to the folder location: outputs/exp/src/A.c/
 			- run parsers/dwxml.py on A.o to generate A_dd.xml in outputs/exp/src/
@@ -112,7 +112,7 @@ Basic idea of the CMake build process:
 			- creates the folder outputs/projectname/exe_exename/imagename
 			- for every .c file that makes up that particular image
 				- concats the .calls, .funcargs and .offset into final.calls, final.funcargs and final.offset respectively
-				- comcats their _clang.xml into image.temp.xml
+				- concats their \_clang.xml into image.temp.xml
 			- runs `dwarfdump -i` on image to create image.dd
 			- runs parsers/dwarfdump_parser.py on A.dd to generate image_dd.xml
 			- run parsers/combine.py with ADDRESS flag

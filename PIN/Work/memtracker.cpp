@@ -192,11 +192,17 @@ std::map <ADDRINT, variable>::iterator lookup (std::map <ADDRINT, variable>& mym
 	if (!mymap.empty() && (glob == 1 || it != mymap.end()))
 	{
 		if (DEBUG)
-			outp << "\n\nADD: " << std::hex << it->first;
+		{
+			outp << "\n\nSEARCHING FOR: 0x" << std::hex << addr << std::dec << " INITADD: ";
+			if (it != mymap.end()) 
+				outp << "0x" << std::hex << it->first << std::dec;
+			else
+				outp << "MAPEND";
+		}
 		if (glob == 1 && (it == mymap.end() || it->first != addr))
 			it--;
 		if (DEBUG)
-			outp << " " << std::hex << it->first << " ADD\n" << std::dec;
+			outp << " POSTUPDATE: 0x" << std::hex << it->first << std::dec << "\n";
 
 		// it = std::prev(it);
 		ADDRINT diff = it->first - addr;
@@ -207,7 +213,7 @@ std::map <ADDRINT, variable>::iterator lookup (std::map <ADDRINT, variable>& mym
 		if (r != -1)
 			size *= r;
 		if (DEBUG)
-			outp << "GLOB: " << glob << " SIZE: " << size << " DIFF: " << diff << " ADDR: " << addr << " EST: " << it->first << "\n\n";
+			outp << "GLOB: " << glob << " SIZE: " << size << " DIFF: " << diff << "\n\n";
 		// if (diff != 0)
 		// 	outp << "\n\nADD: " << std::hex << it->first << " " << addr << std::dec << " << DIFF: " << diff << " Size: " << size << "\n\n";
 		glob = r; // -1 if no elements
@@ -676,6 +682,7 @@ VOID ptrWrite (THREADID tid, ADDRINT ina)
 	}
 	else
 		outp << "ASYNC ";
+	outp << "INSLOC " << inslist[ina].fname << ":" << inslist[ina].line << " "; //file location
 	outp << "TS " << std::dec << runid << "_" << ++timeStamp << " "; // event timestamp
 	outp << "INVNO " << invMap[inslist[ina].rtnName][tid] << "\n";	// function invocation count	
 }
@@ -734,6 +741,7 @@ VOID dataman (THREADID tid, ADDRINT ina, ADDRINT memOp)
 		else
 			outp << "ASYNC ";
 
+		outp << "INSLOC " << inslist[ina].fname << ":" << inslist[ina].line << " "; //file location
 		outp << "TS " << std::dec << runid << "_" << ++timeStamp << " ";	// event timestamp
 		outp << "INVNO " << invMap[inslist[ina].rtnName][tid] << "\n";	// function invocation count	
 	}
@@ -793,6 +801,7 @@ VOID callP (THREADID tid, ADDRINT ina, int count, ...)
 	for (auto q: funccallMap[inslist[ina].fname][inslist[ina].line][dyntarget])
 		outp << q << "\t";
 	outp << "] ";
+	outp << "INSLOC " << inslist[ina].fname << ":" << inslist[ina].line << " "; //file location
 	outp << "INVNO " << invMap[inslist[ina].rtnName][tid] << "\n";	// function invocation count
 }
 
@@ -831,6 +840,7 @@ VOID retP (THREADID tid, ADDRINT ina, ADDRINT * retval)
 		printval(retval, rettype);
 		outp << " ";
 	}
+	outp << "INSLOC " << inslist[ina].fname << ":" << inslist[ina].line << " "; //file location
 	outp << "INVNO " << f.invNo << "\n";	// function invocation count
 
 	// fnlog f(RTN_FindNameByAddress(ina), tid, ino);

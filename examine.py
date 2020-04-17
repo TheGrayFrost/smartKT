@@ -37,6 +37,7 @@ CALL_EXTENSION = '.calls'
 SIGN_EXTENSION = '.funcargs'
 OFFSET_EXTENSION = '.offset'
 ADDRESS_EXTENSION = '.address'
+SYMTAB_EXTENSION = '.symtab'
 TEMP_EXTENSION = '.temp.xml'
 FINAL_FILE = 'final'
 STATIC_EXTENSION = '_static.xml'
@@ -78,7 +79,7 @@ def combine_all_clang(depmap):
     address_files = []
 
     headerWrite = [False, False, False]
-    for num, (exe, flist) in enumerate(depmap):
+    for numexe, (exe, flist) in enumerate(depmap):
         exenamestrip = exe[exe.rfind('/')+1:]
         exeoutfolder = os.path.join(foutfolder, exenamestrip)
         exestrip = os.path.join(exeoutfolder, exenamestrip)
@@ -135,13 +136,20 @@ def combine_all_clang(depmap):
         print ('Written combined clang for ' + exenamestrip)
         
         # create the address file in the exe/so's folder
-        ddx.generate_var(root, exestrip+ADDRESS_EXTENSION)
+        # treat mainexe specially, as externs also need to be emitted
+        ddx.generate_var(root, exestrip+ADDRESS_EXTENSION, numexe == 0)
 
         rootlist.append(root)
 
+        if numexe == 0: # need to add addresses from readelf
+            os.system('mv ' + exestrip+ADDRESS_EXTENSION + ' ' + exestrip+'.temp'+ADDRESS_EXTENSION)
+            os.system('readelf -sW '+exe+' | grep "OBJECT">'+exestrip+SYMTAB_EXTENSION)
+            os.system('awk -f merge ' + exestrip+SYMTAB_EXTENSION + ' FS="\t" ' + \
+                        exestrip+'.temp'+ADDRESS_EXTENSION + ' > ' + exestrip+ADDRESS_EXTENSION)
+        
         address_files.append(exestrip+ADDRESS_EXTENSION)
+        os.system('cp ' + exestrip + ADDRESS_EXTENSION + ' ' + foutfolder+'/')
 
-        os.system('ln -sf ' + exestrip + ADDRESS_EXTENSION + ' ' + foutfolder+'/')
         print ('Generated addresses for ' + exenamestrip)
         
     patched_xml = ddx.patch_external_def_ids(rootlist)
@@ -166,9 +174,6 @@ def generate_static_info():
     # get list of all cpp's forming this executable
     ls = dict()
 
-    def add_loaded_binaries(path):
-        ls[path] = get_rec_deps(path)
-
     def get_rec_deps(path):
         recdeps = []
         if path not in dependencies:
@@ -181,6 +186,9 @@ def generate_static_info():
             elif x.find('.so') != -1:
                 add_loaded_binaries(x)
         return recdeps
+
+    def add_loaded_binaries(path):
+        ls[path] = get_rec_deps(path)
 
     add_loaded_binaries(executable)
 
@@ -196,7 +204,6 @@ def generate_static_info():
     # os.system('rm ldd.info')
     if DEBUG:
         print (orderls)
-        exit()
     combine_all_clang(orderls)
 
 def generate_dynamic_info(path, test, runidx, runNum):

@@ -2,7 +2,7 @@
 
 int f();
 
-// Class A's defination
+// Class A's definition
 class A
 {
 	public:
