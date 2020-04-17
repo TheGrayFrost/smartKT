@@ -53,7 +53,7 @@ if len(sys.argv) > 2:
 
 # DOMAINS TO RUN
 CALLSTATIC = True
-CALLDYN = False
+CALLDYN = True
 CALLCOMM = False
 CALLVCS = False
 
@@ -136,11 +136,13 @@ def combine_all_clang(depmap):
 
         rootlist.append(root)
 
-        os.system('cp ' + exestrip + ADDRESS_EXTENSION + ' ' + foutfolder+'/')
         if numexe == 0: # need to add addresses from readelf
+            os.system('mv ' + exestrip+ADDRESS_EXTENSION + ' ' + exestrip+'.temp'+ADDRESS_EXTENSION)
             os.system('readelf -sW '+exe+' | grep "OBJECT">'+exestrip+SYMTAB_EXTENSION)
-            # os.system()
-            exit()
+            os.system('awk -f merge ' + exestrip+SYMTAB_EXTENSION + ' FS="\t" ' + \
+                        exestrip+'.temp'+ADDRESS_EXTENSION + ' > ' + exestrip+ADDRESS_EXTENSION)
+        os.system('cp ' + exestrip + ADDRESS_EXTENSION + ' ' + foutfolder+'/')
+        
         print ('Generated addresses for ' + exenamestrip)
         
     patched_xml = ddx.patch_external_def_ids(rootlist)

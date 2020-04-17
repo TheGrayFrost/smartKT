@@ -8,8 +8,8 @@
 #include <set>
 #include <cstdlib>
 
-#define DEBUG true
-#define VARSEARCH true
+#define DEBUG false
+#define VARSEARCH false
 
 // parse with new header
 // emit with new header
@@ -682,6 +682,7 @@ VOID ptrWrite (THREADID tid, ADDRINT ina)
 	}
 	else
 		outp << "ASYNC ";
+	outp << "INSLOC " << inslist[ina].fname << ":" << inslist[ina].line << " "; //file location
 	outp << "TS " << std::dec << runid << "_" << ++timeStamp << " "; // event timestamp
 	outp << "INVNO " << invMap[inslist[ina].rtnName][tid] << "\n";	// function invocation count	
 }
@@ -740,6 +741,7 @@ VOID dataman (THREADID tid, ADDRINT ina, ADDRINT memOp)
 		else
 			outp << "ASYNC ";
 
+		outp << "INSLOC " << inslist[ina].fname << ":" << inslist[ina].line << " "; //file location
 		outp << "TS " << std::dec << runid << "_" << ++timeStamp << " ";	// event timestamp
 		outp << "INVNO " << invMap[inslist[ina].rtnName][tid] << "\n";	// function invocation count	
 	}
@@ -799,6 +801,7 @@ VOID callP (THREADID tid, ADDRINT ina, int count, ...)
 	for (auto q: funccallMap[inslist[ina].fname][inslist[ina].line][dyntarget])
 		outp << q << "\t";
 	outp << "] ";
+	outp << "INSLOC " << inslist[ina].fname << ":" << inslist[ina].line << " "; //file location
 	outp << "INVNO " << invMap[inslist[ina].rtnName][tid] << "\n";	// function invocation count
 }
 
@@ -837,6 +840,7 @@ VOID retP (THREADID tid, ADDRINT ina, ADDRINT * retval)
 		printval(retval, rettype);
 		outp << " ";
 	}
+	outp << "INSLOC " << inslist[ina].fname << ":" << inslist[ina].line << " "; //file location
 	outp << "INVNO " << f.invNo << "\n";	// function invocation count
 
 	// fnlog f(RTN_FindNameByAddress(ina), tid, ino);
