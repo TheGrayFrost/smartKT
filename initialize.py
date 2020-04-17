@@ -58,10 +58,11 @@ def init(path):
     s += 'rm -rf build\n'
     s += 'mkdir build\n'
     s += 'cd build\n'
-    s += 'cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..\n'
+    # s += 'cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..\n'
+    s += 'cmake -DCMAKE_BUILD_TYPE=Debug ..\n'
     s += 'make -j$(nproc) VERBOSE=1 > make_log.txt\n'
     s += 'mkdir -p ' + outfolder + '\n'
-    s += 'mv compile_commands.json ' + outfolder + '/\n'
+    # s += 'mv compile_commands.json ' + outfolder + '/\n'
     s += 'mv make_log.txt ' + outfolder + '/\n'
     s += 'rm ' + initfile + '\n'
     with open(initfile, 'w') as f:

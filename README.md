@@ -22,11 +22,11 @@ Note: For the `testsuite` the runs.json have been placed in the folder itself (e
 # EXPECTED PROJECT ATTRIBUTES
 
 Our tool expects your projects to:
-	- be C/C++ based
-	- use CMake for project build
-	- work on Unix-based OSes
-	- have verbose makefiles
-	- contain test programs that create executables we may examine
+* be C/C++ based
+* use CMake for project build
+* work on Unix-based OSes
+* have verbose makefiles
+* contain test programs that create executables we may examine
 
 # TODO
 - [ ] Parallelize comments analysis part
