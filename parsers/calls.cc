@@ -25,22 +25,21 @@ using SourceLocation = std::pair<unsigned, unsigned>;
 CXIndex clang_index;
 std::unordered_map<std::string, TokenList> source_files;
 
-static std::string const delim = "##";
+static std::string const delim = "\t";
 std::ifstream infile;
 std::ofstream outfile;
 
 int main(int argc, char* argv[]) {
 
-  if( argc !=2 ) {
-    fprintf(stderr, "Usage : %s <calls_file>\n", argv[0]);
+  if( argc !=3 ) {
+    fprintf(stderr, "Usage : %s <temp_file> <final_file>\n", argv[0]);
     return -1;
   }
 
   clang_index = clang_createIndex(0, 0);
 
-  std::string input_filename = std::string(argv[1]);
-  infile.open(input_filename);
-  outfile.open(input_filename + ".tokens");
+  infile.open(argv[1]);
+  outfile.open(argv[2]);
 
   std::string line;
 

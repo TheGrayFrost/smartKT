@@ -16,7 +16,7 @@ cp $1 PIN/Work/$exe.out					# copy executable to pin folder
 rm -rf PIN/Work/statinfo/
 mkdir PIN/Work/statinfo/
 # copy the static results into pin folder
-find $2 -maxdepth 1 -type f -regex ".*\.\(calls\|funcargs\|offset\|address\)" -exec cp -t PIN/Work/statinfo/ {} +
+find $2 -maxdepth 1 -type f -regex ".*\.\(calls.tokens\|funcargs\|offset\|address\)" -exec cp -t PIN/Work/statinfo/ {} +
 
 if [ $# -eq 5 ]
 then

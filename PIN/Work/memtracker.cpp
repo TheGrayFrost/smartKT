@@ -29,7 +29,7 @@ std::string folder = "statinfo/";
 std::string foff = "final.offset";
 std::string faddr = ".address";
 std::string fargs = "final.funcargs";
-std::string fcalls = "final.calls";
+std::string fcalls = "final.calls.tokens";
 
 
 std::map <std::string, int> locks;		// mutex -> type
@@ -416,23 +416,25 @@ VOID init(std::string inp, std::string runid, std::string locf)
 	}
 
 	// callFile
-	// FILENAME	LINENUM	FUNCNAME	CALLNODEID	CALLEXPR
+	// FILENAME	LOCATION	FUNCNAME	CALLNODEID	CALLEXPR
 	{
 		std::ifstream callFile((folder+fcalls).c_str());
 		std::string filename, funcname, callsig, ignore, cnodeid;
+		std::string loc;
 		int lno;
 
 		if (callFile.good())
 		{
 			std::getline (callFile, ignore);
-			// callFile.get();		
+			// callFile.get();
 		}
 		
 		while (callFile.good())
 		{
-			callFile >> filename >> lno >> funcname >> cnodeid;
+			callFile >> filename >> lno >> loc >> funcname >> cnodeid;
 			callFile.get();
 			std::getline (callFile, callsig, '\n');
+			// lno = std::to_int(loc.substr(0, loc.find(":")-1));
 			funccallMap[filename][lno][funcname].insert(cnodeid + " " + callsig);
 		}
 

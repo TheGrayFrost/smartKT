@@ -12,6 +12,11 @@ from collections import defaultdict
 id_tags = {
     "id", "lex_parent_id", "sem_parent_id", "def_id", "ref_id", "ref_tmp"}
 
+# setting it here for running on server
+# as /tmp on server is mount point for a different storage media
+# leads to failure during cross-device link creation
+tempfile.tempdir = os.getcwd()
+
 def remap(file_name, field_ids, id_map, delim='\t') :
     with open(file_name, "r") as input_file, \
         tempfile.NamedTemporaryFile(mode="w", delete=False) as tmpf :

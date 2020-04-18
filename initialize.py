@@ -25,7 +25,7 @@ INIT_FILE = 'init.sh'
 FOLDER = 'outputs'
 
 # tools
-CLANGTOOLS = ['ast2xml', 'calls']
+# CLANGTOOLS = ['ast2xml', 'calls']
 DWARFTOOL = 'dwxml.py'
 COMBINER = 'saved_ddx.py'
 PROJPARSER = 'project_parser.py'
@@ -34,10 +34,11 @@ PROJPARSER = 'project_parser.py'
 CLANG_EXTENSION = '_clang.xml'
 DWARF_EXTENSION = '_dd.xml'
 COMB_EXTENSION = '_comb.xml'
-CALL_EXTENSION = '.calls'
+CALL_TEMP_EXTENSION = '.calls.temp'
+CALL_FINAL_EXTENSION = '.calls.tokens'
 SIGN_EXTENSION = '.funcargs'
 OFFSET_EXTENSION = '.offset'
-CLANG_OUTPUTEXT = [CLANG_EXTENSION, CALL_EXTENSION] # , SIGN_EXTENSION]
+# CLANG_OUTPUTEXT = [CLANG_EXTENSION, CALL_EXTENSION] # , SIGN_EXTENSION]
 COMB_OUTPUTEXT = ' '.join([DWARF_EXTENSION, CLANG_EXTENSION, COMB_EXTENSION, OFFSET_EXTENSION])
 
 path = os.path.abspath(sys.argv[1])
@@ -148,13 +149,13 @@ def generate_static_info(path):
             #         mainfname+'.ast', '>', stripop + output_extension]))
             #     logstr += ('output :' + stripop + output_extension + '\n')
 
-            os.system(' '.join(["parsers/ast2xml", str(num),
-                mainfname+".ast", f, stripop+CALL_EXTENSION, stripop+CLANG_EXTENSION ]))
-            logstr += ("output :" + stripop + CLANG_EXTENSION + "\n")
-            logstr += ("output :" + stripop + CALL_EXTENSION + "\n")
+            os.system(' '.join(['parsers/ast2xml', str(num), mainfname+'.ast', 
+                        f, stripop+CALL_TEMP_EXTENSION, stripop+CLANG_EXTENSION ]))
+            logstr += ('output :' + stripop + CLANG_EXTENSION + '\n')
+            logstr += ('output :' + stripop + CALL_TEMP_EXTENSION + '\n')
 
-            os.system(' '.join(["parsers/calls", stripop + CALL_EXTENSION]))
-            logstr += ("output :" + stripop + CALL_EXTENSION + ".tokens" + "\n")
+            os.system(' '.join(['parsers/calls', stripop+CALL_TEMP_EXTENSION, stripop+CALL_FINAL_EXTENSION]))
+            logstr += ('output :' + stripop + CALL_FINAL_EXTENSION + '\n')
 
             emit_funcargs(stripop + CLANG_EXTENSION, stripop + SIGN_EXTENSION)
             logstr += ('output :' + stripop + SIGN_EXTENSION + '\n')
@@ -183,8 +184,9 @@ def generate_static_info(path):
             if DEBUG:
                 logstr += 'parsers/' + COMBINER + ' ' + stripop + ' OFFSET ' + COMB_OUTPUTEXT + '\n'
             else:
-                logstr += '\n' + '\n'.join([stripop + myext for myext in [COMB_EXTENSION, OFFSET_EXTENSION]]) + '\n\n'
-            # print ('Information combined')
+                logstr += '\n' + '\n'.join([stripop + myext for 
+                    myext in [COMB_EXTENSION, OFFSET_EXTENSION]]) + '\n\n'
+             # print ('Information combined')
         except Exception as e:
             print('\n'.join([relpath, logstr, e]), end='', file=sys.stderr)
             return # continue

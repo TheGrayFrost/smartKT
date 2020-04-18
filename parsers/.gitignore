@@ -10,7 +10,7 @@
 !pyelftools/
 !comments/
 !.gitignore
-!deflocation.py
 !saved_ddx.py
 !funcs.py
+!uniquify.py
 !vcs.py

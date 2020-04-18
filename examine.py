@@ -33,7 +33,7 @@ COMBINER = 'ddx.py'
 # i/o extensions
 DWARF_EXTENSION = '_dd.xml'
 COMB_EXTENSION = '_comb.xml'
-CALL_EXTENSION = '.calls'
+CALL_EXTENSION = '.calls.tokens'
 SIGN_EXTENSION = '.funcargs'
 OFFSET_EXTENSION = '.offset'
 ADDRESS_EXTENSION = '.address'
@@ -99,7 +99,6 @@ def combine_all_clang(depmap):
         ddx.address = True
         ddx.TraverseDtree(droot, [None]) # sets ddx.dtree_hashmap
 
-
         if '.so' in exe:
             root = Element('DYNAMIC_LIBRARY')
         else:
@@ -130,9 +129,10 @@ def combine_all_clang(depmap):
         # link the addresses into the executables and emit the address files
         print ('Combined static info for ' + exenamestrip)
 
-        xmlstr = minidom.parseString(ET.tostring(root)).toprettyxml(indent='   ')
-        with open(exestrip+COMB_EXTENSION, 'w') as f:
-            f.write(xmlstr)
+        # xmlstr = minidom.parseString(ET.tostring(root)).toprettyxml(indent='   ')
+        # with open(exestrip+COMB_EXTENSION, 'w') as f:
+        #     f.write(xmlstr)
+        stree.write(exestrip+COMB_EXTENSION, encoding='utf-8')
         print ('Written combined clang for ' + exenamestrip)
         
         # create the address file in the exe/so's folder
@@ -154,9 +154,11 @@ def combine_all_clang(depmap):
         
     patched_xml = ddx.patch_external_def_ids(rootlist)
 
-    finalxmlstr = minidom.parseString(ET.tostring(patched_xml)).toprettyxml(indent='   ')
-    with open(CURFINALFILE + STATIC_EXTENSION, 'w') as f:
-        f.write(finalxmlstr)
+    # finalxmlstr = minidom.parseString(ET.tostring(patched_xml)).toprettyxml(indent='   ')
+    # with open(CURFINALFILE + STATIC_EXTENSION, 'w') as f:
+    #     f.write(finalxmlstr)
+    mytree = ET.ElementTree(patched_xml)
+    mytree.write(CURFINALFILE+STATIC_EXTENSION, encoding='utf-8')
 
     uniquify(CURFINALFILE, STATIC_EXTENSION, CALL_EXTENSION,
         SIGN_EXTENSION, OFFSET_EXTENSION, address_files)
