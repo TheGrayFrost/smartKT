@@ -1,5 +1,6 @@
 #include <clang-c/Index.h>
 #include <iostream>
+#include <fstream>
 #include <sstream>
 #include <unordered_set>
 
@@ -13,7 +14,7 @@
 
 #include "ctype.h"
 
-#define DEBUG true
+#define DEBUG false
 
 #define IDSIZE 11	 // normal unsigned int has 10 digits.. we are padding with one extra zero
 
@@ -58,9 +59,9 @@
 
 
 std::string FILEID; // FILEID passed to ast2xml
-std::string PROJECT; // project path passed to ast2xml
 
-CXTranslationUnit tu; // declared global for accessing the source when needed
+CXTranslationUnit tu, source_tu; // declared global for accessing the source when needed
+int preprocessing_phase;
 
 inline bool operator==(const CXCursor & x, const CXCursor & y) {
 		return clang_equalCursors(x, y) != 0;
@@ -108,6 +109,69 @@ std::string makeUniqueID (unsigned id)
 	std::string p = std::to_string(id);
 	p = FILEID + std::string(IDSIZE - p.length(), '0') + p;
 	return p;
+}
+
+# define CALLS_FILEHEADER "# FILENAME\tLOCATION\tFUNCNAME\tCALLNODEID\n"
+std::ofstream calls_file;
+
+CXChildVisitResult get_call_expressions
+(CXCursor cursor, CXCursor parent, CXClientData) {
+
+  static std::string const delim = "\t";
+
+  CXCursorKind cursorKind = clang_getCursorKind(cursor);
+
+  // Remove system headers' location
+  CXSourceLocation location = clang_getCursorLocation(cursor);
+  if (clang_Location_isInSystemHeader(location)) {
+  	return CXChildVisit_Continue;
+  }
+
+  if( cursorKind == CXCursor_CallExpr ) {
+    CXCursor refc = clang_getCursorReferenced(cursor);
+    if( !clang_Cursor_isNull(refc) ) {
+
+      /* Emit source location. */
+      // CXSourceLocation location = clang_getCursorLocation( cursor );
+      CXFile file;
+      CXString fileName;
+      unsigned line, column;
+      clang_getSpellingLocation(location, &file, &line, &column, nullptr);
+      fileName = clang_getFileName(file);
+      calls_file << clang_getCString(fileName);
+      // calls_file << delim << line;
+
+      CXSourceRange Range = clang_getCursorExtent(cursor);
+      CXSourceLocation Rstart = clang_getRangeStart(Range);
+      CXSourceLocation Rend = clang_getRangeEnd(Range);
+
+      clang_getSpellingLocation(Rstart, nullptr, &line, &column, nullptr);
+      calls_file << delim << line << ":" << column;
+      clang_getSpellingLocation(Rend, nullptr, &line, &column, nullptr);
+      calls_file << "::" << line << ":" << column;
+
+      /* Get source and linkage identifiers. */
+      CXString mangling = clang_Cursor_getMangling(refc);
+      // CXString usr = clang_getCursorUSR(refc);
+
+      calls_file << delim << clang_getCString(mangling)
+                << delim << makeUniqueID(clang_hashCursor(cursor));
+                // << delim << clang_getCString(usr);
+
+      // if( clang_Cursor_isDynamicCall(cursor) ) {
+      //   std::cout << delim << "Dynamic";
+      // }
+
+      calls_file << "\n";
+
+      clang_disposeString(mangling);
+      // clang_disposeString(usr);
+      clang_disposeString( fileName );
+    }
+  }
+
+  clang_visitChildren(cursor, get_call_expressions, nullptr);
+  return CXChildVisit_Continue;
 }
 
 // prints tokenwise information about a cursor
@@ -315,9 +379,9 @@ void add_information(CXCursor cursor, xmlNodePtr cur_ptr) {
 	if(clang_isDeclaration(cursorKind)) {
 		xmlNewProp(cur_ptr, BAD_CAST "isDecl", BAD_CAST "True");
 
-		// get the linkage name for these people if file in the project path
+		// get the linkage name for these people
 		std::string file((char *)xmlGetProp(cur_ptr, BAD_CAST "file"));
-		if (file.rfind(PROJECT, 0) == 0 && xmlGetProp(cur_ptr, BAD_CAST "spelling") != NULL)
+		if (xmlGetProp(cur_ptr, BAD_CAST "spelling") != NULL)
 		{
 			CXString mangling = clang_Cursor_getMangling(cursor);
 			std::string mangled(clang_getCString(mangling));
@@ -468,59 +532,63 @@ void add_information(CXCursor cursor, xmlNodePtr cur_ptr) {
 // Recursive visitor to DFS on AST and collect information into XML
 CXChildVisitResult
 visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
-	auto parentData = (reinterpret_cast<trav_data_t*>(clientData));
+  auto parentData = (reinterpret_cast<trav_data_t*>(clientData));
 
-	if(!cursors_seen.insert(cursor).second) {
-		return CXChildVisit_Continue;
-	}
+  if(!cursors_seen.insert(cursor).second) {
+    return CXChildVisit_Continue;
+  }
 
-	// Remove system headers' location
-	CXSourceLocation location = clang_getCursorLocation(cursor);
-	if (clang_Location_isInSystemHeader(location)) {
-		return CXChildVisit_Continue;
-	}
+  // Remove system headers' location
+  CXSourceLocation location = clang_getCursorLocation(cursor);
+  if (clang_Location_isInSystemHeader(location)) {
+  	return CXChildVisit_Continue;
+  }
 
-	CXCursorKind cursorKind = clang_getCursorKind(cursor);
-	CXString kindName = clang_getCursorKindSpelling(cursorKind);
-	std::string xmlNodeName(clang_getCString(kindName));
-	
-	xmlNodePtr cur_ptr = xmlNewChild(parentData->xml_ptr, nullptr, 
-		BAD_CAST camelCaseSanitize(xmlNodeName).c_str(), nullptr);	
-	clang_disposeString(kindName);
+  CXCursorKind cursorKind = clang_getCursorKind(cursor);
+  CXString kindName = clang_getCursorKindSpelling(cursorKind);
+  std::string xmlNodeName(clang_getCString(kindName));
 
-	trav_data_t nodeData{clang_getNullLocation(), cur_ptr};
-	nodeData.cur_loc = clang_getCursorLocation(cursor);
+  if( preprocessing_phase && ! clang_isPreprocessing(cursorKind) ) {
+    return CXChildVisit_Continue;
+  }
 
-	// Linkage, if found within the file
-	{
-		// Get definition cursor
-		CXCursor defc = clang_getCursorDefinition(cursor);
-		if((!clang_Cursor_isNull(defc)) &&
-				(!clang_equalCursors(cursor, defc))) {
-			std::string defnodeid = makeUniqueID(clang_hashCursor(defc));
-			xmlNewProp(cur_ptr, BAD_CAST "def_id", BAD_CAST defnodeid.c_str());
+  xmlNodePtr cur_ptr = xmlNewChild(parentData->xml_ptr, nullptr, 
+    BAD_CAST camelCaseSanitize(xmlNodeName).c_str(), nullptr);  
+  clang_disposeString(kindName);
 
-			stubs_seen.insert(defc);
-		}
-	 
-		// Otherwise, get referenced cursor
-		else {
-			CXCursor refc = clang_getCursorReferenced(cursor);
-			if((!clang_Cursor_isNull(refc)) &&
-					(!clang_equalCursors(cursor, refc))) {
-				std::string refnodeid = makeUniqueID(clang_hashCursor(refc));
-				xmlNewProp(cur_ptr, BAD_CAST "ref_id", BAD_CAST refnodeid.c_str());
+  trav_data_t nodeData{clang_getNullLocation(), cur_ptr};
+  nodeData.cur_loc = clang_getCursorLocation(cursor);
 
-				stubs_seen.insert(refc);
-			}
-		}
-	}
+  // Linkage, if found within the file
+  {
+    // Get definition cursor
+    CXCursor defc = clang_getCursorDefinition(cursor);
+    if((!clang_Cursor_isNull(defc)) &&
+        (!clang_equalCursors(cursor, defc))) {
+      std::string defnodeid = makeUniqueID(clang_hashCursor(defc));
+      xmlNewProp(cur_ptr, BAD_CAST "def_id", BAD_CAST defnodeid.c_str());
 
-	add_information(cursor, cur_ptr);
+      stubs_seen.insert(defc);
+    }
+   
+    // Otherwise, get referenced cursor
+    else {
+      CXCursor refc = clang_getCursorReferenced(cursor);
+      if((!clang_Cursor_isNull(refc)) &&
+          (!clang_equalCursors(cursor, refc))) {
+        std::string refnodeid = makeUniqueID(clang_hashCursor(refc));
+        xmlNewProp(cur_ptr, BAD_CAST "ref_id", BAD_CAST refnodeid.c_str());
 
-	clang_visitChildren(cursor, visitor, &nodeData);
+        stubs_seen.insert(refc);
+      }
+    }
+  }
 
-	return CXChildVisit_Continue;
+  add_information(cursor, cur_ptr);
+
+  clang_visitChildren(cursor, visitor, &nodeData);
+
+  return CXChildVisit_Continue;
 }
 
 void add_stub_nodes() {
@@ -559,26 +627,35 @@ void add_stub_nodes() {
 		}
 }
 
-int main(int argc, char** argv) {
 
-	if(argc < 4) {
-		fprintf(stderr, "Usage : %s <file_num> <ast_file> <project_path>\n", argv[0]);
-		return -1;
-	}
+int main( int argc, char** argv ) {
+
+  if( argc != 6 ) {
+    fprintf(stderr, "Usage : %s <file_num> <ast_file> <source_file> <calls_file> <xml_file>\n", argv[0]);
+    return -1;
+  }
 
 	FILEID = std::string(argv[1]);
 
-	PROJECT = std::string(argv[3]);
 
-	CXIndex index = clang_createIndex(0, 1);
-	tu = clang_createTranslationUnit(index, argv[2]);
+  CXIndex index = clang_createIndex(0, 0);
+  tu = clang_createTranslationUnit(index, argv[2]);
+
 
 	if(!tu) {
 		fprintf(stderr, "Error while reading / parsing %s\n", argv[2]);
 		return -1;
 	}
 
-	LIBXML_TEST_VERSION;
+  source_tu = clang_parseTranslationUnit(index, argv[3],
+		  0, 0, 0, 0, CXTranslationUnit_DetailedPreprocessingRecord);
+  if( !source_tu ) {
+    fprintf(stderr, "Error while reading / parsing %s\n", argv[3]);
+    return -1;
+  }
+
+  LIBXML_TEST_VERSION;
+
 
 	/* Creates a new document, a node and set it as a root node */
 	doc = xmlNewDoc(BAD_CAST "1.0");
@@ -591,23 +668,36 @@ int main(int argc, char** argv) {
 	xmlCreateIntSubset(doc, BAD_CAST "TranslationUnit",
 		nullptr, BAD_CAST "smartkt.dtd");
 
-	/* Get root cursor. */
-	CXCursor rootCursor	= clang_getTranslationUnitCursor(tu);
+  /* Get root cursor. */
+  CXCursor root_cursor  = clang_getTranslationUnitCursor(tu);
+  CXCursor source_root_cursor  = clang_getTranslationUnitCursor( source_tu );
+
 
 	trav_data_t root_data{clang_getNullLocation(), root_node};
 
-	clang_visitChildren(rootCursor, visitor, &root_data);
-	add_stub_nodes();
+  preprocessing_phase = 1;
+  clang_visitChildren(source_root_cursor, visitor, &root_data);
 
-	/* Dump document to stdio or redirect to file */
-	xmlSaveFormatFileEnc("-", doc, "UTF-8", 1);
+  preprocessing_phase = 0;
+  clang_visitChildren(root_cursor, visitor, &root_data);
+  add_stub_nodes();
+
+  /* Dump document to stdio or redirect to file */
+  xmlSaveFormatFileEnc(argv[5], doc, "UTF-8", 1);
 
 	/* Free the document */
 	xmlFreeDoc(doc);
 
-	/* Free global variables that may have been allocated by libclang. */
-	clang_disposeTranslationUnit(tu);
-	clang_disposeIndex(index);
+  calls_file.open(argv[4]);
+  calls_file << CALLS_FILEHEADER;
+  clang_visitChildren(root_cursor, get_call_expressions, nullptr);
+  calls_file.close();
+
+  /* Free global variables that may have been allocated by libclang. */
+  clang_disposeTranslationUnit( source_tu );
+  clang_disposeTranslationUnit( tu );
+  clang_disposeIndex( index );
+
 
 	/* Free the global variables that may have been allocated by the parser. */
 	xmlCleanupParser();

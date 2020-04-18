@@ -20,6 +20,8 @@ import json
 import parsers.imp_ddx as ddx
 import parsers.vcs as vcs
 
+from parsers.uniquify import uniquify
+
 # For debug, set true
 DEBUG = False
 
@@ -72,6 +74,9 @@ def combine_all_clang(depmap):
 
     # list of exe/so roots
     rootlist = []
+
+    # list of .address files
+    address_files = []
 
     headerWrite = [False, False, False]
     for numexe, (exe, flist) in enumerate(depmap):
@@ -141,8 +146,10 @@ def combine_all_clang(depmap):
             os.system('readelf -sW '+exe+' | grep "OBJECT">'+exestrip+SYMTAB_EXTENSION)
             os.system('awk -f merge ' + exestrip+SYMTAB_EXTENSION + ' FS="\t" ' + \
                         exestrip+'.temp'+ADDRESS_EXTENSION + ' > ' + exestrip+ADDRESS_EXTENSION)
-        os.system('cp ' + exestrip + ADDRESS_EXTENSION + ' ' + foutfolder+'/')
         
+        address_files.append(exestrip+ADDRESS_EXTENSION)
+        os.system('cp ' + exestrip + ADDRESS_EXTENSION + ' ' + foutfolder+'/')
+
         print ('Generated addresses for ' + exenamestrip)
         
     patched_xml = ddx.patch_external_def_ids(rootlist)
@@ -150,6 +157,10 @@ def combine_all_clang(depmap):
     finalxmlstr = minidom.parseString(ET.tostring(patched_xml)).toprettyxml(indent='   ')
     with open(CURFINALFILE + STATIC_EXTENSION, 'w') as f:
         f.write(finalxmlstr)
+
+    uniquify(CURFINALFILE, STATIC_EXTENSION, CALL_EXTENSION,
+        SIGN_EXTENSION, OFFSET_EXTENSION, address_files)
+
     print ('\nWritten interlinked combined clang for ' + executable)
 
         

@@ -142,11 +142,19 @@ def generate_static_info(path):
 
             os.system(' '.join(cmd))
 
-            # Generate clang xml and calls - file number prepended to all nodeids to make unique
-            for clangexe, output_extension in zip(CLANGTOOLS, CLANG_OUTPUTEXT):
-                os.system (' '.join(['parsers/'+clangexe, str(num), 
-                    mainfname+'.ast', path, '>', stripop + output_extension]))
-                logstr += ('output :' + stripop + output_extension + '\n')
+            # Generate func, calls, xml - file number prepended to all nodeids to make unique
+            # for clangexe, output_extension in zip(CLANGTOOLS, CLANG_OUTPUTEXT):
+            #     os.system (' '.join(['parsers/'+clangexe, str(num),
+            #         mainfname+'.ast', '>', stripop + output_extension]))
+            #     logstr += ('output :' + stripop + output_extension + '\n')
+
+            os.system(' '.join(["parsers/ast2xml", str(num),
+                mainfname+".ast", f, stripop+CALL_EXTENSION, stripop+CLANG_EXTENSION ]))
+            logstr += ("output :" + stripop + CLANG_EXTENSION + "\n")
+            logstr += ("output :" + stripop + CALL_EXTENSION + "\n")
+
+            os.system(' '.join(["parsers/calls", stripop + CALL_EXTENSION]))
+            logstr += ("output :" + stripop + CALL_EXTENSION + ".tokens" + "\n")
 
             emit_funcargs(stripop + CLANG_EXTENSION, stripop + SIGN_EXTENSION)
             logstr += ('output :' + stripop + SIGN_EXTENSION + '\n')
