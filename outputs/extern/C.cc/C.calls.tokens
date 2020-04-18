@@ -1,0 +1,6 @@
+# FILENAME	LOCATION	FUNCNAME	CALLNODEID	CALLEXPR
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/C.cc##15:2::15:26##_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc##302451343694##std:: cout << "In f():\n" 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/C.cc##26:10::26:14##_Z1fR1A##301955836602##f( v ) 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/C.cc##27:2::27:49##_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc##303473429268##std:: cout << "Value of u->r = " << u -> r << "\n" 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/C.cc##27:2::27:41##_ZNSolsEi##304248117727##std:: cout << "Value of u->r = " << u -> r 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/C.cc##27:2::27:33##_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc##301033844733##std:: cout << "Value of u->r = " 

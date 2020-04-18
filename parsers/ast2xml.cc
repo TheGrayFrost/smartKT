@@ -59,7 +59,6 @@
 
 
 std::string FILEID; // FILEID passed to ast2xml
-std::string PROJECT; // project path passed to ast2xml
 
 CXTranslationUnit tu, source_tu; // declared global for accessing the source when needed
 int preprocessing_phase;
@@ -380,9 +379,9 @@ void add_information(CXCursor cursor, xmlNodePtr cur_ptr) {
 	if(clang_isDeclaration(cursorKind)) {
 		xmlNewProp(cur_ptr, BAD_CAST "isDecl", BAD_CAST "True");
 
-		// get the linkage name for these people if file in the project path
+		// get the linkage name for these people
 		std::string file((char *)xmlGetProp(cur_ptr, BAD_CAST "file"));
-		if (file.rfind(PROJECT, 0) == 0 && xmlGetProp(cur_ptr, BAD_CAST "spelling") != NULL)
+		if (xmlGetProp(cur_ptr, BAD_CAST "spelling") != NULL)
 		{
 			CXString mangling = clang_Cursor_getMangling(cursor);
 			std::string mangled(clang_getCString(mangling));

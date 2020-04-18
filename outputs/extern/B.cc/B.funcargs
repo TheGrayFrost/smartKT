@@ -1,3 +1,3 @@
 # FILENAME	FUNCNODEID	FUNCNAME	NARGS	ARGTYPE*	RETTYPE
-/usr/local/include/ostream	202536849065	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	3	basic_ostream<char	 std::char_traits<char> > &	const char *	basic_ostream<char, std::char_traits<char> > &
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/B.cc	202541264371	_Z1fv	1		int
+/usr/local/include/ostream	200685026869	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	3	basic_ostream<char	 std::char_traits<char> > &	const char *	basic_ostream<char, std::char_traits<char> > &
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/B.cc	202323880031	_Z1fv	1		int

@@ -1,4 +1,5 @@
 #include <clang-c/Index.h>
+
 #include <cstdio>
 #include <algorithm>
 #include <iostream>
@@ -19,6 +20,7 @@ struct TokenList {
 };
 
 using SourceLocation = std::pair<unsigned, unsigned>;
+// typedef std::pair<unsigned, unsigned> SourceLocation;
 
 CXIndex clang_index;
 std::unordered_map<std::string, TokenList> source_files;
