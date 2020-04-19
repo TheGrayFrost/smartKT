@@ -1,8 +1,12 @@
 // #include <stdio.h>
 #include "foo.h"  /* Include the header here, to obtain the function declaration */
 
-int ParentClass::a = 100;
-const int ParentClass::b = 200;
+int nonstd  ::ParentClass::  alpha = 123;
+
+using namespace nonstd;
+int ParentClass 
+    ::beta = 100;
+const int ParentClass :: gamma = 200;
 
 
 int main(void)

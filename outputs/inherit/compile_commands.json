@@ -1,12 +1,12 @@
 [
 {
-  "directory": "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build",
-  "command": "/opt/rh/devtoolset-8/root/usr/bin/c++   -I/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib  -std=c++17 -gdwarf-4   -o CMakeFiles/inherit.dir/src/inherit.cpp.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp",
-  "file": "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp"
+  "directory": "/home/hckr/Lab/kt/smartKT/testsuite/inherit/build",
+  "command": "/usr/bin/c++   -I/home/hckr/Lab/kt/smartKT/testsuite/inherit/lib  -std=c++17 -gdwarf-4   -o CMakeFiles/inherit.dir/src/inherit.cpp.o -c /home/hckr/Lab/kt/smartKT/testsuite/inherit/src/inherit.cpp",
+  "file": "/home/hckr/Lab/kt/smartKT/testsuite/inherit/src/inherit.cpp"
 },
 {
-  "directory": "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build/lib",
-  "command": "/opt/rh/devtoolset-8/root/usr/bin/c++  -Dfoo_EXPORTS -I/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib  -std=c++17 -gdwarf-4 -fPIC   -o CMakeFiles/foo.dir/foo.cpp.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp",
-  "file": "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp"
+  "directory": "/home/hckr/Lab/kt/smartKT/testsuite/inherit/build/lib",
+  "command": "/usr/bin/c++  -Dfoo_EXPORTS -I/home/hckr/Lab/kt/smartKT/testsuite/inherit/lib  -std=c++17 -gdwarf-4 -fPIC   -o CMakeFiles/foo.dir/foo.cpp.o -c /home/hckr/Lab/kt/smartKT/testsuite/inherit/lib/foo.cpp",
+  "file": "/home/hckr/Lab/kt/smartKT/testsuite/inherit/lib/foo.cpp"
 }
 ]

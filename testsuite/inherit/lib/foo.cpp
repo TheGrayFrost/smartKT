@@ -7,11 +7,11 @@ struct foo_str foo(struct foo_str x)    /* Function definition */
 }
 
 void accessFriendClassGlobal(){
-  ParentClass p;
-  p.x = 7;
+  nonstd::ParentClass p;
+  // p.x = 7;
 }
 
-void Snake::crawl() {
+void nonstd::Snake::crawl() {
     this->breathe();
     this->isCrawling = true;
 }
