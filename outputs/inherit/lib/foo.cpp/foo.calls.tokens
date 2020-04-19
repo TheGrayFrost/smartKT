@@ -1,0 +1,4 @@
+# FILENAME	LOCATION	FUNCNAME	CALLNODEID	CALLEXPR
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	6:12::6:13	_ZN7foo_strC1EOS_	101799110504	x
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	10:23::10:24	_ZN6nonstd11ParentClassC1Ev	100473547658	p
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	15:5::15:20	_ZN6nonstd6Animal7breatheEv	102674115443	this-> breathe ( ) 

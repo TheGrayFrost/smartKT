@@ -1,0 +1,16 @@
+# FILENAME	LOCATION	FUNCNAME	CALLNODEID	CALLEXPR
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	14:20::14:21	_ZN7foo_strC1Ev	203677236214	x
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	16:20::16:21	_ZN7foo_strC1Ev	200879740669	y
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	17:5::17:15	_ZN7foo_straSEOS_	203840193209	y= foo ( x )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	17:9::17:15	_Z3foo7foo_str	204252018934	foo( x )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	17:13::17:14	_ZN7foo_strC1ERKS_	203724663986	x
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	19:11::19:16	_ZN6nonstd5SnakeC1Ev	200298409689	snake
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	20:5::20:18	_ZN6nonstd5Snake5crawlEv	203234451968	snake. crawl ( )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	23:26::23:41	_ZN6nonstd13DerivedClass1C1Ev	200756171999	DerivedClass1( )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	24:5::24:15	_ZN6nonstd11ParentClass5helloEv	202855188110	p-> hello ( )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	25:19::25:20	_ZN6nonstd13DerivedClass1C1Ev	200425957480	d
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	26:5::26:15	_ZN6nonstd13DerivedClass15helloEi	203675412192	d. hello ( 1 )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	27:5::27:17	_ZN6nonstd13DerivedClass15helloEd	200544365010	d. hello ( 1.2 )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	6:12::6:13	_ZN7foo_strC1EOS_	101799110504	x
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	10:23::10:24	_ZN6nonstd11ParentClassC1Ev	100473547658	p
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	15:5::15:20	_ZN6nonstd6Animal7breatheEv	102674115443	this-> breathe ( )

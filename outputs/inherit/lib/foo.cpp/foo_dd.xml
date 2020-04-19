@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
 <root>
-  <file name="/home/hckr/Lab/kt/smartKT/testsuite/inherit/build/lib/CMakeFiles/foo.dir/foo.cpp.o">
-    <DW_TAG_compile_unit address_size="8" debug_abbrev_offset="0" offset="0" path="/home/hckr/Lab/kt/smartKT/testsuite/inherit/lib/foo.cpp" unit_length="1016" version="4">
+  <file name="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build/lib/CMakeFiles/foo.dir/foo.cpp.o">
+    <DW_TAG_compile_unit address_size="8" debug_abbrev_offset="0" offset="0" path="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp" unit_length="1016" version="4">
       <sources>
-        <entry file="/home/hckr/Lab/kt/smartKT/testsuite/inherit/lib/foo.h" id="1"/>
-        <entry file="/home/hckr/Lab/kt/smartKT/testsuite/inherit/lib/foo.cpp" id="2"/>
+        <entry file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h" id="1"/>
+        <entry file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp" id="2"/>
       </sources>
       <DW_TAG_structure_type DW_AT_byte_size="12" DW_AT_decl_column="8" DW_AT_decl_file="1" DW_AT_decl_line="6" DW_AT_name="foo_str" DW_AT_sibling="89" offset="41">
         <DW_TAG_member DW_AT_data_member_location="0" DW_AT_decl_column="7" DW_AT_decl_file="1" DW_AT_decl_line="7" DW_AT_name="x" DW_AT_type="89" offset="54"/>
@@ -67,7 +67,7 @@
           </DW_TAG_subprogram>
         </DW_TAG_class_type>
         <DW_TAG_class_type DW_AT_declaration="True" DW_AT_name="Snake" offset="578">
-          <DW_TAG_subprogram DW_AT_GNU_all_tail_call_sites="True" DW_AT_accessibility="1" DW_AT_decl_column="6" DW_AT_decl_file="2" DW_AT_decl_line="14" DW_AT_declaration="True" DW_AT_external="True" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_high_pc="35" DW_AT_linkage_name="_ZN6nonstd5Snake5crawlEv" DW_AT_low_pc="110" DW_AT_name="crawl" DW_AT_object_pointer="600" DW_AT_sibling="764" offset="583">
+          <DW_TAG_subprogram DW_AT_GNU_all_tail_call_sites="True" DW_AT_accessibility="1" DW_AT_decl_column="6" DW_AT_decl_file="2" DW_AT_decl_line="14" DW_AT_declaration="True" DW_AT_external="True" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_high_pc="35" DW_AT_linkage_name="_ZN6nonstd5Snake5crawlEv" DW_AT_low_pc="74" DW_AT_name="crawl" DW_AT_object_pointer="600" DW_AT_sibling="764" offset="583">
             <DW_TAG_formal_parameter DW_AT_artificial="True" DW_AT_type="709" offset="600"/>
           </DW_TAG_subprogram>
         </DW_TAG_class_type>
@@ -92,11 +92,11 @@
       <DW_TAG_reference_type DW_AT_byte_size="8" DW_AT_type="378" offset="703"/>
       <DW_TAG_pointer_type DW_AT_byte_size="8" DW_AT_type="578" offset="709"/>
       <DW_TAG_const_type DW_AT_type="709" offset="715"/>
-      <DW_TAG_subprogram DW_AT_GNU_all_tail_call_sites="True" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_high_pc="35" DW_AT_low_pc="110" DW_AT_object_pointer="751" DW_AT_sibling="764" DW_AT_specification="583" offset="720">
+      <DW_TAG_subprogram DW_AT_GNU_all_tail_call_sites="True" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_high_pc="35" DW_AT_low_pc="74" DW_AT_object_pointer="751" DW_AT_sibling="764" DW_AT_specification="583" offset="720">
         <DW_TAG_formal_parameter DW_AT_artificial="True" DW_AT_location="(DW_OP_fbreg: -24)" DW_AT_name="this" DW_AT_type="715" offset="751"/>
       </DW_TAG_subprogram>
-      <DW_TAG_subprogram DW_AT_GNU_all_tail_call_sites="True" DW_AT_decl_column="6" DW_AT_decl_file="2" DW_AT_decl_line="9" DW_AT_external="True" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_high_pc="58" DW_AT_linkage_name="_Z23accessFriendClassGlobalv" DW_AT_low_pc="51" DW_AT_name="accessFriendClassGlobal" DW_AT_sibling="812" offset="764">
-        <DW_TAG_variable DW_AT_decl_column="23" DW_AT_decl_file="2" DW_AT_decl_line="10" DW_AT_location="(DW_OP_fbreg: -64)" DW_AT_name="p" DW_AT_type="113" offset="798"/>
+      <DW_TAG_subprogram DW_AT_GNU_all_tail_call_sites="True" DW_AT_decl_column="6" DW_AT_decl_file="2" DW_AT_decl_line="9" DW_AT_external="True" DW_AT_frame_base="(DW_OP_call_frame_cfa)" DW_AT_high_pc="23" DW_AT_linkage_name="_Z23accessFriendClassGlobalv" DW_AT_low_pc="51" DW_AT_name="accessFriendClassGlobal" DW_AT_sibling="812" offset="764">
+        <DW_TAG_variable DW_AT_decl_column="23" DW_AT_decl_file="2" DW_AT_decl_line="10" DW_AT_location="(DW_OP_fbreg: -48)" DW_AT_name="p" DW_AT_type="113" offset="798"/>
       </DW_TAG_subprogram>
       <DW_TAG_subprogram DW_AT_decl_column="7" DW_AT_decl_file="1" DW_AT_decl_line="18" DW_AT_inline="2" DW_AT_object_pointer="829" DW_AT_sibling="839" DW_AT_specification="217" offset="812">
         <DW_TAG_formal_parameter DW_AT_artificial="True" DW_AT_name="this" DW_AT_type="692" offset="829"/>

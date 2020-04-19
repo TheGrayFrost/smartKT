@@ -1,38 +1,38 @@
-/usr/bin/cmake -H/home/hckr/Lab/kt/smartKT/testsuite/inherit -B/home/hckr/Lab/kt/smartKT/testsuite/inherit/build --check-build-system CMakeFiles/Makefile.cmake 0
-/usr/bin/cmake -E cmake_progress_start /home/hckr/Lab/kt/smartKT/testsuite/inherit/build/CMakeFiles /home/hckr/Lab/kt/smartKT/testsuite/inherit/build/CMakeFiles/progress.marks
+/usr/bin/cmake3 -S/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit -B/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake3 -E cmake_progress_start /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build/CMakeFiles /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build/CMakeFiles/progress.marks
 make -f CMakeFiles/Makefile2 all
-make[1]: Entering directory '/home/hckr/Lab/kt/smartKT/testsuite/inherit/build'
+make[1]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build'
 make -f lib/CMakeFiles/foo.dir/build.make lib/CMakeFiles/foo.dir/depend
-make[2]: Entering directory '/home/hckr/Lab/kt/smartKT/testsuite/inherit/build'
-cd /home/hckr/Lab/kt/smartKT/testsuite/inherit/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/hckr/Lab/kt/smartKT/testsuite/inherit /home/hckr/Lab/kt/smartKT/testsuite/inherit/lib /home/hckr/Lab/kt/smartKT/testsuite/inherit/build /home/hckr/Lab/kt/smartKT/testsuite/inherit/build/lib /home/hckr/Lab/kt/smartKT/testsuite/inherit/build/lib/CMakeFiles/foo.dir/DependInfo.cmake --color=
-Dependee "/home/hckr/Lab/kt/smartKT/testsuite/inherit/build/lib/CMakeFiles/foo.dir/DependInfo.cmake" is newer than depender "/home/hckr/Lab/kt/smartKT/testsuite/inherit/build/lib/CMakeFiles/foo.dir/depend.internal".
-Dependee "/home/hckr/Lab/kt/smartKT/testsuite/inherit/build/lib/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/hckr/Lab/kt/smartKT/testsuite/inherit/build/lib/CMakeFiles/foo.dir/depend.internal".
+make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build'
+cd /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build && /usr/bin/cmake3 -E cmake_depends "Unix Makefiles" /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build/lib /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build/lib/CMakeFiles/foo.dir/DependInfo.cmake --color=
+Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build/lib/CMakeFiles/foo.dir/DependInfo.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build/lib/CMakeFiles/foo.dir/depend.internal".
+Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build/lib/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build/lib/CMakeFiles/foo.dir/depend.internal".
 Scanning dependencies of target foo
-make[2]: Leaving directory '/home/hckr/Lab/kt/smartKT/testsuite/inherit/build'
+make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build'
 make -f lib/CMakeFiles/foo.dir/build.make lib/CMakeFiles/foo.dir/build
-make[2]: Entering directory '/home/hckr/Lab/kt/smartKT/testsuite/inherit/build'
+make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build'
 [ 25%] Building CXX object lib/CMakeFiles/foo.dir/foo.cpp.o
-cd /home/hckr/Lab/kt/smartKT/testsuite/inherit/build/lib && /usr/bin/c++  -Dfoo_EXPORTS -I/home/hckr/Lab/kt/smartKT/testsuite/inherit/lib  -std=c++17 -gdwarf-4 -fPIC   -o CMakeFiles/foo.dir/foo.cpp.o -c /home/hckr/Lab/kt/smartKT/testsuite/inherit/lib/foo.cpp
+cd /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build/lib && /opt/rh/devtoolset-8/root/usr/bin/c++  -Dfoo_EXPORTS -I/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib  -std=c++17 -gdwarf-4 -fPIC   -o CMakeFiles/foo.dir/foo.cpp.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp
 [ 50%] Linking CXX shared library libfoo.so
-cd /home/hckr/Lab/kt/smartKT/testsuite/inherit/build/lib && /usr/bin/cmake -E cmake_link_script CMakeFiles/foo.dir/link.txt --verbose=1
-/usr/bin/c++ -fPIC -std=c++17 -gdwarf-4  -shared -Wl,-soname,libfoo.so -o libfoo.so CMakeFiles/foo.dir/foo.cpp.o 
-make[2]: Leaving directory '/home/hckr/Lab/kt/smartKT/testsuite/inherit/build'
+cd /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build/lib && /usr/bin/cmake3 -E cmake_link_script CMakeFiles/foo.dir/link.txt --verbose=1
+/opt/rh/devtoolset-8/root/usr/bin/c++ -fPIC -std=c++17 -gdwarf-4 -L/usr/lib64/mysql -L/usr/lib64/ -shared -Wl,-soname,libfoo.so -o libfoo.so CMakeFiles/foo.dir/foo.cpp.o 
+make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build'
 [ 50%] Built target foo
 make -f CMakeFiles/inherit.dir/build.make CMakeFiles/inherit.dir/depend
-make[2]: Entering directory '/home/hckr/Lab/kt/smartKT/testsuite/inherit/build'
-cd /home/hckr/Lab/kt/smartKT/testsuite/inherit/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/hckr/Lab/kt/smartKT/testsuite/inherit /home/hckr/Lab/kt/smartKT/testsuite/inherit /home/hckr/Lab/kt/smartKT/testsuite/inherit/build /home/hckr/Lab/kt/smartKT/testsuite/inherit/build /home/hckr/Lab/kt/smartKT/testsuite/inherit/build/CMakeFiles/inherit.dir/DependInfo.cmake --color=
-Dependee "/home/hckr/Lab/kt/smartKT/testsuite/inherit/build/CMakeFiles/inherit.dir/DependInfo.cmake" is newer than depender "/home/hckr/Lab/kt/smartKT/testsuite/inherit/build/CMakeFiles/inherit.dir/depend.internal".
-Dependee "/home/hckr/Lab/kt/smartKT/testsuite/inherit/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/hckr/Lab/kt/smartKT/testsuite/inherit/build/CMakeFiles/inherit.dir/depend.internal".
+make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build'
+cd /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build && /usr/bin/cmake3 -E cmake_depends "Unix Makefiles" /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build/CMakeFiles/inherit.dir/DependInfo.cmake --color=
+Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build/CMakeFiles/inherit.dir/DependInfo.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build/CMakeFiles/inherit.dir/depend.internal".
+Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build/CMakeFiles/inherit.dir/depend.internal".
 Scanning dependencies of target inherit
-make[2]: Leaving directory '/home/hckr/Lab/kt/smartKT/testsuite/inherit/build'
+make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build'
 make -f CMakeFiles/inherit.dir/build.make CMakeFiles/inherit.dir/build
-make[2]: Entering directory '/home/hckr/Lab/kt/smartKT/testsuite/inherit/build'
+make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build'
 [ 75%] Building CXX object CMakeFiles/inherit.dir/src/inherit.cpp.o
-/usr/bin/c++   -I/home/hckr/Lab/kt/smartKT/testsuite/inherit/lib  -std=c++17 -gdwarf-4   -o CMakeFiles/inherit.dir/src/inherit.cpp.o -c /home/hckr/Lab/kt/smartKT/testsuite/inherit/src/inherit.cpp
+/opt/rh/devtoolset-8/root/usr/bin/c++   -I/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib  -std=c++17 -gdwarf-4   -o CMakeFiles/inherit.dir/src/inherit.cpp.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp
 [100%] Linking CXX executable inherit
-/usr/bin/cmake -E cmake_link_script CMakeFiles/inherit.dir/link.txt --verbose=1
-/usr/bin/c++  -std=c++17 -gdwarf-4  -rdynamic CMakeFiles/inherit.dir/src/inherit.cpp.o  -o inherit -Wl,-rpath,/home/hckr/Lab/kt/smartKT/testsuite/inherit/build/lib lib/libfoo.so 
-make[2]: Leaving directory '/home/hckr/Lab/kt/smartKT/testsuite/inherit/build'
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/inherit.dir/link.txt --verbose=1
+/opt/rh/devtoolset-8/root/usr/bin/c++  -std=c++17 -gdwarf-4  -L/usr/lib64/mysql -L/usr/lib64/ -rdynamic CMakeFiles/inherit.dir/src/inherit.cpp.o  -o inherit -Wl,-rpath,/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build/lib lib/libfoo.so 
+make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build'
 [100%] Built target inherit
-make[1]: Leaving directory '/home/hckr/Lab/kt/smartKT/testsuite/inherit/build'
-/usr/bin/cmake -E cmake_progress_start /home/hckr/Lab/kt/smartKT/testsuite/inherit/build/CMakeFiles 0
+make[1]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build'
+/usr/bin/cmake3 -E cmake_progress_start /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/build/CMakeFiles 0

@@ -1,3 +1,3 @@
 # FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
-/home/hckr/Lab/kt/smartKT/testsuite/inherit/lib/foo.cpp	_Z3foo7foo_str	0x20	x	103634180934	struct foo_str	12	100653446523
-/home/hckr/Lab/kt/smartKT/testsuite/inherit/lib/foo.cpp	_Z23accessFriendClassGlobalv	0x30	p	101388717604	nonstd::ParentClass	32	101141341255
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	_Z3foo7foo_str	0x20	x	103017558662	struct foo_str	12	101105857964
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	_Z23accessFriendClassGlobalv	0x20	p	100472044329	nonstd::ParentClass	32	102275864044
