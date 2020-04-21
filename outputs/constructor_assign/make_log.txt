@@ -1,0 +1,22 @@
+/usr/bin/cmake3 -S/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign -B/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake3 -E cmake_progress_start /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/build/CMakeFiles /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/build/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[1]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/build'
+make -f CMakeFiles/assign.dir/build.make CMakeFiles/assign.dir/depend
+make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/build'
+cd /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/build && /usr/bin/cmake3 -E cmake_depends "Unix Makefiles" /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/build/CMakeFiles/assign.dir/DependInfo.cmake --color=
+Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/build/CMakeFiles/assign.dir/DependInfo.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/build/CMakeFiles/assign.dir/depend.internal".
+Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/build/CMakeFiles/assign.dir/depend.internal".
+Scanning dependencies of target assign
+make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/build'
+make -f CMakeFiles/assign.dir/build.make CMakeFiles/assign.dir/build
+make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/build'
+[ 50%] Building CXX object CMakeFiles/assign.dir/assign.cpp.o
+/opt/rh/devtoolset-8/root/usr/bin/c++    -gdwarf-4   -o CMakeFiles/assign.dir/assign.cpp.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp
+[100%] Linking CXX executable assign
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/assign.dir/link.txt --verbose=1
+/opt/rh/devtoolset-8/root/usr/bin/c++  -gdwarf-4  -L/usr/lib64/mysql -L/usr/lib64/ -rdynamic CMakeFiles/assign.dir/assign.cpp.o  -o assign 
+make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/build'
+[100%] Built target assign
+make[1]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/build'
+/usr/bin/cmake3 -E cmake_progress_start /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/build/CMakeFiles 0

@@ -3,4 +3,9 @@
 !inherit/
 !threads/
 !temptest/
+!constructor_assign/
+!constructor_basic/
+!constructor_copy/
+!opr_overload/
+!pointers/
 !.gitignore

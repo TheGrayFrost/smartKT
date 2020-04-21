@@ -14,7 +14,7 @@
 
 #include "ctype.h"
 
-#define DEBUG false
+#define DEBUG true
 #define IDSIZE 11	 // normal unsigned int has 10 digits.. we are padding with one extra zero
 
 /* 
@@ -240,10 +240,10 @@ std::string cursorInspect (CXCursor& cursor) {
 
 // Adds extra information for function declaration nodes
 void add_function_information(CXCursor cursor, xmlNodePtr cur_ptr) {
-	// // Add linkage name
-	// CXString linkage_name = clang_Cursor_getMangling(cursor);
-	// xmlNewProp(cur_ptr, BAD_CAST "linkage_name", BAD_CAST clang_getCString(linkage_name));
-	// clang_disposeString(linkage_name);
+	// Add linkage name
+	CXString linkage_name = clang_Cursor_getMangling(cursor);
+	xmlNewProp(cur_ptr, BAD_CAST "linkage_name", BAD_CAST clang_getCString(linkage_name));
+	clang_disposeString(linkage_name);
 
 	// Add return type
 	CXType cursor_type = clang_getCursorType(cursor);
@@ -520,14 +520,6 @@ void add_information(CXCursor cursor, xmlNodePtr cur_ptr) {
 				xmlNewProp(cur_ptr, BAD_CAST "visibility", BAD_CAST visi_str);
 			}
 		}
-
-		if(clang_isDeclaration(cursorKind)) {
-			CXString display = clang_getCursorDisplayName(cursor);
-			const char * display_name = clang_getCString(display);
-			if(std::strlen(display_name) > 0)
-				xmlNewProp(cur_ptr, BAD_CAST "display_name", BAD_CAST display_name);
-			clang_disposeString(display);
-		}
 	}
 
 }
@@ -589,7 +581,7 @@ visitor(CXCursor cursor, CXCursor, CXClientData clientData) {
 	add_information(cursor, cur_ptr);
 
 	// Do the recursive visit
-	clang_visitChildren(cursor, visitor, &nodeData);
+	clang_visitChildren(cursor, visitor, &cur_ptr);
 
 	return CXChildVisit_Continue;
 }

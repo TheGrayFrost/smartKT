@@ -1,0 +1,22 @@
+/usr/bin/cmake3 -S/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy -B/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake3 -E cmake_progress_start /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/build/CMakeFiles /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/build/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[1]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/build'
+make -f CMakeFiles/copy.dir/build.make CMakeFiles/copy.dir/depend
+make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/build'
+cd /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/build && /usr/bin/cmake3 -E cmake_depends "Unix Makefiles" /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/build/CMakeFiles/copy.dir/DependInfo.cmake --color=
+Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/build/CMakeFiles/copy.dir/DependInfo.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/build/CMakeFiles/copy.dir/depend.internal".
+Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/build/CMakeFiles/copy.dir/depend.internal".
+Scanning dependencies of target copy
+make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/build'
+make -f CMakeFiles/copy.dir/build.make CMakeFiles/copy.dir/build
+make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/build'
+[ 50%] Building CXX object CMakeFiles/copy.dir/copy.cpp.o
+/opt/rh/devtoolset-8/root/usr/bin/c++    -gdwarf-4   -o CMakeFiles/copy.dir/copy.cpp.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp
+[100%] Linking CXX executable copy
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/copy.dir/link.txt --verbose=1
+/opt/rh/devtoolset-8/root/usr/bin/c++  -gdwarf-4  -L/usr/lib64/mysql -L/usr/lib64/ -rdynamic CMakeFiles/copy.dir/copy.cpp.o  -o copy 
+make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/build'
+[100%] Built target copy
+make[1]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/build'
+/usr/bin/cmake3 -E cmake_progress_start /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/build/CMakeFiles 0

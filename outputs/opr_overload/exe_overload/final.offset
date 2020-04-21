@@ -1,0 +1,14 @@
+# FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/opr_overload/overload.cpp	_ZN7ComplexC4Edd	None	r	102883730448	double	8	101113610189
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/opr_overload/overload.cpp	_ZN7ComplexC4Edd	None	i	102932956643	double	8	101113610189
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/opr_overload/overload.cpp	_ZplRK7ComplexS1_	0x18	a	102724535651	const Complex &	8	102066270453
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/opr_overload/overload.cpp	_ZplRK7ComplexS1_	0x20	b	100040135913	const Complex &	8	102066270453
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/opr_overload/overload.cpp	_ZplRK7Complexd	0x18	a	102255102578	const Complex &	8	103250424040
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/opr_overload/overload.cpp	_ZplRK7Complexd	0x20	d	103492961590	double	8	103250424040
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/opr_overload/overload.cpp	_ZplRK7Complexd	0x10	b	101938982560	Complex	16	103250424040
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/opr_overload/overload.cpp	_ZpldRK7Complex	0x18	d	100295516070	double	8	100598839339
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/opr_overload/overload.cpp	_ZpldRK7Complex	0x20	b	100887788993	const Complex &	8	100598839339
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/opr_overload/overload.cpp	_ZpldRK7Complex	0x10	a	101175307668	Complex	16	100598839339
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/opr_overload/overload.cpp	main	0x10	d1	103749382793	Complex	16	104113330266
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/opr_overload/overload.cpp	main	0x20	d2	101665335440	Complex	16	104113330266
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/opr_overload/overload.cpp	main	0x30	d3	101591426415	Complex	16	104113330266

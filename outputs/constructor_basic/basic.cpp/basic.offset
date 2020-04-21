@@ -1,0 +1,8 @@
+# FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	_ZN1BC4Ei	None	d	102010970918	int	4	103353922310
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	_ZN1DC4Eii	None	d	102482946180	int	4	100348366694
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	_ZN1DC4Eii	None	i	102147575151	int	4	100348366694
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	_ZN1DC4Ei	None	i	103425238671	int	4	101546469520
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	main	0x14	b	100561011154	B	4	101718804968
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	main	0x1c	d1	100260774667	D	8	101718804968
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	main	0x24	d2	102559749095	D	8	101718804968

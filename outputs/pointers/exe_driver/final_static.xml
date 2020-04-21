@@ -1,0 +1,233 @@
+<?xml version="1.0" ?><elf><EXECUTABLE binary="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/build/driver"><TranslationUnit>
+  <TemplateStubs>
+    <VarDecl col="18" file="/usr/local/include/iostream" id="103277485188" isDecl="True" lex_parent_id="101237298035" line="61" linkage_kind="external" mangled_name="_ZSt4cout" range.end="[61:22]" range.start="[61:3]" spelling="cout" storage_class="extern" type="std::ostream" usr="c:@N@std@cout" visibility="default"/>
+    <CXXMethod access_specifier="Public" col="7" file="/usr/local/include/ostream" funcargs="double" id="100255295327" isDecl="True" lex_parent_id="102912223815" line="220" linkage_kind="external" linkage_name="_ZNSolsEd" mangled_name="_ZNSolsEd" range.end="[221:33]" range.start="[219:7]" ref_tmp="101569714696" return_type="std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;::__ostream_type &amp;" spelling="operator&lt;&lt;" storage_class="default_auto" type="std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;::__ostream_type &amp;(double)" usr="c:@N@std@S@basic_ostream&gt;#C#$@N@std@S@char_traits&gt;#C@F@operator&lt;&lt;#d#" visibility="default"/>
+    <FunctionDecl col="5" file="/usr/local/include/ostream" funcargs="basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;,const char *" id="103185506574" isDecl="True" lex_parent_id="100079986056" line="556" linkage_kind="external" linkage_name="_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc" mangled_name="_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc" range.end="[564:6]" range.start="[555:5]" ref_tmp="101972961944" return_type="basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;" spelling="operator&lt;&lt;" storage_class="default_auto" type="basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;(basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;, const char *)" usr="c:@N@std@F@operator&lt;&lt;&lt;#$@N@std@S@char_traits&gt;#C&gt;#&amp;$@N@std@S@basic_ostream&gt;#C#S0_#*1C#" visibility="default"/>
+    <CXXMethod access_specifier="Public" col="7" file="/usr/local/include/ostream" funcargs="int" id="102657412186" isDecl="True" lex_parent_id="102912223815" line="189" linkage_kind="external" linkage_name="_ZNSolsEi" mangled_name="_ZNSolsEi" range.end="[189:26]" range.start="[188:7]" ref_tmp="101279583388" return_type="std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;::__ostream_type &amp;" spelling="operator&lt;&lt;" storage_class="default_auto" type="std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;::__ostream_type &amp;(int)" usr="c:@N@std@S@basic_ostream&gt;#C#$@N@std@S@char_traits&gt;#C@F@operator&lt;&lt;#I#" visibility="default"/>
+    <FunctionDecl col="5" file="/usr/local/include/cmath" funcargs="int" id="100558206406" isDecl="True" isDef="True" lex_parent_id="103161483866" line="475" linkage_kind="external" linkage_name="_ZSt4sqrtIiEN9__gnu_cxx11__enable_ifIXsr12__is_integerIT_EE7__valueEdE6__typeES2_" mangled_name="_ZSt4sqrtIiEN9__gnu_cxx11__enable_ifIXsr12__is_integerIT_EE7__valueEdE6__typeES2_" range.end="[476:36]" range.start="[472:5]" ref_tmp="103546779733" return_type="typename __gnu_cxx::__enable_if&lt;__is_integer&lt;int&gt;::__value, double&gt;::__type" spelling="sqrt" storage_class="default_auto" type="typename __gnu_cxx::__enable_if&lt;__is_integer&lt;int&gt;::__value, double&gt;::__type (int)" usr="c:@N@std@F@sqrt&lt;#I&gt;#I#" visibility="default"/>
+  </TemplateStubs>
+  <inclusionDirective col="1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101749602191" line="1" range.end="[1:18]" range.start="[1:1]" spelling="math.h"/>
+  <inclusionDirective col="1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100882870605" line="2" range.end="[2:19]" range.start="[2:1]" spelling="stdio.h"/>
+  <inclusionDirective col="1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101096067575" line="3" range.end="[3:19]" range.start="[3:1]" spelling="iostream"/>
+  <UsingDirective col="17" def_id="103087695966" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100438007021" isDecl="True" lex_parent_id="100776664782" line="5" linkage_kind="auto" range.end="[5:20]" range.start="[5:1]" visibility="default">
+    <NamespaceRef col="17" def_id="103087695966" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100344304189" line="5" range.end="[5:20]" range.start="[5:17]" spelling="std"/>
+  </UsingDirective>
+  <FunctionDecl col="6" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" funcargs="int,int *,double *" id="101064603122" isDecl="True" isDef="True" lex_parent_id="100776664782" line="7" linkage_kind="external" linkage_name="_Z3funiPiPd" mangled_name="_Z3funiPiPd" range.end="[11:2]" range.start="[7:1]" return_type="void" spelling="fun" storage_class="default_auto" type="void (int, int *, double *)" usr="c:@F@fun#I#*I#*d#" visibility="default">
+    <ParmDecl col="14" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103521272129" isDecl="True" isDef="True" lex_parent_id="101064603122" line="7" linkage_kind="auto" mangled_name="_ZZ3funiPiPdE1n" offset="0x4" range.end="[7:15]" range.start="[7:10]" size="4" spelling="n" storage_class="default_auto" type="int" usr="c:driver.cc@92@F@fun#I#*I#*d#@n" visibility="default"/>
+    <ParmDecl col="22" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103217976193" isDecl="True" isDef="True" lex_parent_id="101064603122" line="7" linkage_kind="auto" mangled_name="_ZZ3funiPiPdE6square" offset="0x10" range.end="[7:28]" range.start="[7:17]" size="8" spelling="square" storage_class="default_auto" type="int *" usr="c:driver.cc@99@F@fun#I#*I#*d#@square" visibility="default"/>
+    <ParmDecl col="38" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="104105255416" isDecl="True" isDef="True" lex_parent_id="101064603122" line="7" linkage_kind="auto" mangled_name="_ZZ3funiPiPdE7sq_root" offset="0x18" range.end="[7:45]" range.start="[7:30]" size="8" spelling="sq_root" storage_class="default_auto" type="double *" usr="c:driver.cc@112@F@fun#I#*I#*d#@sq_root" visibility="default"/>
+    <CompoundStmt col="1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100685671693" line="8" range.end="[11:2]" range.start="[8:1]" sem_parent_id="101064603122" storage_class="default_auto">
+      <BinaryOperator col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102369108838" isAssignment="True" line="9" range.end="[9:20]" range.start="[9:5]" type="int">
+        <UnaryOperator col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100410045182" line="9" range.end="[9:12]" range.start="[9:5]" type="int">
+          <UnexposedExpr col="6" def_id="103217976193" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103083247768" line="9" range.end="[9:12]" range.start="[9:6]" spelling="square" type="int *">
+            <DeclRefExpr col="6" def_id="103217976193" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100897348298" line="9" range.end="[9:12]" range.start="[9:6]" spelling="square" type="int *"/>
+          </UnexposedExpr>
+        </UnaryOperator>
+        <BinaryOperator col="15" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101197423318" line="9" range.end="[9:20]" range.start="[9:15]" type="int">
+          <UnexposedExpr col="15" def_id="103521272129" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100854798858" line="9" range.end="[9:16]" range.start="[9:15]" spelling="n" type="int">
+            <DeclRefExpr col="15" def_id="103521272129" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103118889544" line="9" range.end="[9:16]" range.start="[9:15]" spelling="n" type="int"/>
+          </UnexposedExpr>
+          <UnexposedExpr col="19" def_id="103521272129" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101694532183" line="9" range.end="[9:20]" range.start="[9:19]" spelling="n" type="int">
+            <DeclRefExpr col="19" def_id="103521272129" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102063635088" line="9" range.end="[9:20]" range.start="[9:19]" spelling="n" type="int"/>
+          </UnexposedExpr>
+        </BinaryOperator>
+      </BinaryOperator>
+      <BinaryOperator col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103018470732" isAssignment="True" line="10" range.end="[10:23]" range.start="[10:5]" type="double">
+        <UnaryOperator col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100903188257" line="10" range.end="[10:13]" range.start="[10:5]" type="double">
+          <UnexposedExpr col="6" def_id="104105255416" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102044282713" line="10" range.end="[10:13]" range.start="[10:6]" spelling="sq_root" type="double *">
+            <DeclRefExpr col="6" def_id="104105255416" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100809901093" line="10" range.end="[10:13]" range.start="[10:6]" spelling="sq_root" type="double *"/>
+          </UnexposedExpr>
+        </UnaryOperator>
+        <CallExpr col="16" def_id="100558206406" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103317117817" line="10" range.end="[10:23]" range.start="[10:16]" spelling="sqrt" type="typename __gnu_cxx::__enable_if&lt;__is_integer&lt;int&gt;::__value, double&gt;::__type">
+          <UnexposedExpr col="16" def_id="100558206406" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101526284850" line="10" range.end="[10:20]" range.start="[10:16]" spelling="sqrt" type="typename __gnu_cxx::__enable_if&lt;__is_integer&lt;int&gt;::__value, double&gt;::__type (*)(int)">
+            <DeclRefExpr col="16" def_id="100558206406" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102025427450" line="10" range.end="[10:20]" range.start="[10:16]" spelling="sqrt" type="typename __gnu_cxx::__enable_if&lt;__is_integer&lt;int&gt;::__value, double&gt;::__type (int)"/>
+          </UnexposedExpr>
+          <UnexposedExpr col="21" def_id="103521272129" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102792944395" line="10" range.end="[10:22]" range.start="[10:21]" spelling="n" type="int">
+            <DeclRefExpr col="21" def_id="103521272129" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100637740650" line="10" range.end="[10:22]" range.start="[10:21]" spelling="n" type="int"/>
+          </UnexposedExpr>
+        </CallExpr>
+      </BinaryOperator>
+    </CompoundStmt>
+  </FunctionDecl>
+  <VarDecl address="0x602194" col="6" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100092200340" isDecl="True" isDef="True" lex_parent_id="100776664782" line="13" linkage_kind="external" mangled_name="t" range.end="[13:7]" range.start="[13:2]" size="4" spelling="t" storage_class="default_auto" type="int" usr="c:@t" visibility="default"/>
+  <FunctionDecl col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" funcargs="" id="100244591866" isDecl="True" isDef="True" lex_parent_id="100776664782" line="14" linkage_kind="external" linkage_name="main" mangled_name="main" range.end="[75:2]" range.start="[14:1]" return_type="int" spelling="main" storage_class="default_auto" type="int ()" usr="c:@F@main#" visibility="default">
+    <CompoundStmt col="1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103549960370" line="15" range.end="[75:2]" range.start="[15:1]" sem_parent_id="100244591866" storage_class="default_auto">
+      <DeclStmt col="4" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103774086637" line="17" range.end="[17:14]" range.start="[17:4]">
+        <VarDecl col="8" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102897622620" isDecl="True" isDef="True" lex_parent_id="100244591866" line="17" linkage_kind="auto" mangled_name="_ZZ4mainE1a" offset="0x24" range.end="[17:13]" range.start="[17:4]" size="4" spelling="a" storage_class="default_auto" type="int" usr="c:driver.cc@215@F@main#@a" visibility="default">
+          <IntegerLiteral col="12" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101166024815" line="17" range.end="[17:13]" range.start="[17:12]" sem_parent_id="102897622620" storage_class="default_auto" type="int"/>
+        </VarDecl>
+      </DeclStmt>
+      <DeclStmt col="1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101631617484" line="18" range.end="[18:11]" range.start="[18:1]">
+        <VarDecl col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102815384919" isDecl="True" isDef="True" lex_parent_id="100244591866" line="18" linkage_kind="auto" mangled_name="_ZZ4mainE1b" offset="0x28" range.end="[18:10]" range.start="[18:1]" size="4" spelling="b" storage_class="default_auto" type="int" usr="c:driver.cc@226@F@main#@b" visibility="default">
+          <IntegerLiteral col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101854990469" line="18" range.end="[18:10]" range.start="[18:9]" sem_parent_id="102815384919" storage_class="default_auto" type="int"/>
+        </VarDecl>
+      </DeclStmt>
+      <DeclStmt col="1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103778776953" line="19" range.end="[19:11]" range.start="[19:1]">
+        <VarDecl col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103212400466" isDecl="True" isDef="True" lex_parent_id="100244591866" line="19" linkage_kind="auto" mangled_name="_ZZ4mainE1c" offset="0x4" range.end="[19:10]" range.start="[19:1]" size="4" spelling="c" storage_class="default_auto" type="int" usr="c:driver.cc@237@F@main#@c" visibility="default">
+          <IntegerLiteral col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101647258046" line="19" range.end="[19:10]" range.start="[19:9]" sem_parent_id="103212400466" storage_class="default_auto" type="int"/>
+        </VarDecl>
+      </DeclStmt>
+      <DeclStmt col="1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103026732534" line="20" range.end="[20:8]" range.start="[20:1]">
+        <VarDecl col="6" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100962993605" isDecl="True" isDef="True" lex_parent_id="100244591866" line="20" linkage_kind="auto" mangled_name="_ZZ4mainE1p" offset="0x10" range.end="[20:7]" range.start="[20:1]" size="8" spelling="p" storage_class="default_auto" type="int *" usr="c:driver.cc@248@F@main#@p" visibility="default"/>
+      </DeclStmt>
+      <DeclStmt col="1" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103602019218" line="21" range.end="[21:8]" range.start="[21:1]">
+        <VarDecl col="6" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101702556098" isDecl="True" isDef="True" lex_parent_id="100244591866" line="21" linkage_kind="auto" mangled_name="_ZZ4mainE1q" offset="0x18" range.end="[21:7]" range.start="[21:1]" size="8" spelling="q" storage_class="default_auto" type="int *" usr="c:driver.cc@256@F@main#@q" visibility="default"/>
+      </DeclStmt>
+      <DeclStmt col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103894326959" line="23" range.end="[23:16]" range.start="[23:5]">
+        <VarDecl col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103185879526" isDecl="True" isDef="True" lex_parent_id="100244591866" line="23" linkage_kind="auto" mangled_name="_ZZ4mainE1n" offset="0x8" range.end="[23:15]" range.start="[23:5]" size="4" spelling="n" storage_class="default_auto" type="int" usr="c:driver.cc@269@F@main#@n" visibility="default">
+          <IntegerLiteral col="13" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102148836658" line="23" range.end="[23:15]" range.start="[23:13]" sem_parent_id="103185879526" storage_class="default_auto" type="int"/>
+        </VarDecl>
+      </DeclStmt>
+      <BinaryOperator col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103961433312" isAssignment="True" line="24" range.end="[24:11]" range.start="[24:5]" type="int *">
+        <DeclRefExpr col="5" def_id="100962993605" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100336475223" line="24" range.end="[24:6]" range.start="[24:5]" spelling="p" type="int *"/>
+        <UnaryOperator col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102387748222" line="24" range.end="[24:11]" range.start="[24:9]" type="int *">
+          <DeclRefExpr col="10" def_id="102897622620" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100673446854" line="24" range.end="[24:11]" range.start="[24:10]" spelling="a" type="int"/>
+        </UnaryOperator>
+      </BinaryOperator>
+      <BinaryOperator col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103430692253" isAssignment="True" line="25" range.end="[25:11]" range.start="[25:5]" type="int *">
+        <DeclRefExpr col="5" def_id="101702556098" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101863736944" line="25" range.end="[25:6]" range.start="[25:5]" spelling="q" type="int *"/>
+        <UnaryOperator col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100522049056" line="25" range.end="[25:11]" range.start="[25:9]" type="int *">
+          <DeclRefExpr col="10" def_id="102815384919" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101271953988" line="25" range.end="[25:11]" range.start="[25:10]" spelling="b" type="int"/>
+        </UnaryOperator>
+      </BinaryOperator>
+      <BinaryOperator col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102633068179" isAssignment="True" line="27" range.end="[27:11]" range.start="[27:5]" type="int">
+        <DeclRefExpr col="5" def_id="103212400466" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103296738711" line="27" range.end="[27:6]" range.start="[27:5]" spelling="c" type="int"/>
+        <UnexposedExpr col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103947346335" line="27" range.end="[27:11]" range.start="[27:9]" type="int">
+          <UnaryOperator col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101646830017" line="27" range.end="[27:11]" range.start="[27:9]" type="int">
+            <UnexposedExpr col="10" def_id="100962993605" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101972252340" line="27" range.end="[27:11]" range.start="[27:10]" spelling="p" type="int *">
+              <DeclRefExpr col="10" def_id="100962993605" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100829563989" line="27" range.end="[27:11]" range.start="[27:10]" spelling="p" type="int *"/>
+            </UnexposedExpr>
+          </UnaryOperator>
+        </UnexposedExpr>
+      </BinaryOperator>
+      <BinaryOperator col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102012732078" isAssignment="True" line="28" range.end="[28:10]" range.start="[28:5]" type="int *">
+        <DeclRefExpr col="5" def_id="100962993605" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100465494372" line="28" range.end="[28:6]" range.start="[28:5]" spelling="p" type="int *"/>
+        <UnexposedExpr col="9" def_id="101702556098" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103416653334" line="28" range.end="[28:10]" range.start="[28:9]" spelling="q" type="int *">
+          <DeclRefExpr col="9" def_id="101702556098" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100782936534" line="28" range.end="[28:10]" range.start="[28:9]" spelling="q" type="int *"/>
+        </UnexposedExpr>
+      </BinaryOperator>
+      <BinaryOperator col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101560299075" isAssignment="True" line="29" range.end="[29:12]" range.start="[29:5]" type="int">
+        <UnaryOperator col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102138528710" line="29" range.end="[29:7]" range.start="[29:5]" type="int">
+          <UnexposedExpr col="6" def_id="100962993605" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100882387732" line="29" range.end="[29:7]" range.start="[29:6]" spelling="p" type="int *">
+            <DeclRefExpr col="6" def_id="100962993605" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101400593757" line="29" range.end="[29:7]" range.start="[29:6]" spelling="p" type="int *"/>
+          </UnexposedExpr>
+        </UnaryOperator>
+        <IntegerLiteral col="10" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101652670512" line="29" range.end="[29:12]" range.start="[29:10]" type="int"/>
+      </BinaryOperator>
+      <BinaryOperator col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102840621965" isAssignment="True" line="33" range.end="[33:11]" range.start="[33:5]" type="int">
+        <DeclRefExpr col="5" def_id="100092200340" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100152572909" line="33" range.end="[33:6]" range.start="[33:5]" spelling="t" type="int"/>
+        <BinaryOperator col="8" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103023038521" line="33" range.end="[33:11]" range.start="[33:8]" type="int">
+          <UnexposedExpr col="8" def_id="100092200340" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101373410656" line="33" range.end="[33:9]" range.start="[33:8]" spelling="t" type="int">
+            <DeclRefExpr col="8" def_id="100092200340" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103508272242" line="33" range.end="[33:9]" range.start="[33:8]" spelling="t" type="int"/>
+          </UnexposedExpr>
+          <IntegerLiteral col="10" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102726020639" line="33" range.end="[33:11]" range.start="[33:10]" type="int"/>
+        </BinaryOperator>
+      </BinaryOperator>
+      <CallExpr col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103789435193" line="34" range.end="[34:19]" range.start="[34:5]" ref_id="102657412186" spelling="operator&lt;&lt;" type="std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;::__ostream_type">
+        <CallExpr col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100486201648" line="34" range.end="[34:16]" range.start="[34:5]" ref_id="103185506574" spelling="operator&lt;&lt;" type="basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;">
+          <DeclRefExpr col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103622620861" line="34" range.end="[34:9]" range.start="[34:5]" ref_id="103277485188" spelling="cout" type="std::ostream"/>
+          <UnexposedExpr col="10" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102770274105" line="34" range.end="[34:12]" range.start="[34:10]" ref_id="103185506574" spelling="operator&lt;&lt;" type="basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;(*)(basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;, const char *)">
+            <DeclRefExpr col="10" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103151954929" line="34" range.end="[34:12]" range.start="[34:10]" ref_id="103185506574" spelling="operator&lt;&lt;" type="basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;(basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;, const char *)"/>
+          </UnexposedExpr>
+          <UnexposedExpr col="13" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="104017578653" line="34" range.end="[34:16]" range.start="[34:13]" type="const char *">
+            <StringLiteral col="13" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102267346683" line="34" range.end="[34:16]" range.start="[34:13]" spelling="&quot;t&quot;" type="const char [2]"/>
+          </UnexposedExpr>
+        </CallExpr>
+        <UnexposedExpr col="16" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100884164793" line="34" range.end="[34:18]" range.start="[34:16]" ref_id="102657412186" spelling="operator&lt;&lt;" type="std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;::__ostream_type &amp;(*)(int)">
+          <DeclRefExpr col="16" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102835646456" line="34" range.end="[34:18]" range.start="[34:16]" ref_id="102657412186" spelling="operator&lt;&lt;" type="std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;::__ostream_type &amp;(int)"/>
+        </UnexposedExpr>
+        <UnexposedExpr col="18" def_id="100092200340" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100824198441" line="34" range.end="[34:19]" range.start="[34:18]" spelling="t" type="int">
+          <DeclRefExpr col="18" def_id="100092200340" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101307616061" line="34" range.end="[34:19]" range.start="[34:18]" spelling="t" type="int"/>
+        </UnexposedExpr>
+      </CallExpr>
+      <DeclStmt col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101930961204" line="36" range.end="[36:12]" range.start="[36:5]">
+        <VarDecl col="10" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103480994766" isDecl="True" isDef="True" lex_parent_id="100244591866" line="36" linkage_kind="auto" mangled_name="_ZZ4mainE1s" offset="0x20" range.end="[36:11]" range.start="[36:5]" size="8" spelling="s" storage_class="default_auto" type="int *" usr="c:driver.cc@401@F@main#@s" visibility="default"/>
+      </DeclStmt>
+      <BinaryOperator col="4" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100077631138" isAssignment="True" line="37" range.end="[37:11]" range.start="[37:4]" type="int">
+        <UnaryOperator col="4" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100721417945" line="37" range.end="[37:6]" range.start="[37:4]" type="int">
+          <UnexposedExpr col="5" def_id="103480994766" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101210895021" line="37" range.end="[37:6]" range.start="[37:5]" spelling="s" type="int *">
+            <DeclRefExpr col="5" def_id="103480994766" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100727090915" line="37" range.end="[37:6]" range.start="[37:5]" spelling="s" type="int *"/>
+          </UnexposedExpr>
+        </UnaryOperator>
+        <IntegerLiteral col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100322829316" line="37" range.end="[37:11]" range.start="[37:9]" type="int"/>
+      </BinaryOperator>
+      <CallExpr col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="104047637773" line="38" range.end="[38:23]" range.start="[38:5]" ref_id="102657412186" spelling="operator&lt;&lt;" type="std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;::__ostream_type">
+        <CallExpr col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102484749522" line="38" range.end="[38:17]" range.start="[38:5]" ref_id="103185506574" spelling="operator&lt;&lt;" type="basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;">
+          <DeclRefExpr col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101162481308" line="38" range.end="[38:9]" range.start="[38:5]" ref_id="103277485188" spelling="cout" type="std::ostream"/>
+          <UnexposedExpr col="10" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100330762628" line="38" range.end="[38:12]" range.start="[38:10]" ref_id="103185506574" spelling="operator&lt;&lt;" type="basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;(*)(basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;, const char *)">
+            <DeclRefExpr col="10" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100071176838" line="38" range.end="[38:12]" range.start="[38:10]" ref_id="103185506574" spelling="operator&lt;&lt;" type="basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;(basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;, const char *)"/>
+          </UnexposedExpr>
+          <UnexposedExpr col="13" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102014166972" line="38" range.end="[38:17]" range.start="[38:13]" type="const char *">
+            <StringLiteral col="13" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101825583035" line="38" range.end="[38:17]" range.start="[38:13]" spelling="&quot;*s&quot;" type="const char [3]"/>
+          </UnexposedExpr>
+        </CallExpr>
+        <UnexposedExpr col="18" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100020021108" line="38" range.end="[38:20]" range.start="[38:18]" ref_id="102657412186" spelling="operator&lt;&lt;" type="std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;::__ostream_type &amp;(*)(int)">
+          <DeclRefExpr col="18" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102717995308" line="38" range.end="[38:20]" range.start="[38:18]" ref_id="102657412186" spelling="operator&lt;&lt;" type="std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;::__ostream_type &amp;(int)"/>
+        </UnexposedExpr>
+        <UnexposedExpr col="21" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100529459784" line="38" range.end="[38:23]" range.start="[38:21]" type="int">
+          <UnaryOperator col="21" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101527687994" line="38" range.end="[38:23]" range.start="[38:21]" type="int">
+            <UnexposedExpr col="22" def_id="103480994766" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100479889532" line="38" range.end="[38:23]" range.start="[38:22]" spelling="s" type="int *">
+              <DeclRefExpr col="22" def_id="103480994766" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103723149496" line="38" range.end="[38:23]" range.start="[38:22]" spelling="s" type="int *"/>
+            </UnexposedExpr>
+          </UnaryOperator>
+        </UnexposedExpr>
+      </CallExpr>
+      <DeclStmt col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101687866331" line="41" range.end="[41:12]" range.start="[41:5]">
+        <VarDecl col="9" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103797235452" isDecl="True" isDef="True" lex_parent_id="100244591866" line="41" linkage_kind="auto" mangled_name="_ZZ4mainE2sq" offset="0x2c" range.end="[41:11]" range.start="[41:5]" size="4" spelling="sq" storage_class="default_auto" type="int" usr="c:driver.cc@453@F@main#@sq" visibility="default"/>
+      </DeclStmt>
+      <DeclStmt col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="104253161836" line="42" range.end="[42:20]" range.start="[42:5]">
+        <VarDecl col="12" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100073585979" isDecl="True" isDef="True" lex_parent_id="100244591866" line="42" linkage_kind="auto" mangled_name="_ZZ4mainE7sq_root" offset="0x38" range.end="[42:19]" range.start="[42:5]" size="8" spelling="sq_root" storage_class="default_auto" type="double" usr="c:driver.cc@466@F@main#@sq_root" visibility="default"/>
+      </DeclStmt>
+      <CallExpr col="5" def_id="101064603122" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103817921697" line="43" range.end="[43:26]" range.start="[43:5]" spelling="fun" type="void">
+        <UnexposedExpr col="5" def_id="101064603122" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103087672805" line="43" range.end="[43:8]" range.start="[43:5]" spelling="fun" type="void (*)(int, int *, double *)">
+          <DeclRefExpr col="5" def_id="101064603122" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="104085329495" line="43" range.end="[43:8]" range.start="[43:5]" spelling="fun" type="void (int, int *, double *)"/>
+        </UnexposedExpr>
+        <UnexposedExpr col="9" def_id="103185879526" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102227884581" line="43" range.end="[43:10]" range.start="[43:9]" spelling="n" type="int">
+          <DeclRefExpr col="9" def_id="103185879526" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101077478839" line="43" range.end="[43:10]" range.start="[43:9]" spelling="n" type="int"/>
+        </UnexposedExpr>
+        <UnaryOperator col="12" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100490213566" line="43" range.end="[43:15]" range.start="[43:12]" type="int *">
+          <DeclRefExpr col="13" def_id="103797235452" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100083113475" line="43" range.end="[43:15]" range.start="[43:13]" spelling="sq" type="int"/>
+        </UnaryOperator>
+        <UnaryOperator col="17" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102048918678" line="43" range.end="[43:25]" range.start="[43:17]" type="double *">
+          <DeclRefExpr col="18" def_id="100073585979" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102219577554" line="43" range.end="[43:25]" range.start="[43:18]" spelling="sq_root" type="double"/>
+        </UnaryOperator>
+      </CallExpr>
+      <CallExpr col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100721714781" line="45" range.end="[45:46]" range.start="[45:5]" ref_id="100255295327" spelling="operator&lt;&lt;" type="std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;::__ostream_type">
+        <CallExpr col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102648823091" line="45" range.end="[45:36]" range.start="[45:5]" ref_id="103185506574" spelling="operator&lt;&lt;" type="basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;">
+          <CallExpr col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101656489521" line="45" range.end="[45:23]" range.start="[45:5]" ref_id="102657412186" spelling="operator&lt;&lt;" type="std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;::__ostream_type">
+            <CallExpr col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103245976128" line="45" range.end="[45:17]" range.start="[45:5]" ref_id="103185506574" spelling="operator&lt;&lt;" type="basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;">
+              <DeclRefExpr col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103736102866" line="45" range.end="[45:9]" range.start="[45:5]" ref_id="103277485188" spelling="cout" type="std::ostream"/>
+              <UnexposedExpr col="10" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101551708797" line="45" range.end="[45:12]" range.start="[45:10]" ref_id="103185506574" spelling="operator&lt;&lt;" type="basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;(*)(basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;, const char *)">
+                <DeclRefExpr col="10" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103229893543" line="45" range.end="[45:12]" range.start="[45:10]" ref_id="103185506574" spelling="operator&lt;&lt;" type="basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;(basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;, const char *)"/>
+              </UnexposedExpr>
+              <UnexposedExpr col="13" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100715280470" line="45" range.end="[45:17]" range.start="[45:13]" type="const char *">
+                <StringLiteral col="13" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103724616682" line="45" range.end="[45:17]" range.start="[45:13]" spelling="&quot;sq&quot;" type="const char [3]"/>
+              </UnexposedExpr>
+            </CallExpr>
+            <UnexposedExpr col="18" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102902534193" line="45" range.end="[45:20]" range.start="[45:18]" ref_id="102657412186" spelling="operator&lt;&lt;" type="std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;::__ostream_type &amp;(*)(int)">
+              <DeclRefExpr col="18" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103774883017" line="45" range.end="[45:20]" range.start="[45:18]" ref_id="102657412186" spelling="operator&lt;&lt;" type="std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;::__ostream_type &amp;(int)"/>
+            </UnexposedExpr>
+            <UnexposedExpr col="21" def_id="103797235452" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103989219400" line="45" range.end="[45:23]" range.start="[45:21]" spelling="sq" type="int">
+              <DeclRefExpr col="21" def_id="103797235452" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="102768373553" line="45" range.end="[45:23]" range.start="[45:21]" spelling="sq" type="int"/>
+            </UnexposedExpr>
+          </CallExpr>
+          <UnexposedExpr col="24" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103777190400" line="45" range.end="[45:26]" range.start="[45:24]" ref_id="103185506574" spelling="operator&lt;&lt;" type="basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;(*)(basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;, const char *)">
+            <DeclRefExpr col="24" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100449294847" line="45" range.end="[45:26]" range.start="[45:24]" ref_id="103185506574" spelling="operator&lt;&lt;" type="basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;(basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;, const char *)"/>
+          </UnexposedExpr>
+          <UnexposedExpr col="27" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103570724161" line="45" range.end="[45:36]" range.start="[45:27]" type="const char *">
+            <StringLiteral col="27" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103820886819" line="45" range.end="[45:36]" range.start="[45:27]" spelling="&quot;sq_root&quot;" type="const char [8]"/>
+          </UnexposedExpr>
+        </CallExpr>
+        <UnexposedExpr col="36" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103554207924" line="45" range.end="[45:38]" range.start="[45:36]" ref_id="100255295327" spelling="operator&lt;&lt;" type="std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;::__ostream_type &amp;(*)(double)">
+          <DeclRefExpr col="36" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="103984274350" line="45" range.end="[45:38]" range.start="[45:36]" ref_id="100255295327" spelling="operator&lt;&lt;" type="std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;::__ostream_type &amp;(double)"/>
+        </UnexposedExpr>
+        <UnexposedExpr col="39" def_id="100073585979" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100470634919" line="45" range.end="[45:46]" range.start="[45:39]" spelling="sq_root" type="double">
+          <DeclRefExpr col="39" def_id="100073585979" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101509981094" line="45" range.end="[45:46]" range.start="[45:39]" spelling="sq_root" type="double"/>
+        </UnexposedExpr>
+      </CallExpr>
+      <ReturnStmt col="5" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="100356218802" line="74" range.end="[74:13]" range.start="[74:5]">
+        <IntegerLiteral col="12" file="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc" id="101536542448" line="74" range.end="[74:13]" range.start="[74:12]" type="int"/>
+      </ReturnStmt>
+    </CompoundStmt>
+  </FunctionDecl>
+</TranslationUnit></EXECUTABLE></elf>

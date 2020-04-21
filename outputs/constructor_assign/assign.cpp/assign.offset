@@ -1,0 +1,5 @@
+# FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp	_ZN6StringC4EPc	None	s	102426732634	char *	8	101367312165
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp	_ZN6StringaSERKS_	0x10	s	103109968619	const String &	8	101018885077
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp	main	0x20	s1	102050314878	String	16	102075467693
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp	main	0x30	s2	101770257857	String	16	102075467693

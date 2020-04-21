@@ -1,0 +1,22 @@
+/usr/bin/cmake3 -S/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic -B/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake3 -E cmake_progress_start /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/build/CMakeFiles /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/build/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[1]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/build'
+make -f CMakeFiles/basic.dir/build.make CMakeFiles/basic.dir/depend
+make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/build'
+cd /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/build && /usr/bin/cmake3 -E cmake_depends "Unix Makefiles" /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/build/CMakeFiles/basic.dir/DependInfo.cmake --color=
+Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/build/CMakeFiles/basic.dir/DependInfo.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/build/CMakeFiles/basic.dir/depend.internal".
+Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/build/CMakeFiles/basic.dir/depend.internal".
+Scanning dependencies of target basic
+make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/build'
+make -f CMakeFiles/basic.dir/build.make CMakeFiles/basic.dir/build
+make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/build'
+[ 50%] Building CXX object CMakeFiles/basic.dir/basic.cpp.o
+/opt/rh/devtoolset-8/root/usr/bin/c++    -gdwarf-4   -o CMakeFiles/basic.dir/basic.cpp.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp
+[100%] Linking CXX executable basic
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/basic.dir/link.txt --verbose=1
+/opt/rh/devtoolset-8/root/usr/bin/c++  -gdwarf-4  -L/usr/lib64/mysql -L/usr/lib64/ -rdynamic CMakeFiles/basic.dir/basic.cpp.o  -o basic 
+make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/build'
+[100%] Built target basic
+make[1]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/build'
+/usr/bin/cmake3 -E cmake_progress_start /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/build/CMakeFiles 0

@@ -1,0 +1,22 @@
+/usr/bin/cmake3 -S/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers -B/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake3 -E cmake_progress_start /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/build/CMakeFiles /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/build/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[1]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/build'
+make -f CMakeFiles/driver.dir/build.make CMakeFiles/driver.dir/depend
+make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/build'
+cd /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/build && /usr/bin/cmake3 -E cmake_depends "Unix Makefiles" /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/build/CMakeFiles/driver.dir/DependInfo.cmake --color=
+Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/build/CMakeFiles/driver.dir/DependInfo.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/build/CMakeFiles/driver.dir/depend.internal".
+Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/build/CMakeFiles/driver.dir/depend.internal".
+Scanning dependencies of target driver
+make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/build'
+make -f CMakeFiles/driver.dir/build.make CMakeFiles/driver.dir/build
+make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/build'
+[ 50%] Building CXX object CMakeFiles/driver.dir/driver.cc.o
+/opt/rh/devtoolset-8/root/usr/bin/c++    -gdwarf-4   -o CMakeFiles/driver.dir/driver.cc.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc
+[100%] Linking CXX executable driver
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/driver.dir/link.txt --verbose=1
+/opt/rh/devtoolset-8/root/usr/bin/c++  -gdwarf-4  -L/usr/lib64/mysql -L/usr/lib64/ -rdynamic CMakeFiles/driver.dir/driver.cc.o  -o driver 
+make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/build'
+[100%] Built target driver
+make[1]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/build'
+/usr/bin/cmake3 -E cmake_progress_start /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/build/CMakeFiles 0

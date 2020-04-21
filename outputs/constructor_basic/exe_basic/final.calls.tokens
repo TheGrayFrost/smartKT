@@ -1,0 +1,26 @@
+# FILENAME	LOCATION	FUNCNAME	CALLNODEID	CALLEXPR
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	8:27::8:65	_ZNSolsEPFRSoS_E	102473250808	cout<< "B::B(int): " << data_ << endl
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	8:27::8:57	_ZNSolsEi	102212791327	cout<< "B::B(int): " << data_
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	8:27::8:48	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	102806328641	cout<< "B::B(int): "
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	9:8::9:44	_ZNSolsEPFRSoS_E	103586515321	cout<< "B::~B(): " << data_ << endl
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	9:8::9:36	_ZNSolsEi	101880159468	cout<< "B::~B(): " << data_
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	9:8::9:27	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	103739892300	cout<< "B::~B(): "
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	14:19::14:23	_ZN1BC1Ei	101135463898	B( d )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	15:3::15:63	_ZNSolsEPFRSoS_E	101401982534	cout<< "D::D(int, int): " << data_ << ", " << info_ << endl
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	15:3::15:55	_ZNSolsEi	103898526359	cout<< "D::D(int, int): " << data_ << ", " << info_
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	15:3::15:46	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	103304455313	cout<< "D::D(int, int): " << data_ << ", "
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	15:3::15:38	_ZNSolsEi	103570648017	cout<< "D::D(int, int): " << data_
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	15:3::15:29	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	100823739373	cout<< "D::D(int, int): "
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	17:3::17:58	_ZNSolsEPFRSoS_E	100359495118	cout<< "D::D(int): " << data_ << ", " << info_ << endl
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	17:3::17:50	_ZNSolsEi	103655715206	cout<< "D::D(int): " << data_ << ", " << info_
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	17:3::17:41	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	102868764562	cout<< "D::D(int): " << data_ << ", "
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	17:3::17:33	_ZNSolsEi	103988584794	cout<< "D::D(int): " << data_
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	17:3::17:24	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	102250361040	cout<< "D::D(int): "
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	18:8::18:61	_ZNSolsEPFRSoS_E	101068531638	cout<< "D::~D(): " << data_ << ", " << info_ << endl
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	18:8::18:53	_ZNSolsEi	103789848294	cout<< "D::~D(): " << data_ << ", " << info_
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	18:8::18:44	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	100368486465	cout<< "D::~D(): " << data_ << ", "
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	18:8::18:36	_ZNSolsEi	100779275902	cout<< "D::~D(): " << data_
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	18:8::18:27	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	104293911908	cout<< "D::~D(): "
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	23:3::23:7	_ZN1BC1Ei	101246613512	b( 5 )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	24:3::24:11	_ZN1DC1Eii	103739342508	d1( 1 , 2 )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_basic/basic.cpp	25:3::25:8	_ZN1DC1Ei	100171009472	d2( 3 )

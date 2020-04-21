@@ -1,0 +1,6 @@
+# FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	_ZN7ComplexC4Edd	None	re	103313842930	double	8	102898371571
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	_ZN7ComplexC4Edd	None	im	101536495684	double	8	102898371571
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	_ZN7ComplexC4ERKS_	None	c	102271819214	const Complex &	8	102263968101
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	_Z7Display7Complex	0x8	c_param	103681314897	Complex	16	101864475918
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	main	0x30	c	100242193453	Complex	16	103007443295

@@ -1,0 +1,13 @@
+# FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc	_Z3funiPiPd	0x4	n	103521272129	int	4	101064603122
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc	_Z3funiPiPd	0x10	square	103217976193	int *	8	101064603122
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc	_Z3funiPiPd	0x18	sq_root	104105255416	double *	8	101064603122
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc	main	0x24	a	102897622620	int	4	100244591866
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc	main	0x28	b	102815384919	int	4	100244591866
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc	main	0x4	c	103212400466	int	4	100244591866
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc	main	0x10	p	100962993605	int *	8	100244591866
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc	main	0x18	q	101702556098	int *	8	100244591866
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc	main	0x8	n	103185879526	int	4	100244591866
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc	main	0x20	s	103480994766	int *	8	100244591866
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc	main	0x2c	sq	103797235452	int	4	100244591866
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc	main	0x38	sq_root	100073585979	double	8	100244591866

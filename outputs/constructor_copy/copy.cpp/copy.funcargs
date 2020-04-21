@@ -1,0 +1,10 @@
+# FILENAME	FUNCNODEID	FUNCNAME	NARGS	ARGTYPE*	RETTYPE
+/usr/local/include/ostream	103764944341	_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_	2	basic_ostream<char	 std::char_traits<char> > &	basic_ostream<char, std::char_traits<char> > &
+/usr/local/include/ostream	104092742365	_ZNSolsEPFRSoS_E	3	std::basic_ostream<char	 std::char_traits<char> >::__ostream_type &(*)(std::basic_ostream<char	 std::char_traits<char> >::__ostream_type &)	std::basic_ostream<char, std::char_traits<char> >::__ostream_type &
+/usr/include/bits/mathcalls.h	103919263569	sqrt	1	double	double
+/usr/local/include/ostream	102447115243	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	3	basic_ostream<char	 std::char_traits<char> > &	const char *	basic_ostream<char, std::char_traits<char> > &
+/usr/local/include/ostream	101585899491	_ZNSolsEd	1	double	std::basic_ostream<char, std::char_traits<char> >::__ostream_type &
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	100881317242	_ZN7Complex4normEv	1		double
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	101775093425	_ZN7Complex5printEv	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	101864475918	_Z7Display7Complex	1	Complex	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	103007443295	main	1		int

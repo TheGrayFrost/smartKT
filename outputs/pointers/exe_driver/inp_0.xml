@@ -1,0 +1,23 @@
+<DYNAMICTRACE INP="[None]" RUNID="0_1" EXE="driver">
+   <CALL ARGS="NONE" CALLEENAME="_Z41__static_initialization_and_destruction_0ii" CALLERNAME="_GLOBAL__sub_I__Z3funiPiPd" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc:75" INVNO="1" STATICCALL="[ ]" THREADID="0" TS="0_1_1"/>
+   <RETURN FUNCNAME="_Z41__static_initialization_and_destruction_0ii" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc:75" INVNO="1" THREADID="0" TS="0_1_2"/>
+   <RETURN FUNCNAME="_GLOBAL__sub_I__Z3funiPiPd" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc:75" INVNO="1" THREADID="0" TS="0_1_3"/>
+   <IO FUNCNAME="main" INVNO="1" SYNCS="ASYNC" THREADID="0">
+      <NONLOCALREAD ADDRESS="0x602194" FUNCNAME="main" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc:33" INVNO="1" SYNCS="ASYNC" THREADID="0" TS="0_1_14" VARCLASS="GLOBAL" VARID="100092200340" VARNAME="t"/>
+      <NONLOCALWRITE ADDRESS="0x602194" FUNCNAME="main" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc:33" INVNO="1" SYNCS="ASYNC" THREADID="0" TS="0_1_15" VARCLASS="GLOBAL" VARID="100092200340" VARNAME="t"/>
+      <LOCALACCESS OFFSET="0x24" READCOUNT="1" VARID="102897622620" VARNAME="a" WRITECOUNT="1"/>
+      <LOCALACCESS OFFSET="0x28" READCOUNT="0" VARID="102815384919" VARNAME="b" WRITECOUNT="2"/>
+      <LOCALACCESS OFFSET="0x4" READCOUNT="0" VARID="103212400466" VARNAME="c" WRITECOUNT="2"/>
+      <LOCALACCESS OFFSET="0x8" READCOUNT="0" VARID="103185879526" VARNAME="n" WRITECOUNT="1"/>
+      <LOCALACCESS OFFSET="0x10" READCOUNT="2" VARID="100962993605" VARNAME="p" WRITECOUNT="0"/>
+      <LOCALACCESS OFFSET="0x18" READCOUNT="1" VARID="101702556098" VARNAME="q" WRITECOUNT="0"/>
+   </IO>
+   <CALL ARGS="NONE" CALLEENAME="_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt" CALLERNAME="main" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc:34" INVNO="1" STATICCALL="[ 100486201648 cout&lt;&lt; &quot;t&quot; ]" THREADID="0" TS="0_1_16"/>
+   <IO FUNCNAME="main" INVNO="1" SYNCS="ASYNC" THREADID="0">
+      <NONLOCALREAD ADDRESS="0x602194" FUNCNAME="main" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc:34" INVNO="1" SYNCS="ASYNC" THREADID="0" TS="0_1_17" VARCLASS="GLOBAL" VARID="100092200340" VARNAME="t"/>
+   </IO>
+   <CALL ARGS="NONE" CALLEENAME="_ZNSolsEi@plt" CALLERNAME="main" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc:34" INVNO="1" STATICCALL="[ 103789435193 cout&lt;&lt; &quot;t&quot; &lt;&lt; t ]" THREADID="0" TS="0_1_18"/>
+   <IO FUNCNAME="main" INVNO="1" SYNCS="ASYNC" THREADID="0">
+      <LOCALACCESS OFFSET="0x20" READCOUNT="1" VARID="103480994766" VARNAME="s" WRITECOUNT="0"/>
+   </IO>
+</DYNAMICTRACE>

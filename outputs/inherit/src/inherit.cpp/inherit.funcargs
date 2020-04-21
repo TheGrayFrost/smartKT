@@ -1,15 +1,1 @@
 # FILENAME	FUNCNODEID	FUNCNAME	NARGS	ARGTYPE*	RETTYPE
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	203964987930	_ZN7foo_straSEOS_	1	foo_str &&	foo_str &
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	203170820333	_Z3foo7foo_str	1	struct foo_str	struct foo_str
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	203222968304	_ZN6nonstd11ParentClass5helloEv	1		void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	202434444311	_ZN6nonstd23accessFriendClassGlobalEv	1		void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	202445427199	_ZN6nonstd13DerivedClass15helloEv	1		void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	203392930048	_ZN6nonstd13DerivedClass15helloEi	1	int	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	200894582797	_ZN6nonstd13DerivedClass15helloEd	1	double	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	200237699942	_ZN6nonstd12ParentClass117accessFriendClassEv	1		void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	203476353214	_ZN6nonstd2MI10do_nothingEv	1		int
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	200140733300	_ZN6nonstd11LivingThing7breatheEv	1		void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	201354850767	_ZN6nonstd6Animal7breatheEv	1		void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	201640770260	_ZN6nonstd7Reptile5crawlEv	1		void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	204256072853	_ZN6nonstd5Snake5crawlEv	1		void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	200710523063	main	1		int

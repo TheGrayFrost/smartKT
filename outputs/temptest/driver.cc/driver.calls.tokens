@@ -1,0 +1,13 @@
+# FILENAME	LOCATION	FUNCNAME	CALLNODEID	CALLEXPR
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	19:9::19:10	_ZN3Foo1AC1Ev	203824408729	r
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	20:9::20:10	_ZN3Foo1BC1Ev	202345860210	q
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	48:5::48:6	_ZN3Foo1AC1Ev	203555240868	r
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	49:5::49:6	_ZN3Foo1BC1Ev	202931540299	q
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	8:10::8:11	_ZN3Foo1AC1Ev	203101457760	r
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	9:10::9:11	_ZN3Foo1BC1Ev	203518064545	q
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	17:20::17:21	_ZN3Foo1AC1Ev	203028753072	r
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	18:14::18:15	_ZN3Foo1BC1Ev	203685740936	q
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	31:3::31:29	_ZN3Foo3funEii	203407187630	Foo:: fun ( local_p , local_q ) 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	32:7::32:34	_ZN3Foo4tfunIifEEbT_T0_	200884663130	Foo:: tfun < int , float > ( 3 , 4 ) 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	35:7::35:34	_ZN3Foo4tfunIccEEbT_T0_	203126794440	Foo:: tfun < char , char > ( 3 , 4 ) 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	38:7::38:36	_ZN3Foo4tfunIffEEbT_T0_	202044205547	Foo:: tfun < float , float > ( 3 , 4 ) 

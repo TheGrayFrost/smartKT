@@ -1,0 +1,21 @@
+# FILENAME	LOCATION	FUNCNAME	CALLNODEID	CALLEXPR
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	7:3::7:19	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	100383704409	cout<< "ctor: "
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	7:21::7:28	_ZN7Complex5printEv	100912622116	print( )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	9:3::9:24	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	102386715376	cout<< "copy ctor: "
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	9:26::9:33	_ZN7Complex5printEv	101604956322	print( )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	10:14::10:30	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	101493216246	cout<< "dtor: "
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	10:32::10:39	_ZN7Complex5printEv	102981152551	print( )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	11:24::11:47	sqrt	100129737276	sqrt( re_ * re_ + im_ * im_ )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	12:16::12:77	_ZNSolsEPFRSoS_E	104208438945	cout<< "|" << re_ << "+j" << im_ << "| = " << norm ( ) << endl
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	12:16::12:69	_ZNSolsEd	101992302384	cout<< "|" << re_ << "+j" << im_ << "| = " << norm ( )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	12:16::12:59	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	103158533911	cout<< "|" << re_ << "+j" << im_ << "| = "
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	12:16::12:49	_ZNSolsEd	104016184295	cout<< "|" << re_ << "+j" << im_
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	12:16::12:42	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	100704237600	cout<< "|" << re_ << "+j"
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	12:16::12:34	_ZNSolsEd	101954914826	cout<< "|" << re_
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	12:16::12:27	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	103999484503	cout<< "|"
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	12:63::12:69	_ZN7Complex4normEv	104164557045	norm( )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	15:1::15:20	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	100663982479	cout<< "Display: "
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	15:22::15:37	_ZN7Complex5printEv	102355997549	c_param. print ( )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	18:9::18:20	_ZN7ComplexC1Edd	102540844204	c( 4.2 , 5.3 )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	19:1::19:11	_Z7Display7Complex	102064173829	Display( c )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_copy/copy.cpp	19:9::19:10	_ZN7ComplexC1ERKS_	100360359452	c

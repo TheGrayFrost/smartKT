@@ -1,0 +1,7 @@
+# FILENAME	FUNCNODEID	FUNCNAME	NARGS	ARGTYPE*	RETTYPE
+/usr/local/include/ostream	100255295327	_ZNSolsEd	1	double	std::basic_ostream<char, std::char_traits<char> >::__ostream_type &
+/usr/local/include/ostream	103185506574	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	3	basic_ostream<char	 std::char_traits<char> > &	const char *	basic_ostream<char, std::char_traits<char> > &
+/usr/local/include/ostream	102657412186	_ZNSolsEi	1	int	std::basic_ostream<char, std::char_traits<char> >::__ostream_type &
+/usr/local/include/cmath	100558206406	_ZSt4sqrtIiEN9__gnu_cxx11__enable_ifIXsr12__is_integerIT_EE7__valueEdE6__typeES2_	1	int	typename __gnu_cxx::__enable_if<__is_integer<int>::__value, double>::__type
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc	101064603122	_Z3funiPiPd	3	int	int *	double *	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/pointers/driver.cc	100244591866	main	1		int

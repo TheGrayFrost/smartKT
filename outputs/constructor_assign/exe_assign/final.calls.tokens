@@ -1,0 +1,19 @@
+# FILENAME	LOCATION	FUNCNAME	CALLNODEID	CALLEXPR
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp	6:24::6:33	strdup	101065752072	strdup( s )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp	6:41::6:53	strlen	103199930747	strlen( str_ )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp	7:32::7:46	strdup	100067114980	strdup( s . str_ )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp	8:13::8:23	free	102610698588	free( str_ )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp	10:1::10:11	free	102616832125	free( str_ )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp	11:8::11:22	strdup	100840893601	strdup( s . str_ )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp	15:16::15:66	_ZNSolsEPFRSoS_E	101993455095	cout<< "(" << str_ << ": " << len_ << ")" << endl
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp	15:16::15:58	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	103975471291	cout<< "(" << str_ << ": " << len_ << ")"
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp	15:16::15:51	_ZNSolsEm	104276750137	cout<< "(" << str_ << ": " << len_
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp	15:16::15:43	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	100790903299	cout<< "(" << str_ << ": "
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp	15:16::15:35	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	103532955513	cout<< "(" << str_
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp	15:16::15:27	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	101997082611	cout<< "("
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp	17:26::17:36	_ZN6StringC1EPc	103519110035	"Football"
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp	17:43::17:52	_ZN6StringC1EPc	103793106741	"Cricket"
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp	18:1::18:11	_ZN6String5printEv	103281163240	s1. print ( )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp	18:13::18:23	_ZN6String5printEv	101782042914	s2. print ( )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp	19:1::19:8	_ZN6StringaSERKS_	100045820943	s2= s1
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/constructor_assign/assign.cpp	19:10::19:20	_ZN6String5printEv	101502075798	s2. print ( )
