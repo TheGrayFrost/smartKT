@@ -65,22 +65,24 @@ def process_para(para, ctxt):
 	p = dict()
 	for en in para:
 		if en.attrib['VARCLASS'] == 'LOCAL': # collect all local accesses
-			h = en.attrib['VARID'] 
+			h = (en.attrib['VARID'], en.attrib['VAROFFSET'])
 			if h not in p:
-				p[h] = {'WRITE': 0, 'READ': 0}
+				p[h] = {'WRITE': 0, 'READ': 0, 'FIRSTREAD': 'UND', 'FIRSTWRITE': 'UND'}
 				for att in ['VARNAME', 'VAROFFSET']:
 					p[h][att] = en.attrib[att]
 			p[h][en.tag] += 1
+			if p[h]['FIRST'+en.tag] == 'UND':
+				p[h]['FIRST'+en.tag] = en.attrib['TS']
 		else:
 			en.tag = 'NONLOCAL' + en.tag
 			entry.append(en)
 	
 	for var in p.items():
 		access = SubElement(entry, 'LOCALACCESS')
-		access.attrib['VARID'] = var[0]
+		access.attrib['VARID'] = var[0][0]
 		access.attrib['WRITECOUNT'] = str(var[1]['WRITE'])
 		access.attrib['READCOUNT'] = str(var[1]['READ'])
-		for att in ['VARNAME', 'VAROFFSET']:
+		for att in ['VARNAME', 'VAROFFSET', 'FIRSTREAD', 'FIRSTWRITE']:
 			access.attrib[att] = var[1][att]
 	# print entry.tag, entry.attrib
 	# for child in entry:
@@ -117,7 +119,8 @@ with open(filename, 'r') as inf, open(outfile, 'w') as opf:
 			if rid % 100 == 0:
 				print (u, '\r', end='')
 			if entry.tag == 'WRITE' or entry.tag == 'READ':
-				curctxt = (entry.attrib['THREADID'], entry.attrib['FUNCNAME'], entry.attrib['INVNO'], entry.attrib['SYNCS'])
+				curctxt = (entry.attrib['THREADID'], entry.attrib['FUNCNAME'], 
+					entry.attrib['INVNO'], entry.attrib['SYNCS'])
 				if ctxt is None:
 					ctxt = curctxt
 				if ctxt == curctxt:

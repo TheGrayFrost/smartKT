@@ -121,6 +121,7 @@ def UpdateCtree (cnode, filename=None, lineno=None, colno=None, parent_node = No
 	if 'col' in cnode.attrib :
 		colno = int(cnode.attrib['col'])
 	cloc = (filename, lineno, colno)
+	# done for scope resolution fix
 	if parent_node is not None and parent_node.tag in Variables :
 		try_patching_node(cloc, parent_node)
 	for child in cnode:

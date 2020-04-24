@@ -31,6 +31,7 @@
 	- CLANG -
 	1.	Reference to understand clang C/C++ tools recursive AST visitor:
 		https://jonasdevlieghere.com/understanding-the-clang-ast/
+		[API Reference: https://clang.llvm.org/doxygen/group__CINDEX.html]
 		In short, we start from the clang AST root node, and traverse it depth-first. Calling the function
 		clang_visitChildren(cursor, visitor, &nodeData) recursively.
 	2.	Clang nodes are represented as CXCursor objects.

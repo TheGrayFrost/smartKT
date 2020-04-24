@@ -75,15 +75,15 @@ Basic idea of the CMake build process:
 		- for each C/C++ file, say projects/exp/src/A.c, in dependencies.p, we know that a .o will be generated corr. to it. We
 			- run clang on A.c to generate A.ast
 			- run clangtools
-				- parsers/ast2xml: generates A_clang.xml from A.ast
-				- parsers/calls: generates A.calls from A.ast
+				- parsers/ast2xml: generates A_clang.xml & A.calls.temp from A.ast
+				- parsers/calls: generates A.calls.tokens from A.calls.temp
 				- parsers/funcs.py: generates A.funcargs from A_clang.xml
 			- copy these 3 files to the folder location: outputs/exp/src/A.c/
 			- run parsers/dwxml.py on A.o to generate A_dd.xml in outputs/exp/src/
 			- run parsers/ddx.py with OFFSET flag
 				- that combines only the local variables present in A.c from A_clang.xml and A_dd.xml
 				- creates A_comb.xml and A.offset in outputs/exp/src/A.c/
-			Note: All these files' pruposes are explained in File Introductions section
+			Note: All these files' purposes are explained in File Introductions section
 
 2. parsers:
 	A. project_parser.py:
@@ -113,8 +113,7 @@ Basic idea of the CMake build process:
 			- for every .c file that makes up that particular image
 				- concats the .calls, .funcargs and .offset into final.calls, final.funcargs and final.offset respectively
 				- concats their \_clang.xml into image.temp.xml
-			- runs `dwarfdump -i` on image to create image.dd
-			- runs parsers/dwarfdump_parser.py on A.dd to generate image_dd.xml
+			- runs dwxml.py on image to generate image_dd.xml
 			- run parsers/combine.py with ADDRESS flag
 				- that combines only the static storage variables from image.temp.xml and image_dd.xml
 				- creates image_comb.xml and image.address (explained later)

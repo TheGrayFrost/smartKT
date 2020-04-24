@@ -143,13 +143,13 @@ def generate_static_info(path):
 
             os.system(' '.join(cmd))
 
-            # Generate clang xml * .calls.temp - file number prepended to all nodeids to make unique
+            # Generate clang xml & .calls.temp - file number prepended to all nodeids to make unique
             os.system(' '.join(['parsers/ast2xml', str(num), f, mainfname+'.ast',
                             stripop+CALL_TEMP_EXTENSION, stripop+CLANG_EXTENSION ]))
             logstr += ('output :' + stripop + CLANG_EXTENSION + '\n')
             logstr += ('output :' + stripop + CALL_TEMP_EXTENSION + '\n')
 
-            # Add tokens to .calls.temp as .calls.tokens
+            # Add tokens to .calls.temp and produces .calls.tokens
             os.system(' '.join(['parsers/calls', stripop+CALL_TEMP_EXTENSION, stripop+CALL_FINAL_EXTENSION]))
             logstr += ('output :' + stripop + CALL_FINAL_EXTENSION + '\n')
 
