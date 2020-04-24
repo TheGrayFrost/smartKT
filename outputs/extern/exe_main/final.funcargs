@@ -1,9 +1,5 @@
 # FILENAME	FUNCNODEID	FUNCNAME	NARGS	ARGTYPE*	RETTYPE
-/usr/local/include/ostream	303078590379	_ZNSolsEi	1	int	std::basic_ostream<char, std::char_traits<char> >::__ostream_type &
-/usr/local/include/ostream	300773012159	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	3	basic_ostream<char	 std::char_traits<char> > &	const char *	basic_ostream<char, std::char_traits<char> > &
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/C.cc	301277735446	_Z1fv	1		int
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/C.cc	300468599546	_Z1fR1A	1	A &	A *
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/C.cc	301225971511	main	1		int
-/usr/local/include/ostream	200214390381	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	3	basic_ostream<char	 std::char_traits<char> > &	const char *	basic_ostream<char, std::char_traits<char> > &
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/B.cc	201855009341	_Z1fv	1		int
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc	102811530659	_Z1fR1A	1	A &	A *
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/C.cc	303527043154	_Z1fv	1		int
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/C.cc	303483390091	main	1		int
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/B.cc	102582412421	_ZN1AC1Ev	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc	203733923339	_Z1fR1A	1	A &	A *

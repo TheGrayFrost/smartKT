@@ -68,7 +68,7 @@ def process_para(para, ctxt):
 			h = en.attrib['VARID'] 
 			if h not in p:
 				p[h] = {'WRITE': 0, 'READ': 0}
-				for att in ['VARNAME', 'OFFSET']:
+				for att in ['VARNAME', 'VAROFFSET']:
 					p[h][att] = en.attrib[att]
 			p[h][en.tag] += 1
 		else:
@@ -80,7 +80,7 @@ def process_para(para, ctxt):
 		access.attrib['VARID'] = var[0]
 		access.attrib['WRITECOUNT'] = str(var[1]['WRITE'])
 		access.attrib['READCOUNT'] = str(var[1]['READ'])
-		for att in ['VARNAME', 'OFFSET']:
+		for att in ['VARNAME', 'VAROFFSET']:
 			access.attrib[att] = var[1][att]
 	# print entry.tag, entry.attrib
 	# for child in entry:

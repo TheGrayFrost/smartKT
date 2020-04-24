@@ -5,6 +5,8 @@ set -x # echo on
 # they have to be copied as is as many times the executables does checks
 # like it may check the extension of the file as being .png etc
 
+keep="true"
+
 P=$(pwd)								# save current location
 exe=${1##*/}							# extract executable and input filename
 
@@ -47,16 +49,16 @@ for ((i=1;i<=nruns;++i)); do
 	cat dynamic_${runid}_$i.xml >> dynamic.xml
 done
 
-
-cp dynamic.xml $2/final_dynamic.xml
-
-
-# mv $exe.dump $2
-# mv dynamic.xml $2/final_dynamic.xml
-
-# rm $exe.out
-# rm $inp || true
-# rm -rf statinfo/
+if [ "$keep" = "true" ]
+then
+	cp dynamic.xml $2/final_dynamic.xml
+else
+	mv $exe.dump $2
+	mv dynamic.xml $2/final_dynamic.xml
+	rm $exe.out
+	rm -rf statinfo/
+	rm op.txt
+fi
 
 # # make ./obj-intel64/memtracker.so		# build the pin so
 # # readelf -sW $exe.out | grep "OBJECT" > $exe.symtab	# collect its symtab

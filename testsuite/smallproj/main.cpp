@@ -11,6 +11,15 @@ int main()
 	A::m = 31;
 	A * u = CALLF \
 	);
+	A z[7];
+	A * x = new A [5];
+	for (int i = 0; i < 5; ++i)
+	{
+		z[i].r++;
+		x[i].r++;
+		x[i].r = 7;
+	}
+	delete [] x;
 	std::cout << "u->r = " << u->r << "\n";
 	return 0;
 }
