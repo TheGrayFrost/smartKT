@@ -1,0 +1,26 @@
+# FILENAME	LOCATION	FUNCNAME	CALLNODEID	CALLEXPR
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	4:12::4:36	_ZNSolsEPFRSoS_E	102058194367	cout<< "A::f()" << endl 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	4:12::4:28	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	103515912364	cout<< "A::f()" 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	5:20::5:44	_ZNSolsEPFRSoS_E	102933839954	cout<< "A::g()" << endl 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	5:20::5:36	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	100634257951	cout<< "A::g()" 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	6:12::6:36	_ZNSolsEPFRSoS_E	100164932199	cout<< "A::h()" << endl 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	6:12::6:28	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	101235932000	cout<< "A::h()" 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	9:12::9:36	_ZNSolsEPFRSoS_E	103207515459	cout<< "B::f()" << endl 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	9:12::9:28	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	101223469307	cout<< "B::f()" 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	10:12::10:36	_ZNSolsEPFRSoS_E	101735771903	cout<< "B::g()" << endl 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	10:12::10:28	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	103207183659	cout<< "B::g()" 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	11:20::11:44	_ZNSolsEPFRSoS_E	102443360815	cout<< "B::h()" << endl 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	11:20::11:36	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	104277853778	cout<< "B::h()" 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	14:12::14:36	_ZNSolsEPFRSoS_E	104023688744	cout<< "C::f()" << endl 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	14:12::14:28	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	103232257735	cout<< "C::f()" 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	15:12::15:36	_ZNSolsEPFRSoS_E	100644619132	cout<< "C::g()" << endl 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	15:12::15:28	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	103125911494	cout<< "C::g()" 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	16:12::16:36	_ZNSolsEPFRSoS_E	103909371464	cout<< "C::h()" << endl 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	16:12::16:28	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	102911285347	cout<< "C::h()" 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	18:25::18:26	_ZN1CC1Ev	103816715555	C
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	19:1::19:7	_ZN1A1fEv	102799401375	p-> f ( ) 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	20:1::20:7	_ZN1A1gEv	100629643367	p-> g ( ) 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	21:1::21:7	_ZN1A1hEv	103038583393	p-> h ( ) 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	22:1::22:7	_ZN1B1fEv	104123203892	q-> f ( ) 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	23:1::23:7	_ZN1B1gEv	102958681852	q-> g ( ) 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	24:1::24:7	_ZN1B1hEv	104277564730	q-> h ( ) 

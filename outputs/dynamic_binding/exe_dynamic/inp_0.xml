@@ -1,0 +1,53 @@
+<DYNAMICTRACE INP="[None]" RUNID="0_1" EXE="dynamic">
+   <CALL ARGS="NONE" CALLEENAME="_Z41__static_initialization_and_destruction_0ii" CALLERNAME="_GLOBAL__sub_I_main" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:26" INVNO="1" STATICCALL="[ ]" THREADID="0" TS="0_1_1"/>
+   <RETURN FUNCNAME="_Z41__static_initialization_and_destruction_0ii" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:26" INVNO="1" THREADID="0" TS="0_1_2"/>
+   <RETURN FUNCNAME="_GLOBAL__sub_I_main" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:26" INVNO="1" THREADID="0" TS="0_1_3"/>
+   <CALL ARGS="NONE" CALLEENAME="_Znwm@plt" CALLERNAME="main" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:18" INVNO="1" STATICCALL="[ ]" THREADID="0" TS="0_1_4"/>
+   <CALL ARGS="NONE" CALLEENAME="_ZN1CC1Ev" CALLERNAME="main" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:18" INVNO="1" STATICCALL="[ 103816715555 C ]" THREADID="0" TS="0_1_5"/>
+   <CALL ARGS="NONE" CALLEENAME="_ZN1BC2Ev" CALLERNAME="_ZN1CC1Ev" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:13" INVNO="1" STATICCALL="[ ]" THREADID="0" TS="0_1_6"/>
+   <CALL ARGS="NONE" CALLEENAME="_ZN1AC2Ev" CALLERNAME="_ZN1BC2Ev" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:8" INVNO="1" STATICCALL="[ ]" THREADID="0" TS="0_1_7"/>
+   <RETURN FUNCNAME="_ZN1AC2Ev" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:3" INVNO="1" THREADID="0" TS="0_1_8"/>
+   <RETURN FUNCNAME="_ZN1BC2Ev" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:8" INVNO="1" THREADID="0" TS="0_1_9"/>
+   <RETURN FUNCNAME="_ZN1CC1Ev" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:13" INVNO="1" THREADID="0" TS="0_1_10"/>
+   <IO FUNCNAME="main" INVNO="1" SYNCS="ASYNC" THREADID="0">
+      <LOCALACCESS OFFSET="0x18" READCOUNT="1" VARID="103364569781" VARNAME="q" WRITECOUNT="0"/>
+      <LOCALACCESS OFFSET="0x20" READCOUNT="1" VARID="101833794181" VARNAME="p" WRITECOUNT="0"/>
+   </IO>
+   <CALL ARG0="UNKNOWN" CALLEENAME="_ZN1A1fEv" CALLERNAME="main" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:19" INVNO="1" STATICCALL="[ 102799401375 p-&gt; f ( ) ]" THREADID="0" TS="0_1_13"/>
+   <CALL ARGS="NONE" CALLEENAME="_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt" CALLERNAME="_ZN1A1fEv" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:4" INVNO="1" STATICCALL="[ 103515912364 cout&lt;&lt; &quot;A::f()&quot; ]" THREADID="0" TS="0_1_14"/>
+   <CALL ARGS="NONE" CALLEENAME="_ZNSolsEPFRSoS_E@plt" CALLERNAME="_ZN1A1fEv" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:4" INVNO="1" STATICCALL="[ 102058194367 cout&lt;&lt; &quot;A::f()&quot; &lt;&lt; endl ]" THREADID="0" TS="0_1_15"/>
+   <RETURN FUNCNAME="_ZN1A1fEv" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:4" INVNO="1" RETVAL="void" THREADID="0" TS="0_1_16"/>
+   <IO FUNCNAME="main" INVNO="1" SYNCS="ASYNC" THREADID="0">
+      <LOCALACCESS OFFSET="0x20" READCOUNT="2" VARID="101833794181" VARNAME="p" WRITECOUNT="0"/>
+   </IO>
+   <CALL ARGS="NONE" CALLEENAME="_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt" CALLERNAME="_ZN1C1gEv" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:15" INVNO="1" STATICCALL="[ 103125911494 cout&lt;&lt; &quot;C::g()&quot; ]" THREADID="0" TS="0_1_19"/>
+   <CALL ARGS="NONE" CALLEENAME="_ZNSolsEPFRSoS_E@plt" CALLERNAME="_ZN1C1gEv" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:15" INVNO="1" STATICCALL="[ 100644619132 cout&lt;&lt; &quot;C::g()&quot; &lt;&lt; endl ]" THREADID="0" TS="0_1_20"/>
+   <RETURN FUNCNAME="_ZN1C1gEv" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:15" INVNO="1" RETVAL="void" THREADID="0" TS="0_1_21"/>
+   <IO FUNCNAME="main" INVNO="1" SYNCS="ASYNC" THREADID="0">
+      <LOCALACCESS OFFSET="0x20" READCOUNT="1" VARID="101833794181" VARNAME="p" WRITECOUNT="0"/>
+   </IO>
+   <CALL ARG0="UNKNOWN" CALLEENAME="_ZN1A1hEv" CALLERNAME="main" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:21" INVNO="1" STATICCALL="[ 103038583393 p-&gt; h ( ) ]" THREADID="0" TS="0_1_23"/>
+   <CALL ARGS="NONE" CALLEENAME="_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt" CALLERNAME="_ZN1A1hEv" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:6" INVNO="1" STATICCALL="[ 101235932000 cout&lt;&lt; &quot;A::h()&quot; ]" THREADID="0" TS="0_1_24"/>
+   <CALL ARGS="NONE" CALLEENAME="_ZNSolsEPFRSoS_E@plt" CALLERNAME="_ZN1A1hEv" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:6" INVNO="1" STATICCALL="[ 100164932199 cout&lt;&lt; &quot;A::h()&quot; &lt;&lt; endl ]" THREADID="0" TS="0_1_25"/>
+   <RETURN FUNCNAME="_ZN1A1hEv" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:6" INVNO="1" RETVAL="void" THREADID="0" TS="0_1_26"/>
+   <IO FUNCNAME="main" INVNO="1" SYNCS="ASYNC" THREADID="0">
+      <LOCALACCESS OFFSET="0x18" READCOUNT="1" VARID="103364569781" VARNAME="q" WRITECOUNT="0"/>
+   </IO>
+   <CALL ARG0="UNKNOWN" CALLEENAME="_ZN1B1fEv" CALLERNAME="main" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:22" INVNO="1" STATICCALL="[ 104123203892 q-&gt; f ( ) ]" THREADID="0" TS="0_1_28"/>
+   <CALL ARGS="NONE" CALLEENAME="_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt" CALLERNAME="_ZN1B1fEv" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:9" INVNO="1" STATICCALL="[ 101223469307 cout&lt;&lt; &quot;B::f()&quot; ]" THREADID="0" TS="0_1_29"/>
+   <CALL ARGS="NONE" CALLEENAME="_ZNSolsEPFRSoS_E@plt" CALLERNAME="_ZN1B1fEv" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:9" INVNO="1" STATICCALL="[ 103207515459 cout&lt;&lt; &quot;B::f()&quot; &lt;&lt; endl ]" THREADID="0" TS="0_1_30"/>
+   <RETURN FUNCNAME="_ZN1B1fEv" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:9" INVNO="1" RETVAL="void" THREADID="0" TS="0_1_31"/>
+   <IO FUNCNAME="main" INVNO="1" SYNCS="ASYNC" THREADID="0">
+      <LOCALACCESS OFFSET="0x18" READCOUNT="2" VARID="103364569781" VARNAME="q" WRITECOUNT="0"/>
+   </IO>
+   <CALL ARGS="NONE" CALLEENAME="_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt" CALLERNAME="_ZN1C1gEv" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:15" INVNO="2" STATICCALL="[ 103125911494 cout&lt;&lt; &quot;C::g()&quot; ]" THREADID="0" TS="0_1_34"/>
+   <CALL ARGS="NONE" CALLEENAME="_ZNSolsEPFRSoS_E@plt" CALLERNAME="_ZN1C1gEv" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:15" INVNO="2" STATICCALL="[ 100644619132 cout&lt;&lt; &quot;C::g()&quot; &lt;&lt; endl ]" THREADID="0" TS="0_1_35"/>
+   <RETURN FUNCNAME="_ZN1C1gEv" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:15" INVNO="2" RETVAL="void" THREADID="0" TS="0_1_36"/>
+   <IO FUNCNAME="main" INVNO="1" SYNCS="ASYNC" THREADID="0">
+      <LOCALACCESS OFFSET="0x18" READCOUNT="2" VARID="103364569781" VARNAME="q" WRITECOUNT="0"/>
+   </IO>
+   <CALL ARGS="NONE" CALLEENAME="_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt" CALLERNAME="_ZN1C1hEv" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:16" INVNO="1" STATICCALL="[ 102911285347 cout&lt;&lt; &quot;C::h()&quot; ]" THREADID="0" TS="0_1_39"/>
+   <CALL ARGS="NONE" CALLEENAME="_ZNSolsEPFRSoS_E@plt" CALLERNAME="_ZN1C1hEv" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:16" INVNO="1" STATICCALL="[ 103909371464 cout&lt;&lt; &quot;C::h()&quot; &lt;&lt; endl ]" THREADID="0" TS="0_1_40"/>
+   <RETURN FUNCNAME="_ZN1C1hEv" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:16" INVNO="1" RETVAL="void" THREADID="0" TS="0_1_41"/>
+   <RETURN FUNCNAME="main" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp:26" INVNO="1" RETVAL="0" THREADID="0" TS="0_1_42"/>
+</DYNAMICTRACE>

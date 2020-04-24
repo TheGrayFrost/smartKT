@@ -1,0 +1,22 @@
+/usr/bin/cmake3 -S/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding -B/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake3 -E cmake_progress_start /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/build/CMakeFiles /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/build/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[1]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/build'
+make -f CMakeFiles/dynamic.dir/build.make CMakeFiles/dynamic.dir/depend
+make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/build'
+cd /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/build && /usr/bin/cmake3 -E cmake_depends "Unix Makefiles" /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/build /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/build/CMakeFiles/dynamic.dir/DependInfo.cmake --color=
+Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/build/CMakeFiles/dynamic.dir/DependInfo.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/build/CMakeFiles/dynamic.dir/depend.internal".
+Dependee "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/build/CMakeFiles/dynamic.dir/depend.internal".
+Scanning dependencies of target dynamic
+make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/build'
+make -f CMakeFiles/dynamic.dir/build.make CMakeFiles/dynamic.dir/build
+make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/build'
+[ 50%] Building CXX object CMakeFiles/dynamic.dir/dynamic.cpp.o
+/opt/rh/devtoolset-8/root/usr/bin/c++    -gdwarf-4   -o CMakeFiles/dynamic.dir/dynamic.cpp.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp
+[100%] Linking CXX executable dynamic
+/usr/bin/cmake3 -E cmake_link_script CMakeFiles/dynamic.dir/link.txt --verbose=1
+/opt/rh/devtoolset-8/root/usr/bin/c++  -gdwarf-4  -L/usr/lib64/mysql -L/usr/lib64/ -rdynamic CMakeFiles/dynamic.dir/dynamic.cpp.o  -o dynamic 
+make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/build'
+[100%] Built target dynamic
+make[1]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/build'
+/usr/bin/cmake3 -E cmake_progress_start /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/build/CMakeFiles 0

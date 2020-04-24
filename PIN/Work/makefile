@@ -25,8 +25,6 @@ CXXFLAGS := -gdwarf-4
 
 .PRECIOUS: %.dump %.out %.xml #%.symtab %_static.offset
 
-# tartest:
-# 	echo $(ARGS)
 
 memtracker.cpp: memtracker.h
 	@touch memtracker.cpp
@@ -43,10 +41,10 @@ main.out: main.o lib.so
 %.dump: %.out %.out.address ./obj-intel64/memtracker.so
 	../PIN/pin -t obj-intel64/memtracker.so inp="$(inp)" run=$(run) exe=$< -- ./$< $(inp) > op.txt
 
+
 cleaner:
-# 	-rm -r statinfo/
-# 	-rm *.dump op.txt
 	make clean
+
 
 # %.dd: %.out
 # 	dwarfdump $< > $@
