@@ -1,21 +1,12 @@
 <DYNAMICTRACE INP="[None]" RUNID="0_1" EXE="driver.out">
-   <CALL ARGS="NONE" CALLEENAME="_Z41__static_initialization_and_destruction_0ii" CALLERNAME="_GLOBAL__sub_I__ZN3Foo3funEii" INVNO="1" STATICCALL="[ ]" THREADID="0" TS="0_1_1"/>
-   <CALL ARGS="NONE" CALLEENAME="_ZN3Foo1BC2Ev" CALLERNAME="_Z41__static_initialization_and_destruction_0ii" INVNO="1" STATICCALL="[ ]" THREADID="0" TS="0_1_2"/>
-   <RETURN FUNCNAME="_ZN3Foo1BC2Ev" INVNO="1" THREADID="0" TS="0_1_3"/>
-   <CALL ARGS="NONE" CALLEENAME="_ZN3Foo1BC2Ev" CALLERNAME="_Z41__static_initialization_and_destruction_0ii" INVNO="1" STATICCALL="[ ]" THREADID="0" TS="0_1_4"/>
-   <RETURN FUNCNAME="_ZN3Foo1BC2Ev" INVNO="2" THREADID="0" TS="0_1_5"/>
-   <RETURN FUNCNAME="_Z41__static_initialization_and_destruction_0ii" INVNO="1" THREADID="0" TS="0_1_6"/>
-   <RETURN FUNCNAME="_GLOBAL__sub_I__ZN3Foo3funEii" INVNO="1" THREADID="0" TS="0_1_7"/>
-   <CALL ARG0="1" ARG1="1" CALLEENAME="_ZN3Foo3funEii" CALLERNAME="main" INVNO="1" STATICCALL="[ 100328497177 Foo :: fun ( local_p , local_q ) ]" THREADID="0" TS="0_1_8"/>
-   <IO FUNCNAME="_ZN3Foo3funEii" INVNO="1" SYNCS="ASYNC" THREADID="0">
-      <LOCALACCESS OFFSET="0x4" READCOUNT="0" VARID="101482300345" VARNAME="arg_x" WRITECOUNT="1"/>
-      <LOCALACCESS OFFSET="0x8" READCOUNT="0" VARID="100592038057" VARNAME="arg_y" WRITECOUNT="1"/>
-   </IO>
-   <RETURN FUNCNAME="_ZN3Foo3funEii" INVNO="1" RETVAL="void" THREADID="0" TS="0_1_11"/>
-   <CALL ARG0="3" ARG1="1" CALLEENAME="_ZN3Foo4tfunIifEEbT_T0_" CALLERNAME="main" INVNO="1" STATICCALL="[ 101893945422 Foo :: tfun &lt; int , float &gt; ( 3 , 4 ) ]" THREADID="0" TS="0_1_12"/>
-   <IO FUNCNAME="_ZN3Foo4tfunIifEEbT_T0_" INVNO="1" SYNCS="ASYNC" THREADID="0">
-      <LOCALACCESS OFFSET="0x14" READCOUNT="2" VARID="103751686514" VARNAME="targ_x" WRITECOUNT="1"/>
-      <LOCALACCESS OFFSET="0x18" READCOUNT="2" VARID="100166277612" VARNAME="targ_y" WRITECOUNT="1"/>
-      <LOCALACCESS OFFSET="0x4" READCOUNT="1" VARID="102493317994" VARNAME="local_x" WRITECOUNT="1"/>
-   </IO>
-   <RETURN FUNCNAME="_ZN3Foo4tfunIifEEbT_T0_" INVNO="1" RETVAL="UNKNOWN" THREADID="0" TS="0_1_21"/>
+   <CALL ARGS="NONE" CALLEENAME="_Z41__static_initialization_and_destruction_0ii" CALLERNAME="_GLOBAL__sub_I__ZN3Foo3funEii" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc:42" INVNO="1" STATICCALL="[ ]" THREADID="0" TS="0_1_1"/>
+   <CALL ARG0="UNKNOWN" CALLEENAME="_ZN3Foo1BC2Ev" CALLEENODEID="202746133915" CALLERNAME="_Z41__static_initialization_and_destruction_0ii" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc:49" INVNO="1" STATICCALL="[ ]" THREADID="0" TS="0_1_2"/>
+   <RETURN FUNCNAME="_ZN3Foo1BC2Ev" FUNCNODEID="202746133915" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh:25" INVNO="1" RETVAL="void" THREADID="0" TS="0_1_3"/>
+   <CALL ARG0="UNKNOWN" CALLEENAME="_ZN3Foo1BC2Ev" CALLEENODEID="202746133915" CALLERNAME="_Z41__static_initialization_and_destruction_0ii" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc:9" INVNO="1" STATICCALL="[ ]" THREADID="0" TS="0_1_4"/>
+   <RETURN FUNCNAME="_ZN3Foo1BC2Ev" FUNCNODEID="202746133915" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh:25" INVNO="2" RETVAL="void" THREADID="0" TS="0_1_5"/>
+   <RETURN FUNCNAME="_Z41__static_initialization_and_destruction_0ii" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc:42" INVNO="1" THREADID="0" TS="0_1_6"/>
+   <RETURN FUNCNAME="_GLOBAL__sub_I__ZN3Foo3funEii" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc:42" INVNO="1" THREADID="0" TS="0_1_7"/>
+   <CALL ARG0="UNKNOWN" ARG1="1" CALLEENAME="_ZN3Foo3funEii" CALLEENODEID="200159330743" CALLERNAME="main" CALLERNODEID="203177035467" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc:31" INVNO="1" STATICCALL="[ 202237524194 Foo:: fun ( local_p , local_q ) ]" THREADID="0" TS="0_1_8"/>
+   <RETURN FUNCNAME="_ZN3Foo3funEii" FUNCNODEID="200159330743" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc:14" INVNO="1" RETVAL="void" THREADID="0" TS="0_1_9"/>
+   <CALL ARG0="UNKNOWN" ARG1="1" CALLEENAME="_ZN3Foo4tfunIifEEbT_T0_" CALLEENODEID="200600788953" CALLERNAME="main" CALLERNODEID="203177035467" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc:32" INVNO="1" STATICCALL="[ 204244445965 Foo:: tfun &lt; int , float &gt; ( 3 , 4 ) ]" THREADID="0" TS="0_1_10"/>
+   <RETURN FUNCNAME="_ZN3Foo4tfunIifEEbT_T0_" FUNCNODEID="200600788953" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc:29" INVNO="1" RETVAL="UNKNOWN" THREADID="0" TS="0_1_11"/>

@@ -12,6 +12,8 @@ int main()
 	A * u = CALLF \
 	);
 	A z[7];
+	int q[] = {1, 2, 3};
+	char r [][4] = {{1, 2, 3, 4}, {4, 5, 6, 7}};
 	A * x = new A [5];
 	for (int i = 0; i < 5; ++i)
 	{

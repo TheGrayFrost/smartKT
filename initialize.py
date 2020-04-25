@@ -105,6 +105,9 @@ def generate_static_info(path):
         mainfname = f[f.rfind('/')+1:f.rfind('.')]
         relpath = f[len(path)+1:]
         outpath = os.path.join(outfolder, relpath)
+        if DEBUG:
+            print ('CMD: ', 'mkdir -p ' + outpath)
+            print ('CMD: ', 'cp ' + f + ' ' + os.path.join(outpath, f[f.rfind('/')+1:]))
         os.system('mkdir -p ' + outpath)
         stripop = os.path.join(outpath, mainfname)
         os.system('cp ' + f + ' ' + os.path.join(outpath, f[f.rfind('/')+1:]))
@@ -141,23 +144,34 @@ def generate_static_info(path):
             # Remove flags that cause errors
             cmd = [x for x in cmd if x not in ['-flifetime-dse=1']]
 
+            if DEBUG:
+                print ('CMD: ', ' '.join(cmd))
             os.system(' '.join(cmd))
 
             # Generate clang xml & .calls.temp - file number prepended to all nodeids to make unique
+            if DEBUG:
+                print ('CMD: ', ' '.join(['parsers/ast2xml', str(num), f, mainfname+'.ast',
+                            stripop+CALL_TEMP_EXTENSION, stripop+CLANG_EXTENSION ]))
             os.system(' '.join(['parsers/ast2xml', str(num), f, mainfname+'.ast',
                             stripop+CALL_TEMP_EXTENSION, stripop+CLANG_EXTENSION ]))
             logstr += ('output :' + stripop + CLANG_EXTENSION + '\n')
             logstr += ('output :' + stripop + CALL_TEMP_EXTENSION + '\n')
 
             # Add tokens to .calls.temp and produces .calls.tokens
+            if DEBUG:
+                print ('CMD: ', ' '.join(['parsers/calls', stripop+CALL_TEMP_EXTENSION, stripop+CALL_FINAL_EXTENSION]))
             os.system(' '.join(['parsers/calls', stripop+CALL_TEMP_EXTENSION, stripop+CALL_FINAL_EXTENSION]))
             logstr += ('output :' + stripop + CALL_FINAL_EXTENSION + '\n')
 
             # Create .funcargs
+            if DEBUG:
+                print ('CMD: ', f'./func.py {stripop + CLANG_EXTENSION} {stripop + SIGN_EXTENSION}')
             emit_funcargs(stripop + CLANG_EXTENSION, stripop + SIGN_EXTENSION)
             logstr += ('output :' + stripop + SIGN_EXTENSION + '\n')
 
             # Move the ast into outputs
+            if DEBUG:
+                print ('CMD: ', 'mv ' + mainfname + '.ast ' + outpath)
             os.system ('mv ' + mainfname + '.ast ' + outpath)
             logstr += ('Clang output generated: ' + outpath + '\n')
 

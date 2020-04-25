@@ -1,14 +1,20 @@
 <DYNAMICTRACE INP="[None]" RUNID="0_1" EXE="test.out">
-   <CALL ARGS="NONE" CALLEENAME="_ZN5DummyIifEC1Eif" CALLERNAME="main" INVNO="1" STATICCALL="[ 202314806913 local_p ( 3 , 4.0 ) ]" THREADID="0" TS="0_1_1"/>
-   <RETURN FUNCNAME="_ZN5DummyIifEC1Eif" INVNO="1" THREADID="0" TS="0_1_2"/>
-   <CALL ARG0="UNKNOWN" CALLEENAME="_ZN5DummyIifE13member_methodERKf" CALLERNAME="main" INVNO="1" STATICCALL="[ 200983377520 local_p . member_method ( 2 ) ]" THREADID="0" TS="0_1_3"/>
-   <RETURN FUNCNAME="_ZN5DummyIifE13member_methodERKf" INVNO="1" RETVAL="UNKNOWN" THREADID="0" TS="0_1_4"/>
-   <CALL ARGS="NONE" CALLEENAME="_ZN5DummyIfiEC2Efi" CALLERNAME="main" INVNO="1" STATICCALL="[ ]" THREADID="0" TS="0_1_5"/>
-   <RETURN FUNCNAME="_ZN5DummyIfiEC2Efi" INVNO="1" THREADID="0" TS="0_1_6"/>
-   <CALL ARG0="UNKNOWN" CALLEENAME="_ZN5DummyIfiE7realityEv" CALLERNAME="main" INVNO="1" STATICCALL="[ 202628287227 isThis . reality ( ) ]" THREADID="0" TS="0_1_7"/>
-   <RETURN FUNCNAME="_ZN5DummyIfiE7realityEv" INVNO="1" RETVAL="void" THREADID="0" TS="0_1_8"/>
+   <CALL ARG0="UNKNOWN" ARG1="3" CALLEENAME="_ZN5DummyIifEC1Eif" CALLEENODEID="103228254547" CALLERNAME="main" CALLERNODEID="104266598541" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc:46" INVNO="1" STATICCALL="[ 101683027973 local_p( 3 , 4.0 ) ]" THREADID="0" TS="0_1_1"/>
+   <RETURN FUNCNAME="_ZN5DummyIifEC1Eif" FUNCNODEID="103228254547" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc:22" INVNO="1" RETVAL="void" THREADID="0" TS="0_1_2"/>
+   <CALL ARG0="UNKNOWN" CALLEENAME="_ZN5DummyIifE13member_methodERKf" CALLEENODEID="101776072424" CALLERNAME="main" CALLERNODEID="104266598541" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc:54" INVNO="1" STATICCALL="[ 103791718997 local_p. member_method ( 2 ) ]" THREADID="0" TS="0_1_3"/>
+   <CALL ARGS="NONE" CALLEENAME="_ZN5DummyIifE3fooEv" CALLERNAME="_ZN5DummyIifE13member_methodERKf" CALLERNODEID="101776072424" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc:31" INVNO="1" STATICCALL="[ ]" THREADID="0" TS="0_1_4"/>
+   <CALL ARGS="NONE" CALLEENAME="_Z3funIiET_S0_" CALLERNAME="_ZN5DummyIifE3fooEv" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc:24" INVNO="1" STATICCALL="[ ]" THREADID="0" TS="0_1_5"/>
+   <RETURN FUNCNAME="_Z3funIiET_S0_" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc:10" INVNO="1" THREADID="0" TS="0_1_6"/>
+   <CALL ARGS="NONE" CALLEENAME="_Z3funIfET_S0_" CALLERNAME="_ZN5DummyIifE3fooEv" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc:24" INVNO="1" STATICCALL="[ ]" THREADID="0" TS="0_1_7"/>
+   <RETURN FUNCNAME="_Z3funIfET_S0_" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc:10" INVNO="1" THREADID="0" TS="0_1_8"/>
+   <RETURN FUNCNAME="_ZN5DummyIifE3fooEv" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc:25" INVNO="1" THREADID="0" TS="0_1_9"/>
+   <RETURN FUNCNAME="_ZN5DummyIifE13member_methodERKf" FUNCNODEID="101776072424" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc:35" INVNO="1" RETVAL="UNKNOWN" THREADID="0" TS="0_1_10"/>
+   <CALL ARG0="UNKNOWN" ARG1="4" CALLEENAME="_ZN5DummyIfiEC2Efi" CALLEENODEID="102903524088" CALLERNAME="main" CALLERNODEID="104266598541" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc:59" INVNO="1" STATICCALL="[ ]" THREADID="0" TS="0_1_11"/>
+   <RETURN FUNCNAME="_ZN5DummyIfiEC2Efi" FUNCNODEID="102903524088" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc:22" INVNO="1" RETVAL="void" THREADID="0" TS="0_1_12"/>
+   <CALL ARG0="UNKNOWN" CALLEENAME="_ZN5DummyIfiE7realityEv" CALLEENODEID="101682843468" CALLERNAME="main" CALLERNODEID="104266598541" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc:60" INVNO="1" STATICCALL="[ 101006843091 isThis. reality ( ) ]" THREADID="0" TS="0_1_13"/>
+   <RETURN FUNCNAME="_ZN5DummyIfiE7realityEv" FUNCNODEID="101682843468" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc:37" INVNO="1" RETVAL="void" THREADID="0" TS="0_1_14"/>
    <IO FUNCNAME="main" INVNO="1" SYNCS="ASYNC" THREADID="0">
-      <NONLOCALWRITE ADDRESS="0x60202c" FUNCNAME="main" INVNO="1" SYNCS="ASYNC" THREADID="0" TS="0_1_9" VARCLASS="GLOBAL" VARID="203546607318" VARNAME="not_a_template"/>
+      <NONLOCALWRITE FUNCNAME="main" FUNCNODEID="104266598541" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc:61" INVNO="1" SYNCS="ASYNC" THREADID="0" TS="0_1_15" VARADDRESS="0x60202c" VARCLASS="GLOBAL" VARID="102979016411" VARNAME="not_a_template"/>
    </IO>
-   <RETURN FUNCNAME="main" INVNO="1" THREADID="0" TS="0_1_10"/>
+   <RETURN FUNCNAME="main" FUNCNODEID="104266598541" INSLOC="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc:64" INVNO="1" RETVAL="0" THREADID="0" TS="0_1_16"/>
 </DYNAMICTRACE>

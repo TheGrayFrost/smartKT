@@ -1,10 +1,12 @@
 # FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	_ZN5DummyIfiEC4Efi	None	s	202144759336	S	4	203676048798
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	_ZN5DummyIifEC4Eif	None	s	202144759336	S	4	203676048798
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	_ZN5DummyIfiEC4Efi	None	t	202907475066	T	4	203676048798
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	_ZN5DummyIifEC4Eif	None	t	202907475066	T	4	203676048798
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	_ZN5DummyIifE13member_methodERKf	0x10	arg_value	202065611365	const T &	8	201089821812
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	main	0x44	argc	200507942702	int	4	201697600892
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	main	0x50	argv	202622370663	char **	8	201697600892
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	main	0x20	local_p	202561330455	Dummy<int, float>	24	201697600892
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	main	0x40	isThis	203961730785	Dummy<float, int>	24	201697600892
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	_Z3funIfET_S0_	0x4	arg_value	103064257490	V	4	103836156063
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	_Z3funIiET_S0_	0x4	arg_value	103064257490	V	4	103836156063
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	_ZN5DummyIfiEC4Efi	None	s	101205428512	S	4	104270164718
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	_ZN5DummyIifEC4Eif	None	s	101205428512	S	4	104270164718
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	_ZN5DummyIfiEC4Efi	None	t	103516279512	T	4	104270164718
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	_ZN5DummyIifEC4Eif	None	t	103516279512	T	4	104270164718
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	_ZN5DummyIifE13member_methodERKf	0x10	arg_value	103424608690	const T &	8	100098204738
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	main	0x44	argc	101571924615	int	4	104266598541
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	main	0x50	argv	104133700705	char **	8	104266598541
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	main	0x20	local_p	103254496493	Dummy<int, float>	24	104266598541
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	main	0x40	isThis	103871952389	Dummy<float, int>	24	104266598541

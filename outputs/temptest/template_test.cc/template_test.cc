@@ -12,23 +12,27 @@ V fun(V arg_value) {
 // typedef complex<int> CXI;
 int not_a_template = 42;
 
+bool omg() {return true;}
+
 template<class S, class T>
 struct Dummy {
   S svar;
   T tvar;
   int ivar;
+  static T jvar;
 
   Dummy(S s, T t) : svar(s), tvar(t) { } ;
   auto foo() {
-    return fun<S>(svar) + fun<T>(tvar);
+    return fun<S>(svar) + fun<T>(tvar) + jvar;
   }
 
   bool member_method(T const& arg_value)
   {
     if( arg_value < this->tvar )
     {
-      this->tvar = arg_value;
-      return true;
+      this->tvar = this->foo();
+
+      return omg();
     }
     return false;
   }
@@ -36,9 +40,25 @@ struct Dummy {
   virtual void reality() { };
 };
 
+struct nontempDummy
+{
+  auto foo() {
+    return fun<int>(4) + fun<float>(3.5) + 6;
+  }
+
+  bool member_method() {
+    auto r = foo();
+    return omg();}
+};
+
+// explicit definition for static variable in class
+template <class S, class T>
+T Dummy<S, T>::jvar;
+
 int main(int argc, char** argv)
 {
   Dummy<int, float> local_p(3, 4.0);
+
 //   cout << local_p.foo() << endl;
 
 //   Dummy<CXI, CXI> local_q( CXI(3, 4), CXI(-4, 3) );

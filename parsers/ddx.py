@@ -186,7 +186,7 @@ def get_match(cloc):
 	return None
 
 
-def UpdateCtree (cnode, filename=None, lineno=None, colno=None, outfile = None):
+def UpdateCtree (cnode, filename=None, lineno=None, colno=None, outfile=None):
 	if 'file' in cnode.attrib:
 		filename = os.path.abspath( cnode.attrib['file'] )
 	if 'line' in cnode.attrib :
@@ -220,7 +220,7 @@ def UpdateCtree (cnode, filename=None, lineno=None, colno=None, outfile = None):
 # var: cnode
 # dnode: corr. dnode
 # var_class: LOCAL, GLOBAL, STATIC, FUNCSTATIC, STRUCTSTATIC, CLASSSTATIC
-# var_container: containing box in case of satic variables
+# var_container: containing box in case of static variables
 def helper(var, dnode = None, var_class = 'LOCAL', var_container = None):
 	# STATIC STORAGE VARIABLE:
 	# ADDRESS VARNAME ID TYPE SIZE PARENT_ID CLASS CONTAINER

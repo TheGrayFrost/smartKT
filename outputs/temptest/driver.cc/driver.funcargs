@@ -1,1 +1,15 @@
 # FILENAME	FUNCNODEID	FUNCNAME	NARGS	ARGTYPE*	RETTYPE
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	104248103529	_ZN3Foo4tfunIccEEbT_T0_	2	char	char	bool
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	100382509189	_ZN3Foo4tfunIifEEbT_T0_	2	int	float	bool
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh	102092826674	_ZN3Foo1AC1Ev	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.hh	100769717285	_ZN3Foo1BC1Ev	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	101176994323	_ZN3Foo3funEii	2	int	int	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	100155743089	_ZN3Foo3funEi	1	int	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	103698104415	_ZN3Foo4tfunIffEEbT_T0_	2	float	float	bool
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	100924947959	_ZN3Foo4tfunIffEEbT_T0_	2	float	float	bool
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	104085207856	_ZN3Foo4tfunIffEEbT_T0_	2	float	float	bool
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	101628574944	_ZN3Foo4tfunIffEEbT_T0_	2	float	float	bool
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	104221648823	_ZN3Foo4tfunIffEEbT_T0_	2	float	float	bool
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/foo/foo.cc	101268391292	_ZN3Foo4tfunIffEEbT_T0_	2	float	float	bool
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	103280270351	_Z3funi	1	int	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/driver.cc	104200360499	main	1		int

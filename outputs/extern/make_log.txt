@@ -11,8 +11,8 @@ Scanning dependencies of target foo
 make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/build'
 make -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/build
 make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/build'
-[ 20%] Building CXX object CMakeFiles/foo.dir/B.cc.o
 [ 40%] Building CXX object CMakeFiles/foo.dir/A.cc.o
+[ 40%] Building CXX object CMakeFiles/foo.dir/B.cc.o
 /opt/rh/devtoolset-8/root/usr/bin/c++  -Dfoo_EXPORTS  -gdwarf-4 -fPIC   -o CMakeFiles/foo.dir/B.cc.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/B.cc
 /opt/rh/devtoolset-8/root/usr/bin/c++  -Dfoo_EXPORTS  -gdwarf-4 -fPIC   -o CMakeFiles/foo.dir/A.cc.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/A.cc
 [ 60%] Linking CXX shared library libfoo.so

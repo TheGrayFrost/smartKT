@@ -1,10 +1,10 @@
 # FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	_ZN6nonstd13DerivedClass15helloEi	0xc	i	200765775504	int	4	203392930048
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	_ZN6nonstd13DerivedClass15helloEd	0x10	z	200503938645	double	8	200894582797
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	main	0x24	x	200485445135	struct foo_str	12	200710523063
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	main	0x30	y	202863592937	struct foo_str	12	200710523063
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	main	0x70	snake	204229739147	nonstd::Snake	64	200710523063
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	main	0x18	p	203117527266	nonstd::ParentClass *	8	200710523063
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	main	0x90	d	201834873537	nonstd::DerivedClass1	32	200710523063
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	_Z3foo7foo_str	0x20	x	103017558662	struct foo_str	12	101105857964
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	_Z23accessFriendClassGlobalv	0x20	p	100472044329	nonstd::ParentClass	32	102275864044
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	_ZN6nonstd13DerivedClass15helloEi	0xc	i	203165992475	int	4	202851353692
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.h	_ZN6nonstd13DerivedClass15helloEd	0x10	z	203289401086	double	8	203193440463
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	main	0x24	x	200228585985	struct foo_str	12	203811500480
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	main	0x30	y	203601622034	struct foo_str	12	203811500480
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	main	0x70	snake	202114779272	nonstd::Snake	64	203811500480
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	main	0x18	p	201935740820	nonstd::ParentClass *	8	203811500480
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/src/inherit.cpp	main	0x90	d	200573793289	nonstd::DerivedClass1	32	203811500480
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	_Z3foo7foo_str	0x20	x	102435498043	struct foo_str	12	103499619785
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/inherit/lib/foo.cpp	_Z23accessFriendClassGlobalv	0x20	p	100378398960	nonstd::ParentClass	32	103372630114
