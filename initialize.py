@@ -77,10 +77,15 @@ def generate_static_info(path):
     global outfolder
 
     # Build the clang tools
+    if DEBUG:
+        print ('CMD: ', 'cd parsers && make all')
     os.system('cd parsers && make all')
 
     # Get compile instructions using project_parser.py
     # THIS PART WILL CHANGE FOR OTHER BUILD TOOLS
+    if DEBUG:
+        print ('CMD: ', ' '.join(['parsers/' + PROJPARSER, os.path.join(outfolder, 'make_log.txt'),
+                    os.path.join(path, 'build'), os.path.join(outfolder, 'dependencies.p')]))
     os.system(' '.join(['parsers/' + PROJPARSER, os.path.join(outfolder, 'make_log.txt'),
                     os.path.join(path, 'build'), os.path.join(outfolder, 'dependencies.p')]))
 
@@ -159,7 +164,8 @@ def generate_static_info(path):
 
             # Add tokens to .calls.temp and produces .calls.tokens
             if DEBUG:
-                print ('CMD: ', ' '.join(['parsers/calls', stripop+CALL_TEMP_EXTENSION, stripop+CALL_FINAL_EXTENSION]))
+                print ('CMD: ', ' '.join(['parsers/calls', 
+                    stripop+CALL_TEMP_EXTENSION, stripop+CALL_FINAL_EXTENSION]))
             os.system(' '.join(['parsers/calls', stripop+CALL_TEMP_EXTENSION, stripop+CALL_FINAL_EXTENSION]))
             logstr += ('output :' + stripop + CALL_FINAL_EXTENSION + '\n')
 
@@ -185,7 +191,7 @@ def generate_static_info(path):
             os.system('parsers/' + DWARFTOOL + ' ' + objectfile + ' -q -o ' + stripop + DWARF_EXTENSION)
             logstr += 'Dwarfdump Generated : '
             if DEBUG:
-                logstr += 'parsers/' + DWARFTOOL + ' ' + objectfile + ' -q -o ' 
+                print('CMD: ', 'parsers/'+ DWARFTOOL+' '+objectfile+' -q -o '+stripop+DWARF_EXTENSION)
             logstr += stripop + DWARF_EXTENSION + '\n'
             # print ('Dwarfdump Generated')
 
@@ -193,10 +199,9 @@ def generate_static_info(path):
             os.system('parsers/' + COMBINER + ' ' + stripop + ' OFFSET ' + COMB_OUTPUTEXT)
             logstr += 'Information combined : '
             if DEBUG:
-                logstr += 'parsers/' + COMBINER + ' ' + stripop + ' OFFSET ' + COMB_OUTPUTEXT + '\n'
-            else:
-                logstr += '\n' + '\n'.join([stripop + myext for 
-                    myext in [COMB_EXTENSION, OFFSET_EXTENSION]]) + '\n\n'
+                print('CMD: ', 'parsers/'+COMBINER+' '+stripop+' OFFSET '+COMB_OUTPUTEXT)
+            logstr += '\n' + '\n'.join([stripop + myext for 
+                myext in [COMB_EXTENSION, OFFSET_EXTENSION]]) + '\n\n'
              # print ('Information combined')
         except Exception as e:
             print('\n'.join([relpath, logstr, e]), end='', file=sys.stderr)
@@ -210,7 +215,7 @@ def generate_static_info(path):
         pool.map(generate_static_info_for_tu, enumerate(compile_instrs, 1))
 
 
-if not os.listdir(os.path.join("parsers", "pyelftools")):
-    os.system("cd parsers && git clone https://github.com/eliben/pyelftools.git")
+if not os.listdir(os.path.join('parsers', 'pyelftools')):
+    os.system('cd parsers && git clone https://github.com/eliben/pyelftools.git')
 init(path)
 generate_static_info(path)
