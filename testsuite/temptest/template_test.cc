@@ -22,7 +22,7 @@ struct Dummy {
   static T jvar;
 
   Dummy(S s, T t) : svar(s), tvar(t) { } ;
-  auto foo() {
+  T foo() {
     return fun<S>(svar) + fun<T>(tvar) + jvar;
   }
 

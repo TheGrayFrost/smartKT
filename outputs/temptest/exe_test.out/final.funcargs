@@ -1,6 +1,11 @@
 # FILENAME	FUNCNODEID	FUNCNAME	NARGS	ARGTYPE*	RETTYPE
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	101682843468	_ZN5DummyIfiE7realityEv	1		void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	103228254547	_ZN5DummyIifEC1Eif	2	int	float	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	101776072424	_ZN5DummyIifE13member_methodERKf	1	const float &	bool
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	102903524088	_ZN5DummyIfiEC1Efi	2	float	int	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	104266598541	main	2	int	char **	int
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	101080543592	_ZN5DummyIfiE7realityEv	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	100245018059	_ZN5DummyIfiEC1Efi	2	float	int	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	103819631802	_Z3funIfET_S0_	1	float	float
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	100837575703	_ZN5DummyIifE13member_methodERKf	1	const float &	bool
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	100757784950	_Z3funIiET_S0_	1	int	int
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	102535076097	_ZN5DummyIifEC1Eif	2	int	float	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	102540438203	_Z3omgv	1		bool
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	103765315522	_ZN12nontempDummy3fooEv	1		float
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	100386268887	_ZN12nontempDummy13member_methodEv	1		bool
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	100790896541	main	2	int	char **	int

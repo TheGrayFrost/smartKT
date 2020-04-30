@@ -15,7 +15,7 @@ Note: For the `testsuite` the runs.json have been placed in the folder itself (e
 
 1. gcc >= 8: https://gcc.gnu.org/gcc-8/
 2. g++ >= 8: https://packages.ubuntu.com/bionic/g++-8
-3. python >= 3.5: https://www.python.org/downloads/
+3. python >= 3.6: https://www.python.org/downloads/
 4. clang >= 9: https://releases.llvm.org/download.html
 5. libxml2-dev: http://xmlsoft.org/downloads.html
 

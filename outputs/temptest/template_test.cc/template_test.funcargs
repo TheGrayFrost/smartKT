@@ -1,11 +1,11 @@
 # FILENAME	FUNCNODEID	FUNCNAME	NARGS	ARGTYPE*	RETTYPE
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	203492131248	_ZN5DummyIfiE7realityEv	1		void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	203402260864	_ZN5DummyIifE13member_methodERKf	1	const float &	bool
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	200684601179	_Z3funIfET_S0_	1	float	float
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	204214559509	_Z3funIiET_S0_	1	int	int
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	202887504823	_ZN5DummyIifEC1Eif	2	int	float	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	200711907408	_ZN5DummyIfiEC1Efi	2	float	int	void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	200486999140	_Z3omgv	1		bool
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	203560442071	_ZN12nontempDummy3fooEv	1		float
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	203384424227	_ZN12nontempDummy13member_methodEv	1		bool
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	203969248000	main	2	int	char **	int
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	101080543592	_ZN5DummyIfiE7realityEv	1		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	100245018059	_ZN5DummyIfiEC1Efi	2	float	int	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	103819631802	_Z3funIfET_S0_	1	float	float
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	100837575703	_ZN5DummyIifE13member_methodERKf	1	const float &	bool
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	100757784950	_Z3funIiET_S0_	1	int	int
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	102535076097	_ZN5DummyIifEC1Eif	2	int	float	void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	102540438203	_Z3omgv	1		bool
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	103765315522	_ZN12nontempDummy3fooEv	1		float
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	100386268887	_ZN12nontempDummy13member_methodEv	1		bool
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/temptest/template_test.cc	100790896541	main	2	int	char **	int
