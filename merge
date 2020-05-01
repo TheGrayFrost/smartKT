@@ -1,0 +1,26 @@
+BEGIN {
+	OFS = "\t"
+}
+
+NR==FNR {
+	# symtab
+	key = $NF
+	present[key] = 1
+	addr[key] = $2
+	next
+}
+{	
+	# address
+	key = $2
+	req = $1
+	if ($1 != -1)
+	{
+		print $0
+	}
+	else if (present[key]) 
+	{
+		$1 = addr[key]
+		sub("0*", "0x", $1)
+		print $0
+	}
+}

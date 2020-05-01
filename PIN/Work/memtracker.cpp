@@ -358,7 +358,7 @@ VOID printval (ADDRINT * arg, std::string type)
 	if (type == "int")
 		outp << *((int *)(arg));
 	else if (type == "char")
-		outp << "\'" << *((char *)(arg)) << "\'";
+		outp << "CH:" << int(*((char *)(arg)));
 	else if (type == "float")
 		outp << *((int *)(arg));
 	else if (type == "double")

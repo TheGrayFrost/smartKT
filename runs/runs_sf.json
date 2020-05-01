@@ -1,9 +1,8 @@
 {
 	"runs": {
 		"/data/user-home/srijoni/PIN_Tests/smartKT/projects/Stockfish-sf_11/build/stockfish" : { 
-			"eval": 1,
-			"go nodes 30": 2,
-			"go depth 2" : 2
+			"go nodes 10": 2,
+			"go depth 1" : 2
 		}
 	},
 	"comments": {

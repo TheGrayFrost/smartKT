@@ -26,12 +26,17 @@ def remap(file_name, field_ids, id_map, delim='\t') :
 
         for line in input_file :
             data = line.strip().split(delim)
+            printok = True
             for idx in field_ids :
+                if data[idx] == '':
+                    printok = False
+                    break
                 ref_id = int(data[idx])
                 if ref_id in id_map :
                     ref_id = id_map[ ref_id ]
                 data[idx] = str( ref_id )
-            print(delim.join(data), file=tmpf)
+            if printok:
+                print(delim.join(data), file=tmpf)
 
     os.replace(tmpf.name, file_name)
 

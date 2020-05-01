@@ -54,9 +54,9 @@ if len(sys.argv) > 2:
     OUTPUTS_FOLDER = sys.argv[2]
 
 # DOMAINS TO RUN
-CALLSTATIC = False
-CALLDYN = False
-CALLCOMM = True
+CALLSTATIC = True
+CALLDYN = True
+CALLCOMM = False
 CALLVCS = False
 
 
@@ -193,7 +193,7 @@ def generate_static_info():
         ls[path] = get_rec_deps(path)
 
     add_loaded_binaries(executable)
-
+    
     orderls = [(executable, ls[executable])]
     os.system('ldd '+executable+' > ldd.info')
     with open('ldd.info', 'r') as f:
@@ -203,9 +203,10 @@ def generate_static_info():
                 libloc = os.path.realpath(r[2])
                 if libloc in ls:
                     orderls.append((libloc, ls[libloc]))
-    # os.system('rm ldd.info')
+    os.system('rm ldd.info')
     if DEBUG:
         print (orderls)
+
     combine_all_clang(orderls)
 
 def generate_dynamic_info(path, test, runidx, runNum):
@@ -290,8 +291,7 @@ for exe in runs:
     if CALLDYN:
         for idx, ti in enumerate(runs[exe]):
             if len(ti) > 0:
-                test_input = os.path.abspath(ti)
-                generate_dynamic_info(executable, test_input, idx, runs[exe][ti])
+                generate_dynamic_info(executable, ti, idx, runs[exe][ti])
             else:
                 generate_dynamic_info(executable, None, idx, runs[exe][ti])
             os.system("mv " + os.path.join(foutfolder, "final_dynamic.xml") + " " + \

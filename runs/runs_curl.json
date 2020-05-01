@@ -1,15 +1,12 @@
 {
     "runs": {
-        "/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/curl/build/tests/libtest/lib1503": {
+        "/data/user-home/srijoni/PIN_Tests/smartKT/projects/curl/build/tests/libtest/lib1503": {
             "https://superuser.com/questions/38981/how-can-i-find-only-the-executable-files-under-a-certain-directory-in-linux" : 2
         },
-        "/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/curl/build/tests/libtest/lib511": {
+        "/data/user-home/srijoni/PIN_Tests/smartKT/projects/curl/build/tests/libtest/lib511": {
             "https://superuser.com/questions/38981/how-can-i-find-only-the-executable-files-under-a-certain-directory-in-linux" : 2
         },
-        "/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/curl/build/tests/libtest/lib670": {
-            "https://superuser.com/questions/38981/how-can-i-find-only-the-executable-files-under-a-certain-directory-in-linux" : 1
-        },
-        "/data/user-home/srijoni/spandan/MTPSMARTKT/utopia/smartKT/projects/curl/build/src/curl": {
+        "/data/user-home/srijoni/PIN_Tests/smartKT/projects/curl/build/src/curl": {
             "https://superuser.com/questions/38981/how-can-i-find-only-the-executable-files-under-a-certain-directory-in-linux" : 1
         }
     },

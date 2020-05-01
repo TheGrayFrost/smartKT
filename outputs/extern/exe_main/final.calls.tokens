@@ -1,9 +1,9 @@
 # FILENAME	LOCATION	FUNCNAME	CALLNODEID	CALLEXPR
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/C.cc	15:2::15:26	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	300476422204	std:: cout << "In f():\n"
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/C.cc	26:10::26:14	_Z1fR1A	301815487844	f( v )
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/C.cc	27:2::27:49	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	303529430269	std:: cout << "Value of u->r = " << u -> r << "\n"
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/C.cc	27:2::27:41	_ZNSolsEi	302662754543	std:: cout << "Value of u->r = " << u -> r
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/C.cc	27:2::27:33	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	301535254802	std:: cout << "Value of u->r = "
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/B.cc	13:9::13:44	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	101123949140	std:: cout << "In class A's cons.\n"
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/B.cc	13:50::13:53	_Z1fv	104005309900	f( )
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/B.cc	16:3::16:4	_ZN1AC1Ev	100964964842	v
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/C.cc	15:2::15:26	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	303581572547	std:: cout << "In f():\n"
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/C.cc	26:10::26:14	_Z1fR1A	300880871240	f( v )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/C.cc	27:2::27:49	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	302137706165	std:: cout << "Value of u->r = " << u -> r << "\n"
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/C.cc	27:2::27:41	_ZNSolsEi	300944723379	std:: cout << "Value of u->r = " << u -> r
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/C.cc	27:2::27:33	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	302146423083	std:: cout << "Value of u->r = "
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/B.cc	13:9::13:44	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	200960457355	std:: cout << "In class A's cons.\n"
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/B.cc	13:50::13:53	_Z1fv	200615572848	f( )
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/B.cc	16:3::16:4	_ZN1AC1Ev	203363832284	v

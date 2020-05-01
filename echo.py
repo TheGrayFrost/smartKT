@@ -8,10 +8,16 @@ dep = pckl.load(open(sys.argv[1], 'rb'))
 # , src, obj)
 
 
-cins = dep['compile_instrs']
-# for i, ins in enumerate(cins):
-# 	if 'lib1521' in ins:
-# 		print(ins)
+cins = dep
+
+
+for i, ins in enumerate(cins):
+	# print(ins)
+	if 'lib1503' in ins:
+		print(ins)
+		print('\t', cins[ins])
+exit()
+
 ins = cins['/data/user-home/srijoni/PIN_Tests/smartKT/projects/curl/build/tests/libtest/lib1521.c']
 # print(ins)
 
