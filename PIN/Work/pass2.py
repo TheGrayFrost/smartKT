@@ -118,6 +118,7 @@ with open(filename, 'r') as inf, open(outfile, 'w') as opf:
 			rid = int(u[rl+1:])
 			if rid % 100 == 0:
 				print (u, '\r', end='')
+			# print(entry.tag)
 			if entry.tag == 'WRITE' or entry.tag == 'READ':
 				curctxt = (entry.attrib['THREADID'], entry.attrib['FUNCNAME'], 
 					entry.attrib['INVNO'], entry.attrib['SYNCS'])
@@ -136,10 +137,12 @@ with open(filename, 'r') as inf, open(outfile, 'w') as opf:
 				if DEBUG:
 					print ('wow')
 					print (ET.tostring(entry))
-				xmlstr = minidom.parseString(ET.tostring(entry)).toprettyxml(indent='   ')
-				# except Exception as e:
-				# 	print (ET.tostring(entry))
-				# 	exit()
+				try:
+					xmlstr = minidom.parseString(ET.tostring(entry)).toprettyxml(indent='   ')
+				except Exception as e:
+					print (ET.tostring(entry))
+					exit()
+					# pass
 				xmlstr = '\n'.join(['   '+l for l in xmlstr.split('\n')[1:-1]])
 				opf.write(xmlstr+'\n')
 	if ctxt is not None:
