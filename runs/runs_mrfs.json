@@ -13,7 +13,7 @@
 	"comments": {
 		"project_name": "mrfs",
 		"vocab_loc": "/data/user-home/srijoni/PIN_Tests/smartKT/parsers/comments/program_domain.csv",
-		"problem_domain_loc": "/data/user-home/srijoni/PIN_Tests/smartKT/parsers/comments/ProblemDomains/libpng/problem_domain.txt"
+		"problem_domain_loc": "/data/user-home/srijoni/PIN_Tests/smartKT/PD_mrfs.txt"
 	},
 	"vcs": {
 		"username": "spandankumarsahu",

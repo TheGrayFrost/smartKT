@@ -1,12 +1,12 @@
 {
     "runs": {
-        "/data/user-home/srijoni/PIN_Tests/smartKT/projects/libpng/build/pngtest": {
+        "/data/user-home/srijoni/PIN_Tests/smartKT/projects/gromacs/build/pngtest": {
             "/data/user-home/srijoni/PIN_Tests/smartKT/projects/libpng/pngtest.png" : 1,
             "/data/user-home/srijoni/PIN_Tests/smartKT/projects/libpng/pngbar.png": 1
         }
     },
     "comments": {
-        "project_name": "libpng",
+        "project_name": "gromacs",
         "vocab_loc": "/data/user-home/srijoni/PIN_Tests/smartKT/parsers/comments/program_domain.csv",
         "problem_domain_loc": "/data/user-home/srijoni/PIN_Tests/smartKT/parsers/comments/ProblemDomains/libpng/problem_domain.txt"
     },

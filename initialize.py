@@ -147,11 +147,11 @@ def generate_static_info(path):
             cmd[cmd.index('-o')+1] = mainfname + '.ast'
 
             # Remove flags that cause errors
-            cmd = [x for x in cmd if x not in ['-flifetime-dse=1']]
+            cmd = ' '.join([x for x in cmd if x not in ['-flifetime-dse=1']])
 
             if DEBUG:
-                print ('CMD: ', ' '.join(cmd))
-            os.system(' '.join(cmd))
+                print ('CMD: ', cmd)
+            os.system(cmd)
 
             # Generate clang xml & .calls.temp - file number prepended to all nodeids to make unique
             if DEBUG:

@@ -54,9 +54,9 @@ if len(sys.argv) > 2:
     OUTPUTS_FOLDER = sys.argv[2]
 
 # DOMAINS TO RUN
-CALLSTATIC = True
-CALLDYN = True
-CALLCOMM = False
+CALLSTATIC = False
+CALLDYN = False
+CALLCOMM = True
 CALLVCS = False
 
 
@@ -295,7 +295,7 @@ for exe in runs:
             else:
                 generate_dynamic_info(executable, None, idx, runs[exe][ti])
             os.system("mv " + os.path.join(foutfolder, "final_dynamic.xml") + " " + \
-                os.path.join(foutfolder, "inp_" + str(idx) + ".xml"))
+                os.path.join(foutfolder, "final_dynamic_" + str(idx) + ".xml"))
 
 if CALLCOMM:
     # comments_config
