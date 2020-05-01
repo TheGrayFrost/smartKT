@@ -1,19 +1,15 @@
 {
 	"runs": {
-	    "/data/user-home/srijoni/PIN_Tests/smartKT/projects/mrfs/build/fstest1": { 
-                "" : 1 
-            },
-	    "/data/user-home/srijoni/PIN_Tests/smartKT/projects/mrfs/build/fstest2": {
-                "/data/user-home/srijoni/PIN_Tests/smartKT/projects/mrfs/test/mydump-34.backup" : 1
-            },
-            "/data/user-home/srijoni/PIN_Tests/smartKT/projects/mrfs/build/fstest3": {
-                "/data/user-home/srijoni/PIN_Tests/smartKT/projects/mrfs/test/test1.txt" : 3
-            }
+		"/data/user-home/srijoni/PIN_Tests/smartKT/projects/Stockfish-sf_11/build/stockfish" : { 
+			"eval": 1,
+			"go nodes 30": 2,
+			"go depth 2" : 2
+		}
 	},
 	"comments": {
 		"project_name": "Stockfish-sf_11",
 		"vocab_loc": "/data/user-home/srijoni/PIN_Tests/smartKT/parsers/comments/program_domain.csv",
-		"problem_domain_loc": "/data/user-home/srijoni/PIN_Tests/smartKT/parsers/comments/ProblemDomains/libpng/problem_domain.txt"
+		"problem_domain_loc": "/data/user-home/srijoni/PIN_Tests/smartKT/PD_StockFish.txt"
 	},
 	"vcs": {
 		"username": "spandankumarsahu",

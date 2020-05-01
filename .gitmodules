@@ -1,0 +1,3 @@
+[submodule "parsers/pyelftools"]
+	path = parsers/pyelftools
+	url = https://github.com/eliben/pyelftools
