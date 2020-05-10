@@ -211,10 +211,12 @@ def generate_static_info(path):
         else:
             print(logstr, end='')
 
+    # Run the generate_static_info_for_tu function for each translation unit in parallel.
     with ThreadPoolExecutor(max_workers = MAX_WORKERS) as pool :
         pool.map(generate_static_info_for_tu, enumerate(compile_instrs, 1))
 
 
+# Get the pyelftools library if not already present.
 if not os.listdir(os.path.join('parsers', 'pyelftools')):
     os.system('cd parsers && git clone https://github.com/eliben/pyelftools.git')
 init(path)

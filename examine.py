@@ -152,6 +152,7 @@ def combine_all_clang(depmap):
 
         print ('Generated addresses for ' + exenamestrip)
         
+    # Merge the IDs of definitions over multiple translation units.
     patched_xml = ddx.patch_external_def_ids(rootlist)
 
     # finalxmlstr = minidom.parseString(ET.tostring(patched_xml)).toprettyxml(indent='   ')
@@ -160,6 +161,8 @@ def combine_all_clang(depmap):
     mytree = ET.ElementTree(patched_xml)
     mytree.write(CURFINALFILE+STATIC_EXTENSION, encoding='utf-8')
 
+    # Uniquify nodes and update the identifiers and the pointers in
+    # all static files using the same mapping. See parsers/uniquify.py for details.
     uniquify(CURFINALFILE, STATIC_EXTENSION, CALL_EXTENSION,
         SIGN_EXTENSION, OFFSET_EXTENSION, address_files)
 

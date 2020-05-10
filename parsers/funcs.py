@@ -6,9 +6,14 @@ from xml.etree.ElementTree import Element, SubElement
 from xml.etree import ElementTree as ET
 from xml.dom import minidom
 
+# Tags for function declarations.
 FunctionTags = {'CXXConstructor', 'CXXDestructor', 'CXXMethod', 'FunctionDecl'}
 
 def emit_funcargs(input_filename, output_filename) :
+    """
+    Generates the .funcargs file.
+    This just prints data already being extracted in static XML in a different format.
+    """
     header = '# FILENAME\tFUNCNODEID\tFUNCNAME\tNARGS\tARGTYPE*\tRETTYPE'
     with open(input_filename, 'r') as xml_file, open(output_filename, 'w') as output_file :
         print(header, file=output_file)
