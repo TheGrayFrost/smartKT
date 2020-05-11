@@ -807,6 +807,7 @@ VOID init(std::string inp, std::string runid, std::string locf)
 		std::string filename, funcname, ignore;
 		ADDRINT offset;
 		variable var;
+		std::map<std::string, std::string> fnfreeze;
 
 		// open the file
 		std::ifstream offFile((folder+foff).c_str());
@@ -830,14 +831,18 @@ VOID init(std::string inp, std::string runid, std::string locf)
 			// update the nElem & isPtr from type info
 			var.patch();
 
+			funcname = undec(funcname);
 			// add this information to funcLocalMap
-			funcLocalMap[undec(funcname)][offset] = var;
+			if (fnfreeze.count(funcname) == 0)
+				fnfreeze[funcname] = filename;
+			if (filename == fnfreeze[funcname])
+				funcLocalMap[funcname][offset] = var;
 		}
 
 		// close the file
 		offFile.close();
 
-		if (DEBUG)
+		// if (DEBUG)
 			printfLocal();
 	}
 
@@ -869,6 +874,7 @@ VOID init(std::string inp, std::string runid, std::string locf)
 
 			// if this is the first time you're seeing this function, add info to funcinfoMap
 			// functions may be seen multiple times if they are declared in multiple files
+			// but only the first occurence is true, because of how the linker works
 			if (funcinfoMap.find(funcname) == funcinfoMap.end())
 			{
 				// add the clang node id
@@ -896,7 +902,7 @@ VOID init(std::string inp, std::string runid, std::string locf)
 		// close the file
 		argFile.close();
 
-		if (DEBUG)
+		// if (DEBUG)
 			printfInfo();
 	}
 

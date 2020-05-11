@@ -18,7 +18,7 @@ from collections import defaultdict
 import json
 
 import parsers.imp_ddx as ddx
-import parsers.vcs as vcs
+# import parsers.vcs as vcs
 import parsers.uniquify as uniq
 
 # For debug, set true
@@ -57,7 +57,7 @@ if len(sys.argv) > 2:
 # DOMAINS TO RUN
 CALLSTATIC = True
 CALLDYN = True
-CALLCOMM = True
+CALLCOMM = False
 CALLVCS = False
 
 

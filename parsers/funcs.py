@@ -20,9 +20,11 @@ def emit_funcargs(input_filename, output_filename) :
         tu_tree = ET.parse(xml_file)
         for node in tu_tree.iter():
             if node.tag in FunctionTags:
-                args = node.attrib['funcargs'].split(',')
+                args = node.attrib['funcargs']
+                if args != '':
+                    args = args.split(',')
                 # added check because template definitions have empty linkage name
-                # and also are useless for us
+                # and also are useless for us (?)
                 if node.attrib['linkage_name'] != '':
                     print(node.attrib['file'], node.attrib['id'],
                         node.attrib['linkage_name'], len(args), '\t'.join(args),

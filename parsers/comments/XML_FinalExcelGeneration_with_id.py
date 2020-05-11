@@ -171,12 +171,12 @@ def constructGraph(fname, outputprefix, vocab_loc, probdom_loc):
         joinByDel(id_matches_prog, " |||"), joinByDel(id_matches_prob, " |||"), joinByDel(id_comment_prog_matches, " |||"),
         joinByDel(id_comment_prob_matches, " |||"), joinByDel(id_matches_symbolId, " |||")])
 	
-	if len(output) > 1:
-		outfile = open(outputprefix + "_knowledgeBase_commentsXML.csv", 'w')
-		writer = csv.writer(outfile , delimiter = ',', quoting = csv.QUOTE_NONNUMERIC)
-		for eachrow in output:
-			writer.writerow(eachrow)
-		outfile.close()
+	# if len(output) > 1:
+	outfile = open(outputprefix + "_knowledgeBase_commentsXML.csv", 'w')
+	writer = csv.writer(outfile , delimiter = ',', quoting = csv.QUOTE_NONNUMERIC)
+	for eachrow in output:
+		writer.writerow(eachrow)
+	outfile.close()
 
 if len(sys.argv) != 5:
 	print("Give 4 arguments: src filename, outputprefix, program domain location, problem domain location in order")

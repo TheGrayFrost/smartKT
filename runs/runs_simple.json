@@ -1,0 +1,20 @@
+{
+	"runs": {
+		"/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple/build/base" : { 
+			"": 1
+		}
+	},
+	"comments": {
+		"project_name": "simple",
+		"project_path": "/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/simple",
+		"vocab_loc": "/data/user-home/srijoni/PIN_Tests/smartKT/parsers/comments/program_domain.csv",
+		"problem_domain_loc": "/data/user-home/srijoni/PIN_Tests/smartKT/PD_StockFish.txt"
+	},
+	"vcs": {
+		"username": "spandankumarsahu",
+		"oauth": "this_is_fake_oauth_using_real_one_in_server",
+		"repo": "glennrp/libpng",
+		"project_name": "libpng",
+		"fresh_fetch": true
+	}
+}

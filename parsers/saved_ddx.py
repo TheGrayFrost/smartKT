@@ -182,6 +182,8 @@ def emit_variable_data(filename, cnode, dnode) :
 	loc_info = try_getting_var_location(dnode)
 	if loc_info is not None and offset and loc_info[0] == 'offset' :
 		var_location = loc_info[1]
+	else:
+		return
 	# if loc_info is not None and address and loc_info[0] == 'address' :
 	# 	var_location = loc_info[1]
 
