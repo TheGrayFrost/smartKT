@@ -207,7 +207,7 @@ def UpdateCtree (cnode, filename=None, lineno=None, colno=None, outfile=None):
 			if match is not None:
 				# if DEBUG:
 				# 	print ('FOUND ', cloc, cnode.attrib['spelling'], match.attrib['id'])
-				if cnode.tag in Variables: # Add offset for variables.
+				if cnode.tag in Variables: # Add offset / address for variables.
 					result = patch_offset(cnode, match)
 					if result :
 						cnode.set('isDef', 'True')

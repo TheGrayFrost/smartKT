@@ -45,12 +45,11 @@ def remap(file_name, field_ids, id_map, delim='\t') :
     os.replace(tmpf.name, file_name) # replace original with the created temporary
 
 def remap_tree(tree, id_map) :
-
-    root = tree.getroot()
     """
     Performs the same job as remap(), but for an XML element tree.
     Again, "dangling" (unseen) IDs in the tree are left unchanged.
     """
+    root = tree.getroot()
     for node in root.iter() :
         for id_tag in id_tags :
             if id_tag in node.attrib :
@@ -58,6 +57,8 @@ def remap_tree(tree, id_map) :
                 if node_id_tag_val in id_map : # If this ID can be translated...
                     node.attrib[id_tag] = str(id_map[node_id_tag_val]) # ... do it
 
+# makes a map of redundant nodes id -> original node id
+# and simultaneously deletes all duplicate nodes
 def make_id_map(xtree, DUMP_LOCATION):
 
     xroot = xtree.getroot()

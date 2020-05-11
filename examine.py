@@ -66,6 +66,9 @@ executable, test_input, execstrip = None, None, None
 origpath, project_name, outfolder = None, None, None
 foutfolder, dependencies = None, None
 
+# will create final static for an executable
+# and its linkage files: .calls, .funcargs, .offset, .address
+# in the exe_<executable> folder
 def combine_all_clang(depmap):
     CURFINALFILE = os.path.join(foutfolder, FINAL_FILE)
 
@@ -87,7 +90,7 @@ def combine_all_clang(depmap):
         os.system('mkdir -p ' + exeoutfolder)
         print ('\nGenerating info for ' + exenamestrip)
 
-        # generate dwarfdump and its xml for the so or the main executable
+        # generate dwarfdump xml for the so or the main executable
         os.system(os.path.join(PARSERS_FOLDER, DWARFTOOL)+' '+exe+' -q -o '+exestrip+DWARF_EXTENSION)
         print ('Created dwarfdump for ' + exenamestrip)
 
@@ -98,6 +101,8 @@ def combine_all_clang(depmap):
         if DEBUG:
             print(exestrip+DWARF_EXTENSION)
 
+        # traverse dwarfdump xml to create hashmap: source location -> ddxml node
+        # used for linkge with static xml
         ddx.address = True
         ddx.TraverseDtree(droot, [None]) # sets ddx.dtree_hashmap
 
@@ -125,13 +130,16 @@ def combine_all_clang(depmap):
             # collect clangs
             stree = ET.parse(combstrip + COMB_EXTENSION)
             sroot = stree.getroot()
+
+            # patch in the addresses from previously collected hashmap
             ddx.UpdateCtree (sroot)
             root.append(sroot)
 
         # link the addresses into the executables and emit the address files
         print ('Combined static info for ' + exenamestrip)
 
-        stree.write(exestrip+COMB_EXTENSION, encoding='utf-8')
+        curtree = ET.ElementTree(root)
+        curtree.write(exestrip+COMB_EXTENSION, encoding='utf-8')
         print ('Written combined clang for ' + exenamestrip)
         
         # create the address file in the exe/so's folder
@@ -155,7 +163,7 @@ def combine_all_clang(depmap):
 
         print ('Generated addresses for ' + exenamestrip)
 
-    # Merge the IDs of definitions over multiple translation units.
+    # Merge the defIDs of extern declarations over multiple translation units
     patched_xml = ddx.patch_external_def_ids(rootlist)
     mytree = ET.ElementTree(patched_xml)
 
@@ -200,7 +208,13 @@ def generate_static_info():
     def add_loaded_binaries(path):
         ls[path] = get_rec_deps(path)
 
+
     add_loaded_binaries(executable)
+
+    if DEBUG:
+        print ('LS: ')
+        for k, v in ls.items():
+            print (k, ':', v)
     
     orderls = [(executable, ls[executable])]
     os.system('ldd '+executable+' > ldd.info')
@@ -212,8 +226,12 @@ def generate_static_info():
                 if libloc in ls:
                     orderls.append((libloc, ls[libloc]))
     os.system('rm ldd.info')
+    
     if DEBUG:
-        print (orderls)
+        print ('ORDERLS: ')
+        for k, v in orderls:
+            print (k, ':', v)
+        exit()
 
     combine_all_clang(orderls)
 

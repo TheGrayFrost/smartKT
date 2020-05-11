@@ -8,12 +8,12 @@ set(CMAKE_CXX_FLAGS_DEBUG "-gdwarf-4")
 set(CMAKE_CXX_FLAGS "-std=c++17")
 
 # add the executable
-# add_library (B SHARED foo.cc)
-# add_library (A SHARED bar.cc)
-# target_link_libraries (A B)
-# add_library (C SHARED rand.cc)
-# add_executable (base base.cc)
-# target_link_libraries (base C A)
+add_library (B SHARED foo.cc)
+add_library (A SHARED bar.cc)
+target_link_libraries (A B)
+add_library (C SHARED rand.cc)
+add_executable (base base.cc)
+target_link_libraries (base C A)
 
 
-add_executable (random random.cc main.cc)
+# add_executable (random random.cc main.cc)

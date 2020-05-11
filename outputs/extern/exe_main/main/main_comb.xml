@@ -1,4 +1,4 @@
-<TranslationUnit>
+<EXECUTABLE binary="/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/extern/build/main"><TranslationUnit>
   <TemplateStubs>
     <CXXMethod access_specifier="Public" col="7" file="/usr/local/include/ostream" funcargs="int" id="300325032700" isDecl="True" lex_parent_id="302254383821" line="189" linkage_kind="external" linkage_name="_ZNSolsEi" mangled_name="_ZNSolsEi" range.end="[189:26]" range.start="[188:7]" ref_tmp="301604832200" return_type="std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;::__ostream_type &amp;" spelling="operator&lt;&lt;" storage_class="default_auto" type="std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;::__ostream_type &amp;(int)" usr="c:@N@std@S@basic_ostream&gt;#C#$@N@std@S@char_traits&gt;#C@F@operator&lt;&lt;#I#" visibility="default" />
     <FunctionDecl col="5" file="/usr/local/include/ostream" funcargs="basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;,const char *" id="302636580578" isDecl="True" lex_parent_id="300751041655" line="556" linkage_kind="external" linkage_name="_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc" mangled_name="_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc" range.end="[564:6]" range.start="[555:5]" ref_tmp="301265536352" return_type="basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;" spelling="operator&lt;&lt;" storage_class="default_auto" type="basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;(basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt; &amp;, const char *)" usr="c:@N@std@F@operator&lt;&lt;&lt;#$@N@std@S@char_traits&gt;#C&gt;#&amp;$@N@std@S@basic_ostream&gt;#C#S0_#*1C#" visibility="default" />
@@ -91,4 +91,4 @@
       </ReturnStmt>
     </CompoundStmt>
   </FunctionDecl>
-</TranslationUnit>
+</TranslationUnit></EXECUTABLE>
