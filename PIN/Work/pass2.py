@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+# To use:
+# python3 pass2.py <dump file> <output file>
+
 import sys
 from xml.etree.ElementTree import Element, SubElement
 from xml.etree import ElementTree as ET
@@ -100,17 +103,6 @@ with open(filename, 'r') as inf, open(outfile, 'w') as opf:
 	ctxt = None
 	para = []
 	for line in inf:
-		# t = line.split()
-		# u = t[t.index('TS')+1]
-		# rl = u.rfind('_')
-		# rid = int(u[rl+1:])
-		# if rid % 100 == 0:
-		# 	print (u, '\r', end='')
-		# if rid < 116417593:
-		# 	continue
-		# else:
-		# 	print(line)
-			# exit()
 		entry = to_xml(line)
 		if entry is not None:
 			u = entry.attrib['TS']

@@ -1,14 +1,14 @@
 {
 	"runs": {
-	    "/data/user-home/srijoni/PIN_Tests/smartKT/projects/mrfs/build/fstest1": { 
-                "" : 1 
-            },
-	    "/data/user-home/srijoni/PIN_Tests/smartKT/projects/mrfs/build/fstest2": {
-                "/data/user-home/srijoni/PIN_Tests/smartKT/projects/mrfs/test/mydump-34.backup" : 1
-            },
-            "/data/user-home/srijoni/PIN_Tests/smartKT/projects/mrfs/build/fstest3": {
-                "/data/user-home/srijoni/PIN_Tests/smartKT/projects/mrfs/test/test1.txt" : 3
-            }
+		"/data/user-home/srijoni/PIN_Tests/smartKT/projects/mrfs/build/fstest1": { 
+			"" : 1
+		},
+		"/data/user-home/srijoni/PIN_Tests/smartKT/projects/mrfs/build/fstest2": {
+			"/data/user-home/srijoni/PIN_Tests/smartKT/projects/mrfs/test/mydump-34.backup" : 1
+		},
+		"/data/user-home/srijoni/PIN_Tests/smartKT/projects/mrfs/build/fstest3": {
+			"/data/user-home/srijoni/PIN_Tests/smartKT/projects/mrfs/test/test1.txt" : 3
+		}
 	},
 	"comments": {
 		"project_name": "mrfs",

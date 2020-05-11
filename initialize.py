@@ -2,7 +2,6 @@
 
 # To use:
 # python3 initialize.py <path to project> [<optional output folder name>]
-# The last name in the path is assumed the project name
 
 import sys, os, pickle
 from xml.etree.ElementTree import Element, SubElement
@@ -89,7 +88,8 @@ def generate_static_info(path):
     os.system(' '.join(['parsers/' + PROJPARSER, os.path.join(outfolder, 'make_log.txt'),
                     os.path.join(path, 'build'), os.path.join(outfolder, 'dependencies.p')]))
 
-    dependencies = pickle.load(open(os.path.join(outfolder, 'dependencies.p'), 'rb'))
+    with open(os.path.join(outfolder, 'dependencies.p'), 'rb') as depf:
+        dependencies = pickle.load(depf)
     compile_instrs = dependencies['compile_instrs']
 
     # for num, instr in enumerate(instrs, 1):

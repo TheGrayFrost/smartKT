@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+
+# To use:
+# python3 MergeAllCommentsXML.py <project_folder> <output_folder> <output_file>
+
 import os
 import sys
 from os.path import join as PJOIN

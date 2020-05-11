@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-# Before you can use, specify the details in config.txt file
 # To use:
 # python3 examine.py <json_file>
+# sample_runs.json is provided for reference
 
 '''
 Dynamic information is available for executables only. So we combine all static
@@ -19,8 +19,7 @@ import json
 
 import parsers.imp_ddx as ddx
 import parsers.vcs as vcs
-
-from parsers.uniquify import uniquify
+import parsers.uniquify as uniq
 
 # For debug, set true
 DEBUG = False
@@ -39,14 +38,16 @@ OFFSET_EXTENSION = '.offset'
 ADDRESS_EXTENSION = '.address'
 SYMTAB_EXTENSION = '.symtab'
 TEMP_EXTENSION = '.temp.xml'
+ID_MAP_EXTENSION = '_idmap.p'
 FINAL_FILE = 'final'
 STATIC_EXTENSION = '_static.xml'
 DYNAMIC_EXTENSION = '_dynamic.xml'
-COMMENTS_EXTENSION = "_comments.xml"
-VCS_EXTENSION = "_vcs.xml"
+COMMENTS_EXTENSION = '_comments.xml'
+VCS_EXTENSION = '_vcs.xml'
 
 # FOLDERS
-COMMENTS_FOLDER = os.path.join('parsers', 'comments')
+PARSERS_FOLDER = 'parsers'
+COMMENTS_FOLDER = os.path.join(PARSERS_FOLDER, 'comments')
 PROJECTS_FOLDER = 'projects'
 OUTPUTS_FOLDER = 'outputs'
 
@@ -56,7 +57,7 @@ if len(sys.argv) > 2:
 # DOMAINS TO RUN
 CALLSTATIC = True
 CALLDYN = True
-CALLCOMM = False
+CALLCOMM = True
 CALLVCS = False
 
 
@@ -87,14 +88,15 @@ def combine_all_clang(depmap):
         print ('\nGenerating info for ' + exenamestrip)
 
         # generate dwarfdump and its xml for the so or the main executable
-        os.system('parsers/'+DWARFTOOL+' '+exe+' -q -o '+exestrip+DWARF_EXTENSION)
+        os.system(os.path.join(PARSERS_FOLDER, DWARFTOOL)+' '+exe+' -q -o '+exestrip+DWARF_EXTENSION)
         print ('Created dwarfdump for ' + exenamestrip)
 
         # create map from the dwarf xml
         dtree = ET.parse(exestrip+DWARF_EXTENSION)
         droot = dtree.getroot()
 
-        # print(exestrip+DWARF_EXTENSION)
+        if DEBUG:
+            print(exestrip+DWARF_EXTENSION)
 
         ddx.address = True
         ddx.TraverseDtree(droot, [None]) # sets ddx.dtree_hashmap
@@ -129,9 +131,6 @@ def combine_all_clang(depmap):
         # link the addresses into the executables and emit the address files
         print ('Combined static info for ' + exenamestrip)
 
-        # xmlstr = minidom.parseString(ET.tostring(root)).toprettyxml(indent='   ')
-        # with open(exestrip+COMB_EXTENSION, 'w') as f:
-        #     f.write(xmlstr)
         stree.write(exestrip+COMB_EXTENSION, encoding='utf-8')
         print ('Written combined clang for ' + exenamestrip)
         
@@ -141,29 +140,36 @@ def combine_all_clang(depmap):
 
         rootlist.append(root)
 
-        if numexe == 0: # need to add addresses from readelf
+        # need to add addresses for external variables in mainexe
+        # gets the symbol table from readelf as .symtab
+        # runs an awk script to replace unknown addresseses in .address file
+        if numexe == 0: 
             os.system('mv ' + exestrip+ADDRESS_EXTENSION + ' ' + exestrip+'.temp'+ADDRESS_EXTENSION)
             os.system('readelf -sW '+exe+' | grep "OBJECT">'+exestrip+SYMTAB_EXTENSION)
             os.system('awk -f merge ' + exestrip+SYMTAB_EXTENSION + ' FS="\t" ' + \
                         exestrip+'.temp'+ADDRESS_EXTENSION + ' > ' + exestrip+ADDRESS_EXTENSION)
         
+        # take a note of all .address files for later updation during uniq
         address_files.append(exestrip+ADDRESS_EXTENSION)
         os.system('cp ' + exestrip + ADDRESS_EXTENSION + ' ' + foutfolder+'/')
 
         print ('Generated addresses for ' + exenamestrip)
-        
+    
+    # patch all extern declarations to correct def_id
     patched_xml = ddx.patch_external_def_ids(rootlist)
-
-    # finalxmlstr = minidom.parseString(ET.tostring(patched_xml)).toprettyxml(indent='   ')
-    # with open(CURFINALFILE + STATIC_EXTENSION, 'w') as f:
-    #     f.write(finalxmlstr)
     mytree = ET.ElementTree(patched_xml)
+    
+    # make id's unique in patched_xml
+    id_map = uniq.make_id_map(mytree, CURFINALFILE+ID_MAP_EXTENSION)    
+    uniq.remap_tree(mytree, id_map)
+
+    # write out the file
     mytree.write(CURFINALFILE+STATIC_EXTENSION, encoding='utf-8')
-
-    uniquify(CURFINALFILE, STATIC_EXTENSION, CALL_EXTENSION,
-        SIGN_EXTENSION, OFFSET_EXTENSION, address_files)
-
     print ('\nWritten interlinked combined clang for ' + executable)
+
+    # update all the .calls, .funcargs, .offset & .address files
+    uniq.uniquify(CURFINALFILE, CALL_EXTENSION, SIGN_EXTENSION, OFFSET_EXTENSION, address_files, id_map)
+    print ('Updated all linkage files\n')
 
         
 def generate_static_info():
@@ -226,14 +232,24 @@ def generate_comments_info(project_name, project_path, vocab_file, problem_domai
     print('Starting Comments!')
 
     # Need to use the exact source locations because comments' location gets mangled
-    os.system('python3 '+ os.path.join(COMMENTS_FOLDER, "GenerateCommentsXMLForAFolder.py") + \
-        " " + os.path.abspath(project_path) + " " \
-        " " + os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name)) + " " + vocab_file + \
-        " " + problem_domain_file + " " + project_name)
+    abspp = os.path.abspath(project_path)
+    absop = os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name))
+    os.system(' '.join([os.path.join(COMMENTS_FOLDER, 'GenerateCommentsXMLForAFolder.py'),
+                abspp, absop, vocab_file, problem_domain_file, project_name]))
 
-    os.system('python3 ' + os.path.join(COMMENTS_FOLDER, "MergeAllCommentsXML.py") + " " + \
-        os.path.abspath(project_path) + " " + \
-        os.path.abspath(os.path.join(OUTPUTS_FOLDER, project_name)) + "  " + output_file)
+    os.system(' '.join([os.path.join(COMMENTS_FOLDER, 'MergeAllCommentsXML.py'), 
+                abspp, absop, output_file]))
+    
+    # uniquify all address in comments xml
+    CURFINALFILE = os.path.join(foutfolder, FINAL_FILE)
+    with open(CURFINALFILE+ID_MAP_EXTENSION, 'rb') as mapf:
+        id_map = pickle.load(mapf)
+    comtree = ET.parse(output_file)
+    uniq.remap_tree(comtree, id_map)
+
+    # write out the file
+    comtree.write(output_file, encoding='utf-8')
+    print ('\nWritten id remapped final comments xml:', output_file)
     print('Comments Done!')
 
 def start_website():
@@ -269,7 +285,7 @@ def collect_results(project_name, executable):
     print ('Information collected in: ', colpath)
 
 
-jsonInfo = json.loads(open(sys.argv[1], "r").read())
+jsonInfo = json.loads(open(sys.argv[1], 'r').read())
 
 runs = jsonInfo['runs']
 for exe in runs:
@@ -294,8 +310,8 @@ for exe in runs:
                 generate_dynamic_info(executable, ti, idx, runs[exe][ti])
             else:
                 generate_dynamic_info(executable, None, idx, runs[exe][ti])
-            os.system("mv " + os.path.join(foutfolder, "final_dynamic.xml") + " " + \
-                os.path.join(foutfolder, "final_dynamic_" + str(idx) + ".xml"))
+            os.system('mv ' + os.path.join(foutfolder, 'final_dynamic.xml') + ' ' +
+                os.path.join(foutfolder, 'final_dynamic_' + str(idx) + '.xml'))
 
 if CALLCOMM:
     # comments_config

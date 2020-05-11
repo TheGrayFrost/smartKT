@@ -1,25 +1,17 @@
 #!/usr/bin/env python3
 
 import os
-import sys
 import tempfile
+import pickle as pkl
 
-from xml.etree.ElementTree import Element, SubElement
-from xml.etree import ElementTree as ET
-from xml.dom import minidom
-from collections import defaultdict
+# from xml.etree.ElementTree import Element, SubElement
+# from xml.etree import ElementTree as ET
 
-id_tags = {
-    "id", "lex_parent_id", "sem_parent_id", "def_id", "ref_id", "ref_tmp"}
-
-# setting it here for running on server
-# as /tmp on server is mount point for a different storage media
-# leads to failure during cross-device link creation
-tempfile.tempdir = os.getcwd()
+id_tags = {'id', 'lex_parent_id', 'sem_parent_id', 'def_id', 'ref_id', 'ref_tmp'}
 
 def remap(file_name, field_ids, id_map, delim='\t') :
-    with open(file_name, "r") as input_file, \
-        tempfile.NamedTemporaryFile(mode="w", delete=False) as tmpf :
+    with open(file_name, 'r') as input_file, \
+        tempfile.NamedTemporaryFile(mode='w', delete=False) as tmpf :
 
         header = input_file.readline().strip()
         print(header, file=tmpf)
@@ -41,22 +33,18 @@ def remap(file_name, field_ids, id_map, delim='\t') :
     os.replace(tmpf.name, file_name)
 
 def remap_tree(tree, id_map) :
-    for node in tree.iter() :
+
+    root = tree.getroot()
+    for node in root.iter() :
         for id_tag in id_tags :
             if id_tag in node.attrib :
                 node_id_tag_val = int(node.attrib[id_tag])
                 if node_id_tag_val in id_map :
                     node.attrib[id_tag] = str(id_map[node_id_tag_val])
 
+def make_id_map(xtree, DUMP_LOCATION):
 
-def uniquify(CURFINALFILE, STATIC_EXTENSION, CALL_EXTENSION,
-        SIGN_EXTENSION, OFFSET_EXTENSION, ADDRESS_FILES ) :
-
-    input_filename = CURFINALFILE + STATIC_EXTENSION
-
-    xtree = ET.parse(input_filename)
     xroot = xtree.getroot()
-
     node_map = dict()
     id_map = dict()
 
@@ -72,13 +60,13 @@ def uniquify(CURFINALFILE, STATIC_EXTENSION, CALL_EXTENSION,
 
         duplicate_node = False
 
-        if "id" in node.attrib and len(node) == 0 :
-            node_id = int(node.attrib["id"])
+        if 'id' in node.attrib and len(node) == 0 :
+            node_id = int(node.attrib['id'])
 
             kvpairs = { key: value
                     for key, value in node.attrib.items()
                     if key not in id_tags }
-            kvpairs["tag"] = node.tag
+            kvpairs['tag'] = node.tag
             node_data = tuple( sorted( kvpairs.items() ) )
 
             duplicate_node = node_data in node_map
@@ -90,18 +78,20 @@ def uniquify(CURFINALFILE, STATIC_EXTENSION, CALL_EXTENSION,
 
     traverse(xroot, None)
 
+    with open(DUMP_LOCATION, 'wb') as mapf:
+        pkl.dump(id_map, mapf)
+
+    return id_map
+
+def uniquify(CURFINALFILE, CALL_EXTENSION, SIGN_EXTENSION, OFFSET_EXTENSION, ADDRESS_FILES, id_map) :
+    # setting it here as cwd for running on server
+    # as /tmp on server is mount point for a different storage media
+    # leads to failure during cross-device link creation
+    tempfile.tempdir = os.getcwd()
+
     remap(CURFINALFILE + CALL_EXTENSION, {3}, id_map)
     remap(CURFINALFILE + SIGN_EXTENSION, {1}, id_map)
     remap(CURFINALFILE + OFFSET_EXTENSION, {4, 7}, id_map)
 
     for address_file in ADDRESS_FILES :
         remap(address_file, {2, 5}, id_map)
-
-    remap_tree(xroot, id_map)
-
-    output = ET.tostring(xroot)
-    output = minidom.parseString(output).toprettyxml(indent='', newl='')
-
-    with tempfile.NamedTemporaryFile(mode="w", delete=False) as tmpf :
-        print(output, file=tmpf)
-    os.replace(tmpf.name, input_filename)

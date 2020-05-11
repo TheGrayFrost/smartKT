@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+
+# To use:
+# python3 GenerateCommentsXMLForAFile.py <source_file> <output_file> <vocab_file> 
+# <problem_domain_file> <project_name>
+
 import sys
 import re
 import glob

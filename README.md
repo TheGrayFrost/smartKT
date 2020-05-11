@@ -13,11 +13,18 @@ Note: For the `testsuite` the runs.json have been placed in the folder itself (e
 
 # DEPENDENCIES
 
+Compiler
 1. gcc >= 8: https://gcc.gnu.org/gcc-8/
 2. g++ >= 8: https://packages.ubuntu.com/bionic/g++-8
-3. python >= 3.6: https://www.python.org/downloads/
-4. clang >= 9: https://releases.llvm.org/download.html
-5. libxml2-dev: http://xmlsoft.org/downloads.html
+
+C/C++ libraries
+1. clang >= 9: https://releases.llvm.org/download.html
+2. libxml2-dev: http://xmlsoft.org/downloads.html
+
+Python:
+1. python >= 3.6: https://www.python.org/downloads/
+2. pyelftools
+3. pygithub
 
 # EXPECTED PROJECT ATTRIBUTES
 
