@@ -154,20 +154,22 @@ def combine_all_clang(depmap):
         os.system('cp ' + exestrip + ADDRESS_EXTENSION + ' ' + foutfolder+'/')
 
         print ('Generated addresses for ' + exenamestrip)
-    
-    # patch all extern declarations to correct def_id
+
+    # Merge the IDs of definitions over multiple translation units.
     patched_xml = ddx.patch_external_def_ids(rootlist)
     mytree = ET.ElementTree(patched_xml)
-    
-    # make id's unique in patched_xml
-    id_map = uniq.make_id_map(mytree, CURFINALFILE+ID_MAP_EXTENSION)    
+
+    # get id's unique in patched_xml
+    id_map = uniq.make_id_map(mytree, CURFINALFILE+ID_MAP_EXTENSION)
+    # Now we update the XML tree itself, to store the new IDs instead of the old ones
     uniq.remap_tree(mytree, id_map)
 
     # write out the file
     mytree.write(CURFINALFILE+STATIC_EXTENSION, encoding='utf-8')
     print ('\nWritten interlinked combined clang for ' + executable)
 
-    # update all the .calls, .funcargs, .offset & .address files
+    # Uniquify nodes and update the identifiers and the pointers in
+    # all static files using the same mapping. See parsers/uniquify.py for details.
     uniq.uniquify(CURFINALFILE, CALL_EXTENSION, SIGN_EXTENSION, OFFSET_EXTENSION, address_files, id_map)
     print ('Updated all linkage files\n')
 
