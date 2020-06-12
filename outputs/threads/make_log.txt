@@ -11,13 +11,13 @@ Scanning dependencies of target thread
 make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build'
 make -f CMakeFiles/thread.dir/build.make CMakeFiles/thread.dir/build
 make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build'
-[ 33%] Building CXX object CMakeFiles/thread.dir/main.cpp.o
-/opt/rh/devtoolset-8/root/usr/bin/c++    -std=c++17 -gdwarf-4   -o CMakeFiles/thread.dir/main.cpp.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp
-[ 66%] Building CXX object CMakeFiles/thread.dir/try.cpp.o
-/opt/rh/devtoolset-8/root/usr/bin/c++    -std=c++17 -gdwarf-4   -o CMakeFiles/thread.dir/try.cpp.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp
+[ 33%] Building CXX object CMakeFiles/thread.dir/try.cpp.o
+/opt/rh/devtoolset-8/root/usr/bin/c++    -std=c++17 -g   -o CMakeFiles/thread.dir/try.cpp.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp
+[ 66%] Building CXX object CMakeFiles/thread.dir/main.cpp.o
+/opt/rh/devtoolset-8/root/usr/bin/c++    -std=c++17 -g   -o CMakeFiles/thread.dir/main.cpp.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp
 [100%] Linking CXX executable thread
 /usr/bin/cmake3 -E cmake_link_script CMakeFiles/thread.dir/link.txt --verbose=1
-/opt/rh/devtoolset-8/root/usr/bin/c++  -std=c++17 -gdwarf-4  -L/usr/lib64/mysql -L/usr/lib64/ -rdynamic CMakeFiles/thread.dir/main.cpp.o CMakeFiles/thread.dir/try.cpp.o  -o thread -lpthread 
+/opt/rh/devtoolset-8/root/usr/bin/c++  -std=c++17 -g  -L/usr/lib64/mysql -L/usr/lib64/ -rdynamic CMakeFiles/thread.dir/main.cpp.o CMakeFiles/thread.dir/try.cpp.o  -o thread -lpthread 
 make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build'
 [100%] Built target thread
 make[1]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/build'

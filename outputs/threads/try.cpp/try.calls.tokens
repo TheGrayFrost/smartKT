@@ -1,0 +1,7 @@
+# FILENAME	LOCATION	FUNCNAME	CALLNODEID	CALLEXPR
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	6:17::6:21	_ZN15pthread_mutex_tC1Ev	101200570889	lock
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	10:2::10:55	printf	100885868237	printf( "\n Came here with arg = %d\n" , * ( ( int * ) arg ) ) 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	12:5::12:30	pthread_mutex_lock	102249816022	pthread_mutex_lock( & lock ) 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	14:5::14:47	printf	101715166458	printf( "\n Job %d has started\n" , counter ) 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	16:5::16:48	printf	104004240141	printf( "\n Job %d has finished\n" , counter ) 
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/try.cpp	17:5::17:32	pthread_mutex_unlock	102248370290	pthread_mutex_unlock( & lock ) 

@@ -7,6 +7,18 @@ import os, sys
 dep = pckl.load(open(sys.argv[1], 'rb'))
 # , src, obj)
 
+for k, v in dep.items():
+	print (k)
+	if isinstance(v, set):
+		for u in v:
+			print ('\t', u)
+	elif isinstance(v, dict):
+		for u in v.items():
+			print ('\t', u)
+	else:
+		print ('\t', v)
+
+exit()
 
 cins = dep
 
@@ -69,13 +81,6 @@ os.system(' '.join(['parsers/ast2xml', str(241), f, mainfname+'.ast',
 print('output :' + stripop + CLANG_EXTENSION + '\n')
 print('output :' + stripop + CALL_TEMP_EXTENSION + '\n')
 
-# for k, v in dep.items():
-# 	print (k)
-# 	if (isinstance(v, set)):
-# 		for u in v:
-# 			print ('\t'+u)
-# 	else:
-# 		print ('\t'+v)
 
 # print (src)
 # print ('\n\n\n')

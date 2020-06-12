@@ -1,14 +1,15 @@
 # FILENAME	FUNCNODEID	FUNCNAME	NARGS	ARGTYPE*	RETTYPE
-/usr/local/include/ostream	103909706370	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	3	basic_ostream<char	 std::char_traits<char> > &	const char *	basic_ostream<char, std::char_traits<char> > &
-/usr/local/include/ostream	100354865330	_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_	2	basic_ostream<char	 std::char_traits<char> > &	basic_ostream<char, std::char_traits<char> > &
-/usr/local/include/ostream	103486117430	_ZNSolsEPFRSoS_E	3	std::basic_ostream<char	 std::char_traits<char> >::__ostream_type &(*)(std::basic_ostream<char	 std::char_traits<char> >::__ostream_type &)	std::basic_ostream<char, std::char_traits<char> >::__ostream_type &
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	100972094748	_ZN1A1fEv	1		void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	101825150878	_ZN1A1gEv	1		void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	102891113318	_ZN1A1hEv	1		void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	101119369156	_ZN1B1fEv	1		void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	103485615050	_ZN1B1gEv	1		void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	102003607477	_ZN1B1hEv	1		void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	101878184736	_ZN1C1fEv	1		void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	102146798241	_ZN1C1gEv	1		void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	102951525012	_ZN1C1hEv	1		void
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	101181696778	main	1		int
+/usr/local/include/ostream	100295850392	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	3	basic_ostream<char	 std::char_traits<char> > &	const char *	basic_ostream<char, std::char_traits<char> > &
+/usr/local/include/ostream	102842173392	_ZNSolsEPFRSoS_E	3	std::basic_ostream<char	 std::char_traits<char> >::__ostream_type &(*)(std::basic_ostream<char	 std::char_traits<char> >::__ostream_type &)	std::basic_ostream<char, std::char_traits<char> >::__ostream_type &
+/usr/local/include/ostream	103294475712	_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_	2	basic_ostream<char	 std::char_traits<char> > &	basic_ostream<char, std::char_traits<char> > &
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	103639572700	_ZN1CC1Ev	0		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	100152986143	_ZN1A1fEv	0		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	103636694675	_ZN1A1gEv	0		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	101768937532	_ZN1A1hEv	0		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	102501690000	_ZN1B1fEv	0		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	101187761941	_ZN1B1gEv	0		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	101568799769	_ZN1B1hEv	0		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	100711834064	_ZN1C1fEv	0		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	103781309729	_ZN1C1gEv	0		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	102152537697	_ZN1C1hEv	0		void
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp	100815725903	main	0		int

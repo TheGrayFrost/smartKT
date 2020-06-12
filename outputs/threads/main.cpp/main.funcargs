@@ -1,9 +1,9 @@
 # FILENAME	FUNCNODEID	FUNCNAME	NARGS	ARGTYPE*	RETTYPE
-/usr/include/pthread.h	103800472036	pthread_join	2	pthread_t	void **	int
-/usr/include/string.h	103936728013	strerror	1	int	char *
-/usr/include/pthread.h	103890106301	pthread_mutex_destroy	1	pthread_mutex_t *	int
-/usr/include/pthread.h	101562360159	pthread_mutex_init	2	pthread_mutex_t *	const pthread_mutexattr_t *	int
-/usr/include/stdio.h	101349885672	printf	1	const char *__restrict	int
-/usr/include/pthread.h	100855275212	pthread_create	4	pthread_t *__restrict	const pthread_attr_t *__restrict	void *(*)(void *)	void *__restrict	int
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	100188559292	_Z7trythisPv	1	void *	void *
-/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	103347705612	main	1		int
+/usr/include/pthread.h	203395589027	pthread_mutex_destroy	1	pthread_mutex_t *	int
+/usr/include/string.h	204155431052	strerror	1	int	char *
+/usr/include/pthread.h	201601203582	pthread_join	2	pthread_t	void **	int
+/usr/include/pthread.h	201176690678	pthread_mutex_init	2	pthread_mutex_t *	const pthread_mutexattr_t *	int
+/usr/include/stdio.h	202071791062	printf	1	const char *__restrict	int
+/usr/include/pthread.h	201551905049	pthread_create	4	pthread_t *__restrict	const pthread_attr_t *__restrict	void *(*)(void *)	void *__restrict	int
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	203938129514	_Z7trythisPv	1	void *	void *
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	202858287580	main	0		int

@@ -11,10 +11,8 @@
 
 // major things left to do:
 // 1. try making lock_func_af work using IPOINT_BEFORE on return
-// 2. tracing mallocs, callocs and reallocs
-// 3. tracing non-primitive return values and call arguments
-// 4. simplify the undecoration thing for funcinfomap
-// 5. do the undecoration thing for everything
+// 2. tracing reallocs
+// 3. simplify the undecoration thing for funcinfomap
 
 /* GLOBALS */
 
@@ -39,7 +37,7 @@ std::map <std::string, std::map<int, std::map<std::string, std::set<std::string>
 PIN_LOCK globalLock;
 
 // event globals
-std::string runid;				// runid passed from examine. prepended to timestamps to make unique.
+std::string runid;				// runid passed from examine. prepended to timestamps to make unique
 long long int timeStamp = 0;	// global event timestep
 std::ofstream outp;				// file to write to
 
@@ -54,7 +52,7 @@ std::map <std::string, std::map<THREADID, int>> invMap;
 // vs stack memory accesses from other functions (non-local) eg: local variables passed via pointers
 // see findVar for more details on this
 std::map <THREADID, std::vector <fnlog>> invstack;
-// to trace locks: thread -> <lock address, mutex type>
+// to trace locks: thread -> <lock address, lock type>
 std::map <THREADID, std::map<ADDRINT, ADDRINT>> syncs;
 std::string unlocks[] = {"MUTEX", "SEMAPHORE", "READLOCK", "WRITELOCK"};// lock names
 
@@ -376,7 +374,7 @@ VOID printval (ADDRINT * arg, std::string type)
 
 /* FUNCTION INVOCATION AND RETURN ANALYSIS CALLBACKS */
 
-// funcation call event handler
+// function call event handler
 // count: number of arguments of function called
 // ...: variable sized list of argument values
 VOID callP (THREADID tid, ADDRINT ina, int count, ...)
@@ -801,7 +799,7 @@ VOID init(std::string inp, std::string runid, std::string locf)
 	// Emit the runid, exe info
 	outp << "DYNAMICTRACE INP " << inp << " RUNID " << runid << " EXE " << locf << "\n";
 
-	// parse the offset file
+	// parse the offset file to fill funcLocalMap
 	// HEADER: FILENAME FUNCTION OFFSET VARNAME VARID VARTYPE VARSIZE PARENTID
 	{
 		std::string filename, funcname, ignore;
@@ -832,7 +830,7 @@ VOID init(std::string inp, std::string runid, std::string locf)
 			var.patch();
 
 			funcname = undec(funcname);
-			// add this information to funcLocalMap
+			// add this information to funcLocalMap, if it wasn't present before
 			if (fnfreeze.count(funcname) == 0)
 				fnfreeze[funcname] = filename;
 			if (filename == fnfreeze[funcname])
@@ -842,11 +840,11 @@ VOID init(std::string inp, std::string runid, std::string locf)
 		// close the file
 		offFile.close();
 
-		// if (DEBUG)
+		if (DEBUG)
 			printfLocal();
 	}
 
-	// parse the arg file
+	// parse the arg file to fill funcinfoMap
 	// HEADER: FILENAME FUNCNODEID FUNCNAME NARGS ARGTYPE* RETTYPE
 	{
 		std::string filename, ftempname, funcname, vartype, ignore, fnodeid;
@@ -902,11 +900,11 @@ VOID init(std::string inp, std::string runid, std::string locf)
 		// close the file
 		argFile.close();
 
-		// if (DEBUG)
+		if (DEBUG)
 			printfInfo();
 	}
 
-	// parse the call file
+	// parse the call file to fill funccallMap
 	// HEADER: FILENAME LOCATION FUNCNAME CALLNODEID FILENAME LOCATION FUNCNAME CALLNODEID
 	{
 		std::string filename, funcname, callsig, ignore, cnodeid;
@@ -967,7 +965,7 @@ VOID ImageLoad(IMG img, VOID *v)
 	if (addrFile.good())
 		std::getline (addrFile, ignore);
 
-
+	// parse .address file to fill globalMap
 	// HEADER: ADDRESS VARNAME VARID VARTYPE VARSIZE PARENTID VARCLASS [VARCONTAINER]
 	while (addrFile.good())
 	{

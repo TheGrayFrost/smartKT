@@ -17,7 +17,7 @@ runid=$3
 cp $1 PIN/Work/$exe.out					# copy executable to pin folder
 rm -rf PIN/Work/statinfo/
 mkdir PIN/Work/statinfo/
-# copy the static results into pin folder
+# copy the static linakge files into pin folder
 find $2 -maxdepth 1 -type f -regex ".*\.\(calls.tokens\|funcargs\|offset\|address\)" -exec cp -t PIN/Work/statinfo/ {} +
 
 if [ $# -eq 5 ]
@@ -35,7 +35,7 @@ makerun()
 	local i=$1
 	make inp="$inp" run=$i exe=$exe $exe.dump		# create the dump
 	python pass2.py ${exe}_$i.dump	dynamic_$i.xml	# add dump info to xml
-	cp ${exe}_$i.dump $2							# copy back the dump
+	cp ${exe}_$i.dump $2							# copy back the output folder
 }
 
 typeset -i i

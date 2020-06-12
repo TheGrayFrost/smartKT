@@ -57,7 +57,7 @@ if len(sys.argv) > 2:
 # DOMAINS TO RUN
 CALLSTATIC = True
 CALLDYN = True
-CALLCOMM = False
+CALLCOMM = True
 CALLVCS = False
 
 
@@ -112,6 +112,11 @@ def combine_all_clang(depmap):
             root = Element('EXECUTABLE')
         root.set('binary', exe)
 
+        # prepare to collect: calls, signs and offset information
+        for EXT in [CALL_EXTENSION, SIGN_EXTENSION, OFFSET_EXTENSION]:
+            os.system('> ' + exestrip+EXT)
+        locHeaderWrite = [False, False, False]
+
         # iterate over the source files creating the binary
         for file in flist:
             relpath = file[len(origpath)+1:]
@@ -124,7 +129,11 @@ def combine_all_clang(depmap):
                 if not headerWrite[num]:
                     headerWrite[num] = True
                     os.system('head -n 1 ' + combstrip + EXT + ' >> ' + CURFINALFILE + EXT)
+                if not locHeaderWrite[num]:
+                    locHeaderWrite[num] = True
+                    os.system('head -n 1 ' + combstrip + EXT + ' >> ' + exestrip + EXT)
                     # print ('hwritten')
+                os.system('tail -n +2 ' + combstrip + EXT + ' >> ' + exestrip + EXT)
                 os.system('tail -n +2 ' + combstrip + EXT + ' >> ' + CURFINALFILE + EXT)
 
             # collect clangs
@@ -208,14 +217,13 @@ def generate_static_info():
     def add_loaded_binaries(path):
         ls[path] = get_rec_deps(path)
 
-
     add_loaded_binaries(executable)
 
     if DEBUG:
         print ('LS: ')
         for k, v in ls.items():
             print (k, ':', v)
-    
+
     orderls = [(executable, ls[executable])]
     os.system('ldd '+executable+' > ldd.info')
     with open('ldd.info', 'r') as f:

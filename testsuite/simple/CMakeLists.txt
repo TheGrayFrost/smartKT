@@ -5,7 +5,7 @@ project(simple CXX)
 # set(CMAKE_CXX_COMPILER "/opt/rh/devtoolset-8/root/usr/bin/c++")
 set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_CXX_FLAGS_DEBUG "-gdwarf-4")
-set(CMAKE_CXX_FLAGS "-std=c++17")
+set(CMAKE_CXX_FLAGS "-std=c++11")
 
 # add the executable
 add_library (B SHARED foo.cc)

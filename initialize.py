@@ -11,7 +11,7 @@ from xml.dom import minidom
 from concurrent.futures import ThreadPoolExecutor
 from parsers.funcs import emit_funcargs
 
-DEBUG = True
+DEBUG = False
 
 MAX_WORKERS = 8
 

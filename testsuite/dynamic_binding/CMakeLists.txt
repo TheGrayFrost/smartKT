@@ -5,7 +5,7 @@ project(dynamic_binding CXX)
 
 
 set(CMAKE_BUILD_TYPE Debug)
-set(CMAKE_CXX_FLAGS_DEBUG "-gdwarf-4")
+set(CMAKE_CXX_FLAGS_DEBUG "-g")
 
 
 # add the executable

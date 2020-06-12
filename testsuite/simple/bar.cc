@@ -7,7 +7,7 @@ int foo();
 
 int foo()
 {
-	int x, r;
+	int x = 1, r = 9;
 	std::cout << "Inside bar's foo()\n";
 	std::cout << "Seeing z = " << z << "\n";
 	return z;

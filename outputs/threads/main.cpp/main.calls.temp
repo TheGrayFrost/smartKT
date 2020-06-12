@@ -1,0 +1,9 @@
+# FILENAME	LOCATION	FUNCNAME	CALLNODEID
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	22:9::22:40	pthread_mutex_init	202984703959
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	23:9::23:45	printf	200110654593
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	30:17::30:75	pthread_create	202162312577
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	32:13::32:72	printf	200370152434
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	32:56::32:71	strerror	202686020927
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	36:5::36:31	pthread_join	200100957884
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	37:5::37:31	pthread_join	201493107988
+/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/threads/main.cpp	38:5::38:33	pthread_mutex_destroy	202266150159

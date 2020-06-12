@@ -12,10 +12,10 @@ make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/
 make -f CMakeFiles/dynamic.dir/build.make CMakeFiles/dynamic.dir/build
 make[2]: Entering directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/build'
 [ 50%] Building CXX object CMakeFiles/dynamic.dir/dynamic.cpp.o
-/opt/rh/devtoolset-8/root/usr/bin/c++    -gdwarf-4   -o CMakeFiles/dynamic.dir/dynamic.cpp.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp
+/opt/rh/devtoolset-8/root/usr/bin/c++    -g   -o CMakeFiles/dynamic.dir/dynamic.cpp.o -c /data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/dynamic.cpp
 [100%] Linking CXX executable dynamic
 /usr/bin/cmake3 -E cmake_link_script CMakeFiles/dynamic.dir/link.txt --verbose=1
-/opt/rh/devtoolset-8/root/usr/bin/c++  -gdwarf-4  -L/usr/lib64/mysql -L/usr/lib64/ -rdynamic CMakeFiles/dynamic.dir/dynamic.cpp.o  -o dynamic 
+/opt/rh/devtoolset-8/root/usr/bin/c++  -g  -L/usr/lib64/mysql -L/usr/lib64/ -rdynamic CMakeFiles/dynamic.dir/dynamic.cpp.o  -o dynamic 
 make[2]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/build'
 [100%] Built target dynamic
 make[1]: Leaving directory `/data/user-home/srijoni/PIN_Tests/smartKT/testsuite/dynamic_binding/build'
