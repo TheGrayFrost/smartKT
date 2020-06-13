@@ -85,32 +85,24 @@ def make_id_map(xtree, DUMP_LOCATION):
         for child in cross_set :
             node.remove(child)
 
-        duplicate_node = False
-        # set true if this node, and all of its descendants can be removed.
+        node_id = int(node.attrib['id']) if 'id' in node.attrib else 0
 
-        if 'id' in node.attrib and len(node) == 0 : # All subtrees have been removed.
-            node_id = int(node.attrib['id'])
+        if node_id == 0 : # Early terminate for nodes which can't be removed
+            return False
 
-            kvpairs = { key: value
-                    for key, value in node.attrib.items()
+        kvpairs = { key: value for (key, value) in node.attrib.items()
                     if key not in id_tags }
-            kvpairs['tag'] = node.tag
-            node_data = tuple( sorted( kvpairs.items() ) )
-            # node_data is a hashable, sorted tuple of key-value pairs, which
-            # forms the content of current node. This is used to determine
-            # if some future node is duplicate.
+        kvpairs['tag'] = node.tag
+        content = tuple( sorted( kvpairs.items() ) )
 
-            duplicate_node = node_data in node_map # The content is not new.
+        # this is set true if this node is duplicated and is a leaf,
+        # and hence all of its descendants have been removed
+        duplicate_node = ( len(node) == 0 ) and (content in node_map)
 
-            if not duplicate_node : # The content is new, so we update our tables.
-                node_map[ node_data ] = node_id
-
-            id_map[ node_id ] = node_map[ node_data ]
-            # Map this node id to some node ID having the same content, possibly self.
-        # ...
-        # else: there is some descendant with previously unseen data,
-        # that is specific to this translation unit's version of the syntax node,
-        # so we can't remove it from its parent.
+        if content not in node_map :
+            # The content is new, so we update our tables.
+            node_map[ content ] = node_id
+        id_map[ node_id ] = node_map[ content ]
 
         return duplicate_node # Return true, only if this node can be removed from its parent.
 
