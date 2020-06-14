@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 
+'''
+Input: A runs.json file detailing testsuite to analyze (say you want to examine projects/projectname/exec)
+Output: A folder containing all combined information from static interlinking, runtime tracing, 
+comments analysis and version control information (corr. folder shall be called outputs/projectname/exe_exec)
+'''
+
 # To use:
 # python3 examine.py <json_file>
 # sample_runs.json is provided for reference
-
-'''
-Dynamic information is available for executables only. So we combine all static
-information from multiple CPP files into one XML and then add the dynamic_information
-into the XML. For more details, read the report.
-'''
 
 import sys, pickle, os
 from xml.etree.ElementTree import Element, SubElement

@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 
+'''
+Input: An XML file which might contain duplicate nodes
+Output: The deduplicated XML. And the idmap for deleted duplicate nodes.
+'''
+
 import os
 import tempfile
 import pickle as pkl

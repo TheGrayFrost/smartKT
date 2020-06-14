@@ -10,8 +10,10 @@ This command
 3. run `python examine.py /path/to/runinfo.json` for the analysis (Requires PIN tool)
 (eg: `python examine.py testsuite/extern/runs_extern.json` or `python examine.py sample_runs.json`)
 This command
-- runs the executables with given inputs and flags (runs it specified number of times)
-- gets all dynamic information for all the runs in outputs/projectname/exe_exename/ for each executable
+- takes the testsuite executables with the inputs you want to examine
+- links up all the static source code and object code information from the files contained
+- runs the executables with given inputs and flags and trace the runtime
+- collects all dynamic information for all the runs in outputs/projectname/exe_exename/ for each executable
 - collects comment information in outputs/projectname/final_comments.xml
 ******************************************************************************************************************
 
@@ -20,10 +22,11 @@ This command
 
 Our tool expects projects to:
 	- be C/C++ based
-	- use CMake for project build
+	- use makefiles for project build
+	- use CMake as the makefile generator
+	- support verbose makes and debug build
 	- work on Unix-based OSes
-	- have verbose makefiles
-	- contain test programs that create executables we may examine
+	- contain testsuite we may use for runtime tracing
 
 
 ### Sidenote: What is CMake?
@@ -93,14 +96,30 @@ Basic idea of the CMake build process:
 		- figures out which .c files are used to generate which .o
 		- figures out which .o files are combined to generate which .a/.so
 		- pickles the collected information into dependencies.p (explained later)
-	B. dwxml.py: takes the debug info in the .o, converts information into XML (depends on [pyelftools](https://github.com/eliben/pyelftools))
-	C. ddx.py:
+	B. ast2xml.cc:
+		- takes in A.ast (clang generated syntax tree file)
+		- extracts the relevant static information contained in it in XML format into A_clang.xml
+		- collects the funtion call node locations into A.calls.temp
+	C. calls.cc:
+		- takes in A.calls.temp
+		- adds corresponding the source call exressions to each call node
+		- generates A.calls.tokens
+	D. funcs.py:
+		- takes in A_clang.xml
+		- generates A.funcargs containing function signatures for all functions declared in the TU
+	E. dwxml.py: takes the debug info in the .o, converts information into XML (depends on [pyelftools](https://github.com/eliben/pyelftools))
+	F. ddx.py:
 		- takes in A_dd.xml and A_clang.xml
 		- takes in an argument (OFFSET or ADDRESS)
 		- if argument is OFFSET, it links all the local variables
 		- if argument is ADDRESS, it links all the static storage variables
 		- generates corresponding A.offset or A.address based on the flag
 		- generates A_comb.xml with offsets/addresses patched in
+		- can also link multiple external declarations across source files to the one true definition
+	G. uniquify.py:
+		- performs header deduplication: a header can be included in multiple files. the multiple copies of nodes from such headers are uniquified.
+		- creates final_idmap.p
+		- corrects the files containing node ids of the deleted duplicate nodes using final_idmap
 
 3. examine.py: takes the runs_info.json
 	- creates the folder outputs/projectname/exe_exename
@@ -110,16 +129,19 @@ Basic idea of the CMake build process:
 	- combine_all_clang():
 		- for every image contained in the executable (main executable image and all the .so's basically)
 			- creates the folder outputs/projectname/exe_exename/imagename
+			- runs dwxml.py on image to generate image_dd.xml
 			- for every .c file that makes up that particular image
 				- concats the .calls, .funcargs and .offset into final.calls, final.funcargs and final.offset respectively
-				- concats their \_clang.xml into image.temp.xml
-			- runs dwxml.py on image to generate image_dd.xml
-			- run parsers/combine.py with ADDRESS flag
-				- that combines only the static storage variables from image.temp.xml and image_dd.xml
-				- creates image_comb.xml and image.address (explained later)
-			- image.* are kept in outputs/projectname/exe_exename/imagename
-		- copies all the image.address files to outputs/projectname/exe_exename/
-		- concats all the image_clang.xml into final_clang.xml
+				- ddx.UpdateCtree(): combines address info from image_dd.xml into the clang xml
+			- concats these "updated" \_clang.xmls into image_comb.xml
+			- ddx.generate_var(): creates image.address (explained later)
+			- all `image*` files are kept in outputs/projectname/exe_exename/imagename
+			- copies all the image.address files to outputs/projectname/exe_exename/
+		- runs ddx.patch_external_def_ids(): links all external declarations across all source files to the one true definition node
+		- runs uniquify in this statically interlinked executable xml:
+			- performs header deduplication: a header can be included in multiple files. the multiple copies of nodes from such headers are uniquified
+			- creates final_idmap.p (explained later)
+		- the final uniquified, interlinked XML is written as final_static.xml
 	- so now, we have the outputs/projectname/exe_exename/ containing all the static information:
 		- image.address for all images creating the executable
 		- final_clang.xml
@@ -127,7 +149,7 @@ Basic idea of the CMake build process:
 	- generate_dynamic_info(): runs pin.sh
 
 4. pin.sh:
-	- copies executable and test input, if any, into PIN/Work
+	- copies executable into PIN/Work
 	- copies the static information collected to PIN/Work/statinfo
 	- runs `make executable.dump`, which runs memtracker on executable to generate executable.dump
 	- runs pass2.py on executable.dump to generate final_dynamic.xml
@@ -141,6 +163,8 @@ Basic idea of the CMake build process:
 	- Image Level Instrumentation: ImageLoad()
 		- loads image.address information into globalMap
 		- adds image load address to the values in image.addres to get runtime address of variables
+		- traces heap memory allocations and reallocation [addHeapRequest() & addHeapMap()]
+		- traces heap memory deallocations [remHeapMap()]
 	- Routine Level Instrumentation: Routine()
 		- gets source line information for each function
 		- instruments before each function invocation to note the stack change [invP()]
@@ -161,8 +185,12 @@ Basic idea of the CMake build process:
 			- if it is a memory access instruction [dataman()] add instrumentation to
 				- find if it is a auto or static storage variable
 				- locate the variable within the funcLocalMap or globalMap depending on the case
-				- generate the corresponding READ or WRITE event
 				- note down the locks held by thread while accessing the variable
+				- generate the corresponding READ or WRITE event
+			- if it is updation of a pointer [ptrWrite()] add instrumentation to
+				- find the new location where the pointer points
+				- add all the information collected by dataman
+				- generate the corresponding POINTERWRITE event
 
 6. pass2.py:
 	- converts executable.dump to XML format
@@ -188,24 +216,29 @@ Quick file introductions:
 		- sourcefile: holds the .c file for each .o
 		- objectfile: holds the .o file for each .c
 1. A_clang.xml: information parsed using clang, kept in XML format
-2. A.calls: information about functions calls
-	- Header: FILENAME	LINENUM	FUNCNAME	CALLNODEID	CALLEXPR
-	- for each call expression in A.c it keeps
+2. A.calls.temp: information about functions calls
+	- Header: FILENAME	LINENUM	FUNCNAME	CALLNODEID
+	- for each function call in A.c it keeps
 		- the filename (the call maybe inside some included header file)
 		- the start line number
 		- the function name
 		- the clang nodeid for that function call
-		- the call expression (eg: addonemore(2*p))
-3. A.funcargs: information about functions signatures
+3. A.calls.tokens: information about functions calls
+	- Header: FILENAME	LINENUM	FUNCNAME	CALLNODEID	CALLEXPR
+	- adds the source call expression to the call nodes in A.calls.temp (Callexpr might look like addonemore(2\*p))
+	- for function calls arising from macro expansions, it contains the expression pre-expansion i.e. as it will be found in the source code
+	- used for linking call expressions at runtime to the source code, using source location information
+4. A.funcargs: information about functions signatures
 	- Header: FILENAME	FUNCNODEID	FUNCNAME	NARGS	ARGTYPE*	RETTYPE
 	- for each function definition in A.c it keeps
 		- the filename (the definition maybe inside some included header file)
 		- clang nodeid for definition
 		- function name
 		- number of arguments
-		- tab separated list of argument types (eg: FILE *restrict	const char *restrict	int)
+		- tab separated list of argument types (eg: FILE \*restrict<tab>const char \*restrict<tab>int)
 		- return type
-4. A.dd: the dwarfdump info section from A.o
+	- used for tracing values of function arguments and returns at runtime
+5. A_dd.xml: the dwarfdump info section from A.o
 	- for each symbol (variable or function) in A.c
 		- contains static source information like its type, line number
 		- contains static compile information like its size
@@ -215,7 +248,8 @@ Quick file introductions:
 			- for each global variable contains offset from image load address for each containing image
 			- ^ this is only valid for .so and executable (basically things that generate their independent images)
 	- the dwarfdump for .a and .so is effectively just the concatenation of the dump of the contained .o files
-5. A_dd.xml: simply the XML representation of the information in A.dd
+	- the information is represented in XML format
+	- essentially holds all the object code information
 6. A.offset: local (automatic storage) variable RBP offset information
 	- Header: FILENAME	FUNCTION	OFFSET	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID
 	- for each local symbol in A.c it keeps
@@ -227,10 +261,12 @@ Quick file introductions:
 		- variable type
 		- variable size
 		- parent id: id of the containing structure/class if variable is a part of structure/class
+	- used for identifying local variables at runtime
 7. A_comb.xml: XML generated by combining clang and dwarfdump information
 	- mangled names for functions are added
 	- size of variables are filled
 	- offsets (from RBP or image load address) are patched in
+	- essentially holds interlinked information from static source code and static object code analysis
 8. image.address: static storage variable image load offset information
 	- Header: ADDRESS	VARNAME	VARID	VARTYPE	VARSIZE	PARENTID	VARCLASS	[VARCONTAINER]
 	- for each static storage symbol in an image it keeps
@@ -242,6 +278,10 @@ Quick file introductions:
 		- parent id: id of the containing structure/class if variable is a part of structure/class
 		- variable class: GLOBAL, FUNCSTATIC, STRUCTSTATIC, CLASSSTATIC
 		- variable container: the containing function, structure or class if variable is static local as FUNCSTATIC, STRUCTSTATIC or CLASSSTATIC
+	- used for identifying static storage variables at runtime
+9. final_idmap.p: stored info from header deduplication stage
+	- for all the nodes deleted as duplicates, contains the map from deleted node id to original node id
+	- used for correcting files that might contain the nodeids from the deleted nodes
 ******************************************************************************************************************
 
 

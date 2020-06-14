@@ -31,6 +31,7 @@ Python:
 Our tool expects your projects to:
 * be C/C++ based
 * use makefiles for project build
+* use CMake as the makefile generator
 * support verbose makes and debug build
 * work on Unix-based OSes
 * contain testsuite we may use for runtime tracing
@@ -39,6 +40,7 @@ Our tool expects your projects to:
 - [X] Parallelize comments analysis part
 - [ ] System benchmarking for large projects
 - [X] Check parallel execution for dynamic runtimes
+- Add support for specifying custom build script
 
 # KNOWN ISSUES
 

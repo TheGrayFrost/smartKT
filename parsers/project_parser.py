@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 
 '''
-This program finds the linking information (static and dynamic)
-and stores in dependencies.p (pickle format)
+This program finds the object linking information and stores it in dependencies.p (pickle format)
+Input: make_log.txt (output of a verbose makefile build)
+Output: dependencies.p (collected source-object & object-object linking)
 '''
 
 import re, os, sys, pickle

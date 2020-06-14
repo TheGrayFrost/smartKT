@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 
+'''
+Input: Path to a project (say at projects/projectname)
+Output: Folder containing all the static source and static object knowledge collected from it (at outputs/projectname)
+'''
+
 # To use:
 # python3 initialize.py <path to project> [<optional output folder name>]
 

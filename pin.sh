@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# Input: executable & the test command
+# Output: Runtime trace of executable with the test command
+
 set -x # echo on
 
 # even though the exe and the input file pollute the PIN workspace

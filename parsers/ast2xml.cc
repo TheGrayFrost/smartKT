@@ -1,3 +1,9 @@
+/*
+Input: A C/C++ file (say X.cc)
+Output: Extracted static information from it (corr. file shall be X_clang.xml)
+*/
+
+
 #include <clang-c/Index.h>
 #include <iostream>
 #include <fstream>

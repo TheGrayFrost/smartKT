@@ -1,3 +1,8 @@
+/*
+Input: A .calls.temp file (containing locations of function calls in the source code)
+Output: A .calls.tokens file (corr. file containg the source call expression for each call node)
+*/
+
 #include <clang-c/Index.h>
 
 #include <cstdio>

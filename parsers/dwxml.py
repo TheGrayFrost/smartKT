@@ -1,4 +1,12 @@
 #!/usr/bin/env python3
+
+'''
+Input: An object file (say X.o or X.so)
+Output: The DWARF debugging information it contains, in xml format 
+(Corr. file shall be names X.o_dd.xml or X.so_dd.xml)
+'''
+
+
 import sys
 import os
 

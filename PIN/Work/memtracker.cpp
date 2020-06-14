@@ -1,3 +1,8 @@
+/*
+Input: An executable and run command
+Output: Runtime Event Trace for the executable run with that command
+*/
+
 #include "memtracker.h"
 #include <map>
 #include <algorithm>
@@ -942,7 +947,9 @@ VOID init(std::string inp, std::string runid, std::string locf)
 
 /* IMAGE LEVEL INSTRUMENTATION */
 
-// populates the global variable map according to load offsets of images containing them
+// 1. Populates the global variable map according to load offsets of images containing them
+// 2. Traces heap memory allocations and reallocation: using addHeapRequest() & addHeapMap()
+// 3. Traces heap memory deallocations: using remHeapMap()
 VOID ImageLoad(IMG img, VOID *v)
 {
 	std::string ignore;

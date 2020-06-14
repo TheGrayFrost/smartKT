@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+
+'''
+Input: The static xml (say X_clang.xml)
+Output: The function signatures extracted from it (corr. file shall be X.funcargs)
+'''
+
 import sys
 import os
 
