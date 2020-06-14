@@ -30,16 +30,17 @@ Python:
 
 Our tool expects your projects to:
 * be C/C++ based
-* use CMake for project build
+* use makefiles for project build
+* support verbose makes and debug build
 * work on Unix-based OSes
-* have verbose makefiles
-* contain test programs that create executables we may examine
+* contain testsuite we may use for runtime tracing
 
 # TODO
-- [ ] Parallelize comments analysis part
+- [X] Parallelize comments analysis part
 - [ ] System benchmarking for large projects
 - [X] Check parallel execution for dynamic runtimes
-- [ ] Provide option for choosing what to run (static/dynamic/comments/vcs)
-- [ ] Start vcs before initialize (if possible!), takes way long time though! 
 
 # KNOWN ISSUES
+
+Refer here: 
+https://docs.google.com/document/d/19lsyo48fotI4L1GyUDDhXYHXvNn6PpdtX_1TXbNAsVM/edit?usp=sharing

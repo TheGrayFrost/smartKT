@@ -4,7 +4,7 @@
 (eg: `python initialize.py testsuite/extern` or `python initialize.py projects/libpng`)
 This command
 - builds the project
-- gets all static information corresponding to C/C++ files in outputs/projectname/
+- gets all static information corresponding to C/C++ files in folder `outputs/projectname/`
 - needs to be run only once for any project
 2. create runinfo.json in format specified in `sample_runs.json` containing info regarding the test executables, comment analysis and version control stats.
 3. run `python examine.py /path/to/runinfo.json` for the analysis (Requires PIN tool)
