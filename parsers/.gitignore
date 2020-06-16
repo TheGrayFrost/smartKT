@@ -15,3 +15,4 @@
 !uniquify.py
 !vcs.py
 !dwarfdump_parser_deprecated.py
+!cfg/

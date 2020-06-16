@@ -42,6 +42,8 @@ CALL_TEMP_EXTENSION = '.calls.temp'
 CALL_FINAL_EXTENSION = '.calls.tokens'
 SIGN_EXTENSION = '.funcargs'
 OFFSET_EXTENSION = '.offset'
+CFG_EXTENSION = '.cfg'
+
 # CLANG_OUTPUTEXT = [CLANG_EXTENSION, CALL_EXTENSION] # , SIGN_EXTENSION]
 COMB_OUTPUTEXT = ' '.join([DWARF_EXTENSION, CLANG_EXTENSION, COMB_EXTENSION, OFFSET_EXTENSION])
 
@@ -84,6 +86,10 @@ def generate_static_info(path):
     if DEBUG:
         print ('CMD: ', 'cd parsers && make all')
     os.system('cd parsers && make all')
+
+    if DEBUG:
+        print ('CMD: ', 'cd parsers/cfg && make && cp cfg ../')
+    os.system('cd parsers/cfg && make && cp cfg ../')
 
     # Get compile instructions using project_parser.py
     # THIS PART WILL CHANGE FOR OTHER BUILD TOOLS
@@ -167,9 +173,15 @@ def generate_static_info(path):
             logstr += ('output :' + stripop + CLANG_EXTENSION + '\n')
             logstr += ('output :' + stripop + CALL_TEMP_EXTENSION + '\n')
 
+            # Generate CFG file [Input: AST, Output: CFG information]
+            if DEBUG:
+                print ('CMD: ', ' '.join(['parsers/cfg', mainfname+'.ast', '>', stripop+cfg_EXTENSION]))
+            os.system(' '.join(['parsers/cfg', mainfname+'.ast', '>', stripop+cfg_EXTENSION]))
+            logstr += ('output :' + stripop + CFG_EXTENSION + '\n')
+
             # Add tokens to .calls.temp and produces .calls.tokens
             if DEBUG:
-                print ('CMD: ', ' '.join(['parsers/calls', 
+                print ('CMD: ', ' '.join(['parsers/calls',
                     stripop+CALL_TEMP_EXTENSION, stripop+CALL_FINAL_EXTENSION]))
             os.system(' '.join(['parsers/calls', stripop+CALL_TEMP_EXTENSION, stripop+CALL_FINAL_EXTENSION]))
             logstr += ('output :' + stripop + CALL_FINAL_EXTENSION + '\n')
@@ -205,7 +217,7 @@ def generate_static_info(path):
             logstr += 'Information combined : '
             if DEBUG:
                 print('CMD: ', 'parsers/'+COMBINER+' '+stripop+' OFFSET '+COMB_OUTPUTEXT)
-            logstr += '\n' + '\n'.join([stripop + myext for 
+            logstr += '\n' + '\n'.join([stripop + myext for
                 myext in [COMB_EXTENSION, OFFSET_EXTENSION]]) + '\n\n'
              # print ('Information combined')
         except Exception as e:
