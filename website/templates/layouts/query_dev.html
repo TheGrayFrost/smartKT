@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	{% block head %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>	<title>{{ title }}</title>
+	{% endblock %}
+</head>
+
+<body>
+	<div class="container">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/">Home</a></li>
+						<li><a href="/querydev">Query</a></li>
+						<li><a href="/cfgdev">ControlFlowGraph</a></li>
+						<li><a href="/dependencydev">DependencyMap</a></li>
+						<li><a href="/classmapdev">ClassMap</a></li>
+						<li><a href="/externdev">ExternMap</a></li>
+					</ul>
+				</div>
+			</nav>
+	</div>
+
+	<div class="container">
+		<h2>Intelligent Query System For Effective Code Search</h2>
+		<p>Upload a query file in .txt format. Alternatively you can also enter a single query.</p>
+
+		<ul class="nav nav-tabs">
+			<li class="active"><a data-toggle="tab" href="#query">Enter a query</a></li>
+			<li><a data-toggle="tab" href="#queryFile">Upload a query file</a></li>
+			<li><a data-toggle="tab" href="#Info">More Info</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div id="query" class="tab-pane fade in active">
+				<form method="post">
+					<input type="text" size="50" placeholder="Input your query here" name="qry" value="{{request.form.qry}}">
+					<button type="submit" class="btn btn-info ">Submit</button>
+				</form>
+				<br>
+				<p >Result :</p>
+				<textarea readonly class="form-control rounded-0" id="Result1" rows="15" placeholder="Result will be displayed here...">{{resp}}</textarea>
+			</div>
+			<div id="queryFile" class="tab-pane fade">
+				<form method = "POST" enctype = "multipart/form-data">
+					<input type = "file" name = "file"/><br>
+					<button type="submit" class="btn btn-info ">Upload Query File</button>
+				</form>
+				<br>
+				<p >Result:</p>
+				<textarea readonly class="form-control rounded-0" id="Result2" rows="15" placeholder="Result will be displayed here...">{{resp}}</textarea>
+			</div>
+			<div id="Info" class="tab-pane fade">
+				<p >Information to be added soon!</p>
+			</div>
+		</div>
+	</div>
+
+</body>

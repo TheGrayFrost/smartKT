@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <title>{{ title }}</title>
+    {% endblock %}
+  </head>
+  <body>
+    <div class="container">
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/">Home</a></li>
+              <li><a href="/querydev">Query</a></li>
+              <li><a href="/cfgdev">ControlFlowGraph</a></li>
+              <li><a href="/dependencydev">DependencyMap</a></li>
+              <li><a href="/classmapdev">ClassMap</a></li>
+              <li><a href="/externdev">ExternMap</a></li>
+            </ul>
+          </div>
+        </nav>
+    </div>
+    <div id="content" class="container main-container">
+    {% block content %}{% endblock %}</div>
+    <div id="mynetwork" style="width:auto;height:800px"></div>
+    <div id="spandan"></div>
+    <script type="text/javascript">
+    var container = document.getElementById('mynetwork');
+    var DOTstring = {{ data|safe }};
+    var parsedData = vis.parseDOTNetwork(DOTstring);
+    var nodes = new vis.DataSet(parsedData.nodes);
+    var edges = new vis.DataSet(parsedData.edges);
+    var data = {
+      nodes: nodes,
+      edges: edges
+    };
+    var options = parsedData.options;
+
+    var network = new vis.Network(container, data, options);
+    network.setOptions({nodes: {shape: 'box'}, physics: {enabled: false}, interaction:{navigationButtons:true, keyboard:true}});
+    var allNodes = nodes.getIds();
+    for(var i=0; i<allNodes.length; i++){
+      nodes.update([{id: allNodes[i], hidden: true}]);
+    }
+    var toShowNodes = {{execs|safe}}
+    for(var i=0; i<toShowNodes.length; i++){
+      nodes.update([{id: toShowNodes[i], hidden:false}]);
+    }
+
+    network.on('click', function(properties){
+      var ids = properties.nodes;
+      if(ids.length == 0) return;
+      var clickedNode = nodes.get(ids)[0];
+      if(clickedNode.hidden == false){
+        var deps = this.getConnectedNodes(clickedNode.id, "from");
+        for(var i=0; i<deps.length; i++){
+          nodes.update([{id: deps[i], hidden: false}]);
+        }
+      }
+    });
+
+    network.on('doubleClick', function(properties){
+      var ids = properties.nodes;
+      if(ids.length == 0) return;
+      var clickedNode = nodes.get(ids)[0];
+      if(clickedNode.hidden == false){
+        var deps = this.getConnectedNodes(clickedNode.id, "from");
+        for(var i=0; i<deps.length; i++){
+          nodes.update([{id: deps[i], hidden: true}]);
+        }
+      }
+    });
+
+    </script>
+    <footer>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </footer>
+  </body>
+</html>

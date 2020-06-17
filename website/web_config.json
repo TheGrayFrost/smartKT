@@ -1,0 +1,6 @@
+{
+    "project_name": "SimplComprTest",
+    "processDynamic": true,
+    "processComments": false,
+    "model": "model_200_W10_CBOW_NEG5.bin"
+}

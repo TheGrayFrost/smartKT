@@ -1,0 +1,94 @@
+README
+
+STEPS:
+
+pip install flask
+pip install Flask
+pip install xml.dom.minidom
+pip install rdflib
+pip install nltk
+
+All three server-side files : init.py, query_run.py and mapper.py should be placed in the same folder.
+In the directory where we have our init.py file create a folder called “templates” and place the two html files “main.html” and “success.html” in the folder.
+
+Run init.py with the command : python init.py
+
+
+The above screen shows that all the imports were successful and the server is running.
+Do ifconfig and check your current ip address. To run the web interface open your browser and write your <ip-address>:<port-no> and hit enter. Port-no is displayed on the terminal when we execute the file “init.py” besides the localhost address. It’s usually 5000.
+
+
+Server Files :
+
+Init.py
+
+This file is our main server side file. It captures the query received at the front-end. In this file we imported the class “Query Conversion” of file “query_run.py”. The main processing on the query is done by the function “get_response_single_query” when we enter a single query in the textbox and “get_response_query_file” when we upload a query file. In both functions we create an object of the class “Query Conversion” and call the function “execute_query” which executes all the necessary functions to translate our query to a sparql query and then fire it on the KB and returns the results.
+
+query_run.py
+
+This file consists of our main query processing algorithm and its logic.
+This file contains all the functions that are executed to process the query. All functions are defined in the class “Query Conversion”. When the object of this class is created in the file init.py the constructor of the class gets called.
+In the constructor of the class we load some dictionaries from their pickle files. The pickle files are passed as parameters to the constructor and their actual path is mentioned in the file init.py. The dictionaries are as follows :
+
+all_store
+{
+      symbol : { inflatePrime : set(['FunctionDecl', 'CXXMethod']) }
+      attribute : { spelling : set([‘spelling’]) , storage_class : set([‘storage_class’])}
+}
+
+“all_store” dictionary stores a set of tags corresponding to every function name, variable name, attributes.etc from our TTL.
+
+“all_name_tokens_dict” is a dictionary with keys as all name tokens and value as a list of tuple with words similar to the token sorted based on their similarity index.
+
+“all_comment_tokens_dict” is a dictionary with keys as all comment tokens and value as a list of tuple with words similar to the token sorted based on their similarity index.
+
+“tf_idf_name_tokens”  is a dictionary with keys as all name tokens and value as a list of tuple with files sorted based on their tf-idf value.
+
+“tf_idf_symbol”  is a dictionary with keys as all symbols and value as a list of tuple with files sorted based on their tf-idf value.
+
+"mapping" is a dictionary that holds 1:1 mapping between the regex id and template function names.
+
+This file “query_run” also imports the class “CreateLists” in the file “mapper.py”. 
+The first function that gets executed is “execute_query”. 
+In it we first store all the regex in a list by calling the function “make_list” which in turn creates an object of class “CreateLists” in the file “mapper.py” and executes it’s functions.
+
+Now consider the query : What is the return type of the function inflatePrime?
+
+“Filter_query_words” removes stopwords and punctuation from the query and returns a new query with only relevant words. [“return type function inflatePrime”]
+
+“Search_matched_words” firstly stores all possible phrases in the query in a list called “words”. 
+['inflatePrime', 'function', 'function inflatePrime', 'type', 'type function', 'type function inflatePrime', 'return', 'return type', 'return type function', 'return type function inflatePrime']
+
+Then it searches for those phrases in all the dictionaries and stores the matched words with their information in a “word_store” dictionary.
+The structure of the dictionary is as follows :
+
+word_store
+{
+      symbol : [('inflatePrime','inflatePrime')]
+      attribute : [(‘return type’,’return_type’)]
+}
+
+“Insert_placeholders_in_query” replaces the matched words of the query with place-holders.
+E.x What is the <<static_attribute>> of the function <<symbol>> ?
+
+“Regex_match” matches the query with the regexes in the regex list.
+E.x .*<<STATIC_ATTRIBUTE>>.*<<SYMBOL>>.*|.*<<SYMBOL>>.*<<STATIC_ATTRIBUTE>>.*
+Matches our query.
+
+“call_matched_template_function” calls the corresponding template function according to the matched regex.
+
+and then we have the various templates built for different regexes.
+
+
+Mapper.py
+Here we have the function that creates regex list from the regex file.
+
+
+
+
+
+
+
+
+
+

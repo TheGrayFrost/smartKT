@@ -1,0 +1,32 @@
+mapping_extra_id.py - file that does the reference resolution by creating a lookup dictionary for the ids used for creating TTL by the other code files.
+
+parseStaticXML.py - reads static XML and creates a TTL for it.
+python parseStaticXML.py -h 
+- The above command on the terminal will show you the list of arguments needed.
+1st is the static xml file
+2nd is the static TTL location where you want to save it
+3rd is the mapping dictionary pickle file (where the mappings of the ids are stored. PS: we get this by executing the file mapping_extra_id.py)
+
+
+parseDynamicXML.py - reads dynamic XML and creates a TTL for it.
+python parseDynamicXML.py -h 
+- The above command on the terminal will show you the list of arguments needed.
+1st is the dynamic xml file
+2nd is the dynamic TTL location where you want to save it
+3rd is the mapping dictionary pickle file 
+
+
+parseCommentsXML.py - reads dynamic XML and creates a TTL for it.
+python parseCommentsXML.py -h 
+- The above command on the terminal will show you the list of arguments needed.
+1st is the comments xml file
+2nd is the comments TTL location where you want to save it
+3rd is the mapping dictionary pickle file 
+
+
+merge.py - reads all the three static, dynamic and comments TTL files and merges them into one.
+So there are four arguments here :
+1st - Static TTL
+2nd - Dynamic TTL
+3rd - Comments TTL
+4th - Merged TTL location where you want to save it
