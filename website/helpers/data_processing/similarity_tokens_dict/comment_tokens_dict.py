@@ -11,12 +11,12 @@ reload(sys)
 ps = PorterStemmer()
 name_tokens_dict = dict()
 
-f=pd.read_csv("comment_curl_top10_similar_model_200_W10_CBOW_NEG5.csv")
+f=pd.read_csv(sys.argv[1])
 keep_col = ['phrase','most_sim_1','score_1','most_sim_2','score_2','most_sim_3','score_3','most_sim_4','score_4','most_sim_5','score_5','most_sim_6','score_6','most_sim_7','score_7','most_sim_8','score_8','most_sim_9','score_9','most_sim_10','score_10']
 new_f = f[keep_col]
-new_f.to_csv("comment_token_similar.csv", index=False)
+new_f.to_csv(sys.argv[2], index=False)
 
-with open('comment_token_similar.csv') as csvfile:
+with open(sys.argv[2]) as csvfile:
     readCSV = csv.reader(csvfile, delimiter=',')
     for ind1,row in enumerate(readCSV):
         if(ind1 == 0):  #skip the first row
@@ -43,4 +43,4 @@ for key in name_tokens_dict:
     print(key)
     print(name_tokens_dict[key])
 
-pickle.dump( name_tokens_dict, open( "../../Data files/libpng_comment_tokens_dict.p", "wb" ) )
+pickle.dump( name_tokens_dict, open(sys.argv[3], "wb" ) )

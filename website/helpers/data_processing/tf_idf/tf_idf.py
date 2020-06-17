@@ -1,4 +1,4 @@
-import pickle, operator
+import pickle, operator, sys
 from collections import defaultdict
 
 pickle_file1 = sys.argv[1]

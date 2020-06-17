@@ -1,13 +1,11 @@
-import nltk
-import pickle
-import argparse
-# nltk.download('wordnet')
+# Usage:
+# python3 <static_XML> <comment_XML> <output_file>
+
+import nltk, pickle, sys
 import xml.dom.minidom
 from xml.dom.minidom import parse
-from nltk.stem import WordNetLemmatizer 
+from nltk.stem import WordNetLemmatizer
 from collections import defaultdict
-
-# lemmatizer = WordNetLemmatizer()
 
 keys = ['symbol', 'static_attribute', 'dynamic_attribute', 'problem_domain', 'common_word', 'values']
 all_store = {key: {} for key in keys}
@@ -110,8 +108,8 @@ def add_synonyms():
         all_store['static_attribute']['visibility'] = set(['storage_class'])
 
         all_store['static_attribute']['parent'] = set(['has_parent'])
-        all_store['static_attribute']['predecessor'] = set(['has_parent'])       
-        all_store['static_attribute']['parent function'] = set(['has_parent']) 
+        all_store['static_attribute']['predecessor'] = set(['has_parent'])
+        all_store['static_attribute']['parent function'] = set(['has_parent'])
 
         all_store['static_attribute']['child'] = set(['has_child'])
         all_store['static_attribute']['successor'] = set(['has_child'])
@@ -184,7 +182,7 @@ def add_synonyms():
 
         all_store['dynamic_attribute']['callee'] = set(['callee_name'])
         all_store['dynamic_attribute']['invoked'] = set(['callee_name'])
-        all_store['dynamic_attribute']['called'] = set(['callee_name']) 
+        all_store['dynamic_attribute']['called'] = set(['callee_name'])
         all_store['dynamic_attribute']['child function'] = set(['callee_name'])
         all_store['dynamic_attribute']['call graph'] = set(['callee_name'])
         all_store['dynamic_attribute']['function call graph'] = set(['callee_name'])
@@ -193,7 +191,7 @@ def add_synonyms():
         all_store['dynamic_attribute']['invocation graph'] = set(['callee_name'])
 
         all_store['dynamic_attribute']['invoker'] = set(['caller_name'])
-        all_store['dynamic_attribute']['caller'] = set(['caller_name'])    
+        all_store['dynamic_attribute']['caller'] = set(['caller_name'])
 
 
 #adding problem domain words
@@ -204,7 +202,7 @@ def parse_comment_XMLFile(commentXML):
 
     comments = collection.getElementsByTagName("COMMENT")
 
-    for com in comments:        
+    for com in comments:
         problemDomainList = com.getElementsByTagName("PROBLEM_DOMAINS")
         for problem_domain in problemDomainList:
             for child in problem_domain.childNodes:
@@ -294,32 +292,18 @@ def add_functions(funcList):
 
         add_static_attributes(func)
 
-
-parser = argparse.ArgumentParser(description='Files needed to run the code.')
-parser.add_argument(dest='staticXML', action='store', help='Input the Static XML file')
-parser.add_argument(dest='commentXML', action='store', help='Input the Comments XML file')
-# parser.add_argument(dest='conceptsFile', action='store', help='Input the Concepts file')
-
-args = vars(parser.parse_args())
-staticXML = args['staticXML']
-commentXML = args['commentXML']
-# conceptsFile = args['conceptsFile']
+staticXML = sys.argv[1]
+commentXML = sys.argv[2]
 
 parse_static_XMLFile(staticXML)
 parse_dynamic_XMLFile()
 parse_comment_XMLFile(commentXML)
+
 # populate_concepts(conceptsFile)
 add_synonyms()
 add_common_words_to_tags()
 
-# for key,values in all_store['values'].items():
-#   print(key,values)
 
-# for value in all_store['values']['int']:
-#   print(value)
+pickle.dump(all_store, open(sys.argv[3], "wb" ) )
 
-pickle.dump( all_store, open( "../Data files/libpng_all_store.p", "wb" ) )
-
-# python all_store.py ../xml_csv_files/libpng_xml/final_static.xml ../xml_csv_files/libpng_xml/final_comments.xml 
-
-
+# python all_store.py ../xml_csv_files/libpng_xml/final_static.xml ../xml_csv_files/libpng_xml/final_comments.xml

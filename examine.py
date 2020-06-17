@@ -18,7 +18,6 @@ from collections import defaultdict
 import json
 
 import parsers.imp_ddx as ddx
-# import parsers.vcs as vcs
 import parsers.uniquify as uniq
 
 # For debug, set true
@@ -293,35 +292,16 @@ def generate_comments_info(project_name, project_path, vocab_file, problem_domai
 
 def start_website():
     # Start the user inerface to query
-    os.system('cp static.xml website/static.xml')
-    os.system('cp dynamic.xml website/dynamic.xml')
-    os.system('cp vcs.xml website/vcs.xml')
-    os.system('cp comments.xml website/comments.xml')
-    os.system('cp dependencies.p website/dependencies.p')
-    os.chdir('website')
-    os.system('chmod +x setup.sh')
-    os.system('./setup.sh')
-
-def collect_results(project_name, executable):
-    exec_name = executable.split('/')[-1]
-    colpath = project_name + '/' + exec_name
-    if not os.path.exists(colpath):
-        os.mkdir(colpath)
-    os.system('cp dependencies.p ' + colpath)
-    os.system('cp static.xml ' + colpath)
-    os.system('cp static.funcargs ' + colpath)
-    os.system('cp ' + project_name + '/statinfo/*.offset ' + colpath)
-    os.system('cp static.calls ' + colpath)
-    if CALLDYN:
-        os.system('cp dynamic.xml ' + colpath)
-        os.system('cp ' + exec_name + '.dump ' + colpath)
-    if CALLCOMM:
-        os.system('cp comments.xml ' + colpath)
-    if CALLDYN and CALLCOMM:
-        os.system ('> final_universal.xml')
-        os.system ('cat static.xml dynamic.xml comments.xml > final_universal.xml')
-        os.system('cp final_universal.xml ' + colpath)
-    print ('Information collected in: ', colpath)
+    print("Please ensure the following are in website/data:")
+    print("final_static.xml, final_dynamic.xml, final_comments.xml, final.cfg")
+    print("dependencies.p, *.dump  [for eg. sct_0_1.dump]")
+    print("\n")
+    print("please edit website/web_config.json accordingly, update data/, then follow these")
+    print("cd website && python3 initialize.py")
+    print("export FLASK_APP=app.py")
+    print("flask run")
+    print("\n")
+    print("After this, browse to http://127.0.0.1:5000")
 
 
 jsonInfo = json.loads(open(sys.argv[1], 'r').read())
@@ -341,6 +321,9 @@ for exe in runs:
 
     if CALLSTATIC:
         generate_static_info()
+        os.system("cp "+os.path.join(foutfolder, "final_static.xml")+" " + os.path.abspath("website/data/"))
+        os.system("cp "+os.path.join(foutfolder, "final.cfg")+" " + os.path.abspath("website/data/"))
+        os.system("cp "+os.path.join(outfolder, "dependencies.p")+" " + os.path.abspath("website/data/"))
 
     # Generate dynamic data
     if CALLDYN:
@@ -351,6 +334,12 @@ for exe in runs:
                 generate_dynamic_info(executable, None, idx, runs[exe][ti])
             os.system('mv ' + os.path.join(foutfolder, 'final_dynamic.xml') + ' ' +
                 os.path.join(foutfolder, 'final_dynamic_' + str(idx) + '.xml'))
+        os.system('echo "<DYNAMICROOT>" >> ' + os.path.join(foutfolder, 'final_dynamic.xml'))
+        for idx, ti in enumerate(runs[exe]):
+            os.system('cat '+os.path.join(foutfolder, 'final_dynamic_'+str(idx)+'.xml')+ " >> " + os.path.join(foutfolder, 'final_dynamic.xml'))
+        os.system('echo "</DYNAMICROOT>" >> ' + os.path.join(foutfolder, 'final_dynamic.xml'))
+        os.system("cp "+os.path.join(foutfolder, "final_dynamic.xml")+" " + os.path.abspath("website/data/"))
+        os.system("cp "+os.path.join(foutfolder, "*.dump")+" " + os.path.abspath("website/data/"))
 
 if CALLCOMM:
     # comments_config
@@ -361,6 +350,7 @@ if CALLCOMM:
         project_path = cc['project_path']
     generate_comments_info(cc['project_name'], project_path, cc['vocab_loc'], \
     cc['problem_domain_loc'], os.path.join(outfolder, FINAL_FILE+COMMENTS_EXTENSION))
+    os.system("cp "+os.path.join(outfolder, FINAL_FILE+COMMENTS_EXTENSION)+" " + os.path.abspath("website/data/"))
 
 if CALLVCS:
     # vcs_config
@@ -368,5 +358,4 @@ if CALLVCS:
         vcs.generate_vcs_info(jsonInfo['vcs'], os.path.join(outfolder, FINAL_FILE+VCS_EXTENSION))
 
 # collect_results(project_name, executable)
-
-# start_website()
+start_website()

@@ -1,0 +1,328 @@
+<COMMENTS project_name="SimplComprTest" project_path="/data/user-home/srijoni/spandan/MTPSMARTKT/graphSMKT/smartKT/projects/SimplComprTest"><COMMENT comment_id="1" comment_scope_end="1" comment_scope_start="1" comment_text="Include the header here, to obtain the function declaration" src_file_location="/data/user-home/srijoni/spandan/MTPSMARTKT/graphSMKT/smartKT/projects/SimplComprTest/src/main.cpp">
+		<SYMBOLS>
+			<inclusionDirective id="202133794614" spelling="foo.h" type="" />
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN type=" 'Operations as part of Algorithms" word="include" />
+			<POGRAM_DOMAIN type=" 'Operations as part of Algorithms" word="declaration" />
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS />
+	</COMMENT>
+	<COMMENT comment_id="2" comment_scope_end="34" comment_scope_start="15" comment_text="To demonstrate control flow graph" src_file_location="/data/user-home/srijoni/spandan/MTPSMARTKT/graphSMKT/smartKT/projects/SimplComprTest/src/main.cpp">
+		<SYMBOLS>
+			<MemberRefExpr id="200850709460" spelling="makeSquare" type="&lt;bound member function type&gt;" />
+			<MemberRefExpr id="201063835529" spelling="makeCircle" type="&lt;bound member function type&gt;" />
+			<MemberRefExpr id="204245747835" spelling="hamming_distance" type="&lt;bound member function type&gt;" />
+			<MemberRefExpr id="202999428960" spelling="p" type="Point" />
+			<FunctionDecl id="200954073876" spelling="main" type="int ()" />
+			<CallExpr id="201188257788" spelling="Circle" type="Circle" />
+			<CallExpr id="201501969520" spelling="Square" type="Square" />
+			<CallExpr id="203826685746" spelling="Point" type="Point" />
+			<CallExpr id="201751330820" spelling="getCount" type="int" />
+			<CallExpr id="202520103208" spelling="makeSquare" type="void" />
+			<CallExpr id="203728757139" spelling="Point" type="Point" />
+			<CallExpr id="200980079381" spelling="makeCircle" type="void" />
+			<CallExpr id="202787013636" spelling="Point" type="Point" />
+			<CallExpr id="201645446226" spelling="compare" type="int" />
+			<CallExpr id="204024936957" spelling="Circle" type="Circle" />
+			<CallExpr id="201151653057" spelling="Square" type="Square" />
+			<CallExpr id="203800700125" spelling="hamming_distance" type="int" />
+			<TypeRef id="203465256072" spelling="class Circle" type="Circle" />
+			<TypeRef id="203852266962" spelling="class Square" type="Square" />
+			<TypeRef id="201958351368" spelling="struct Point" type="Point" />
+			<TypeRef id="200372501668" spelling="class Base" type="Base" />
+			<VarDecl id="203817833550" spelling="i" type="int" />
+			<VarDecl id="203443302841" spelling="c" type="Circle" />
+			<VarDecl id="202175955133" spelling="s" type="Square" />
+			<VarDecl id="201191999428" spelling="p" type="Point" />
+			<DeclRefExpr id="203566558534" spelling="getCount" type="int ()" />
+			<DeclRefExpr id="202851897854" spelling="i" type="int" />
+			<DeclRefExpr id="203960758426" spelling="maxele" type="int" />
+			<DeclRefExpr id="203071092591" spelling="s" type="Square" />
+			<DeclRefExpr id="201208641226" spelling="p" type="Point" />
+			<DeclRefExpr id="202790612363" spelling="arrSquare" type="int []" />
+			<DeclRefExpr id="201661494130" spelling="i" type="int" />
+			<DeclRefExpr id="200084438611" spelling="c" type="Circle" />
+			<DeclRefExpr id="202923349416" spelling="p" type="Point" />
+			<DeclRefExpr id="203836918677" spelling="arrCircle" type="int []" />
+			<DeclRefExpr id="202356553870" spelling="i" type="int" />
+			<DeclRefExpr id="201363532585" spelling="i" type="int" />
+			<DeclRefExpr id="203450784788" spelling="compare" type="int (Circle, Square)" />
+			<DeclRefExpr id="201231909017" spelling="c" type="Circle" />
+			<DeclRefExpr id="204007639173" spelling="s" type="Square" />
+			<DeclRefExpr id="202442267023" spelling="count" type="int" />
+			<DeclRefExpr id="200552327284" spelling="c" type="Circle" />
+			<DeclRefExpr id="201116984462" spelling="count" type="int" />
+			<DeclRefExpr id="201789928818" spelling="count" type="int" />
+			<UnexposedExpr id="203428025642" spelling="getCount" type="int (*)()" />
+			<UnexposedExpr id="200514451775" spelling="i" type="int" />
+			<UnexposedExpr id="200200179671" spelling="maxele" type="int" />
+			<UnexposedExpr id="202250096909" spelling="p" type="const Point" />
+			<UnexposedExpr id="204152930975" spelling="arrSquare" type="int *" />
+			<UnexposedExpr id="202043600337" spelling="i" type="int" />
+			<UnexposedExpr id="204097858717" spelling="p" type="const Point" />
+			<UnexposedExpr id="204179027017" spelling="arrCircle" type="int *" />
+			<UnexposedExpr id="203628009301" spelling="i" type="int" />
+			<UnexposedExpr id="200364386317" spelling="compare" type="bool" />
+			<UnexposedExpr id="202618285106" spelling="compare" type="int (*)(Circle, Square)" />
+			<UnexposedExpr id="202068282265" spelling="c" type="const Circle" />
+			<UnexposedExpr id="201603583932" spelling="s" type="const Square" />
+			<UnexposedExpr id="201866845094" spelling="c" type="Base" />
+			<UnexposedExpr id="201086113115" spelling="count" type="int" />
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN type=" 'Data-Structure and its Components" word="graph" />
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS />
+	</COMMENT>
+<COMMENT comment_id="3" comment_scope_end="16" comment_scope_start="9" comment_text="Extern linkage of variables and arrays" src_file_location="/data/user-home/srijoni/spandan/MTPSMARTKT/graphSMKT/smartKT/projects/SimplComprTest/src/helper.cpp">
+		<SYMBOLS>
+			<VarDecl id="301246238228" spelling="count" type="int" />
+			<VarDecl id="304164471082" spelling="maxele" type="int" />
+			<VarDecl id="304109399143" spelling="arrCircle" type="int [5]" />
+			<VarDecl id="303869766078" spelling="arrSquare" type="int [5]" />
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN type=" 'Properties of Datastructure / Function / Blocks" word="extern" />
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS />
+	</COMMENT>
+<COMMENT comment_id="4" comment_scope_end="1" comment_scope_start="1" comment_text="Include the header here, to obtain the function declaration" src_file_location="/data/user-home/srijoni/spandan/MTPSMARTKT/graphSMKT/smartKT/projects/SimplComprTest/src/main.cpp">
+		<SYMBOLS>
+			<inclusionDirective id="202133794614" spelling="foo.h" type="" />
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN type=" 'Operations as part of Algorithms" word="include" />
+			<POGRAM_DOMAIN type=" 'Operations as part of Algorithms" word="declaration" />
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS />
+	</COMMENT>
+	<COMMENT comment_id="5" comment_scope_end="34" comment_scope_start="15" comment_text="To demonstrate control flow graph" src_file_location="/data/user-home/srijoni/spandan/MTPSMARTKT/graphSMKT/smartKT/projects/SimplComprTest/src/main.cpp">
+		<SYMBOLS>
+			<UnexposedExpr id="203428025642" spelling="getCount" type="int (*)()" />
+			<UnexposedExpr id="200514451775" spelling="i" type="int" />
+			<UnexposedExpr id="200200179671" spelling="maxele" type="int" />
+			<UnexposedExpr id="202250096909" spelling="p" type="const Point" />
+			<UnexposedExpr id="204152930975" spelling="arrSquare" type="int *" />
+			<UnexposedExpr id="202043600337" spelling="i" type="int" />
+			<UnexposedExpr id="204097858717" spelling="p" type="const Point" />
+			<UnexposedExpr id="204179027017" spelling="arrCircle" type="int *" />
+			<UnexposedExpr id="203628009301" spelling="i" type="int" />
+			<UnexposedExpr id="200364386317" spelling="compare" type="bool" />
+			<UnexposedExpr id="202618285106" spelling="compare" type="int (*)(Circle, Square)" />
+			<UnexposedExpr id="202068282265" spelling="c" type="const Circle" />
+			<UnexposedExpr id="201603583932" spelling="s" type="const Square" />
+			<UnexposedExpr id="201866845094" spelling="c" type="Base" />
+			<UnexposedExpr id="201086113115" spelling="count" type="int" />
+			<CallExpr id="201188257788" spelling="Circle" type="Circle" />
+			<CallExpr id="201501969520" spelling="Square" type="Square" />
+			<CallExpr id="203826685746" spelling="Point" type="Point" />
+			<CallExpr id="201751330820" spelling="getCount" type="int" />
+			<CallExpr id="202520103208" spelling="makeSquare" type="void" />
+			<CallExpr id="203728757139" spelling="Point" type="Point" />
+			<CallExpr id="200980079381" spelling="makeCircle" type="void" />
+			<CallExpr id="202787013636" spelling="Point" type="Point" />
+			<CallExpr id="201645446226" spelling="compare" type="int" />
+			<CallExpr id="204024936957" spelling="Circle" type="Circle" />
+			<CallExpr id="201151653057" spelling="Square" type="Square" />
+			<CallExpr id="203800700125" spelling="hamming_distance" type="int" />
+			<MemberRefExpr id="200850709460" spelling="makeSquare" type="&lt;bound member function type&gt;" />
+			<MemberRefExpr id="201063835529" spelling="makeCircle" type="&lt;bound member function type&gt;" />
+			<MemberRefExpr id="204245747835" spelling="hamming_distance" type="&lt;bound member function type&gt;" />
+			<MemberRefExpr id="202999428960" spelling="p" type="Point" />
+			<VarDecl id="203817833550" spelling="i" type="int" />
+			<VarDecl id="203443302841" spelling="c" type="Circle" />
+			<VarDecl id="202175955133" spelling="s" type="Square" />
+			<VarDecl id="201191999428" spelling="p" type="Point" />
+			<TypeRef id="203465256072" spelling="class Circle" type="Circle" />
+			<TypeRef id="203852266962" spelling="class Square" type="Square" />
+			<TypeRef id="201958351368" spelling="struct Point" type="Point" />
+			<TypeRef id="200372501668" spelling="class Base" type="Base" />
+			<DeclRefExpr id="203566558534" spelling="getCount" type="int ()" />
+			<DeclRefExpr id="202851897854" spelling="i" type="int" />
+			<DeclRefExpr id="203960758426" spelling="maxele" type="int" />
+			<DeclRefExpr id="203071092591" spelling="s" type="Square" />
+			<DeclRefExpr id="201208641226" spelling="p" type="Point" />
+			<DeclRefExpr id="202790612363" spelling="arrSquare" type="int []" />
+			<DeclRefExpr id="201661494130" spelling="i" type="int" />
+			<DeclRefExpr id="200084438611" spelling="c" type="Circle" />
+			<DeclRefExpr id="202923349416" spelling="p" type="Point" />
+			<DeclRefExpr id="203836918677" spelling="arrCircle" type="int []" />
+			<DeclRefExpr id="202356553870" spelling="i" type="int" />
+			<DeclRefExpr id="201363532585" spelling="i" type="int" />
+			<DeclRefExpr id="203450784788" spelling="compare" type="int (Circle, Square)" />
+			<DeclRefExpr id="201231909017" spelling="c" type="Circle" />
+			<DeclRefExpr id="204007639173" spelling="s" type="Square" />
+			<DeclRefExpr id="202442267023" spelling="count" type="int" />
+			<DeclRefExpr id="200552327284" spelling="c" type="Circle" />
+			<DeclRefExpr id="201116984462" spelling="count" type="int" />
+			<DeclRefExpr id="201789928818" spelling="count" type="int" />
+			<FunctionDecl id="200954073876" spelling="main" type="int ()" />
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN type=" 'Data-Structure and its Components" word="graph" />
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS />
+	</COMMENT>
+<COMMENT comment_id="6" comment_scope_end="16" comment_scope_start="9" comment_text="Extern linkage of variables and arrays" src_file_location="/data/user-home/srijoni/spandan/MTPSMARTKT/graphSMKT/smartKT/projects/SimplComprTest/src/helper.cpp">
+		<SYMBOLS>
+			<VarDecl id="301246238228" spelling="count" type="int" />
+			<VarDecl id="304164471082" spelling="maxele" type="int" />
+			<VarDecl id="304109399143" spelling="arrCircle" type="int [5]" />
+			<VarDecl id="303869766078" spelling="arrSquare" type="int [5]" />
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN type=" 'Properties of Datastructure / Function / Blocks" word="extern" />
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS />
+	</COMMENT>
+<COMMENT comment_id="7" comment_scope_end="1" comment_scope_start="1" comment_text="Include the header here, to obtain the function declaration" src_file_location="/data/user-home/srijoni/spandan/MTPSMARTKT/graphSMKT/smartKT/projects/SimplComprTest/src/main.cpp">
+		<SYMBOLS>
+			<inclusionDirective id="200500312245" spelling="foo.h" type="" />
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN type=" 'Operations as part of Algorithms" word="include" />
+			<POGRAM_DOMAIN type=" 'Operations as part of Algorithms" word="declaration" />
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS />
+	</COMMENT>
+	<COMMENT comment_id="8" comment_scope_end="34" comment_scope_start="15" comment_text="To demonstrate control flow graph" src_file_location="/data/user-home/srijoni/spandan/MTPSMARTKT/graphSMKT/smartKT/projects/SimplComprTest/src/main.cpp">
+		<SYMBOLS>
+			<FunctionDecl id="201971875646" spelling="main" type="int ()" />
+			<VarDecl id="201780520638" spelling="i" type="int" />
+			<VarDecl id="201121908958" spelling="c" type="Circle" />
+			<VarDecl id="202631836297" spelling="s" type="Square" />
+			<VarDecl id="204101688875" spelling="p" type="Point" />
+			<MemberRefExpr id="203408691743" spelling="makeSquare" type="&lt;bound member function type&gt;" />
+			<MemberRefExpr id="200387371095" spelling="makeCircle" type="&lt;bound member function type&gt;" />
+			<MemberRefExpr id="201687153308" spelling="hamming_distance" type="&lt;bound member function type&gt;" />
+			<MemberRefExpr id="201217849898" spelling="p" type="Point" />
+			<CallExpr id="203129360504" spelling="Circle" type="Circle" />
+			<CallExpr id="200134718503" spelling="Square" type="Square" />
+			<CallExpr id="200355630220" spelling="Point" type="Point" />
+			<CallExpr id="202367349962" spelling="getCount" type="int" />
+			<CallExpr id="203675596076" spelling="makeSquare" type="void" />
+			<CallExpr id="202730717807" spelling="Point" type="Point" />
+			<CallExpr id="203492451254" spelling="makeCircle" type="void" />
+			<CallExpr id="200898603726" spelling="Point" type="Point" />
+			<CallExpr id="203480252207" spelling="compare" type="int" />
+			<CallExpr id="203040155490" spelling="Circle" type="Circle" />
+			<CallExpr id="203057739496" spelling="Square" type="Square" />
+			<CallExpr id="202785676493" spelling="hamming_distance" type="int" />
+			<UnexposedExpr id="203682700720" spelling="getCount" type="int (*)()" />
+			<UnexposedExpr id="202248167066" spelling="i" type="int" />
+			<UnexposedExpr id="204132946455" spelling="maxele" type="int" />
+			<UnexposedExpr id="201234421978" spelling="p" type="const Point" />
+			<UnexposedExpr id="201531933950" spelling="arrSquare" type="int *" />
+			<UnexposedExpr id="202693387224" spelling="i" type="int" />
+			<UnexposedExpr id="203224636840" spelling="p" type="const Point" />
+			<UnexposedExpr id="200717420796" spelling="arrCircle" type="int *" />
+			<UnexposedExpr id="202583019429" spelling="i" type="int" />
+			<UnexposedExpr id="201724236495" spelling="compare" type="bool" />
+			<UnexposedExpr id="202750649942" spelling="compare" type="int (*)(Circle, Square)" />
+			<UnexposedExpr id="201549450101" spelling="c" type="const Circle" />
+			<UnexposedExpr id="203291926193" spelling="s" type="const Square" />
+			<UnexposedExpr id="201167313968" spelling="c" type="Base" />
+			<UnexposedExpr id="203836077878" spelling="count" type="int" />
+			<TypeRef id="201743915433" spelling="class Circle" type="Circle" />
+			<TypeRef id="200912740795" spelling="class Square" type="Square" />
+			<TypeRef id="202078348196" spelling="struct Point" type="Point" />
+			<TypeRef id="203817694498" spelling="class Base" type="Base" />
+			<DeclRefExpr id="200346889081" spelling="getCount" type="int ()" />
+			<DeclRefExpr id="202464789924" spelling="i" type="int" />
+			<DeclRefExpr id="200256505998" spelling="maxele" type="int" />
+			<DeclRefExpr id="200540369926" spelling="s" type="Square" />
+			<DeclRefExpr id="203347800698" spelling="p" type="Point" />
+			<DeclRefExpr id="201806780149" spelling="arrSquare" type="int []" />
+			<DeclRefExpr id="203512570582" spelling="i" type="int" />
+			<DeclRefExpr id="203260221268" spelling="c" type="Circle" />
+			<DeclRefExpr id="200301941347" spelling="p" type="Point" />
+			<DeclRefExpr id="203439167632" spelling="arrCircle" type="int []" />
+			<DeclRefExpr id="201761594251" spelling="i" type="int" />
+			<DeclRefExpr id="203580368049" spelling="i" type="int" />
+			<DeclRefExpr id="204076492872" spelling="compare" type="int (Circle, Square)" />
+			<DeclRefExpr id="201769974965" spelling="c" type="Circle" />
+			<DeclRefExpr id="201135584076" spelling="s" type="Square" />
+			<DeclRefExpr id="202124648345" spelling="count" type="int" />
+			<DeclRefExpr id="201406828056" spelling="c" type="Circle" />
+			<DeclRefExpr id="202108124239" spelling="count" type="int" />
+			<DeclRefExpr id="200875673302" spelling="count" type="int" />
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN type=" 'Data-Structure and its Components" word="graph" />
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS />
+	</COMMENT>
+<COMMENT comment_id="9" comment_scope_end="16" comment_scope_start="9" comment_text="Extern linkage of variables and arrays" src_file_location="/data/user-home/srijoni/spandan/MTPSMARTKT/graphSMKT/smartKT/projects/SimplComprTest/src/helper.cpp">
+		<SYMBOLS>
+			<VarDecl id="302445474945" spelling="count" type="int" />
+			<VarDecl id="301081669810" spelling="maxele" type="int" />
+			<VarDecl id="302953228920" spelling="arrCircle" type="int [5]" />
+			<VarDecl id="300894360868" spelling="arrSquare" type="int [5]" />
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN type=" 'Properties of Datastructure / Function / Blocks" word="extern" />
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS />
+	</COMMENT>
+<COMMENT comment_id="10" comment_scope_end="1" comment_scope_start="1" comment_text="Include the header (not strictly necessary here)" src_file_location="/data/user-home/srijoni/spandan/MTPSMARTKT/graphSMKT/smartKT/projects/SimplComprTest/lib/foo.cpp">
+		<SYMBOLS>
+			<inclusionDirective id="102907660555" spelling="foo.h" type="" />
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN type=" 'Operations as part of Algorithms" word="include" />
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS />
+	</COMMENT>
+	<COMMENT comment_id="11" comment_scope_end="25" comment_scope_start="22" comment_text="initialization of static private member" src_file_location="/data/user-home/srijoni/spandan/MTPSMARTKT/graphSMKT/smartKT/projects/SimplComprTest/lib/foo.cpp">
+		<SYMBOLS>
+			<VarDecl id="100880484415" spelling="count" type="int" />
+			<TypeRef id="102847521023" spelling="class Base" type="Base" />
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN type=" 'Properties of Datastructure / Function / Blocks" word="static" />
+			<POGRAM_DOMAIN type=" 'Properties of Datastructure / Function / Blocks" word="private" />
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS />
+	</COMMENT>
+<COMMENT comment_id="12" comment_scope_end="1" comment_scope_start="1" comment_text="Include the header (not strictly necessary here)" src_file_location="/data/user-home/srijoni/spandan/MTPSMARTKT/graphSMKT/smartKT/projects/SimplComprTest/lib/foo.cpp">
+		<SYMBOLS>
+			<inclusionDirective id="104162627869" spelling="foo.h" type="" />
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN type=" 'Operations as part of Algorithms" word="include" />
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS />
+	</COMMENT>
+	<COMMENT comment_id="13" comment_scope_end="25" comment_scope_start="22" comment_text="initialization of static private member" src_file_location="/data/user-home/srijoni/spandan/MTPSMARTKT/graphSMKT/smartKT/projects/SimplComprTest/lib/foo.cpp">
+		<SYMBOLS>
+			<VarDecl id="101107985656" spelling="count" type="int" />
+			<TypeRef id="103252222620" spelling="class Base" type="Base" />
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN type=" 'Properties of Datastructure / Function / Blocks" word="static" />
+			<POGRAM_DOMAIN type=" 'Properties of Datastructure / Function / Blocks" word="private" />
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS />
+	</COMMENT>
+<COMMENT comment_id="14" comment_scope_end="1" comment_scope_start="1" comment_text="Include the header (not strictly necessary here)" src_file_location="/data/user-home/srijoni/spandan/MTPSMARTKT/graphSMKT/smartKT/projects/SimplComprTest/lib/foo.cpp">
+		<SYMBOLS>
+			<inclusionDirective id="104162627869" spelling="foo.h" type="" />
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN type=" 'Operations as part of Algorithms" word="include" />
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS />
+	</COMMENT>
+	<COMMENT comment_id="15" comment_scope_end="25" comment_scope_start="22" comment_text="initialization of static private member" src_file_location="/data/user-home/srijoni/spandan/MTPSMARTKT/graphSMKT/smartKT/projects/SimplComprTest/lib/foo.cpp">
+		<SYMBOLS>
+			<VarDecl id="101107985656" spelling="count" type="int" />
+			<TypeRef id="103252222620" spelling="class Base" type="Base" />
+		</SYMBOLS>
+		<PROGRAM_DOMAINS>
+			<POGRAM_DOMAIN type=" 'Properties of Datastructure / Function / Blocks" word="static" />
+			<POGRAM_DOMAIN type=" 'Properties of Datastructure / Function / Blocks" word="private" />
+		</PROGRAM_DOMAINS>
+		<PROBLEM_DOMAINS />
+	</COMMENT>
+</COMMENTS>

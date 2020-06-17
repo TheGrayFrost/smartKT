@@ -125,7 +125,7 @@ class MyASTVisitor : public RecursiveASTVisitor<MyASTVisitor> {
 					4. <BlockID> </ENTRY/EXIT/[StartLine,StartCol,EndLine,EndLoc]>  [pred_blocks] [succ_blocks]
 				*/
 				std::string s = f->getSourceRange().getBegin().printToString(TheContext.getSourceManager());
-				sourceCFG->print(llvm::outs(), LangOptions(), true);
+				// sourceCFG->print(llvm::outs(), LangOptions(), true);
 				llvm::outs() << CNG->getName(f) << " " << s.substr(0, s.find(":"))
 				<< "\n" << sourceCFG->size() << "\n";
 				for(auto i = sourceCFG->begin(); i != sourceCFG->end(); i++){

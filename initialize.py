@@ -65,11 +65,11 @@ def init(path):
     s += 'rm -rf build\n'
     s += 'mkdir build\n'
     s += 'cd build\n'
-    # s += 'cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..\n'
+    s += 'cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..\n'
     s += 'cmake -DCMAKE_BUILD_TYPE=Debug ..\n'
     s += 'make -j$(nproc) VERBOSE=1 > make_log.txt\n'
     s += 'mkdir -p ' + outfolder + '\n'
-    # s += 'mv compile_commands.json ' + outfolder + '/\n'
+    s += 'mv compile_commands.json ' + outfolder + '/\n'
     s += 'mv make_log.txt ' + outfolder + '/\n'
     s += 'rm ' + initfile + '\n'
     with open(initfile, 'w') as f:
@@ -77,6 +77,7 @@ def init(path):
 
     os.system('chmod +x ' + initfile)
     os.system(initfile)
+    os.system('cp ' + os.path.join(outfolder, "compile_commands.json") + ' .')
 
 # This part is responsible for generating static outputs for code files.
 def generate_static_info(path):
@@ -88,8 +89,8 @@ def generate_static_info(path):
     os.system('cd parsers && make all')
 
     if DEBUG:
-        print ('CMD: ', 'cd parsers/cfg && make && cp cfg ../')
-    os.system('cd parsers/cfg && make && cp cfg ../')
+        print ('CMD: ', 'cd parsers/cfg && make')
+    os.system('cd parsers/cfg && make')
 
     # Get compile instructions using project_parser.py
     # THIS PART WILL CHANGE FOR OTHER BUILD TOOLS
@@ -175,8 +176,8 @@ def generate_static_info(path):
 
             # Generate CFG file [Input: AST, Output: CFG information]
             if DEBUG:
-                print ('CMD: ', ' '.join(['parsers/cfg', mainfname+'.ast', '>', stripop+cfg_EXTENSION]))
-            os.system(' '.join(['parsers/cfg', mainfname+'.ast', '>', stripop+cfg_EXTENSION]))
+                print ('CMD: ', ' '.join(['parsers/cfg/cfg', mainfname+'.ast', '>', stripop+CFG_EXTENSION]))
+            os.system(' '.join(['parsers/cfg/cfg', mainfname+'.ast', '>', stripop+CFG_EXTENSION]))
             logstr += ('output :' + stripop + CFG_EXTENSION + '\n')
 
             # Add tokens to .calls.temp and produces .calls.tokens
@@ -238,3 +239,4 @@ if not os.listdir(os.path.join('parsers', 'pyelftools')):
     os.system('cd parsers && git clone https://github.com/eliben/pyelftools.git')
 init(path)
 generate_static_info(path)
+os.system("rm compile_commands.json")

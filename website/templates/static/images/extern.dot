@@ -1,0 +1,17 @@
+digraph G{
+"int [] arrCircle"->"src/main.cpp"[label="REFERED"]
+"int [] arrSquare"->"src/main.cpp"[label="REFERED"]
+"src/helper.cpp"->"build/CMakeFiles/sct.dir/src/helper.cpp.o"[label="SRC"]
+"build/lib/libfoo.so"->"build/sct"[label="SO/DL"]
+"build/CMakeFiles/sct.dir/src/helper.cpp.o"->"build/sct"[label="OBJ"]
+"src/main.cpp"->"build/CMakeFiles/sct.dir/src/main.cpp.o"[label="SRC"]
+"int count"->"src/helper.cpp"[label="REFERED"]
+"int count"->"src/main.cpp"[label="DEFINED"]
+"build/lib/CMakeFiles/foo.dir/foo.cpp.o"->"build/lib/libfoo.so"[label="OBJ"]
+"int [] arrSquare"->"src/helper.cpp"[label="DEFINED"]
+"int [] arrCircle"->"src/helper.cpp"[label="DEFINED"]
+"build/CMakeFiles/sct.dir/src/main.cpp.o"->"build/sct"[label="OBJ"]
+"int maxele"->"src/main.cpp"[label="REFERED"]
+"int maxele"->"src/helper.cpp"[label="DEFINED"]
+"lib/foo.cpp"->"build/lib/CMakeFiles/foo.dir/foo.cpp.o"[label="SRC"]
+}

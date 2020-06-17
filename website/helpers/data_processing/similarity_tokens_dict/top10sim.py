@@ -6,6 +6,8 @@ from gensim.models.keyedvectors import KeyedVectors
 from gensim.test.utils import get_tmpfile
 from gensim.models.callbacks import CallbackAny2Vec
 
+DEBUG = False
+
 class EpochSaver(CallbackAny2Vec):
 	'''Callback to save model after each epoch.'''
 	def __init__(self):
@@ -35,7 +37,8 @@ model = model.wv
 
 def get_unmatching_word(word):
     if not word in model.wv.vocab:
-        print("Word is not in vocabulary:", word)
+        if DEBUG:
+            print("Word is not in vocabulary:", word)
         return "None"
     else:
     	return "Found"
@@ -61,7 +64,6 @@ def process_string(s):
 	return p
 
 def manual_work(x):
-	print(x)
 	if x[:5]=="\"Alph":
 		x= "Alpha-beta pruning"
 	if x== "PigeonholeSort":
@@ -106,15 +108,11 @@ with open(sys.argv[3], 'w') as file:
 	xx = len(words)
 	for i in range(xx):
 		row_vals = []
-		print(i,": ",xx)
-		print(actual[i])
-		print(words[i])
 		#print (get_unmatching_word(words[i]))
 		row_vals.append(actual[i])
 		if words[i] != []:
 			most_sim = model.most_similar(positive=words[i], negative=[], topn=10)
 			for j in most_sim:
 				row_vals.append(j[0])
-				print(j[0])
 				row_vals.append(j[1])
 			writer.writerow(row_vals)

@@ -1,6 +1,7 @@
 {
     "project_name": "SimplComprTest",
     "processDynamic": true,
-    "processComments": false,
-    "model": "model_200_W10_CBOW_NEG5.bin"
+    "processComments": true,
+    "model": "corpus_book.bin",
+    "dumps" : ["sct_0_1.dump"]
 }

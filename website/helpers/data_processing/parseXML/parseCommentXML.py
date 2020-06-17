@@ -1,31 +1,24 @@
 #This code parses the comments.xml file and creates the corresponding smartKTcomment.ttl file.
+# Usgae: python3 parseCommentXML.py <all_store.p>
 
-import numpy as np
-import sys
+import sys, nltk, numpy as np
 import xml.dom.minidom
 from xml.dom.minidom import parse
-import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from rdflib import Graph, Literal, BNode, Namespace, RDF, URIRef
 from rdflib.namespace import XSD
-import argparse
-import re
-import pickle
-import string
-import csv
+import argparse, re, pickle, string, csv
+from importlib import reload as reload
 
-DEBUG = True
+DEBUG = False
 
 g = Graph()
 all_comment_tokens = list()
 
 reload(sys)
-sys.setdefaultencoding("utf-8")
 
-all_store_file = '../../Data files/mrfs_all_store.p'
-# all_store_file = '../../Data files/threads_all_store.p'
-all_store = pickle.load( open( all_store_file, "rb" ) )
+all_store = None
 
 # print(len(all_store['problem_domain']))
 
@@ -144,6 +137,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='Files needed to run the code.')
     # Inputs
+    parser.add_argument(dest='AllStore', action='store', help='Input the AllStore file path')
     parser.add_argument(dest='XMLFile', action='store', help='Input the Comment XML file path')
     parser.add_argument(dest='PICKLEFile', action='store', help='Input the PICKLE file path')
 
@@ -154,6 +148,7 @@ if __name__ == "__main__":
     parser.add_argument(dest='CommentTokensPkl', action='store', help='File path to store the comments tokens in PKL')
 
     args = vars(parser.parse_args())
+    all_store = pickle.load(open(args['AllStore'], "rb"))
     XMLfile = args['XMLFile']
     TTLFile = args['TTLFile']
     PICKLEFile = args['PICKLEFile']
@@ -199,4 +194,4 @@ if __name__ == "__main__":
         wr = csv.writer(myfile, delimiter = '\n')
         wr.writerow(all_comment_tokens)
 
-    pickle.dump( all_comment_tokens, open( args['CommentTokensPkl'], "wb" ) )
+    pickle.dump(all_comment_tokens, open( args['CommentTokensPkl'], "wb" ))

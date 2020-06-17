@@ -137,10 +137,4 @@ if __name__ == "__main__":
         for child in tag.childNodes:
             if child.nodeType != child.TEXT_NODE:
                 iterate_section(child,INPID,RUNID)
-
     g.serialize(TTLFile,format='ttl')
-
-'''
-python parseDynamicXML.py ../../xml_csv_files/libpng_xml/inp_pngtest.xml ../../TTL\ files/libpng\ TTL/final_dynamic_test.ttl ../../Data\ files/mapping_libpng_static.p
-CALLEENAME and CALLERNAME are not matching with final_static.xml
-'''

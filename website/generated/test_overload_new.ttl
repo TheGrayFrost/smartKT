@@ -1,0 +1,7 @@
+@prefix prop: <http://smartKT/ns/properties#> .
+@prefix symbol: <http://smartKT/ns/symbol#> .
+
+symbol:101378764394 prop:overloaded_sibling symbol:302855752868 .
+
+symbol:302855752868 prop:overloaded_sibling symbol:101378764394 .
+

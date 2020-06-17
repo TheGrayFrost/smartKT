@@ -173,7 +173,8 @@ def getExecutables():
 # output is returned here
 def get_response_single_query(query):
     start_time = time.time()
-    queryObj = QueryConversion(all_store_file, all_files, all_name_tokens_dic, all_comment_tokens_dict, program_domain_dict, tf_idf_name_tokens, tf_idf_symbol)
+    queryObj = QueryConversion(all_store_file, all_files, all_name_tokens_dict,\
+     all_comment_tokens_dict, program_domain_dict, tf_idf_name_tokens, tf_idf_symbol)
     ans = queryObj.execute_query(graph, TTLfile, RegexFile, query)
     end_time = time.time()
     if TIME:
@@ -255,10 +256,9 @@ def classmap_dev():
 
 @app.route('/cfgdev', methods=['GET'])
 def cfg_dev():
-    os.system("python3 aggregrate.py")
-    data = visDOT("templates/static/images/cfg.dot")
+    data = visDOT(os.path.join(generated_abs_path, "cfg.dot"))
     title = "Control Flow"
-    funcList, block2coverage, block2labels = pickle.load(open("templates/static/images/cfg.pkl", "rb"))
+    funcList, block2coverage, block2labels = pickle.load(open(os.path.join(generated_abs_path, "cfg.p"), "rb"))
     return render_template('layouts/cfg_dev.html', title=title, data=json.dumps(data),
     funcList=json.dumps(funcList), block2coverage=json.dumps(block2coverage),
     block2labels=json.dumps(block2labels))

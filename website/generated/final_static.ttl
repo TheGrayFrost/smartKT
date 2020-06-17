@@ -1,0 +1,2105 @@
+@prefix prop: <http://smartKT/ns/properties#> .
+@prefix symbol: <http://smartKT/ns/symbol#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+symbol:301246238228 prop:absolute_file_path "helper.cpp" ;
+    prop:isDecl_file_line "src/helper.cpp#11" ;
+    prop:is_a "VarDecl" ;
+    prop:is_extern_file "helper.cpp" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "count" ;
+    prop:name_token "count" ;
+    prop:size 4 ;
+    prop:spelling "count" ;
+    prop:storage_class "extern" ;
+    prop:type "int" ;
+    prop:usr "c:@count" .
+
+symbol:303869766078 prop:absolute_file_path "helper.cpp" ;
+    prop:array_size "[5]" ;
+    prop:has_id 303869766078 ;
+    prop:isDecl_file_line "src/helper.cpp#14" ;
+    prop:isDef_file_line "src/helper.cpp#14" ;
+    prop:is_a "VarDecl" ;
+    prop:is_array "True" ;
+    prop:is_defined_file "helper.cpp" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "arrSquare" ;
+    prop:name_token "Square",
+        "arr",
+        "arrSquare" ;
+    prop:size 4 ;
+    prop:spelling "arrSquare" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int [5]" ;
+    prop:usr "c:@arrSquare" .
+
+symbol:304109399143 prop:absolute_file_path "helper.cpp" ;
+    prop:array_size "[5]" ;
+    prop:has_id 304109399143 ;
+    prop:isDecl_file_line "src/helper.cpp#13" ;
+    prop:isDef_file_line "src/helper.cpp#13" ;
+    prop:is_a "VarDecl" ;
+    prop:is_array "True" ;
+    prop:is_defined_file "helper.cpp" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "arrCircle" ;
+    prop:name_token "Circle",
+        "arr",
+        "arrCircle" ;
+    prop:size 4 ;
+    prop:spelling "arrCircle" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int [5]" ;
+    prop:usr "c:@arrCircle" .
+
+symbol:304164471082 prop:absolute_file_path "helper.cpp" ;
+    prop:has_id 304164471082 ;
+    prop:isDecl_file_line "src/helper.cpp#12" ;
+    prop:isDef_file_line "src/helper.cpp#12" ;
+    prop:is_a "VarDecl" ;
+    prop:is_defined_file "helper.cpp" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "maxele" ;
+    prop:name_token "maxele" ;
+    prop:size 4 ;
+    prop:spelling "maxele" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int" ;
+    prop:usr "c:@maxele" .
+
+symbol:100576033116 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 100576033116 ;
+    prop:has_parent symbol:102931616158 ;
+    prop:isDecl_file_line "lib/foo.h#19" ;
+    prop:isDef_file_line "lib/foo.h#19" ;
+    prop:is_a "CXXConstructor" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:102931616158 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4BaseC1Ev" ;
+    prop:mangled_name "_ZN4BaseC4Ev" ;
+    prop:name_token "Base" ;
+    prop:spelling "Base" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void ()" ;
+    prop:usr "c:@S@Base@F@Base#" .
+
+symbol:100847382769 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 100847382769 ;
+    prop:has_parent symbol:102013600678 ;
+    prop:isDecl_file_line "lib/foo.h#7" ;
+    prop:isDef_file_line "lib/foo.h#7" ;
+    prop:is_a "CXXConstructor" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:102013600678 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN5PointC1Eii" ;
+    prop:mangled_name "_ZN5PointC4Eii" ;
+    prop:name_token "Point" ;
+    prop:spelling "Point" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void (int, int)" ;
+    prop:usr "c:@S@Point@F@Point#I#I#" .
+
+symbol:102496713546 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 102496713546 ;
+    prop:has_parent symbol:102931616158 ;
+    prop:isDecl_file_line "lib/foo.h#24" ;
+    prop:isDef_file_line "lib/foo.h#24" ;
+    prop:is_a "CXXDestructor" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:102931616158 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4BaseD1Ev" ;
+    prop:mangled_name "_ZN4BaseD4Ev" ;
+    prop:name_token "Base",
+        "~Base" ;
+    prop:spelling "~Base" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void () noexcept" ;
+    prop:usr "c:@S@Base@F@~Base#" .
+
+symbol:102582156798 prop:absolute_file_path "foo.h" ;
+    prop:has_id 102582156798 ;
+    prop:has_parent symbol:102562646342 ;
+    prop:isDecl_file_line "lib/foo.h#28" ;
+    prop:isDef_file_line "lib/foo.h#28" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:102562646342 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN4Base8setPointE5PointE1x" ;
+    prop:name_token "x" ;
+    prop:size 8 ;
+    prop:spelling "x" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point" ;
+    prop:usr "c:foo.h@371@S@Base@F@setPoint#$@S@Point#@x" .
+
+symbol:103379489738 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 103379489738 ;
+    prop:has_parent symbol:102931616158 ;
+    prop:isDecl_file_line "lib/foo.h#31" ;
+    prop:isDef_file_line "lib/foo.h#31" ;
+    prop:is_a "CXXMethod" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:102931616158 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4Base8getCountEv" ;
+    prop:mangled_name "_ZN4Base8getCountEv" ;
+    prop:name_token "Count",
+        "get",
+        "getCount" ;
+    prop:param_type "" ;
+    prop:return_type "int" ;
+    prop:spelling "getCount" ;
+    prop:storage_class "static" ;
+    prop:usr "c:@S@Base@F@getCount#S" .
+
+symbol:200105207093 prop:absolute_file_path "foo.h" ;
+    prop:has_id 200105207093 ;
+    prop:has_parent symbol:102625299349 ;
+    prop:isDecl_file_line "lib/foo.h#38" ;
+    prop:isDef_file_line "lib/foo.h#38" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:102625299349 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN6Square10makeSquareE5PointiE1x" ;
+    prop:name_token "x" ;
+    prop:spelling "x" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int" ;
+    prop:usr "c:foo.h@541@S@Square@F@makeSquare#$@S@Point#I#@x" .
+
+symbol:200897991887 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 200897991887 ;
+    prop:has_parent symbol:200974653263 ;
+    prop:isDecl_file_line "lib/foo.h#24" ;
+    prop:isDef_file_line "lib/foo.h#24" ;
+    prop:is_a "CXXDestructor" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:200974653263 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4BaseD1Ev" ;
+    prop:mangled_name "_ZN4BaseD4Ev" ;
+    prop:name_token "Base",
+        "~Base" ;
+    prop:spelling "~Base" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void () noexcept" ;
+    prop:usr "c:@S@Base@F@~Base#" .
+
+symbol:201948060917 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 201948060917 ;
+    prop:has_parent symbol:204147466265 ;
+    prop:isDecl_file_line "lib/foo.h#8" ;
+    prop:isDef_file_line "lib/foo.h#8" ;
+    prop:is_a "CXXConstructor" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:204147466265 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN5PointC1Ev" ;
+    prop:mangled_name "_ZN5PointC4Ev" ;
+    prop:name_token "Point" ;
+    prop:spelling "Point" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void ()" ;
+    prop:usr "c:@S@Point@F@Point#" .
+
+symbol:202469467868 prop:absolute_file_path "foo.h",
+        "main.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 202469467868 ;
+    prop:has_parent symbol:203443302841 ;
+    prop:isDecl_file_line "lib/foo.h#41" ;
+    prop:isDef_file_line "lib/foo.h#41" ;
+    prop:isUse_file_line "src/main.cpp#18" ;
+    prop:is_a "CXXConstructor",
+        "CallExpr" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:202491315388 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN6CircleC1Ev" ;
+    prop:mangled_name "_ZN6CircleC1Ev" ;
+    prop:name_token "Circle" ;
+    prop:sem_parent_id symbol:203443302841 ;
+    prop:spelling "Circle" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Circle",
+        "void () noexcept(false)" ;
+    prop:usr "c:@S@Circle@F@Circle#" .
+
+symbol:203250240560 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 203250240560 ;
+    prop:has_parent symbol:200974653263 ;
+    prop:isDecl_file_line "lib/foo.h#19" ;
+    prop:isDef_file_line "lib/foo.h#19" ;
+    prop:is_a "CXXConstructor" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:200974653263 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4BaseC1Ev" ;
+    prop:mangled_name "_ZN4BaseC4Ev" ;
+    prop:name_token "Base" ;
+    prop:spelling "Base" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void ()" ;
+    prop:usr "c:@S@Base@F@Base#" .
+
+symbol:203639874650 prop:absolute_file_path "foo.h",
+        "main.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 203639874650 ;
+    prop:has_parent symbol:202175955133 ;
+    prop:isDecl_file_line "lib/foo.h#34" ;
+    prop:isDef_file_line "lib/foo.h#34" ;
+    prop:isUse_file_line "src/main.cpp#19" ;
+    prop:is_a "CXXConstructor",
+        "CallExpr" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:202940370304 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN6SquareC1Ev" ;
+    prop:mangled_name "_ZN6SquareC1Ev" ;
+    prop:name_token "Square" ;
+    prop:sem_parent_id symbol:202175955133 ;
+    prop:spelling "Square" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Square",
+        "void () noexcept(false)" ;
+    prop:usr "c:@S@Square@F@Square#" .
+
+symbol:204257275682 prop:absolute_file_path "foo.h" ;
+    prop:has_id 204257275682 ;
+    prop:has_parent symbol:100353176111 ;
+    prop:isDecl_file_line "lib/foo.h#45" ;
+    prop:isDef_file_line "lib/foo.h#45" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:100353176111 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN6Circle10makeCircleE5PointiE1x" ;
+    prop:name_token "x" ;
+    prop:spelling "x" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int" ;
+    prop:usr "c:foo.h@630@S@Circle@F@makeCircle#$@S@Point#I#@x" .
+
+symbol:300354783716 prop:absolute_file_path "foo.h" ;
+    prop:has_id 300354783716 ;
+    prop:has_parent symbol:302855752868 ;
+    prop:isDecl_file_line "lib/foo.h#50" ;
+    prop:isDef_file_line "lib/foo.h#50" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:302855752868 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4area6CircleE1c" ;
+    prop:name_token "c" ;
+    prop:spelling "c" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Circle" ;
+    prop:usr "c:foo.h@698@F@area#$@S@Circle#@c" .
+
+symbol:300802589283 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 300802589283 ;
+    prop:has_parent symbol:300648845138 ;
+    prop:isDecl_file_line "lib/foo.h#16" ;
+    prop:isDef_file_line "lib/foo.h#16" ;
+    prop:is_a "FieldDecl" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:300648845138 ;
+    prop:linkage_kind "external" ;
+    prop:name_token "p" ;
+    prop:size 8 ;
+    prop:spelling "p" ;
+    prop:type "Point" ;
+    prop:usr "c:@S@Base@FI@p" .
+
+symbol:301002840166 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 301002840166 ;
+    prop:has_parent symbol:300648845138 ;
+    prop:isDecl_file_line "lib/foo.h#31" ;
+    prop:isDef_file_line "lib/foo.h#31" ;
+    prop:is_a "CXXMethod" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:300648845138 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4Base8getCountEv" ;
+    prop:mangled_name "_ZN4Base8getCountEv" ;
+    prop:name_token "Count",
+        "get",
+        "getCount" ;
+    prop:param_type "" ;
+    prop:return_type "int" ;
+    prop:spelling "getCount" ;
+    prop:storage_class "static" ;
+    prop:usr "c:@S@Base@F@getCount#S" .
+
+symbol:301701257926 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 301701257926 ;
+    prop:has_parent symbol:301768381981 ;
+    prop:isDecl_file_line "lib/foo.h#8" ;
+    prop:isDef_file_line "lib/foo.h#8" ;
+    prop:is_a "CXXConstructor" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:301768381981 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN5PointC1Ev" ;
+    prop:mangled_name "_ZN5PointC4Ev" ;
+    prop:name_token "Point" ;
+    prop:spelling "Point" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void ()" ;
+    prop:usr "c:@S@Point@F@Point#" .
+
+symbol:302601697050 prop:absolute_file_path "foo.h" ;
+    prop:has_id 302601697050 ;
+    prop:has_parent symbol:102625299349 ;
+    prop:isDecl_file_line "lib/foo.h#38" ;
+    prop:isDef_file_line "lib/foo.h#38" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:102625299349 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN6Square10makeSquareE5PointiE3llp" ;
+    prop:name_token "llp" ;
+    prop:spelling "llp" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point" ;
+    prop:usr "c:foo.h@530@S@Square@F@makeSquare#$@S@Point#I#@llp" .
+
+symbol:303374271578 prop:absolute_file_path "foo.h" ;
+    prop:has_id 303374271578 ;
+    prop:has_parent symbol:101378764394 ;
+    prop:isDecl_file_line "lib/foo.h#49" ;
+    prop:isDef_file_line "lib/foo.h#49" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:101378764394 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4area6SquareE1s" ;
+    prop:name_token "s" ;
+    prop:spelling "s" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Square" ;
+    prop:usr "c:foo.h@678@F@area#$@S@Square#@s" .
+
+symbol:303623743127 prop:absolute_file_path "foo.h" ;
+    prop:has_id 303623743127 ;
+    prop:has_parent symbol:100353176111 ;
+    prop:isDecl_file_line "lib/foo.h#45" ;
+    prop:isDef_file_line "lib/foo.h#45" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:100353176111 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN6Circle10makeCircleE5PointiE3llp" ;
+    prop:name_token "llp" ;
+    prop:spelling "llp" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point" ;
+    prop:usr "c:foo.h@619@S@Circle@F@makeCircle#$@S@Point#I#@llp" .
+
+symbol:303745147961 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 303745147961 ;
+    prop:has_parent symbol:300648845138 ;
+    prop:isDecl_file_line "lib/foo.h#19" ;
+    prop:isDef_file_line "lib/foo.h#19" ;
+    prop:is_a "CXXConstructor" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:300648845138 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4BaseC1Ev" ;
+    prop:mangled_name "_ZN4BaseC4Ev" ;
+    prop:name_token "Base" ;
+    prop:spelling "Base" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void ()" ;
+    prop:usr "c:@S@Base@F@Base#" .
+
+symbol:304054519064 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 304054519064 ;
+    prop:has_parent symbol:300648845138 ;
+    prop:isDecl_file_line "lib/foo.h#24" ;
+    prop:isDef_file_line "lib/foo.h#24" ;
+    prop:is_a "CXXDestructor" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:300648845138 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4BaseD1Ev" ;
+    prop:mangled_name "_ZN4BaseD4Ev" ;
+    prop:name_token "Base",
+        "~Base" ;
+    prop:spelling "~Base" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void () noexcept" ;
+    prop:usr "c:@S@Base@F@~Base#" .
+
+symbol:200391139105 prop:absolute_file_path "foo.h" ;
+    prop:has_child symbol:204147466265 ;
+    prop:has_id 200391139105 ;
+    prop:has_parent symbol:100353176111 ;
+    prop:isDecl_file_line "lib/foo.h#45" ;
+    prop:isDef_file_line "lib/foo.h#45" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:100353176111 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN6Circle10makeCircleE5PointiE3llp" ;
+    prop:name_token "llp" ;
+    prop:spelling "llp" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point" ;
+    prop:usr "c:foo.h@619@S@Circle@F@makeCircle#$@S@Point#I#@llp" .
+
+symbol:200680237894 prop:absolute_file_path "main.cpp" ;
+    prop:array_size "[]" ;
+    prop:has_child symbol:200680237894 ;
+    prop:has_parent symbol:200680237894 ;
+    prop:isDecl_file_line "src/main.cpp#11" ;
+    prop:isUse_file_line "src/main.cpp#25" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_array "True" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_extern_file "main.cpp" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "arrCircle" ;
+    prop:name_token "Circle",
+        "arr",
+        "arrCircle" ;
+    prop:size 4 ;
+    prop:spelling "arrCircle" ;
+    prop:storage_class "extern" ;
+    prop:type "int *",
+        "int []" ;
+    prop:usr "c:@arrCircle" .
+
+symbol:200939214155 prop:absolute_file_path "foo.h",
+        "main.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:201478306585,
+        symbol:203443302841 ;
+    prop:has_id 200939214155 ;
+    prop:isDecl_file_line "lib/foo.h#41" ;
+    prop:isDef_file_line "lib/foo.h#41" ;
+    prop:isUse_file_line "src/main.cpp#27",
+        "src/main.cpp#4" ;
+    prop:is_a "CXXConstructor",
+        "CallExpr" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:202491315388 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN6CircleC1ERKS_" ;
+    prop:mangled_name "_ZN6CircleC1ERKS_" ;
+    prop:name_token "Circle" ;
+    prop:spelling "Circle" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Circle",
+        "void (const Circle &) noexcept" ;
+    prop:usr "c:@S@Circle@F@Circle#&1$@S@Circle#" .
+
+symbol:201039325255 prop:absolute_file_path "main.cpp" ;
+    prop:array_size "[]" ;
+    prop:has_child symbol:201039325255 ;
+    prop:has_parent symbol:201039325255 ;
+    prop:isDecl_file_line "src/main.cpp#11" ;
+    prop:isUse_file_line "src/main.cpp#24" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_array "True" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_extern_file "main.cpp" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "arrSquare" ;
+    prop:name_token "Square",
+        "arr",
+        "arrSquare" ;
+    prop:size 4 ;
+    prop:spelling "arrSquare" ;
+    prop:storage_class "extern" ;
+    prop:type "int *",
+        "int []" ;
+    prop:usr "c:@arrSquare" .
+
+symbol:201184962880 prop:absolute_file_path "main.cpp" ;
+    prop:has_child symbol:201184962880 ;
+    prop:has_parent symbol:201184962880 ;
+    prop:isDecl_file_line "src/main.cpp#13" ;
+    prop:isRead_file_line "src/main.cpp#23" ;
+    prop:isUse_file_line "src/main.cpp#23" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_extern_file "main.cpp" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "maxele" ;
+    prop:name_token "maxele" ;
+    prop:size 4 ;
+    prop:spelling "maxele" ;
+    prop:storage_class "extern" ;
+    prop:type "int" ;
+    prop:usr "c:@maxele" .
+
+symbol:201263823661 prop:absolute_file_path "main.cpp" ;
+    prop:has_child symbol:201263823661 ;
+    prop:has_id 201263823661 ;
+    prop:has_parent symbol:201263823661 ;
+    prop:isDecl_file_line "src/main.cpp#12" ;
+    prop:isDef_file_line "src/main.cpp#12" ;
+    prop:isUse_file_line "src/main.cpp#28",
+        "src/main.cpp#30",
+        "src/main.cpp#33" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "count" ;
+    prop:name_token "count" ;
+    prop:size 4 ;
+    prop:spelling "count" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int" ;
+    prop:usr "c:@count" .
+
+symbol:201590111024 prop:absolute_file_path "foo.h" ;
+    prop:has_child symbol:204147466265 ;
+    prop:has_id 201590111024 ;
+    prop:has_parent symbol:102625299349 ;
+    prop:isDecl_file_line "lib/foo.h#38" ;
+    prop:isDef_file_line "lib/foo.h#38" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:102625299349 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN6Square10makeSquareE5PointiE3llp" ;
+    prop:name_token "llp" ;
+    prop:spelling "llp" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point" ;
+    prop:usr "c:foo.h@530@S@Square@F@makeSquare#$@S@Point#I#@llp" .
+
+symbol:201601583886 prop:absolute_file_path "foo.h" ;
+    prop:has_child symbol:202491315388 ;
+    prop:has_id 201601583886 ;
+    prop:has_parent symbol:302855752868 ;
+    prop:isDecl_file_line "lib/foo.h#50" ;
+    prop:isDef_file_line "lib/foo.h#50" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:302855752868 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4area6CircleE1c" ;
+    prop:name_token "c" ;
+    prop:spelling "c" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Circle" ;
+    prop:usr "c:foo.h@698@F@area#$@S@Circle#@c" .
+
+symbol:202797369276 prop:absolute_file_path "foo.h",
+        "main.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:202175955133,
+        symbol:202412853423 ;
+    prop:has_id 202797369276 ;
+    prop:isDecl_file_line "lib/foo.h#34" ;
+    prop:isDef_file_line "lib/foo.h#34" ;
+    prop:isUse_file_line "src/main.cpp#27",
+        "src/main.cpp#4" ;
+    prop:is_a "CXXConstructor",
+        "CallExpr" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:202940370304 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN6SquareC1ERKS_" ;
+    prop:mangled_name "_ZN6SquareC1ERKS_" ;
+    prop:name_token "Square" ;
+    prop:spelling "Square" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Square",
+        "void (const Square &) noexcept" ;
+    prop:usr "c:@S@Square@F@Square#&1$@S@Square#" .
+
+symbol:203817833550 prop:absolute_file_path "main.cpp" ;
+    prop:has_child symbol:203817833550 ;
+    prop:has_id 203817833550 ;
+    prop:has_parent symbol:203817833550 ;
+    prop:isDecl_file_line "src/main.cpp#17" ;
+    prop:isDef_file_line "src/main.cpp#17" ;
+    prop:isUse_file_line "src/main.cpp#23",
+        "src/main.cpp#24",
+        "src/main.cpp#25",
+        "src/main.cpp#26" ;
+    prop:isWritten_file_line "src/main.cpp#23" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:lex_parent_id symbol:200954073876 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4mainE1i" ;
+    prop:name_token "i" ;
+    prop:size 4 ;
+    prop:spelling "i" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int" ;
+    prop:usr "c:main.cpp@315@F@main#@i" .
+
+symbol:204018532364 prop:absolute_file_path "foo.h" ;
+    prop:has_child symbol:202940370304 ;
+    prop:has_id 204018532364 ;
+    prop:has_parent symbol:101378764394 ;
+    prop:isDecl_file_line "lib/foo.h#49" ;
+    prop:isDef_file_line "lib/foo.h#49" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:101378764394 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4area6SquareE1s" ;
+    prop:name_token "s" ;
+    prop:spelling "s" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Square" ;
+    prop:usr "c:foo.h@678@F@area#$@S@Square#@s" .
+
+symbol:301004312465 prop:absolute_file_path "foo.h" ;
+    prop:has_id 301004312465 ;
+    prop:has_parent symbol:200928634673,
+        symbol:303556678792 ;
+    prop:isDecl_file_line "lib/foo.h#28" ;
+    prop:isDef_file_line "lib/foo.h#28" ;
+    prop:isUse_file_line "lib/foo.h#28" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_called_file "foo.h_1" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:303556678792 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN4Base8setPointE5PointE1x" ;
+    prop:name_token "x" ;
+    prop:spelling "x" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point",
+        "const Point" ;
+    prop:usr "c:foo.h@371@S@Base@F@setPoint#$@S@Point#@x" .
+
+symbol:302347631484 prop:absolute_file_path "helper.cpp" ;
+    prop:has_child symbol:301296214220 ;
+    prop:has_id 302347631484 ;
+    prop:has_parent symbol:202854211754 ;
+    prop:isDecl_file_line "src/helper.cpp#7" ;
+    prop:isDef_file_line "src/helper.cpp#7" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "helper.cpp" ;
+    prop:lex_parent_id symbol:202854211754 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ7compare6Circle6SquareE1c" ;
+    prop:name_token "c" ;
+    prop:spelling "c" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Circle" ;
+    prop:usr "c:helper.cpp@81@F@compare#$@S@Circle#$@S@Square#@c" .
+
+symbol:302820180022 prop:absolute_file_path "helper.cpp" ;
+    prop:has_child symbol:303696096832 ;
+    prop:has_id 302820180022 ;
+    prop:has_parent symbol:202854211754 ;
+    prop:isDecl_file_line "src/helper.cpp#7" ;
+    prop:isDef_file_line "src/helper.cpp#7" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "helper.cpp" ;
+    prop:lex_parent_id symbol:202854211754 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ7compare6Circle6SquareE1s" ;
+    prop:name_token "s" ;
+    prop:spelling "s" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Square" ;
+    prop:usr "c:helper.cpp@91@F@compare#$@S@Circle#$@S@Square#@s" .
+
+symbol:102628714979 prop:absolute_file_path "foo.cpp" ;
+    prop:has_child symbol:102628714979 ;
+    prop:has_id 102628714979 ;
+    prop:has_parent symbol:102625299349,
+        symbol:102628714979 ;
+    prop:isDecl_file_line "lib/foo.cpp#7" ;
+    prop:isDef_file_line "lib/foo.cpp#7" ;
+    prop:isRead_file_line "lib/foo.cpp#9" ;
+    prop:isUse_file_line "lib/foo.cpp#9" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "foo.cpp" ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:lex_parent_id symbol:102625299349 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN6Square10makeSquareE5PointiE1x" ;
+    prop:name_token "x" ;
+    prop:size 4 ;
+    prop:spelling "x" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int" ;
+    prop:usr "c:foo.cpp@193@S@Square@F@makeSquare#$@S@Point#I#@x" .
+
+symbol:103986400645 prop:absolute_file_path "foo.cpp" ;
+    prop:has_child symbol:103974852037 ;
+    prop:has_id 103986400645 ;
+    prop:has_parent symbol:101378764394,
+        symbol:204002931485 ;
+    prop:isDecl_file_line "lib/foo.cpp#17" ;
+    prop:isDef_file_line "lib/foo.cpp#17" ;
+    prop:isUse_file_line "lib/foo.cpp#18" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "foo.cpp" ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:lex_parent_id symbol:101378764394 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4area6SquareE1s" ;
+    prop:name_token "s" ;
+    prop:size 12 ;
+    prop:spelling "s" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Square" ;
+    prop:usr "c:foo.cpp@315@F@area#$@S@Square#@s" .
+
+symbol:104222372837 prop:absolute_file_path "foo.cpp" ;
+    prop:has_child symbol:104222372837 ;
+    prop:has_id 104222372837 ;
+    prop:has_parent symbol:100353176111,
+        symbol:104222372837 ;
+    prop:isDecl_file_line "lib/foo.cpp#12" ;
+    prop:isDef_file_line "lib/foo.cpp#12" ;
+    prop:isRead_file_line "lib/foo.cpp#14" ;
+    prop:isUse_file_line "lib/foo.cpp#14" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "foo.cpp" ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:lex_parent_id symbol:100353176111 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN6Circle10makeCircleE5PointiE1x" ;
+    prop:name_token "x" ;
+    prop:size 4 ;
+    prop:spelling "x" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int" ;
+    prop:usr "c:foo.cpp@267@S@Circle@F@makeCircle#$@S@Point#I#@x" .
+
+symbol:203738238113 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:203502495398 ;
+    prop:has_id 203738238113 ;
+    prop:has_parent symbol:200974653263 ;
+    prop:isDecl_file_line "lib/foo.h#28" ;
+    prop:isDef_file_line "lib/foo.h#28" ;
+    prop:is_a "CXXMethod" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:200974653263 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4Base8setPointE5Point" ;
+    prop:mangled_name "_ZN4Base8setPointE5Point" ;
+    prop:name_token "Point",
+        "set",
+        "setPoint" ;
+    prop:param_type "Point" ;
+    prop:return_type "void" ;
+    prop:spelling "setPoint" ;
+    prop:storage_class "default_auto" ;
+    prop:usr "c:@S@Base@F@setPoint#$@S@Point#" .
+
+symbol:302930646226 prop:absolute_file_path "helper.cpp" ;
+    prop:has_child symbol:301296214220 ;
+    prop:has_id 302930646226 ;
+    prop:has_parent symbol:202028645034,
+        symbol:302855752868 ;
+    prop:isDecl_file_line "src/helper.cpp#3" ;
+    prop:isDef_file_line "src/helper.cpp#3" ;
+    prop:isUse_file_line "src/helper.cpp#4" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "helper.cpp" ;
+    prop:is_defined_file "helper.cpp" ;
+    prop:lex_parent_id symbol:302855752868 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4area6CircleE1c" ;
+    prop:name_token "c" ;
+    prop:size 12 ;
+    prop:spelling "c" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Circle" ;
+    prop:usr "c:helper.cpp@27@F@area#$@S@Circle#@c" .
+
+symbol:303556678792 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:301004312465 ;
+    prop:has_id 303556678792 ;
+    prop:has_parent symbol:300648845138 ;
+    prop:isDecl_file_line "lib/foo.h#28" ;
+    prop:isDef_file_line "lib/foo.h#28" ;
+    prop:is_a "CXXMethod" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:300648845138 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4Base8setPointE5Point" ;
+    prop:mangled_name "_ZN4Base8setPointE5Point" ;
+    prop:name_token "Point",
+        "set",
+        "setPoint" ;
+    prop:param_type "Point" ;
+    prop:return_type "void" ;
+    prop:spelling "setPoint" ;
+    prop:storage_class "default_auto" ;
+    prop:usr "c:@S@Base@F@setPoint#$@S@Point#" .
+
+symbol:101107985656 prop:absolute_file_path "foo.cpp",
+        "foo.h" ;
+    prop:access_specifier "Private" ;
+    prop:has_child symbol:101107985656,
+        symbol:102931616158 ;
+    prop:has_id 101107985656 ;
+    prop:has_parent symbol:101107985656,
+        symbol:200974653263 ;
+    prop:isDecl_file_line "lib/foo.cpp#23",
+        "lib/foo.h#14" ;
+    prop:isDef_file_line "lib/foo.cpp#23" ;
+    prop:isUse_file_line "lib/foo.h#20",
+        "lib/foo.h#25",
+        "lib/foo.h#31" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_called_file "foo.h",
+        "foo.h_1" ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:is_extern_file "foo.h" ;
+    prop:is_static "True" ;
+    prop:lex_parent_id symbol:,
+        symbol:200974653263 ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "_ZN4Base5countE" ;
+    prop:name_token "count" ;
+    prop:sem_parent_id symbol:102931616158 ;
+    prop:size 4 ;
+    prop:spelling "count" ;
+    prop:storage_class "default_auto",
+        "static" ;
+    prop:type "int" ;
+    prop:usr "c:@S@Base@count" .
+
+symbol:101121185691 prop:absolute_file_path "foo.cpp",
+        "foo.h" ;
+    prop:has_child symbol:100353176111 ;
+    prop:has_id 101121185691 ;
+    prop:has_parent symbol:100353176111 ;
+    prop:isDecl_file_line "lib/foo.h#41" ;
+    prop:isDef_file_line "lib/foo.h#41" ;
+    prop:isUse_file_line "lib/foo.cpp#12" ;
+    prop:is_a "ClassDecl",
+        "TypeRef" ;
+    prop:is_called_file "foo.cpp" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Circle",
+        "class",
+        "class Circle" ;
+    prop:size 12 ;
+    prop:spelling "Circle",
+        "class Circle" ;
+    prop:type "Circle" ;
+    prop:usr "c:@S@Circle" .
+
+symbol:200129986658 prop:absolute_file_path "foo.h" ;
+    prop:has_child symbol:200129986658 ;
+    prop:has_id 200129986658 ;
+    prop:has_parent symbol:200129986658,
+        symbol:200140975045,
+        symbol:300736181753 ;
+    prop:isDecl_file_line "lib/foo.h#7" ;
+    prop:isDef_file_line "lib/foo.h#7" ;
+    prop:isUse_file_line "lib/foo.h#7" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "foo.h",
+        "foo.h_1" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:200140975045 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN5PointC1EiiE1a" ;
+    prop:name_token "a" ;
+    prop:sem_parent_id symbol:200140975045,
+        symbol:300736181753 ;
+    prop:size 4 ;
+    prop:spelling "a" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int" ;
+    prop:usr "c:foo.h@116@S@Point@F@Point#I#I#@a" .
+
+symbol:200545039082 prop:absolute_file_path "foo.h",
+        "main.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:200545039082,
+        symbol:200974653263 ;
+    prop:has_id 200545039082 ;
+    prop:has_parent symbol:200545039082,
+        symbol:200974653263 ;
+    prop:isDecl_file_line "lib/foo.h#31" ;
+    prop:isDef_file_line "lib/foo.h#31" ;
+    prop:isUse_file_line "src/main.cpp#21" ;
+    prop:isWritten_file_line "src/main.cpp#21" ;
+    prop:is_a "CXXMethod",
+        "CallExpr",
+        "DeclRefExpr" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol:200974653263 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4Base8getCountEv" ;
+    prop:mangled_name "_ZN4Base8getCountEv" ;
+    prop:name_token "Count",
+        "get",
+        "getCount" ;
+    prop:param_type "" ;
+    prop:return_type "int" ;
+    prop:spelling "getCount" ;
+    prop:storage_class "static" ;
+    prop:type "int",
+        "int ()",
+        "int (*)()" ;
+    prop:usr "c:@S@Base@F@getCount#S" .
+
+symbol:200564341192 prop:absolute_file_path "foo.h" ;
+    prop:has_child symbol:200564341192 ;
+    prop:has_id 200564341192 ;
+    prop:has_parent symbol:200140975045,
+        symbol:200564341192,
+        symbol:300736181753 ;
+    prop:isDecl_file_line "lib/foo.h#7" ;
+    prop:isDef_file_line "lib/foo.h#7" ;
+    prop:isUse_file_line "lib/foo.h#7" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "foo.h",
+        "foo.h_1" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:200140975045 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN5PointC1EiiE1b" ;
+    prop:name_token "b" ;
+    prop:sem_parent_id symbol:200140975045,
+        symbol:300736181753 ;
+    prop:size 4 ;
+    prop:spelling "b" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int" ;
+    prop:usr "c:foo.h@123@S@Point@F@Point#I#I#@b" .
+
+symbol:200954073876 prop:absolute_file_path "main.cpp" ;
+    prop:has_id 200954073876 ;
+    prop:isDecl_file_line "src/main.cpp#16" ;
+    prop:isDef_file_line "src/main.cpp#16" ;
+    prop:is_a "FunctionDecl" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "main" ;
+    prop:mangled_name "main" ;
+    prop:name_token "main" ;
+    prop:param_type "" ;
+    prop:return_type "int" ;
+    prop:spelling "main" ;
+    prop:storage_class "default_auto" ;
+    prop:usr "c:@F@main#" .
+
+symbol:202028645034 prop:absolute_file_path "foo.cpp",
+        "foo.h",
+        "helper.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:202028645034,
+        symbol:302930646226 ;
+    prop:has_id 202028645034 ;
+    prop:has_parent symbol:202028645034,
+        symbol:202491315388 ;
+    prop:isDecl_file_line "lib/foo.h#43" ;
+    prop:isDef_file_line "lib/foo.h#43" ;
+    prop:isUse_file_line "lib/foo.cpp#14",
+        "src/helper.cpp#4" ;
+    prop:isWritten_file_line "lib/foo.cpp#14",
+        "src/helper.cpp#4" ;
+    prop:is_a "FieldDecl",
+        "MemberRefExpr" ;
+    prop:is_called_file "foo.cpp",
+        "helper.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:202491315388 ;
+    prop:linkage_kind "external" ;
+    prop:name_token "rad" ;
+    prop:size 4 ;
+    prop:spelling "rad" ;
+    prop:type "int" ;
+    prop:usr "c:@S@Circle@FI@rad" .
+
+symbol:203719287942 prop:absolute_file_path "foo.cpp",
+        "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:203719287942 ;
+    prop:has_id 203719287942 ;
+    prop:has_parent symbol:200140975045,
+        symbol:203719287942,
+        symbol:204147466265 ;
+    prop:isDecl_file_line "lib/foo.h#6" ;
+    prop:isDef_file_line "lib/foo.h#6" ;
+    prop:isRead_file_line "lib/foo.cpp#4" ;
+    prop:isUse_file_line "lib/foo.cpp#4",
+        "lib/foo.h#7" ;
+    prop:isWritten_file_line "lib/foo.cpp#4" ;
+    prop:is_a "FieldDecl",
+        "MemberRef",
+        "MemberRefExpr" ;
+    prop:is_called_file "foo.cpp",
+        "foo.h" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:204147466265 ;
+    prop:linkage_kind "external" ;
+    prop:name_token "y" ;
+    prop:size 4 ;
+    prop:spelling "y" ;
+    prop:type "int" ;
+    prop:usr "c:@S@Point@FI@y" .
+
+symbol:204002931485 prop:absolute_file_path "foo.cpp",
+        "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:103986400645,
+        symbol:204002931485 ;
+    prop:has_id 204002931485 ;
+    prop:has_parent symbol:202940370304,
+        symbol:204002931485 ;
+    prop:isDecl_file_line "lib/foo.h#36" ;
+    prop:isDef_file_line "lib/foo.h#36" ;
+    prop:isRead_file_line "lib/foo.cpp#18" ;
+    prop:isUse_file_line "lib/foo.cpp#18",
+        "lib/foo.cpp#9" ;
+    prop:isWritten_file_line "lib/foo.cpp#18",
+        "lib/foo.cpp#9" ;
+    prop:is_a "FieldDecl",
+        "MemberRefExpr" ;
+    prop:is_called_file "foo.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:202940370304 ;
+    prop:linkage_kind "external" ;
+    prop:name_token "len" ;
+    prop:size 4 ;
+    prop:spelling "len" ;
+    prop:type "int" ;
+    prop:usr "c:@S@Square@FI@len" .
+
+symbol:204140677018 prop:absolute_file_path "foo.cpp",
+        "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:204140677018 ;
+    prop:has_id 204140677018 ;
+    prop:has_parent symbol:200140975045,
+        symbol:204140677018,
+        symbol:204147466265 ;
+    prop:isDecl_file_line "lib/foo.h#6" ;
+    prop:isDef_file_line "lib/foo.h#6" ;
+    prop:isRead_file_line "lib/foo.cpp#4" ;
+    prop:isUse_file_line "lib/foo.cpp#4",
+        "lib/foo.h#7" ;
+    prop:isWritten_file_line "lib/foo.cpp#4" ;
+    prop:is_a "FieldDecl",
+        "MemberRef",
+        "MemberRefExpr" ;
+    prop:is_called_file "foo.cpp",
+        "foo.h" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:204147466265 ;
+    prop:linkage_kind "external" ;
+    prop:name_token "x" ;
+    prop:size 4 ;
+    prop:spelling "x" ;
+    prop:type "int" ;
+    prop:usr "c:@S@Point@FI@x" .
+
+symbol:301768381981 prop:absolute_file_path "foo.h" ;
+    prop:has_child symbol:300736181753,
+        symbol:301701257926 ;
+    prop:has_id 301768381981 ;
+    prop:isDecl_file_line "lib/foo.h#5" ;
+    prop:isDef_file_line "lib/foo.h#5" ;
+    prop:is_a "StructDecl" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Point" ;
+    prop:size 8 ;
+    prop:spelling "Point" ;
+    prop:type "Point" ;
+    prop:usr "c:@S@Point" .
+
+symbol:303696096832 prop:absolute_file_path "foo.h",
+        "helper.cpp" ;
+    prop:has_child symbol:102625299349,
+        symbol:300648845138 ;
+    prop:has_id 303696096832 ;
+    prop:has_parent symbol:302820180022 ;
+    prop:isDecl_file_line "lib/foo.h#34" ;
+    prop:isDef_file_line "lib/foo.h#34" ;
+    prop:isUse_file_line "src/helper.cpp#7" ;
+    prop:is_a "ClassDecl",
+        "TypeRef" ;
+    prop:is_called_file "helper.cpp" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:is_subclass_of symbol:300648845138 ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Square",
+        "class",
+        "class Square" ;
+    prop:spelling "Square",
+        "class Square" ;
+    prop:type "Square" ;
+    prop:usr "c:@S@Square" .
+
+symbol:100052015748 prop:absolute_file_path "foo.cpp",
+        "foo.h",
+        "main.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:100052015748,
+        symbol:102013600678,
+        symbol:201396957542 ;
+    prop:has_id 100052015748 ;
+    prop:has_parent symbol:100052015748,
+        symbol:204147466265 ;
+    prop:isDecl_file_line "lib/foo.cpp#3",
+        "lib/foo.h#9" ;
+    prop:isDef_file_line "lib/foo.cpp#3" ;
+    prop:isUse_file_line "src/main.cpp#28" ;
+    prop:is_a "CXXMethod",
+        "CallExpr",
+        "MemberRefExpr" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:is_extern_file "foo.h" ;
+    prop:lex_parent_id symbol:,
+        symbol:204147466265 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN5Point16hamming_distanceEv" ;
+    prop:mangled_name "_ZN5Point16hamming_distanceEv" ;
+    prop:name_token "distance",
+        "hamming",
+        "hamming_distance" ;
+    prop:param_type "" ;
+    prop:return_type "int" ;
+    prop:sem_parent_id symbol:102013600678 ;
+    prop:spelling "hamming_distance" ;
+    prop:storage_class "default_auto" ;
+    prop:type "<bound member function type>",
+        "int" ;
+    prop:usr "c:@S@Point@F@hamming_distance#" .
+
+symbol:100394972359 prop:absolute_file_path "foo.cpp" ;
+    prop:has_child symbol:100394972359,
+        symbol:102013600678 ;
+    prop:has_id 100394972359 ;
+    prop:has_parent symbol:100353176111,
+        symbol:100394972359,
+        symbol:201807466413 ;
+    prop:isDecl_file_line "lib/foo.cpp#12" ;
+    prop:isDef_file_line "lib/foo.cpp#12" ;
+    prop:isUse_file_line "lib/foo.cpp#13" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "foo.cpp" ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:lex_parent_id symbol:100353176111 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN6Circle10makeCircleE5PointiE3llp" ;
+    prop:name_token "llp" ;
+    prop:size 8 ;
+    prop:spelling "llp" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point",
+        "const Point" ;
+    prop:usr "c:foo.cpp@256@S@Circle@F@makeCircle#$@S@Point#I#@llp" .
+
+symbol:101552115860 prop:absolute_file_path "foo.cpp" ;
+    prop:has_child symbol:101552115860,
+        symbol:102013600678 ;
+    prop:has_id 101552115860 ;
+    prop:has_parent symbol:101552115860,
+        symbol:102625299349,
+        symbol:201807466413 ;
+    prop:isDecl_file_line "lib/foo.cpp#7" ;
+    prop:isDef_file_line "lib/foo.cpp#7" ;
+    prop:isUse_file_line "lib/foo.cpp#8" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "foo.cpp" ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:lex_parent_id symbol:102625299349 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN6Square10makeSquareE5PointiE3llp" ;
+    prop:name_token "llp" ;
+    prop:size 8 ;
+    prop:spelling "llp" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point",
+        "const Point" ;
+    prop:usr "c:foo.cpp@182@S@Square@F@makeSquare#$@S@Point#I#@llp" .
+
+symbol:103974852037 prop:absolute_file_path "foo.cpp",
+        "foo.h" ;
+    prop:has_child symbol:102625299349 ;
+    prop:has_id 103974852037 ;
+    prop:has_parent symbol:102625299349,
+        symbol:103986400645 ;
+    prop:isDecl_file_line "lib/foo.h#34" ;
+    prop:isDef_file_line "lib/foo.h#34" ;
+    prop:isUse_file_line "lib/foo.cpp#17",
+        "lib/foo.cpp#7" ;
+    prop:is_a "ClassDecl",
+        "TypeRef" ;
+    prop:is_called_file "foo.cpp" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Square",
+        "class",
+        "class Square" ;
+    prop:size 12 ;
+    prop:spelling "Square",
+        "class Square" ;
+    prop:type "Square" ;
+    prop:usr "c:@S@Square" .
+
+symbol:200928634673 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:200928634673,
+        symbol:201396957542,
+        symbol:203502495398,
+        symbol:301004312465 ;
+    prop:has_id 200928634673 ;
+    prop:has_parent symbol:200928634673 ;
+    prop:isDecl_file_line "lib/foo.h#5" ;
+    prop:isDef_file_line "lib/foo.h#5" ;
+    prop:isUse_file_line "lib/foo.h#28" ;
+    prop:is_a "CXXMethod",
+        "CallExpr",
+        "DeclRefExpr" ;
+    prop:is_called_file "foo.h",
+        "foo.h_1" ;
+    prop:is_defined_file "foo.h" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol:204147466265 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN5PointaSERKS_" ;
+    prop:mangled_name "_ZN5PointaSERKS_" ;
+    prop:name_token "operator",
+        "operator=" ;
+    prop:param_type "const Point & noexcept" ;
+    prop:return_type "Point &" ;
+    prop:spelling "operator=" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point",
+        "Point &(*)(const Point &) noexcept",
+        "Point &(const Point &) noexcept" ;
+    prop:usr "c:@S@Point@F@operator=#&1$@S@Point#" .
+
+symbol:201396957542 prop:absolute_file_path "foo.h",
+        "main.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:203443302841,
+        symbol:204147466265 ;
+    prop:has_id 201396957542 ;
+    prop:has_parent symbol:100052015748,
+        symbol:200928634673,
+        symbol:200974653263 ;
+    prop:isDecl_file_line "lib/foo.h#16" ;
+    prop:isDef_file_line "lib/foo.h#16" ;
+    prop:isUse_file_line "lib/foo.h#28",
+        "src/main.cpp#28" ;
+    prop:is_a "FieldDecl",
+        "MemberRefExpr" ;
+    prop:is_called_file "foo.h",
+        "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:200974653263 ;
+    prop:linkage_kind "external" ;
+    prop:name_token "p" ;
+    prop:size 8 ;
+    prop:spelling "p" ;
+    prop:type "Point" ;
+    prop:usr "c:@S@Base@FI@p" .
+
+symbol:201478306585 prop:absolute_file_path "main.cpp" ;
+    prop:has_child symbol:201478306585,
+        symbol:202491315388 ;
+    prop:has_id 201478306585 ;
+    prop:has_parent symbol:200939214155,
+        symbol:201478306585,
+        symbol:202854211754 ;
+    prop:isDecl_file_line "src/main.cpp#3" ;
+    prop:isDef_file_line "src/main.cpp#3" ;
+    prop:isUse_file_line "src/main.cpp#4" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:lex_parent_id symbol:202854211754 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ7compare6Circle6SquareE1c" ;
+    prop:name_token "c" ;
+    prop:size 12 ;
+    prop:spelling "c" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Circle",
+        "const Circle" ;
+    prop:usr "c:main.cpp@97@F@compare#$@S@Circle#$@S@Square#@c" .
+
+symbol:202412853423 prop:absolute_file_path "main.cpp" ;
+    prop:has_child symbol:202412853423,
+        symbol:202940370304 ;
+    prop:has_id 202412853423 ;
+    prop:has_parent symbol:202412853423,
+        symbol:202797369276,
+        symbol:202854211754 ;
+    prop:isDecl_file_line "src/main.cpp#3" ;
+    prop:isDef_file_line "src/main.cpp#3" ;
+    prop:isUse_file_line "src/main.cpp#4" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:lex_parent_id symbol:202854211754 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ7compare6Circle6SquareE1s" ;
+    prop:name_token "s" ;
+    prop:size 12 ;
+    prop:spelling "s" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Square",
+        "const Square" ;
+    prop:usr "c:main.cpp@107@F@compare#$@S@Circle#$@S@Square#@s" .
+
+symbol:203502495398 prop:absolute_file_path "foo.h" ;
+    prop:has_child symbol:203502495398,
+        symbol:204147466265 ;
+    prop:has_id 203502495398 ;
+    prop:has_parent symbol:200928634673,
+        symbol:203502495398,
+        symbol:203738238113 ;
+    prop:isDecl_file_line "lib/foo.h#28" ;
+    prop:isDef_file_line "lib/foo.h#28" ;
+    prop:isUse_file_line "lib/foo.h#28" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "foo.h" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:203738238113 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN4Base8setPointE5PointE1x" ;
+    prop:name_token "x" ;
+    prop:spelling "x" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point",
+        "const Point" ;
+    prop:usr "c:foo.h@371@S@Base@F@setPoint#$@S@Point#@x" .
+
+symbol:300736181753 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:200129986658,
+        symbol:200564341192 ;
+    prop:has_id 300736181753 ;
+    prop:has_parent symbol:301768381981 ;
+    prop:isDecl_file_line "lib/foo.h#7" ;
+    prop:isDef_file_line "lib/foo.h#7" ;
+    prop:is_a "CXXConstructor" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:301768381981 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN5PointC1Eii" ;
+    prop:mangled_name "_ZN5PointC4Eii" ;
+    prop:name_token "Point" ;
+    prop:spelling "Point" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void (int, int)" ;
+    prop:usr "c:@S@Point@F@Point#I#I#" .
+
+symbol:301296214220 prop:absolute_file_path "foo.h",
+        "helper.cpp" ;
+    prop:has_child symbol:100353176111,
+        symbol:300648845138 ;
+    prop:has_id 301296214220 ;
+    prop:has_parent symbol:302347631484,
+        symbol:302930646226 ;
+    prop:isDecl_file_line "lib/foo.h#41" ;
+    prop:isDef_file_line "lib/foo.h#41" ;
+    prop:isUse_file_line "src/helper.cpp#3",
+        "src/helper.cpp#7" ;
+    prop:is_a "ClassDecl",
+        "TypeRef" ;
+    prop:is_called_file "helper.cpp" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:is_subclass_of symbol:300648845138 ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Circle",
+        "class",
+        "class Circle" ;
+    prop:size 12 ;
+    prop:spelling "Circle",
+        "class Circle" ;
+    prop:type "Circle" ;
+    prop:usr "c:@S@Circle" .
+
+symbol:102013600678 prop:absolute_file_path "foo.cpp",
+        "foo.h" ;
+    prop:has_child symbol:100847382769 ;
+    prop:has_id 102013600678 ;
+    prop:has_parent symbol:100052015748,
+        symbol:100394972359,
+        symbol:101552115860 ;
+    prop:isDecl_file_line "lib/foo.h#5" ;
+    prop:isDef_file_line "lib/foo.h#5" ;
+    prop:isUse_file_line "lib/foo.cpp#12",
+        "lib/foo.cpp#3",
+        "lib/foo.cpp#7" ;
+    prop:is_a "StructDecl",
+        "TypeRef" ;
+    prop:is_called_file "foo.cpp" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Point",
+        "struct",
+        "struct Point" ;
+    prop:size 8 ;
+    prop:spelling "Point",
+        "struct Point" ;
+    prop:type "Point" ;
+    prop:usr "c:@S@Point" .
+
+symbol:102562646342 prop:absolute_file_path "foo.cpp",
+        "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:102562646342,
+        symbol:102582156798,
+        symbol:201807466413 ;
+    prop:has_id 102562646342 ;
+    prop:has_parent symbol:102562646342,
+        symbol:102931616158 ;
+    prop:isDecl_file_line "lib/foo.h#28" ;
+    prop:isDef_file_line "lib/foo.h#28" ;
+    prop:isUse_file_line "lib/foo.cpp#13",
+        "lib/foo.cpp#8" ;
+    prop:is_a "CXXMethod",
+        "CallExpr",
+        "MemberRefExpr" ;
+    prop:is_called_file "foo.cpp" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:102931616158 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4Base8setPointE5Point" ;
+    prop:mangled_name "_ZN4Base8setPointE5Point" ;
+    prop:name_token "Point",
+        "set",
+        "setPoint" ;
+    prop:param_type "Point" ;
+    prop:return_type "void" ;
+    prop:spelling "setPoint" ;
+    prop:storage_class "default_auto" ;
+    prop:type "<bound member function type>",
+        "void" ;
+    prop:usr "c:@S@Base@F@setPoint#$@S@Point#" .
+
+symbol:201191999428 prop:absolute_file_path "main.cpp" ;
+    prop:has_child symbol:200140975045,
+        symbol:201191999428,
+        symbol:204147466265 ;
+    prop:has_id 201191999428 ;
+    prop:has_parent symbol:201191999428,
+        symbol:201807466413 ;
+    prop:isDecl_file_line "src/main.cpp#20" ;
+    prop:isDef_file_line "src/main.cpp#20" ;
+    prop:isUse_file_line "src/main.cpp#24",
+        "src/main.cpp#25" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:lex_parent_id symbol:200954073876 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4mainE1p" ;
+    prop:name_token "p" ;
+    prop:size 8 ;
+    prop:spelling "p" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point",
+        "const Point" ;
+    prop:usr "c:main.cpp@352@F@main#@p" .
+
+symbol:201807466413 prop:absolute_file_path "foo.cpp",
+        "foo.h",
+        "main.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:100394972359,
+        symbol:101552115860,
+        symbol:201191999428 ;
+    prop:has_id 201807466413 ;
+    prop:has_parent symbol:100353176111,
+        symbol:102562646342,
+        symbol:102625299349 ;
+    prop:isDecl_file_line "lib/foo.h#5" ;
+    prop:isDef_file_line "lib/foo.h#5" ;
+    prop:isUse_file_line "lib/foo.cpp#13",
+        "lib/foo.cpp#8",
+        "src/main.cpp#24",
+        "src/main.cpp#25" ;
+    prop:is_a "CXXConstructor",
+        "CallExpr" ;
+    prop:is_called_file "foo.cpp",
+        "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:204147466265 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN5PointC1ERKS_" ;
+    prop:mangled_name "_ZN5PointC1ERKS_" ;
+    prop:name_token "Point" ;
+    prop:spelling "Point" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point",
+        "void (const Point &) noexcept" ;
+    prop:usr "c:@S@Point@F@Point#&1$@S@Point#" .
+
+symbol:202175955133 prop:absolute_file_path "main.cpp" ;
+    prop:has_child symbol:202175955133,
+        symbol:202940370304,
+        symbol:203639874650 ;
+    prop:has_id 202175955133 ;
+    prop:has_parent symbol:102625299349,
+        symbol:202175955133,
+        symbol:202797369276 ;
+    prop:isDecl_file_line "src/main.cpp#19" ;
+    prop:isDef_file_line "src/main.cpp#19" ;
+    prop:isUse_file_line "src/main.cpp#24",
+        "src/main.cpp#27" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:lex_parent_id symbol:200954073876 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4mainE1s" ;
+    prop:name_token "s" ;
+    prop:size 12 ;
+    prop:spelling "s" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Square",
+        "const Square" ;
+    prop:usr "c:main.cpp@340@F@main#@s" .
+
+symbol:101378764394 prop:absolute_file_path "foo.cpp",
+        "foo.h",
+        "main.cpp" ;
+    prop:has_child symbol:101378764394,
+        symbol:103986400645,
+        symbol:204018532364,
+        symbol:303374271578 ;
+    prop:has_id 101378764394 ;
+    prop:has_parent symbol:101378764394 ;
+    prop:isDecl_file_line "lib/foo.cpp#17",
+        "lib/foo.h#49" ;
+    prop:isDef_file_line "lib/foo.cpp#17" ;
+    prop:isRead_file_line "src/main.cpp#4" ;
+    prop:isUse_file_line "src/main.cpp#4" ;
+    prop:is_a "CallExpr",
+        "DeclRefExpr",
+        "FunctionDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:is_extern_file "foo.h",
+        "foo.h_1" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_Z4area6Square" ;
+    prop:mangled_name "_Z4area6Square" ;
+    prop:name_token "area" ;
+    prop:param_type "Square" ;
+    prop:return_type "int" ;
+    prop:spelling "area" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int",
+        "int (*)(Square)",
+        "int (Square)" ;
+    prop:usr "c:@F@area#$@S@Square#" .
+
+symbol:203443302841 prop:absolute_file_path "main.cpp" ;
+    prop:has_child symbol:202469467868,
+        symbol:202491315388,
+        symbol:203443302841 ;
+    prop:has_id 203443302841 ;
+    prop:has_parent symbol:100353176111,
+        symbol:200939214155,
+        symbol:201396957542,
+        symbol:203443302841 ;
+    prop:isDecl_file_line "src/main.cpp#18" ;
+    prop:isDef_file_line "src/main.cpp#18" ;
+    prop:isUse_file_line "src/main.cpp#25",
+        "src/main.cpp#27",
+        "src/main.cpp#28" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:lex_parent_id symbol:200954073876 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4mainE1c" ;
+    prop:name_token "c" ;
+    prop:size 12 ;
+    prop:spelling "c" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Base",
+        "Circle",
+        "const Circle" ;
+    prop:usr "c:main.cpp@328@F@main#@c" .
+
+symbol:302855752868 prop:absolute_file_path "foo.h",
+        "helper.cpp",
+        "main.cpp" ;
+    prop:has_child symbol:201601583886,
+        symbol:300354783716,
+        symbol:302855752868,
+        symbol:302930646226 ;
+    prop:has_id 302855752868 ;
+    prop:has_parent symbol:302855752868 ;
+    prop:isDecl_file_line "lib/foo.h#50",
+        "src/helper.cpp#3" ;
+    prop:isDef_file_line "src/helper.cpp#3" ;
+    prop:isUse_file_line "src/main.cpp#4" ;
+    prop:isWritten_file_line "src/main.cpp#4" ;
+    prop:is_a "CallExpr",
+        "DeclRefExpr",
+        "FunctionDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "helper.cpp" ;
+    prop:is_extern_file "foo.h",
+        "foo.h_1" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_Z4area6Circle" ;
+    prop:mangled_name "_Z4area6Circle" ;
+    prop:name_token "area" ;
+    prop:param_type "Circle" ;
+    prop:return_type "int" ;
+    prop:spelling "area" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int",
+        "int (*)(Circle)",
+        "int (Circle)" ;
+    prop:usr "c:@F@area#$@S@Circle#" .
+
+symbol:102931616158 prop:absolute_file_path "foo.cpp",
+        "foo.h" ;
+    prop:has_child symbol:100576033116,
+        symbol:102496713546,
+        symbol:102562646342,
+        symbol:103379489738 ;
+    prop:has_id 102931616158 ;
+    prop:has_parent symbol:101107985656 ;
+    prop:isDecl_file_line "lib/foo.h#13" ;
+    prop:isDef_file_line "lib/foo.h#13" ;
+    prop:isUse_file_line "lib/foo.cpp#23" ;
+    prop:is_a "ClassDecl",
+        "TypeRef" ;
+    prop:is_called_file "foo.cpp" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Base",
+        "class",
+        "class Base" ;
+    prop:size 8 ;
+    prop:spelling "Base",
+        "class Base" ;
+    prop:type "Base" ;
+    prop:usr "c:@S@Base" .
+
+symbol:200140975045 prop:absolute_file_path "foo.h",
+        "main.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:200129986658,
+        symbol:200564341192,
+        symbol:203719287942,
+        symbol:204140677018 ;
+    prop:has_id 200140975045 ;
+    prop:has_parent symbol:201191999428,
+        symbol:204147466265 ;
+    prop:isDecl_file_line "lib/foo.h#7" ;
+    prop:isDef_file_line "lib/foo.h#7" ;
+    prop:isUse_file_line "src/main.cpp#20" ;
+    prop:is_a "CXXConstructor",
+        "CallExpr" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:204147466265 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN5PointC1Eii" ;
+    prop:mangled_name "_ZN5PointC4Eii" ;
+    prop:name_token "Point" ;
+    prop:sem_parent_id symbol:201191999428 ;
+    prop:spelling "Point" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point",
+        "void (int, int)" ;
+    prop:usr "c:@S@Point@F@Point#I#I#" .
+
+symbol:202491315388 prop:absolute_file_path "foo.h",
+        "main.cpp" ;
+    prop:has_child symbol:100353176111,
+        symbol:200974653263,
+        symbol:202028645034 ;
+    prop:has_id 202491315388 ;
+    prop:has_parent symbol:201478306585,
+        symbol:201601583886,
+        symbol:203443302841 ;
+    prop:isDecl_file_line "lib/foo.h#41" ;
+    prop:isDef_file_line "lib/foo.h#41" ;
+    prop:isUse_file_line "lib/foo.h#50",
+        "src/main.cpp#18",
+        "src/main.cpp#3" ;
+    prop:is_a "ClassDecl",
+        "TypeRef" ;
+    prop:is_called_file "foo.h",
+        "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:is_subclass_of symbol:200974653263 ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Circle",
+        "class",
+        "class Circle" ;
+    prop:spelling "Circle",
+        "class Circle" ;
+    prop:type "Circle" ;
+    prop:usr "c:@S@Circle" .
+
+symbol:202854211754 prop:absolute_file_path "helper.cpp",
+        "main.cpp" ;
+    prop:has_child symbol:201478306585,
+        symbol:202412853423,
+        symbol:202854211754,
+        symbol:302347631484,
+        symbol:302820180022 ;
+    prop:has_id 202854211754 ;
+    prop:has_parent symbol:202854211754 ;
+    prop:isDecl_file_line "src/helper.cpp#7",
+        "src/main.cpp#3" ;
+    prop:isDef_file_line "src/main.cpp#3" ;
+    prop:isUse_file_line "src/main.cpp#27" ;
+    prop:is_a "CallExpr",
+        "DeclRefExpr",
+        "FunctionDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:is_extern_file "helper.cpp" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_Z7compare6Circle6Square" ;
+    prop:mangled_name "_Z7compare6Circle6Square" ;
+    prop:name_token "compare" ;
+    prop:param_type " Square",
+        "Circle" ;
+    prop:return_type "int" ;
+    prop:spelling "compare" ;
+    prop:storage_class "default_auto" ;
+    prop:type "bool",
+        "int",
+        "int (*)(Circle, Square)",
+        "int (Circle, Square)" ;
+    prop:usr "c:@F@compare#$@S@Circle#$@S@Square#" .
+
+symbol:202940370304 prop:absolute_file_path "foo.h",
+        "main.cpp" ;
+    prop:has_child symbol:102625299349,
+        symbol:200974653263,
+        symbol:204002931485 ;
+    prop:has_id 202940370304 ;
+    prop:has_parent symbol:202175955133,
+        symbol:202412853423,
+        symbol:204018532364 ;
+    prop:isDecl_file_line "lib/foo.h#34" ;
+    prop:isDef_file_line "lib/foo.h#34" ;
+    prop:isUse_file_line "lib/foo.h#49",
+        "src/main.cpp#19",
+        "src/main.cpp#3" ;
+    prop:is_a "ClassDecl",
+        "TypeRef" ;
+    prop:is_called_file "foo.h",
+        "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:is_subclass_of symbol:200974653263 ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Square",
+        "class",
+        "class Square" ;
+    prop:spelling "Square",
+        "class Square" ;
+    prop:type "Square" ;
+    prop:usr "c:@S@Square" .
+
+symbol:300648845138 prop:absolute_file_path "foo.h" ;
+    prop:has_child symbol:300802589283,
+        symbol:301002840166,
+        symbol:303556678792,
+        symbol:303745147961,
+        symbol:304054519064 ;
+    prop:has_id 300648845138 ;
+    prop:has_parent symbol:301296214220,
+        symbol:303696096832 ;
+    prop:inheritance_kind "Public" ;
+    prop:isDecl_file_line "lib/foo.h#13" ;
+    prop:isDef_file_line "lib/foo.h#13" ;
+    prop:isUse_file_line "lib/foo.h#34",
+        "lib/foo.h#41" ;
+    prop:is_a "CXXBaseClassSpecifier",
+        "ClassDecl" ;
+    prop:is_called_file "foo.h_1" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Base",
+        "class",
+        "class Base" ;
+    prop:size 8 ;
+    prop:spelling "Base",
+        "class Base" ;
+    prop:type "Base" ;
+    prop:usr "c:@S@Base" .
+
+symbol:204147466265 prop:absolute_file_path "foo.h",
+        "main.cpp" ;
+    prop:has_child symbol:100052015748,
+        symbol:200140975045,
+        symbol:201948060917,
+        symbol:203719287942,
+        symbol:204140677018 ;
+    prop:has_id 204147466265 ;
+    prop:has_parent symbol:200391139105,
+        symbol:201191999428,
+        symbol:201396957542,
+        symbol:201590111024,
+        symbol:203502495398 ;
+    prop:isDecl_file_line "lib/foo.h#5" ;
+    prop:isDef_file_line "lib/foo.h#5" ;
+    prop:isUse_file_line "lib/foo.h#16",
+        "lib/foo.h#28",
+        "lib/foo.h#38",
+        "lib/foo.h#45",
+        "src/main.cpp#20" ;
+    prop:is_a "StructDecl",
+        "TypeRef" ;
+    prop:is_called_file "foo.h",
+        "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Point",
+        "struct",
+        "struct Point" ;
+    prop:size 8 ;
+    prop:spelling "Point",
+        "struct Point" ;
+    prop:type "Point" ;
+    prop:usr "c:@S@Point" .
+
+symbol:100353176111 prop:absolute_file_path "foo.cpp",
+        "foo.h",
+        "main.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:100353176111,
+        symbol:100394972359,
+        symbol:101121185691,
+        symbol:104222372837,
+        symbol:200391139105,
+        symbol:201807466413,
+        symbol:203443302841,
+        symbol:204257275682,
+        symbol:303623743127 ;
+    prop:has_id 100353176111 ;
+    prop:has_parent symbol:100353176111,
+        symbol:101121185691,
+        symbol:202491315388,
+        symbol:301296214220 ;
+    prop:isDecl_file_line "lib/foo.cpp#12",
+        "lib/foo.h#45" ;
+    prop:isDef_file_line "lib/foo.cpp#12" ;
+    prop:isUse_file_line "src/main.cpp#25" ;
+    prop:is_a "CXXMethod",
+        "CallExpr",
+        "MemberRefExpr" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:is_extern_file "foo.h",
+        "foo.h_1" ;
+    prop:lex_parent_id symbol:,
+        symbol:101121185691,
+        symbol:202491315388,
+        symbol:301296214220 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:mangled_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:name_token "Circle",
+        "make",
+        "makeCircle" ;
+    prop:param_type " int",
+        "Point" ;
+    prop:return_type "void" ;
+    prop:sem_parent_id symbol:101121185691 ;
+    prop:spelling "makeCircle" ;
+    prop:storage_class "default_auto" ;
+    prop:type "<bound member function type>",
+        "void" ;
+    prop:usr "c:@S@Circle@F@makeCircle#$@S@Point#I#" .
+
+symbol:102625299349 prop:absolute_file_path "foo.cpp",
+        "foo.h",
+        "main.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:101552115860,
+        symbol:102625299349,
+        symbol:102628714979,
+        symbol:103974852037,
+        symbol:200105207093,
+        symbol:201590111024,
+        symbol:201807466413,
+        symbol:202175955133,
+        symbol:302601697050 ;
+    prop:has_id 102625299349 ;
+    prop:has_parent symbol:102625299349,
+        symbol:103974852037,
+        symbol:202940370304,
+        symbol:303696096832 ;
+    prop:isDecl_file_line "lib/foo.cpp#7",
+        "lib/foo.h#38" ;
+    prop:isDef_file_line "lib/foo.cpp#7" ;
+    prop:isUse_file_line "src/main.cpp#24" ;
+    prop:is_a "CXXMethod",
+        "CallExpr",
+        "MemberRefExpr" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:is_extern_file "foo.h",
+        "foo.h_1" ;
+    prop:lex_parent_id symbol:,
+        symbol:103974852037,
+        symbol:202940370304,
+        symbol:303696096832 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:mangled_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:name_token "Square",
+        "make",
+        "makeSquare" ;
+    prop:param_type " int",
+        "Point" ;
+    prop:return_type "void" ;
+    prop:sem_parent_id symbol:103974852037 ;
+    prop:spelling "makeSquare" ;
+    prop:storage_class "default_auto" ;
+    prop:type "<bound member function type>",
+        "void" ;
+    prop:usr "c:@S@Square@F@makeSquare#$@S@Point#I#" .
+
+symbol:200974653263 prop:absolute_file_path "foo.h",
+        "main.cpp" ;
+    prop:has_child symbol:101107985656,
+        symbol:200545039082,
+        symbol:200897991887,
+        symbol:200974653263,
+        symbol:201396957542,
+        symbol:203250240560,
+        symbol:203738238113 ;
+    prop:has_id 200974653263 ;
+    prop:has_parent symbol:200545039082,
+        symbol:200974653263,
+        symbol:202491315388,
+        symbol:202940370304 ;
+    prop:inheritance_kind "Public" ;
+    prop:isDecl_file_line "lib/foo.h#13" ;
+    prop:isDef_file_line "lib/foo.h#13" ;
+    prop:isUse_file_line "lib/foo.h#34",
+        "lib/foo.h#41",
+        "src/main.cpp#21" ;
+    prop:is_a "CXXBaseClassSpecifier",
+        "ClassDecl",
+        "TypeRef" ;
+    prop:is_called_file "foo.h",
+        "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Base",
+        "class",
+        "class Base" ;
+    prop:size 8 ;
+    prop:spelling "Base",
+        "class Base" ;
+    prop:type "Base" ;
+    prop:usr "c:@S@Base" .
+
+symbol: prop:absolute_file_path "foo.cpp",
+        "foo.h",
+        "helper.cpp",
+        "main.cpp" ;
+    prop:isUse_file_line "lib/foo.cpp#1",
+        "lib/foo.h#2",
+        "src/helper.cpp#1",
+        "src/main.cpp#1" ;
+    prop:is_a "inclusionDirective",
+        "macroDefinition" ;
+    prop:is_called_file "foo.cpp",
+        "foo.h_1",
+        "helper.cpp",
+        "main.cpp" ;
+    prop:name_token "FOO_H_",
+        "foo.h",
+        "fooh" ;
+    prop:spelling "FOO_H_",
+        "foo.h" ;
+    prop:usr "c:foo.h@45@macro@FOO_H_" .
+

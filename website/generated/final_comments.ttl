@@ -1,0 +1,312 @@
+@prefix comment: <http://smartKT/ns/comment#> .
+@prefix prop: <http://smartKT/ns/properties#> .
+@prefix symbol: <http://smartKT/ns/symbol#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+symbol: prop:comment_id comment:1,
+        comment:10,
+        comment:11,
+        comment:12,
+        comment:14,
+        comment:4,
+        comment:7,
+        comment:8,
+        comment:9 ;
+    prop:comment_token "control",
+        "declaration",
+        "demonstrate",
+        "flow",
+        "graph",
+        "header",
+        "include",
+        "initialization",
+        "obtain" .
+
+symbol:100052015748 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:100353176111 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:101107985656 prop:comment_id comment:13,
+        comment:15 ;
+    prop:comment_token "initialization" .
+
+symbol:102625299349 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:102931616158 prop:comment_id comment:13,
+        comment:15 ;
+    prop:comment_token "initialization" .
+
+symbol:200140975045 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:200545039082 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:200680237894 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:200939214155 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:200954073876 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:200974653263 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:201039325255 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:201184962880 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:201191999428 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:201263823661 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:201396957542 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:201807466413 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:202175955133 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:202469467868 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:202491315388 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:202797369276 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:202854211754 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:202940370304 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:203443302841 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:203639874650 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:203817833550 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:204147466265 prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" .
+
+symbol:301246238228 prop:comment_id comment:3,
+        comment:6 .
+
+symbol:303869766078 prop:comment_id comment:3,
+        comment:6 .
+
+symbol:304109399143 prop:comment_id comment:3,
+        comment:6 .
+
+symbol:304164471082 prop:comment_id comment:3,
+        comment:6 .
+
+comment:1 prop:comment_token "declaration",
+        "header",
+        "include",
+        "obtain" ;
+    prop:has_id 1 ;
+    prop:is_defined_file "main.cpp" ;
+    prop:text "Include the header here, to obtain the function declaration" .
+
+comment:10 prop:comment_token "header",
+        "include" ;
+    prop:has_id 10 ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:text "Include the header (not strictly necessary here)" .
+
+comment:11 prop:comment_token "initialization" ;
+    prop:has_id 11 ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:text "initialization of static private member" .
+
+comment:12 prop:comment_token "header",
+        "include" ;
+    prop:has_id 12 ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:text "Include the header (not strictly necessary here)" .
+
+comment:14 prop:comment_token "header",
+        "include" ;
+    prop:has_id 14 ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:text "Include the header (not strictly necessary here)" .
+
+comment:4 prop:comment_token "declaration",
+        "header",
+        "include",
+        "obtain" ;
+    prop:has_id 4 ;
+    prop:is_defined_file "main.cpp" ;
+    prop:text "Include the header here, to obtain the function declaration" .
+
+comment:7 prop:comment_token "declaration",
+        "header",
+        "include",
+        "obtain" ;
+    prop:has_id 7 ;
+    prop:is_defined_file "main.cpp" ;
+    prop:text "Include the header here, to obtain the function declaration" .
+
+comment:8 prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_id 8 ;
+    prop:is_defined_file "main.cpp" ;
+    prop:text "To demonstrate control flow graph" .
+
+comment:9 prop:has_id 9 ;
+    prop:is_defined_file "helper.cpp" ;
+    prop:text "Extern linkage of variables and arrays" .
+
+comment:13 prop:comment_token "initialization" ;
+    prop:has_id 13 ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:text "initialization of static private member" .
+
+comment:15 prop:comment_token "initialization" ;
+    prop:has_id 15 ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:text "initialization of static private member" .
+
+comment:3 prop:has_id 3 ;
+    prop:is_defined_file "helper.cpp" ;
+    prop:text "Extern linkage of variables and arrays" .
+
+comment:6 prop:has_id 6 ;
+    prop:is_defined_file "helper.cpp" ;
+    prop:text "Extern linkage of variables and arrays" .
+
+comment:2 prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_id 2 ;
+    prop:is_defined_file "main.cpp" ;
+    prop:text "To demonstrate control flow graph" .
+
+comment:5 prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_id 5 ;
+    prop:is_defined_file "main.cpp" ;
+    prop:text "To demonstrate control flow graph" .
+

@@ -1,11 +1,10 @@
-import rdflib, sys, pickle
+import rdflib, sys, pickle, re
 from rdflib import Graph, Literal, BNode, Namespace, RDF, URIRef
 from rdflib.namespace import XSD
 from collections import defaultdict
-import re, sys
+from importlib import reload as reload
 
 reload(sys)
-sys.setdefaultencoding("utf-8")
 
 g = rdflib.Graph()
 
@@ -13,7 +12,7 @@ pickle_file = sys.argv[1]
 all_store = pickle.load( open( pickle_file, "rb" ) )
 
 all_symbol = all_store['symbol'].keys()
-print(len(all_symbol))
+
 token_file_count = dict()
 
 #Defining the prefixes
@@ -67,13 +66,11 @@ for token in all_symbol:
 		print("No record found")
 
 	else:
-		#print "\nResult: "
+		
 		token_file_count[token] = dict()
 
 		for st in qresult:
 			token_file_count[token][st['file']] = st['count']
-
-	print(len(token_file_count[token].keys()))
 
 
 pickle.dump( token_file_count, open( sys.argv[3], "wb" ) )

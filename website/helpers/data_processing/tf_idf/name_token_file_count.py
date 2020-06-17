@@ -29,8 +29,7 @@ g.load(TTLfile, format='turtle')
 
 for token in all_name_tokens:
 	token = re.sub(r"[,.;@#?*!&$'\"\"\\]+\ *", "", token)
-	print(token)
-
+	
 	#ek file mai id kitni baar aya hai
 	queryTest = """
 			PREFIX prop: <http://smartKT/ns/properties#>
@@ -69,13 +68,12 @@ for token in all_name_tokens:
 		print("No record found")
 
 	else:
-		#print "\nResult: "
 		token_file_count[token] = dict()
 
 		for st in qresult:
 			token_file_count[token][st['file']] = st['count']
 
-	print(len(token_file_count[token].keys()))
+	
 
 
 pickle.dump( token_file_count, open( sys.argv[3], "wb" ) )

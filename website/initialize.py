@@ -13,6 +13,13 @@ models_abs_path = os.path.abspath('models')
 
 # Execution Flow (For details, see 'docs')
 
+# All Store
+os.system(' '.join(["python3", "helpers/data_processing/all_store.py",
+ os.path.join(data_abs_path, "final_static.xml"),
+ os.path.join(data_abs_path, "final_comments.xml"),
+ os.path.join(generated_abs_path, "all_store.p")]))
+
+
 ## TTL Generation
 # mapping
 os.system(' '.join(["python3", "helpers/data_processing/parseXML/mapping_extra_id.py",
@@ -38,10 +45,13 @@ if config['processDynamic']:
 # comments
 if config['processComments']:
     os.system(' '.join(["python3", "helpers/data_processing/parseXML/parseCommentXML.py",
+     os.path.join(generated_abs_path, "all_store.p"),
      os.path.join(data_abs_path, "final_comments.xml"),
      os.path.join(generated_abs_path, "mapping_static.p"),
      os.path.join(generated_abs_path, "final_comments.ttl"),
-     os.path.join(generated_abs_path, "comment_tokens.csv")]))
+     os.path.join(generated_abs_path, "comment_token_tagged.csv"),
+     os.path.join(generated_abs_path, "comment_tokens.csv"),
+     os.path.join(generated_abs_path, "comment_tokens.p")]))
 
 # merge
 mergeCMD = 'python3 helpers/data_processing/parseXML/merge.py ' + os.path.join(generated_abs_path, "final_static.ttl") + " "
@@ -79,23 +89,14 @@ os.system(' '.join(["python3", "helpers/data_processing/similarity_tokens_dict/c
  os.path.join(generated_abs_path, "similar_comment_tokens.csv"),
  os.path.join(generated_abs_path, "comment_tokens_dict.p")]))
 
-# Program Domain Dict
-os.system(' '.join(["python3", "helpers/data_processing/similarity_tokens_dict/program_domain_dict.py",
- os.path.join(data_abs_path, "crossSimilarity_matrix.csv"),
- os.path.join(generated_abs_path, "program_domain_dict.p")]))
-
 ## TF-IDF Things
-os.system(' '.join(["python3", "helpers/data_processing/all_store.py",
- os.path.join(data_abs_path, "final_static.xml"),
- os.path.join(data_abs_path, "final_comments.xml"),
- os.path.join(generated_abs_path, "all_store.p")]))
 
 os.system(' '.join(["python3", "helpers/data_processing/tf_idf/name_file_token_count.py",
  os.path.join(generated_abs_path, "final_static.ttl"),
  os.path.join(generated_abs_path, "name_file_token_count.p")]))
 
 os.system(' '.join(["python3", "helpers/data_processing/tf_idf/name_token_file_count.py",
- os.path.join(generated_abs_path, "name_tokens.p),
+ os.path.join(generated_abs_path, "name_tokens.p"),
  os.path.join(generated_abs_path, "final_static.ttl"),
  os.path.join(generated_abs_path, "name_token_file_count.p")]))
 
@@ -104,7 +105,7 @@ os.system(' '.join(["python3", "helpers/data_processing/tf_idf/symbol_file_token
  os.path.join(generated_abs_path, "symbol_file_token_count.p")]))
 
 os.system(' '.join(["python3", "helpers/data_processing/tf_idf/symbol_token_file_count.py",
- os.path.join(generated_abs_path, "all_store.p),
+ os.path.join(generated_abs_path, "all_store.p"),
  os.path.join(generated_abs_path, "final_static.ttl"),
  os.path.join(generated_abs_path, "symbol_token_file_count.p")]))
 
@@ -122,8 +123,20 @@ os.system(' '.join(["python3", "helpers/data_processing/overloaded_sibling.py",
  os.path.join(generated_abs_path, "final_static.ttl"),
  os.path.join(generated_abs_path, "test_overload_new.ttl")]))
 
+## Program Domain Dict
+os.system(' '.join(["python3", "helpers/data_processing/similarity_tokens_dict/crossSim.py",
+ os.path.join(models_abs_path, config['model']),
+ os.path.join(data_abs_path, "VocabDictionary.csv"),
+ os.path.join(generated_abs_path, "crossSimilarity_matrix.csv")]))
+
+os.system(' '.join(["python3", "helpers/data_processing/similarity_tokens_dict/program_domain_dict.py",
+ os.path.join(generated_abs_path, "crossSimilarity_matrix.csv"),
+ os.path.join(generated_abs_path, "program_domain_dict.p")]))
+
 ## CFG integration with dynamic data
 os.system(' '.join(["python3", "helpers/cfg/aggregrate.py",
+ os.path.join(data_abs_path, "final_static.xml"),
  os.path.join(data_abs_path, "final.cfg"),
- os.path.join(data_abs_path, "final_dynamic.dump"),
+ os.path.join(generated_abs_path, "cfg"),
+ ' '.join([os.path.join(data_abs_path, x) for x in config['dumps']]),
  os.path.join(generated_abs_path, "cfg.p")]))

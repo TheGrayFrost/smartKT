@@ -1,5 +1,5 @@
 # Usage:
-# python3 aggregrate.py <final_static.xml> <final_cfg.cfg> [<dynamic_dump.dump>] <output_pickle.p>
+# python3 aggregrate.py <final_static.xml> <final_cfg.cfg> <output_cfg.dot> [<dynamic_dump.dump>] <output_pickle.p>
 
 import sys, pickle, os, json
 from itertools import groupby
@@ -34,6 +34,17 @@ data = [x.strip() for x in data]
 data = [list(group) for k, group in groupby(data, lambda x: x == key) if not k]
 basicBlocks = data[::2]
 callGraph = data[1::2]
+
+def to_dot (li, fn):
+    with open(fn + '.dot', 'w') as fp:
+        fp.write('digraph G{\n')
+        for el in list(set(li)):
+            if type(el) in [list, tuple]:
+                fp.write('"{}"->"{}"[label="{}"]\n'.format(el[0], el[1], el[2]))
+            else:
+                fp.write('"{}"\n'.format(el))
+        fp.write('}\n')
+    os.system("sfdp -Tpng -Goverlap=prism {}.dot -o {}.png".format(fn, fn))
 
 def range2List(ls):
     temp = ls[1:-1].split(':')
@@ -304,94 +315,98 @@ def processDump(ls):
     lastBlockVisited = []
     callStack = []
     for idx, record in enumerate(ls):
-        if record['RECTYPE'] == 'WRITE' or record['RECTYPE'] == 'READ':
-            # Identify all possible basicBlocks and mark them true
-            listOfBlocks = getPossibleBlocks(record)
-            for i in listOfBlocks:
-                block2coverage[i] = True
-            lastBlockVisited = listOfBlocks
-        elif record['RECTYPE'] == 'CALL':
-            func, callee = record['CALLERNAME'], record['CALLEENAME']
-            callStack.append(record['CALLEENODEID'])
-            # Handle Constructors/Destructors differently, as they don't show
-            if func not in func2entry:
-                func = createNewFunction(func, record['CALLERNODEID'])
-            if isSuperCall(record):
-                if func not in superCalls:
-                    superCalls[func] = func2entry[func]
-                newBlock = func+"#"+str(numBlocks[func])
-                numBlocks[func] += 1
-                block2range[newBlock] = [0,0,0,0]
-                blockGraph[newBlock] = blockGraph[superCalls[func]]
-                if callee not in func2entry:
-                    callee = createNewFunction(callee, record['CALLEENODEID'])
-                blockGraph[superCalls[func]] = [func2entry[callee]]
-                blockGraph[func2exit[callee]].append(newBlock)
-                superCalls[func] = newBlock
-                block2coverage[func2entry[func]] = True
-                block2coverage[func2entry[callee]] = True
-                lastBlockVisited = [func2entry[callee]]
-            # elif isUnhandledConstructor(record):
-            #     currBlock, lastCol = getCurrentBlockFromTrace(record, lastBlockVisited, True)
-            #     newBlock = func+"#"+str(numBlocks[func])
-            #     numBlocks[func] += 1
-            #     block2coverage[newBlock] = False
-            #     block2range[newBlock] = [record['INSLOC'].split(':')[1]+1, 0]
-            #     block2range[newBlock].append(block2range[currBlock][2:])
-            #     block2range[currBlock] = block2range[currBlock][:2] + [record['INSLOC'].split(':')[1], lastCol]
-            #     if callee not in func2entry:
-            #         createNewFunction(callee)
-            #     blockGraph[currBlock] = [func2entry[callee]]
-            #     blockGraph[func2exit[callee]].append(newBlock)
-            #     block2coverage[currBlock] = True
-            #     block2coverage[func2entry[callee]] = True
-            #     lastBlockVisited = [func2entry[callee]]
-            else:
-                currBlock = getCurrentBlockFromTrace(record, lastBlockVisited)
-                if callee not in func2entry:
-                    callee = createNewFunction(callee, record['CALLEENODEID'])
+        try:
+            if record['RECTYPE'] == 'WRITE' or record['RECTYPE'] == 'READ':
+                # Identify all possible basicBlocks and mark them true
+                listOfBlocks = getPossibleBlocks(record)
+                for i in listOfBlocks:
+                    block2coverage[i] = True
+                lastBlockVisited = listOfBlocks
+            elif record['RECTYPE'] == 'CALL':
+                func, callee = record['CALLERNAME'], record['CALLEENAME']
+                callStack.append(record['CALLEENODEID'])
+                # Handle Constructors/Destructors differently, as they don't show
+                if func not in func2entry:
+                    func = createNewFunction(func, record['CALLERNODEID'])
+                if isSuperCall(record):
+                    if func not in superCalls:
+                        superCalls[func] = func2entry[func]
+                    newBlock = func+"#"+str(numBlocks[func])
+                    numBlocks[func] += 1
+                    block2range[newBlock] = [0,0,0,0]
+                    blockGraph[newBlock] = blockGraph[superCalls[func]]
+                    if callee not in func2entry:
+                        callee = createNewFunction(callee, record['CALLEENODEID'])
+                    blockGraph[superCalls[func]] = [func2entry[callee]]
+                    blockGraph[func2exit[callee]].append(newBlock)
+                    superCalls[func] = newBlock
+                    block2coverage[func2entry[func]] = True
+                    block2coverage[func2entry[callee]] = True
+                    lastBlockVisited = [func2entry[callee]]
+                # elif isUnhandledConstructor(record):
+                #     currBlock, lastCol = getCurrentBlockFromTrace(record, lastBlockVisited, True)
+                #     newBlock = func+"#"+str(numBlocks[func])
+                #     numBlocks[func] += 1
+                #     block2coverage[newBlock] = False
+                #     block2range[newBlock] = [record['INSLOC'].split(':')[1]+1, 0]
+                #     block2range[newBlock].append(block2range[currBlock][2:])
+                #     block2range[currBlock] = block2range[currBlock][:2] + [record['INSLOC'].split(':')[1], lastCol]
+                #     if callee not in func2entry:
+                #         createNewFunction(callee)
+                #     blockGraph[currBlock] = [func2entry[callee]]
+                #     blockGraph[func2exit[callee]].append(newBlock)
+                #     block2coverage[currBlock] = True
+                #     block2coverage[func2entry[callee]] = True
+                #     lastBlockVisited = [func2entry[callee]]
+                else:
+                    currBlock = getCurrentBlockFromTrace(record, lastBlockVisited)
+                    if callee not in func2entry:
+                        callee = createNewFunction(callee, record['CALLEENODEID'])
 
-                # Probable runtime polymorphism
-                if func2entry[callee] not in blockGraph[currBlock]:
-                    blockGraph[currBlock].append(func2entry[callee])
-                    if len(blockGraph[currBlock]) > 0:
-                        # Runtime Polymorphism
-                        blockGraph[func2exit[callee]].append(func2exit[blockGraph[currBlock][0].split('#')[0]])
-                    else:
-                        if func2entry[func] == func2exit[func]:
-                            # Super called
-                            blockGraph[func2exit[callee]].append(func2exit[func])
+                    # Probable runtime polymorphism
+                    if func2entry[callee] not in blockGraph[currBlock]:
+                        blockGraph[currBlock].append(func2entry[callee])
+                        if len(blockGraph[currBlock]) > 0:
+                            # Runtime Polymorphism
+                            blockGraph[func2exit[callee]].append(func2exit[blockGraph[currBlock][0].split('#')[0]])
                         else:
-                            print("case not handled! Error")
-                # Normal cases
-                block2coverage[currBlock] = True
-                block2coverage[func2entry[callee]] = True
-                lastBlockVisited = [func2entry[callee]]
-        elif record['RECTYPE'] == 'RETURN':
-            func, funcID = record['FUNCNAME'], record['FUNCNODEID']
-            func = getAlternateMangledName(funcID)
-            callStack.pop()
-            if len(callStack) == 0:
-                callee = "main"
-            else:
-                callee = getAlternateMangledName(callStack[-1])
-            # handle super calls
-            block2coverage[func2exit[func]] = True
-            if len(blockGraph[func2exit[func]]) == 1:
-                block2coverage[blockGraph[func2exit[func]][0]] = True
-                lastBlockVisited = blockGraph[func2exit[func]]
-            else:
-                possibleReturnPoints = [x for x in blockGraph[func2exit[func]] if x.split('#')[0]==callee]
-                if len(possibleReturnPoints) == 0:
-                    print("ERROR")
-                    print(record, idx, possibleReturnPoints)
-                if len(possibleReturnPoints) == 1:
-                    block2coverage[possibleReturnPoints[0]] = True
-                    lastBlockVisited = possibleReturnPoints
-                # else, we are not sure what is the next basic block
-                # We can only hope, that the basic blocks get identified through
-                # subsequent instructions
-                lastBlockVisited = [func2exit[func]]
+                            if func2entry[func] == func2exit[func]:
+                                # Super called
+                                blockGraph[func2exit[callee]].append(func2exit[func])
+                            else:
+                                print("case not handled! Error")
+                    # Normal cases
+                    block2coverage[currBlock] = True
+                    block2coverage[func2entry[callee]] = True
+                    lastBlockVisited = [func2entry[callee]]
+            elif record['RECTYPE'] == 'RETURN':
+                func, funcID = record['FUNCNAME'], record['FUNCNODEID']
+                func = getAlternateMangledName(funcID)
+                callStack.pop()
+                if len(callStack) == 0:
+                    callee = "main"
+                else:
+                    callee = getAlternateMangledName(callStack[-1])
+                # handle super calls
+                block2coverage[func2exit[func]] = True
+                if len(blockGraph[func2exit[func]]) == 1:
+                    block2coverage[blockGraph[func2exit[func]][0]] = True
+                    lastBlockVisited = blockGraph[func2exit[func]]
+                else:
+                    possibleReturnPoints = [x for x in blockGraph[func2exit[func]] if x.split('#')[0]==callee]
+                    if len(possibleReturnPoints) == 0:
+                        print("ERROR")
+                        # print(record, idx, possibleReturnPoints)
+                    if len(possibleReturnPoints) == 1:
+                        block2coverage[possibleReturnPoints[0]] = True
+                        lastBlockVisited = possibleReturnPoints
+                    # else, we are not sure what is the next basic block
+                    # We can only hope, that the basic blocks get identified through
+                    # subsequent instructions
+                    lastBlockVisited = [func2exit[func]]
+        except:
+            # print(record)
+            continue
 
 if __name__ == "__main__":
     stree = ET.parse(sys.argv[1]).getroot()
@@ -422,7 +437,7 @@ if __name__ == "__main__":
     blockGraph[currBlock] = [func2entry['main']]
     block2range[currBlock] = [0,0,0,0]
 
-    runFiles = sys.argv[3:-1]
+    runFiles = sys.argv[4:-1]
     for file in runFiles:
         data = open(file, 'r').readlines()
         data = [x.strip().split() for x in data]
@@ -433,10 +448,11 @@ if __name__ == "__main__":
     for block in blockGraph:
         for caller in blockGraph[block]:
             ls.append((block, caller, ""))
-
+    to_dot(ls, sys.argv[3])
     # json.dump(block2coverage, open("templates/static/images/block2coverage.json", 'w'), indent=4)
     # block2coverage = json.loads(open("templates/static/images/block2coverage.json", 'r').read())
 
+    # Sample code: To extract the exact sentences in the source by using block2range
     funcList = list(func2entry.keys())
     block2labels = {k:"SampleCode" for k in blockGraph}
     pickle.dump((funcList, block2coverage, block2labels), open(sys.argv[-1], "wb"))
