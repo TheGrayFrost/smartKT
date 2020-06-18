@@ -1,0 +1,3209 @@
+@prefix prop: <http://smartKT/ns/properties#> .
+@prefix sequence: <http://smartKT/ns/sequence#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sequence:1 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:10 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseC1Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:100 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#201191999428> ;
+    prop:var_name "p" ;
+    prop:write_count 0 .
+
+sequence:101 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:102 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4Base8setPointE5Point" ;
+    prop:caller_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:103 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:104 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#202175955133> ;
+    prop:var_name "s" .
+
+sequence:105 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:106 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:107 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#202175955133> ;
+    prop:var_name "s" .
+
+sequence:108 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:109 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:11 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleC2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:110 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#203817833550> ;
+    prop:var_name "i" ;
+    prop:write_count 0 .
+
+sequence:111 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#201191999428> ;
+    prop:var_name "p" ;
+    prop:write_count 0 .
+
+sequence:112 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:113 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4Base8setPointE5Point" ;
+    prop:caller_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:114 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:115 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" .
+
+sequence:116 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:117 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:118 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" .
+
+sequence:119 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:12 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareC1Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:120 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:121 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#203817833550> ;
+    prop:var_name "i" ;
+    prop:write_count 1 .
+
+sequence:122 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#202175955133> ;
+    prop:var_name "s" ;
+    prop:write_count 0 .
+
+sequence:123 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#202175955133> ;
+    prop:var_name "s" ;
+    prop:write_count 0 .
+
+sequence:124 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" ;
+    prop:write_count 0 .
+
+sequence:125 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" ;
+    prop:write_count 0 .
+
+sequence:126 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z7compare6Circle6Square" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:127 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z4area6Circle" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:128 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z4area6Circle" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "12" ;
+    prop:thread_id 0 .
+
+sequence:129 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z4area6Square" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:13 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseC1Ev" ;
+    prop:caller_name "_ZN6SquareC1Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:130 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z4area6Square" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "25" ;
+    prop:thread_id 0 .
+
+sequence:131 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareD2Ev" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:132 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6SquareD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:133 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:134 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:135 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:136 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:137 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:138 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleD2Ev" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:139 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6CircleD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:14 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN5PointC2Ev" ;
+    prop:caller_name "_ZN4BaseC1Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:140 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:141 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:142 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:143 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:144 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:145 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z7compare6Circle6Square" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "0" ;
+    prop:thread_id 0 .
+
+sequence:146 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:147 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6CircleD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:148 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:149 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:15 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5PointC2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:150 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:151 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:152 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:153 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:154 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6SquareD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:155 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:156 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:157 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:158 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:159 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:16 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseC1Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:160 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:161 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id <http://smartKT/ns/symbol#301246238228> ;
+    prop:var_name "count" .
+
+sequence:162 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id <http://smartKT/ns/symbol#301246238228> ;
+    prop:var_name "count" .
+
+sequence:163 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id <http://smartKT/ns/symbol#201184962880> ;
+    prop:var_name "maxele" .
+
+sequence:164 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 2 ;
+    prop:var_id <http://smartKT/ns/symbol#203817833550> ;
+    prop:var_name "i" ;
+    prop:write_count 0 .
+
+sequence:165 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#201191999428> ;
+    prop:var_name "p" ;
+    prop:write_count 0 .
+
+sequence:166 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:167 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4Base8setPointE5Point" ;
+    prop:caller_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:168 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:169 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#202175955133> ;
+    prop:var_name "s" .
+
+sequence:17 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseC1Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:170 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:171 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:172 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#202175955133> ;
+    prop:var_name "s" .
+
+sequence:173 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:174 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:175 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#203817833550> ;
+    prop:var_name "i" ;
+    prop:write_count 0 .
+
+sequence:176 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#201191999428> ;
+    prop:var_name "p" ;
+    prop:write_count 0 .
+
+sequence:177 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:178 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4Base8setPointE5Point" ;
+    prop:caller_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:179 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:18 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseC1Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:180 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" .
+
+sequence:181 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:182 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:183 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" .
+
+sequence:184 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:185 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:186 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#203817833550> ;
+    prop:var_name "i" ;
+    prop:write_count 1 .
+
+sequence:187 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#202175955133> ;
+    prop:var_name "s" ;
+    prop:write_count 0 .
+
+sequence:188 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#202175955133> ;
+    prop:var_name "s" ;
+    prop:write_count 0 .
+
+sequence:189 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" ;
+    prop:write_count 0 .
+
+sequence:19 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseC1Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:190 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" ;
+    prop:write_count 0 .
+
+sequence:191 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z7compare6Circle6Square" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:192 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z4area6Circle" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:193 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z4area6Circle" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "27" ;
+    prop:thread_id 0 .
+
+sequence:194 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z4area6Square" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:195 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z4area6Square" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "16" ;
+    prop:thread_id 0 .
+
+sequence:196 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareD2Ev" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:197 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6SquareD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:198 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:199 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:2 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 0 ;
+    prop:var_id <http://smartKT/ns/symbol#203817833550> ;
+    prop:var_name "i" ;
+    prop:write_count 1 .
+
+sequence:20 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareC1Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:200 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:201 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:202 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:203 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleD2Ev" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:204 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6CircleD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:205 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:206 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:207 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:208 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:209 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:21 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN5PointC2Eii" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:210 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z7compare6Circle6Square" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "1" ;
+    prop:thread_id 0 .
+
+sequence:211 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:212 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6CircleD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:213 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:214 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:215 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:216 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:217 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:218 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:219 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6SquareD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:22 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5PointC2Eii" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:220 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:221 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:222 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:223 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:224 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:225 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN5Point16hamming_distanceEv" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:226 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:227 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" .
+
+sequence:228 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" .
+
+sequence:229 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" .
+
+sequence:23 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5PointC2Eii" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#201191999428> ;
+    prop:var_name "p" .
+
+sequence:230 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" .
+
+sequence:231 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:232 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:233 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id <http://smartKT/ns/symbol#301246238228> ;
+    prop:var_name "count" .
+
+sequence:234 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id <http://smartKT/ns/symbol#301246238228> ;
+    prop:var_name "count" .
+
+sequence:235 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id <http://smartKT/ns/symbol#201184962880> ;
+    prop:var_name "maxele" .
+
+sequence:236 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 2 ;
+    prop:var_id <http://smartKT/ns/symbol#203817833550> ;
+    prop:var_name "i" ;
+    prop:write_count 0 .
+
+sequence:237 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#201191999428> ;
+    prop:var_name "p" ;
+    prop:write_count 0 .
+
+sequence:238 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:239 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4Base8setPointE5Point" ;
+    prop:caller_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:24 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5PointC2Eii" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#201191999428> ;
+    prop:var_name "p" .
+
+sequence:240 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:241 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#202175955133> ;
+    prop:var_name "s" .
+
+sequence:242 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:243 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:244 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#202175955133> ;
+    prop:var_name "s" .
+
+sequence:245 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:246 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:247 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#203817833550> ;
+    prop:var_name "i" ;
+    prop:write_count 0 .
+
+sequence:248 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#201191999428> ;
+    prop:var_name "p" ;
+    prop:write_count 0 .
+
+sequence:249 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:25 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5PointC2Eii" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:250 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4Base8setPointE5Point" ;
+    prop:caller_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:251 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:252 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" .
+
+sequence:253 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:254 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:255 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" .
+
+sequence:256 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:257 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:258 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#203817833550> ;
+    prop:var_name "i" ;
+    prop:write_count 1 .
+
+sequence:259 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#202175955133> ;
+    prop:var_name "s" ;
+    prop:write_count 0 .
+
+sequence:26 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4Base8getCountEv" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:260 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#202175955133> ;
+    prop:var_name "s" ;
+    prop:write_count 0 .
+
+sequence:261 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" ;
+    prop:write_count 0 .
+
+sequence:262 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" ;
+    prop:write_count 0 .
+
+sequence:263 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z7compare6Circle6Square" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:264 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z4area6Circle" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:265 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z4area6Circle" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "48" ;
+    prop:thread_id 0 .
+
+sequence:266 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z4area6Square" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:267 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z4area6Square" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "9" ;
+    prop:thread_id 0 .
+
+sequence:268 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareD2Ev" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:269 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6SquareD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:27 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8getCountEv" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:270 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:271 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:272 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:273 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:274 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:275 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleD2Ev" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:276 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6CircleD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:277 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:278 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:279 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:28 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8getCountEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:280 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:281 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:282 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z7compare6Circle6Square" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "1" ;
+    prop:thread_id 0 .
+
+sequence:283 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:284 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6CircleD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:285 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:286 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:287 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:288 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:289 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:29 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8getCountEv" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:290 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:291 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6SquareD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:292 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:293 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:294 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:295 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:296 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:297 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN5Point16hamming_distanceEv" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:298 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:299 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" .
+
+sequence:3 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleC2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:30 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:300 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" .
+
+sequence:301 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" .
+
+sequence:302 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" .
+
+sequence:303 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:304 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:305 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id <http://smartKT/ns/symbol#301246238228> ;
+    prop:var_name "count" .
+
+sequence:306 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id <http://smartKT/ns/symbol#301246238228> ;
+    prop:var_name "count" .
+
+sequence:307 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id <http://smartKT/ns/symbol#201184962880> ;
+    prop:var_name "maxele" .
+
+sequence:308 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 2 ;
+    prop:var_id <http://smartKT/ns/symbol#203817833550> ;
+    prop:var_name "i" ;
+    prop:write_count 0 .
+
+sequence:309 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#201191999428> ;
+    prop:var_name "p" ;
+    prop:write_count 0 .
+
+sequence:31 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id <http://smartKT/ns/symbol#201184962880> ;
+    prop:var_name "maxele" .
+
+sequence:310 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:311 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4Base8setPointE5Point" ;
+    prop:caller_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:312 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:313 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#202175955133> ;
+    prop:var_name "s" .
+
+sequence:314 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:315 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:316 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#202175955133> ;
+    prop:var_name "s" .
+
+sequence:317 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:318 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:319 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#203817833550> ;
+    prop:var_name "i" ;
+    prop:write_count 0 .
+
+sequence:32 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id <http://smartKT/ns/symbol#201039325255> ;
+    prop:var_name "arrSquare" .
+
+sequence:320 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#201191999428> ;
+    prop:var_name "p" ;
+    prop:write_count 0 .
+
+sequence:321 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:322 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4Base8setPointE5Point" ;
+    prop:caller_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:323 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:324 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" .
+
+sequence:325 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:326 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:327 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" .
+
+sequence:328 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:329 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:33 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 2 ;
+    prop:var_id <http://smartKT/ns/symbol#203817833550> ;
+    prop:var_name "i" ;
+    prop:write_count 0 .
+
+sequence:330 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#203817833550> ;
+    prop:var_name "i" ;
+    prop:write_count 1 .
+
+sequence:331 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#202175955133> ;
+    prop:var_name "s" ;
+    prop:write_count 0 .
+
+sequence:332 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#202175955133> ;
+    prop:var_name "s" ;
+    prop:write_count 0 .
+
+sequence:333 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" ;
+    prop:write_count 0 .
+
+sequence:334 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" ;
+    prop:write_count 0 .
+
+sequence:335 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z7compare6Circle6Square" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:336 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z4area6Circle" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:337 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z4area6Circle" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "75" ;
+    prop:thread_id 0 .
+
+sequence:338 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z4area6Square" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:339 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z4area6Square" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "4" ;
+    prop:thread_id 0 .
+
+sequence:34 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#201191999428> ;
+    prop:var_name "p" ;
+    prop:write_count 0 .
+
+sequence:340 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareD2Ev" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:341 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6SquareD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:342 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:343 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:344 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:345 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:346 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:347 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleD2Ev" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:348 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6CircleD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:349 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:35 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:350 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:351 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:352 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:353 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:354 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z7compare6Circle6Square" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "1" ;
+    prop:thread_id 0 .
+
+sequence:355 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:356 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6CircleD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:357 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:358 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:359 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:36 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4Base8setPointE5Point" ;
+    prop:caller_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:360 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:361 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:362 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:363 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6SquareD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:364 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:365 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:366 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:367 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:368 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:369 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN5Point16hamming_distanceEv" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:37 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:370 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:371 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" .
+
+sequence:372 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" .
+
+sequence:373 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" .
+
+sequence:374 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" .
+
+sequence:375 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:376 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:377 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id <http://smartKT/ns/symbol#301246238228> ;
+    prop:var_name "count" .
+
+sequence:378 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id <http://smartKT/ns/symbol#301246238228> ;
+    prop:var_name "count" .
+
+sequence:379 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id <http://smartKT/ns/symbol#201184962880> ;
+    prop:var_name "maxele" .
+
+sequence:38 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#202175955133> ;
+    prop:var_name "s" .
+
+sequence:380 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id <http://smartKT/ns/symbol#301246238228> ;
+    prop:var_name "count" .
+
+sequence:381 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#203817833550> ;
+    prop:var_name "i" ;
+    prop:write_count 0 .
+
+sequence:382 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:383 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6SquareD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:384 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:385 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:386 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:387 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:388 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:389 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:39 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:390 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6CircleD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:391 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:392 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:393 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:394 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:395 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:396 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:4 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseC1Ev" ;
+    prop:caller_name "_ZN6CircleC2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:40 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:41 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#202175955133> ;
+    prop:var_name "s" .
+
+sequence:42 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:43 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:44 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id <http://smartKT/ns/symbol#200680237894> ;
+    prop:var_name "arrCircle" .
+
+sequence:45 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#203817833550> ;
+    prop:var_name "i" ;
+    prop:write_count 0 .
+
+sequence:46 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#201191999428> ;
+    prop:var_name "p" ;
+    prop:write_count 0 .
+
+sequence:47 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:48 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4Base8setPointE5Point" ;
+    prop:caller_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:49 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:5 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN5PointC2Ev" ;
+    prop:caller_name "_ZN4BaseC1Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:50 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" .
+
+sequence:51 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:52 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:53 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" .
+
+sequence:54 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:55 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:56 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#203817833550> ;
+    prop:var_name "i" ;
+    prop:write_count 1 .
+
+sequence:57 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#202175955133> ;
+    prop:var_name "s" ;
+    prop:write_count 0 .
+
+sequence:58 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#202175955133> ;
+    prop:var_name "s" ;
+    prop:write_count 0 .
+
+sequence:59 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" ;
+    prop:write_count 0 .
+
+sequence:6 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5PointC2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:60 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id <http://smartKT/ns/symbol#203443302841> ;
+    prop:var_name "c" ;
+    prop:write_count 0 .
+
+sequence:61 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z7compare6Circle6Square" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:62 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z4area6Circle" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:63 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z4area6Circle" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "3" ;
+    prop:thread_id 0 .
+
+sequence:64 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z4area6Square" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:65 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z4area6Square" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "36" ;
+    prop:thread_id 0 .
+
+sequence:66 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareD2Ev" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:67 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6SquareD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:68 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:69 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:7 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseC1Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:70 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:71 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:72 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:73 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleD2Ev" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:74 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6CircleD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:75 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:76 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:77 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:78 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:79 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:8 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseC1Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:80 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z7compare6Circle6Square" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "0" ;
+    prop:thread_id 0 .
+
+sequence:81 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:82 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6CircleD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:83 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:84 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:85 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:86 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:87 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:88 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:89 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6SquareD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:9 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseC1Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:90 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:91 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:92 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id <http://smartKT/ns/symbol#101107985656> ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:93 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:94 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:95 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:96 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id <http://smartKT/ns/symbol#301246238228> ;
+    prop:var_name "count" .
+
+sequence:97 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id <http://smartKT/ns/symbol#301246238228> ;
+    prop:var_name "count" .
+
+sequence:98 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id <http://smartKT/ns/symbol#201184962880> ;
+    prop:var_name "maxele" .
+
+sequence:99 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 2 ;
+    prop:var_id <http://smartKT/ns/symbol#203817833550> ;
+    prop:var_name "i" ;
+    prop:write_count 0 .
+

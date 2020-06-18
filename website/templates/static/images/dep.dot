@@ -1,0 +1,9 @@
+digraph G{
+"build/CMakeFiles/sct.dir/src/main.cpp.o"->"build/sct"[label="OBJ"]
+"src/main.cpp"->"build/CMakeFiles/sct.dir/src/main.cpp.o"[label="SRC"]
+"lib/foo.cpp"->"build/lib/CMakeFiles/foo.dir/foo.cpp.o"[label="SRC"]
+"src/helper.cpp"->"build/CMakeFiles/sct.dir/src/helper.cpp.o"[label="SRC"]
+"build/lib/CMakeFiles/foo.dir/foo.cpp.o"->"build/lib/libfoo.so"[label="OBJ"]
+"build/lib/libfoo.so"->"build/sct"[label="SO/DL"]
+"build/CMakeFiles/sct.dir/src/helper.cpp.o"->"build/sct"[label="OBJ"]
+}

@@ -44,7 +44,7 @@ Basic idea of the CMake build process:
 3. You can combine a few related object files into two forms of collections: archives(.a) and shared object/shared library (.so)
 4. Archives and Shared Objects are basically the .o files written one after the other, combined into one file
 5. To create an executable, you take a bunch of .o files (.a and .so are also collections of .o files only as mentioned earlier), and you link them together. This is done using by passing it the object files to gcc.
-6. The difference between .a and .so files is that: 
+6. The difference between .a and .so files is that:
 	- .a gets linked statically ie its code gets written into the final executable directly
 	- .so gets linked dynamically ie its code is loaded at runtime when executable calls functions from it. Its code is also shared as in multiple executables will use the same copy of the .so
 7. Usually, large projects have this structure:
@@ -66,7 +66,7 @@ Basic idea of the CMake build process:
 - this approach allows us to modify filenames by making changes only in initialize/examine
 
 1. initialize.py: takes the project as input
-	- init(): 
+	- init():
 		- uses CMake to generate makefiles
 		- then builds the project by running `make`
 		- the make command is run in verbose mode, and the commands run by make are collected in make_log.txt
@@ -154,7 +154,7 @@ Basic idea of the CMake build process:
 	- runs `make executable.dump`, which runs memtracker on executable to generate executable.dump
 	- runs pass2.py on executable.dump to generate final_dynamic.xml
 	- copies executable.dump and final_dynamic.xml to /projectname/exe_exename/
-	
+
 5. memtracker.cpp: * the instrumentation routine name is noted in square brackets [] *
 	- Initialization: init()
 		- load final.calls, final.funcargs, final.offset into funcCallMap, funcInfoMap, funcLocalMap repectively
@@ -199,6 +199,14 @@ Basic idea of the CMake build process:
 	- ^ this will change into: <call A>, <localaccess X: read 2>, <localaccess Y: read 1 write 1>, <call B>, <ret B> <localaccess X: read 1>, <ret A>
 	- ie accesses are accumulated in between special events like function call, return or lock acquisition
 	- the access order for static storage variables in preserved
+
+7. website/initialize.py
+	- generates query knowledge by parsing XMLs, generates TTLs required for query, crossSimilarity matrix, TF-IDF stuffs (workflow in `website/docs`)
+	- calls `website/helpers/cfg/aggregrate.py` which results in procesing of BasicBlock, CallGraph and runtime traces to produe Control Flow Graph (execution flow in `website/docs`)
+
+8. website/app.py
+	- responsible for web interactions, redirects requests on URLs to the necessary functions
+	- utilizes `website/templates/layouts/` for interactive controls on graph
 
 Imp note on tool workflow choices:
 - initialize does everything needed to be done for the project to make the further executable analysis faster
@@ -283,8 +291,3 @@ Quick file introductions:
 	- for all the nodes deleted as duplicates, contains the map from deleted node id to original node id
 	- used for correcting files that might contain the nodeids from the deleted nodes
 ******************************************************************************************************************
-
-
-
-
-

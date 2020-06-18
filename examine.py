@@ -2,7 +2,7 @@
 
 '''
 Input: A runs.json file detailing testsuite to analyze (say you want to examine projects/projectname/exec)
-Output: A folder containing all combined information from static interlinking, runtime tracing, 
+Output: A folder containing all combined information from static interlinking, runtime tracing,
 comments analysis and version control information (corr. folder shall be called outputs/projectname/exe_exec)
 '''
 
@@ -18,7 +18,6 @@ from collections import defaultdict
 import json
 
 import parsers.imp_ddx as ddx
-# import parsers.vcs as vcs
 import parsers.uniquify as uniq
 
 # For debug, set true
@@ -38,6 +37,7 @@ OFFSET_EXTENSION = '.offset'
 ADDRESS_EXTENSION = '.address'
 SYMTAB_EXTENSION = '.symtab'
 TEMP_EXTENSION = '.temp.xml'
+CFG_EXTENSION = '.cfg'
 ID_MAP_EXTENSION = '_idmap.p'
 FINAL_FILE = 'final'
 STATIC_EXTENSION = '_static.xml'
@@ -125,7 +125,7 @@ def combine_all_clang(depmap):
 
             # collect calls, signs and offset information
             # all of this information goes to same file: final.whatever
-            for num, EXT in enumerate([CALL_EXTENSION, SIGN_EXTENSION, OFFSET_EXTENSION]):        
+            for num, EXT in enumerate([CALL_EXTENSION, SIGN_EXTENSION, OFFSET_EXTENSION]):
                 if not headerWrite[num]:
                     headerWrite[num] = True
                     os.system('head -n 1 ' + combstrip + EXT + ' >> ' + CURFINALFILE + EXT)
@@ -150,7 +150,7 @@ def combine_all_clang(depmap):
         curtree = ET.ElementTree(root)
         curtree.write(exestrip+COMB_EXTENSION, encoding='utf-8')
         print ('Written combined clang for ' + exenamestrip)
-        
+
         # create the address file in the exe/so's folder
         # treat mainexe specially, as externs also need to be emitted
         ddx.generate_var(root, exestrip+ADDRESS_EXTENSION, numexe == 0)
@@ -160,12 +160,12 @@ def combine_all_clang(depmap):
         # need to add addresses for external variables in mainexe
         # gets the symbol table from readelf as .symtab
         # runs an awk script to replace unknown addresseses in .address file
-        if numexe == 0: 
+        if numexe == 0:
             os.system('mv ' + exestrip+ADDRESS_EXTENSION + ' ' + exestrip+'.temp'+ADDRESS_EXTENSION)
             os.system('readelf -sW '+exe+' | grep "OBJECT">'+exestrip+SYMTAB_EXTENSION)
             os.system('awk -f merge ' + exestrip+SYMTAB_EXTENSION + ' FS="\t" ' + \
                         exestrip+'.temp'+ADDRESS_EXTENSION + ' > ' + exestrip+ADDRESS_EXTENSION)
-        
+
         # take a note of all .address files for later updation during uniq
         address_files.append(exestrip+ADDRESS_EXTENSION)
         os.system('cp ' + exestrip + ADDRESS_EXTENSION + ' ' + foutfolder+'/')
@@ -190,14 +190,14 @@ def combine_all_clang(depmap):
     uniq.uniquify(CURFINALFILE, CALL_EXTENSION, SIGN_EXTENSION, OFFSET_EXTENSION, address_files, id_map)
     print ('Updated all linkage files\n')
 
-        
+
 def generate_static_info():
     print('Starting Static: '+ executable)
 
     # This function extract the dependencies of the binary under study, and
     # recursively finds out the list of source files responsible for this executable
     # and gets the executable's DWARF information and concats them
-    
+
     # get list of all cpp's forming this executable
     ls = dict()
 
@@ -234,12 +234,22 @@ def generate_static_info():
                 if libloc in ls:
                     orderls.append((libloc, ls[libloc]))
     os.system('rm ldd.info')
-    
+
     if DEBUG:
         print ('ORDERLS: ')
         for k, v in orderls:
             print (k, ':', v)
         exit()
+
+
+    # Concat all CFG files
+    cfgFiles = []
+    for (obj, dep) in orderls:
+        cfgFiles.extend(dep)
+    cfgFiles = list(set([os.path.splitext(os.path.join(x, x.split('/')[-1]))[0]+CFG_EXTENSION for x in cfgFiles]))
+    cfgFiles = [os.path.join(outfolder,
+        '/'.join(x.split('/')[x.split('/').index(project_name)+1:])) for x in cfgFiles]
+    os.system("cat " + ' '.join(cfgFiles) + ' > '+os.path.join(foutfolder, FINAL_FILE+CFG_EXTENSION))
 
     combine_all_clang(orderls)
 
@@ -265,9 +275,9 @@ def generate_comments_info(project_name, project_path, vocab_file, problem_domai
     os.system(' '.join([os.path.join(COMMENTS_FOLDER, 'GenerateCommentsXMLForAFolder.py'),
                 abspp, absop, vocab_file, problem_domain_file, project_name]))
 
-    os.system(' '.join([os.path.join(COMMENTS_FOLDER, 'MergeAllCommentsXML.py'), 
+    os.system(' '.join([os.path.join(COMMENTS_FOLDER, 'MergeAllCommentsXML.py'),
                 abspp, absop, output_file]))
-    
+
     # uniquify all address in comments xml
     CURFINALFILE = os.path.join(foutfolder, FINAL_FILE)
     with open(CURFINALFILE+ID_MAP_EXTENSION, 'rb') as mapf:
@@ -282,35 +292,16 @@ def generate_comments_info(project_name, project_path, vocab_file, problem_domai
 
 def start_website():
     # Start the user inerface to query
-    os.system('cp static.xml website/static.xml')
-    os.system('cp dynamic.xml website/dynamic.xml')
-    os.system('cp vcs.xml website/vcs.xml')    
-    os.system('cp comments.xml website/comments.xml')
-    os.system('cp dependencies.p website/dependencies.p')
-    os.chdir('website')
-    os.system('chmod +x setup.sh')
-    os.system('./setup.sh')
-
-def collect_results(project_name, executable):
-    exec_name = executable.split('/')[-1]
-    colpath = project_name + '/' + exec_name
-    if not os.path.exists(colpath):
-        os.mkdir(colpath)
-    os.system('cp dependencies.p ' + colpath)
-    os.system('cp static.xml ' + colpath)
-    os.system('cp static.funcargs ' + colpath)
-    os.system('cp ' + project_name + '/statinfo/*.offset ' + colpath)
-    os.system('cp static.calls ' + colpath)  
-    if CALLDYN:
-        os.system('cp dynamic.xml ' + colpath)
-        os.system('cp ' + exec_name + '.dump ' + colpath)
-    if CALLCOMM:
-        os.system('cp comments.xml ' + colpath)
-    if CALLDYN and CALLCOMM:
-        os.system ('> final_universal.xml')
-        os.system ('cat static.xml dynamic.xml comments.xml > final_universal.xml')
-        os.system('cp final_universal.xml ' + colpath) 
-    print ('Information collected in: ', colpath)
+    print("Please ensure the following are in website/data:")
+    print("final_static.xml, final_dynamic.xml, final_comments.xml, final.cfg")
+    print("dependencies.p, *.dump  [for eg. sct_0_1.dump]")
+    print("\n")
+    print("please edit website/web_config.json accordingly, update data/, then follow these")
+    print("cd website && python3 initialize.py")
+    print("export FLASK_APP=app.py")
+    print("flask run")
+    print("\n")
+    print("After this, browse to http://127.0.0.1:5000")
 
 
 jsonInfo = json.loads(open(sys.argv[1], 'r').read())
@@ -330,6 +321,9 @@ for exe in runs:
 
     if CALLSTATIC:
         generate_static_info()
+        os.system("cp "+os.path.join(foutfolder, "final_static.xml")+" " + os.path.abspath("website/data/"))
+        os.system("cp "+os.path.join(foutfolder, "final.cfg")+" " + os.path.abspath("website/data/"))
+        os.system("cp "+os.path.join(outfolder, "dependencies.p")+" " + os.path.abspath("website/data/"))
 
     # Generate dynamic data
     if CALLDYN:
@@ -340,6 +334,12 @@ for exe in runs:
                 generate_dynamic_info(executable, None, idx, runs[exe][ti])
             os.system('mv ' + os.path.join(foutfolder, 'final_dynamic.xml') + ' ' +
                 os.path.join(foutfolder, 'final_dynamic_' + str(idx) + '.xml'))
+        os.system('echo "<DYNAMICROOT>" >> ' + os.path.join(foutfolder, 'final_dynamic.xml'))
+        for idx, ti in enumerate(runs[exe]):
+            os.system('cat '+os.path.join(foutfolder, 'final_dynamic_'+str(idx)+'.xml')+ " >> " + os.path.join(foutfolder, 'final_dynamic.xml'))
+        os.system('echo "</DYNAMICROOT>" >> ' + os.path.join(foutfolder, 'final_dynamic.xml'))
+        os.system("cp "+os.path.join(foutfolder, "final_dynamic.xml")+" " + os.path.abspath("website/data/"))
+        os.system("cp "+os.path.join(foutfolder, "*.dump")+" " + os.path.abspath("website/data/"))
 
 if CALLCOMM:
     # comments_config
@@ -350,6 +350,7 @@ if CALLCOMM:
         project_path = cc['project_path']
     generate_comments_info(cc['project_name'], project_path, cc['vocab_loc'], \
     cc['problem_domain_loc'], os.path.join(outfolder, FINAL_FILE+COMMENTS_EXTENSION))
+    os.system("cp "+os.path.join(outfolder, FINAL_FILE+COMMENTS_EXTENSION)+" " + os.path.abspath("website/data/"))
 
 if CALLVCS:
     # vcs_config
@@ -357,5 +358,4 @@ if CALLVCS:
         vcs.generate_vcs_info(jsonInfo['vcs'], os.path.join(outfolder, FINAL_FILE+VCS_EXTENSION))
 
 # collect_results(project_name, executable)
-
-# start_website()
+start_website()

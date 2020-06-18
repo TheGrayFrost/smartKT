@@ -1,0 +1,11 @@
+parseXML - This folder contains files which help in conversion from XML to TTL.
+
+similarity_tokens_dict - This folder contains file that generates similarity dictionaries for name tokens and comment tokens.
+
+tf-idf - This folder consists of files that generates tf-idf dictionaries for name tokens and symbols.
+
+all_store.py - This code file is to generate the all_store dictionary which has our placeholder mappings and synonym table.
+
+query.py - a sample SPARQL query execution on query.ttl
+
+overloaded_sibling.py - logic to build overloaded sibling relation in the TTL

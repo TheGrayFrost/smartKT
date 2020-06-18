@@ -1,0 +1,8 @@
+digraph G{
+"Square"->"Base"[label="Public"]
+"Circle"->"Base"[label="Public"]
+"Circle"
+"Base"
+"Point"
+"Square"
+}

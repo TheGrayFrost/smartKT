@@ -1,0 +1,6 @@
+flask
+rdflib
+nltk
+pandas
+cxxfilt
+gensim

@@ -1,0 +1,5587 @@
+@prefix comment: <http://smartKT/ns/comment#> .
+@prefix prop: <http://smartKT/ns/properties#> .
+@prefix sequence: <http://smartKT/ns/sequence#> .
+@prefix symbol: <http://smartKT/ns/symbol#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sequence:1 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:10 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseC1Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:100 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:201191999428 ;
+    prop:var_name "p" ;
+    prop:write_count 0 .
+
+sequence:101 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:102 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4Base8setPointE5Point" ;
+    prop:caller_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:103 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:104 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:202175955133 ;
+    prop:var_name "s" .
+
+sequence:105 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:106 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:107 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:202175955133 ;
+    prop:var_name "s" .
+
+sequence:108 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:109 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:11 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleC2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:110 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:203817833550 ;
+    prop:var_name "i" ;
+    prop:write_count 0 .
+
+sequence:111 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:201191999428 ;
+    prop:var_name "p" ;
+    prop:write_count 0 .
+
+sequence:112 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:113 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4Base8setPointE5Point" ;
+    prop:caller_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:114 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:115 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" .
+
+sequence:116 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:117 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:118 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" .
+
+sequence:119 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:12 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareC1Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:120 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:121 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:203817833550 ;
+    prop:var_name "i" ;
+    prop:write_count 1 .
+
+sequence:122 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:202175955133 ;
+    prop:var_name "s" ;
+    prop:write_count 0 .
+
+sequence:123 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:202175955133 ;
+    prop:var_name "s" ;
+    prop:write_count 0 .
+
+sequence:124 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" ;
+    prop:write_count 0 .
+
+sequence:125 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" ;
+    prop:write_count 0 .
+
+sequence:126 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z7compare6Circle6Square" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:127 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z4area6Circle" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:128 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z4area6Circle" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "12" ;
+    prop:thread_id 0 .
+
+sequence:129 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z4area6Square" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:13 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseC1Ev" ;
+    prop:caller_name "_ZN6SquareC1Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:130 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z4area6Square" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "25" ;
+    prop:thread_id 0 .
+
+sequence:131 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareD2Ev" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:132 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6SquareD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:133 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:134 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:135 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:136 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:137 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:138 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleD2Ev" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:139 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6CircleD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:14 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN5PointC2Ev" ;
+    prop:caller_name "_ZN4BaseC1Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:140 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:141 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:142 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:143 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:144 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:145 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z7compare6Circle6Square" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "0" ;
+    prop:thread_id 0 .
+
+sequence:146 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:147 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6CircleD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:148 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:149 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:15 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5PointC2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:150 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:151 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:152 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:153 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:154 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6SquareD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:155 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:156 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:157 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:158 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:159 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:16 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseC1Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:160 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:161 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id symbol:301246238228 ;
+    prop:var_name "count" .
+
+sequence:162 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id symbol:301246238228 ;
+    prop:var_name "count" .
+
+sequence:163 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id symbol:201184962880 ;
+    prop:var_name "maxele" .
+
+sequence:164 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 2 ;
+    prop:var_id symbol:203817833550 ;
+    prop:var_name "i" ;
+    prop:write_count 0 .
+
+sequence:165 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:201191999428 ;
+    prop:var_name "p" ;
+    prop:write_count 0 .
+
+sequence:166 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:167 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4Base8setPointE5Point" ;
+    prop:caller_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:168 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:169 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:202175955133 ;
+    prop:var_name "s" .
+
+sequence:17 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseC1Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:170 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:171 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:172 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:202175955133 ;
+    prop:var_name "s" .
+
+sequence:173 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:174 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:175 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:203817833550 ;
+    prop:var_name "i" ;
+    prop:write_count 0 .
+
+sequence:176 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:201191999428 ;
+    prop:var_name "p" ;
+    prop:write_count 0 .
+
+sequence:177 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:178 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4Base8setPointE5Point" ;
+    prop:caller_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:179 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:18 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseC1Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:180 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" .
+
+sequence:181 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:182 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:183 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" .
+
+sequence:184 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:185 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:186 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:203817833550 ;
+    prop:var_name "i" ;
+    prop:write_count 1 .
+
+sequence:187 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:202175955133 ;
+    prop:var_name "s" ;
+    prop:write_count 0 .
+
+sequence:188 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:202175955133 ;
+    prop:var_name "s" ;
+    prop:write_count 0 .
+
+sequence:189 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" ;
+    prop:write_count 0 .
+
+sequence:19 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseC1Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:190 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" ;
+    prop:write_count 0 .
+
+sequence:191 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z7compare6Circle6Square" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:192 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z4area6Circle" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:193 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z4area6Circle" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "27" ;
+    prop:thread_id 0 .
+
+sequence:194 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z4area6Square" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:195 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z4area6Square" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "16" ;
+    prop:thread_id 0 .
+
+sequence:196 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareD2Ev" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:197 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6SquareD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:198 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:199 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:2 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 0 ;
+    prop:var_id symbol:203817833550 ;
+    prop:var_name "i" ;
+    prop:write_count 1 .
+
+sequence:20 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareC1Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:200 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:201 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:202 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:203 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleD2Ev" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:204 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6CircleD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:205 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:206 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:207 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:208 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:209 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:21 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN5PointC2Eii" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:210 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z7compare6Circle6Square" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "1" ;
+    prop:thread_id 0 .
+
+sequence:211 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:212 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6CircleD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:213 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:214 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:215 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:216 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:217 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:218 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:219 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6SquareD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:22 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5PointC2Eii" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:220 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:221 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:222 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:223 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:224 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:225 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN5Point16hamming_distanceEv" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:226 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:227 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" .
+
+sequence:228 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" .
+
+sequence:229 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" .
+
+sequence:23 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5PointC2Eii" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:201191999428 ;
+    prop:var_name "p" .
+
+sequence:230 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" .
+
+sequence:231 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:232 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:233 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id symbol:301246238228 ;
+    prop:var_name "count" .
+
+sequence:234 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id symbol:301246238228 ;
+    prop:var_name "count" .
+
+sequence:235 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id symbol:201184962880 ;
+    prop:var_name "maxele" .
+
+sequence:236 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 2 ;
+    prop:var_id symbol:203817833550 ;
+    prop:var_name "i" ;
+    prop:write_count 0 .
+
+sequence:237 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:201191999428 ;
+    prop:var_name "p" ;
+    prop:write_count 0 .
+
+sequence:238 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:239 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4Base8setPointE5Point" ;
+    prop:caller_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:24 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5PointC2Eii" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:201191999428 ;
+    prop:var_name "p" .
+
+sequence:240 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:241 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:202175955133 ;
+    prop:var_name "s" .
+
+sequence:242 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:243 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:244 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:202175955133 ;
+    prop:var_name "s" .
+
+sequence:245 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:246 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:247 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:203817833550 ;
+    prop:var_name "i" ;
+    prop:write_count 0 .
+
+sequence:248 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:201191999428 ;
+    prop:var_name "p" ;
+    prop:write_count 0 .
+
+sequence:249 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:25 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5PointC2Eii" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:250 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4Base8setPointE5Point" ;
+    prop:caller_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:251 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:252 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" .
+
+sequence:253 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:254 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:255 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" .
+
+sequence:256 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:257 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:258 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:203817833550 ;
+    prop:var_name "i" ;
+    prop:write_count 1 .
+
+sequence:259 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:202175955133 ;
+    prop:var_name "s" ;
+    prop:write_count 0 .
+
+sequence:26 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4Base8getCountEv" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:260 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:202175955133 ;
+    prop:var_name "s" ;
+    prop:write_count 0 .
+
+sequence:261 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" ;
+    prop:write_count 0 .
+
+sequence:262 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" ;
+    prop:write_count 0 .
+
+sequence:263 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z7compare6Circle6Square" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:264 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z4area6Circle" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:265 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z4area6Circle" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "48" ;
+    prop:thread_id 0 .
+
+sequence:266 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z4area6Square" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:267 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z4area6Square" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "9" ;
+    prop:thread_id 0 .
+
+sequence:268 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareD2Ev" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:269 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6SquareD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:27 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8getCountEv" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:270 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:271 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:272 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:273 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:274 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:275 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleD2Ev" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:276 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6CircleD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:277 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:278 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:279 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:28 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8getCountEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:280 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:281 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:282 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z7compare6Circle6Square" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "1" ;
+    prop:thread_id 0 .
+
+sequence:283 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:284 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6CircleD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:285 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:286 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:287 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:288 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:289 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:29 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8getCountEv" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:290 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:291 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6SquareD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:292 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:293 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:294 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:295 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:296 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:297 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN5Point16hamming_distanceEv" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:298 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:299 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" .
+
+sequence:3 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleC2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:30 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:300 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" .
+
+sequence:301 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" .
+
+sequence:302 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" .
+
+sequence:303 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:304 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:305 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id symbol:301246238228 ;
+    prop:var_name "count" .
+
+sequence:306 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id symbol:301246238228 ;
+    prop:var_name "count" .
+
+sequence:307 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id symbol:201184962880 ;
+    prop:var_name "maxele" .
+
+sequence:308 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 2 ;
+    prop:var_id symbol:203817833550 ;
+    prop:var_name "i" ;
+    prop:write_count 0 .
+
+sequence:309 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:201191999428 ;
+    prop:var_name "p" ;
+    prop:write_count 0 .
+
+sequence:31 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id symbol:201184962880 ;
+    prop:var_name "maxele" .
+
+sequence:310 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:311 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4Base8setPointE5Point" ;
+    prop:caller_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:312 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:313 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:202175955133 ;
+    prop:var_name "s" .
+
+sequence:314 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:315 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:316 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:202175955133 ;
+    prop:var_name "s" .
+
+sequence:317 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:318 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:319 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:203817833550 ;
+    prop:var_name "i" ;
+    prop:write_count 0 .
+
+sequence:32 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id symbol:201039325255 ;
+    prop:var_name "arrSquare" .
+
+sequence:320 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:201191999428 ;
+    prop:var_name "p" ;
+    prop:write_count 0 .
+
+sequence:321 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:322 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4Base8setPointE5Point" ;
+    prop:caller_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:323 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:324 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" .
+
+sequence:325 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:326 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:327 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" .
+
+sequence:328 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:329 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:33 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 2 ;
+    prop:var_id symbol:203817833550 ;
+    prop:var_name "i" ;
+    prop:write_count 0 .
+
+sequence:330 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:203817833550 ;
+    prop:var_name "i" ;
+    prop:write_count 1 .
+
+sequence:331 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:202175955133 ;
+    prop:var_name "s" ;
+    prop:write_count 0 .
+
+sequence:332 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:202175955133 ;
+    prop:var_name "s" ;
+    prop:write_count 0 .
+
+sequence:333 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" ;
+    prop:write_count 0 .
+
+sequence:334 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" ;
+    prop:write_count 0 .
+
+sequence:335 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z7compare6Circle6Square" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:336 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z4area6Circle" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:337 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z4area6Circle" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "75" ;
+    prop:thread_id 0 .
+
+sequence:338 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z4area6Square" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:339 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z4area6Square" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "4" ;
+    prop:thread_id 0 .
+
+sequence:34 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:201191999428 ;
+    prop:var_name "p" ;
+    prop:write_count 0 .
+
+sequence:340 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareD2Ev" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:341 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6SquareD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:342 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:343 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:344 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:345 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:346 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:347 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleD2Ev" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:348 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6CircleD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:349 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:35 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:350 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:351 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:352 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:353 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:354 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z7compare6Circle6Square" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "1" ;
+    prop:thread_id 0 .
+
+sequence:355 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:356 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6CircleD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:357 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:358 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:359 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:36 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4Base8setPointE5Point" ;
+    prop:caller_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:360 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:361 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:362 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:363 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6SquareD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:364 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:365 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:366 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:367 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:368 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:369 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN5Point16hamming_distanceEv" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:37 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:370 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:371 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" .
+
+sequence:372 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" .
+
+sequence:373 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" .
+
+sequence:374 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" .
+
+sequence:375 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5Point16hamming_distanceEv" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:376 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:377 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id symbol:301246238228 ;
+    prop:var_name "count" .
+
+sequence:378 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id symbol:301246238228 ;
+    prop:var_name "count" .
+
+sequence:379 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id symbol:201184962880 ;
+    prop:var_name "maxele" .
+
+sequence:38 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:202175955133 ;
+    prop:var_name "s" .
+
+sequence:380 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id symbol:301246238228 ;
+    prop:var_name "count" .
+
+sequence:381 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:203817833550 ;
+    prop:var_name "i" ;
+    prop:write_count 0 .
+
+sequence:382 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:383 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6SquareD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:384 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:385 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:386 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:387 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:388 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:389 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:39 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:390 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6CircleD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:391 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:392 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:393 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:394 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:395 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:396 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:4 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseC1Ev" ;
+    prop:caller_name "_ZN6CircleC2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:40 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:41 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:202175955133 ;
+    prop:var_name "s" .
+
+sequence:42 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:43 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:44 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id symbol:200680237894 ;
+    prop:var_name "arrCircle" .
+
+sequence:45 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:203817833550 ;
+    prop:var_name "i" ;
+    prop:write_count 0 .
+
+sequence:46 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:201191999428 ;
+    prop:var_name "p" ;
+    prop:write_count 0 .
+
+sequence:47 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:48 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4Base8setPointE5Point" ;
+    prop:caller_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:49 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:5 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN5PointC2Ev" ;
+    prop:caller_name "_ZN4BaseC1Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:50 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" .
+
+sequence:51 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4Base8setPointE5Point" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:52 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:53 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "NONLOCALSTACK" ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" .
+
+sequence:54 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "void" ;
+    prop:thread_id 0 .
+
+sequence:55 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:56 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:203817833550 ;
+    prop:var_name "i" ;
+    prop:write_count 1 .
+
+sequence:57 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:202175955133 ;
+    prop:var_name "s" ;
+    prop:write_count 0 .
+
+sequence:58 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:202175955133 ;
+    prop:var_name "s" ;
+    prop:write_count 0 .
+
+sequence:59 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" ;
+    prop:write_count 0 .
+
+sequence:6 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN5PointC2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:60 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 1 ;
+    prop:var_id symbol:203443302841 ;
+    prop:var_name "c" ;
+    prop:write_count 0 .
+
+sequence:61 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z7compare6Circle6Square" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:62 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z4area6Circle" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:63 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z4area6Circle" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "3" ;
+    prop:thread_id 0 .
+
+sequence:64 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_Z4area6Square" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:65 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z4area6Square" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "36" ;
+    prop:thread_id 0 .
+
+sequence:66 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareD2Ev" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:67 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6SquareD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:68 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:69 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:7 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseC1Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:70 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:71 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:72 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:73 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleD2Ev" ;
+    prop:caller_name "_Z7compare6Circle6Square" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:74 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6CircleD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:75 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:76 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:77 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:78 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:79 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:8 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseC1Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:80 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_Z7compare6Circle6Square" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "0" ;
+    prop:thread_id 0 .
+
+sequence:81 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6CircleD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:82 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6CircleD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:83 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:84 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:85 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:86 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:87 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6CircleD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:88 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN6SquareD2Ev" ;
+    prop:caller_name "main" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:89 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:callee_name "_ZN4BaseD2Ev" ;
+    prop:caller_name "_ZN6SquareD2Ev" ;
+    prop:is_a "CALL" ;
+    prop:thread_id 0 .
+
+sequence:9 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseC1Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:90 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:91 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:92 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "CLASSSTATIC" ;
+    prop:var_id symbol:101107985656 ;
+    prop:var_name "_ZN4Base5countE" .
+
+sequence:93 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN4BaseD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:return_value "UNKNOWN" ;
+    prop:thread_id 0 .
+
+sequence:94 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "_ZN6SquareD2Ev" ;
+    prop:is_a "RETURN" ;
+    prop:thread_id 0 .
+
+sequence:95 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "IO" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 .
+
+sequence:96 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id symbol:301246238228 ;
+    prop:var_name "count" .
+
+sequence:97 prop:INP "0" ;
+    prop:NONLOCALWRITE "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALWRITE" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id symbol:301246238228 ;
+    prop:var_name "count" .
+
+sequence:98 prop:INP "0" ;
+    prop:NONLOCALREAD "True" ;
+    prop:RUNID "0_1" ;
+    prop:func_name "main" ;
+    prop:is_a "NONLOCALREAD" ;
+    prop:sync "ASYNC" ;
+    prop:thread_id 0 ;
+    prop:var_class "GLOBAL" ;
+    prop:var_id symbol:201184962880 ;
+    prop:var_name "maxele" .
+
+sequence:99 prop:INP "0" ;
+    prop:RUNID "0_1" ;
+    prop:is_a "LOCALACCESS" ;
+    prop:read_count 2 ;
+    prop:var_id symbol:203817833550 ;
+    prop:var_name "i" ;
+    prop:write_count 0 .
+
+symbol:303869766078 prop:absolute_file_path "helper.cpp" ;
+    prop:array_size "[5]" ;
+    prop:comment_id comment:3,
+        comment:6 ;
+    prop:has_id 303869766078 ;
+    prop:isDecl_file_line "src/helper.cpp#14" ;
+    prop:isDef_file_line "src/helper.cpp#14" ;
+    prop:is_a "VarDecl" ;
+    prop:is_array "True" ;
+    prop:is_defined_file "helper.cpp" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "arrSquare" ;
+    prop:name_token "Square",
+        "arr",
+        "arrSquare" ;
+    prop:size 4 ;
+    prop:spelling "arrSquare" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int [5]" ;
+    prop:usr "c:@arrSquare" .
+
+symbol:304109399143 prop:absolute_file_path "helper.cpp" ;
+    prop:array_size "[5]" ;
+    prop:comment_id comment:3,
+        comment:6 ;
+    prop:has_id 304109399143 ;
+    prop:isDecl_file_line "src/helper.cpp#13" ;
+    prop:isDef_file_line "src/helper.cpp#13" ;
+    prop:is_a "VarDecl" ;
+    prop:is_array "True" ;
+    prop:is_defined_file "helper.cpp" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "arrCircle" ;
+    prop:name_token "Circle",
+        "arr",
+        "arrCircle" ;
+    prop:size 4 ;
+    prop:spelling "arrCircle" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int [5]" ;
+    prop:usr "c:@arrCircle" .
+
+symbol:304164471082 prop:absolute_file_path "helper.cpp" ;
+    prop:comment_id comment:3,
+        comment:6 ;
+    prop:has_id 304164471082 ;
+    prop:isDecl_file_line "src/helper.cpp#12" ;
+    prop:isDef_file_line "src/helper.cpp#12" ;
+    prop:is_a "VarDecl" ;
+    prop:is_defined_file "helper.cpp" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "maxele" ;
+    prop:name_token "maxele" ;
+    prop:size 4 ;
+    prop:spelling "maxele" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int" ;
+    prop:usr "c:@maxele" .
+
+comment:1 prop:comment_token "declaration",
+        "header",
+        "include",
+        "obtain" ;
+    prop:has_id 1 ;
+    prop:is_defined_file "main.cpp" ;
+    prop:text "Include the header here, to obtain the function declaration" .
+
+comment:10 prop:comment_token "header",
+        "include" ;
+    prop:has_id 10 ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:text "Include the header (not strictly necessary here)" .
+
+comment:11 prop:comment_token "initialization" ;
+    prop:has_id 11 ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:text "initialization of static private member" .
+
+comment:12 prop:comment_token "header",
+        "include" ;
+    prop:has_id 12 ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:text "Include the header (not strictly necessary here)" .
+
+comment:14 prop:comment_token "header",
+        "include" ;
+    prop:has_id 14 ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:text "Include the header (not strictly necessary here)" .
+
+comment:4 prop:comment_token "declaration",
+        "header",
+        "include",
+        "obtain" ;
+    prop:has_id 4 ;
+    prop:is_defined_file "main.cpp" ;
+    prop:text "Include the header here, to obtain the function declaration" .
+
+comment:7 prop:comment_token "declaration",
+        "header",
+        "include",
+        "obtain" ;
+    prop:has_id 7 ;
+    prop:is_defined_file "main.cpp" ;
+    prop:text "Include the header here, to obtain the function declaration" .
+
+comment:8 prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_id 8 ;
+    prop:is_defined_file "main.cpp" ;
+    prop:text "To demonstrate control flow graph" .
+
+comment:9 prop:has_id 9 ;
+    prop:is_defined_file "helper.cpp" ;
+    prop:text "Extern linkage of variables and arrays" .
+
+symbol:100576033116 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 100576033116 ;
+    prop:has_parent symbol:102931616158 ;
+    prop:isDecl_file_line "lib/foo.h#19" ;
+    prop:isDef_file_line "lib/foo.h#19" ;
+    prop:is_a "CXXConstructor" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:102931616158 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4BaseC1Ev" ;
+    prop:mangled_name "_ZN4BaseC4Ev" ;
+    prop:name_token "Base" ;
+    prop:spelling "Base" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void ()" ;
+    prop:usr "c:@S@Base@F@Base#" .
+
+symbol:100847382769 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 100847382769 ;
+    prop:has_parent symbol:102013600678 ;
+    prop:isDecl_file_line "lib/foo.h#7" ;
+    prop:isDef_file_line "lib/foo.h#7" ;
+    prop:is_a "CXXConstructor" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:102013600678 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN5PointC1Eii" ;
+    prop:mangled_name "_ZN5PointC4Eii" ;
+    prop:name_token "Point" ;
+    prop:spelling "Point" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void (int, int)" ;
+    prop:usr "c:@S@Point@F@Point#I#I#" .
+
+symbol:102496713546 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 102496713546 ;
+    prop:has_parent symbol:102931616158 ;
+    prop:isDecl_file_line "lib/foo.h#24" ;
+    prop:isDef_file_line "lib/foo.h#24" ;
+    prop:is_a "CXXDestructor" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:102931616158 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4BaseD1Ev" ;
+    prop:mangled_name "_ZN4BaseD4Ev" ;
+    prop:name_token "Base",
+        "~Base" ;
+    prop:spelling "~Base" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void () noexcept" ;
+    prop:usr "c:@S@Base@F@~Base#" .
+
+symbol:102582156798 prop:absolute_file_path "foo.h" ;
+    prop:has_id 102582156798 ;
+    prop:has_parent symbol:102562646342 ;
+    prop:isDecl_file_line "lib/foo.h#28" ;
+    prop:isDef_file_line "lib/foo.h#28" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:102562646342 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN4Base8setPointE5PointE1x" ;
+    prop:name_token "x" ;
+    prop:size 8 ;
+    prop:spelling "x" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point" ;
+    prop:usr "c:foo.h@371@S@Base@F@setPoint#$@S@Point#@x" .
+
+symbol:103379489738 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 103379489738 ;
+    prop:has_parent symbol:102931616158 ;
+    prop:isDecl_file_line "lib/foo.h#31" ;
+    prop:isDef_file_line "lib/foo.h#31" ;
+    prop:is_a "CXXMethod" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:102931616158 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4Base8getCountEv" ;
+    prop:mangled_name "_ZN4Base8getCountEv" ;
+    prop:name_token "Count",
+        "get",
+        "getCount" ;
+    prop:param_type "" ;
+    prop:return_type "int" ;
+    prop:spelling "getCount" ;
+    prop:storage_class "static" ;
+    prop:usr "c:@S@Base@F@getCount#S" .
+
+symbol:200105207093 prop:absolute_file_path "foo.h" ;
+    prop:has_id 200105207093 ;
+    prop:has_parent symbol:102625299349 ;
+    prop:isDecl_file_line "lib/foo.h#38" ;
+    prop:isDef_file_line "lib/foo.h#38" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:102625299349 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN6Square10makeSquareE5PointiE1x" ;
+    prop:name_token "x" ;
+    prop:spelling "x" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int" ;
+    prop:usr "c:foo.h@541@S@Square@F@makeSquare#$@S@Point#I#@x" .
+
+symbol:200897991887 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 200897991887 ;
+    prop:has_parent symbol:200974653263 ;
+    prop:isDecl_file_line "lib/foo.h#24" ;
+    prop:isDef_file_line "lib/foo.h#24" ;
+    prop:is_a "CXXDestructor" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:200974653263 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4BaseD1Ev" ;
+    prop:mangled_name "_ZN4BaseD4Ev" ;
+    prop:name_token "Base",
+        "~Base" ;
+    prop:spelling "~Base" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void () noexcept" ;
+    prop:usr "c:@S@Base@F@~Base#" .
+
+symbol:201948060917 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 201948060917 ;
+    prop:has_parent symbol:204147466265 ;
+    prop:isDecl_file_line "lib/foo.h#8" ;
+    prop:isDef_file_line "lib/foo.h#8" ;
+    prop:is_a "CXXConstructor" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:204147466265 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN5PointC1Ev" ;
+    prop:mangled_name "_ZN5PointC4Ev" ;
+    prop:name_token "Point" ;
+    prop:spelling "Point" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void ()" ;
+    prop:usr "c:@S@Point@F@Point#" .
+
+symbol:202469467868 prop:absolute_file_path "foo.h",
+        "main.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_id 202469467868 ;
+    prop:has_parent symbol:203443302841 ;
+    prop:isDecl_file_line "lib/foo.h#41" ;
+    prop:isDef_file_line "lib/foo.h#41" ;
+    prop:isUse_file_line "src/main.cpp#18" ;
+    prop:is_a "CXXConstructor",
+        "CallExpr" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:202491315388 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN6CircleC1Ev" ;
+    prop:mangled_name "_ZN6CircleC1Ev" ;
+    prop:name_token "Circle" ;
+    prop:sem_parent_id symbol:203443302841 ;
+    prop:spelling "Circle" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Circle",
+        "void () noexcept(false)" ;
+    prop:usr "c:@S@Circle@F@Circle#" .
+
+symbol:203250240560 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 203250240560 ;
+    prop:has_parent symbol:200974653263 ;
+    prop:isDecl_file_line "lib/foo.h#19" ;
+    prop:isDef_file_line "lib/foo.h#19" ;
+    prop:is_a "CXXConstructor" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:200974653263 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4BaseC1Ev" ;
+    prop:mangled_name "_ZN4BaseC4Ev" ;
+    prop:name_token "Base" ;
+    prop:spelling "Base" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void ()" ;
+    prop:usr "c:@S@Base@F@Base#" .
+
+symbol:203639874650 prop:absolute_file_path "foo.h",
+        "main.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_id 203639874650 ;
+    prop:has_parent symbol:202175955133 ;
+    prop:isDecl_file_line "lib/foo.h#34" ;
+    prop:isDef_file_line "lib/foo.h#34" ;
+    prop:isUse_file_line "src/main.cpp#19" ;
+    prop:is_a "CXXConstructor",
+        "CallExpr" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:202940370304 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN6SquareC1Ev" ;
+    prop:mangled_name "_ZN6SquareC1Ev" ;
+    prop:name_token "Square" ;
+    prop:sem_parent_id symbol:202175955133 ;
+    prop:spelling "Square" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Square",
+        "void () noexcept(false)" ;
+    prop:usr "c:@S@Square@F@Square#" .
+
+symbol:204257275682 prop:absolute_file_path "foo.h" ;
+    prop:has_id 204257275682 ;
+    prop:has_parent symbol:100353176111 ;
+    prop:isDecl_file_line "lib/foo.h#45" ;
+    prop:isDef_file_line "lib/foo.h#45" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:100353176111 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN6Circle10makeCircleE5PointiE1x" ;
+    prop:name_token "x" ;
+    prop:spelling "x" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int" ;
+    prop:usr "c:foo.h@630@S@Circle@F@makeCircle#$@S@Point#I#@x" .
+
+symbol:300354783716 prop:absolute_file_path "foo.h" ;
+    prop:has_id 300354783716 ;
+    prop:has_parent symbol:302855752868 ;
+    prop:isDecl_file_line "lib/foo.h#50" ;
+    prop:isDef_file_line "lib/foo.h#50" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:302855752868 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4area6CircleE1c" ;
+    prop:name_token "c" ;
+    prop:spelling "c" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Circle" ;
+    prop:usr "c:foo.h@698@F@area#$@S@Circle#@c" .
+
+symbol:300802589283 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 300802589283 ;
+    prop:has_parent symbol:300648845138 ;
+    prop:isDecl_file_line "lib/foo.h#16" ;
+    prop:isDef_file_line "lib/foo.h#16" ;
+    prop:is_a "FieldDecl" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:300648845138 ;
+    prop:linkage_kind "external" ;
+    prop:name_token "p" ;
+    prop:size 8 ;
+    prop:spelling "p" ;
+    prop:type "Point" ;
+    prop:usr "c:@S@Base@FI@p" .
+
+symbol:301002840166 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 301002840166 ;
+    prop:has_parent symbol:300648845138 ;
+    prop:isDecl_file_line "lib/foo.h#31" ;
+    prop:isDef_file_line "lib/foo.h#31" ;
+    prop:is_a "CXXMethod" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:300648845138 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4Base8getCountEv" ;
+    prop:mangled_name "_ZN4Base8getCountEv" ;
+    prop:name_token "Count",
+        "get",
+        "getCount" ;
+    prop:param_type "" ;
+    prop:return_type "int" ;
+    prop:spelling "getCount" ;
+    prop:storage_class "static" ;
+    prop:usr "c:@S@Base@F@getCount#S" .
+
+symbol:301701257926 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 301701257926 ;
+    prop:has_parent symbol:301768381981 ;
+    prop:isDecl_file_line "lib/foo.h#8" ;
+    prop:isDef_file_line "lib/foo.h#8" ;
+    prop:is_a "CXXConstructor" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:301768381981 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN5PointC1Ev" ;
+    prop:mangled_name "_ZN5PointC4Ev" ;
+    prop:name_token "Point" ;
+    prop:spelling "Point" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void ()" ;
+    prop:usr "c:@S@Point@F@Point#" .
+
+symbol:302601697050 prop:absolute_file_path "foo.h" ;
+    prop:has_id 302601697050 ;
+    prop:has_parent symbol:102625299349 ;
+    prop:isDecl_file_line "lib/foo.h#38" ;
+    prop:isDef_file_line "lib/foo.h#38" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:102625299349 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN6Square10makeSquareE5PointiE3llp" ;
+    prop:name_token "llp" ;
+    prop:spelling "llp" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point" ;
+    prop:usr "c:foo.h@530@S@Square@F@makeSquare#$@S@Point#I#@llp" .
+
+symbol:303374271578 prop:absolute_file_path "foo.h" ;
+    prop:has_id 303374271578 ;
+    prop:has_parent symbol:101378764394 ;
+    prop:isDecl_file_line "lib/foo.h#49" ;
+    prop:isDef_file_line "lib/foo.h#49" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:101378764394 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4area6SquareE1s" ;
+    prop:name_token "s" ;
+    prop:spelling "s" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Square" ;
+    prop:usr "c:foo.h@678@F@area#$@S@Square#@s" .
+
+symbol:303623743127 prop:absolute_file_path "foo.h" ;
+    prop:has_id 303623743127 ;
+    prop:has_parent symbol:100353176111 ;
+    prop:isDecl_file_line "lib/foo.h#45" ;
+    prop:isDef_file_line "lib/foo.h#45" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:100353176111 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN6Circle10makeCircleE5PointiE3llp" ;
+    prop:name_token "llp" ;
+    prop:spelling "llp" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point" ;
+    prop:usr "c:foo.h@619@S@Circle@F@makeCircle#$@S@Point#I#@llp" .
+
+symbol:303745147961 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 303745147961 ;
+    prop:has_parent symbol:300648845138 ;
+    prop:isDecl_file_line "lib/foo.h#19" ;
+    prop:isDef_file_line "lib/foo.h#19" ;
+    prop:is_a "CXXConstructor" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:300648845138 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4BaseC1Ev" ;
+    prop:mangled_name "_ZN4BaseC4Ev" ;
+    prop:name_token "Base" ;
+    prop:spelling "Base" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void ()" ;
+    prop:usr "c:@S@Base@F@Base#" .
+
+symbol:304054519064 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_id 304054519064 ;
+    prop:has_parent symbol:300648845138 ;
+    prop:isDecl_file_line "lib/foo.h#24" ;
+    prop:isDef_file_line "lib/foo.h#24" ;
+    prop:is_a "CXXDestructor" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:300648845138 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4BaseD1Ev" ;
+    prop:mangled_name "_ZN4BaseD4Ev" ;
+    prop:name_token "Base",
+        "~Base" ;
+    prop:spelling "~Base" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void () noexcept" ;
+    prop:usr "c:@S@Base@F@~Base#" .
+
+comment:13 prop:comment_token "initialization" ;
+    prop:has_id 13 ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:text "initialization of static private member" .
+
+comment:15 prop:comment_token "initialization" ;
+    prop:has_id 15 ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:text "initialization of static private member" .
+
+symbol:200391139105 prop:absolute_file_path "foo.h" ;
+    prop:has_child symbol:204147466265 ;
+    prop:has_id 200391139105 ;
+    prop:has_parent symbol:100353176111 ;
+    prop:isDecl_file_line "lib/foo.h#45" ;
+    prop:isDef_file_line "lib/foo.h#45" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:100353176111 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN6Circle10makeCircleE5PointiE3llp" ;
+    prop:name_token "llp" ;
+    prop:spelling "llp" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point" ;
+    prop:usr "c:foo.h@619@S@Circle@F@makeCircle#$@S@Point#I#@llp" .
+
+symbol:200939214155 prop:absolute_file_path "foo.h",
+        "main.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_child symbol:201478306585,
+        symbol:203443302841 ;
+    prop:has_id 200939214155 ;
+    prop:isDecl_file_line "lib/foo.h#41" ;
+    prop:isDef_file_line "lib/foo.h#41" ;
+    prop:isUse_file_line "src/main.cpp#27",
+        "src/main.cpp#4" ;
+    prop:is_a "CXXConstructor",
+        "CallExpr" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:202491315388 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN6CircleC1ERKS_" ;
+    prop:mangled_name "_ZN6CircleC1ERKS_" ;
+    prop:name_token "Circle" ;
+    prop:spelling "Circle" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Circle",
+        "void (const Circle &) noexcept" ;
+    prop:usr "c:@S@Circle@F@Circle#&1$@S@Circle#" .
+
+symbol:201263823661 prop:absolute_file_path "main.cpp" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_child symbol:201263823661 ;
+    prop:has_id 201263823661 ;
+    prop:has_parent symbol:201263823661 ;
+    prop:isDecl_file_line "src/main.cpp#12" ;
+    prop:isDef_file_line "src/main.cpp#12" ;
+    prop:isUse_file_line "src/main.cpp#28",
+        "src/main.cpp#30",
+        "src/main.cpp#33" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "count" ;
+    prop:name_token "count" ;
+    prop:size 4 ;
+    prop:spelling "count" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int" ;
+    prop:usr "c:@count" .
+
+symbol:201590111024 prop:absolute_file_path "foo.h" ;
+    prop:has_child symbol:204147466265 ;
+    prop:has_id 201590111024 ;
+    prop:has_parent symbol:102625299349 ;
+    prop:isDecl_file_line "lib/foo.h#38" ;
+    prop:isDef_file_line "lib/foo.h#38" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:102625299349 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN6Square10makeSquareE5PointiE3llp" ;
+    prop:name_token "llp" ;
+    prop:spelling "llp" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point" ;
+    prop:usr "c:foo.h@530@S@Square@F@makeSquare#$@S@Point#I#@llp" .
+
+symbol:201601583886 prop:absolute_file_path "foo.h" ;
+    prop:has_child symbol:202491315388 ;
+    prop:has_id 201601583886 ;
+    prop:has_parent symbol:302855752868 ;
+    prop:isDecl_file_line "lib/foo.h#50" ;
+    prop:isDef_file_line "lib/foo.h#50" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:302855752868 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4area6CircleE1c" ;
+    prop:name_token "c" ;
+    prop:spelling "c" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Circle" ;
+    prop:usr "c:foo.h@698@F@area#$@S@Circle#@c" .
+
+symbol:202797369276 prop:absolute_file_path "foo.h",
+        "main.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_child symbol:202175955133,
+        symbol:202412853423 ;
+    prop:has_id 202797369276 ;
+    prop:isDecl_file_line "lib/foo.h#34" ;
+    prop:isDef_file_line "lib/foo.h#34" ;
+    prop:isUse_file_line "src/main.cpp#27",
+        "src/main.cpp#4" ;
+    prop:is_a "CXXConstructor",
+        "CallExpr" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:202940370304 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN6SquareC1ERKS_" ;
+    prop:mangled_name "_ZN6SquareC1ERKS_" ;
+    prop:name_token "Square" ;
+    prop:spelling "Square" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Square",
+        "void (const Square &) noexcept" ;
+    prop:usr "c:@S@Square@F@Square#&1$@S@Square#" .
+
+symbol:204018532364 prop:absolute_file_path "foo.h" ;
+    prop:has_child symbol:202940370304 ;
+    prop:has_id 204018532364 ;
+    prop:has_parent symbol:101378764394 ;
+    prop:isDecl_file_line "lib/foo.h#49" ;
+    prop:isDef_file_line "lib/foo.h#49" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:101378764394 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4area6SquareE1s" ;
+    prop:name_token "s" ;
+    prop:spelling "s" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Square" ;
+    prop:usr "c:foo.h@678@F@area#$@S@Square#@s" .
+
+symbol:301004312465 prop:absolute_file_path "foo.h" ;
+    prop:has_id 301004312465 ;
+    prop:has_parent symbol:200928634673,
+        symbol:303556678792 ;
+    prop:isDecl_file_line "lib/foo.h#28" ;
+    prop:isDef_file_line "lib/foo.h#28" ;
+    prop:isUse_file_line "lib/foo.h#28" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_called_file "foo.h_1" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:303556678792 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN4Base8setPointE5PointE1x" ;
+    prop:name_token "x" ;
+    prop:spelling "x" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point",
+        "const Point" ;
+    prop:usr "c:foo.h@371@S@Base@F@setPoint#$@S@Point#@x" .
+
+symbol:302347631484 prop:absolute_file_path "helper.cpp" ;
+    prop:has_child symbol:301296214220 ;
+    prop:has_id 302347631484 ;
+    prop:has_parent symbol:202854211754 ;
+    prop:isDecl_file_line "src/helper.cpp#7" ;
+    prop:isDef_file_line "src/helper.cpp#7" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "helper.cpp" ;
+    prop:lex_parent_id symbol:202854211754 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ7compare6Circle6SquareE1c" ;
+    prop:name_token "c" ;
+    prop:spelling "c" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Circle" ;
+    prop:usr "c:helper.cpp@81@F@compare#$@S@Circle#$@S@Square#@c" .
+
+symbol:302820180022 prop:absolute_file_path "helper.cpp" ;
+    prop:has_child symbol:303696096832 ;
+    prop:has_id 302820180022 ;
+    prop:has_parent symbol:202854211754 ;
+    prop:isDecl_file_line "src/helper.cpp#7" ;
+    prop:isDef_file_line "src/helper.cpp#7" ;
+    prop:is_a "ParmDecl" ;
+    prop:is_defined_file "helper.cpp" ;
+    prop:lex_parent_id symbol:202854211754 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ7compare6Circle6SquareE1s" ;
+    prop:name_token "s" ;
+    prop:spelling "s" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Square" ;
+    prop:usr "c:helper.cpp@91@F@compare#$@S@Circle#$@S@Square#@s" .
+
+symbol:102628714979 prop:absolute_file_path "foo.cpp" ;
+    prop:has_child symbol:102628714979 ;
+    prop:has_id 102628714979 ;
+    prop:has_parent symbol:102625299349,
+        symbol:102628714979 ;
+    prop:isDecl_file_line "lib/foo.cpp#7" ;
+    prop:isDef_file_line "lib/foo.cpp#7" ;
+    prop:isRead_file_line "lib/foo.cpp#9" ;
+    prop:isUse_file_line "lib/foo.cpp#9" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "foo.cpp" ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:lex_parent_id symbol:102625299349 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN6Square10makeSquareE5PointiE1x" ;
+    prop:name_token "x" ;
+    prop:size 4 ;
+    prop:spelling "x" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int" ;
+    prop:usr "c:foo.cpp@193@S@Square@F@makeSquare#$@S@Point#I#@x" .
+
+symbol:103986400645 prop:absolute_file_path "foo.cpp" ;
+    prop:has_child symbol:103974852037 ;
+    prop:has_id 103986400645 ;
+    prop:has_parent symbol:101378764394,
+        symbol:204002931485 ;
+    prop:isDecl_file_line "lib/foo.cpp#17" ;
+    prop:isDef_file_line "lib/foo.cpp#17" ;
+    prop:isUse_file_line "lib/foo.cpp#18" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "foo.cpp" ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:lex_parent_id symbol:101378764394 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4area6SquareE1s" ;
+    prop:name_token "s" ;
+    prop:size 12 ;
+    prop:spelling "s" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Square" ;
+    prop:usr "c:foo.cpp@315@F@area#$@S@Square#@s" .
+
+symbol:104222372837 prop:absolute_file_path "foo.cpp" ;
+    prop:has_child symbol:104222372837 ;
+    prop:has_id 104222372837 ;
+    prop:has_parent symbol:100353176111,
+        symbol:104222372837 ;
+    prop:isDecl_file_line "lib/foo.cpp#12" ;
+    prop:isDef_file_line "lib/foo.cpp#12" ;
+    prop:isRead_file_line "lib/foo.cpp#14" ;
+    prop:isUse_file_line "lib/foo.cpp#14" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "foo.cpp" ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:lex_parent_id symbol:100353176111 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN6Circle10makeCircleE5PointiE1x" ;
+    prop:name_token "x" ;
+    prop:size 4 ;
+    prop:spelling "x" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int" ;
+    prop:usr "c:foo.cpp@267@S@Circle@F@makeCircle#$@S@Point#I#@x" .
+
+symbol:200680237894 prop:absolute_file_path "main.cpp" ;
+    prop:array_size "[]" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_child symbol:200680237894 ;
+    prop:has_parent symbol:200680237894 ;
+    prop:isDecl_file_line "src/main.cpp#11" ;
+    prop:isUse_file_line "src/main.cpp#25" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_array "True" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_extern_file "main.cpp" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "arrCircle" ;
+    prop:name_token "Circle",
+        "arr",
+        "arrCircle" ;
+    prop:size 4 ;
+    prop:spelling "arrCircle" ;
+    prop:storage_class "extern" ;
+    prop:type "int *",
+        "int []" ;
+    prop:usr "c:@arrCircle" .
+
+symbol:201039325255 prop:absolute_file_path "main.cpp" ;
+    prop:array_size "[]" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_child symbol:201039325255 ;
+    prop:has_parent symbol:201039325255 ;
+    prop:isDecl_file_line "src/main.cpp#11" ;
+    prop:isUse_file_line "src/main.cpp#24" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_array "True" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_extern_file "main.cpp" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "arrSquare" ;
+    prop:name_token "Square",
+        "arr",
+        "arrSquare" ;
+    prop:size 4 ;
+    prop:spelling "arrSquare" ;
+    prop:storage_class "extern" ;
+    prop:type "int *",
+        "int []" ;
+    prop:usr "c:@arrSquare" .
+
+symbol:203738238113 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:203502495398 ;
+    prop:has_id 203738238113 ;
+    prop:has_parent symbol:200974653263 ;
+    prop:isDecl_file_line "lib/foo.h#28" ;
+    prop:isDef_file_line "lib/foo.h#28" ;
+    prop:is_a "CXXMethod" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:200974653263 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4Base8setPointE5Point" ;
+    prop:mangled_name "_ZN4Base8setPointE5Point" ;
+    prop:name_token "Point",
+        "set",
+        "setPoint" ;
+    prop:param_type "Point" ;
+    prop:return_type "void" ;
+    prop:spelling "setPoint" ;
+    prop:storage_class "default_auto" ;
+    prop:usr "c:@S@Base@F@setPoint#$@S@Point#" .
+
+symbol:302930646226 prop:absolute_file_path "helper.cpp" ;
+    prop:has_child symbol:301296214220 ;
+    prop:has_id 302930646226 ;
+    prop:has_parent symbol:202028645034,
+        symbol:302855752868 ;
+    prop:isDecl_file_line "src/helper.cpp#3" ;
+    prop:isDef_file_line "src/helper.cpp#3" ;
+    prop:isUse_file_line "src/helper.cpp#4" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "helper.cpp" ;
+    prop:is_defined_file "helper.cpp" ;
+    prop:lex_parent_id symbol:302855752868 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4area6CircleE1c" ;
+    prop:name_token "c" ;
+    prop:size 12 ;
+    prop:spelling "c" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Circle" ;
+    prop:usr "c:helper.cpp@27@F@area#$@S@Circle#@c" .
+
+symbol:303556678792 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:301004312465 ;
+    prop:has_id 303556678792 ;
+    prop:has_parent symbol:300648845138 ;
+    prop:isDecl_file_line "lib/foo.h#28" ;
+    prop:isDef_file_line "lib/foo.h#28" ;
+    prop:is_a "CXXMethod" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:300648845138 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4Base8setPointE5Point" ;
+    prop:mangled_name "_ZN4Base8setPointE5Point" ;
+    prop:name_token "Point",
+        "set",
+        "setPoint" ;
+    prop:param_type "Point" ;
+    prop:return_type "void" ;
+    prop:spelling "setPoint" ;
+    prop:storage_class "default_auto" ;
+    prop:usr "c:@S@Base@F@setPoint#$@S@Point#" .
+
+comment:3 prop:has_id 3 ;
+    prop:is_defined_file "helper.cpp" ;
+    prop:text "Extern linkage of variables and arrays" .
+
+comment:6 prop:has_id 6 ;
+    prop:is_defined_file "helper.cpp" ;
+    prop:text "Extern linkage of variables and arrays" .
+
+symbol:101121185691 prop:absolute_file_path "foo.cpp",
+        "foo.h" ;
+    prop:has_child symbol:100353176111 ;
+    prop:has_id 101121185691 ;
+    prop:has_parent symbol:100353176111 ;
+    prop:isDecl_file_line "lib/foo.h#41" ;
+    prop:isDef_file_line "lib/foo.h#41" ;
+    prop:isUse_file_line "lib/foo.cpp#12" ;
+    prop:is_a "ClassDecl",
+        "TypeRef" ;
+    prop:is_called_file "foo.cpp" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Circle",
+        "class",
+        "class Circle" ;
+    prop:size 12 ;
+    prop:spelling "Circle",
+        "class Circle" ;
+    prop:type "Circle" ;
+    prop:usr "c:@S@Circle" .
+
+symbol:200129986658 prop:absolute_file_path "foo.h" ;
+    prop:has_child symbol:200129986658 ;
+    prop:has_id 200129986658 ;
+    prop:has_parent symbol:200129986658,
+        symbol:200140975045,
+        symbol:300736181753 ;
+    prop:isDecl_file_line "lib/foo.h#7" ;
+    prop:isDef_file_line "lib/foo.h#7" ;
+    prop:isUse_file_line "lib/foo.h#7" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "foo.h",
+        "foo.h_1" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:200140975045 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN5PointC1EiiE1a" ;
+    prop:name_token "a" ;
+    prop:sem_parent_id symbol:200140975045,
+        symbol:300736181753 ;
+    prop:size 4 ;
+    prop:spelling "a" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int" ;
+    prop:usr "c:foo.h@116@S@Point@F@Point#I#I#@a" .
+
+symbol:200545039082 prop:absolute_file_path "foo.h",
+        "main.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_child symbol:200545039082,
+        symbol:200974653263 ;
+    prop:has_id 200545039082 ;
+    prop:has_parent symbol:200545039082,
+        symbol:200974653263 ;
+    prop:isDecl_file_line "lib/foo.h#31" ;
+    prop:isDef_file_line "lib/foo.h#31" ;
+    prop:isUse_file_line "src/main.cpp#21" ;
+    prop:isWritten_file_line "src/main.cpp#21" ;
+    prop:is_a "CXXMethod",
+        "CallExpr",
+        "DeclRefExpr" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol:200974653263 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4Base8getCountEv" ;
+    prop:mangled_name "_ZN4Base8getCountEv" ;
+    prop:name_token "Count",
+        "get",
+        "getCount" ;
+    prop:param_type "" ;
+    prop:return_type "int" ;
+    prop:spelling "getCount" ;
+    prop:storage_class "static" ;
+    prop:type "int",
+        "int ()",
+        "int (*)()" ;
+    prop:usr "c:@S@Base@F@getCount#S" .
+
+symbol:200564341192 prop:absolute_file_path "foo.h" ;
+    prop:has_child symbol:200564341192 ;
+    prop:has_id 200564341192 ;
+    prop:has_parent symbol:200140975045,
+        symbol:200564341192,
+        symbol:300736181753 ;
+    prop:isDecl_file_line "lib/foo.h#7" ;
+    prop:isDef_file_line "lib/foo.h#7" ;
+    prop:isUse_file_line "lib/foo.h#7" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "foo.h",
+        "foo.h_1" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:200140975045 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN5PointC1EiiE1b" ;
+    prop:name_token "b" ;
+    prop:sem_parent_id symbol:200140975045,
+        symbol:300736181753 ;
+    prop:size 4 ;
+    prop:spelling "b" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int" ;
+    prop:usr "c:foo.h@123@S@Point@F@Point#I#I#@b" .
+
+symbol:200954073876 prop:absolute_file_path "main.cpp" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_id 200954073876 ;
+    prop:isDecl_file_line "src/main.cpp#16" ;
+    prop:isDef_file_line "src/main.cpp#16" ;
+    prop:is_a "FunctionDecl" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "main" ;
+    prop:mangled_name "main" ;
+    prop:name_token "main" ;
+    prop:param_type "" ;
+    prop:return_type "int" ;
+    prop:spelling "main" ;
+    prop:storage_class "default_auto" ;
+    prop:usr "c:@F@main#" .
+
+symbol:202028645034 prop:absolute_file_path "foo.cpp",
+        "foo.h",
+        "helper.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:202028645034,
+        symbol:302930646226 ;
+    prop:has_id 202028645034 ;
+    prop:has_parent symbol:202028645034,
+        symbol:202491315388 ;
+    prop:isDecl_file_line "lib/foo.h#43" ;
+    prop:isDef_file_line "lib/foo.h#43" ;
+    prop:isUse_file_line "lib/foo.cpp#14",
+        "src/helper.cpp#4" ;
+    prop:isWritten_file_line "lib/foo.cpp#14",
+        "src/helper.cpp#4" ;
+    prop:is_a "FieldDecl",
+        "MemberRefExpr" ;
+    prop:is_called_file "foo.cpp",
+        "helper.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:202491315388 ;
+    prop:linkage_kind "external" ;
+    prop:name_token "rad" ;
+    prop:size 4 ;
+    prop:spelling "rad" ;
+    prop:type "int" ;
+    prop:usr "c:@S@Circle@FI@rad" .
+
+symbol:203719287942 prop:absolute_file_path "foo.cpp",
+        "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:203719287942 ;
+    prop:has_id 203719287942 ;
+    prop:has_parent symbol:200140975045,
+        symbol:203719287942,
+        symbol:204147466265 ;
+    prop:isDecl_file_line "lib/foo.h#6" ;
+    prop:isDef_file_line "lib/foo.h#6" ;
+    prop:isRead_file_line "lib/foo.cpp#4" ;
+    prop:isUse_file_line "lib/foo.cpp#4",
+        "lib/foo.h#7" ;
+    prop:isWritten_file_line "lib/foo.cpp#4" ;
+    prop:is_a "FieldDecl",
+        "MemberRef",
+        "MemberRefExpr" ;
+    prop:is_called_file "foo.cpp",
+        "foo.h" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:204147466265 ;
+    prop:linkage_kind "external" ;
+    prop:name_token "y" ;
+    prop:size 4 ;
+    prop:spelling "y" ;
+    prop:type "int" ;
+    prop:usr "c:@S@Point@FI@y" .
+
+symbol:204002931485 prop:absolute_file_path "foo.cpp",
+        "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:103986400645,
+        symbol:204002931485 ;
+    prop:has_id 204002931485 ;
+    prop:has_parent symbol:202940370304,
+        symbol:204002931485 ;
+    prop:isDecl_file_line "lib/foo.h#36" ;
+    prop:isDef_file_line "lib/foo.h#36" ;
+    prop:isRead_file_line "lib/foo.cpp#18" ;
+    prop:isUse_file_line "lib/foo.cpp#18",
+        "lib/foo.cpp#9" ;
+    prop:isWritten_file_line "lib/foo.cpp#18",
+        "lib/foo.cpp#9" ;
+    prop:is_a "FieldDecl",
+        "MemberRefExpr" ;
+    prop:is_called_file "foo.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:202940370304 ;
+    prop:linkage_kind "external" ;
+    prop:name_token "len" ;
+    prop:size 4 ;
+    prop:spelling "len" ;
+    prop:type "int" ;
+    prop:usr "c:@S@Square@FI@len" .
+
+symbol:204140677018 prop:absolute_file_path "foo.cpp",
+        "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:204140677018 ;
+    prop:has_id 204140677018 ;
+    prop:has_parent symbol:200140975045,
+        symbol:204140677018,
+        symbol:204147466265 ;
+    prop:isDecl_file_line "lib/foo.h#6" ;
+    prop:isDef_file_line "lib/foo.h#6" ;
+    prop:isRead_file_line "lib/foo.cpp#4" ;
+    prop:isUse_file_line "lib/foo.cpp#4",
+        "lib/foo.h#7" ;
+    prop:isWritten_file_line "lib/foo.cpp#4" ;
+    prop:is_a "FieldDecl",
+        "MemberRef",
+        "MemberRefExpr" ;
+    prop:is_called_file "foo.cpp",
+        "foo.h" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:204147466265 ;
+    prop:linkage_kind "external" ;
+    prop:name_token "x" ;
+    prop:size 4 ;
+    prop:spelling "x" ;
+    prop:type "int" ;
+    prop:usr "c:@S@Point@FI@x" .
+
+symbol:301768381981 prop:absolute_file_path "foo.h" ;
+    prop:has_child symbol:300736181753,
+        symbol:301701257926 ;
+    prop:has_id 301768381981 ;
+    prop:isDecl_file_line "lib/foo.h#5" ;
+    prop:isDef_file_line "lib/foo.h#5" ;
+    prop:is_a "StructDecl" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Point" ;
+    prop:size 8 ;
+    prop:spelling "Point" ;
+    prop:type "Point" ;
+    prop:usr "c:@S@Point" .
+
+symbol:303696096832 prop:absolute_file_path "foo.h",
+        "helper.cpp" ;
+    prop:has_child symbol:102625299349,
+        symbol:300648845138 ;
+    prop:has_id 303696096832 ;
+    prop:has_parent symbol:302820180022 ;
+    prop:isDecl_file_line "lib/foo.h#34" ;
+    prop:isDef_file_line "lib/foo.h#34" ;
+    prop:isUse_file_line "src/helper.cpp#7" ;
+    prop:is_a "ClassDecl",
+        "TypeRef" ;
+    prop:is_called_file "helper.cpp" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:is_subclass_of symbol:300648845138 ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Square",
+        "class",
+        "class Square" ;
+    prop:spelling "Square",
+        "class Square" ;
+    prop:type "Square" ;
+    prop:usr "c:@S@Square" .
+
+symbol:100052015748 prop:absolute_file_path "foo.cpp",
+        "foo.h",
+        "main.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_child symbol:100052015748,
+        symbol:102013600678,
+        symbol:201396957542 ;
+    prop:has_id 100052015748 ;
+    prop:has_parent symbol:100052015748,
+        symbol:204147466265 ;
+    prop:isDecl_file_line "lib/foo.cpp#3",
+        "lib/foo.h#9" ;
+    prop:isDef_file_line "lib/foo.cpp#3" ;
+    prop:isUse_file_line "src/main.cpp#28" ;
+    prop:is_a "CXXMethod",
+        "CallExpr",
+        "MemberRefExpr" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:is_extern_file "foo.h" ;
+    prop:lex_parent_id symbol:,
+        symbol:204147466265 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN5Point16hamming_distanceEv" ;
+    prop:mangled_name "_ZN5Point16hamming_distanceEv" ;
+    prop:name_token "distance",
+        "hamming",
+        "hamming_distance" ;
+    prop:param_type "" ;
+    prop:return_type "int" ;
+    prop:sem_parent_id symbol:102013600678 ;
+    prop:spelling "hamming_distance" ;
+    prop:storage_class "default_auto" ;
+    prop:type "<bound member function type>",
+        "int" ;
+    prop:usr "c:@S@Point@F@hamming_distance#" .
+
+symbol:100394972359 prop:absolute_file_path "foo.cpp" ;
+    prop:has_child symbol:100394972359,
+        symbol:102013600678 ;
+    prop:has_id 100394972359 ;
+    prop:has_parent symbol:100353176111,
+        symbol:100394972359,
+        symbol:201807466413 ;
+    prop:isDecl_file_line "lib/foo.cpp#12" ;
+    prop:isDef_file_line "lib/foo.cpp#12" ;
+    prop:isUse_file_line "lib/foo.cpp#13" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "foo.cpp" ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:lex_parent_id symbol:100353176111 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN6Circle10makeCircleE5PointiE3llp" ;
+    prop:name_token "llp" ;
+    prop:size 8 ;
+    prop:spelling "llp" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point",
+        "const Point" ;
+    prop:usr "c:foo.cpp@256@S@Circle@F@makeCircle#$@S@Point#I#@llp" .
+
+symbol:101552115860 prop:absolute_file_path "foo.cpp" ;
+    prop:has_child symbol:101552115860,
+        symbol:102013600678 ;
+    prop:has_id 101552115860 ;
+    prop:has_parent symbol:101552115860,
+        symbol:102625299349,
+        symbol:201807466413 ;
+    prop:isDecl_file_line "lib/foo.cpp#7" ;
+    prop:isDef_file_line "lib/foo.cpp#7" ;
+    prop:isUse_file_line "lib/foo.cpp#8" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "foo.cpp" ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:lex_parent_id symbol:102625299349 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN6Square10makeSquareE5PointiE3llp" ;
+    prop:name_token "llp" ;
+    prop:size 8 ;
+    prop:spelling "llp" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point",
+        "const Point" ;
+    prop:usr "c:foo.cpp@182@S@Square@F@makeSquare#$@S@Point#I#@llp" .
+
+symbol:103974852037 prop:absolute_file_path "foo.cpp",
+        "foo.h" ;
+    prop:has_child symbol:102625299349 ;
+    prop:has_id 103974852037 ;
+    prop:has_parent symbol:102625299349,
+        symbol:103986400645 ;
+    prop:isDecl_file_line "lib/foo.h#34" ;
+    prop:isDef_file_line "lib/foo.h#34" ;
+    prop:isUse_file_line "lib/foo.cpp#17",
+        "lib/foo.cpp#7" ;
+    prop:is_a "ClassDecl",
+        "TypeRef" ;
+    prop:is_called_file "foo.cpp" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Square",
+        "class",
+        "class Square" ;
+    prop:size 12 ;
+    prop:spelling "Square",
+        "class Square" ;
+    prop:type "Square" ;
+    prop:usr "c:@S@Square" .
+
+symbol:200928634673 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:200928634673,
+        symbol:201396957542,
+        symbol:203502495398,
+        symbol:301004312465 ;
+    prop:has_id 200928634673 ;
+    prop:has_parent symbol:200928634673 ;
+    prop:isDecl_file_line "lib/foo.h#5" ;
+    prop:isDef_file_line "lib/foo.h#5" ;
+    prop:isUse_file_line "lib/foo.h#28" ;
+    prop:is_a "CXXMethod",
+        "CallExpr",
+        "DeclRefExpr" ;
+    prop:is_called_file "foo.h",
+        "foo.h_1" ;
+    prop:is_defined_file "foo.h" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol:204147466265 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN5PointaSERKS_" ;
+    prop:mangled_name "_ZN5PointaSERKS_" ;
+    prop:name_token "operator",
+        "operator=" ;
+    prop:param_type "const Point & noexcept" ;
+    prop:return_type "Point &" ;
+    prop:spelling "operator=" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point",
+        "Point &(*)(const Point &) noexcept",
+        "Point &(const Point &) noexcept" ;
+    prop:usr "c:@S@Point@F@operator=#&1$@S@Point#" .
+
+symbol:201396957542 prop:absolute_file_path "foo.h",
+        "main.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_child symbol:203443302841,
+        symbol:204147466265 ;
+    prop:has_id 201396957542 ;
+    prop:has_parent symbol:100052015748,
+        symbol:200928634673,
+        symbol:200974653263 ;
+    prop:isDecl_file_line "lib/foo.h#16" ;
+    prop:isDef_file_line "lib/foo.h#16" ;
+    prop:isUse_file_line "lib/foo.h#28",
+        "src/main.cpp#28" ;
+    prop:is_a "FieldDecl",
+        "MemberRefExpr" ;
+    prop:is_called_file "foo.h",
+        "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:200974653263 ;
+    prop:linkage_kind "external" ;
+    prop:name_token "p" ;
+    prop:size 8 ;
+    prop:spelling "p" ;
+    prop:type "Point" ;
+    prop:usr "c:@S@Base@FI@p" .
+
+symbol:201478306585 prop:absolute_file_path "main.cpp" ;
+    prop:has_child symbol:201478306585,
+        symbol:202491315388 ;
+    prop:has_id 201478306585 ;
+    prop:has_parent symbol:200939214155,
+        symbol:201478306585,
+        symbol:202854211754 ;
+    prop:isDecl_file_line "src/main.cpp#3" ;
+    prop:isDef_file_line "src/main.cpp#3" ;
+    prop:isUse_file_line "src/main.cpp#4" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:lex_parent_id symbol:202854211754 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ7compare6Circle6SquareE1c" ;
+    prop:name_token "c" ;
+    prop:size 12 ;
+    prop:spelling "c" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Circle",
+        "const Circle" ;
+    prop:usr "c:main.cpp@97@F@compare#$@S@Circle#$@S@Square#@c" .
+
+symbol:202412853423 prop:absolute_file_path "main.cpp" ;
+    prop:has_child symbol:202412853423,
+        symbol:202940370304 ;
+    prop:has_id 202412853423 ;
+    prop:has_parent symbol:202412853423,
+        symbol:202797369276,
+        symbol:202854211754 ;
+    prop:isDecl_file_line "src/main.cpp#3" ;
+    prop:isDef_file_line "src/main.cpp#3" ;
+    prop:isUse_file_line "src/main.cpp#4" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:lex_parent_id symbol:202854211754 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ7compare6Circle6SquareE1s" ;
+    prop:name_token "s" ;
+    prop:size 12 ;
+    prop:spelling "s" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Square",
+        "const Square" ;
+    prop:usr "c:main.cpp@107@F@compare#$@S@Circle#$@S@Square#@s" .
+
+symbol:203502495398 prop:absolute_file_path "foo.h" ;
+    prop:has_child symbol:203502495398,
+        symbol:204147466265 ;
+    prop:has_id 203502495398 ;
+    prop:has_parent symbol:200928634673,
+        symbol:203502495398,
+        symbol:203738238113 ;
+    prop:isDecl_file_line "lib/foo.h#28" ;
+    prop:isDef_file_line "lib/foo.h#28" ;
+    prop:isUse_file_line "lib/foo.h#28" ;
+    prop:is_a "DeclRefExpr",
+        "ParmDecl" ;
+    prop:is_called_file "foo.h" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:203738238113 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZN4Base8setPointE5PointE1x" ;
+    prop:name_token "x" ;
+    prop:spelling "x" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point",
+        "const Point" ;
+    prop:usr "c:foo.h@371@S@Base@F@setPoint#$@S@Point#@x" .
+
+symbol:300736181753 prop:absolute_file_path "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:200129986658,
+        symbol:200564341192 ;
+    prop:has_id 300736181753 ;
+    prop:has_parent symbol:301768381981 ;
+    prop:isDecl_file_line "lib/foo.h#7" ;
+    prop:isDef_file_line "lib/foo.h#7" ;
+    prop:is_a "CXXConstructor" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:301768381981 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN5PointC1Eii" ;
+    prop:mangled_name "_ZN5PointC4Eii" ;
+    prop:name_token "Point" ;
+    prop:spelling "Point" ;
+    prop:storage_class "default_auto" ;
+    prop:type "void (int, int)" ;
+    prop:usr "c:@S@Point@F@Point#I#I#" .
+
+symbol:301296214220 prop:absolute_file_path "foo.h",
+        "helper.cpp" ;
+    prop:has_child symbol:100353176111,
+        symbol:300648845138 ;
+    prop:has_id 301296214220 ;
+    prop:has_parent symbol:302347631484,
+        symbol:302930646226 ;
+    prop:isDecl_file_line "lib/foo.h#41" ;
+    prop:isDef_file_line "lib/foo.h#41" ;
+    prop:isUse_file_line "src/helper.cpp#3",
+        "src/helper.cpp#7" ;
+    prop:is_a "ClassDecl",
+        "TypeRef" ;
+    prop:is_called_file "helper.cpp" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:is_subclass_of symbol:300648845138 ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Circle",
+        "class",
+        "class Circle" ;
+    prop:size 12 ;
+    prop:spelling "Circle",
+        "class Circle" ;
+    prop:type "Circle" ;
+    prop:usr "c:@S@Circle" .
+
+symbol:102013600678 prop:absolute_file_path "foo.cpp",
+        "foo.h" ;
+    prop:has_child symbol:100847382769 ;
+    prop:has_id 102013600678 ;
+    prop:has_parent symbol:100052015748,
+        symbol:100394972359,
+        symbol:101552115860 ;
+    prop:isDecl_file_line "lib/foo.h#5" ;
+    prop:isDef_file_line "lib/foo.h#5" ;
+    prop:isUse_file_line "lib/foo.cpp#12",
+        "lib/foo.cpp#3",
+        "lib/foo.cpp#7" ;
+    prop:is_a "StructDecl",
+        "TypeRef" ;
+    prop:is_called_file "foo.cpp" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Point",
+        "struct",
+        "struct Point" ;
+    prop:size 8 ;
+    prop:spelling "Point",
+        "struct Point" ;
+    prop:type "Point" ;
+    prop:usr "c:@S@Point" .
+
+symbol:102562646342 prop:absolute_file_path "foo.cpp",
+        "foo.h" ;
+    prop:access_specifier "Public" ;
+    prop:has_child symbol:102562646342,
+        symbol:102582156798,
+        symbol:201807466413 ;
+    prop:has_id 102562646342 ;
+    prop:has_parent symbol:102562646342,
+        symbol:102931616158 ;
+    prop:isDecl_file_line "lib/foo.h#28" ;
+    prop:isDef_file_line "lib/foo.h#28" ;
+    prop:isUse_file_line "lib/foo.cpp#13",
+        "lib/foo.cpp#8" ;
+    prop:is_a "CXXMethod",
+        "CallExpr",
+        "MemberRefExpr" ;
+    prop:is_called_file "foo.cpp" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol:102931616158 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN4Base8setPointE5Point" ;
+    prop:mangled_name "_ZN4Base8setPointE5Point" ;
+    prop:name_token "Point",
+        "set",
+        "setPoint" ;
+    prop:param_type "Point" ;
+    prop:return_type "void" ;
+    prop:spelling "setPoint" ;
+    prop:storage_class "default_auto" ;
+    prop:type "<bound member function type>",
+        "void" ;
+    prop:usr "c:@S@Base@F@setPoint#$@S@Point#" .
+
+symbol:201807466413 prop:absolute_file_path "foo.cpp",
+        "foo.h",
+        "main.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_child symbol:100394972359,
+        symbol:101552115860,
+        symbol:201191999428 ;
+    prop:has_id 201807466413 ;
+    prop:has_parent symbol:100353176111,
+        symbol:102562646342,
+        symbol:102625299349 ;
+    prop:isDecl_file_line "lib/foo.h#5" ;
+    prop:isDef_file_line "lib/foo.h#5" ;
+    prop:isUse_file_line "lib/foo.cpp#13",
+        "lib/foo.cpp#8",
+        "src/main.cpp#24",
+        "src/main.cpp#25" ;
+    prop:is_a "CXXConstructor",
+        "CallExpr" ;
+    prop:is_called_file "foo.cpp",
+        "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:204147466265 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN5PointC1ERKS_" ;
+    prop:mangled_name "_ZN5PointC1ERKS_" ;
+    prop:name_token "Point" ;
+    prop:spelling "Point" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point",
+        "void (const Point &) noexcept" ;
+    prop:usr "c:@S@Point@F@Point#&1$@S@Point#" .
+
+symbol:101378764394 prop:absolute_file_path "foo.cpp",
+        "foo.h",
+        "main.cpp" ;
+    prop:has_child symbol:101378764394,
+        symbol:103986400645,
+        symbol:204018532364,
+        symbol:303374271578 ;
+    prop:has_id 101378764394 ;
+    prop:has_parent symbol:101378764394 ;
+    prop:isDecl_file_line "lib/foo.cpp#17",
+        "lib/foo.h#49" ;
+    prop:isDef_file_line "lib/foo.cpp#17" ;
+    prop:isRead_file_line "src/main.cpp#4" ;
+    prop:isUse_file_line "src/main.cpp#4" ;
+    prop:is_a "CallExpr",
+        "DeclRefExpr",
+        "FunctionDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:is_extern_file "foo.h",
+        "foo.h_1" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_Z4area6Square" ;
+    prop:mangled_name "_Z4area6Square" ;
+    prop:name_token "area" ;
+    prop:param_type "Square" ;
+    prop:return_type "int" ;
+    prop:spelling "area" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int",
+        "int (*)(Square)",
+        "int (Square)" ;
+    prop:usr "c:@F@area#$@S@Square#" .
+
+symbol:201184962880 prop:absolute_file_path "main.cpp" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_child symbol:201184962880 ;
+    prop:has_parent symbol:201184962880 ;
+    prop:isDecl_file_line "src/main.cpp#13" ;
+    prop:isRead_file_line "src/main.cpp#23" ;
+    prop:isUse_file_line "src/main.cpp#23" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_extern_file "main.cpp" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "maxele" ;
+    prop:name_token "maxele" ;
+    prop:size 4 ;
+    prop:spelling "maxele" ;
+    prop:storage_class "extern" ;
+    prop:type "int" ;
+    prop:usr "c:@maxele" .
+
+symbol:302855752868 prop:absolute_file_path "foo.h",
+        "helper.cpp",
+        "main.cpp" ;
+    prop:has_child symbol:201601583886,
+        symbol:300354783716,
+        symbol:302855752868,
+        symbol:302930646226 ;
+    prop:has_id 302855752868 ;
+    prop:has_parent symbol:302855752868 ;
+    prop:isDecl_file_line "lib/foo.h#50",
+        "src/helper.cpp#3" ;
+    prop:isDef_file_line "src/helper.cpp#3" ;
+    prop:isUse_file_line "src/main.cpp#4" ;
+    prop:isWritten_file_line "src/main.cpp#4" ;
+    prop:is_a "CallExpr",
+        "DeclRefExpr",
+        "FunctionDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "helper.cpp" ;
+    prop:is_extern_file "foo.h",
+        "foo.h_1" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_Z4area6Circle" ;
+    prop:mangled_name "_Z4area6Circle" ;
+    prop:name_token "area" ;
+    prop:param_type "Circle" ;
+    prop:return_type "int" ;
+    prop:spelling "area" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int",
+        "int (*)(Circle)",
+        "int (Circle)" ;
+    prop:usr "c:@F@area#$@S@Circle#" .
+
+symbol:102931616158 prop:absolute_file_path "foo.cpp",
+        "foo.h" ;
+    prop:comment_id comment:13,
+        comment:15 ;
+    prop:comment_token "initialization" ;
+    prop:has_child symbol:100576033116,
+        symbol:102496713546,
+        symbol:102562646342,
+        symbol:103379489738 ;
+    prop:has_id 102931616158 ;
+    prop:has_parent symbol:101107985656 ;
+    prop:isDecl_file_line "lib/foo.h#13" ;
+    prop:isDef_file_line "lib/foo.h#13" ;
+    prop:isUse_file_line "lib/foo.cpp#23" ;
+    prop:is_a "ClassDecl",
+        "TypeRef" ;
+    prop:is_called_file "foo.cpp" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Base",
+        "class",
+        "class Base" ;
+    prop:size 8 ;
+    prop:spelling "Base",
+        "class Base" ;
+    prop:type "Base" ;
+    prop:usr "c:@S@Base" .
+
+symbol:200140975045 prop:absolute_file_path "foo.h",
+        "main.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_child symbol:200129986658,
+        symbol:200564341192,
+        symbol:203719287942,
+        symbol:204140677018 ;
+    prop:has_id 200140975045 ;
+    prop:has_parent symbol:201191999428,
+        symbol:204147466265 ;
+    prop:isDecl_file_line "lib/foo.h#7" ;
+    prop:isDef_file_line "lib/foo.h#7" ;
+    prop:isUse_file_line "src/main.cpp#20" ;
+    prop:is_a "CXXConstructor",
+        "CallExpr" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol:204147466265 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN5PointC1Eii" ;
+    prop:mangled_name "_ZN5PointC4Eii" ;
+    prop:name_token "Point" ;
+    prop:sem_parent_id symbol:201191999428 ;
+    prop:spelling "Point" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point",
+        "void (int, int)" ;
+    prop:usr "c:@S@Point@F@Point#I#I#" .
+
+symbol:202491315388 prop:absolute_file_path "foo.h",
+        "main.cpp" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_child symbol:100353176111,
+        symbol:200974653263,
+        symbol:202028645034 ;
+    prop:has_id 202491315388 ;
+    prop:has_parent symbol:201478306585,
+        symbol:201601583886,
+        symbol:203443302841 ;
+    prop:isDecl_file_line "lib/foo.h#41" ;
+    prop:isDef_file_line "lib/foo.h#41" ;
+    prop:isUse_file_line "lib/foo.h#50",
+        "src/main.cpp#18",
+        "src/main.cpp#3" ;
+    prop:is_a "ClassDecl",
+        "TypeRef" ;
+    prop:is_called_file "foo.h",
+        "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:is_subclass_of symbol:200974653263 ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Circle",
+        "class",
+        "class Circle" ;
+    prop:spelling "Circle",
+        "class Circle" ;
+    prop:type "Circle" ;
+    prop:usr "c:@S@Circle" .
+
+symbol:202854211754 prop:absolute_file_path "helper.cpp",
+        "main.cpp" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_child symbol:201478306585,
+        symbol:202412853423,
+        symbol:202854211754,
+        symbol:302347631484,
+        symbol:302820180022 ;
+    prop:has_id 202854211754 ;
+    prop:has_parent symbol:202854211754 ;
+    prop:isDecl_file_line "src/helper.cpp#7",
+        "src/main.cpp#3" ;
+    prop:isDef_file_line "src/main.cpp#3" ;
+    prop:isUse_file_line "src/main.cpp#27" ;
+    prop:is_a "CallExpr",
+        "DeclRefExpr",
+        "FunctionDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:is_extern_file "helper.cpp" ;
+    prop:is_pointer "True" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_Z7compare6Circle6Square" ;
+    prop:mangled_name "_Z7compare6Circle6Square" ;
+    prop:name_token "compare" ;
+    prop:param_type " Square",
+        "Circle" ;
+    prop:return_type "int" ;
+    prop:spelling "compare" ;
+    prop:storage_class "default_auto" ;
+    prop:type "bool",
+        "int",
+        "int (*)(Circle, Square)",
+        "int (Circle, Square)" ;
+    prop:usr "c:@F@compare#$@S@Circle#$@S@Square#" .
+
+symbol:202940370304 prop:absolute_file_path "foo.h",
+        "main.cpp" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_child symbol:102625299349,
+        symbol:200974653263,
+        symbol:204002931485 ;
+    prop:has_id 202940370304 ;
+    prop:has_parent symbol:202175955133,
+        symbol:202412853423,
+        symbol:204018532364 ;
+    prop:isDecl_file_line "lib/foo.h#34" ;
+    prop:isDef_file_line "lib/foo.h#34" ;
+    prop:isUse_file_line "lib/foo.h#49",
+        "src/main.cpp#19",
+        "src/main.cpp#3" ;
+    prop:is_a "ClassDecl",
+        "TypeRef" ;
+    prop:is_called_file "foo.h",
+        "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:is_subclass_of symbol:200974653263 ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Square",
+        "class",
+        "class Square" ;
+    prop:spelling "Square",
+        "class Square" ;
+    prop:type "Square" ;
+    prop:usr "c:@S@Square" .
+
+symbol:301246238228 prop:absolute_file_path "helper.cpp" ;
+    prop:comment_id comment:3,
+        comment:6 ;
+    prop:isDecl_file_line "src/helper.cpp#11" ;
+    prop:is_a "VarDecl" ;
+    prop:is_extern_file "helper.cpp" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "count" ;
+    prop:name_token "count" ;
+    prop:size 4 ;
+    prop:spelling "count" ;
+    prop:storage_class "extern" ;
+    prop:type "int" ;
+    prop:usr "c:@count" .
+
+symbol:300648845138 prop:absolute_file_path "foo.h" ;
+    prop:has_child symbol:300802589283,
+        symbol:301002840166,
+        symbol:303556678792,
+        symbol:303745147961,
+        symbol:304054519064 ;
+    prop:has_id 300648845138 ;
+    prop:has_parent symbol:301296214220,
+        symbol:303696096832 ;
+    prop:inheritance_kind "Public" ;
+    prop:isDecl_file_line "lib/foo.h#13" ;
+    prop:isDef_file_line "lib/foo.h#13" ;
+    prop:isUse_file_line "lib/foo.h#34",
+        "lib/foo.h#41" ;
+    prop:is_a "CXXBaseClassSpecifier",
+        "ClassDecl" ;
+    prop:is_called_file "foo.h_1" ;
+    prop:is_defined_file "foo.h_1" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Base",
+        "class",
+        "class Base" ;
+    prop:size 8 ;
+    prop:spelling "Base",
+        "class Base" ;
+    prop:type "Base" ;
+    prop:usr "c:@S@Base" .
+
+symbol:204147466265 prop:absolute_file_path "foo.h",
+        "main.cpp" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_child symbol:100052015748,
+        symbol:200140975045,
+        symbol:201948060917,
+        symbol:203719287942,
+        symbol:204140677018 ;
+    prop:has_id 204147466265 ;
+    prop:has_parent symbol:200391139105,
+        symbol:201191999428,
+        symbol:201396957542,
+        symbol:201590111024,
+        symbol:203502495398 ;
+    prop:isDecl_file_line "lib/foo.h#5" ;
+    prop:isDef_file_line "lib/foo.h#5" ;
+    prop:isUse_file_line "lib/foo.h#16",
+        "lib/foo.h#28",
+        "lib/foo.h#38",
+        "lib/foo.h#45",
+        "src/main.cpp#20" ;
+    prop:is_a "StructDecl",
+        "TypeRef" ;
+    prop:is_called_file "foo.h",
+        "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Point",
+        "struct",
+        "struct Point" ;
+    prop:size 8 ;
+    prop:spelling "Point",
+        "struct Point" ;
+    prop:type "Point" ;
+    prop:usr "c:@S@Point" .
+
+symbol:100353176111 prop:absolute_file_path "foo.cpp",
+        "foo.h",
+        "main.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_child symbol:100353176111,
+        symbol:100394972359,
+        symbol:101121185691,
+        symbol:104222372837,
+        symbol:200391139105,
+        symbol:201807466413,
+        symbol:203443302841,
+        symbol:204257275682,
+        symbol:303623743127 ;
+    prop:has_id 100353176111 ;
+    prop:has_parent symbol:100353176111,
+        symbol:101121185691,
+        symbol:202491315388,
+        symbol:301296214220 ;
+    prop:isDecl_file_line "lib/foo.cpp#12",
+        "lib/foo.h#45" ;
+    prop:isDef_file_line "lib/foo.cpp#12" ;
+    prop:isUse_file_line "src/main.cpp#25" ;
+    prop:is_a "CXXMethod",
+        "CallExpr",
+        "MemberRefExpr" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:is_extern_file "foo.h",
+        "foo.h_1" ;
+    prop:lex_parent_id symbol:,
+        symbol:101121185691,
+        symbol:202491315388,
+        symbol:301296214220 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:mangled_name "_ZN6Circle10makeCircleE5Pointi" ;
+    prop:name_token "Circle",
+        "make",
+        "makeCircle" ;
+    prop:param_type " int",
+        "Point" ;
+    prop:return_type "void" ;
+    prop:sem_parent_id symbol:101121185691 ;
+    prop:spelling "makeCircle" ;
+    prop:storage_class "default_auto" ;
+    prop:type "<bound member function type>",
+        "void" ;
+    prop:usr "c:@S@Circle@F@makeCircle#$@S@Point#I#" .
+
+symbol:102625299349 prop:absolute_file_path "foo.cpp",
+        "foo.h",
+        "main.cpp" ;
+    prop:access_specifier "Public" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_child symbol:101552115860,
+        symbol:102625299349,
+        symbol:102628714979,
+        symbol:103974852037,
+        symbol:200105207093,
+        symbol:201590111024,
+        symbol:201807466413,
+        symbol:202175955133,
+        symbol:302601697050 ;
+    prop:has_id 102625299349 ;
+    prop:has_parent symbol:102625299349,
+        symbol:103974852037,
+        symbol:202940370304,
+        symbol:303696096832 ;
+    prop:isDecl_file_line "lib/foo.cpp#7",
+        "lib/foo.h#38" ;
+    prop:isDef_file_line "lib/foo.cpp#7" ;
+    prop:isUse_file_line "src/main.cpp#24" ;
+    prop:is_a "CXXMethod",
+        "CallExpr",
+        "MemberRefExpr" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:is_extern_file "foo.h",
+        "foo.h_1" ;
+    prop:lex_parent_id symbol:,
+        symbol:103974852037,
+        symbol:202940370304,
+        symbol:303696096832 ;
+    prop:linkage_kind "external" ;
+    prop:linkage_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:mangled_name "_ZN6Square10makeSquareE5Pointi" ;
+    prop:name_token "Square",
+        "make",
+        "makeSquare" ;
+    prop:param_type " int",
+        "Point" ;
+    prop:return_type "void" ;
+    prop:sem_parent_id symbol:103974852037 ;
+    prop:spelling "makeSquare" ;
+    prop:storage_class "default_auto" ;
+    prop:type "<bound member function type>",
+        "void" ;
+    prop:usr "c:@S@Square@F@makeSquare#$@S@Point#I#" .
+
+symbol:201191999428 prop:absolute_file_path "main.cpp" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_child symbol:200140975045,
+        symbol:201191999428,
+        symbol:204147466265 ;
+    prop:has_id 201191999428 ;
+    prop:has_parent symbol:201191999428,
+        symbol:201807466413 ;
+    prop:isDecl_file_line "src/main.cpp#20" ;
+    prop:isDef_file_line "src/main.cpp#20" ;
+    prop:isUse_file_line "src/main.cpp#24",
+        "src/main.cpp#25" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:lex_parent_id symbol:200954073876 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4mainE1p" ;
+    prop:name_token "p" ;
+    prop:size 8 ;
+    prop:spelling "p" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Point",
+        "const Point" ;
+    prop:usr "c:main.cpp@352@F@main#@p" .
+
+symbol:200974653263 prop:absolute_file_path "foo.h",
+        "main.cpp" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_child symbol:101107985656,
+        symbol:200545039082,
+        symbol:200897991887,
+        symbol:200974653263,
+        symbol:201396957542,
+        symbol:203250240560,
+        symbol:203738238113 ;
+    prop:has_id 200974653263 ;
+    prop:has_parent symbol:200545039082,
+        symbol:200974653263,
+        symbol:202491315388,
+        symbol:202940370304 ;
+    prop:inheritance_kind "Public" ;
+    prop:isDecl_file_line "lib/foo.h#13" ;
+    prop:isDef_file_line "lib/foo.h#13" ;
+    prop:isUse_file_line "lib/foo.h#34",
+        "lib/foo.h#41",
+        "src/main.cpp#21" ;
+    prop:is_a "CXXBaseClassSpecifier",
+        "ClassDecl",
+        "TypeRef" ;
+    prop:is_called_file "foo.h",
+        "main.cpp" ;
+    prop:is_defined_file "foo.h" ;
+    prop:lex_parent_id symbol: ;
+    prop:linkage_kind "external" ;
+    prop:name_token "Base",
+        "class",
+        "class Base" ;
+    prop:size 8 ;
+    prop:spelling "Base",
+        "class Base" ;
+    prop:type "Base" ;
+    prop:usr "c:@S@Base" .
+
+symbol:203817833550 prop:absolute_file_path "main.cpp" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_child symbol:203817833550 ;
+    prop:has_id 203817833550 ;
+    prop:has_parent symbol:203817833550 ;
+    prop:isDecl_file_line "src/main.cpp#17" ;
+    prop:isDef_file_line "src/main.cpp#17" ;
+    prop:isUse_file_line "src/main.cpp#23",
+        "src/main.cpp#24",
+        "src/main.cpp#25",
+        "src/main.cpp#26" ;
+    prop:isWritten_file_line "src/main.cpp#23" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:lex_parent_id symbol:200954073876 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4mainE1i" ;
+    prop:name_token "i" ;
+    prop:size 4 ;
+    prop:spelling "i" ;
+    prop:storage_class "default_auto" ;
+    prop:type "int" ;
+    prop:usr "c:main.cpp@315@F@main#@i" .
+
+comment:2 prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_id 2 ;
+    prop:is_defined_file "main.cpp" ;
+    prop:text "To demonstrate control flow graph" .
+
+comment:5 prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_id 5 ;
+    prop:is_defined_file "main.cpp" ;
+    prop:text "To demonstrate control flow graph" .
+
+symbol:202175955133 prop:absolute_file_path "main.cpp" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_child symbol:202175955133,
+        symbol:202940370304,
+        symbol:203639874650 ;
+    prop:has_id 202175955133 ;
+    prop:has_parent symbol:102625299349,
+        symbol:202175955133,
+        symbol:202797369276 ;
+    prop:isDecl_file_line "src/main.cpp#19" ;
+    prop:isDef_file_line "src/main.cpp#19" ;
+    prop:isUse_file_line "src/main.cpp#24",
+        "src/main.cpp#27" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:lex_parent_id symbol:200954073876 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4mainE1s" ;
+    prop:name_token "s" ;
+    prop:size 12 ;
+    prop:spelling "s" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Square",
+        "const Square" ;
+    prop:usr "c:main.cpp@340@F@main#@s" .
+
+symbol: prop:absolute_file_path "foo.cpp",
+        "foo.h",
+        "helper.cpp",
+        "main.cpp" ;
+    prop:comment_id comment:1,
+        comment:10,
+        comment:11,
+        comment:12,
+        comment:14,
+        comment:4,
+        comment:7,
+        comment:8,
+        comment:9 ;
+    prop:comment_token "control",
+        "declaration",
+        "demonstrate",
+        "flow",
+        "graph",
+        "header",
+        "include",
+        "initialization",
+        "obtain" ;
+    prop:isUse_file_line "lib/foo.cpp#1",
+        "lib/foo.h#2",
+        "src/helper.cpp#1",
+        "src/main.cpp#1" ;
+    prop:is_a "inclusionDirective",
+        "macroDefinition" ;
+    prop:is_called_file "foo.cpp",
+        "foo.h_1",
+        "helper.cpp",
+        "main.cpp" ;
+    prop:name_token "FOO_H_",
+        "foo.h",
+        "fooh" ;
+    prop:spelling "FOO_H_",
+        "foo.h" ;
+    prop:usr "c:foo.h@45@macro@FOO_H_" .
+
+symbol:203443302841 prop:absolute_file_path "main.cpp" ;
+    prop:comment_id comment:2,
+        comment:5 ;
+    prop:comment_token "control",
+        "demonstrate",
+        "flow",
+        "graph" ;
+    prop:has_child symbol:202469467868,
+        symbol:202491315388,
+        symbol:203443302841 ;
+    prop:has_id 203443302841 ;
+    prop:has_parent symbol:100353176111,
+        symbol:200939214155,
+        symbol:201396957542,
+        symbol:203443302841 ;
+    prop:isDecl_file_line "src/main.cpp#18" ;
+    prop:isDef_file_line "src/main.cpp#18" ;
+    prop:isUse_file_line "src/main.cpp#25",
+        "src/main.cpp#27",
+        "src/main.cpp#28" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_called_file "main.cpp" ;
+    prop:is_defined_file "main.cpp" ;
+    prop:lex_parent_id symbol:200954073876 ;
+    prop:linkage_kind "auto" ;
+    prop:mangled_name "_ZZ4mainE1c" ;
+    prop:name_token "c" ;
+    prop:size 12 ;
+    prop:spelling "c" ;
+    prop:storage_class "default_auto" ;
+    prop:type "Base",
+        "Circle",
+        "const Circle" ;
+    prop:usr "c:main.cpp@328@F@main#@c" .
+
+symbol:101107985656 prop:absolute_file_path "foo.cpp",
+        "foo.h" ;
+    prop:access_specifier "Private" ;
+    prop:comment_id comment:13,
+        comment:15 ;
+    prop:comment_token "initialization" ;
+    prop:has_child symbol:101107985656,
+        symbol:102931616158 ;
+    prop:has_id 101107985656 ;
+    prop:has_parent symbol:101107985656,
+        symbol:200974653263 ;
+    prop:isDecl_file_line "lib/foo.cpp#23",
+        "lib/foo.h#14" ;
+    prop:isDef_file_line "lib/foo.cpp#23" ;
+    prop:isUse_file_line "lib/foo.h#20",
+        "lib/foo.h#25",
+        "lib/foo.h#31" ;
+    prop:is_a "DeclRefExpr",
+        "VarDecl" ;
+    prop:is_called_file "foo.h",
+        "foo.h_1" ;
+    prop:is_defined_file "foo.cpp" ;
+    prop:is_extern_file "foo.h" ;
+    prop:is_static "True" ;
+    prop:lex_parent_id symbol:,
+        symbol:200974653263 ;
+    prop:linkage_kind "external" ;
+    prop:mangled_name "_ZN4Base5countE" ;
+    prop:name_token "count" ;
+    prop:sem_parent_id symbol:102931616158 ;
+    prop:size 4 ;
+    prop:spelling "count" ;
+    prop:storage_class "default_auto",
+        "static" ;
+    prop:type "int" ;
+    prop:usr "c:@S@Base@count" .
+
