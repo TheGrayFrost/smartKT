@@ -90,7 +90,6 @@ os.system(' '.join(["python3", "helpers/data_processing/similarity_tokens_dict/c
  os.path.join(generated_abs_path, "comment_tokens_dict.p")]))
 
 ## TF-IDF Things
-
 os.system(' '.join(["python3", "helpers/data_processing/tf_idf/name_file_token_count.py",
  os.path.join(generated_abs_path, "final_static.ttl"),
  os.path.join(generated_abs_path, "name_file_token_count.p")]))
@@ -138,5 +137,4 @@ os.system(' '.join(["python3", "helpers/cfg/aggregrate.py",
  os.path.join(data_abs_path, "final_static.xml"),
  os.path.join(data_abs_path, "final.cfg"),
  os.path.join(generated_abs_path, "cfg"),
- ' '.join([os.path.join(data_abs_path, x) for x in config['dumps']]),
- os.path.join(generated_abs_path, "cfg.p")]))
+ ' '.join([os.path.join(data_abs_path, x) for x in config['dumps']])]))

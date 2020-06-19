@@ -19,11 +19,13 @@ app.secret_key = 's3cr3t'
 app.debug = True
 app._static_folder = os.path.abspath("templates/static/")
 
+# Config file
 config = json.loads(open("web_config.json", "r").read())
 
 project_name = config['project_name']
 CXX_EXTENSIONS = ['c', 'cpp', 'cc']
 
+# Load the required files
 data_abs_path = os.path.abspath('data')
 generated_abs_path = os.path.abspath('generated')
 
@@ -63,6 +65,8 @@ def shorten(path):
         return os.path.join('build', path)
     return '/'.join(ls[idx+1:])
 
+# Reads the dependencies.p file, and identifies the various binaries and source
+# files and the relationships between them
 def create_dep_map(fillMe=None, toDot=True):
     dep = pickle.load(open("data/dependencies.p", "rb"))
     ls = []
@@ -82,6 +86,8 @@ def create_dep_map(fillMe=None, toDot=True):
         to_dot(ls, filename)
         return filename + ".png"
 
+# Reads the final_static.xml file, and identifies the various classes and structs
+# and the relationships between them
 def structclassmap(root):
     #{TODO}: Handle Friends, Templates(?)
     ls = []
@@ -128,6 +134,9 @@ def structclassmap(root):
     to_dot(ls, filename)
     return filename + ".png"
 
+# Reads the final_static.xml file, and identifies the various symbols and overlays
+# the def-use information on top of the dependencies information to paint a complete
+# picture of how a linkage actually looks like, not just from source file to source file
 def create_extern_link(ls, croot):
     for var in croot.findall(".//VarDecl[@storage_class='extern']"):
         if 'def_id' not in var.attrib:
@@ -144,6 +153,7 @@ def create_extern_link(ls, croot):
         for x in croot.findall('.//FunctionDecl[@id="'+func.attrib['def_id']+'"]'):
             ls.append((name, shorten(x.attrib['file']), "DEFINED"))
 
+# Extarct DOT information and present it to vis.js to create basic graph
 def visDOT(filename):
     with open(filename, "r") as f:
         data = f.readlines()
@@ -151,6 +161,7 @@ def visDOT(filename):
     data = data[0]+'; '.join(data[1:-1])+"; }"
     return data
 
+# Helper function, implementation details
 def addDOT(filename, line, col, data):
     with open(filename, 'r') as f:
         content = f.readlines()
@@ -158,6 +169,7 @@ def addDOT(filename, line, col, data):
     with open(filename, 'w') as f:
         f.write(''.join(content))
 
+# Helps to identify the list of executables in the entire project for a particular build
 def getExecutables():
     dep = pickle.load(open("data/dependencies.p", "rb"))
     ls = []
@@ -200,6 +212,7 @@ def index():
     return render_template('layouts/index.html',
                            title=title)
 
+# Entry point for query instructions
 @app.route('/querydev', methods=['GET', 'POST'])
 def query_dev():
     title = 'Query SmartKT'
@@ -217,13 +230,7 @@ def query_dev():
         return render_template('layouts/query_dev.html', resp=resp)
     return render_template('layouts/query_dev.html', title=title)
 
-@app.route('/dependency', methods=['GET'])
-def results():
-    title = 'Result'
-    d = pickle.load(open('data/dependencies.p', 'rb'))
-    return render_template('layouts/results.html',
-                           title=title, dep = d)
-
+# Entry point for dependency graph
 @app.route('/dependencydev', methods=['GET'])
 def dependency_dev():
     create_dep_map()
@@ -233,6 +240,7 @@ def dependency_dev():
     title = "Dependency Map"
     return render_template('layouts/dependency_dev.html', data=json.dumps(data), title=title, execs=json.dumps(execs))
 
+# Entry point for linkage graph
 @app.route('/externdev', methods=['GET'])
 def extern_dev():
     ls = []
@@ -246,6 +254,7 @@ def extern_dev():
     return render_template('layouts/extern_dev.html', title=title,
     data=data, symbols=symbols)
 
+# Entry point for classmap graph
 @app.route('/classmapdev', methods=['GET'])
 def classmap_dev():
     croot = ET.parse("data/final_static.xml").getroot()
@@ -254,6 +263,7 @@ def classmap_dev():
     title = "Class & Struct"
     return render_template('layouts/classmap_dev.html', title=title, data=json.dumps(data))
 
+# Entry point for cfg graph
 @app.route('/cfgdev', methods=['GET'])
 def cfg_dev():
     data = visDOT(os.path.join(generated_abs_path, "cfg.dot"))

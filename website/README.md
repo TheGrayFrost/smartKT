@@ -1,8 +1,8 @@
 # Using Python and Javascript together with Flask
 
-### Quickstart
+## Quickstart
 
-Requirements: Python with flask
+Requirements: (see requirements.txt)
 
 Edit the `web_config.json`
 
@@ -20,6 +20,13 @@ $ flask run
 
 Open http://127.0.0.1:5000/
 
-# Details
+## Overview
 
-Please see `docs/` folder.
+Running `initialize.py` generates all the required files for starting the server.
+The details of the execution flow has been documented by the submission from Prachi
+
+## Details
+
+Please see `docs/` folder. For explanations on the server, refer comments inside
+the code. For details on algorithms of the various graphs (except CFG) and
+implementations of interactive graphs, please refer the thesis.
