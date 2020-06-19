@@ -48,15 +48,15 @@ all_store
 
 "mapping" is a dictionary that holds 1:1 mapping between the regex id and template function names.
 
-This file “query_run” also imports the class “CreateLists” in the file “mapper.py”. 
-The first function that gets executed is “execute_query”. 
+This file “query_run” also imports the class “CreateLists” in the file “mapper.py”.
+The first function that gets executed is “execute_query”.
 In it we first store all the regex in a list by calling the function “make_list” which in turn creates an object of class “CreateLists” in the file “mapper.py” and executes it’s functions.
 
 Now consider the query : What is the return type of the function inflatePrime?
 
 “Filter_query_words” removes stopwords and punctuation from the query and returns a new query with only relevant words. [“return type function inflatePrime”]
 
-“Search_matched_words” firstly stores all possible phrases in the query in a list called “words”. 
+“Search_matched_words” firstly stores all possible phrases in the query in a list called “words”.
 ['inflatePrime', 'function', 'function inflatePrime', 'type', 'type function', 'type function inflatePrime', 'return', 'return type', 'return type function', 'return type function inflatePrime']
 
 Then it searches for those phrases in all the dictionaries and stores the matched words with their information in a “word_store” dictionary.
@@ -82,13 +82,3 @@ and then we have the various templates built for different regexes.
 
 Mapper.py
 Here we have the function that creates regex list from the regex file.
-
-
-
-
-
-
-
-
-
-
