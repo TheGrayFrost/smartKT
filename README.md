@@ -40,7 +40,7 @@ Our tool expects your projects to:
 - [X] Parallelize comments analysis part
 - [ ] System benchmarking for large projects
 - [X] Check parallel execution for dynamic runtimes
-- Add support for specifying custom build script
+- [ ] Add support for specifying custom build script
 
 # KNOWN ISSUES
 
